@@ -1,0 +1,99 @@
+// this file helps with our legacy lasso pages.
+
+.site {
+
+  .site-main-col {
+    margin: 0;
+    padding: 0;
+    // `overflow: hidden` fixes bug where `.site-aside` would sometimes get pushed under `.site-main-col`
+    // HOWEVER: it introduces a bug where the toolbar refuses to be sticky
+    //overflow: hidden;
+  }
+
+  .site-content {
+    background-color: $theme-bg;
+    padding-bottom: $spacer;
+  }
+
+  .site-footer {
+    position: relative; // so debug toggle can use absolute positioning relative to the footer
+  }
+
+  .site-debug {
+    display: none;
+  }
+  .site-debug-toggle {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.4;
+    color: #000;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 5px;
+    background: #fff;
+  }
+  .site-debug-toggle:hover {
+    opacity: 0.2;
+    background: $webstop-blue;
+  }
+
+  .site-aside {
+    padding: 0;
+    background: $white;
+    border-left: 1px solid darken($theme-primary, 10%);
+  }
+
+  .site-aside-slider {
+    width: 0;
+    transition: width 1.2s;
+    overflow-x: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 100vh;
+  }
+
+  .site-aside-slider-open {
+    width: 250px;
+  }
+
+  // Sub-Classes
+  &.site-fluid {
+    @extend .container-fluid;
+    .site-header,
+    .site-navigation,
+    .site-content,
+    .site-footer,
+    .site-debug {
+      @extend .container-fluid;
+    }
+  }
+  &.site-fixed {
+    @extend .container;
+    margin-left: auto;
+    margin-right: auto;
+    .site-header,
+    .site-navigation,
+    .site-content,
+    .site-footer,
+    .site-debug {
+      @extend .container;
+    }
+  }
+  &.site-content-only {
+     .site-header,
+     .site-navigation,
+     .site-footer,
+     .site-aside {
+       display: none;
+     }
+  }
+  &.site-debug-on {
+    .site-debug {
+      display: block;
+    }
+  }
+}
+

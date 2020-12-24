@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://localhost:1313/404.html</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/resources/article_typography_design_resource/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/articles/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/docs/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/docs/3.0/forms/form-toggles/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/resources/lorem_ipsum/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/resources/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/resources/df_2020_iphone_se/</loc>
+  </url>
+  
+</urlset>

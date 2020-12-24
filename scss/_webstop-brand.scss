@@ -1,0 +1,32 @@
+// webstop
+
+.webstop-color {
+  color: darken($webstop-blue, 10%);
+  &:visited {
+    color: $webstop-blue;
+  }
+  &:hover {
+    color: darken($webstop-blue, 20%);
+  }
+}
+
+
+.bg-webstop{
+  background-color: $webstop-blue;
+}
+
+.webstop-sans-serif {
+  font-family: 'Montserrat';
+}
+
+.webstop-serif {
+  font-family: 'Libre Baskerville';
+}
+
+.webstop-logo {
+
+}
+
+.webstop-logo-alt {
+
+}

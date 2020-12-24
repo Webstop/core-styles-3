@@ -1,0 +1,42 @@
+// Theming & Branding variables
+$theme-primary: #d9d6c1 !default;
+$theme-bg: lighten($theme-primary, 15%) !default;
+$theme-active-bg: lighten($theme-primary, 7.5%) !default;
+$body-bg:  $theme-bg !default;
+
+// Layout
+$header-height: 55px !default;
+
+// Toolbar
+$toolbar-spacer: $spacer !default;
+$toolbar-padding-x: $toolbar-spacer !default;
+$toolbar-padding-y: ($toolbar-spacer / 2) !default;
+$toolbar-bg: $theme-primary !default;
+$toolbar-border-color: darken($toolbar-bg, 15%) !default;
+//$toolbar-min-height: 58px !default;
+
+// Grocery Apps
+// ===========
+
+// Circulars
+$circular-max-column-width: 375px;
+$circular-min-column-width: 160px;
+$circular-sm-max-column-width: 375px;
+$circular-sm-min-column-width: 265px;
+
+// Shopping List
+$shopping-list-column-width: 250px !default;
+
+// Stores
+$store-max-column-width: 100%;
+$store-min-column-width: 290px;
+
+// ---
+
+// Bootstrap
+$bootstrap-purple: #563d7c;
+$readable: 34.25rem + (1.25rem * 2);
+
+// Webstop
+$webstop-blue: #0194d3;
+

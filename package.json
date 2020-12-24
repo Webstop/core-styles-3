@@ -1,0 +1,36 @@
+{
+  "name": "Core-Styles",
+  "version": "3.0.0-alpha-1",
+  "description": "Design System for Webstop's grocery websites.",
+  "author": "Greg Hemphill",
+  "license": "private",
+  "private": true,
+  "scripts": {
+    "css-lint": "",
+    "css-prefix": "",
+    "css-minify": "",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:dist/css/",
+    "css-compile-docs": "sass --style expanded --source-map --embed-sources --no-error-css site/assets/scss/:site/static/css",
+    "watch": "npm-run-all --parallel watch-*",
+    "watch-css-main": "nodemon -L --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
+    "watch-css-docs": "nodemon -L --watch site/assets/scss/ --ext scss --exec \"npm run css-lint css-compile-docs\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webstop/core-styles-3.git"
+  },
+  "homepage": "https://github.com/hemphill/rules-for-robots-blog#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta1"
+  },
+  "peerDependencies": {
+    "@popperjs/core": "^2.6.0"
+  },
+  "devDependencies": {
+    "@popperjs/core": "^2.6.0",
+    "bootstrap-5-docs": "github:hemphill/bootstrap-5-docs#main",
+    "sass": "^1.30.0",
+    "nodemon -L": "^2.0.6",
+    "npm-run-all": "^4.1.5"
+  }
+}

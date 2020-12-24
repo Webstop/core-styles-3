@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?port=1313&amp;mindelay=10&amp;v=2" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <title>
+    
+  Article Typography Design Resource &ndash; Core-Styles 3
+
+  </title>
+  <link rel="stylesheet" href="/docs/3.0/dist/css/core-styles-defaults.css">
+</head>
+<body>
+
+<h4><a href="/">Core-Styles 3</a></h4>
+
+
+  <article class="article">
+    <p class="article-dates">
+      <span class="article-created-at">Friday, May 1, 2020</span>
+      
+        <span class="article-updated">
+          Edited on
+          <span class="article-updated-at">Sunday, May 3, 2020</span>
+        </span>
+      
+    </p>
+    <h1 class="article-title">Article Typography Design Resource</h1>
+    <p class="article-by-line">by <span class="article-author">Greg Hemphill</span></p>
+    <p>This document is a resource to design the interactions of various common article elements when
+developing typographic styling. There really isn&rsquo;t much to see here &ndash; unless
+you&rsquo;re a design nerd.</p>
+<p>Most people probably want to visit our <a href="/">home page</a> instead.</p>
+<h3 id="overview">Overview</h3>
+<p>The purpose of this document is to be used while creating or modifying stylesheets for text articles. This document
+focus on the content of an article body. There is no attempt to cover general GUI elements like toolbars, dialog modals,
+page templates, navigation, &amp; etc. In fact, they are intentionally avoided. There&rsquo;s nothing precluding this document
+from being used in UI design projects, in fact it&rsquo;s well suited to be part of a UI design project, but it&rsquo;s not focus.</p>
+<p>I&rsquo;ve attempted to avoid placing any opinions about <em>how</em> things should look or <em>how</em> they should be styled,
+in this document. It&rsquo;s meant to be used like the <a href="http://www.csszengarden.com">CSS Zen Garden</a> of lore  &ndash;
+<em>you supply the design &amp; styling</em>.</p>
+<p>You&rsquo;re free to use this document anywhere you&rsquo;d like. Attribution is appreciated, but not required. It uses an MIT
+Licence. If you want to use this, but the MIT licence doesn&rsquo;t suit your needs, contact me and we&rsquo;ll probably be able to
+work something out.</p>
+<h3 id="links">Links</h3>
+<p>Here is a <a href="/">visited link</a> and an <a href="#something-unvisited">unvisited link</a>.</p>
+<p>Here is a <strong><a href="#something-unvisited">bold link</a></strong>, an <em><a href="#something-unvisited">italic one</a></em>, and a <em><strong><a href="#something-unvisited">bold italic link</a></strong></em>.</p>
+<h3 id="quotes">Quotes</h3>
+<p>Going to &ldquo;quote something&rdquo; to make sure those quotes look nice and curly, even the &lsquo;single quotes&rsquo;.</p>
+<p>&ldquo;Perhaps have a &lsquo;quote inside&rsquo; another quote.&rdquo;</p>
+<h5 id="blockquote">Blockquote</h5>
+<blockquote>
+<p>Dolor sit amet, consectetur adipiscing elit. Fusce ac eros interdum, suscipit lorem ac, scelerisque libero. In aliquet viverra tortor vitae semper. Nulla adipiscing commodo lacus nec vulputate.</p>
+</blockquote>
+<h5 id="blockquote-within-a-figure">Blockquote within a figure</h5>
+<p>With a caption containing a citation.</p>
+<figure>
+  <figcaption>Programming according to <cite>Edsger Dijkstra:</cite></figcaption>
+  <blockquote>If debugging is the process of removing software bugs,
+  then programming must be the process of putting them in.</blockquote>
+</figure>
+<h3 id="images">Images</h3>
+<p>We start off with a standard image within a link. I took this picture. If you&rsquo;re using a copy of this article in your own
+website or app, you&rsquo;re free to use this image along with it.</p>
+<p><a href="/images/stpete_1024x685.jpeg"><img src="/images/stpete_1024x685.jpeg" alt="statue in St. Petersburg, FL"></a></p>
+<p>The Previous image is a <code>JPEG</code>, the next one is an <code>SVG</code>.</p>
+<h5 id="image-within-a-figure">Image within a figure</h5>
+<figure>
+  <img src="/images/squiggle-white.svg">
+  <figcaption>
+    <cite>
+      The Process of Design Squiggle by<br> 
+      Damien Newman, <a href="https://thedesignsquiggle.com">thedesignsquiggle.com</a>
+    </cite>
+  </figcaption>
+</figure>
+<h3 id="paragraphs">Paragraphs</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac eros interdum, suscipit lorem ac, scelerisque libero. In aliquet viverra tortor vitae semper. Nulla adipiscing commodo lacus nec vulputate.</p>
+<p>Aliquam erat volutpat. Fusce et fermentum tortor, id aliquam ligula. Suspendisse potenti.</p>
+<p>Quisque condimentum sem vitae neque hendrerit, vel suscipit ante hendrerit. Vivamus metus mauris, vehicula ut augue eu, faucibus accumsan lorem. Sed erat velit, faucibus sit amet enim eget, varius scelerisque diam. Sed sollicitudin blandit dolor, id varius nunc fringilla vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut purus nibh, blandit nec dignissim eget, varius scelerisque justo. Integer ornare in quam in hendrerit. Etiam ut laoreet augue.</p>
+<h3 id="inline-text">Inline Text</h3>
+<p>This is a paragraph; it has <em>italic text</em> and also <strong>bold text</strong>.</p>
+<p>This paragraph has <em>italic text and within it is some <strong>bold text</strong></em>.</p>
+<p>This paragraph has <strong>bold text and within it is some <em>italic text</em></strong>.</p>
+<p>This paragraph has some inline code in it, <code>{foo != bar}</code>.</p>
+<p>This paragraph has <cite>a citation</cite>.</p>
+<p>Some numbers: 1 2 3 4 5 6 7 8 9 10 20 30 50 100 1,000 1,000,000</p>
+<p>Now for some common date formats <sup><a href="#dates">1</a></sup>.</p>
+<p>June 1977</p>
+<p>1/24/1984</p>
+<p>15 August 1998</p>
+<p>2001-10-23</p>
+<p>June 29, 2007</p>
+<p>2010 April 3</p>
+<p>24/4/2015</p>
+<p>Phone Number: (123) 867-5309</p>
+<p>Here we test a <code>&lt;sup&gt;</code> tag, often used to reference a footnote or citation <sup id="from-1"><a href="#1">1</a></sup></p>
+<p>Followed by a horizontal rule.</p>
+<hr>
+<div id="footnote-1"></div>
+<ol>
+<li>some footnote or citation, which includes a <code>&lt;sub&gt;</code> tag around the return arrow link. <sub><a href="#from-1">↩︎︎</a></sub></li>
+</ol>
+<h3 id="lists">Lists</h3>
+<h5 id="unordered-list-with-single-line-items">Unordered list with single line items</h5>
+<p>This is probably the most common list use case.</p>
+<ul>
+<li>Nice unordered list</li>
+<li>With a few items</li>
+<li>So we can see how it looks</li>
+</ul>
+<h5 id="unordered-list-with-multiline-items">Unordered list with multiline items</h5>
+<p>This allows us to examine how the spacing of our line-height performs
+in comparison to the spacing between our list items.</p>
+<ul>
+<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac eros interdum, suscipit lorem ac.</li>
+<li>Scelerisque libero. In aliquet viverra tortor vitae semper. Nulla adipiscing commodo lacus nec vulputate.</li>
+<li>Quisque condimentum sem vitae neque hendrerit, vel suscipit ante hendrerit. Vivamus metus mauris, vehicula ut augue eu, faucibus.</li>
+<li>Sed erat velit, faucibus sit amet enim eget, varius scelerisque diam. Sed sollicitudin blandit dolor, id varius nunc fringilla vitae.</li>
+</ul>
+<h5 id="ordered-list-with-single-line-items">Ordered list with single line items</h5>
+<ol>
+<li>Now a nice ordered list</li>
+<li>Again, with a few items.</li>
+<li>So we can see how it looks :)</li>
+</ol>
+<h5 id="ordered-list-with-multiline-items">Ordered list with multiline items</h5>
+<p>This allows us to examine how the spacing of our line-height performs
+in comparison to the spacing between our list items.</p>
+<ol>
+<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac eros interdum, suscipit lorem ac.</li>
+<li>Scelerisque libero. In aliquet viverra tortor vitae semper. Nulla adipiscing commodo lacus nec vulputate.</li>
+<li>Quisque condimentum sem vitae neque hendrerit, vel suscipit ante hendrerit. Vivamus metus mauris, vehicula ut augue eu, faucibus.</li>
+<li>Sed erat velit, faucibus sit amet enim eget, varius scelerisque diam. Sed sollicitudin blandit dolor, id varius nunc fringilla vitae.</li>
+</ol>
+<h3 id="code-blocks">Code Blocks</h3>
+<p>This first example keeps the line numbers in the single digit range. Which is helpful you are using a syntax highlighter.</p>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="ln">1</span><span class="nt">html</span> <span class="p">{</span>
+<span class="ln">2</span>  <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">border-box</span><span class="p">;</span>
+<span class="ln">3</span><span class="p">}</span>
+<span class="ln">4</span>
+<span class="ln">5</span><span class="o">*,</span> <span class="o">*</span><span class="p">:</span><span class="nd">before</span><span class="o">,</span> <span class="o">*</span><span class="p">:</span><span class="nd">after</span> <span class="p">{</span>
+<span class="ln">6</span>  <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span>
+<span class="ln">7</span><span class="p">}</span>
+</code></pre></div><p>This second example pushes the line numbers into the triple digit range. Which is helpful you are using a syntax highlighter.</p>
+<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="ln">  1</span><span class="c1"># The first bit of code is a set of tests for a Map model in a </span>
+<span class="ln">  2</span><span class="c1"># work-in-progress game. It is an API written in Ruby on Rails. </span>
+<span class="ln">  3</span><span class="c1"># The codes is using the Rspec-Rails, Shoulda-Matchers, and </span>
+<span class="ln">  4</span><span class="c1"># Factory Bot Rails gems. The attachment is using ActiveStorage.</span>
+<span class="ln">  5</span> 
+<span class="ln">  6</span><span class="nb">require</span> <span class="s1">&#39;rails_helper&#39;</span>
+<span class="ln">  7</span>
+<span class="ln">  8</span><span class="no">RSpec</span><span class="o">.</span><span class="n">describe</span> <span class="no">Map</span><span class="p">,</span> <span class="ss">type</span><span class="p">:</span> <span class="ss">:model</span> <span class="k">do</span>
+<span class="ln">  9</span>
+<span class="ln"> 10</span>  <span class="n">describe</span> <span class="s1">&#39;factory&#39;</span> <span class="k">do</span>
+<span class="ln"> 11</span>    <span class="n">it</span> <span class="s1">&#39;is valid&#39;</span> <span class="k">do</span>
+<span class="ln"> 12</span>      <span class="n">expect</span><span class="p">(</span><span class="n">create</span><span class="p">(</span><span class="ss">:map</span><span class="p">))</span><span class="o">.</span><span class="n">to</span> <span class="n">be_valid</span>
+<span class="ln"> 13</span>    <span class="k">end</span>
+<span class="ln"> 14</span>  <span class="k">end</span>
+<span class="ln"> 15</span>
+<span class="ln"> 16</span>  <span class="n">describe</span> <span class="s1">&#39;database table&#39;</span> <span class="k">do</span>
+<span class="ln"> 17</span>    <span class="n">it</span> <span class="p">{</span><span class="n">is_expected</span><span class="o">.</span><span class="n">to</span> <span class="n">have_db_column</span><span class="p">(</span><span class="ss">:name</span><span class="p">)</span><span class="o">.</span><span class="n">of_type</span><span class="p">(</span><span class="ss">:string</span><span class="p">)}</span>
+<span class="ln"> 18</span>  <span class="k">end</span>
+<span class="ln"> 19</span>
+<span class="ln"> 20</span>  <span class="n">describe</span> <span class="s1">&#39;associations&#39;</span> <span class="k">do</span>
+<span class="ln"> 21</span>    <span class="n">it</span> <span class="p">{</span> <span class="n">should</span> <span class="n">have_many</span><span class="p">(</span><span class="ss">:boards</span><span class="p">)</span> <span class="p">}</span>
+<span class="ln"> 22</span>  <span class="k">end</span>
+<span class="ln"> 23</span>
+<span class="ln"> 24</span>  <span class="n">describe</span> <span class="s1">&#39;validations&#39;</span> <span class="k">do</span>
+<span class="ln"> 25</span>    <span class="n">it</span> <span class="p">{</span> <span class="n">should</span> <span class="n">validate_presence_of</span><span class="p">(</span><span class="ss">:name</span><span class="p">)</span> <span class="p">}</span>
+<span class="ln"> 26</span>    <span class="n">it</span> <span class="p">{</span> <span class="n">should</span> <span class="n">validate_uniqueness_of</span><span class="p">(</span><span class="ss">:name</span><span class="p">)</span> <span class="p">}</span>
+<span class="ln"> 27</span>  <span class="k">end</span>
+<span class="ln"> 28</span>
+<span class="ln"> 29</span>  <span class="n">describe</span> <span class="s1">&#39;attachment&#39;</span> <span class="k">do</span>
+<span class="ln"> 30</span>    <span class="n">it</span> <span class="s1">&#39;is valid  &#39;</span> <span class="k">do</span>
+<span class="ln"> 31</span>      <span class="n">subject</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">attach</span><span class="p">(</span><span class="ss">io</span><span class="p">:</span> <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fixture_path</span> <span class="o">+</span> <span class="s1">&#39;/dummy_image.jpg&#39;</span><span class="p">),</span> <span class="ss">filename</span><span class="p">:</span> <span class="s1">&#39;attachment.jpg&#39;</span><span class="p">,</span> <span class="ss">content_type</span><span class="p">:</span> <span class="s1">&#39;image/jpg&#39;</span><span class="p">)</span> <span class="c1"># Adding a comment to the end of this line to really push it&#39;s length.</span>
+<span class="ln"> 32</span>      <span class="n">expect</span><span class="p">(</span><span class="n">subject</span><span class="o">.</span><span class="n">image</span><span class="p">)</span><span class="o">.</span><span class="n">to</span> <span class="n">be_attached</span>
+<span class="ln"> 33</span>    <span class="k">end</span>
+<span class="ln"> 34</span>  <span class="k">end</span>
+<span class="ln"> 35</span>
+<span class="ln"> 36</span><span class="k">end</span>
+<span class="ln"> 37</span>
+<span class="ln"> 38</span><span class="c1"># This next bit of code is just filler to push the line numbers longer</span>
+<span class="ln"> 39</span>
+<span class="ln"> 40</span><span class="c1"># A helpful comment</span>
+<span class="ln"> 41</span><span class="k">def</span> <span class="nf">foo</span>
+<span class="ln"> 42</span>  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="ln"> 43</span><span class="k">end</span>
+<span class="ln"> 44</span>
+<span class="ln"> 45</span><span class="c1"># An unhepful comment</span>
+<span class="ln"> 46</span><span class="k">def</span> <span class="nf">foo</span>
+<span class="ln"> 47</span>  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="ln"> 48</span><span class="k">end</span>
+<span class="ln"> 49</span>
+<span class="ln"> 50</span><span class="k">def</span> <span class="nf">foo</span>
+<span class="ln"> 51</span>  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="ln"> 52</span><span class="k">end</span>
+<span class="ln"> 53</span>
+<span class="ln"> 54</span><span class="k">def</span> <span class="nf">foo</span>
+<span class="ln"> 55</span>  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="ln"> 56</span><span class="k">end</span>
+<span class="ln"> 57</span>
+<span class="ln"> 58</span><span class="k">def</span> <span class="nf">foo</span>
+<span class="ln"> 59</span>  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="ln"> 60</span><span class="k">end</span>
+<span class="ln"> 61</span>
+<span class="ln"> 62</span><span class="k">def</span> <span class="nf">foo</span>
+<span class="ln"> 63</span>  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="ln"> 64</span><span class="k">end</span>
+<span class="ln"> 65</span>
+<span class="ln"> 66</span><span class="k">def</span> <span class="nf">foo</span>
+<span class="ln"> 67</span>  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="ln"> 68</span><span class="k">end</span>
+<span class="ln"> 69</span>
+<span class="ln"> 70</span><span class="k">def</span> <span class="nf">foo</span>
+<span class="ln"> 71</span>  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="ln"> 72</span><span class="k">end</span>
+<span class="ln"> 73</span>
+<span class="ln"> 74</span><span class="k">def</span> <span class="nf">foo</span>
+<span class="ln"> 75</span>  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="ln"> 76</span><span class="k">end</span>
+<span class="ln"> 77</span>
+<span class="ln"> 78</span><span class="k">def</span> <span class="nf">foo</span>
+<span class="ln"> 79</span>  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="ln"> 80</span><span class="k">end</span>
+<span class="ln"> 81</span>
+<span class="ln"> 82</span><span class="k">def</span> <span class="nf">foo</span>
+<span class="ln"> 83</span>  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="ln"> 84</span><span class="k">end</span>
+<span class="ln"> 85</span>
+<span class="ln"> 86</span><span class="k">def</span> <span class="nf">foo</span>
+<span class="ln"> 87</span>  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="ln"> 88</span><span class="k">end</span>
+<span class="ln"> 89</span>
+<span class="ln"> 90</span><span class="k">def</span> <span class="nf">foo</span>
+<span class="ln"> 91</span>  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="ln"> 92</span><span class="k">end</span>
+<span class="ln"> 93</span>
+<span class="ln"> 94</span><span class="k">def</span> <span class="nf">foo</span>
+<span class="ln"> 95</span>  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="ln"> 96</span><span class="k">end</span>
+<span class="ln"> 97</span>
+<span class="ln"> 98</span><span class="k">def</span> <span class="nf">foo</span>
+<span class="ln"> 99</span>  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="ln">100</span><span class="k">end</span>
+<span class="ln">101</span>
+<span class="ln">102</span><span class="k">def</span> <span class="nf">foo</span>
+<span class="ln">103</span>  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="ln">104</span><span class="k">end</span>
+<span class="ln">105</span>
+<span class="ln">106</span><span class="k">def</span> <span class="nf">foo</span>
+<span class="ln">107</span>  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="ln">108</span><span class="k">end</span>
+<span class="ln">109</span>
+<span class="ln">110</span><span class="k">def</span> <span class="nf">bar</span>
+<span class="ln">111</span>  <span class="nb">puts</span> <span class="s1">&#39;bar&#39;</span>
+<span class="ln">112</span><span class="k">end</span>
+<span class="ln">113</span>
+<span class="ln">114</span><span class="c1"># This is for Flight of the Conchords fans</span>
+<span class="ln">115</span><span class="k">def</span> <span class="nf">binary_solo</span>
+<span class="ln">116</span>  <span class="nb">puts</span> <span class="s1">&#39;101011010111111000001010100101 01 01 01&#39;</span>
+<span class="ln">117</span><span class="k">end</span>
+<span class="ln">118</span>
+<span class="ln">119</span><span class="c1"># end of file</span>
+</code></pre></div><h3 id="headings">Headings</h3>
+<p>Here we display all headings (1 through 6), with enough text that they should wrap to multiple lines in most designs.
+This is useful for checking the line-height, margins, and padding of all headings.</p>
+<h1 id="heading-level-1-the-quick-brown-fox-jumps-over-the-lazy-dog-the-quick-brown-fox-jumps-over-the-lazy-dog">Heading Level 1: The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</h1>
+<h2 id="heading-level-2-the-quick-brown-fox-jumps-over-the-lazy-dog-the-quick-brown-fox-jumps-over-the-lazy-dog">Heading Level 2: The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</h2>
+<h3 id="heading-level-3-the-quick-brown-fox-jumps-over-the-lazy-dog-the-quick-brown-fox-jumps-over-the-lazy-dog-the-quick-brown-fox-jumps-over-the-lazy-dog">Heading Level 3: The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</h3>
+<h4 id="heading-level-4-the-quick-brown-fox-jumps-over-the-lazy-dog-the-quick-brown-fox-jumps-over-the-lazy-dog-the-quick-brown-fox-jumps-over-the-lazy-dog">Heading Level 4: The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</h4>
+<h5 id="heading-level-5-the-quick-brown-fox-jumps-over-the-lazy-dog-the-quick-brown-fox-jumps-over-the-lazy-dog-the-quick-brown-fox-jumps-over-the-lazy-dog">Heading Level 5: The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</h5>
+<h6 id="heading-level-6-the-quick-brown-fox-jumps-over-the-lazy-dog-the-quick-brown-fox-jumps-over-the-lazy-dog-the-quick-brown-fox-jumps-over-the-lazy-dog-the-quick-brown-fox-jumps-over-the-lazy-dog">Heading Level 6: The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</h6>
+<p>For comparison purposes headings are follow by an all uppercase paragraph.</p>
+<p><strong>UPPERCASE PARAGRAPH:</strong> THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG. THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG. THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac eros interdum, suscipit lorem ac, scelerisque libero. In aliquet viverra tortor vitae semper. Nulla adipiscing commodo lacus nec vulputate.</p>
+<hr>
+<h4 id="footnotes">Footnotes</h4>
+<div id="dates"></div>
+<p>The date examples represent the major hardware platforms created by Apple.</p>
+<ol>
+<li>Apple II (June 1977)</li>
+<li>Macintosh (1/24/1984)</li>
+<li>iMac (15 August 1998)</li>
+<li>iPod (2001-10-23)</li>
+<li>iPhone (June 29, 2007)</li>
+<li>iPad (2010 April 3)</li>
+<li>Apple Watch (24/4/2015)</li>
+</ol>
+<p>My criteria was to pick consumer products which I consider the first of a new class of device, and one which was successful. To make the list the device also had to be a device that functions properly as a stand alone device. This isn&rsquo;t to say it doesn&rsquo;t use other devices in some fashion, but that it&rsquo;s</p>
+<p>Runners Up:</p>
+<ul>
+<li>Apple I</li>
+<li>Lisa</li>
+<li>LaserWriter</li>
+<li>Newton</li>
+<li>Ti-Book</li>
+<li>Apple TV</li>
+<li>AirPods</li>
+</ul>
+
+  </article>
+
+
+
+
+
+
+
+
+</body>
+</html>

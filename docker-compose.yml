@@ -1,0 +1,20 @@
+version: '3'
+services:
+  build:
+    image: klakegg/hugo:0.78.2-ext-alpine
+    command: --cleanDestinationDir --watch
+    volumes:
+      - .:/src
+      - ./docs:/target
+  server:
+    image: klakegg/hugo:0.78.2-ext-alpine
+    command: server --renderToDisk
+    volumes:
+      - .:/src
+    ports:
+      - 1313:1313
+  bash:
+    build: .
+    entrypoint: bash
+    volumes:
+      - .:/src

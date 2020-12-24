@@ -1,0 +1,62 @@
+languageCode:           "en"
+title:                  "Core-Styles 3"
+baseURL:                "https://guides.webstop.com"
+enableInlineShortcodes: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe:           true
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+      autoHeadingIDType: github
+  highlight:
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: false
+    noClasses: false
+    tabWidth: 2
+
+buildDrafts:            true
+buildFuture:            true
+
+enableRobotsTXT:        true
+metaDataFormat:         "yaml"
+disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
+
+
+publishDir:             "docs"
+
+module:
+  mounts:
+    - source:           dist
+      target:           static/docs/3.0/dist
+    - source:           site/assets
+      target:           assets
+    - source:           site/content
+      target:           content
+    - source:           site/data
+      target:           data
+    - source:           site/layouts
+      target:           layouts
+    - source:           site/static
+      target:           static
+
+params:
+  current_version:      "3.0.0-alpha-1"
+  docs_version:         "3.0"
+  repo:                 "https://github.com/webstop/core-styles-3"
+  website:              "https://guides.webstop.com"
+
