@@ -8,7 +8,7 @@ services:
       - ./docs:/target
   server:
     image: klakegg/hugo:0.78.2-ext-alpine
-    command: server --renderToDisk
+    command: server --disableFastRender --renderToDisk
     volumes:
       - .:/src
     ports:
