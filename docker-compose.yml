@@ -1,14 +1,14 @@
 version: '3'
 services:
   build:
-    image: klakegg/hugo:0.78.2-ext-alpine
-    command: --cleanDestinationDir --watch
+    image: klakegg/hugo:0.80.0-ext-alpine
+    command: --cleanDestinationDir
     volumes:
       - .:/src
       - ./docs:/target
   server:
-    image: klakegg/hugo:0.78.2-ext-alpine
-    command: server --disableFastRender --renderToDisk
+    image: klakegg/hugo:0.80.0-ext-alpine
+    command: server --renderToDisk --disableFastRender
     volumes:
       - .:/src
     ports:
@@ -16,5 +16,10 @@ services:
   bash:
     build: .
     entrypoint: bash
+    volumes:
+      - .:/src
+  rebuild:
+    build: .
+    entrypoint: watch -n 5 hugo --cleanDestinationDir
     volumes:
       - .:/src

@@ -10,10 +10,13 @@
     "css-prefix": "",
     "css-minify": "",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:dist/css/",
-    "css-compile-docs": "sass --style expanded --source-map --embed-sources --no-error-css site/assets/scss/:site/static/css",
+    "css-compile-docs": "sass --style expanded --source-map --embed-sources --no-error-css site/assets/scss/:site/static/css/",
+    "docs-build": "hugo --cleanDestinationDir",
+    "NA-watch-docs": "nodemon -L --watch site/ --ext md,html --exec \"npm-run-all docs-build\"",
     "watch": "npm-run-all --parallel watch-*",
-    "watch-css-main": "nodemon -L --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
-    "watch-css-docs": "nodemon -L --watch site/assets/scss/ --ext scss --exec \"npm run css-lint css-compile-docs\""
+    "watch-css-main": "nodemon -L --watch scss/ --ext scss --exec \"npm-run-all css-compile\"",
+    "NA-watch-css-main": "nodemon -L --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
+    "watch-css-docs": "nodemon -L --watch site/assets/scss/ --ext scss --exec \"npm run css-compile-docs\""
   },
   "repository": {
     "type": "git",
@@ -29,8 +32,9 @@
   "devDependencies": {
     "@popperjs/core": "^2.6.0",
     "bootstrap-5-docs": "github:hemphill/bootstrap-5-docs#main",
-    "sass": "^1.30.0",
-    "nodemon -L": "^2.0.6",
-    "npm-run-all": "^4.1.5"
+    "hugo-bin": "^0.68.0",
+    "nodemon": "^2.0.6",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.30.0"
   }
 }
