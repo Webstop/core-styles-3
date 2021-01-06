@@ -1,0 +1,57 @@
+// Typography
+
+// Note: we want to use default fonts in the actual code examples and documentation.
+
+.wsg-content .wsg-content {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $wsg-sans-serif;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.wsg-title,
+.wsg-page-header h1 {
+  font-family: $wsg-sans-serif;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+
+}
+
+//.btn, label, input, .form-text, th, td, .alert, .sans-serif {
+//  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, arial, sans-serif;
+//  font-size: 16px;
+//}
+
+
+body, .serif {
+  font-family: $wsg-serif;
+}
+
+.sans-serif, .btn, .nav-link {
+  font-family: $wsg-sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $wsg-sans-serif;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+}
+
+.chroma, code, kbd, pre, samp {
+  font-family: $wsg-monospace;
+}
+
+// Use Bootstrap defaults in code examples
+.bd-example {
+  font-family: $font-family-sans-serif;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-sans-serif;
+    font-weight: 500; // seems weird but reboot sets headings to 500
+  }
+  code, kbd, pre, samp {
+    font-family: $font-family-monospace;
+  }
+}
+
+

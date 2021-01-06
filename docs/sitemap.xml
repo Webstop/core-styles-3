@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://guides.webstop.com/force_reload/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://guides.webstop.com/404.html</loc>
   </url>
   
