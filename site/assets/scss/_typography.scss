@@ -28,7 +28,7 @@ body, .serif {
   font-family: $wsg-serif;
 }
 
-.sans-serif, .btn, .nav-link {
+.sans-serif, .btn, .nav-link, .dropdown-item {
   font-family: $wsg-sans-serif;
 }
 
@@ -45,6 +45,9 @@ h1, h2, h3, h4, h5, h6 {
 // Use Bootstrap defaults in code examples
 .bd-example {
   font-family: $font-family-sans-serif;
+  .sans-serif, .btn, .nav-link, .dropdown-item {
+    font-family: $font-family-sans-serif;
+  }
   h1, h2, h3, h4, h5, h6 {
     font-family: $font-family-sans-serif;
     font-weight: 500; // seems weird but reboot sets headings to 500

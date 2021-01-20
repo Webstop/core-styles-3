@@ -10907,7 +10907,7 @@ body, .serif {
   font-family: "Libre Baskerville", Georgia, serif;
 }
 
-.sans-serif, .btn, .nav-link {
+.sans-serif, .btn, .nav-link, .dropdown-item {
   font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -10922,6 +10922,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .bd-example {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.bd-example .sans-serif, .bd-example .btn, .bd-example .nav-link, .bd-example .dropdown-item {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .bd-example h1, .bd-example .h1, .bd-example h2, .bd-example .h2, .bd-example h3, .bd-example .h3, .bd-example h4, .bd-example .h4, .bd-example h5, .bd-example .h5, .bd-example h6, .bd-example .h6 {
