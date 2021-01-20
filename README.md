@@ -2,6 +2,17 @@
 
 Welcome to the 3rd major release of Webstop's grocery website front-end design system.
 
+You can find the latest documentation at [guides.webstop.com](http://guides.webstop.com), 
+which represents the latest code in the master branch.
+
+## Setup
+
+Before you run the development server for the first time run the following command:
+
+```bash
+./setup
+```
+
 ## Development Server
 
 You'll want to open two terminal tabs/windows in the root of this project.
@@ -19,6 +30,26 @@ Once you've started the webserver visit [`localhost:1313`](http://localhost:1313
 to see the documentation website.
 
 ## Important Developer Notes
+
+### Development Folders
+
+The following folders are the primary places you work when creating CSS and documentation.
+
+- `site`
+- `scss`
+
+#### `site`
+
+This folder contains the source files for CS3 documentation. The directory you want to work in is 
+found at `site/content/docs/3.0`.
+
+#### `scss`
+
+This folder contains the source files for CS3 stylesheets. 
+
+### Generated Content Folders
+
+Some content is generate from source files and placed into special directories.
 
 Do **NOT** edit the files in the following folders:
 
