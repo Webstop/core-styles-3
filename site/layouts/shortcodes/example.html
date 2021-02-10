@@ -16,7 +16,7 @@ show_markup: if the markup should be output in the HTML - default: `true`
 {{- $input := .Inner -}}
 
 {{- if eq $show_preview true -}}
-<div{{ with .Get "id" }} id="{{ . }}"{{ end }} class="example{{ with .Get "class" }} {{ . }}{{ end }}">
+<div{{ with .Get "id" }} id="{{ . }}"{{ end }} class="p-3 example{{ with .Get "class" }} {{ . }}{{ end }}">
 {{- $input -}}
 </div>
 {{- end -}}

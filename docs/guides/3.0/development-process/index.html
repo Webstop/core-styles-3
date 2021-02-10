@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    
+     Core-Styles 3
+    
+  </title>
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/docs.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark wsg-header">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-2" href="/">WCS <small>v3</small></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/docs/3.0/">Docs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Dev</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/guides/3.0/">Guides</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/core-styles-3#core-styles-3" target="_blank">GitHub</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/webstop-wiki#webstop-app-builders-wiki" target="_blank">Wiki</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/core-specs#webstop-core-specifications" target="_blank">Specs</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<section class="mt-0 mb-0 pb-0 pt-0">
+  <div class="" >
+    <div class="   pt-3 pb-3   d-flex  justify-content-center align-items-center wsg-title-header-section" style="">
+      <div class="container ">
+        <div class="row d-flex justify-content-center wsg-title-header-section">
+          <div class="col-sm-12 col-md-7 p-0 p-md-2 ">
+            <h1
+              class="bg-light rounded shadow border border-primary text-center p-md-2 mb-3 p-1 mb-md-3 page-title ">
+              Development Process</h1>
+            <p class="text-center text-light lead">How to use our style guide to improve your productivity.</p>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container-fluid bd-layout">
+ 
+  <div class="row">
+  
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block wsg-sidebar collapse ">
+  <ul class="list-unstyled">
+    <li class="my-2">
+      <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Contents </button>
+      <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
+        <li><a class="d-inline-flex align-items-center rounded" href="#typography">Typography</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#images">Images</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#tables">Tables</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#figures">Figures</a></li>
+      </ul>
+    </li>
+    <li class="my-2">
+      <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#forms-collapse" aria-controls="forms-collapse">Forms</button>
+      <ul class="list-unstyled ps-3 collapse" id="forms-collapse">
+        <li><a class="d-inline-flex align-items-center rounded" href="#overview">Overview</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#disabled-forms">Disabled forms</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#sizing">Sizing</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#input-group">Input group</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#floating-labels">Floating labels</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#validation">Validation</a></li>
+      </ul>
+    </li>
+    <li class="my-2">
+      <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#components-collapse" aria-controls="components-collapse">Components</button>
+      <ul class="list-unstyled ps-3 collapse" id="components-collapse">
+        <li><a class="d-inline-flex align-items-center rounded" href="#accordion">Accordion</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#alerts">Alerts</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#badge">Badge</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#breadcrumb">Breadcrumb</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#buttons">Buttons</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#button-group">Button group</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#card">Card</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#carousel">Carousel</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#dropdowns">Dropdowns</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#list-group">List group</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#modal">Modal</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#navs">Navs</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#navbar">Navbar</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#pagination">Pagination</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#popovers">Popovers</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#progress">Progress</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#scrollspy">Scrollspy</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#spinners">Spinners</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#toasts">Toasts</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#tooltips">Tooltips</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  
+
+  <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-main order-1">
+    <div class="bd-intro ps-lg-4">
+      
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+          <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#first-time-setup">First Time Setup</a></li>
+    <li><a href="#development">Development</a>
+      <ul>
+        <li><a href="#starting-for-the-day">Starting for the Day</a></li>
+        <li><a href="#developing-a-component">Developing a Component</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+        
+      <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+       
+        <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/webstop/core-styles-3/blob/master/site/content/guides/3.0/development-process.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+      
+      </div>
+    </div>
+
+    
+
+    <div class="bd-content ps-lg-4">
+      
+
+      <p>Docs Template</p>
+
+      <p>Now you&rsquo;ve read about our approach to front-end components, and using
+the Style Guide Drive Development methodology. This guide is less esoteric,
+it is more pragmatic as it gets into the nuts and
+bolts of how to use the style guide on a day-to-day basis.</p>
+<h2 id="first-time-setup">First Time Setup</h2>
+<p>Getting started is easy since we are using Docker to run our
+development server.</p>
+<ol>
+<li>Fork the <a href="https://github.com/webstop/core-styles">core-styles repo</a></li>
+<li>Clone the core-styles repo &amp; setup git remotes for your repo and Webstop</li>
+<li>Run the serve command <code>./serve</code></li>
+</ol>
+<p>Once you run the serve command Docker will run out and download the
+Docker images you need, install the Ruby Gems, and install the
+Node Modules.</p>
+<p>After about 10 minutes everything should be downloaded and ready to use.</p>
+<p><em>If you have further questions about the repo see the
+<a href="%5Bhttps://github.com/webstop/core-styles#webstop-style-guide">README</a> file.</em></p>
+<h2 id="development">Development</h2>
+<p>The following walks you through working with the core-styles living style guide.</p>
+<h3 id="starting-for-the-day">Starting for the Day</h3>
+<p>The first thing I like to do when developing with core-styles is to open 3
+terminal windows/tabs.</p>
+<ol>
+<li>Run <code>git status</code> in the first window/tab &amp; make sure you don&rsquo;t have any
+uncommitted changes laying around. Then create a new branch for the
+feature you&rsquo;re about to create or update (<em>we&rsquo;ll need to be in a unique branch
+when you want to try your changes in a back-end like Rails or Lasso</em>).</li>
+<li>In the second terminal window/tab run  <code>./serve</code>. This will run the
+contents of the <code>serve</code> file at the root of this project which fires
+up the web server and makes sure all our Ruby Gems and Node Modules are
+installed. Should take about 10 seconds for the server to start if it&rsquo;s
+<em>not</em> your first time.</li>
+<li>In the third window/tab run <code>./watch</code>, this will run the contents of the
+<code>watch</code> file in the root of our project. This will watch our SCSS directory
+for any changes and compile our SCSS into CSS and place it in the <code>dist</code>
+folder.</li>
+</ol>
+<p>At this point your first tab is available for you to run git commands, your
+second tab is running a web server, and your third tab is running a Sass
+watch script.</p>
+<p>Now, visit the development website here: [localhost:4000]({{ jekyll_host }}/).</p>
+<h3 id="developing-a-component">Developing a Component</h3>
+<p>When you are working with a component there are three main files you&rsquo;ll be interacting
+with: the documentation page, the SCSS file, and the HTML examples. Every component
+gets these three files.</p>
+<h4 id="1-the-documentation-page">1. The Documentation Page</h4>
+<p><strong>Location: <code>/docs/</code></strong></p>
+<p>Documentation pages are the web pages we can visit in the style guide to look up a
+component. They describe the component, the design rational, list the options we have
+available and most importantly display an example and show the HTML source code.</p>
+<p>Documentation pages are found in the <code>/docs/</code> folder at the root of core-styles. Within
+the <code>docs</code> folder are folders for the various products Webstop provides (like <code>circulars</code>,
+<code>recipes</code>, &amp; etc) giving our style guide a nice structure.</p>
+<h5 id="new-documentation-pages">New Documentation Pages</h5>
+<p>If you are adding a new documentation page, be sure to add the title of the file to the
+documentation navigation by adding it to the YAML file found here: <code>/_data/nav.yml</code>. This
+should be pretty self-explanatory once you open the YAML file. Sometimes changes to this
+file don&rsquo;t show up in the navigation right away. Given enough time it should show up, but
+you can always restart your server if you are impatent. Also, you can manually type the
+URL into your browser before it shows up in the section navigation.</p>
+<h4 id="2-the-sass-stylesheet">2. The Sass Stylesheet</h4>
+<p><strong>Location: <code>/SCSS/</code></strong></p>
+<p>By convention we have one Sass file per component. These Sass files contain all the
+styling for our component. Our build system takes all the various Sass files (plus
+external libraries like Bootstrap), and compiles them into a single compact CSS file.</p>
+<p>It is the role of the watch script to look for changes in our Sass file and generate
+new CSS files. These generated CSS files can be found in the <code>dist</code> folder. <em>You should
+<strong>never</strong> edit the files in the <code>dist</code> folder directly.</em></p>
+<h5 id="new-sass-stylesheets">New Sass Stylesheets</h5>
+<p>If you are adding a new stylesheet, make sure to add an <code>@import</code> statement to the
+<code>core-styles.scss</code> file found here: <code>/SCSS/core-styles.scss</code>. This should be pretty
+self-explanatory once you open the core-styles Sass file.</p>
+<h4 id="3-the-html-examples">3. The HTML Examples</h4>
+<p><strong>Location: <code>/_includes/examples/</code></strong></p>
+<p>HTML examples consist of the HTML we use for our component. Each component is going to
+want at least one example HTML file. The example HTML file contains <em>only</em> the HTML for
+the component. You may want more than one example file to illustrate the component in
+different states or with different modifier classes applied.</p>
+<p>Since these are just include files, nothing special needs to be done when you create a
+new one.</p>
+<hr>
+
+    </div>
+  </main>
+</div>
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+</body>
+</html>

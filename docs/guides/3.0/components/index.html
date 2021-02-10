@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    
+     Core-Styles 3
+    
+  </title>
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/docs.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark wsg-header">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-2" href="/">WCS <small>v3</small></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/docs/3.0/">Docs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Dev</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/guides/3.0/">Guides</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/core-styles-3#core-styles-3" target="_blank">GitHub</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/webstop-wiki#webstop-app-builders-wiki" target="_blank">Wiki</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/core-specs#webstop-core-specifications" target="_blank">Specs</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<section class="mt-0 mb-0 pb-0 pt-0">
+  <div class="" >
+    <div class="   pt-3 pb-3   d-flex  justify-content-center align-items-center wsg-title-header-section" style="">
+      <div class="container ">
+        <div class="row d-flex justify-content-center wsg-title-header-section">
+          <div class="col-sm-12 col-md-7 p-0 p-md-2 ">
+            <h1
+              class="bg-light rounded shadow border border-primary text-center p-md-2 mb-3 p-1 mb-md-3 page-title ">
+              Front-End Components</h1>
+            <p class="text-center text-light lead">The component pattern is the basis of our front-end framework.</p>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container-fluid bd-layout">
+ 
+  <div class="row">
+  
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block wsg-sidebar collapse ">
+  <ul class="list-unstyled">
+    <li class="my-2">
+      <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Contents </button>
+      <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
+        <li><a class="d-inline-flex align-items-center rounded" href="#typography">Typography</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#images">Images</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#tables">Tables</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#figures">Figures</a></li>
+      </ul>
+    </li>
+    <li class="my-2">
+      <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#forms-collapse" aria-controls="forms-collapse">Forms</button>
+      <ul class="list-unstyled ps-3 collapse" id="forms-collapse">
+        <li><a class="d-inline-flex align-items-center rounded" href="#overview">Overview</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#disabled-forms">Disabled forms</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#sizing">Sizing</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#input-group">Input group</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#floating-labels">Floating labels</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#validation">Validation</a></li>
+      </ul>
+    </li>
+    <li class="my-2">
+      <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#components-collapse" aria-controls="components-collapse">Components</button>
+      <ul class="list-unstyled ps-3 collapse" id="components-collapse">
+        <li><a class="d-inline-flex align-items-center rounded" href="#accordion">Accordion</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#alerts">Alerts</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#badge">Badge</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#breadcrumb">Breadcrumb</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#buttons">Buttons</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#button-group">Button group</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#card">Card</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#carousel">Carousel</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#dropdowns">Dropdowns</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#list-group">List group</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#modal">Modal</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#navs">Navs</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#navbar">Navbar</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#pagination">Pagination</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#popovers">Popovers</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#progress">Progress</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#scrollspy">Scrollspy</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#spinners">Spinners</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#toasts">Toasts</a></li>
+        <li><a class="d-inline-flex align-items-center rounded" href="#tooltips">Tooltips</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  
+
+  <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-main order-1">
+    <div class="bd-intro ps-lg-4">
+      
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+          <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#anatomy-of-a-front-end-component">Anatomy of a Front-End Component</a>
+      <ul>
+        <li><a href="#name-namespace--root-element">Name, Namespace, &amp; Root Element</a></li>
+        <li><a href="#attributes">Attributes</a></li>
+        <li><a href="#modifier-classes">Modifier Classes</a></li>
+        <li><a href="#scss-structure">SCSS Structure</a></li>
+      </ul>
+    </li>
+    <li><a href="#components-within-components">Components within Components</a>
+      <ul>
+        <li><a href="#multi-component-objects">Multi-Component Objects</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusions">Conclusions</a></li>
+  </ul>
+</nav>
+        </div>
+        
+      <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+       
+        <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/webstop/core-styles-3/blob/master/site/content/guides/3.0/components.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+      
+      </div>
+    </div>
+
+    
+
+    <div class="bd-content ps-lg-4">
+      
+
+      <p>Docs Template</p>
+
+      <p>The front-end component is a powerful design pattern for building
+front-end objects. The component pattern adds a level of reliability
+and confidence in your stylesheets you wouldn&rsquo;t have otherwise.</p>
+<p>Front-End Components Are:</p>
+<ul>
+<li>portable</li>
+<li>reliable</li>
+<li>extensible</li>
+<li>reusable</li>
+<li>self-contained</li>
+</ul>
+<h2 id="anatomy-of-a-front-end-component">Anatomy of a Front-End Component</h2>
+<p>There are three basic parts of a component the name (namespace),
+modifier classes, and attributes. As illustrated below.</p>
+<p>{% highlight html %}
+{% include examples/guide/_component-anatomy-example.html %}
+{% endhighlight %}</p>
+<p>The component&rsquo;s name should always be the first CSS class listed
+in the root element, followed by any modifier classes.</p>
+<h3 id="name-namespace--root-element">Name, Namespace, &amp; Root Element</h3>
+<p>Each component should start with a single HTML tag (usually a
+<code>div</code>) that wraps the whole component. This acts as the root
+node of the component and every other part of the component is
+housed inside it. The component root always has a class name,
+unusually one or two words, that defines the component&rsquo;s
+namespace.</p>
+<p>The component name is the unique name of the component; it
+is <em>important</em> you don&rsquo;t give two components the same name.</p>
+<p>The component name also acts as a namespace for all modifier classes
+and attributes of the component.</p>
+<p>Consider the Price component.</p>
+<p>{% capture example %}
+{% include examples/prices/_price-dollar-example.html %}
+{% endcapture %}
+{% include example.html content=example %}</p>
+<h5 id="naming-order">Naming Order</h5>
+<p>Notice how the component name <code>price</code> is the <em>first</em> thing listed in the
+root element&rsquo;s class attribute, followed by the <code>price-big-dollars</code>,
+modifier class, this order is important for maintaining a clear understanding
+of a component. If the component&rsquo;s root element contained other
+classes, for example the responsive utility classes <code>d-none</code>
+and <code>d-sm-block</code>, then those would come after the component
+specific classes for name and modifier classes.</p>
+<p>Order:</p>
+<ol>
+<li>specific component (or attribute)</li>
+<li>specific component-modifiers</li>
+<li>generic component</li>
+<li>generic component modifiers</li>
+<li>utility classes</li>
+</ol>
+<p>For example:</p>
+<p>{% highlight html %}</p>
+<p class="price price-big-dollars d-none d-sm-block"></p>
+{% endhighlight %}
+<p><em>Responsive class names are ordered from smaller to larger. Inline with the mobile-first philosophy.</em></p>
+<h3 id="attributes">Attributes</h3>
+<p>Observe how every attribute name begins with the component
+name plus a dash. Thus, what we might have called the
+<code>dollar-sign</code> attribute is actually expressed as <code>price-dollar-sign</code>.
+By strictly adhering to the namespacing of all attributes
+and modifier classes we are able to apply styling to a component
+with absolute confidence that no other component or portion
+of our website will be affected. This makes our design system
+very reliable! <em>I can&rsquo;t overstate what a benefit adhering to
+the namespacing approach!</em></p>
+<p>Notice that every element in our price component example has an
+attribute name class, even those we didn&rsquo;t apply styles to and
+don&rsquo;t intend to. At times this may seem like a lot of extra and
+unnecessary code, but there is a hidden power and flexibility
+to doing this this way!</p>
+<p>One of the obvious ways it helps to place attributes on all
+elements is when it comes to website theming. For example, the
+<code>price-prefix</code> class, it might be that we don&rsquo;t anticipate
+needing any additional styling to this element, what if we had
+simply left off the class? What happens when we get a
+retailer who insists the prefix area must be italic and dark
+green, but the rest of our component is to remain as
+originally designed?</p>
+<p>In our retailer&rsquo;s theme we&rsquo;d probably get some CSS that looks
+something like this:</p>
+<p>{% highlight css %}
+.price &gt; span:first-child {
+font-style: italic;
+}
+{% endhighlight %}</p>
+<p>At first blush this probably seems like a practical solution,
+but a whole host of issues can arise from it. What if in some
+contexts there is no prefix, so the designer left off that
+element &ndash; whatever comes next would get the italics, maybe
+the dollar sign or the cents, who knows.</p>
+<p>To over come this issue you&rsquo;d probably have to write
+something like this:</p>
+<p>{% highlight css %}
+.price &gt; span {
+font-style: italic;
+}
+.price-overlay,
+.price-dollar-sign,
+.price-dollars,
+.price-cents,
+.price-cent-sign,
+.price-suffix,
+.price-suffix-icon {
+font-style: normal;
+}
+{% endhighlight %}</p>
+<p>Now what seemed simple is starting to get complicated. How will
+this new solution react if the same thinking that left the
+attribute name off the prefix also left it off a few other
+elements, like maybe the dollar sign or the cent sign. We&rsquo;d
+have to start getting pretty exotic with our selectors to
+catch it. Also, consider what happens if someone decided to
+use a different HTML tag than the <code>span</code> tag?</p>
+<p>Now consider how being able to do the following is very simple,
+reliable, and robust.</p>
+<p>{% highlight css %}
+.price-prefix {
+font-style: italic;
+}
+{% endhighlight %}</p>
+<p>You can write this in your retailer theme and have complete
+confidence it&rsquo;s not going to have any untended consequences.</p>
+<p>Plus, you won&rsquo;t see complicated &amp; fragile CSS selectors like these gems
+lifted from the Tops website:</p>
+<p>{% highlight css %}
+.circular-nav-pages-right .pagination&gt;li&gt;a, .circular-nav-pages-left .pagination&gt;li&gt;a {
+padding: 3px 7px;
+}
+.navbar-inverse .navbar-nav&gt;.active&gt;a, .navbar-inverse .navbar-nav&gt;.active&gt;a:focus, .navbar-inverse .navbar-nav&gt;.active&gt;a:hover {
+color: #fff;
+background-color: #d31145;
+background: #d31145;
+}
+{% endhighlight %}</p>
+<p>In a well designed component based design system you&rsquo;ll never
+see CSS selectors that are deeply nested, or use anything other
+than a class name. If your selector needs more than two levels,
+that&rsquo;s a sign your component probably has a flaw in it&rsquo;s design.
+<em>You should never use actual tag names or id attributes for
+CSS selectors!</em></p>
+<h3 id="modifier-classes">Modifier Classes</h3>
+<p>Modifier classes allow you to enhance the default characteristics
+of the component or extend it with a subclass.</p>
+<p>Modifier classes are <em>usually</em> placed on the component&rsquo;s root element
+directly proceeding the component&rsquo;s name class. The one exception to
+this is when you&rsquo;re building a modifier that only affects one item in
+a list of items, and you need to specify which item to apply the effect
+to.</p>
+<p>Modifier classes can come in many different varieties.</p>
+<p>Example Modifier classes:</p>
+<ul>
+<li>Size classes like <code>name-sm</code> or <code>name-lg</code></li>
+<li>Visual effects like <code>name-shadow</code>, <code>name-stripped</code>, or <code>name-bordered</code></li>
+<li>Colors like <code>name-primary</code>, <code>name-warning</code>, or <code>name-danger</code></li>
+</ul>
+<p>Note: <em>in the examples above the <code>name</code> portion would be replaced by
+the name of your component (e.g. <code>price-sm</code>, <code>price-lg</code>).</em></p>
+<p>These are just a few examples so you can get an idea of how modifier
+classes work.</p>
+<h4 id="subclasses">Subclasses</h4>
+<p>A special kind of modifier class is the subclass. Those familiar with
+Object Oriented Programming (OOP) ought to recognize the term subclass.
+We are assuming you are familiar with the concept, so we won&rsquo;t be going
+into a detailed description here. However, it&rsquo;s important to understand
+how subclasses are implemented in our design system.</p>
+<p>Consider the following example:</p>
+<p>{% highlight html %}</p>
+<div class="circular-item circular-item-standard"> ... </div>
+<div class="circular-item circular-item-standard-promotion"> ... </div>
+<div class="circular-item circular-item-standard-coupon"> ... </div>
+{% endhighlight %}
+<p>Here we have three <code>circular-item</code> components. Each one shares some
+common styling, they are all cards on the grid, with a slight shadow,
+and padding at the bottom for an absolute positioned button row,
+rounded corners, a <code>1px</code> border, &amp; etc. They all receive this styling
+by having the root <code>circular-item</code> class.</p>
+<p>While they are similar in many ways, they also have some distinct
+differences handled by their subclass. For example, of these three
+items only the <code>circular-item-standard</code> has a <code>circular-item-heading</code>
+<code>circular-item-details</code> attributes. Also the
+<code>circular-item-standard-promotion</code> is the only one with a square image
+instead of the shorter rectangle images the other two have. By
+subclassing we are able to apply styles common to all <code>circular-item</code>
+components and unique styles for each subclass.</p>
+<h3 id="scss-structure">SCSS Structure</h3>
+<p>The namespaceing of a component is enforced by using Sass nesting. Sass nesting allows us to enforce the namespace of
+the component and write reliable styles.</p>
+<p>{% highlight scss %}
+.name {
+margin: 15px;</p>
+<p>.name-attribute-one {
+&hellip;
+}
+.name-attribute-two {
+&hellip;
+}</p>
+<p>}
+{% endhighlight %}</p>
+<p>Notice in the example above the <code>name</code> class wraps around all other class of the component. This way if we forget to
+namespace the name of an attribute (or otherwise have a class name collision in some other part of our code) our
+rule set for an attribute will only work if it is located inside our component. Also, notice we have all our CSS
+classes namespaced with teh same value as the root element. Consider these examples:</p>
+<h4 id="price-example">Price Example</h4>
+<p>{% highlight scss %}
+.price {</p>
+<p>.price-prefix {
+&hellip;
+}
+.price-suffix {
+&hellip;
+}</p>
+<p>}
+{% endhighlight %}</p>
+<h4 id="shopping-list-item-example">Shopping List Item Example</h4>
+<p>{% highlight scss %}
+.shopping-list-item {</p>
+<p>.shopping-list-item-name {
+&hellip;
+}
+.shopping-list-item-quantity {
+&hellip;
+}</p>
+<p>}
+{% endhighlight %}</p>
+<p><em>MMMmmm&hellip; nice clean namespacing!</em></p>
+<h2 id="components-within-components">Components within Components</h2>
+<p>The whole point of components is to create discrete, reusable, parts.
+We can use simple components to build more complex components. This
+means we have a bunch of very simple objects that are included within
+more complex objects.</p>
+<p>An easy example to understand is the button object. The button component
+looks something like this:</p>
+<p>{% capture example %}
+<button type="submit" class="btn btn-primary">
+Add to Shopping List
+</button>
+{% endcapture %}
+{% include example.html content=example %}</p>
+<p>Now look at our <code>circular-item</code> component we want a shopping list form
+at the bottom of each component, so we use a <code>btn</code> component.</p>
+<p>{% highlight html %}</p>
+<div class="circular-item circular-item-standard">
+  <div class="circular-item-heading">Wow!</div>
+  <div class="circular-item-title">Some Awesome Deal!</div>
+ ... 
+   <button type="submit" class="btn btn-primary">
+     Add to Shopping List
+   </button>
+ </div>
+{% endhighlight %}
+<p>When you take an even closer look you&rsquo;ll see the
+<code>circular-item circular-item-standard</code> component contains several
+more basic components:</p>
+<ul>
+<li><code>price</code></li>
+<li><code>icon</code></li>
+<li><code>btn</code></li>
+<li><code>shopping-list-item</code></li>
+</ul>
+<p>{% capture example %}
+{% include examples/circular-items/_circular-item-standard-example.html %}
+{% endcapture %}
+{% include example.html content=example %}</p>
+<h3 id="multi-component-objects">Multi-Component Objects</h3>
+<p>If you look at the example above you&rsquo;ll notice the <code>circular-item</code>
+component also has a <code>card</code> component on the same element. In
+case it should be clear that <code>card</code> is a less specific and
+more generic component, and the <code>circular-item</code> is a more specific
+and less composable object.</p>
+<p>If you look at the example above you&rsquo;ll notice the <code>circular-item</code>
+component also has a <code>card</code> component on the same element. We list
+the <code>circular-item</code> component and it&rsquo;s modifiers first because it
+is the more specific component and the <code>card</code> component afterwards
+because it is more generic.</p>
+<p>When two component are defined on the same HTML element, list the
+more specific component and it&rsquo;s modifiers first and the more
+generic second. A good rule of thumb for deciding which is the more
+specific and which is the more generic, ask yourself this &ldquo;can I
+add the CSS rule sets for object A and place it in object B
+and still call it an object B?&rdquo; and then ask the reverse and see
+which holds more true.</p>
+<p>For example:</p>
+<p>A. Can I add the CSS rule sets for <code>circular-item</code> and place it in
+<code>card</code> and still call it a <code>card</code>?</p>
+<p><em>This wouldn&rsquo;t workout very well, it wouldn&rsquo;t make sense to include
+a sale item&rsquo;s data, and add to shopping list button and etc in all
+the places we use a card.</em></p>
+<p>vs.</p>
+<p>B. Can I add the CSS rule sets for <code>card</code> and place it in
+<code>circular-item</code> and still call it a <code>circular-item</code>?</p>
+<p><em>This would work just fine, there probably are none (or very few)
+places we would want a circular item without it having a card
+layout.</em></p>
+<p>Using this little test it should be clear the preferred way to list
+our classes is as follows:</p>
+<p>{% highlight html %}</p>
+<div class="circular-item circular-item-standard card card-standard"> ... </div>
+{% endhighlight %}
+<h2 id="conclusions">Conclusions</h2>
+<p>The component design pattern is:</p>
+<ul>
+<li><strong>Reliable</strong>: by namespacing the component, it&rsquo;s attributes, and modifiers
+you can have complete confidence your styles won&rsquo;t inadvertently
+affect some other part of the website.</li>
+<li><strong>Reusable</strong>: a component can be used many times on the same page</li>
+<li><strong>Portable</strong>: a components are self-contained and able to be
+dropped in anywhere</li>
+<li><strong>Extensible</strong>: using modifier classes and subclasses we can build
+a variety of component variations</li>
+</ul>
+
+    </div>
+  </main>
+</div>
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+</body>
+</html>

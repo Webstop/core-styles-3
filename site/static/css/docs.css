@@ -10805,6 +10805,113 @@ textarea.form-control-lg {
   margin-bottom: 0.5rem;
 }
 
+.wsg-docs-nav-menu-icon {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -0.1em;
+}
+
+.wsg-sidebar {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-size: 16px;
+  opacity: 0.95;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 6.375rem;
+  z-index: 1000;
+  overflow-y: auto;
+  order: 0;
+  background-color: #e5e5e5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.wsg-sidebar .wsg-toc-category {
+  padding-top: 0.5em;
+}
+.wsg-sidebar .wsg-toc-category-link {
+  padding-top: 1em;
+  font-weight: 700;
+}
+.wsg-sidebar .wsg-toc-group-link {
+  padding-left: 0.5em;
+}
+.wsg-sidebar .wsg-toc-doc-link {
+  padding-left: 1em;
+  font-size: 0.8em;
+}
+.wsg-sidebar .wsg-toc-groups {
+  display: none;
+}
+.wsg-sidebar .is-active-category .wsg-toc-groups {
+  display: block;
+}
+@media (min-width: 768px) {
+  .wsg-sidebar {
+    top: 4rem;
+    max-height: calc(100vh - 4rem);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+@media (min-width: 1200px) {
+  .wsg-sidebar {
+    max-width: 320px;
+  }
+}
+
+.wsg-links {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .wsg-links {
+    display: block !important;
+  }
+}
+
+.wsg-search {
+  position: relative;
+  padding: 1rem 15px;
+  margin-right: -15px;
+  margin-left: -15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.wsg-search-docs-toggle {
+  line-height: 1;
+  color: #212529;
+}
+
+.wsg-sidenav {
+  display: none;
+}
+
+.wsg-toc-link {
+  display: block;
+  padding: 0.25rem 1.5rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.65);
+}
+.wsg-toc-link:hover {
+  color: rgba(0, 0, 0, 0.85);
+  text-decoration: none;
+}
+
+.wsg-toc-item.active {
+  margin-bottom: 1rem;
+}
+.wsg-toc-item.active:not(:first-child) {
+  margin-top: 1rem;
+}
+.wsg-toc-item.active > .wsg-toc-link {
+  color: rgba(0, 0, 0, 0.85);
+}
+.wsg-toc-item.active > .wsg-toc-link:hover {
+  background-color: transparent;
+}
+.wsg-toc-item.active > .wsg-sidenav {
+  display: block;
+}
+
 .toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -10856,6 +10963,37 @@ textarea.form-control-lg {
     position: relative;
   }
 }
+/* CSS Customizations done by Mickey*/
+.wsg-header {
+  background-color: #0170a0;
+}
+
+.wsg-title-header-section {
+  background-color: #65b3f3;
+}
+
+.page-title {
+  font-weight: 900;
+  font-size: 50px;
+}
+
+.wsg-sidebar {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-size: 16px;
+  opacity: 0.95;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1000;
+  overflow-y: auto;
+  order: 0;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+  background-color: #f7f7f7;
+}
+
 /* Fonts */
 @font-face {
   font-family: "JetBrains Mono";

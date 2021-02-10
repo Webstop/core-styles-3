@@ -1,0 +1,34 @@
+/* CSS Customizations done by Mickey*/
+
+.wsg-header {
+  background-color:$primary;
+}
+
+.wsg-title-header-section {
+  background-color: rgb(101, 179, 243);
+}
+
+.page-title {
+  font-weight: 900;
+  font-size: 50px;
+}
+
+.wsg-sidebar {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, arial, sans-serif;
+  font-size: 16px;
+  opacity: 0.95;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1000;
+  overflow-y: auto;
+  order: 0;
+  background-color: #fff; 
+  //background-color: #f5f2f9;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+
+
+  }
+
+  .highlight {
+    background-color: #f7f7f7;
+  }

@@ -7,6 +7,18 @@
   </url>
   
   <url>
+    <loc>https://guides.webstop.com/docs/3.0/ajax/ajax-form/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/ajax/ajax-load/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/ajax/ajax-modal/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/resources/article_typography_design_resource/</loc>
   </url>
   
@@ -19,11 +31,39 @@
   </url>
   
   <url>
+    <loc>https://guides.webstop.com/docs/3.0/forms/checkbox-selector/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/</loc>
   </url>
   
   <url>
+    <loc>https://guides.webstop.com/guides/3.0/development-approach/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/guides/3.0/development-process/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/docs/3.0/forms/form-toggles/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/guides/3.0/components/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/guides/3.0/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/guides/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/search/</loc>
   </url>
   
   <url>
@@ -35,7 +75,23 @@
   </url>
   
   <url>
+    <loc>https://guides.webstop.com/docs/3.0/tagging/tag-search/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/tagging/tags/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/resources/df_2020_iphone_se/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/toolbar/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/guides/3.0/working-with-ajax/</loc>
   </url>
   
 </urlset>
