@@ -1,13 +1,13 @@
 {{ define "main" }}
 
 <section class="mt-0 mb-0 pb-0 pt-0">
-  <div class="" >
-    <div class="   pt-3 pb-3   d-flex  justify-content-center align-items-center wsg-title-header-section" style="">
+  
+    <div class="   pt-3 pb-3   d-flex  justify-content-center align-items-center bg-title-head inner-shadow" style="">
       <div class="container ">
-        <div class="row d-flex justify-content-center wsg-title-header-section">
+        <div class="row d-flex justify-content-center ">
           <div class="col-sm-12 col-md-7 p-0 p-md-2 ">
             <h1
-              class="bg-light rounded shadow border border-primary text-center p-md-2 mb-3 p-1 mb-md-3 page-title ">
+              class="bg-light shadow text-center p-md-2 mb-3 p-1 mb-md-3 page-title ">
               {{ .Title | markdownify }}</h1>
             <p class="text-center text-light lead">{{ .Page.Params.Description | markdownify }}</p>
            
@@ -15,7 +15,7 @@
         </div>
       </div>
     </div>
-  </div>
+  
 </section>
 
 <div class="container-fluid bd-layout">

@@ -1,24 +1,30 @@
 {{ define "main" }}
-  <main class="index">
+  <main class="index p-5">
     <p>List Template</p>
     <h1>{{ .Title }}</h1>
-    <ul class="index-items">
-      {{ range .Pages }}
-      <li class="index-item">
-        <p class="index-item-dates">
-          <span class="index-item-created-at">{{ .Params.created_at }}</span>
-          {{ with .Params.updated_at }}
-          <span class="index-item-updated">
-          Updated on
-          <span class="index-item-updated-at">{{.}}</span>
-        </span>
+    <section class="pt-5 pb-5">
+      
+      <div class="container">
+        <div class="row d-flex">
+          {{ range .Pages }}
+          <div class="col-md-4 mb-4 ">
+           
+            <div class="card card-body card-box text-center h-100">
+              <div class="title">
+                <h3><a href="{{ .URL }}">{{ .Title }}</a></h3>
+              </div>
+              <div class="text">
+                <p>{{ .Description }}</p>
+              </div>
+              <a href="{{ .URL }}">Learn More</a>
+            </div>
+          
+          </div>
           {{ end }}
-        </p>
-        <h4 class="index-item-title"><a href="{{ .URL }}">{{ .Title }}</a></h4>
-        <p class="index-item-by-line"><em>by</em> <span class="index-item-author">{{ .Params.Author }}</span></p>
-        <p class="index-item-description">{{ .Description }}</p>
-      </li>
-      {{ end }}
-    </ul>
+        </div>
+      </div> 
+      
+     </section>  
+   
   </main>
 {{ end }}

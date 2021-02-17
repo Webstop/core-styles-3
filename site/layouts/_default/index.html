@@ -1,25 +1,14 @@
 {{ define "main" }}
 <main aria-role="main" class="site-main-body">
-  <header class="homepage-header">
-    <p class="article-created-at">
-      {{.Params.created_at}}
-      {{ with .Params.updated_at }}
-        <span class="article-updated-at">
-          Updated {{.}}
-        </span>
-      {{ end }}
-    </p>
-    <h1 class="article-title">{{.Title}}</h1>
-    {{ with .Params.subtitle }}
-    <span class="subtitle">{{.}}</span>
-    {{ end }}
-    <p class="article-by-line"><em>by</em> <span class="article-author">{{.Params.author}}</span></p>
-  </header>
+
+  <section class="">
+ 
   <article class="homepage-content">
-    <p>Index Template</p>
     <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
     {{.Content}}
   </article>
+</section>
+
   <div>
     <!-- Note that .Pages is the same as .Site.RegularPages on the homepage template. -->
     {{ range first 10 .Pages }}
