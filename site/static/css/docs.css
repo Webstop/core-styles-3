@@ -11019,6 +11019,10 @@ textarea.form-control-lg {
   background-color: #f7f7f7;
 }
 
+.icon-code-snip {
+  font-size: 10px;
+}
+
 /* Fonts */
 @font-face {
   font-family: "JetBrains Mono";

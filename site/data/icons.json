@@ -1,0 +1,163 @@
+
+{
+    "user": {
+      "name": "User",
+      "icon": "fad fa-user-circle"
+    },
+    "shopping list": {
+        "name": "Shopping List",
+        "icon": "fad fa-clipboard-list-check"
+        
+      },
+      "coffee": {
+        "name": "Coffee",
+        "icon": "fad fa-coffee-pot"
+      }
+      ,
+      "Email": {
+        "name": "Email",
+        "icon": "fad fa-envelope "
+      }
+      ,
+      "Menu Toggle": {
+        "name": "Toggle",
+        "icon": "far fa-bars"
+      }
+      ,
+      "Cart": {
+        "name": "Cart",
+        "icon": "fad fa-shopping-cart"
+      }
+      ,
+      "up": {
+        "name": "Arrow Up",
+        "icon": "fas fa-angle-up"
+      }
+      ,
+      "down": {
+        "name": "Arrow Down",
+        "icon": "fas fa-angle-down "
+      }
+      ,
+      "right": {
+        "name": "Arrow Right",
+        "icon": "fas fa-angle-right"
+      }
+      ,
+      "left": {
+        "name": "Arrow Left",
+        "icon": "fas fa-angle-left"
+      }
+      ,
+      "check": {
+        "name": "Check",
+        "icon": "fad fa-check"
+      }
+      ,
+      "close": {
+        "name": "Close",
+        "icon": "far fa-times"
+      }
+      ,
+      "question": {
+        "name": "Question ",
+        "icon": "fad fa-question-circle"
+      }
+      ,
+      "info": {
+        "name": "Info",
+        "icon": "fad fa-info-circle"
+      }
+      ,
+      "tags": {
+        "name": "Tags",
+        "icon": "fad fa-tags"
+      }
+      ,
+      "phone": {
+        "name": "Phone",
+        "icon": "fad fa-mobile-alt"
+      }
+      ,
+      "sign in": {
+        "name": "Sign In ",
+        "icon": "fad fa-sign-in"
+      }
+      ,
+      "sign out": {
+        "name": "Sign Out",
+        "icon": "fad fa-sign-out"
+      }
+      ,
+      "newsletter": {
+        "name": "Newsletter ",
+        "icon": "fad fa-newspaper"
+      }
+      ,
+      "pharmacy": {
+        "name": "Pharmacy",
+        "icon": "fad fa-prescription-bottle-alt"
+      }
+      ,
+      "search location": {
+        "name": "Search Location",
+        "icon": "fad fa-search-location"
+      }
+      ,
+      "recipe": {
+        "name": "Recipe",
+        "icon": "fad fa-oven"
+      }
+      ,
+      "weekly ad": {
+        "name": "Weekly Ad",
+        "icon": "fad fa-calendar-star"
+      }
+      ,
+      "calendar": {
+        "name": "Calendar",
+        "icon": "fad fa-calendar-alt"
+      }
+      ,
+      "coupon": {
+        "name": "Coupon",
+        "icon": "fad fa-ticket"
+      }
+      ,
+      "produce": {
+        "name": "Produce",
+        "icon": "fad fa-carrot"
+      }
+      ,
+      "meat": {
+        "name": "Meat",
+        "icon": "fad fa-meat"
+      }
+      ,
+      "dairy": {
+        "name": "Dairy",
+        "icon": "fad fa-cow"
+      }
+      ,
+      "vegan": {
+        "name": "Vegan",
+        "icon": "fad fa-leaf"
+      }
+      ,
+      "vegetarian": {
+        "name": "Vegetarian",
+        "icon": "fad fa-salad"
+      }
+      ,
+      "contact": {
+        "name": "Contact",
+        "icon": "fad fa-paper-plane"
+      }
+      ,
+      "edit": {
+        "name": "Edit",
+        "icon": "fad fa-edit"
+      }
+
+    
+    }
