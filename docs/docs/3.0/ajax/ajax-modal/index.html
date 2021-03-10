@@ -67,8 +67,8 @@
           <div class="col-sm-12 col-md-7 p-0 p-md-2 ">
             <h1
               class="bg-light shadow text-center p-md-2 mb-3 p-1 mb-md-3 page-title ">
-              Guide Overview</h1>
-            <p class="text-center text-light lead">Learn how to unlock the power of front-end components &amp; style guide driven development.</p>
+              Ajax Modal</h1>
+            <p class="text-center text-light lead">A modal available site-wide for AJAX content.</p>
            
           </div>
         </div>
@@ -139,16 +139,15 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#goals">Goals</a></li>
-    <li><a href="#explore-the-basics">Explore: The Basics</a></li>
-    <li><a href="#explore-extra-topics">Explore: Extra Topics</a></li>
+    <li><a href="#example">Example</a></li>
+    <li><a href="#options">Options</a></li>
   </ul>
 </nav>
         </div>
         
       <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
        
-        <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/webstop/core-styles-3/blob/master/site/content/guides/3.0/overview.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+        <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/webstop/core-styles-3/blob/master/site/content/docs/3.0/ajax/ajax-modal.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
       
       </div>
     </div>
@@ -160,82 +159,60 @@
 
       <p>Docs Template</p>
 
-      <h2 id="goals">Goals</h2>
-<p>The primary goal is to improve the capabilities of Webstop&rsquo;s
-front-end design system to enable our developers to write more
-flexible, reliable, and consistent front-end code.</p>
-<p>The second goal is to build a design system that is back-end
-agnostic, and easily portable to diverse environments. This
-allows modern environments based on technologies like
-Ruby on Rails, and Ember.js, and even legacy environments like
-Lasso, to share a common set of front-end components. It
-enables us to have a consistent styling and behavior across all
-our diverse environments.</p>
-<p>We have incorporated may of the industries latest best practices
-and applied them to our environment.</p>
-<h2 id="explore-the-basics">Explore: The Basics</h2>
-<p>The follow three guides will arm you with the information you&rsquo;ll
-need to get the most out of your design system.</p>
-<div class="row">
-  <div class="col card card-standard">
-    <div class="card-body">
-      <h4 class="text-center"><a href="/docs/guide/components/">Front-End Components</a></h4>
-      <p>
-        The component pattern is the basis of our front-end framework. 
-      </p>
-      <p>
-        The front-end component is a powerful design pattern for building 
-        front-end objects. The component pattern adds a level of reliability 
-        and confidence in your stylesheets you wouldn't have otherwise.
-      </p>
-    </div>
-    <div class="card-footer">
-      <a href="/docs/guide/components/" class="btn btn-primary btn-block">Learn More <i class="icon-arrow-right"></i></a>
-    </div>
-  </div>
-  <div class="col card card-standard">
-    <div class="card-body">
-      <h4 class="text-center"><a href="/docs/guide/development-approach/">Development Approach</a></h4>
-      <p>
-        Our design system is setup to support Style Guide Driven Development (SGDD). 
-      </p>
-      <p>
-        Style Guide Driven Development is an approach which places a living style guide a the heart of the front-end development process. This approach produces more reliable, portable, and well documented front-end pattern libraries.
-      </p>
-    </div>
-    <div class="card-footer">
-      <a href="/docs/guide/development-approach/" class="btn btn-primary btn-block">Learn More <i class="icon-arrow-right"></i></a>
-    </div>
-  </div>
-  <div class="col card card-standard">
-    <div class="card-body">
-      <h4 class="text-center"><a href="/docs/guide/development-process/">Development Process</a></h4>
-      <p>
-        Your guide to using the core-styles site for your front-end development. 
-      </p>
-      <p>
-        Now you've read about our approach to front-end components, and using 
-        the Style Guide Drive Development methodology. This guide is less esoteric, 
-        it is more pragmatic as it gets into the nuts and 
-        bolts of how to use the style guide on a day-to-day basis.
-      </p>
-    </div>
-    <div class="card-footer">
-      <a href="docs/guide/development-process/" class="btn btn-primary btn-block">Learn More <i class="icon-arrow-right"></i></a>
-    </div>
-  </div>
-</div>
-<h2 id="explore-extra-topics">Explore: Extra Topics</h2>
-<div class="row">
-  <div class="col card card-standard">
-    <div class="card-body">
-      <h4 class="text-center"><a href="/docs/guide/working-with-ajax/">Working with AJAX</a></h4>
-      <p>
-        Guide for working with components that utilize AJAX.
-      </p>
-    </div>
-    <div class="card-footer">
-      <a href="/docs/guide/working-with-ajax/" class="btn btn-primary btn-block">Learn More <i class="icon-arrow-right"></i></a>
+      <p>{% include environment_based_variables.html %}</p>
+<p>The <code>site-model</code> is included on every page when you used the code found on the <a href="/docs/layout/site/">site layout</a> page.</p>
+<h2 id="example">Example</h2>
+<p>When you set the <code>data-target</code> of a modal trigger to <code>#site-modal</code>, then you are indicating you want to use the site wide
+modal, which enables remote content loading via AJAX. The <code>data-load</code> attribute specifies the URL to pull the body
+content from, it is expected to be in HTML format. You should also include the <code>data-title</code> to set the text for the title of the modal.</p>
+<div class="p-3 example">
+{% include examples/layout/_site-modal-example.html %}
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="ln">1</span>{% include examples/layout/_site-modal-example.html %}</code></pre></div>
+<h2 id="options">Options</h2>
+<p>The Site Modal inherits all the abilities of a standard modal, and is extended with the following options.</p>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Options</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="text-nowrap">data-title</code></td>
+      <td>Attribute used to set the title of the modal.</td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">data-load</code></td>
+      <td>
+        Attribute specifies the URL of the content you want AJAX'd into the modal body. The AJAX request should return 
+        HTML content to display inside the modal. 
+      </td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">data-footer</code></td>
+      <td>
+        By default the modal will display a footer with a close button. To hide the footer and it's content, include the 
+        attribute <code class="text-nowrap">data-footer</code> set to <code class="text-nowrap">hide</code>
+        (<code class="text-nowrap">data-footer="hide"</code>) on the trigger element.
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- this site-modal should probably be an include? -->
+<div class="site-modal modal fade" id="site-modal" tabindex="-1" role="dialog" aria-labelledby="site-modal-title" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="site-modal-content modal-content">
+      <div class="modal-header">
+        <h4 class="site-modal-title modal-title" id="site-modal-title"></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="site-modal-body modal-body" id="site-modal-body"></div>
+      <div class="site-modal-footer modal-footer" id="site-modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
 </div>

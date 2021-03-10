@@ -67,8 +67,8 @@
           <div class="col-sm-12 col-md-7 p-0 p-md-2 ">
             <h1
               class="bg-light shadow text-center p-md-2 mb-3 p-1 mb-md-3 page-title ">
-              Guide Overview</h1>
-            <p class="text-center text-light lead">Learn how to unlock the power of front-end components &amp; style guide driven development.</p>
+              Ajax Form</h1>
+            <p class="text-center text-light lead">An easy way to submit form contents &amp; load the response into a section of the page.</p>
            
           </div>
         </div>
@@ -139,16 +139,20 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#goals">Goals</a></li>
-    <li><a href="#explore-the-basics">Explore: The Basics</a></li>
-    <li><a href="#explore-extra-topics">Explore: Extra Topics</a></li>
+    <li><a href="#examples">Examples</a>
+      <ul>
+        <li><a href="#basic-example">Basic Example</a></li>
+        <li><a href="#example-with-all-options">Example with All Options</a></li>
+      </ul>
+    </li>
+    <li><a href="#attributes">Attributes</a></li>
   </ul>
 </nav>
         </div>
         
       <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
        
-        <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/webstop/core-styles-3/blob/master/site/content/guides/3.0/overview.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+        <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/webstop/core-styles-3/blob/master/site/content/docs/3.0/ajax/ajax-form.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
       
       </div>
     </div>
@@ -160,85 +164,62 @@
 
       <p>Docs Template</p>
 
-      <h2 id="goals">Goals</h2>
-<p>The primary goal is to improve the capabilities of Webstop&rsquo;s
-front-end design system to enable our developers to write more
-flexible, reliable, and consistent front-end code.</p>
-<p>The second goal is to build a design system that is back-end
-agnostic, and easily portable to diverse environments. This
-allows modern environments based on technologies like
-Ruby on Rails, and Ember.js, and even legacy environments like
-Lasso, to share a common set of front-end components. It
-enables us to have a consistent styling and behavior across all
-our diverse environments.</p>
-<p>We have incorporated may of the industries latest best practices
-and applied them to our environment.</p>
-<h2 id="explore-the-basics">Explore: The Basics</h2>
-<p>The follow three guides will arm you with the information you&rsquo;ll
-need to get the most out of your design system.</p>
-<div class="row">
-  <div class="col card card-standard">
-    <div class="card-body">
-      <h4 class="text-center"><a href="/docs/guide/components/">Front-End Components</a></h4>
-      <p>
-        The component pattern is the basis of our front-end framework. 
-      </p>
-      <p>
-        The front-end component is a powerful design pattern for building 
-        front-end objects. The component pattern adds a level of reliability 
-        and confidence in your stylesheets you wouldn't have otherwise.
-      </p>
-    </div>
-    <div class="card-footer">
-      <a href="/docs/guide/components/" class="btn btn-primary btn-block">Learn More <i class="icon-arrow-right"></i></a>
-    </div>
-  </div>
-  <div class="col card card-standard">
-    <div class="card-body">
-      <h4 class="text-center"><a href="/docs/guide/development-approach/">Development Approach</a></h4>
-      <p>
-        Our design system is setup to support Style Guide Driven Development (SGDD). 
-      </p>
-      <p>
-        Style Guide Driven Development is an approach which places a living style guide a the heart of the front-end development process. This approach produces more reliable, portable, and well documented front-end pattern libraries.
-      </p>
-    </div>
-    <div class="card-footer">
-      <a href="/docs/guide/development-approach/" class="btn btn-primary btn-block">Learn More <i class="icon-arrow-right"></i></a>
-    </div>
-  </div>
-  <div class="col card card-standard">
-    <div class="card-body">
-      <h4 class="text-center"><a href="/docs/guide/development-process/">Development Process</a></h4>
-      <p>
-        Your guide to using the core-styles site for your front-end development. 
-      </p>
-      <p>
-        Now you've read about our approach to front-end components, and using 
-        the Style Guide Drive Development methodology. This guide is less esoteric, 
-        it is more pragmatic as it gets into the nuts and 
-        bolts of how to use the style guide on a day-to-day basis.
-      </p>
-    </div>
-    <div class="card-footer">
-      <a href="docs/guide/development-process/" class="btn btn-primary btn-block">Learn More <i class="icon-arrow-right"></i></a>
-    </div>
-  </div>
-</div>
-<h2 id="explore-extra-topics">Explore: Extra Topics</h2>
-<div class="row">
-  <div class="col card card-standard">
-    <div class="card-body">
-      <h4 class="text-center"><a href="/docs/guide/working-with-ajax/">Working with AJAX</a></h4>
-      <p>
-        Guide for working with components that utilize AJAX.
-      </p>
-    </div>
-    <div class="card-footer">
-      <a href="/docs/guide/working-with-ajax/" class="btn btn-primary btn-block">Learn More <i class="icon-arrow-right"></i></a>
-    </div>
-  </div>
-</div>
+      <p>{% include environment_based_variables.html %}</p>
+<h2 id="examples">Examples</h2>
+<p>Here are a couple of use examples of the AJAX Form feature.</p>
+<h3 id="basic-example">Basic Example</h3>
+<p>This example contains the minimum attributes need. The form contains the <code>data-ajax-form</code> attribute
+which triggers the form to submit via ajax instead of a web page reload. The <code>action</code> attribute
+specifies the URL to pull the content from, the content is expected to be in HTML format.</p>
+<div class="p-3 example">
+{% include examples/ajax-form/_ajax-form-example.html %}
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="ln">1</span>{% include examples/ajax-form/_ajax-form-example.html %}</code></pre></div>
+<h3 id="example-with-all-options">Example with All Options</h3>
+<p>In the following example we enable all of the optional attributes, including <code>data-target</code> and
+<code>data-power-bar</code>. By default the ajax will replace the form with the ajax content, in this example
+we select a different target using the <code>data-target</code> attribute, it accepts standard jQuery selectors.
+The <code>data-power-bar</code> attribute triggers a reload of the Shopping List Power Bar after the ajax content
+is returned.</p>
+<div class="p-3 example">
+{% include examples/ajax-form/_ajax-form-full-example.html %}
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="ln">1</span>{% include examples/ajax-form/_ajax-form-full-example.html %}</code></pre></div>
+<h2 id="attributes">Attributes</h2>
+<p>The <code>data-ajax-form</code> &amp; <code>action</code> attributes are required. The rest are optional.</p>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Options</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="text-nowrap">data-ajax-form</code></td>
+      <td>The presence of this attribute indicates submitting on this form should trigger an AJAX load.</td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">action</code></td>
+      <td>
+        Attribute specifies the URL of the content you want AJAX'd. The AJAX request should return 
+        HTML content to display inside the target element. 
+      </td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">data-target</code></td>
+      <td>
+        The DOM node to load the content into. Uses standard jQuery selectors, usually targets an id attribute 
+        (e.g. <code class="text-nowrap">#some-target</code>). Optional, if the <code class="text-nowrap">data-target</code> attribute isn't 
+        present the content will replace the ajax form.
+      </td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">data-power-bar</code></td>
+      <td>
+        When present, completing the ajax call triggers a reload of the Shopping List Power Bar.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
     </div>
   </main>

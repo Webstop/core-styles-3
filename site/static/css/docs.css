@@ -11023,6 +11023,11 @@ textarea.form-control-lg {
   font-size: 10px;
 }
 
+/* Icon Examples */
+.icon-example {
+  max-width: 350px;
+}
+
 /* Fonts */
 @font-face {
   font-family: "JetBrains Mono";

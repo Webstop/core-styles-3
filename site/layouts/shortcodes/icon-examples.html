@@ -1,0 +1,19 @@
+<div class="icon-examples row row-cols-2 row-cols-sm-3 row-cols-lg-4">
+  {{ range .Site.Data.icons }}
+    <div class="icon-examples-col col mb-3">
+      <div class="icon-example card h-100">
+        <div class="card-body text-center">
+          <h3 class="icon-example-title">{{ .name }}</h3>
+          <p class="icon-example-html"><i class="{{ .style }} {{ .icon }} fa-3x"></i></p>
+          <code class="icon-example-code code">&#x3C;i class=&#x22;{{ .style }} {{ .icon }}&#x22;&#x3E;&#x3C;/i&#x3E;</code>
+        </div>
+        <div class="card-footer">
+          <div class="d-grid">
+            <button class="btn-clipboard btn btn-primary" type="button">Copy Code</button>
+          </div>
+          <span class="icon-example-clipboard-code visually-hidden">&#x3C;i class=&#x22;{{ .style }} {{ .icon }}&#x22;&#x3E;&#x3C;/i&#x3E;</span>
+        </div>
+      </div>
+    </div>
+  {{ end }}
+</div>
