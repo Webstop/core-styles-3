@@ -3,169 +3,169 @@
     "name": "User",
     "style": "fad",
     "icon": "fa-user-circle",
-    "category": " " 
+    "category": " "
   },
   {
     "name": "Shopping List",
     "style": "fad",
     "icon": "fa-clipboard-list-check",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Coffee",
     "style": "fad",
     "icon": "fa-coffee-pot",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Email",
     "style": "fad",
     "icon": "fa-envelope",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Toggle",
     "style": "far",
     "icon": "fa-bars",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Cart",
     "style": "fad",
     "icon": "fa-shopping-cart",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Arrow Up",
     "style": "fas",
     "icon": "fa-angle-up",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Arrow Up",
     "style": "fas",
     "icon": "fa-angle-up",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Arrow Down",
     "style": "fas",
     "icon": "fa-angle-down",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Arrow Right",
     "style": "fas",
     "icon": "fa-angle-right",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Arrow Left",
     "style": "fas",
     "icon": "fa-angle-left",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Check",
     "style":"fad" ,
     "icon": "fa-check",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Close",
     "style":"far" ,
     "icon": "fa-times",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Question ",
     "style":"fad" ,
     "icon": "fa-question-circle",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Info",
     "style": "fad",
     "icon": "fa-info-circle",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Tags",
     "style":"fad" ,
     "icon": "fa-tags",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Phone",
     "style":"fad" ,
     "icon": "fa-mobile-alt",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Sign In ",
     "style":"fad" ,
     "icon": "fa-sign-in",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Sign Out",
     "style":"fad" ,
     "icon": "fa-sign-out",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Newsletter ",
     "style":"fad" ,
     "icon": "fa-newspaper",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Pharmacy",
     "style":"fad" ,
     "icon": "fa-prescription-bottle-alt",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Search Location",
     "style":"fad" ,
     "icon": "fa-search-location",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Recipe",
     "style":"fad" ,
     "icon": "fa-oven",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Weekly Ad",
     "style":"fad" ,
     "icon": "fa-calendar-star",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Calendar",
     "style": "fad",
     "icon": "fa-calendar-alt",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Coupon",
     "style":"fad" ,
     "icon": "fa-ticket",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Produce",
     "style":"fad" ,
     "icon": "fa-carrot",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Meat",
     "style":"fad" ,
     "icon": "fa-meat",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Dairy",
@@ -176,211 +176,211 @@
     "name": "Vegan",
     "style":"fad" ,
     "icon": "fa-leaf",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Vegetarian",
     "style":"fad" ,
     "icon": "fa-salad",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Contact",
     "style":"fad" ,
     "icon": "fa-paper-plane",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Edit",
     "style":"fad",
     "icon": "fa-edit",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Share",
     "style": "fad" ,
     "icon": "fa-share-square",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Printable",
     "style": "fad" ,
     "icon": "fa-print",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Employee",
     "style": "fad" ,
     "icon": "fa-person-dolly",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Bakery",
     "style": "fad" ,
     "icon": "fa-pie",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Dessert",
     "style": "fad" ,
     "icon": "fa-ice-cream",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "organic",
     "style": "fak" ,
     "icon": "fa-organic",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Clock",
     "style": "fad" ,
     "icon": "fa-clock",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Healthy",
     "style": "fad" ,
     "icon": "fa-heart",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Money",
     "style": "fad" ,
     "icon": "fa-money-bill-alt",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Search",
     "style": "fad" ,
     "icon": "fa-search",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Link",
     "style": "fad" ,
     "icon": "fa-link",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Storefront",
     "style": "fad" ,
     "icon": "fa-store",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Seafood",
     "style": "fad" ,
     "icon": "fa-fish",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Frozen",
     "style": "fad" ,
     "icon": "fa-temperature-frigid",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Alcohol",
     "style": "fad" ,
     "icon": "fa-glass-cheers",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Beauty",
     "style": "fad" ,
     "icon": "fa-pump-soap",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Catering",
     "style": "fad" ,
     "icon": "fa-concierge-bell",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Delivery",
     "style": "fad" ,
     "icon": "fa-truck-container",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Curbside",
     "style": "fad" ,
     "icon": "fa-truck-loading",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Gifts",
     "style": "fad" ,
     "icon": "fa-gifts",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Gift Card",
     "style": "fad" ,
     "icon": "fa-gift-card",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Floral",
     "style": "fad" ,
     "icon": "fa-flower-daffodil",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Sale",
     "style": "fad" ,
     "icon": "fa-badge-dollar",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Community",
     "style": "fad" ,
     "icon": "fa-users",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Charity",
     "style": "fad" ,
     "icon": "fa-hand-holding-heart",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "QR Code",
     "style": "fad" ,
     "icon": "fa-qrcode",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "Barcode Scan",
     "style": "fad" ,
     "icon": "fa-barcode-scan",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "AWS",
     "style": "fab" ,
     "icon": "fa-aws",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "code",
     "style": "fad" ,
     "icon": "fa-code",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "database",
     "style": "fad" ,
     "icon": "fa-database",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "debug",
     "style": "fad" ,
     "icon": "fa-debug",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "docker",
@@ -470,25 +470,25 @@
     "name": "laptop",
     "style": "fad" ,
     "icon": "fa-laptop",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "laptop code",
     "style": "fad" ,
     "icon": "fa-laptop-code",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "laptop-medical",
     "style": "fad" ,
     "icon": "fa-laptop-medical",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "lasso",
     "style": "fab" ,
     "icon": "",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "linux",
@@ -500,13 +500,13 @@
     "name": "markdown",
     "style": "fab" ,
     "icon": "fa-markdown",
-     "category": "" 
+     "category": ""
   },
   {
     "name": "node-js",
     "style": "fab" ,
     "icon": "fa-node-js",
-    "category": "brand" 
+    "category": "brand"
   },
   {
     "name": "npm",
@@ -635,73 +635,73 @@
       "name": "",
       "style": "fad",
       "icon": "fa-external-link",
-       "category": "" 
+       "category": ""
   },
   {
       "name": "Cloud",
       "style": "fad",
       "icon": "fa-cloud",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Cloud Download",
       "style": "fad",
       "icon": "fa-cloud-download",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Cloud Upload",
       "style": "fad",
       "icon": "fa-cloud-upload",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Settings",
       "style": "fad",
       "icon": "fa-cogs",
-       "category": "" 
+       "category": ""
     },
     {
       "name": " At",
       "style": "fad",
       "icon": "fa-at",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Bookmark",
       "style": "fad",
       "icon": "fa-bookmark",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Bug",
       "style": "fad",
       "icon": "fa-bug",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Calendar",
       "style": "fad",
       "icon": "fa-calendar",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Camera",
       "style": "fad",
       "icon": "fa-camera",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Comment",
       "style": "fad",
       "icon": "fa-comment",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Cut",
       "style": "fad",
       "icon": "fa-cut",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "CSS3",
@@ -713,97 +713,97 @@
       "name": "Edit",
       "style": "fad",
       "icon": "fa-edit",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Ellipsis-V",
       "style": "fad",
       "icon": "fa-ellipsis-v",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Ellipsis-H",
       "style": "fad",
       "icon": "fa-ellipsis-h",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Envelope",
       "style": "fad",
       "icon": "fa-envelope",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Envelope Open",
       "style": "fad",
       "icon": "fa-envelope-open-text",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Warning",
       "style": "fad",
       "icon": "fa-exclamation-triangle",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "File",
       "style": "fad",
       "icon": "fa-file",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "File Alt",
       "style": "fad",
       "icon": "fa-file-alt",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "File Chart",
       "style": "fad",
       "icon": "fa-file-chart-line",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "File Check",
       "style": "fad",
       "icon": "fa-file-check",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "File Code",
       "style": "fad",
       "icon": "fa-file-code",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "File CSV",
       "style": "fad",
       "icon": "fa-file-csv",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "File Download",
       "style": "fad",
       "icon": "fa-file-download",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "File Edit",
       "style": "fad",
       "icon": "fa-file-edit",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "File Image",
       "style": "fad",
       "icon": "fa-file-image",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Add File",
       "style": "fad",
       "icon": "fa-file-plus",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Remove File",
@@ -814,211 +814,211 @@
       "name": "File User",
       "style": "fad",
       "icon": "fa-file-user",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Folder",
       "style": "fad",
       "icon": "fa-folder",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Folders",
       "style": "fad",
       "icon": "fa-folders",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Open Folder",
       "style": "fad",
       "icon": "fa-folder-open",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Add Folder",
       "style": "fad",
       "icon": "fa-folder-plus",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Remove Folder",
       "style": "fad",
       "icon": "fa-folder-minus",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Folder Tree",
       "style": "fad",
       "icon": "fa-folder-tree",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Grin",
       "style": "fad",
       "icon": "fa-grin",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Hourglass",
       "style": "fad",
       "icon": "fa-hourglass",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "House",
       "style": "fad",
       "icon": "fa-house",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "User Home",
       "style": "fad",
       "icon": "fa-house-user",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "ID Card",
       "style": "fad",
       "icon": "fa-id-card",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Image",
       "style": "fad",
       "icon": "fa-image",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Images",
       "style": "fad",
       "icon": "fa-images",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Info",
       "style": "fad",
       "icon": "fa-info-circle",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Lock",
       "style": "fad",
       "icon": "fa-lock",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Unlock",
       "style": "fad",
       "icon": "fa-unlock",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Map Marked",
       "style": "fad",
       "icon": "fa-map-marked-alt",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Map Marker",
       "style": "fad",
       "icon": "fa-map-marker-alt",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Remove",
       "style": "fad",
       "icon": "fa-minus-circle",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Pointer",
       "style": "fad",
       "icon": "fa-mouse-pointer",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "TV",
       "style": "fad",
       "icon": "fa-tv",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Phone",
       "style": "fad",
       "icon": "fa-phone",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Phone Square",
       "style": "fad",
       "icon": "fa-phone-square",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Play",
       "style": "fas",
       "icon": "fa-play",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Prescription",
       "style": "fad",
       "icon": "fa-prescription",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Receipt",
       "style": "fad",
       "icon": "fa-receipt",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Recycle",
       "style": "fad",
       "icon": "fa-recycle",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "RSS",
       "style": "fad",
       "icon": "fa-rss-square",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Shield",
       "style": "fad",
       "icon": "fa-shield",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Shopping Cart",
       "style": "fad",
       "icon": "fa-shopping-cart",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Shopping Bag",
       "style": "fad",
       "icon": "fa-shopping-bag",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Shopping Basket",
       "style": "fad",
       "icon": "fa-shopping-basket",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Sort",
       "style": "fad",
       "icon": "fa-sort",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Sort Down",
       "style": "fad",
       "icon": "fa-sort-down",
-       "category": "" 
+       "category": ""
     },
     {
       "name": "Sort Up",
