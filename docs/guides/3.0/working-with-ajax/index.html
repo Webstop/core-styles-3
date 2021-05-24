@@ -177,41 +177,41 @@ logic we need to run at that route, and assign a view to return. Then you create
 wish to return, these are erb files so you can put programming logic in there like you would in a Rails app.</p>
 <h4 id="the-serverrb-file">The <code>server.rb</code> File</h4>
 <p>You create routes in Sinatra like the following:</p>
-<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="ln">1</span><span class="n">get</span> <span class="s1">&#39;/foo&#39;</span> <span class="k">do</span>
-<span class="ln">2</span>  <span class="n">response</span><span class="o">[</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span> <span class="c1"># this allows AJAX from Jekyll pages</span>
-<span class="ln">3</span>  <span class="n">erb</span><span class="p">(</span> <span class="ss">:foo</span><span class="p">,</span> <span class="ss">layout</span><span class="p">:</span> <span class="ss">:layout_empty</span> <span class="p">)</span>
-<span class="ln">4</span><span class="k">end</span>
+<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">get</span> <span class="s1">&#39;/foo&#39;</span> <span class="k">do</span>
+  <span class="n">response</span><span class="o">[</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span> <span class="c1"># this allows AJAX from Jekyll pages</span>
+  <span class="n">erb</span><span class="p">(</span> <span class="ss">:foo</span><span class="p">,</span> <span class="ss">layout</span><span class="p">:</span> <span class="ss">:layout_empty</span> <span class="p">)</span>
+<span class="k">end</span>
 </code></pre></div><p>This will respond to any <code>get</code> request coming into <code>{{ sinatra_host }}/foo</code>, and will return the
 <code>sinatra/views/foo.erb</code> file as specified by the <code>erb</code> tag on the last line. And it&rsquo;s that simple. The contents of the
 view file don&rsquo;t need to do any anything fancy, just represent what a result would look like.</p>
 <p>Here is real example we are using for the search results of the <a href="/docs/components/search/">Live Search</a> component.
 You&rsquo;ll notice we are using <code>post</code> instead of <code>get</code>, we did this because our form uses the post method instead of the
 get method. We also create a <code>@search</code> variable from the <code>search</code> parameter, which is accessible in our view.</p>
-<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="ln">1</span><span class="n">post</span> <span class="s1">&#39;/search_results&#39;</span> <span class="k">do</span>
-<span class="ln">2</span>  <span class="n">response</span><span class="o">[</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span> <span class="c1"># this allows AJAX from Jekyll pages</span>
-<span class="ln">3</span>  <span class="vi">@search</span> <span class="o">=</span> <span class="n">params</span><span class="o">[</span><span class="s1">&#39;search&#39;</span><span class="o">]</span>
-<span class="ln">4</span>  <span class="n">erb</span><span class="p">(</span> <span class="ss">:search_results</span><span class="p">,</span> <span class="ss">layout</span><span class="p">:</span> <span class="ss">:layout_empty</span> <span class="p">)</span>
-<span class="ln">5</span><span class="k">end</span>
+<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">post</span> <span class="s1">&#39;/search_results&#39;</span> <span class="k">do</span>
+  <span class="n">response</span><span class="o">[</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span> <span class="c1"># this allows AJAX from Jekyll pages</span>
+  <span class="vi">@search</span> <span class="o">=</span> <span class="n">params</span><span class="o">[</span><span class="s1">&#39;search&#39;</span><span class="o">]</span>
+  <span class="n">erb</span><span class="p">(</span> <span class="ss">:search_results</span><span class="p">,</span> <span class="ss">layout</span><span class="p">:</span> <span class="ss">:layout_empty</span> <span class="p">)</span>
+<span class="k">end</span>
 </code></pre></div><p>One caveat on the whole get vs post thing is that if you want the Sinatra app to respond to both a get and a post you
 need to make two entries in the <code>server.rb</code> file. For example, I made a generic success response that can be used
 anywhere we need a nicely formatter success response, and I want it available for both get and post requests. So we have
 two entries for it, like so:</p>
-<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="ln">1</span><span class="n">get</span> <span class="s1">&#39;/alert_success&#39;</span> <span class="k">do</span>
-<span class="ln">2</span>  <span class="n">response</span><span class="o">[</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span> <span class="c1"># this allows AJAX from Jekyll pages</span>
-<span class="ln">3</span>  <span class="n">erb</span><span class="p">(</span> <span class="ss">:alert_success</span><span class="p">,</span> <span class="ss">layout</span><span class="p">:</span> <span class="ss">:layout_empty</span> <span class="p">)</span>
-<span class="ln">4</span><span class="k">end</span>
-<span class="ln">5</span>
-<span class="ln">6</span><span class="n">post</span> <span class="s1">&#39;/alert_success&#39;</span> <span class="k">do</span>
-<span class="ln">7</span>  <span class="n">response</span><span class="o">[</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span> <span class="c1"># this allows AJAX from Jekyll pages</span>
-<span class="ln">8</span>  <span class="n">erb</span><span class="p">(</span> <span class="ss">:alert_success</span><span class="p">,</span> <span class="ss">layout</span><span class="p">:</span> <span class="ss">:layout_empty</span> <span class="p">)</span>
-<span class="ln">9</span><span class="k">end</span>
+<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">get</span> <span class="s1">&#39;/alert_success&#39;</span> <span class="k">do</span>
+  <span class="n">response</span><span class="o">[</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span> <span class="c1"># this allows AJAX from Jekyll pages</span>
+  <span class="n">erb</span><span class="p">(</span> <span class="ss">:alert_success</span><span class="p">,</span> <span class="ss">layout</span><span class="p">:</span> <span class="ss">:layout_empty</span> <span class="p">)</span>
+<span class="k">end</span>
+
+<span class="n">post</span> <span class="s1">&#39;/alert_success&#39;</span> <span class="k">do</span>
+  <span class="n">response</span><span class="o">[</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span> <span class="c1"># this allows AJAX from Jekyll pages</span>
+  <span class="n">erb</span><span class="p">(</span> <span class="ss">:alert_success</span><span class="p">,</span> <span class="ss">layout</span><span class="p">:</span> <span class="ss">:layout_empty</span> <span class="p">)</span>
+<span class="k">end</span>
 </code></pre></div><h4 id="the-view-files">The View Files</h4>
 <p>The view files are located in the <code>/sinatra/views' folder. They are simple .erb files. Most of the time you can put  straight HTML in them, but they are erb files so you can display variables (e.g. </code>you serached for: &lt;%= @searech %&gt;) or
 other ruby code like <code>if</code> statements.</p>
 <p>Here is the view file <code>alert_success.erb</code> referenced in the <code>server.rb</code> code example above:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="ln">1</span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-success&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-<span class="ln">2</span>  <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Success!<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> You did it! You should feel very proud of yourself right now!
-<span class="ln">3</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-success&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Success!<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> You did it! You should feel very proud of yourself right now!
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
     </div>
   </div>

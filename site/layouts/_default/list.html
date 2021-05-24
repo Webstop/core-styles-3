@@ -3,28 +3,28 @@
     <p>List Template</p>
     <h1>{{ .Title }}</h1>
     <section class="pt-5 pb-5">
-      
+
       <div class="container">
         <div class="row d-flex">
           {{ range .Pages }}
           <div class="col-md-4 mb-4 ">
-           
+
             <div class="card card-body card-box text-center h-100">
               <div class="title">
-                <h3><a href="{{ .URL }}">{{ .Title }}</a></h3>
+                <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
               </div>
               <div class="text">
                 <p>{{ .Description }}</p>
               </div>
-              <a href="{{ .URL }}">Learn More</a>
+              <a href="{{ .Permalink }}">Learn More</a>
             </div>
-          
+
           </div>
           {{ end }}
         </div>
-      </div> 
-      
-     </section>  
-   
+      </div>
+
+     </section>
+
   </main>
 {{ end }}
