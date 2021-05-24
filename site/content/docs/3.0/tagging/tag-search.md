@@ -17,7 +17,7 @@ play. It uses AJAX to search Webstop's tag API.
 
 ### Example
 
-{% capture example %}
+{{< example >}}
 <form>
   <div class="form-group">
     <label for="tag-search-1">Tag Search</label>
@@ -32,13 +32,12 @@ play. It uses AJAX to search Webstop's tag API.
     <small id="tag-search-1-target-help" class="form-text text-muted">Normally this would be a hidden form field. We are displaying it here so you can see what happens behind the scenes.</small>
   </div>
 </form>
-{% endcapture %}
-{% include example.html content=example %} 
+{{< /example >}}
 
 <!--
 You can have multiple forms on the same page and they will work independently of each other, as the example below indicates.
 
-{% capture example %}
+{{< example >}}
 <form>
   <div class="form-group">
     <label for="tag-search-1">Tag Search</label>
@@ -61,7 +60,7 @@ You can have multiple forms on the same page and they will work independently of
 Notice how the `foo` tag is displayed on page load by reading the values from the target form field.
 This allows us to use this component to edit records with pre-existing tags.
 
-#### To use search tags you need the following HTML elements:
+### To use search tags you need the following HTML elements:
 
 1. **A tag search field.** A text field searches for tags can be performed in. 
 2. **A tag results element.** Where the tag search results are displayed. Usually right under the search field.
@@ -81,7 +80,7 @@ data-tag-search-display="#tag-search-2-display"
 data-tag-search-results="#tag-search-2-results" 
 -->
 
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped pt-5">
   <thead>
     <tr>
       <th>Options</th>
@@ -136,7 +135,7 @@ data-tag-search-results="#tag-search-2-results"
 
 The search field should look similar to the following:
 
-```html
+html
 <input type="text" class="form-control" 
   id="tag-search"
   data-tag-search 
@@ -145,4 +144,4 @@ The search field should look similar to the following:
   data-tag-search-display="#tag-search-display" 
   data-tag-search-results="#tag-search-results"
 >
-```
+

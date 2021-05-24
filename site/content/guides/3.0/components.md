@@ -24,9 +24,13 @@ Front-End Components Are:
 There are three basic parts of a component the name (namespace), 
 modifier classes, and attributes. As illustrated below.
 
-{% highlight html %}
-{% include examples/guide/_component-anatomy-example.html %}
-{% endhighlight %}
+{{< highlight go >}}
+<div class="name name-modifier-classes">
+  <div class="name-attribute-1-class">Lorem</div>
+  <div class="name-attribute-2-class">Ipsum</div>
+</div>
+{{< / highlight >}}
+
 
 The component's name should always be the first CSS class listed 
 in the root element, followed by any modifier classes.
@@ -48,10 +52,16 @@ and attributes of the component.
 
 Consider the Price component.
 
-{% capture example %}
-{% include examples/prices/_price-dollar-example.html %}
-{% endcapture %}
-{% include example.html content=example %}
+{{< example >}}
+    <p class="price price-big-dollars">
+      <span class="price-prefix">12 for</span>
+      <span class="price-dollar-sign">$</span>
+      <span class="price-dollars">4</span>
+      <span class="price-cents">99</span>
+      <span class="price-suffix">lb.</span>
+      <img  class="price-suffix-icon" src="/assets/images/Card_45x29.gif" alt="with Card">
+    </p>
+{{< /example >}}
 
 ##### Naming Order
 
@@ -73,9 +83,10 @@ Order:
 
 For example:
 
-{% highlight html %}
+{{< highlight go >}}
 <p class="price price-big-dollars d-none d-sm-block"></p>
-{% endhighlight %}
+{{< / highlight >}}
+
 
 _Responsive class names are ordered from smaller to larger. Inline with the mobile-first philosophy._
 
@@ -109,11 +120,12 @@ originally designed?
 In our retailer's theme we'd probably get some CSS that looks 
 something like this:
 
-{% highlight css %}
+{{< highlight go >}}
 .price > span:first-child {
   font-style: italic;
 }
-{% endhighlight %}
+{{< / highlight >}}
+
 
 At first blush this probably seems like a practical solution, 
 but a whole host of issues can arise from it. What if in some 
@@ -124,7 +136,7 @@ the dollar sign or the cents, who knows.
 To over come this issue you'd probably have to write 
 something like this: 
 
-{% highlight css %}
+{{< highlight go >}}
 .price > span {
   font-style: italic;
 }
@@ -137,7 +149,7 @@ something like this:
 .price-suffix-icon {
   font-style: normal;
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Now what seemed simple is starting to get complicated. How will 
 this new solution react if the same thinking that left the 
@@ -150,11 +162,11 @@ use a different HTML tag than the `span` tag?
 Now consider how being able to do the following is very simple, 
 reliable, and robust.
 
-{% highlight css %}
+{{< highlight go >}}
 .price-prefix {
   font-style: italic;
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 You can write this in your retailer theme and have complete 
 confidence it's not going to have any untended consequences. 
@@ -162,7 +174,7 @@ confidence it's not going to have any untended consequences.
 Plus, you won't see complicated & fragile CSS selectors like these gems 
 lifted from the Tops website:
 
-{% highlight css %}
+{{< highlight go >}}
 .circular-nav-pages-right .pagination>li>a, .circular-nav-pages-left .pagination>li>a {
      padding: 3px 7px;
 }
@@ -171,7 +183,7 @@ lifted from the Tops website:
   background-color: #d31145;
   background: #d31145;
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 In a well designed component based design system you'll never 
 see CSS selectors that are deeply nested, or use anything other 
@@ -215,11 +227,11 @@ how subclasses are implemented in our design system.
 
 Consider the following example:
 
-{% highlight html %}
+{{< highlight go >}}
 <div class="circular-item circular-item-standard"> ... </div>
 <div class="circular-item circular-item-standard-promotion"> ... </div>
 <div class="circular-item circular-item-standard-coupon"> ... </div>
-{% endhighlight %}
+{{< / highlight >}}
 
 Here we have three `circular-item` components. Each one shares some 
 common styling, they are all cards on the grid, with a slight shadow, 
@@ -242,7 +254,7 @@ The namespaceing of a component is enforced by using Sass nesting. Sass nesting 
 the component and write reliable styles.
 
 
-{% highlight scss %}
+{{< highlight go >}}
 .name {
   margin: 15px;
   
@@ -254,7 +266,7 @@ the component and write reliable styles.
   }
 
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Notice in the example above the `name` class wraps around all other class of the component. This way if we forget to 
 namespace the name of an attribute (or otherwise have a class name collision in some other part of our code) our 
@@ -263,7 +275,7 @@ classes namespaced with teh same value as the root element. Consider these examp
 
 #### Price Example
 
-{% highlight scss %}
+{{< highlight go >}}
 .price {
   
   .price-prefix {
@@ -274,11 +286,11 @@ classes namespaced with teh same value as the root element. Consider these examp
   }
 
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 #### Shopping List Item Example
 
-{% highlight scss %}
+{{< highlight go >}}
 .shopping-list-item {
   
   .shopping-list-item-name {
@@ -289,7 +301,7 @@ classes namespaced with teh same value as the root element. Consider these examp
   }
 
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 _MMMmmm... nice clean namespacing!_
 
@@ -315,7 +327,7 @@ Now look at our `circular-item` component we want a shopping list form
 at the bottom of each component, so we use a `btn` component.
 
 
-{% highlight html %}
+{{< highlight go >}}
 <div class="circular-item circular-item-standard">
   <div class="circular-item-heading">Wow!</div>
   <div class="circular-item-title">Some Awesome Deal!</div>
@@ -324,7 +336,7 @@ at the bottom of each component, so we use a `btn` component.
      Add to Shopping List
    </button>
  </div>
-{% endhighlight %}
+{{< / highlight >}}
 
 When you take an even closer look you'll see the 
 `circular-item circular-item-standard` component contains several 
@@ -335,10 +347,57 @@ more basic components:
 - `btn`
 - `shopping-list-item`
 
-{% capture example %}
-{% include examples/circular-items/_circular-item-standard-example.html %}
-{% endcapture %}
-{% include example.html content=example %}
+{{< example >}}
+<article class="circular-item circular-item-standard card card-standard col" id="circular-item-1">
+  <img src="/assets/images/circular-items/sweet_corn_1k.jpg" alt="Picture of Homegrown Amaize! Sweet Corn" class="circular-item-image card-img-top img-fluid">
+  <div class="circular-item-body card-body">
+    <p class="circular-item-heading">LOCAL! Amaize! Sweet Corn - The Best Corn You'll Ever Eat!</p>
+    <h3 class="circular-item-title">Homegrown Amaize! Sweet Corn</h3>
+    <p class="circular-item-description">White Sweet Corn with an Amazing Flavor, Distinctively Delicious Pop and Crunch</p>
+    <p class="price price-big-dollars">
+      <span class="price-prefix">12 for</span>
+      <span class="price-dollar-sign">$</span>
+      <span class="price-dollars">4</span>
+      <span class="price-cents">99</span>
+      <span class="price-suffix">lb.</span>
+      <img  class="price-suffix-icon" src="/assets/images/Card_45x29.gif" alt="with Card">
+    </p>
+    <p class="circular-item-details">Available for a Limited Time</p>
+    <p class="circular-item-sale-dates text-danger">Starts 4/10/2050</p>
+    <p class="circular-item-recipe">
+      <span class="circular-item-recipe-label">Recipe:</span>
+      <a href="http://www.topsmarkets.com/Recipes/Detail/7417/Amaize_Sweet_Corn_Summer_Spreads/" class="circular-item-recipe-title-link">
+        Amaize Sweet Corn Summer Spreads
+      </a>
+    </p>
+  </div>
+  <div class="circular-item-footer card-footer">
+        <div class="shopping-list-item">
+      <form action="/shopping_list/add/circular_item/[self->id]/qty/" class="shopping-list-item-form">
+        <div class="row justify-content-end">
+          <div class="shopping-list-item-qty-col col-12 col-sm">
+            <div class="shopping-list-item-qty-group input-group ">
+              <div class="input-group-prepend">
+                <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
+              </div>
+              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control"  id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
+            </div>
+          </div>
+          <div class="shopping-list-item-btn-col col-12 col-sm-auto">
+            <button type="submit" class="shopping-list-item-btn btn btn-primary btn-block btn-sm-inline-block">
+              <i class="icon-plus-circle-solid"></i>
+              <span class="d-inline d-sm-none">Add to</span>
+              <span class="d-none d-sm-inline"><span class="sr-only">Add to </span>Shopping</span>
+              List
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</article>
+{{< /example >}}
 
 ### Multi-Component Objects
 
@@ -386,9 +445,9 @@ layout._
 Using this little test it should be clear the preferred way to list 
 our classes is as follows:
 
-{% highlight html %}
+{{< highlight go >}}
 <div class="circular-item circular-item-standard card card-standard"> ... </div>
-{% endhighlight %}
+{{< / highlight >}}
 
 ## Conclusions
 

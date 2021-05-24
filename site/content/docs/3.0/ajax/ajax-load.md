@@ -21,7 +21,15 @@ the AJAX content with the `data-target` attribute, it accepts standard jQuery se
 
 
 {{< example >}}
-{% include examples/ajax-load/_ajax-load-example.html %}
+<button data-ajax-load data-target="#ajax-target-1" data-load="{{ sinatra_host }}/alert_success" class="btn btn-primary mb-2">
+  Load Content
+</button>
+
+<div id="ajax-target-1">
+  <div class="alert alert-info">
+    This box could be replaced by AJAX content, if only someone would click the button above.
+  </div>
+</div>
 {{< /example >}}
 
 ### Replacement Example
@@ -29,7 +37,11 @@ the AJAX content with the `data-target` attribute, it accepts standard jQuery se
 In the following example we replace the button that triggers the request with the content returned by the AJAX call.
 
 {{< example >}}
-{% include examples/ajax-load/_ajax-load-replace-example.html %}
+<div id="ajax-target-replace">
+  <button data-ajax-load data-target="#ajax-target-replace" data-load="{{ sinatra_host }}/alert_success" class="btn btn-primary">
+    Replace Me with AJAX Content!
+  </button>
+</div>
 {{< /example >}}
 
 ## Attributes

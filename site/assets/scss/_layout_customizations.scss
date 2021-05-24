@@ -56,7 +56,15 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
   }
 
   .highlight {
-    background-color: #f7f7f7;
+    margin-bottom: 1rem;
+    background-color: #f8f9fa;
+    padding: 1rem 1.5rem;
+    border-bottom-right-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+   margin-left: 4rem;
+   margin-right: 4rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    z-index: 91;
   }
 
   .icon-code-snip {
@@ -67,8 +75,49 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
     background-color: #5FB8FF;
   }
 
+  .card-title {
+    color: black;
+    text-decoration: none;
+  }
+
+
+  .learn-more-btn {
+    background-color: #5fb8ff;
+    transition: all .2s ease-in-out; 
+  }
+  .learn-more-btn:hover {
+    background-color: #52b0fd;
+    transform: scale(1.05); 
+  }
+
+  .learn-more-btn-text {
+    color: #fff;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: .20px;
+    text-decoration: none;
+  }
+  .learn-more-btn-text:hover {
+    color: #fff;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: .20px;
+    text-decoration: none;
+  }
 
   /** Docs template layout stuff */ 
+
+  .example {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: .20px;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 0.5px;
+    border-radius: .25rem;
+    margin: 1rem -.75rem 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    z-index: 99;
+  }
   
   .on-page {
     position: -webkit-sticky;
@@ -77,6 +126,21 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
     z-index: 1000;
     overflow-y: auto;
   }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    border:1px solid #dbdbdb;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 10px;
+    border:1px solid #dbdbdb;
+  }
+  
+  tr:nth-child(even) {background-color: #f2f2f2;}
 
   /** Core Icons Grid**/
   .list-features {
@@ -281,8 +345,8 @@ select.grid-control-field::-ms-expand {
 .grid-item {
   display: block;
   position: absolute;
-  width: 17rem;
-  height: 15rem;
+  width: 18rem;
+  height: 18rem;
   line-height: 1rem;
   margin: 1rem;
   z-index: 1;
