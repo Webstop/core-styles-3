@@ -144,7 +144,7 @@
 or similarly names tags are avoided. This is where the Tag Search component comes into
 play. It uses AJAX to search Webstop&rsquo;s tag API.</p>
 <h3 id="example">Example</h3>
-<p>{% capture example %}</p>
+<div class="m-3 p-4 example">
 <form>
   <div class="form-group">
     <label for="tag-search-1">Tag Search</label>
@@ -159,12 +159,24 @@ play. It uses AJAX to search Webstop&rsquo;s tag API.</p>
     <small id="tag-search-1-target-help" class="form-text text-muted">Normally this would be a hidden form field. We are displaying it here so you can see what happens behind the scenes.</small>
   </div>
 </form>
-{% endcapture %}
-{% include example.html content=example %} 
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;tag-search-1&#34;</span><span class="p">&gt;</span>Tag Search<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tag-search-1&#34;</span> <span class="na">data-tag-search</span> <span class="na">data-tag-search-context</span><span class="o">=</span><span class="s">&#34;aye_tags&#34;</span> <span class="na">data-tag-search-target</span><span class="o">=</span><span class="s">&#34;#tag-search-1-target&#34;</span> <span class="na">data-tag-search-display</span><span class="o">=</span><span class="s">&#34;#tag-search-1-display&#34;</span> <span class="na">data-tag-search-results</span><span class="o">=</span><span class="s">&#34;#tag-search-1-results&#34;</span> <span class="na">aria-describedby</span><span class="o">=</span><span class="s">&#34;tag-search-1-help&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">small</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tag-search-1-help&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-text text-muted&#34;</span><span class="p">&gt;</span>Search for the tags you&#39;d like to add in the form above.<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tag-search-1-results&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;tag-search-1-target&#34;</span><span class="p">&gt;</span>Tags<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tag-search-1-display&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tag-group&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tag-search-1-target&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;foo&#34;</span> <span class="na">aria-describedby</span><span class="o">=</span><span class="s">&#34;tag-search-1-target-help&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">small</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tag-search-1-target-help&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-text text-muted&#34;</span><span class="p">&gt;</span>Normally this would be a hidden form field. We are displaying it here so you can see what happens behind the scenes.<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
 <!--
 You can have multiple forms on the same page and they will work independently of each other, as the example below indicates.
 
-{% capture example %}
+<div class="m-3 p-4 example">
 <form>
   <div class="form-group">
     <label for="tag-search-1">Tag Search</label>
@@ -183,17 +195,22 @@ You can have multiple forms on the same page and they will work independently of
 {% include example.html content=example %}
 
 -->
-<p>Notice how the <code>foo</code> tag is displayed on page load by reading the values from the target form field.
-This allows us to use this component to edit records with pre-existing tags.</p>
-<h4 id="to-use-search-tags-you-need-the-following-html-elements">To use search tags you need the following HTML elements:</h4>
-<ol>
-<li><strong>A tag search field.</strong> A text field searches for tags can be performed in.</li>
-<li><strong>A tag results element.</strong> Where the tag search results are displayed. Usually right under the search field.</li>
-<li><strong>A tag display element.</strong> Where the selected tags are visually displayed. It should have the class <code class="text-nowrap">tag-group</code>.</li>
-<li><strong>A tag target field.</strong> The form field the tags are placed into. Usually a hidden form field.</li>
-</ol>
-<h2 id="attributes-of-the-search-field">Attributes of the Search Field</h2>
-<p>The following attributes are required. All attributes have the namespace <code>data-tag-search</code>.</p>
+
+Notice how the `foo` tag is displayed on page load by reading the values from the target form field.
+This allows us to use this component to edit records with pre-existing tags.
+
+### To use search tags you need the following HTML elements:
+
+1. **A tag search field.** A text field searches for tags can be performed in. 
+2. **A tag results element.** Where the tag search results are displayed. Usually right under the search field.
+3. **A tag display element.** Where the selected tags are visually displayed. It should have the class <code class="text-nowrap">tag-group</code>.
+4. **A tag target field.** The form field the tags are placed into. Usually a hidden form field.
+
+
+## Attributes of the Search Field
+
+The following attributes are required. All attributes have the namespace `data-tag-search`.
+
 <!--
 data-tag-search 
 data-tag-search-context="aye_tags" 
@@ -201,7 +218,8 @@ data-tag-search-target="#tag-search-2-target"
 data-tag-search-display="#tag-search-2-display" 
 data-tag-search-results="#tag-search-2-results" 
 -->
-<table class="table table-bordered table-striped">
+
+<table class="table table-bordered table-striped pt-5">
   <thead>
     <tr>
       <th>Options</th>
@@ -253,16 +271,125 @@ data-tag-search-results="#tag-search-2-results"
     </tr>
   </tbody>
 </table>
-<p>The search field should look similar to the following:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> 
+
+The search field should look similar to the following:
+
+html
+<input type="text" class="form-control" 
+  id="tag-search"
+  data-tag-search 
+  data-tag-search-context="aye_tags" 
+  data-tag-search-target="#tag-search-target" 
+  data-tag-search-display="#tag-search-display" 
+  data-tag-search-results="#tag-search-results"
+>
+
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;tag-search-1&#34;</span><span class="p">&gt;</span>Tag Search<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tag-search-1&#34;</span> <span class="na">data-tag-search</span> <span class="na">data-tag-search-context</span><span class="o">=</span><span class="s">&#34;aye_tags&#34;</span> <span class="na">data-tag-search-target</span><span class="o">=</span><span class="s">&#34;#tag-search-2-target&#34;</span> <span class="na">data-tag-search-display</span><span class="o">=</span><span class="s">&#34;#tag-search-2-display&#34;</span> <span class="na">data-tag-search-results</span><span class="o">=</span><span class="s">&#34;#tag-search-2-results&#34;</span> <span class="na">aria-describedby</span><span class="o">=</span><span class="s">&#34;tag-search-2-help&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">small</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tag-search-2-help&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-text text-muted&#34;</span><span class="p">&gt;</span>Search for the tags you&#39;d like to add in the form above.<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tag-search-2-results&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;tag-search-2-target&#34;</span><span class="p">&gt;</span>Tags<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tag-search-2-display&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tag-group&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tag-search-2-target&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;foo&#34;</span> <span class="na">aria-describedby</span><span class="o">=</span><span class="s">&#34;tag-search-target-2-help&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">small</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tag-search-target-2-help&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-text text-muted&#34;</span><span class="p">&gt;</span>Normally this would be a hidden form field. We are displaying it here so you can see what happens behind the scenes.<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+{% endcapture %}
+{% include example.html content=example %}
+
+--&gt;
+
+Notice how the `foo` tag is displayed on page load by reading the values from the target form field.
+This allows us to use this component to edit records with pre-existing tags.
+
+### To use search tags you need the following HTML elements:
+
+1. **A tag search field.** A text field searches for tags can be performed in. 
+2. **A tag results element.** Where the tag search results are displayed. Usually right under the search field.
+3. **A tag display element.** Where the selected tags are visually displayed. It should have the class <span class="p">&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-nowrap&#34;</span><span class="p">&gt;</span>tag-group<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>.
+4. **A tag target field.** The form field the tags are placed into. Usually a hidden form field.
+
+
+## Attributes of the Search Field
+
+The following attributes are required. All attributes have the namespace `data-tag-search`.
+
+<span class="c">&lt;!--
+</span><span class="c">data-tag-search 
+</span><span class="c">data-tag-search-context=&#34;aye_tags&#34; 
+</span><span class="c">data-tag-search-target=&#34;#tag-search-2-target&#34; 
+</span><span class="c">data-tag-search-display=&#34;#tag-search-2-display&#34; 
+</span><span class="c">data-tag-search-results=&#34;#tag-search-2-results&#34; 
+</span><span class="c">--&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-bordered table-striped pt-5&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Options<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Description<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-nowrap&#34;</span><span class="p">&gt;</span>data-tag-search<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>The presence of this attribute indicates typing in this form field should trigger an AJAX call to the tag search API.<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-nowrap&#34;</span><span class="p">&gt;</span>id<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Unique identifier for the search form field.<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-nowrap&#34;</span><span class="p">&gt;</span>data-tag-search-context<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+       Attribute specifies the context you want to search within. It&#39;s like a category of tags. At the time of this 
+       writing the only valid value is <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>aye_tags<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>.
+     <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+   <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-nowrap&#34;</span><span class="p">&gt;</span>data-tag-search-target<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+        Attribute specifies the DOM node of the form field you want to place selected tags into. Uses standard jQuery 
+        selectors, usually targets an id attribute (e.g. <span class="p">&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-nowrap&#34;</span><span class="p">&gt;</span>data-tag-search-target=&#34;#tag-search-target&#34;<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>). This 
+        should reference a hidden form field (e.g. <span class="p">&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-nowrap&#34;</span><span class="p">&gt;</span><span class="ni">&amp;lt;</span>input type=&#34;hidden&#34; id=&#34;tag-search-target&#34;<span class="ni">&amp;gt;</span><span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>).
+      <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-nowrap&#34;</span><span class="p">&gt;</span>data-tag-search-results<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+        Attribute specifies the DOM node of the element you want to place search results into. Uses standard jQuery 
+        selectors, usually targets an id attribute (e.g. <span class="p">&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-nowrap&#34;</span><span class="p">&gt;</span>data-tag-search-results=&#34;#tag-search-results&#34;<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>). 
+        The element it references is usually placed right under the search field (e.g. <span class="p">&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-nowrap&#34;</span><span class="p">&gt;</span><span class="ni">&amp;lt;</span>div id=&#34;tag-search-results&#34;<span class="ni">&amp;gt;&amp;lt;</span>/div<span class="ni">&amp;gt;</span><span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>).
+      <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-nowrap&#34;</span><span class="p">&gt;</span>data-tag-search-display<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+        Attribute specifies the DOM node of the element you want to display selected tags in. Uses standard jQuery 
+        selectors, usually targets an id attribute 
+        (e.g. <span class="p">&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-nowrap&#34;</span><span class="p">&gt;</span>data-tag-search-display=&#34;#tag-search-display&#34;<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>). 
+        The element it references is usually placed right under the search results element 
+        (e.g. <span class="p">&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-nowrap&#34;</span><span class="p">&gt;</span><span class="ni">&amp;lt;</span>div class=&#34;tag-group&#34; id=&#34;tag-search-display&#34;<span class="ni">&amp;gt;&amp;lt;</span>/div<span class="ni">&amp;gt;</span><span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>). 
+        The element it references should contain the CSS class <span class="p">&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-nowrap&#34;</span><span class="p">&gt;</span>tag-group<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>.
+      <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+
+The search field should look similar to the following:
+
+html
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> 
   <span class="na">id</span><span class="o">=</span><span class="s">&#34;tag-search&#34;</span>
   <span class="na">data-tag-search</span> 
   <span class="na">data-tag-search-context</span><span class="o">=</span><span class="s">&#34;aye_tags&#34;</span> 
   <span class="na">data-tag-search-target</span><span class="o">=</span><span class="s">&#34;#tag-search-target&#34;</span> 
   <span class="na">data-tag-search-display</span><span class="o">=</span><span class="s">&#34;#tag-search-display&#34;</span> 
   <span class="na">data-tag-search-results</span><span class="o">=</span><span class="s">&#34;#tag-search-results&#34;</span>
-<span class="p">&gt;</span>
-</code></pre></div>
+<span class="p">&gt;</span></code></pre></div>
     </div>
   </div>
   <div class="col-md-2 col-lg-2">
@@ -277,7 +404,6 @@ data-tag-search-results="#tag-search-2-results"
         <li><a href="#example">Example</a></li>
       </ul>
     </li>
-    <li><a href="#attributes-of-the-search-field">Attributes of the Search Field</a></li>
   </ul>
 </nav>
         </div>
