@@ -25,12 +25,12 @@
 }
 
 .card-box:hover {
- 
-  -webkit-box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0,0,0,0); 
+
+  -webkit-box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0,0,0,0);
 box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0,0,0,0);}
 
 .multi-shadow {
-  -webkit-box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0,0,0,0); 
+  -webkit-box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0,0,0,0);
 box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
@@ -48,7 +48,7 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
   z-index: 1000;
   overflow-y: auto;
   order: 0;
-  background-color: #fff; 
+  background-color: #fff;
   //background-color: #f5f2f9;
   border-bottom: 1px solid rgba(0,0,0,.1);
 
@@ -122,7 +122,7 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
   .on-page {
     position: -webkit-sticky;
     position: sticky;
-    top: 4rem; 
+    top: 4rem;
     z-index: 1000;
     overflow-y: auto;
   }
@@ -144,15 +144,15 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
 
   /** Core Icons Grid**/
   .list-features {
-  
+
     list-style: none;
-  
+
 }
 
 
 .icon-grid {
   position: relative;
- 
+
 }
 
 .grid {
@@ -269,6 +269,7 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
   -o-appearance: none;
   appearance: none;
 }
+
 @media (max-width: 767px) {
   .grid-control-field {
     height: 5rem;
@@ -350,7 +351,7 @@ select.grid-control-field::-ms-expand {
   line-height: 1rem;
   margin: 1rem;
   z-index: 1;
- 
+
 }
 .grid-item.muuri-item-positioning {
   z-index: 2;
@@ -376,7 +377,7 @@ select.grid-control-field::-ms-expand {
  }
 .grid-item-content {
   position: relative;
- 
+
   justify-content: center;
   align-items: center;
 }
@@ -414,7 +415,7 @@ select.grid-control-field::-ms-expand {
   display: block;
 }
 .grid-card-title {
-  
+
   display: block;
   justify-content: center;
   align-items: center;
