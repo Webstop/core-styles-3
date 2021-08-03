@@ -11021,7 +11021,7 @@ textarea.form-control-lg {
   padding: 1rem 1.5rem;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
-  margin-left: 4rem;
+  margin-left: 1rem;
   margin-right: 4rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   z-index: 91;
@@ -11085,6 +11085,29 @@ textarea.form-control-lg {
   top: 4rem;
   z-index: 1000;
   overflow-y: auto;
+}
+
+.table-of-contents {
+  font-family: "Montserrat", sans-serif;
+}
+
+#table-of-contents, ul, li {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+#table-of-contents, a {
+  list-style-type: none;
+  text-decoration: none;
+  color: #333;
+}
+
+#table-of-contents, ul {
+  padding-left: 2px;
+}
+
+#table-of-contents, li {
+  padding-left: 8px;
 }
 
 table {

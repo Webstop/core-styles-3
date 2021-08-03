@@ -316,12 +316,11 @@ more complex objects.
 An easy example to understand is the button object. The button component 
 looks something like this:
 
-{% capture example %}
+{{< example >}}
 <button type="submit" class="btn btn-primary">
   Add to Shopping List
 </button>
-{% endcapture %}
-{% include example.html content=example %}
+{{< /example >}}
 
 Now look at our `circular-item` component we want a shopping list form 
 at the bottom of each component, so we use a `btn` component.

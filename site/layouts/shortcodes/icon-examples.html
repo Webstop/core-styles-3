@@ -1,5 +1,5 @@
 <section class="grid-demo">
-  <div class="container px-5 py-5">
+  <div class="container">
   <div class="icon-grid">
     <div class="grid-controls">
       <div class="grid-control search">
@@ -31,39 +31,35 @@
       <div class="grid-control sort">
         <select class="grid-control-field sort-field form-control">
         
-          <option value="title">Title</option>
+        <!-- <option value="title"></option> --> 
           
         </select>
         <div class="grid-control-icon">
-          <i class="fas fa-arrows fa-2x"></i>
+         
         </div>
         <div class="grid-select-arrow">
-          <i class="fas fa-angle-down fa-lg"></i>
+          
         </div>
-      </div>
+      </div> 
       <div class="grid-control layout">
-        <select class="grid-control-field layout-field form-control">
-          <option value="left-top" selected>Left Top</option>
+        <select class="grid-control-field layout-field form-control hidden">
+         <!-- <option value="left-top" selected></option>--> 
         
-          <option value="right-top">Right Top</option>
-        
-          <option value="left-bottom">Left Bottom</option>
-         
-          <option value="right-bottom">Right Bottom</option>
+          
          
         </select>
         <div class="grid-control-icon">
-          <i class="fas fa-align-left fa-2x"></i>
+          
         </div>
         <div class="grid-select-arrow">
-          <i class="fas fa-angle-down fa-lg"></i>
+         
         </div>
       </div>
     </div>
 
-    <div class="grid icon-examples row p-4">
+    <div class="grid icon-examples row p-2">
       {{ range .Site.Data.icons }}
-        <div class="grid-item item col-md-3 mb-3"  data-toggle="{{ .category }}" data-title="{{ .name }}">
+        <div class="grid-item item col-md-3 mb-3"  data-toggle="{{ .category }}" data-title="{{ .name }} {{ .search }}">
           <div class="grid-item-content icon-example card h-100">
             <div class="card-body text-center">
              
