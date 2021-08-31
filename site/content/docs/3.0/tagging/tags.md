@@ -10,17 +10,15 @@ source: Webstop
 
 ## Basic Tag Example
 
-{% capture example %}
+{{< example >}}
 <span class="tag">Blueberry</span>
-{% endcapture %}
-{% include example.html content=example %} 
+{{< /example >}}
 
 ## Tag with Color & Close
 
-{% capture example %}
+{{< example >}}
 <span class="tag bg-primary">Blueberry <i class="icon-cancel"></i></span>
-{% endcapture %}
-{% include example.html content=example %} 
+{{< /example >}} 
 
 
 ## Tag Group Example
@@ -28,7 +26,7 @@ source: Webstop
 When you want to display more than one tag, wrap the tags in a `tag-group` container. 
 This will apply consistent spacing around your tags.
 
-{% capture example %}
+{{< example >}}
 <div class="tag-group">
   <span class="tag bg-danger">Strawberry <i class="icon-cancel"></i></span>
   <span class="tag bg-success">Lime <i class="icon-cancel"></i></span>
@@ -43,5 +41,4 @@ This will apply consistent spacing around your tags.
   <span class="tag bg-warning">Lemon <i class="icon-cancel"></i></span>
   <span class="tag bg-primary">Blueberry <i class="icon-cancel"></i></span>
 </div>
-{% endcapture %}
-{% include example.html content=example %} 
+{{< /example >}}

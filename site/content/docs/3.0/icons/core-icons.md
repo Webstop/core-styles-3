@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: docswide
 title: Core Icons
 description: Icon's for grocers.
 group: components

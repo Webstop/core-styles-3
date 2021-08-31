@@ -7,7 +7,7 @@ toc: true
 source: Webstop
 ---
 
-{% include environment_based_variables.html %}
+  
 
 ## Examples
 
@@ -20,7 +20,16 @@ which triggers the form to submit via ajax instead of a web page reload. The `ac
 specifies the URL to pull the content from, the content is expected to be in HTML format. 
 
 {{< example >}}
-{% include examples/ajax-form/_ajax-form-example.html %}
+<form data-ajax-form action="{{ sinatra_host }}/alert_success">
+  <div class="form-group">
+    <label for="title-example" class="py-2">Title</label>
+    <input type="text" class="form-control p-2" name="title-example" id="title-example" placeholder="Title">
+  </div>
+  <button class="btn btn-primary mt-3" type="submit">
+    Save Title
+  </button>
+</form>
+
 {{< /example >}}
 
 ### Example with All Options
@@ -32,7 +41,18 @@ The `data-power-bar` attribute triggers a reload of the Shopping List Power Bar 
 is returned.
 
 {{< example >}}
-{% include examples/ajax-form/_ajax-form-full-example.html %}
+<form data-ajax-form action="{{ sinatra_host }}/alert_error" data-target="#target-1" data-power-bar>
+  <div class="form-group">
+    <label for="title-example" class="py-2">Title</label>
+    <input type="text" class="form-control p-2" name="title-example" id="title-example" placeholder="Title">
+  </div>
+  <button class="btn btn-primary mt-3" type="submit">
+    Save Title
+  </button>
+</form>
+<div id="target-1" class="mt-4">
+  <div class="alert alert-success">Ajax Content goes here.</div>
+</div>
 {{< /example >}}
 
 ## Attributes

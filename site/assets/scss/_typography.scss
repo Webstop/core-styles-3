@@ -41,6 +41,16 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
 }
 
+h2 {
+  padding-top: 35px;
+  padding-bottom: 10px;
+}
+
+h3 {
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
 .chroma, code, kbd, pre, samp {
   font-family: $wsg-monospace;
 }
