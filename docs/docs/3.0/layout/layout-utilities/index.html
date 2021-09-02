@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    
+     Core-Styles 3
+    
+  </title>
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/docs.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark wsg-header shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-2" href="/"><img src="https://www.webstop.com/assets/Webstop-logos/webstop-twocolor-landscape-dark-bg-72dpi-e6425f6d6e9ec4cc90742a883b2997bb28191590bfd8762222ed4723865dcaef.png" width="165px"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/docs/">Docs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Dev</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/guides/">Guides</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/core-styles-3#core-styles-3" target="_blank">GitHub</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/webstop-wiki#webstop-app-builders-wiki" target="_blank">Wiki</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/core-specs#webstop-core-specifications" target="_blank">Specs</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<section class="mt-0 mb-0 pb-0 pt-0">
+  
+    <div class="   pt-3 pb-3   d-flex  justify-content-center align-items-center bg-title-head inner-shadow" style="">
+      <div class="container ">
+        <div class="row d-flex justify-content-center ">
+          <div class="col-sm-12 col-md-7 p-0 p-md-2 ">
+            <h1
+              class="bg-light shadow text-center p-md-2 mb-3 p-1 mb-md-3 page-title ">
+              Utilities for layout</h1>
+            <p class="text-center text-light lead">For faster mobile-friendly and responsive development, Bootstrap includes dozens of utility classes for showing, hiding, aligning, and spacing content.</p>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  
+</section>
+
+<div class="container-fluid bd-layout">
+ 
+  <div class="row">
+  <div class="col-md-3 col-lg-2 d-md-block wsg-sidebar collapse left-nav">
+    <nav class="nav flex-column">
+  
+  li class=
+    a href=/articles/ Articles
+    ul
+      
+
+  li class=active
+    a href=/docs/ Articles
+    ul
+      
+
+  li class=
+    a href=/guides/ Guides
+    ul
+      
+
+  li class=
+    a href=/resources/ resources
+    ul
+      
+
+ 
+</nav>
+ 
+    </div>
+
+  <div class="col-md-8 col-xl-8 pb-md-3 pl-md-5 bd-main">
+    <div class="bd-content ps-lg-4">
+      
+
+      <h2 id="changing-display">Changing <code>display</code></h2>
+<p>Use our [display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/) for responsively toggling common values of the <code>display</code> property. Mix it with our grid system, content, or components to show or hide them across specific viewports.</p>
+<h2 id="flexbox-options">Flexbox options</h2>
+<p>Bootstrap 4 is built with flexbox, but not every element&rsquo;s <code>display</code> has been changed to <code>display: flex</code> as this would add many unnecessary overrides and unexpectedly change key browser behaviors. Most of [our components]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/alerts/) are built with flexbox enabled.</p>
+<p>Should you need to add <code>display: flex</code> to an element, do so with <code>.d-flex</code> or one of the responsive variants (e.g., <code>.d-sm-flex</code>). You&rsquo;ll need this class or <code>display</code> value to allow the use of our extra [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) for sizing, alignment, spacing, and more.</p>
+<h2 id="margin-and-padding">Margin and padding</h2>
+<p>Use the <code>margin</code> and <code>padding</code> [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) to control how elements and components are spaced and sized. Bootstrap 4 includes a five-level scale for spacing utilities, based on a <code>1rem</code> value default <code>$spacer</code> variable. Choose values for all viewports (e.g., <code>.mr-3</code> for <code>margin-right: 1rem</code>), or pick responsive variants to target specific viewports (e.g., <code>.mr-md-3</code> for <code>margin-right: 1rem</code> starting at the <code>md</code> breakpoint).</p>
+<h2 id="toggle-visibility">Toggle <code>visibility</code></h2>
+<p>When toggling <code>display</code> isn&rsquo;t needed, you can toggle the <code>visibility</code> of an element with our [visibility utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/visibility/). Invisible elements will still affect the layout of the page, but are visually hidden from visitors.</p>
+
+    </div>
+  </div>
+  <div class="col-md-2 col-lg-2">
+    <div class=" on-page ps-lg-4 pt-2">
+      
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-1 mb-lg-5 text-muted">
+          <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
+         <div class="table-of-contents"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#changing-display">Changing <code>display</code></a></li>
+    <li><a href="#flexbox-options">Flexbox options</a></li>
+    <li><a href="#margin-and-padding">Margin and padding</a></li>
+    <li><a href="#toggle-visibility">Toggle <code>visibility</code></a></li>
+  </ul>
+</nav></div>
+        </div>
+        
+      <div class="">
+       
+        <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/webstop/core-styles-3/blob/master/site/content/docs/3.0/layout/layout-utilities.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+      
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<script src="https://kit.fontawesome.com/070d2da37d.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+<script src="/vendor/clipboard/dist/clipboard.min.js" crossorigin="anonymous"></script>
+<script src="/js/docs.js" crossorigin="anonymous"></script>
+<script src="/js/icon-grid.js" crossorigin="anonymous"></script>
+<script src="/js/muuri.js" crossorigin="anonymous"></script>
+</body>
+</html>

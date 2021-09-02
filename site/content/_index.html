@@ -5,14 +5,15 @@ description: Design system for Webstop's grocery websites.
 layout: index
 ---
 <section class="mt-0 mb-0 pb-0 pt-0">
-    <div class="   pt-3 pb-3   d-flex  justify-content-center align-items-center bg-title-head inner-shadow" style="">
-      <div class="container ">
-        <div class="row d-flex justify-content-center ">
-          <div class="col-sm-12 col-md-7 p-0 p-md-2 ">
+    <div class="   pt-3 pb-3   d-flex align-items-center bg-title-head inner-shadow">
+      <div class="container-fluid">
+        <div class="row d-flex text-center justify-content-center">
+          <div class="col-sm-12 col-md-7 p-0 p-md-2  ">
             <h1
-              class="bg-light shadow text-center p-md-2 mb-3 p-1 mb-md-3 page-title ">
+              class="bg-light shadow p-md-2 mb-3 p-1 mb-md-3 page-title ">
              Core Styles 3</h1>
-            <p class="text-center text-light lead">We did it boys and girls! We made it to Bootstrap 5</p>
+            <p class="text-light lead">This guide will help you get your website up and running with our modern framework in short order.</p>
+            <button class="btn get-started-btn" type="button"> <a href="/docs/3.0/getting-started/introduction/" class="get-started-btn-text">Get Started!</a></button>
           </div>
         </div>
       </div>
@@ -23,24 +24,7 @@ layout: index
   <section class="pt-5 pb-5">
     <div class="container">
       <div class="row d-flex">
-        <div class="col-md-4 mb-4 ">
-           <div class="card card-box h-100">
-              <div class="card-body  text-center">
-              <div class="title">
-                <h3>Get Started</h3>
-            </div>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum
-                decore te sed. Elitr scripta ocurreret qui ad.</p>
-            </div>
-          </div>
-          <div class="card-footer text-center">
-            <div class="d-grid gap-2">
-           <button class="btn learn-more-btn" type="button"> <a href="{{ .URL }}" class="learn-more-btn-text">Learn More</a></button>
-          </div>
-            </div>
-        </div>
-        </div>
+       
         <div class="col-md-4 mb-4 ">
           <div class="card card-box h-100">
             <div class="card-body">
@@ -76,12 +60,33 @@ layout: index
             </div>
             <div class="card-footer text-center">
               <div class="d-grid gap-2">
-             <button class="btn learn-more-btn" type="button"> <a href="{{ .URL }}" class="learn-more-btn-text">Learn More</a></button>
+             <button class="btn learn-more-btn" type="button"> <a href="/docs/3.0/layout/overview/" class="learn-more-btn-text">Learn More</a></button>
             </div>
               </div>
           
         </div>
       </div>
+      <div class="col-md-4 mb-4 ">
+        <div class="card card-box h-100">
+          <div class="card-body">
+          <div class="title text-center">
+            <h3>Components</h3>
+          </div>
+          <div class="text">
+            <p>
+              Reusable components providing the base building blocks for page design. Buttons, dropdowns, alerts, and
+              etc.
+            </p>
+          </div>
+       
+        </div>
+        <div class="card-footer text-center">
+          <div class="d-grid gap-2">
+         <button class="btn learn-more-btn" type="button"> <a href="/docs/3.0/components/ajax/ajax-form/" class="learn-more-btn-text">Learn More</a></button>
+        </div>
+          </div>
+      </div>
+    </div>
         <div class="col-md-4 mb-4 ">
           <div class="card card-box h-100">
             <div class="card-body">
@@ -94,32 +99,32 @@ layout: index
             </div>
             <div class="card-footer text-center">
               <div class="d-grid gap-2">
-             <button class="btn learn-more-btn" type="button"> <a href="{{ .URL }}" class="learn-more-btn-text">Learn More</a></button>
+             <button class="btn learn-more-btn" type="button"> <a href="#" class="learn-more-btn-text">Learn More</a></button>
             </div>
               </div>
           </div>
         </div>
+       
         <div class="col-md-4 mb-4 ">
           <div class="card card-box h-100">
             <div class="card-body">
             <div class="title text-center">
-              <h3>Components</h3>
+              <h3>Utilities</h3>
             </div>
             <div class="text">
               <p>
-                Reusable components providing the base building blocks for page design. Buttons, dropdowns, alerts, and
-                etc.
+                A utility class is typically a single, immutable property-value pairing expressed as a class (e.g.,
+                .d-block represents display: block;).
               </p>
             </div>
-         
           </div>
           <div class="card-footer text-center">
             <div class="d-grid gap-2">
-           <button class="btn learn-more-btn" type="button"> <a href="{{ .URL }}" class="learn-more-btn-text">Learn More</a></button>
+           <button class="btn learn-more-btn" type="button"> <a href="/docs/3.0/layout/layout-utilities/" class="learn-more-btn-text">Learn More</a></button>
           </div>
             </div>
         </div>
-      </div>
+        </div>
         <div class="col-md-4 mb-4 ">
           <div class="card card-box h-100">
             <div class="card-body">
@@ -129,8 +134,7 @@ layout: index
             <div class="text">
               <p>
                 Helpers are like a utility classes but a little more complex than a single property-value paring.
-                They are expressed as a single CSS class applied to a single element, and are therefore less
-                complex than a component.
+                
               </p>
             </div>
           </div>
@@ -141,27 +145,5 @@ layout: index
             </div>
         </div>
       </div>
-        <div class="col-md-4 mb-4 ">
-          <div class="card card-box h-100">
-            <div class="card-body">
-            <div class="title text-center">
-              <h3>Utilities</h3>
-            </div>
-            <div class="text">
-              <p>
-                A utility class is typically a single, immutable property-value pairing expressed as a class (e.g.,
-                .d-block represents display: block;). Their primary appeal is speed of use while writing HTML and
-                limiting the amount of custom CSS you have to write. These are the simplest and most atomic part of the
-                framework.
-              </p>
-            </div>
-          </div>
-          <div class="card-footer text-center">
-            <div class="d-grid gap-2">
-           <button class="btn learn-more-btn" type="button"> <a href="{{ .URL }}" class="learn-more-btn-text">Learn More</a></button>
-          </div>
-            </div>
-        </div>
-        </div>
     </div>
   </section>

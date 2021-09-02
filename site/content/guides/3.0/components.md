@@ -5,6 +5,8 @@ description: The component pattern is the basis of our front-end framework.
 group: guide
 toc: true
 source: Webstop
+menu:
+  main:
 ---
 
 The front-end component is a powerful design pattern for building 

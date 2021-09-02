@@ -11040,6 +11040,36 @@ textarea.form-control-lg {
   text-decoration: none;
 }
 
+.get-started-btn {
+  background-color: #000000;
+  transition: all 0.2s ease-in-out;
+  align-items: center;
+}
+
+.get-started-btn:hover {
+  background-color: #0a0c0e;
+  transform: scale(1.05);
+}
+
+.get-started-btn-text {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.get-started-btn-text:hover {
+  color: #289FED;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+}
+
 .learn-more-btn {
   background-color: #5fb8ff;
   transition: all 0.2s ease-in-out;
@@ -11067,6 +11097,19 @@ textarea.form-control-lg {
 }
 
 /** Docs template layout stuff */
+.left-nav {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.left-nav-link {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.left-nav-active {
+  background-color: #e5e5e5;
+}
+
 .example {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.2px;
@@ -11077,6 +11120,14 @@ textarea.form-control-lg {
   margin: 1rem -0.75rem 0;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   z-index: 99;
+}
+
+pre {
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  overflow: auto;
+  font-size: 0.875em;
 }
 
 .on-page {
@@ -11571,6 +11622,13 @@ h3, .h3 {
   padding-bottom: 10px;
 }
 
+p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .chroma, code, kbd, pre, samp {
   font-family: "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -11931,7 +11989,7 @@ h3, .h3 {
 .chroma .ln {
   min-width: 50px;
   width: 50px;
-  display: inline-block;
+  display: none;
   text-align: right;
 }
 

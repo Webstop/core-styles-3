@@ -5,6 +5,8 @@ description: Our design system is setup to support Style Guide Driven Developmen
 group: guide
 toc: true
 source: Webstop
+menu:
+  main:
 ---
 
 Style Guide Driven Development is an approach which places a living 

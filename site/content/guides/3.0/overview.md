@@ -4,6 +4,8 @@ title: Guide Overview
 description: Learn how to unlock the power of front-end components & style guide driven development. 
 group: guide
 toc: true
+menu:
+  main:
 ---
 
 

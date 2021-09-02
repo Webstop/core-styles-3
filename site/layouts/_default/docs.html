@@ -21,11 +21,11 @@
 <div class="container-fluid bd-layout">
  
   <div class="row">
-  <div class="col-md-3 col-lg-2 d-md-block wsg-sidebar collapse ">
-    {{ partial "docs-sidebar" . }}
+  <div class="col-md-3 col-lg-2 d-md-block wsg-sidebar collapse left-nav">
+    {{ partial "docs-sidebar.html" . }} 
     </div>
 
-  <div class="col-md-8 col-xl-8 py-md-3 pl-md-5 bd-main">
+  <div class="col-md-8 col-xl-8 pb-md-3 pl-md-5 bd-main">
     <div class="bd-content ps-lg-4">
       {{ if .Page.Params.sections }}
       <div class="row g-3">
@@ -39,8 +39,6 @@
         {{ end }}
       </div>
       {{ end }}
-
-      <p>Docs Template</p>
 
       {{ .Content }}
     </div>

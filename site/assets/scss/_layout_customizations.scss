@@ -55,6 +55,7 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
 
   }
 
+
   .highlight {
     margin-bottom: 1rem;
     background-color: #f8f9fa;
@@ -66,6 +67,7 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     z-index: 91;
   }
+
 
   .icon-code-snip {
     font-size: 10px;
@@ -81,6 +83,37 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
   }
 
 
+
+  .get-started-btn {
+    background-color: #000000;
+    transition: all .2s ease-in-out; 
+    align-items: center;
+  }
+  .get-started-btn:hover {
+    background-color: #0a0c0e;
+    transform: scale(1.05); 
+  }
+  .get-started-btn-text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: .20px;
+    text-decoration: none;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .get-started-btn-text:hover {
+    color: #289FED;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: .20px;
+    text-decoration: none;
+  }
+
+
+
+
   .learn-more-btn {
     background-color: #5fb8ff;
     transition: all .2s ease-in-out; 
@@ -89,7 +122,6 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
     background-color: #52b0fd;
     transform: scale(1.05); 
   }
-
   .learn-more-btn-text {
     color: #fff;
     font-weight: 400;
@@ -105,7 +137,22 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
     text-decoration: none;
   }
 
+
   /** Docs template layout stuff */ 
+
+ .left-nav {
+   padding-right: 0px;
+   padding-left: 0px;
+ } 
+.left-nav-link {
+  border-bottom: 1px solid #e5e5e5;
+}
+.left-nav-active {
+
+  background-color: #e5e5e5;
+}
+
+
 
   .example {
     font-family: "Montserrat", sans-serif;
@@ -118,6 +165,15 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     z-index: 99;
   }
+
+
+pre {
+    display: block;
+    margin-top: .5rem;
+    margin-bottom: .50rem;
+    overflow: auto;
+    font-size: 0.875em;
+}
   
   .on-page {
     position: -webkit-sticky;
@@ -164,7 +220,12 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
   
   tr:nth-child(even) {background-color: #f2f2f2;}
 
+ 
+ 
+ 
   /** Core Icons Grid**/
+ 
+ 
   .list-features {
 
     list-style: none;
