@@ -13,7 +13,7 @@ menu:
 
   
 
-The `site-model` is included on every page when you used the code found on the [site layout](/docs/layout/site/) page.
+The `site-model` is included on every page when you used the code found on the [site layout](/docs/3.0/layouts/site/) page.
 
 ## Example
 
