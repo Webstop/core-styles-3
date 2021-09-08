@@ -1,10 +1,13 @@
 ---
-layout: admin
-title: Admin Layout Template
+layout: docs
+title: Admin Layout
 description: Website layout for administration pages.
 group: layouts
 toc: true
 source: Webstop
+menu: 
+  main:
+    parent: Layouts
 ---
 
 {% include environment_based_variables.html %}

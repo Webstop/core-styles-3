@@ -1,12 +1,12 @@
 
 <nav class="nav flex-column">
-{{ $currentPage := . }}
-{{ range .Site.Menus.main }}
-<a class="py-2 ps-4 left-nav-link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} left-nav-active {{end}}" href="{{.URL}}"> {{ .Name }}</a>
-{{ end }}
+<!--{{ $currentPage := . }}-->
+<!--{{ range .Site.Menus.main }}-->
+<!--<a class="py-2 ps-4 left-nav-link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} left-nav-active {{end}}" href="{{.URL}}"> {{ .Name }}</a>-->
+<!--{{ end }}-->
 
 
-<!-- <aside>
+<aside>
   <ul>
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
@@ -14,7 +14,7 @@
               <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
                   <a href="#">
                       {{ .Pre }}
-                      <span>{{ .Name }}</span>
+                      <h5>{{ .Name }}</h5>
                   </a>
               </li>
               <ul class="sub-menu">
@@ -33,31 +33,31 @@
               </li>
           {{ end }}
       {{ end }}
-      
+
   </ul>
 </aside>
 
+<!--
+    {{ range site.Sections }}
+    li class={{ if .IsAncestor $ }}active{{ end }}
+      a href={{ .RelPermalink }} {{ .Title }}
+      ul
+        {{ range .Sections }}
+          / ...
+          {{ end }}
+          {{ end }}
 
-  {{ range site.Sections }}
-  li class={{ if .IsAncestor $ }}active{{ end }}
-    a href={{ .RelPermalink }} {{ .Title }}
-    ul
-      {{ range .Sections }}
-        / ...
-        {{ end }}
-        {{ end }}
+          {{ range site.Sections }}
+  <button class="btn dropdown-toggle {{ if .IsAncestor $ }}active{{ end }}" type="button" id="dropdownMenuClickable" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+    {{ .Title }}
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickable">
+    {{ range .Sections }}
+    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    {{ end }}
+    {{ end }}
 
-        {{ range site.Sections }}
-<button class="btn dropdown-toggle {{ if .IsAncestor $ }}active{{ end }}" type="button" id="dropdownMenuClickable" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
-  {{ .Title }}
-</button>
-<ul class="dropdown-menu" aria-labelledby="dropdownMenuClickable">
-  {{ range .Sections }}
-  <li><a class="dropdown-item" href="#">Menu item</a></li>
-  {{ end }}
-  {{ end }}
-  
-</ul> -->
+  </ul> -->
 
 
 </nav>
