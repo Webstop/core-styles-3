@@ -67,8 +67,8 @@
           <div class="col-sm-12 col-md-7 p-0 p-md-2 ">
             <h1
               class="bg-light shadow text-center p-md-2 mb-3 p-1 mb-md-3 page-title ">
-              Development Approach</h1>
-            <p class="text-center text-light lead">Our design system is setup to support Style Guide Driven Development (SGDD).</p>
+              Introduction</h1>
+            <p class="text-center text-light lead">This guide will help you get your website up and running with our modern framework in short order.</p>
            
           </div>
         </div>
@@ -92,11 +92,11 @@
       <strong> Getting Started</strong>
       </button>
 
-      <div class="collapse " id="getstart-menu-collapse">
+      <div class="collapse  show " id="getstart-menu-collapse">
         
         <ul class="list-unstyled fw-normal pb-1 small">
          
-            <li class="py-2 ps-4 "><a href="/docs/3.0/getting-started/introduction/" class="d-inline-flex rounded">Introduction</a></li>
+            <li class="py-2 ps-4  left-nav-active "><a href="/docs/3.0/getting-started/introduction/" class="d-inline-flex rounded">Introduction</a></li>
           
         </ul>
         
@@ -119,7 +119,7 @@
       <strong> Guides</strong>
       </button>
 
-      <div class="collapse  show " id="guides-menu-collapse">
+      <div class="collapse " id="guides-menu-collapse">
         
         <ul class="list-unstyled fw-normal pb-1 small">
          
@@ -129,7 +129,7 @@
         
         <ul class="list-unstyled fw-normal pb-1 small">
          
-            <li class="py-2 ps-4  left-nav-active "><a href="/guides/3.0/development-approach/" class="d-inline-flex rounded">Development Approach</a></li>
+            <li class="py-2 ps-4 "><a href="/guides/3.0/development-approach/" class="d-inline-flex rounded">Development Approach</a></li>
           
         </ul>
         
@@ -325,42 +325,141 @@
     <div class="bd-content ps-lg-4">
       
 
-      <p>Style Guide Driven Development is an approach which places a living
-style guide a the heart of the front-end development process. This
-approach produces more reliable, portable, and well documented
-front-end pattern libraries.</p>
-<h2 id="living-style-guide">Living Style Guide</h2>
-<p>A living style guide acts as a reference point for designers and
-developers use to understand how to craft the front-end portion of
-a website or application.</p>
-<p>A living style guide is constantly updated and evolves with the
-product. It establishes the baseline for a design system.</p>
-<p>By having an established pattern library at our disposal designers
-and developers are able to work at a faster pace when developing
-the front-end assets.</p>
-<p>Having a current and up-to-date pattern library enables our team
-to build we confidence and more quickly.</p>
-<p><em>Saying you have a living style guide and actually keeping it
-up-to-date are two very different things. This is where
-Style Guide Driven Development comes in!</em></p>
-<h2 id="style-guide-driven-development">Style Guide Driven Development</h2>
-<p>Style Guide Driven Development is a methodology that keeps your
-style guide up to date as an affect of the process.</p>
-<p>The core concept of SGDD is to build your front-end assets within
-the actual style guide. The style guide acts as the source for
-the core-styles CSS &amp; JS. Because development work for new components
-and updates to existing ones are being done within the actual
-style guide, using the example in the documentation to develop
-against, the style guide remains current as a matter of course.</p>
-<p>Since modern front-end build systems use package managers
-(like <a href="https://www.npmjs.com">NPM</a> or <a href="https://yarnpkg.com/en/">Yarn</a>)
-to import CSS &amp; JavaScript libraries from node packages, it is a
-relatively simple matter to import our homegrown front-end assets
-into our various back-end systems the same way.</p>
+      <p>Webstop&rsquo;s front-end framework contains finely crafted HTML5, CSS3 &amp; JavaScript designed to produce compelling web experiences for grocery retailer websites. Our framework takes advantage of modern tools to create mobile-first responsive websites.</p>
+<p>This guide will help you get your website up and running with our modern framework in short order.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>Will be replaced with the ToC, excluding the &ldquo;Contents&rdquo; header
+{:toc}</li>
+</ul>
+<h2 id="quick-start">Quick start</h2>
+<p>To install Webstop&rsquo;s front-end framework simply place the following script tag on any authorized website.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="ln">1</span><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;//api.grocerywebsite.com/front_end_framework/render_assets&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</code></pre></div><p>This script will look at the domain name of the page it&rsquo;s placed on to determine which retailer site is being used. This will include all the CSS and JavaScript required for the framework, including jQuery, Tether, Bootstrap, &amp; .</p>
+<h3 id="options">Options</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>js</code></td>
+<td><code>true</code></td>
+<td>Set to <code>false</code> to exclude the JavaScript files.</td>
+</tr>
+<tr>
+<td><code>css</code></td>
+<td><code>true</code></td>
+<td>Set to <code>false</code> to exclude the Stylesheet files.</td>
+</tr>
+<tr>
+<td><code>analytics</code></td>
+<td><code>true</code></td>
+<td>Set to <code>false</code> to exclude analytics.</td>
+</tr>
+<tr>
+<td><code>retailer</code></td>
+<td><code>nil</code></td>
+<td>The <code>retailer_id</code> value. An integer assigned by Webstop.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="examples">Examples</h4>
+<p>The following examples illustrate the use of the options listed above.</p>
+<h5 id="basic-example">Basic Example</h5>
+<p>Using this version will render all the CSS &amp; JavaScript for a retailer&rsquo;s site.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="ln">1</span><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;//api.grocerywebsite.com/front_end_framework/render_assets&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</code></pre></div><p class="alert alert-warning" role="alert">
+  <strong>Heads Up!</strong> In the basic example above the Webstop server will use the domain name of the page requesting the script to determine which retailer's files to return. If the domain is not setup on Webstop's servers it will fall back to the base framework without any of the retailer's settings, customizations, branding, or theme elements. Use the Retailer ID example below for development environments or for other domains not registered in Webstop's system.
+</p>
+<h5 id="development-example">Development Example</h5>
+<p>Use this version for development environments (e.g. <code>http://localhost</code>), or other times when the domain name isn&rsquo;t associated with the retailer in Webstop&rsquo;s system. Also, when in non-production environments you&rsquo;ll want to turn off analytics.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="ln">1</span><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;//api.grocerywebsite.com/front_end_framework/render_assets?retailer=767&amp;analytics=false&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</code></pre></div><p class="alert alert-success" role="alert">
+  <strong>Tip!</strong> There's no down side to including the retailer ID parameter at all times and in all environments.
+</p>
+<h2 id="starter-template">Starter template</h2>
+<p>Be sure to have your pages set up with the latest design and development standards. That means:</p>
+<ul>
+<li>Using an HTML5 doctype</li>
+<li>Forcing Internet Explorer to use its latest rendering mode (<a href="http://stackoverflow.com/q/6771258">read more</a>)</li>
+<li>And, utilizing the viewport meta tag.</li>
+</ul>
+<p>Put it all together and your pages should look like this:</p>
+<p>{% highlight html %}</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+<pre><code>&lt;!-- Webstop CSS --&gt;
+&lt;script src=&quot;//api.grocerywebsite.com/front_end_framework/render_assets?js=false&quot;&gt;&lt;/script&gt;
+&lt;!-- Your custom CSS goes here --&gt;
+</code></pre>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+<pre><code>&lt;!-- Webstop JavaScript --&gt;
+&lt;!-- This will include jQuery, Tether, Bootstrap JS, &amp; Grocery Modules JS. --&gt;
+&lt;script src=&quot;//api.grocerywebsite.com/front_end_framework/render_assets?css=false&quot;&gt;&lt;/script&gt;
+&lt;!-- Your custom JS goes here --&gt;
+</code></pre>
+  </body>
+</html>
+{% endhighlight %}
+<p>That&rsquo;s all you need for overall page requirements. Visit the [Layout docs]({{ site.baseurl }}/layouts/overview) to start laying out your site&rsquo;s content and components.</p>
+<h2 id="important-globals">Important globals</h2>
+<p>The framework employs a handful of important global styles and settings that you&rsquo;ll need to be aware of when using it, all of which are almost exclusively geared towards the <em>normalization</em> of cross browser styles. Let&rsquo;s dive in.</p>
+<h3 id="html5-doctype">HTML5 doctype</h3>
+<p>The framework requires the use of the HTML5 doctype. Without it, you&rsquo;ll see some funky incomplete styling, but including it shouldn&rsquo;t cause any considerable hiccups.</p>
+<p>{% highlight html %}</p>
+<!DOCTYPE html>
+<html lang="en">
+  ...
+</html>
+{% endhighlight %}
+<h3 id="responsive-meta-tag">Responsive meta tag</h3>
+<p>The framework is developed <em>mobile-first</em> utilizing <em>responsive design</em>, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, <strong>add the responsive viewport meta tag</strong> to your <code>&lt;head&gt;</code>.</p>
+<p>{% highlight html %}</p>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% endhighlight %}
+<p>You can see an example of this in action in the <a href="#starter-template">starter template</a>.</p>
+<h3 id="box-sizing">Box-sizing</h3>
+<p>For more straightforward sizing in CSS, we switch the global <code>box-sizing</code> value from <code>content-box</code> to <code>border-box</code>. This ensures <code>padding</code> does not affect the final computed width of an element, but it can cause problems with some third party software like Google Maps and Google Custom Search Engine.</p>
+<p>On the rare occasion you need to override it, use something like the following:</p>
+<p>{% highlight scss %}
+.selector-for-some-widget {
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+}
+{% endhighlight %}</p>
+<p>With the above snippet, nested elements—including generated content via <code>:before</code> and <code>:after</code>—will all inherit the specified <code>box-sizing</code> for that <code>.selector-for-some-widget</code>.</p>
+<p>Learn more about <a href="https://css-tricks.com/box-sizing/">box model and sizing at CSS Tricks</a>.</p>
+<h3 id="reset-via-normalizecss--reboot">Reset via Normalize.css &amp; Reboot</h3>
+<p>For improved cross-browser rendering, we use <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> to correct small inconsistencies across browsers and devices. We further build on this with Bootstrap&rsquo;s, slightly more opinionated styles with [Reboot]({{ site.baseurl }}/content/reboot/).</p>
+<h2 id="support">Support</h2>
+<p class="alert alert-danger" role="alert">
+  <strong>TODO:</strong> Add Webstop support & contact information here
+</p>
 <hr>
-<p>See our <a href="/docs/guide/development-process/">Development Process Guide</a> to
-learn more about how to use the core-styles in day-to-day design and
-development.</p>
+<p>Welcome to the WSG!</p>
+<p class="alert alert-info">
+<strong>Attention Webstop Staff:</strong> Webstop's front-end framework is already installed inside the Core-Rails, Core-Ember, & Core-Lasso apps; it is so comes pre-installed in all retailer custom Rails apps. <em>The following Installation notes are for 3rd party vendors only.</em>
+</p>
+<p>To install the WSG use one of the following methods.</p>
+<h3 id="ruby-gem-installation">Ruby Gem Installation</h3>
+<p><code>command to install</code></p>
+<h3 id="node-module-installation">Node Module Installation</h3>
+<p><code>command to install</code></p>
+<h3 id="bower-component-installation">Bower Component Installation</h3>
+<p><code>command to install</code></p>
 
     </div>
   </div>
@@ -371,15 +470,35 @@ development.</p>
           <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
          <div class="table-of-contents"><nav id="TableOfContents">
   <ul>
-    <li><a href="#living-style-guide">Living Style Guide</a></li>
-    <li><a href="#style-guide-driven-development">Style Guide Driven Development</a></li>
+    <li><a href="#contents">Contents</a></li>
+    <li><a href="#quick-start">Quick start</a>
+      <ul>
+        <li><a href="#options">Options</a></li>
+      </ul>
+    </li>
+    <li><a href="#starter-template">Starter template</a></li>
+    <li><a href="#important-globals">Important globals</a>
+      <ul>
+        <li><a href="#html5-doctype">HTML5 doctype</a></li>
+        <li><a href="#responsive-meta-tag">Responsive meta tag</a></li>
+        <li><a href="#box-sizing">Box-sizing</a></li>
+        <li><a href="#reset-via-normalizecss--reboot">Reset via Normalize.css &amp; Reboot</a></li>
+      </ul>
+    </li>
+    <li><a href="#support">Support</a>
+      <ul>
+        <li><a href="#ruby-gem-installation">Ruby Gem Installation</a></li>
+        <li><a href="#node-module-installation">Node Module Installation</a></li>
+        <li><a href="#bower-component-installation">Bower Component Installation</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
         </div>
         
       <div class="">
        
-        <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/webstop/core-styles-3/blob/master/site/content/guides/3.0/development-approach.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+        <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/webstop/core-styles-3/blob/master/site/content/docs/3.0/getting-started/introduction.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
       
       </div>
     </div>

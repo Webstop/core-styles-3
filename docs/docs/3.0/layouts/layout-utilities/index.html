@@ -67,8 +67,8 @@
           <div class="col-sm-12 col-md-7 p-0 p-md-2 ">
             <h1
               class="bg-light shadow text-center p-md-2 mb-3 p-1 mb-md-3 page-title ">
-              Development Approach</h1>
-            <p class="text-center text-light lead">Our design system is setup to support Style Guide Driven Development (SGDD).</p>
+              Utilities for layout</h1>
+            <p class="text-center text-light lead">For faster mobile-friendly and responsive development, Bootstrap includes dozens of utility classes for showing, hiding, aligning, and spacing content.</p>
            
           </div>
         </div>
@@ -119,7 +119,7 @@
       <strong> Guides</strong>
       </button>
 
-      <div class="collapse  show " id="guides-menu-collapse">
+      <div class="collapse " id="guides-menu-collapse">
         
         <ul class="list-unstyled fw-normal pb-1 small">
          
@@ -129,7 +129,7 @@
         
         <ul class="list-unstyled fw-normal pb-1 small">
          
-            <li class="py-2 ps-4  left-nav-active "><a href="/guides/3.0/development-approach/" class="d-inline-flex rounded">Development Approach</a></li>
+            <li class="py-2 ps-4 "><a href="/guides/3.0/development-approach/" class="d-inline-flex rounded">Development Approach</a></li>
           
         </ul>
         
@@ -165,7 +165,7 @@
       <strong> Layouts</strong>
       </button>
 
-      <div class="collapse " id="layout-menu-collapse">
+      <div class="collapse  show " id="layout-menu-collapse">
         
         <ul class="list-unstyled fw-normal pb-1 small">
          
@@ -187,7 +187,7 @@
         
         <ul class="list-unstyled fw-normal pb-1 small">
          
-            <li class="py-2 ps-4 "><a href="/docs/3.0/layouts/layout-utilities/" class="d-inline-flex rounded">Utilities for layout</a></li>
+            <li class="py-2 ps-4  left-nav-active "><a href="/docs/3.0/layouts/layout-utilities/" class="d-inline-flex rounded">Utilities for layout</a></li>
           
         </ul>
         
@@ -325,42 +325,15 @@
     <div class="bd-content ps-lg-4">
       
 
-      <p>Style Guide Driven Development is an approach which places a living
-style guide a the heart of the front-end development process. This
-approach produces more reliable, portable, and well documented
-front-end pattern libraries.</p>
-<h2 id="living-style-guide">Living Style Guide</h2>
-<p>A living style guide acts as a reference point for designers and
-developers use to understand how to craft the front-end portion of
-a website or application.</p>
-<p>A living style guide is constantly updated and evolves with the
-product. It establishes the baseline for a design system.</p>
-<p>By having an established pattern library at our disposal designers
-and developers are able to work at a faster pace when developing
-the front-end assets.</p>
-<p>Having a current and up-to-date pattern library enables our team
-to build we confidence and more quickly.</p>
-<p><em>Saying you have a living style guide and actually keeping it
-up-to-date are two very different things. This is where
-Style Guide Driven Development comes in!</em></p>
-<h2 id="style-guide-driven-development">Style Guide Driven Development</h2>
-<p>Style Guide Driven Development is a methodology that keeps your
-style guide up to date as an affect of the process.</p>
-<p>The core concept of SGDD is to build your front-end assets within
-the actual style guide. The style guide acts as the source for
-the core-styles CSS &amp; JS. Because development work for new components
-and updates to existing ones are being done within the actual
-style guide, using the example in the documentation to develop
-against, the style guide remains current as a matter of course.</p>
-<p>Since modern front-end build systems use package managers
-(like <a href="https://www.npmjs.com">NPM</a> or <a href="https://yarnpkg.com/en/">Yarn</a>)
-to import CSS &amp; JavaScript libraries from node packages, it is a
-relatively simple matter to import our homegrown front-end assets
-into our various back-end systems the same way.</p>
-<hr>
-<p>See our <a href="/docs/guide/development-process/">Development Process Guide</a> to
-learn more about how to use the core-styles in day-to-day design and
-development.</p>
+      <h2 id="changing-display">Changing <code>display</code></h2>
+<p>Use our [display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/) for responsively toggling common values of the <code>display</code> property. Mix it with our grid system, content, or components to show or hide them across specific viewports.</p>
+<h2 id="flexbox-options">Flexbox options</h2>
+<p>Bootstrap 4 is built with flexbox, but not every element&rsquo;s <code>display</code> has been changed to <code>display: flex</code> as this would add many unnecessary overrides and unexpectedly change key browser behaviors. Most of [our components]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/alerts/) are built with flexbox enabled.</p>
+<p>Should you need to add <code>display: flex</code> to an element, do so with <code>.d-flex</code> or one of the responsive variants (e.g., <code>.d-sm-flex</code>). You&rsquo;ll need this class or <code>display</code> value to allow the use of our extra [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) for sizing, alignment, spacing, and more.</p>
+<h2 id="margin-and-padding">Margin and padding</h2>
+<p>Use the <code>margin</code> and <code>padding</code> [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) to control how elements and components are spaced and sized. Bootstrap 4 includes a five-level scale for spacing utilities, based on a <code>1rem</code> value default <code>$spacer</code> variable. Choose values for all viewports (e.g., <code>.mr-3</code> for <code>margin-right: 1rem</code>), or pick responsive variants to target specific viewports (e.g., <code>.mr-md-3</code> for <code>margin-right: 1rem</code> starting at the <code>md</code> breakpoint).</p>
+<h2 id="toggle-visibility">Toggle <code>visibility</code></h2>
+<p>When toggling <code>display</code> isn&rsquo;t needed, you can toggle the <code>visibility</code> of an element with our [visibility utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/visibility/). Invisible elements will still affect the layout of the page, but are visually hidden from visitors.</p>
 
     </div>
   </div>
@@ -371,15 +344,17 @@ development.</p>
           <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
          <div class="table-of-contents"><nav id="TableOfContents">
   <ul>
-    <li><a href="#living-style-guide">Living Style Guide</a></li>
-    <li><a href="#style-guide-driven-development">Style Guide Driven Development</a></li>
+    <li><a href="#changing-display">Changing <code>display</code></a></li>
+    <li><a href="#flexbox-options">Flexbox options</a></li>
+    <li><a href="#margin-and-padding">Margin and padding</a></li>
+    <li><a href="#toggle-visibility">Toggle <code>visibility</code></a></li>
   </ul>
 </nav></div>
         </div>
         
       <div class="">
        
-        <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/webstop/core-styles-3/blob/master/site/content/guides/3.0/development-approach.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+        <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/webstop/core-styles-3/blob/master/site/content/docs/3.0/layouts/layout-utilities.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
       
       </div>
     </div>

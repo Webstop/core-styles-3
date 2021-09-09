@@ -9,9 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const addButton = document.querySelector('.grid-button.add-more-items');
   const itemTemplate = document.querySelector('.grid-item-template');
   const characters = 'abcdefghijklmnopqrstuvwxyz';
-  const colors = ['red', 'blue', 'green'];
+  const style = ['solid', 'duotone', 'regular', 'lite'];
 
-  let dragOrder = [];
   let sortFieldValue;
   let searchFieldValue;
 
@@ -31,29 +30,11 @@ document.addEventListener('DOMContentLoaded', function () {
       title(item, element) {
         return element.getAttribute('data-title') || '';
       },
-      color(item, element) {
-        return element.getAttribute('data-color') || '';
+      style(item, element) {
+        return element.getAttribute('data-style') || '';
       },
     },
-    dragEnabled: true,
-    dragHandle: '.grid-card-handle',
-    dragContainer: dragContainer,
-    dragRelease: {
-      duration: 400,
-      easing: 'cubic-bezier(0.625, 0.225, 0.100, 0.890)',
-      useDragContainer: true,
-    },
-    dragPlaceholder: {
-      enabled: true,
-      createElement(item) {
-        return item.getElement().cloneNode(true);
-      },
-    },
-    dragAutoScroll: {
-      targets: [window],
-      sortDuringScroll: false,
-      syncAfterScroll: false,
-    },
+   
   });
 
   window.grid = grid;
@@ -128,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Sort the items.
     grid.sort(
-      currentSort === 'title' ? 'title' : currentSort === 'color' ? 'color title' : dragOrder
+      currentSort === 'title' ? 'title' : currentSort === 'style' ? 'style title' : dragOrder
     );
 
     // Update active sort value.
@@ -145,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     if (sortFieldValue !== 'order') {
-      grid.sort(sortFieldValue === 'title' ? 'title' : 'color title', {
+      grid.sort(sortFieldValue === 'title' ? 'title' : 'style title', {
         layout: false,
       });
       dragOrder = dragOrder.concat(items);
