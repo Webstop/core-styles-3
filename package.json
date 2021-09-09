@@ -22,15 +22,15 @@
     "type": "git",
     "url": "git+https://github.com/webstop/core-styles-3.git"
   },
-  "homepage": "https://github.com/hemphill/rules-for-robots-blog#readme",
+  "homepage": "https://guides.webstop.com/",
   "dependencies": {
-    "bootstrap": "^5.0.0-beta1"
+    "bootstrap": "^5.1.1"
   },
   "peerDependencies": {
-    "@popperjs/core": "^2.6.0"
+    "@popperjs/core": "^2.10.1"
   },
   "devDependencies": {
-    "@popperjs/core": "^2.6.0",
+    "@popperjs/core": "^2.10.1",
     "bootstrap-5-docs": "github:hemphill/bootstrap-5-docs#main",
     "hugo-bin": "^0.68.0",
     "nodemon": "^2.0.6",
