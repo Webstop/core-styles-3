@@ -40,8 +40,6 @@
       </div>
       {{ end }}
 
-      <p>Docs Template</p>
-
       {{ .Content }}
     </div>
   </div>
@@ -49,8 +47,11 @@
 </div>
 </div>
 {{ end }}
+
+
 {{ define "footer" }}
 {{ range .Page.Params.extra_js -}}
+
 <script{{ with .async }} async{{ end }} src="{{ .src }}"></script>
 {{- end -}}
 {{ end }}
