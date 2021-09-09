@@ -62,10 +62,11 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
     padding: 1rem 1.5rem;
     border-bottom-right-radius: .25rem;
     border-bottom-left-radius: .25rem;
-   margin-left: 1rem;
+   margin-left: 0rem;
    margin-right: 4rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     z-index: 91;
+    overflow: visible;
   }
 
 
@@ -153,7 +154,7 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
 }
 
 /** Examples and Highlights **/
-
+ 
 .bd-example-container {
   min-width: 16rem;
   max-width: 25rem;
@@ -194,7 +195,7 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
     margin-left: 0;
     border-width: 0.5px;
     border-radius: .25rem;
-    margin: 1rem -.75rem 0;
+   
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     z-index: 99;
   }
@@ -245,6 +246,7 @@ pre {
     width: 100%;
     border:1px solid #dbdbdb;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-bottom: 50px;
   }
   
   th, td {
@@ -320,6 +322,7 @@ pre {
 /* Controls */
 
 .grid-controls {
+  font-family: $wsg-sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -372,8 +375,8 @@ pre {
   display: block;
   position: relative;
   width: 100%;
-  height: 6rem;
-  padding: 1rem 1.5rem 1rem 5rem;
+  height: 4rem;
+  padding: 0rem 1.5rem 0rem 5rem;
   font-size: 1.3rem;
   font-weight: 700;
   line-height: 4rem;
@@ -417,7 +420,7 @@ select.grid-control-field::-ms-expand {
   position: absolute;
   top: 0;
   width: 5rem;
-  height: 6rem;
+  height: 4rem;
   padding: 1.5rem;
   z-index: 2;
   pointer-events: none;

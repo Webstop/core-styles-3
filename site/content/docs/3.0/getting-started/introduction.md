@@ -38,6 +38,8 @@ This script will look at the domain name of the page it's placed on to determine
 | `analytics` | `true`  | Set to `false` to exclude analytics.                     |
 | `retailer`  | `nil`   | The `retailer_id` value. An integer assigned by Webstop. |
 
+
+
 #### Examples
 
 The following examples illustrate the use of the options listed above.
@@ -77,7 +79,7 @@ Be sure to have your pages set up with the latest design and development standar
 
 Put it all together and your pages should look like this:
 
-{% highlight html %}
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -99,7 +101,7 @@ Put it all together and your pages should look like this:
     <!-- Your custom JS goes here -->
   </body>
 </html>
-{% endhighlight %}
+```
 
 That's all you need for overall page requirements. Visit the [Layout docs]({{ site.baseurl }}/layouts/overview) to start laying out your site's content and components.
 
@@ -111,20 +113,20 @@ The framework employs a handful of important global styles and settings that you
 
 The framework requires the use of the HTML5 doctype. Without it, you'll see some funky incomplete styling, but including it shouldn't cause any considerable hiccups.
 
-{% highlight html %}
+```html
 <!DOCTYPE html>
 <html lang="en">
   ...
 </html>
-{% endhighlight %}
+```
 
 ### Responsive meta tag
 
 The framework is developed *mobile-first* utilizing *responsive design*, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, **add the responsive viewport meta tag** to your `<head>`.
 
-{% highlight html %}
+```html
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-{% endhighlight %}
+```
 
 You can see an example of this in action in the [starter template](#starter-template).
 
@@ -134,13 +136,13 @@ For more straightforward sizing in CSS, we switch the global `box-sizing` value 
 
 On the rare occasion you need to override it, use something like the following:
 
-{% highlight scss %}
+```css
 .selector-for-some-widget {
   -webkit-box-sizing: content-box;
      -moz-box-sizing: content-box;
           box-sizing: content-box;
 }
-{% endhighlight %}
+```
 
 With the above snippet, nested elements—including generated content via `:before` and `:after`—will all inherit the specified `box-sizing` for that `.selector-for-some-widget`.
 
