@@ -3,6 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://guides.webstop.com/ajax/alert_error/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/ajax/alert_success/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/ajax/search_results/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/404.html</loc>
   </url>
   
@@ -20,6 +32,10 @@
   
   <url>
     <loc>https://guides.webstop.com/docs/3.0/components/ajax/ajax-modal/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/ajax/</loc>
   </url>
   
   <url>
@@ -79,10 +95,6 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/overview/</loc>
-  </url>
-  
-  <url>
     <loc>https://guides.webstop.com/docs/3.0/components/search/</loc>
   </url>
   
@@ -112,10 +124,6 @@
   
   <url>
     <loc>https://guides.webstop.com/docs/3.0/components/toolbar/</loc>
-  </url>
-  
-  <url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/layout-utilities/</loc>
   </url>
   
   <url>

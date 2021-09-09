@@ -22,7 +22,7 @@ which triggers the form to submit via ajax instead of a web page reload. The `ac
 specifies the URL to pull the content from, the content is expected to be in HTML format. 
 
 {{< example >}}
-<form data-ajax-form action="{{ sinatra_host }}/alert_success">
+<form data-ajax-form action="/ajax/alert_success">
   <div class="form-group">
     <label for="title-example" class="py-2">Title</label>
     <input type="text" class="form-control p-2" name="title-example" id="title-example" placeholder="Title">
@@ -43,7 +43,7 @@ The `data-power-bar` attribute triggers a reload of the Shopping List Power Bar 
 is returned.
 
 {{< example >}}
-<form data-ajax-form action="{{ sinatra_host }}/alert_error" data-target="#target-1" data-power-bar>
+<form data-ajax-form action="/ajax/alert_error" data-target="#target-1" data-power-bar>
   <div class="form-group">
     <label for="title-example" class="py-2">Title</label>
     <input type="text" class="form-control p-2" name="title-example" id="title-example" placeholder="Title">

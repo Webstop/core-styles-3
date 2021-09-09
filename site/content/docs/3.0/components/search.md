@@ -22,7 +22,7 @@ text field to watch; the field the consumer types search terms into.
 
 <div class="toolbar-detached">
 {{< example >}}
-<form class="search-form" action="{{ sinatra_host }}/search_results" method="post" data-search="live" data-target="#search-results" data-hide=".search-hidden">
+<form class="search-form" action="/ajax/search_results/" method="post" data-search="live" data-target="#search-results" data-hide=".search-hidden">
   <div class="input-group">
     <input class="search-from-search-text form-control" type="text" name="search" placeholder="Search" aria-label="Enter text to search for.">
     <a href="#" class="search-form-clear icon-cancel-circle-solid" aria-label="Clear Search"></a>
@@ -69,7 +69,7 @@ place the `toolbar-group` class on other elements will likely produce undesirabl
 <div class="toolbar-detached">
 {{< example >}}
 <nav class="toolbar">
-  <form class="search-form" action="{{ sinatra_host }}/search_results" method="post" data-search="live" data-target="#search-results-toolbar" data-hide=".search-hidden-toolbar">
+  <form class="search-form" action="/ajax/search_results" method="post" data-search="live" data-target="#search-results-toolbar" data-hide=".search-hidden-toolbar">
     <div class="toolbar-group input-group">
       <input class="search-from-search-text form-control" type="text" name="search" placeholder="Search" aria-label="Enter text to search for.">
       <a href="#" class="search-form-clear icon-cancel-circle-solid" aria-label="Clear Search"></a>
@@ -98,7 +98,7 @@ Search forms can have any number of fields and the AJAX request will submit them
 
 <div class="toolbar-detached">
 {{< example >}}
-<form class="search-form" action="{{ sinatra_host }}/search_results" method="post" data-search="live" data-target="#search-results-complex" data-hide=".search-hidden-complex">
+<form class="search-form" action="/ajax/search_results" method="post" data-search="live" data-target="#search-results-complex" data-hide=".search-hidden-complex">
   <div class="form-group">
     <div class="input-group">
       <input class="search-from-search-text form-control" type="text" name="search" placeholder="Search" aria-label="Enter text to search for.">
