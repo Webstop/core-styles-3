@@ -4,8 +4,10 @@ title: Introduction
 description: This guide will help you get your website up and running with our modern framework in short order.
 toc: true
 source: Webstop
-menu:
-  main:
+menu: 
+  getstart:
+    parent: Getting Started
+    weight: 1
 ---
 
 Webstop's front-end framework contains finely crafted HTML5, CSS3 & JavaScript designed to produce compelling web experiences for grocery retailer websites. Our framework takes advantage of modern tools to create mobile-first responsive websites.

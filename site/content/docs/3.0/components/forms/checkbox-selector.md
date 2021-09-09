@@ -5,8 +5,9 @@ description: Enables Select All and Unselect All for checkbox groups.
 group: components
 toc: true
 source: Webstop
-menu:
-  main:
+menu: 
+  forms:
+    parent: Forms
 ---
 
 When you have a large group of checkboxes it is helpful to be able to have a Select All or Unselect All button that will 

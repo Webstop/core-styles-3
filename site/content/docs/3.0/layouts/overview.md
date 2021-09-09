@@ -5,8 +5,10 @@ description: Components and options for laying out your Bootstrap project, inclu
 group: layout
 redirect_from: "/docs/4.1/layout/"
 toc: true
-menu:
-  main:
+menu: 
+  layout:
+    parent: Layouts
+    weight: 1
 ---
 
 ## Containers
@@ -15,7 +17,7 @@ Containers are the most basic layout element in Bootstrap and are **required whe
 
 While containers *can* be nested, most layouts do not require a nested container.
 
-<div class="bd-example">
+<div class="bd-example py-4">
   <div class="bd-example-container">
     <div class="bd-example-container-header"></div>
     <div class="bd-example-container-sidebar"></div>
@@ -23,15 +25,15 @@ While containers *can* be nested, most layouts do not require a nested container
   </div>
 </div>
 
-{% highlight html %}
+{{< highlight >}}
 <div class="container">
   <!-- Content here -->
 </div>
-{% endhighlight %}
+{{< /highlight >}}
 
 Use `.container-fluid` for a full width container, spanning the entire width of the viewport.
 
-<div class="bd-example">
+<div class="bd-example py-4">
   <div class="bd-example-container bd-example-container-fluid">
     <div class="bd-example-container-header"></div>
     <div class="bd-example-container-sidebar"></div>
@@ -39,11 +41,11 @@ Use `.container-fluid` for a full width container, spanning the entire width of 
   </div>
 </div>
 
-{% highlight html %}
+{{< highlight >}}
 <div class="container-fluid">
   ...
 </div>
-{% endhighlight %}
+{{< /highlight >}}
 
 
 ## Responsive breakpoints
@@ -52,7 +54,7 @@ Since Bootstrap is developed to be mobile first, we use a handful of [media quer
 
 Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
 
-{% highlight scss %}
+{{< highlight >}}
 // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
 
@@ -67,7 +69,7 @@ Bootstrap primarily uses the following media query ranges—or breakpoints—in 
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
-{% endhighlight %}
+{{< /highlight >}}
 
 Since we write our source CSS in Sass, all our media queries are available via Sass mixins:
 

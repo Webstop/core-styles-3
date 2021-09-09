@@ -2,11 +2,11 @@
 layout: docs
 title: Tag Search
 description: Search for and assign tags in a web form.
-group: components
 toc: true
 source: Webstop
-menu:
-  main:
+menu: 
+  tagging:
+    parent: Tagging
 ---
 
 ## Tag Search
@@ -36,28 +36,6 @@ play. It uses AJAX to search Webstop's tag API.
 </form>
 {{< /example >}}
 
-<!--
-You can have multiple forms on the same page and they will work independently of each other, as the example below indicates.
-
-{{< example >}}
-<form>
-  <div class="form-group">
-    <label for="tag-search-1">Tag Search</label>
-    <input type="text" class="form-control" id="tag-search-1" data-tag-search data-tag-search-context="aye_tags" data-tag-search-target="#tag-search-2-target" data-tag-search-display="#tag-search-2-display" data-tag-search-results="#tag-search-2-results" aria-describedby="tag-search-2-help">
-    <small id="tag-search-2-help" class="form-text text-muted">Search for the tags you'd like to add in the form above.</small>
-  </div>
-  <div id="tag-search-2-results"></div>
-  <div class="form-group">
-    <label for="tag-search-2-target">Tags</label>
-    <div id="tag-search-2-display" class="tag-group"></div>
-    <input type="text" class="form-control" id="tag-search-2-target" value="foo" aria-describedby="tag-search-target-2-help">
-    <small id="tag-search-target-2-help" class="form-text text-muted">Normally this would be a hidden form field. We are displaying it here so you can see what happens behind the scenes.</small>
-  </div>
-</form>
-{% endcapture %}
-{% include example.html content=example %}
-
--->
 
 Notice how the `foo` tag is displayed on page load by reading the values from the target form field.
 This allows us to use this component to edit records with pre-existing tags.
@@ -74,13 +52,7 @@ This allows us to use this component to edit records with pre-existing tags.
 
 The following attributes are required. All attributes have the namespace `data-tag-search`.
 
-<!--
-data-tag-search 
-data-tag-search-context="aye_tags" 
-data-tag-search-target="#tag-search-2-target" 
-data-tag-search-display="#tag-search-2-display" 
-data-tag-search-results="#tag-search-2-results" 
--->
+
 
 <table class="table table-bordered table-striped pt-5">
   <thead>
@@ -136,8 +108,7 @@ data-tag-search-results="#tag-search-2-results"
 </table>
 
 The search field should look similar to the following:
-
-html
+{{< example >}}
 <input type="text" class="form-control" 
   id="tag-search"
   data-tag-search 
@@ -147,3 +118,4 @@ html
   data-tag-search-results="#tag-search-results"
 >
 
+{{< /example >}}

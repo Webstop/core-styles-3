@@ -5,8 +5,9 @@ description: Checkboxes, radio buttons, or select lists can display or hide othe
 group: components
 toc: true
 source: Webstop
-menu:
-  main:
+menu: 
+  forms:
+    parent: Forms
 ---
 
 Section Toggles reveal or hide additional form content or information based on selections made within the form. It does 

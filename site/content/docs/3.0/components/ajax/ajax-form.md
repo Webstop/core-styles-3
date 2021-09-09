@@ -2,13 +2,12 @@
 layout: docs
 title: Ajax Form
 description: An easy way to submit form contents & load the response into a section of the page.
-group: components
 toc: true
 source: Webstop
-parent: components
-menu:
-  main:
-   
+menu: 
+  ajax:
+    parent: Ajax
+      
 ---
 
   

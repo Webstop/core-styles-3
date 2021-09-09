@@ -11110,6 +11110,40 @@ textarea.form-control-lg {
   background-color: #e5e5e5;
 }
 
+/** Examples and Highlights **/
+.bd-example-container {
+  min-width: 16rem;
+  max-width: 25rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bd-example-container-header {
+  height: 3rem;
+  margin-bottom: 0.5rem;
+  background-color: #23bcfe;
+  border-radius: 0.25rem;
+}
+
+.bd-example-container-sidebar {
+  float: right;
+  width: 4rem;
+  height: 8rem;
+  background-color: #a1e3ff;
+  border-radius: 0.25rem;
+}
+
+.bd-example-container-body {
+  height: 8rem;
+  margin-right: 4.5rem;
+  background-color: #ff01ff;
+  border-radius: 0.25rem;
+}
+
+.bd-example-container-fluid {
+  max-width: none;
+}
+
 .example {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.2px;
@@ -11390,7 +11424,7 @@ select.grid-control-field::-ms-expand {
   display: block;
   position: absolute;
   width: 18rem;
-  height: 18rem;
+  height: 20rem;
   line-height: 1rem;
   margin: 1rem;
   z-index: 1;
@@ -11469,6 +11503,7 @@ select.grid-control-field::-ms-expand {
   justify-content: center;
   align-items: center;
   border-radius: 2rem;
+  padding-top: 5px;
 }
 
 .grid-card-details {

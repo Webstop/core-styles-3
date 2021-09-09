@@ -4,8 +4,9 @@ title: Site Structure
 description: The basic template for laying out a site's structure.
 group: layout
 toc: true
-menu:
-  main:
+menu: 
+  layout:
+    parent: Layouts
 ---
 
 ## Basic Example

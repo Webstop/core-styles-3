@@ -2,11 +2,10 @@
 layout: docs
 title: Admin Layout
 description: Website layout for administration pages.
-group: layouts
 toc: true
 source: Webstop
 menu: 
-  main:
+  layout:
     parent: Layouts
 ---
 

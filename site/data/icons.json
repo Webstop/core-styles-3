@@ -4,13 +4,13 @@
     "style": "fad",
     "icon": "fa-user-circle",
     "search": "account profile",
-    "category": " "
+    "category": "admin"
   },
   {
     "name": "Shopping List",
     "style": "fad",
     "icon": "fa-clipboard-list-check",
-    "search": " ",
+    "search": "shopping list ",
     "category": ""
   },
   {

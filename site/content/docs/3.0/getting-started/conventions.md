@@ -1,10 +1,11 @@
 ---
 layout: docs
 title: Conventions
-group: getting-started
 source: Webstop
-menu:
-  main:
+menu: 
+  getstart:
+    parent: Getting Started
+    weight: 2
 ---
 
 

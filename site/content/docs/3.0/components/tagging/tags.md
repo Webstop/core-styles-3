@@ -5,8 +5,9 @@ description: Layout for tagged content.
 group: components
 toc: true
 source: Webstop
-menu:
-  main:
+menu: 
+  tagging:
+    parent: Tagging
 ---
 
 

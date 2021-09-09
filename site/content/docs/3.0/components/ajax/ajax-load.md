@@ -2,11 +2,11 @@
 layout: docs
 title: Ajax Load
 description: An easy way to load HTML content into a section of the page.
-group: components
 toc: true
 source: Webstop
-menu:
-  main:
+menu: 
+  ajax:
+    parent: Ajax
 ---
 
   

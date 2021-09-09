@@ -152,7 +152,40 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
   background-color: #e5e5e5;
 }
 
+/** Examples and Highlights **/
 
+.bd-example-container {
+  min-width: 16rem;
+  max-width: 25rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bd-example-container-header {
+  height: 3rem;
+  margin-bottom: .5rem;
+  background-color: lighten($primary, 25%);
+  border-radius: .25rem;
+}
+
+.bd-example-container-sidebar {
+  float: right;
+  width: 4rem;
+  height: 8rem;
+  background-color: lighten($primary, 50%);
+  border-radius: .25rem;
+}
+
+.bd-example-container-body {
+  height: 8rem;
+  margin-right: 4.5rem;
+  background-color: lighten(purple, 25%);
+  border-radius: .25rem;
+}
+
+.bd-example-container-fluid {
+  max-width: none;
+}
 
   .example {
     font-family: "Montserrat", sans-serif;
@@ -182,6 +215,8 @@ pre {
     z-index: 1000;
     overflow-y: auto;
   }
+
+
   .table-of-contents {
     font-family: "Montserrat", sans-serif;
   }
@@ -430,7 +465,7 @@ select.grid-control-field::-ms-expand {
   display: block;
   position: absolute;
   width: 18rem;
-  height: 18rem;
+  height: 20rem;
   line-height: 1rem;
   margin: 1rem;
   z-index: 1;
@@ -498,11 +533,11 @@ select.grid-control-field::-ms-expand {
   display: block;
 }
 .grid-card-title {
-
   display: block;
   justify-content: center;
   align-items: center;
   border-radius: 2rem;
+  padding-top: 5px;
 }
 
 .grid-card-details {

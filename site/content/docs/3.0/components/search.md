@@ -6,7 +6,7 @@ group: components
 toc: true
 source: Webstop
 menu:
-  main:
+  orphan:
 ---
 
   
