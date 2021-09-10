@@ -9,53 +9,153 @@ menu:
     parent: Layouts
 ---
 
-{% include environment_based_variables.html %}
+> Prior to Core-Styles v3 administration pages were served in a separate framework called Admin-Styles. We soon realized 
+we wanted access to all the things in core-styles from admin pages, and that the thing we found most valuable from 
+Admin-Styles was the page layout features. Now the page layout features of Admin-Styles are included as part of Core-Styles.
 
-## Examples
+## Ruby On Rails Support
 
-The page we are on is the example.
+Most of the time we don't talk about any back-end technology in our front-end framework. With the admin layout 
+system we have built out a unique system to control page layout, so we are going to explain it here.
 
-### Basic Example
+### Admin Layout Template
 
-This example contains the minimum attributes need. The form contains the `data-ajax-form` attribute 
-which triggers the form to submit via ajax instead of a web page reload. The `action` attribute 
-specifies the URL to pull the content from, the content is expected to be in HTML format. 
+At the heart of the layout system is the `admin_v3` layout template. To use it place `layout 'admin_v3'` 
+near the top of your controller. This is typically done right after any actions are called, like the `before_action`. 
+This one template handles all admin page layouts.
 
-{{< example >}}
-<form data-ajax-form action="/ajax/alert_success">
-  <div class="form-group">
-    <label for="title-example" class="py-2">Title</label>
-    <input type="text" class="form-control p-2" name="title-example" id="title-example" placeholder="Title">
+### The `@page` Map
+
+In the application controller we define a map called `@page`. The `@page` variable contains boolean settings which control the 
+page layout. These settings are explained in the chart below.
+
+The `@page` hash is set at the top of a view file to control how that view will be presented in the admin layout template.
+
+<!-- DEFAULTS
+      sidecar: false,
+      sidebar: false,
+      header: true,
+      footer: true,
+      flush: false,
+      tables: false,
+      data_tables: false
+-->
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Key Name</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="text-nowrap">sidecar</code></td>
+      <td><code class="text-nowrap">false</code></td>
+      <td>Controls display the sidecar left side navigation. <em>This feature isn't fully implemented yet.</em></td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">sidebar</code></td>
+      <td><code class="text-nowrap">false</code></td>
+      <td>
+        Controls display the sidebar right side navigation. Expects content to be placed into the <code>sidebar</code> 
+        yield. e.g. <code>content_for :sidebar, raw(render 'sidebar')</code>
+      </td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">header</code></td>
+      <td><code class="text-nowrap">true</code></td>
+      <td>Page header, which sits right below the header navbar. <em>This feature is deprecated.</em></td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">footer</code></td>
+      <td><code class="text-nowrap">true</code></td>
+      <td>
+        Controls display the footer. Expects content to be placed into the <code>footer</code> 
+        yield, and will typically contain breadcrumb navigation.
+      </td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">flush</code></td>
+      <td><code class="text-nowrap">false</code></td>
+      <td>Removes padding from the main content area. Usually used for tables to allow them to fill the content area.</td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">tables</code></td>
+      <td><code class="text-nowrap">false</code></td>
+      <td>Primes the system to expect the main content section to be filled with a scrollable table.</td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">data_tables</code></td>
+      <td><code class="text-nowrap">false</code></td>
+      <td>
+        Enables special tweaks to support the use of DataTables.js in the main content area. Especially makes 
+        scrolling work properly.
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+### Edit Page Example
+
+<img src="/assets/images/admin_layout/admin_layout_edit_tracker.png" class="img-fluid" alt="Edit Page">
+
+
+```html
+<%
+  @page[:header]  = false
+  @page[:sidebar] = true
+  
+  content_for :sidebar, raw(render 'sidebar')
+  content_for :footer, breadcrumbs(
+    [
+      {title: Tracker.model_name.human.pluralize.titleize, path: retailer_trackers_path(@retailer)},
+      {title: :edit, path: edit_retailer_tracker_path(@retailer, @tracker)}
+    ]
+  )
+%>
+<div class="card card-readable card-centered card-shadowed">
+<div class="card-body">
+  <h1 class="card-title">Editing Tracker</h1>
+    <%= render 'form', tracker: @tracker %>
   </div>
-  <button class="btn btn-primary mt-3" type="submit">
-    Save Title
-  </button>
-</form>
-
-{{< /example >}}
-
-### Example with All Options
-
-In the following example we enable all of the optional attributes, including `data-target` and 
-`data-power-bar`. By default the ajax will replace the form with the ajax content, in this example 
-we select a different target using the `data-target` attribute, it accepts standard jQuery selectors. 
-The `data-power-bar` attribute triggers a reload of the Shopping List Power Bar after the ajax content 
-is returned.
-
-{{< example >}}
-<form data-ajax-form action="/ajax/alert_error" data-target="#target-1" data-power-bar>
-  <div class="form-group">
-    <label for="title-example" class="py-2">Title</label>
-    <input type="text" class="form-control p-2" name="title-example" id="title-example" placeholder="Title">
-  </div>
-  <button class="btn btn-primary mt-3" type="submit">
-    Save Title
-  </button>
-</form>
-<div id="target-1" class="mt-4">
-  <div class="alert alert-success">Ajax Content goes here.</div>
 </div>
-{{< /example >}}
+```
+
+
+## Design Patterns
+
+The admin system is designed to accommodate the following common layout types.
+
+### Data Tables Index Page
+
+<img src="/assets/images/admin_layout/admin_layout_data_tables_index_page.png" class="img-fluid" alt="Index Page Using Data Tables">
+
+```ruby
+@page[:tables]  = true
+@page[:flush]   = true
+@page[:sidebar] = true
+```
+
+### New Resource Form Page
+
+<img src="/assets/images/admin_layout/admin_layout_new_from_page.png" class="img-fluid" alt="New Resource Form Page">
+
+```ruby
+@page[:header]  = false
+@page[:sidebar] = true
+```
+
+### Show Resource Page
+
+<img src="/assets/images/admin_layout/admin_layout_show_page.png" class="img-fluid" alt="Show Resource Page">
+
+```ruby
+@page[:header]  = false
+@page[:sidebar] = true
+```
 
 ## Attributes
 
