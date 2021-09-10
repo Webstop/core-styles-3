@@ -8,9 +8,6 @@ menu:
   layout:
     parent: Layouts
 ---
-
-{% include environment_based_variables.html %}
-
 ## Examples
 
 The page we are on is the example.

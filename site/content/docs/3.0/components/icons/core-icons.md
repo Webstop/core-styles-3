@@ -9,7 +9,4 @@ menu:
   icons:
     parent: Icons
 ---
-
-<h4>Core-Icons</h4>
-
 {{< icon-examples >}}

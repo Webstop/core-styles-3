@@ -11209,10 +11209,6 @@ th, td {
   border: 1px solid #dbdbdb;
 }
 
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
 /** Core Icons Grid**/
 .list-features {
   list-style: none;
