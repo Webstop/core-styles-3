@@ -1,24 +1,27 @@
-{{ define "title" }}
-  {{ .Title }} &ndash; {{ .Site.Title }}
-{{ end }}
+{{ define "title" }} 
+{{ .Title }} &ndash; {{ .Site.Title }} 
+{{ end }} 
+
 {{ define "main" }}
-  <article class="article">
-    <p class="article-dates">
-      <span class="article-created-at">{{ .Params.created_at }}</span>
-      {{ with .Params.updated_at }}
-        <span class="article-updated">
-          Edited on
-          <span class="article-updated-at">{{.}}</span>
-        </span>
-      {{ end }}
-    </p>
-    <h1 class="article-title">{{ .Title }}</h1>
-    <p class="article-by-line">by <span class="article-author">{{ .Params.author }}</span></p>
 
-    <p>Article Template</p>
+<article class="article">
+  <p class="article-dates">
+    <span class="article-created-at">{{ .Params.created_at }}</span>
+    {{ with .Params.updated_at }}
+    <span class="article-updated">
+      Edited on
+      <span class="article-updated-at">{{.}}</span>
+    </span>
+    {{ end }}
+  </p>
+  <h1 class="article-title">{{ .Title }}</h1>
+  <p class="article-by-line">
+    by <span class="article-author">{{ .Params.author }}</span>
+  </p>
 
-    {{ .Content }}
-  </article>
+  <p>Article Template</p>
+
+  {{ .Content }}
+</article>
 
 {{ end }}
-

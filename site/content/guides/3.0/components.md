@@ -8,7 +8,7 @@ source: Webstop
 menu: 
   guides:
     parent: Guides
-  
+    weight: 2
 ---
 
 The front-end component is a powerful design pattern for building 
