@@ -451,7 +451,118 @@
 we wanted access to all the things in core-styles from admin pages, and that the thing we found most valuable from
 Admin-Styles was the page layout features. Now the page layout features of Admin-Styles are included as part of Core-Styles.</p>
 </blockquote>
-<h2 id="ruby-on-rails-support">Ruby On Rails Support</h2>
+<h2 id="basic-example">Basic Example</h2>
+<table style="max-width: 250px;">
+  <tr>
+    <td style="background-color: #369; height: 15px;"></td>
+  </tr>
+  <tr>
+    <td style="background-color: #ccc; height: 120px;"></td>
+  </tr>
+  <tr>
+    <td style="background-color: #69c; height: 15px;"></td>
+  </tr>
+</table>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="ln"> 1</span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 2</span>  <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-header&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;banner&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 3</span>    Admin Header...
+<span class="ln"> 4</span>  <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+<span class="ln"> 5</span>  <span class="p">&lt;</span><span class="nt">main</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-page&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;main&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 6</span>    Admin Page Main Content...
+<span class="ln"> 7</span>  <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+<span class="ln"> 8</span>  <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-footer&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;contentinfo&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 9</span>    Admin Footer...
+<span class="ln">10</span>  <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="ln">11</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><h2 id="admin-with-sidebar-example">Admin with Sidebar Example</h2>
+<table style="max-width: 250px;"> 
+  <tr>
+    <td colspan="2" style="background-color: #369; height: 15px;"></td>
+  </tr>
+  <tr>
+    <td style="background-color: #ccc; height: 120px;"></td>
+    <td style="background-color: #eee; width: 60px;"></td>
+  </tr>
+  <tr>
+    <td colspan="2" style="background-color: #69c; height: 15px;"></td>
+  </tr>
+</table>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="ln"> 1</span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin admin-with-sidebar&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 2</span>  <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-header&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;banner&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 3</span>    Admin Header...
+<span class="ln"> 4</span>  <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+<span class="ln"> 5</span>  <span class="p">&lt;</span><span class="nt">main</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-page&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;main&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 6</span>    Admin Page Main Content...
+<span class="ln"> 7</span>  <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+<span class="ln"> 8</span>  <span class="p">&lt;</span><span class="nt">aside</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-sidebar&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 9</span>    Admin Sidebar...
+<span class="ln">10</span>  <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+<span class="ln">11</span>  <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-footer&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;contentinfo&#34;</span><span class="p">&gt;</span>
+<span class="ln">12</span>    Admin Footer...
+<span class="ln">13</span>  <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="ln">14</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><h2 id="admin-with-sidecar-example">Admin with Sidecar Example</h2>
+<table style="max-width: 250px;"> 
+  <tr>
+    <td colspan="2" style="background-color: #369; height: 15px;"></td>
+  </tr>
+  <tr>
+    <td style="background-color: #336; width: 15px;"></td>
+    <td style="background-color: #ccc; height: 120px;"></td>
+  </tr>
+  <tr>
+    <td colspan="2" style="background-color: #69c; height: 15px;"></td>
+  </tr>
+</table>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="ln"> 1</span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin admin-with-sidecar&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 2</span>  <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-header&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;banner&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 3</span>    Admin Header...
+<span class="ln"> 4</span>  <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+<span class="ln"> 5</span>  <span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-sidecar&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;navigation&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 6</span>      Admin Sidecar Navigation...
+<span class="ln"> 7</span>  <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+<span class="ln"> 8</span>  <span class="p">&lt;</span><span class="nt">main</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-page&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;main&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 9</span>    Admin Page Main Content...
+<span class="ln">10</span>  <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+<span class="ln">11</span>  <span class="p">&lt;</span><span class="nt">aside</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-sidebar&#34;</span><span class="p">&gt;</span>
+<span class="ln">12</span>    Admin Sidebar...
+<span class="ln">13</span>  <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+<span class="ln">14</span>  <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-footer&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;contentinfo&#34;</span><span class="p">&gt;</span>
+<span class="ln">15</span>    Admin Footer...
+<span class="ln">16</span>  <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="ln">17</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><h2 id="admin-with-sidecar-and-sidebar-example">Admin with Sidecar and Sidebar Example</h2>
+<table style="max-width: 250px;"> 
+  <tr>
+    <td colspan="3" style="background-color: #369; height: 15px;"></td>
+  </tr>
+  <tr>
+    <td style="background-color: #336; width: 15px;"></td>
+    <td style="background-color: #ccc; height: 120px;"></td>
+    <td style="background-color: #eee; width: 60px;"></td>
+  </tr>
+  <tr>
+    <td colspan="3" style="background-color: #69c; height: 15px;"></td>
+  </tr>
+</table>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="ln"> 1</span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin admin-with-sidecar admin-with-sidebar&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 2</span>  <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-header&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;banner&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 3</span>    Admin Header...
+<span class="ln"> 4</span>  <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+<span class="ln"> 5</span>  <span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-sidecar&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;navigation&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 6</span>      Admin Sidecar Navigation...
+<span class="ln"> 7</span>  <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+<span class="ln"> 8</span>  <span class="p">&lt;</span><span class="nt">main</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-page&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;main&#34;</span><span class="p">&gt;</span>
+<span class="ln"> 9</span>    Admin Page Main Content...
+<span class="ln">10</span>  <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+<span class="ln">11</span>  <span class="p">&lt;</span><span class="nt">aside</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-sidebar&#34;</span><span class="p">&gt;</span>
+<span class="ln">12</span>    Admin Sidebar...
+<span class="ln">13</span>  <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+<span class="ln">14</span>  <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-footer&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;contentinfo&#34;</span><span class="p">&gt;</span>
+<span class="ln">15</span>    Admin Footer...
+<span class="ln">16</span>  <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="ln">17</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><h2 id="ruby-on-rails-support">Ruby On Rails Support</h2>
 <p>Most of the time we don&rsquo;t talk about any back-end technology in our front-end framework. With the admin layout
 system we have built out a unique system to control page layout, so we are going to explain it here.</p>
 <h3 id="admin-layout-template">Admin Layout Template</h3>
@@ -608,6 +719,10 @@ page layout. These settings are explained in the chart below.</p>
           <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
          <div class="table-of-contents"><nav id="TableOfContents">
   <ul>
+    <li><a href="#basic-example">Basic Example</a></li>
+    <li><a href="#admin-with-sidebar-example">Admin with Sidebar Example</a></li>
+    <li><a href="#admin-with-sidecar-example">Admin with Sidecar Example</a></li>
+    <li><a href="#admin-with-sidecar-and-sidebar-example">Admin with Sidecar and Sidebar Example</a></li>
     <li><a href="#ruby-on-rails-support">Ruby On Rails Support</a>
       <ul>
         <li><a href="#admin-layout-template">Admin Layout Template</a></li>

@@ -13,6 +13,138 @@ menu:
 we wanted access to all the things in core-styles from admin pages, and that the thing we found most valuable from 
 Admin-Styles was the page layout features. Now the page layout features of Admin-Styles are included as part of Core-Styles.
 
+## Basic Example
+
+<table style="max-width: 250px;">
+  <tr>
+    <td style="background-color: #369; height: 15px;"></td>
+  </tr>
+  <tr>
+    <td style="background-color: #ccc; height: 120px;"></td>
+  </tr>
+  <tr>
+    <td style="background-color: #69c; height: 15px;"></td>
+  </tr>
+</table>
+
+```html
+<div class="admin">
+  <header class="admin-header" role="banner">
+    Admin Header...
+  </header>
+  <main class="admin-page" role="main">
+    Admin Page Main Content...
+  </main>
+  <footer class="admin-footer" role="contentinfo">
+    Admin Footer...
+  </footer>
+</div>
+```
+
+## Admin with Sidebar Example
+
+<table style="max-width: 250px;"> 
+  <tr>
+    <td colspan="2" style="background-color: #369; height: 15px;"></td>
+  </tr>
+  <tr>
+    <td style="background-color: #ccc; height: 120px;"></td>
+    <td style="background-color: #eee; width: 60px;"></td>
+  </tr>
+  <tr>
+    <td colspan="2" style="background-color: #69c; height: 15px;"></td>
+  </tr>
+</table>
+
+```html
+<div class="admin admin-with-sidebar">
+  <header class="admin-header" role="banner">
+    Admin Header...
+  </header>
+  <main class="admin-page" role="main">
+    Admin Page Main Content...
+  </main>
+  <aside class="admin-sidebar">
+    Admin Sidebar...
+  </aside>
+  <footer class="admin-footer" role="contentinfo">
+    Admin Footer...
+  </footer>
+</div>
+```
+
+## Admin with Sidecar Example
+
+<table style="max-width: 250px;"> 
+  <tr>
+    <td colspan="2" style="background-color: #369; height: 15px;"></td>
+  </tr>
+  <tr>
+    <td style="background-color: #336; width: 15px;"></td>
+    <td style="background-color: #ccc; height: 120px;"></td>
+  </tr>
+  <tr>
+    <td colspan="2" style="background-color: #69c; height: 15px;"></td>
+  </tr>
+</table>
+
+```html
+<div class="admin admin-with-sidecar">
+  <header class="admin-header" role="banner">
+    Admin Header...
+  </header>
+  <nav class="admin-sidecar" role="navigation">
+      Admin Sidecar Navigation...
+  </nav>
+  <main class="admin-page" role="main">
+    Admin Page Main Content...
+  </main>
+  <aside class="admin-sidebar">
+    Admin Sidebar...
+  </aside>
+  <footer class="admin-footer" role="contentinfo">
+    Admin Footer...
+  </footer>
+</div>
+```
+
+## Admin with Sidecar and Sidebar Example
+
+<table style="max-width: 250px;"> 
+  <tr>
+    <td colspan="3" style="background-color: #369; height: 15px;"></td>
+  </tr>
+  <tr>
+    <td style="background-color: #336; width: 15px;"></td>
+    <td style="background-color: #ccc; height: 120px;"></td>
+    <td style="background-color: #eee; width: 60px;"></td>
+  </tr>
+  <tr>
+    <td colspan="3" style="background-color: #69c; height: 15px;"></td>
+  </tr>
+</table>
+
+```html
+<div class="admin admin-with-sidecar admin-with-sidebar">
+  <header class="admin-header" role="banner">
+    Admin Header...
+  </header>
+  <nav class="admin-sidecar" role="navigation">
+      Admin Sidecar Navigation...
+  </nav>
+  <main class="admin-page" role="main">
+    Admin Page Main Content...
+  </main>
+  <aside class="admin-sidebar">
+    Admin Sidebar...
+  </aside>
+  <footer class="admin-footer" role="contentinfo">
+    Admin Footer...
+  </footer>
+</div>
+```
+
+
 ## Ruby On Rails Support
 
 Most of the time we don't talk about any back-end technology in our front-end framework. With the admin layout 
