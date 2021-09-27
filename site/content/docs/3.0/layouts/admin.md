@@ -13,19 +13,31 @@ menu:
 we wanted access to all the things in core-styles from admin pages, and that the thing we found most valuable from 
 Admin-Styles was the page layout features. Now the page layout features of Admin-Styles are included as part of Core-Styles.
 
-## Basic Example
+## Base Admin Example
 
-<table style="max-width: 250px;">
-  <tr>
-    <td style="background-color: #369; height: 15px;"></td>
-  </tr>
-  <tr>
-    <td style="background-color: #ccc; height: 120px;"></td>
-  </tr>
-  <tr>
-    <td style="background-color: #69c; height: 15px;"></td>
-  </tr>
-</table>
+This example contains a header, footer, and main content sections.
+
+<div class="row">
+  <div class="col-auto">
+    <table style="width: 250px;"> 
+      <tr>
+        <td style="background-color: #369; height: 15px;"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ccc; height: 120px;"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ddd; height: 5px;"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="col">
+    <a href="/docs/3.0/layouts/examples/admin_base" class="btn btn-outline-primary">
+      View Base Admin Example Page <i class="fas fa-angle-right"></i>
+    </a>
+  </div>
+</div>
+
 
 ```html
 <div class="admin">
@@ -41,20 +53,157 @@ Admin-Styles was the page layout features. Now the page layout features of Admin
 </div>
 ```
 
-## Admin with Sidebar Example
+## Sidecar Example
 
-<table style="max-width: 250px;"> 
-  <tr>
-    <td colspan="2" style="background-color: #369; height: 15px;"></td>
-  </tr>
-  <tr>
-    <td style="background-color: #ccc; height: 120px;"></td>
-    <td style="background-color: #eee; width: 60px;"></td>
-  </tr>
-  <tr>
-    <td colspan="2" style="background-color: #69c; height: 15px;"></td>
-  </tr>
-</table>
+<div class="row">
+  <div class="col-auto">
+    <table style="width: 250px;"> 
+      <tr>
+        <td colspan="2" style="background-color: #369; height: 15px;"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #336; width: 15px;" rowspan="2"></td>
+        <td style="background-color: #ccc; height: 120px;"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ddd; height: 5px;"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="col">
+    <a href="/docs/3.0/layouts/examples/admin_with_sidecar" class="btn btn-outline-primary">
+      View Sidecar Example Page <i class="fas fa-angle-right"></i>
+    </a>
+  </div>
+</div>
+
+```html
+<div class="admin admin-with-sidecar">
+  <header class="admin-header" role="banner">
+    Admin Header...
+  </header>
+  <nav class="admin-sidecar" role="navigation">
+      Admin Sidecar Navigation...
+  </nav>
+  <main class="admin-page" role="main">
+    Admin Page Main Content...
+  </main>
+  <footer class="admin-footer" role="contentinfo">
+    Admin Footer...
+  </footer>
+</div>
+```
+
+## Sidenav Example
+
+<div class="row">
+  <div class="col-auto">
+    <table style="width: 250px;"> 
+      <tr>
+        <td colspan="2" style="background-color: #369; height: 15px;"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #eee; width: 60px;" rowspan="2"></td>
+        <td style="background-color: #ccc; height: 120px;"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ddd; height: 5px;"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="col">
+    <a href="/docs/3.0/layouts/examples/admin_with_sidenav" class="btn btn-outline-primary">
+      View Sidenav Example Page <i class="fas fa-angle-right"></i>
+    </a>
+  </div>
+</div>
+
+```html
+<div class="admin admin-with-sidenav">
+  <header class="admin-header" role="banner">
+    Admin Header...
+  </header>
+  <nav class="admin-sidenav" role="navigation">
+      Admin Sidenav Navigation...
+  </nav>
+  <main class="admin-page" role="main">
+    Admin Page Main Content...
+  </main>
+  <footer class="admin-footer" role="contentinfo">
+    Admin Footer...
+  </footer>
+</div>
+```
+
+## Sidecar & Sidenav Example
+
+<div class="row">
+  <div class="col-auto">
+    <table style="width: 250px;"> 
+      <tr>
+        <td colspan="3" style="background-color: #369; height: 15px;"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #336; width: 15px;" rowspan="2"></td>
+        <td style="background-color: #eee; width: 60px;" rowspan="2"></td>
+        <td style="background-color: #ccc; height: 120px;"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ddd; height: 5px;"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="col">
+    <a href="/docs/3.0/layouts/examples/admin_with_sidecar_and_sidenav" class="btn btn-outline-primary">
+      View Sidecar &amp; Sidenav Example Page <i class="fas fa-angle-right"></i>
+    </a>
+  </div>
+</div>
+
+```html
+<div class="admin admin-with-sidenav">
+  <header class="admin-header" role="banner">
+    Admin Header...
+  </header>
+  <nav class="admin-sidecar" role="navigation">
+      Admin Sidecar Navigation...
+  </nav>
+  <nav class="admin-sidenav" role="navigation">
+      Admin Sidenav Navigation...
+  </nav>
+  <main class="admin-page" role="main">
+    Admin Page Main Content...
+  </main>
+  <footer class="admin-footer" role="contentinfo">
+    Admin Footer...
+  </footer>
+</div>
+```
+
+## Sidebar Example
+
+
+<div class="row">
+  <div class="col-auto">
+    <table style="width: 250px;"> 
+      <tr>
+        <td colspan="2" style="background-color: #369; height: 15px;"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ccc; height: 120px;"></td>
+        <td style="background-color: #eee; width: 60px;" rowspan="2"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ddd; height: 5px;"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="col">
+    <a href="/docs/3.0/layouts/examples/admin_with_sidebar" class="btn btn-outline-primary">
+      View Sidebar Example Page <i class="fas fa-angle-right"></i>
+    </a>
+  </div>
+</div>
 
 ```html
 <div class="admin admin-with-sidebar">
@@ -73,28 +222,42 @@ Admin-Styles was the page layout features. Now the page layout features of Admin
 </div>
 ```
 
-## Admin with Sidecar Example
 
-<table style="max-width: 250px;"> 
-  <tr>
-    <td colspan="2" style="background-color: #369; height: 15px;"></td>
-  </tr>
-  <tr>
-    <td style="background-color: #336; width: 15px;"></td>
-    <td style="background-color: #ccc; height: 120px;"></td>
-  </tr>
-  <tr>
-    <td colspan="2" style="background-color: #69c; height: 15px;"></td>
-  </tr>
-</table>
+## Sidecar and Sidebar Example
+
+<div class="row">
+  <div class="col-auto">
+    <table style="width: 250px;"> 
+      <tr>
+        <td colspan="3" style="background-color: #369; height: 15px;"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #336; width: 15px;" rowspan="2"></td>
+        <td style="background-color: #ccc; height: 120px;"></td>
+        <td style="background-color: #eee; width: 60px;" rowspan="2"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ddd; height: 5px;"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="col">
+    <a href="/docs/3.0/layouts/examples/admin_with_sidecar_and_sidebar" class="btn btn-outline-primary">
+      View Sidecar & Sidebar Example Page <i class="fas fa-angle-right"></i>
+    </a>
+  </div>
+</div>
 
 ```html
-<div class="admin admin-with-sidecar">
+<div class="admin admin-with-sidecar admin-with-sidebar">
   <header class="admin-header" role="banner">
     Admin Header...
   </header>
   <nav class="admin-sidecar" role="navigation">
       Admin Sidecar Navigation...
+  </nav>
+  <nav class="admin-sidenav" role="navigation">
+      Admin Sidenav Navigation...
   </nav>
   <main class="admin-page" role="main">
     Admin Page Main Content...
@@ -108,21 +271,31 @@ Admin-Styles was the page layout features. Now the page layout features of Admin
 </div>
 ```
 
-## Admin with Sidecar and Sidebar Example
+## Sidecar, Sidenav, and Sidebar Example
 
-<table style="max-width: 250px;"> 
-  <tr>
-    <td colspan="3" style="background-color: #369; height: 15px;"></td>
-  </tr>
-  <tr>
-    <td style="background-color: #336; width: 15px;"></td>
-    <td style="background-color: #ccc; height: 120px;"></td>
-    <td style="background-color: #eee; width: 60px;"></td>
-  </tr>
-  <tr>
-    <td colspan="3" style="background-color: #69c; height: 15px;"></td>
-  </tr>
-</table>
+<div class="row">
+  <div class="col-auto">
+    <table style="width: 250px;"> 
+      <tr>
+        <td colspan="4" style="background-color: #369; height: 15px;"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #336; width: 15px;" rowspan="2"></td>
+        <td style="background-color: #eee; width: 60px;" rowspan="2"></td>
+        <td style="background-color: #ccc; height: 120px;"></td>
+        <td style="background-color: #eee; width: 60px;" rowspan="2"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ddd; height: 5px;"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="col">
+    <a href="/docs/3.0/layouts/examples/admin_with_sidecar_and_sidenav_and_sidebar" class="btn btn-outline-primary">
+      View Sidecar, Sidenav & Sidebar Example Page <i class="fas fa-angle-right"></i>
+    </a>
+  </div>
+</div>
 
 ```html
 <div class="admin admin-with-sidecar admin-with-sidebar">

@@ -1,0 +1,20 @@
+
+{{ define "main" }}
+<div class="admin admin-with-sidebar">
+  <header class="admin-header" role="banner">
+    {{ partial "docs-navbar" . }}
+  </header>
+  <main class="admin-page" role="main">
+    {{ .Content }}
+  </main>
+  <aside class="admin-sidebar">
+    {{ block "sidebar" . }}
+    {{ end }}
+  </aside>
+  <footer class="admin-footer" role="contentinfo">
+    {{ block "footer" . }}
+    {{ end }}
+  </footer>
+</div>
+{{ end }}
+ 
