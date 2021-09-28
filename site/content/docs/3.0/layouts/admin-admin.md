@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: docs-admin
 title: Admin Layout
 description: Website layout for administration pages.
 toc: true
@@ -11,9 +11,9 @@ menu:
 
 > Prior to Core-Styles v3 administration pages were served in a separate framework called Admin-Styles. We soon realized 
 we wanted access to all the things in core-styles from admin pages, and that the thing we found most valuable from 
-Admin-Styles was the page layout features. Now the page layout features of Admin-Styles are included as part of Core-Styles.
+Admin-Styles was the page layout features. Now the page layout features of Admin-Styles are included as part of Core-Styles. 
 
-[Alternate Layout](/docs/3.0/layouts/admin-admin/)
+[Alternate Layout](/docs/3.0/layouts/admin/)
 
 ## Base Admin Example
 

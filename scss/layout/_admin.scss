@@ -72,7 +72,7 @@
   }
 
   // Layout with Sidecar, Sidenav, & Sidebar
-  &.admin-with-sidenav.admin-with-sidebar {
+  &.admin-with-sidecar.admin-with-sidenav.admin-with-sidebar {
     grid-template-columns: $admin-sidecar-width $admin-sidenav-width auto $admin-sidebar-width;
     grid-template-areas:
       "admin-header  admin-header  admin-header admin-header"
