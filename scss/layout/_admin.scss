@@ -1,6 +1,6 @@
 .admin {
   grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-rows: $admin-header-height auto $admin-footer-height;
   display: grid;
   grid-template-areas:
     "admin-header"
@@ -9,58 +9,115 @@
   height: 100vh;
   overflow-x: hidden;
 
+  .admin-header  { grid-area: admin-header;  overflow: visible; }
+  .admin-sidecar { grid-area: admin-sidecar; overflow-x: auto;  }
+  .admin-sidenav { grid-area: admin-sidenav; overflow-x: auto;  }
+  .admin-page    { grid-area: admin-page;    overflow-x: auto;  }
+  .admin-sidebar { grid-area: admin-sidebar; overflow-x: auto;  }
+  .admin-footer  { grid-area: admin-footer;  overflow: hidden;  }
+
+  // Layout with Sidecar
   &.admin-with-sidecar {
-    grid-template-columns: 90px auto;
+    grid-template-columns: $admin-sidecar-width auto;
     grid-template-areas:
-      "admin-header admin-header"
-      "admin-sidecar admin-page";
-    .admin-sidecar {
-      grid-area: admin-sidecar;
-      overflow-x: auto;
-    }
+      "admin-header  admin-header"
+      "admin-sidecar admin-page"
+      "admin-sidecar admin-footer";
   }
-
+  
+  // Layout with Sidenav
+  &.admin-with-sidenav {
+    grid-template-columns: $admin-sidenav-width auto;
+    grid-template-areas:
+      "admin-header  admin-header"
+      "admin-sidenav admin-page"
+      "admin-sidenav admin-footer";
+  }
+  
+  // Layout with Sidebar
   &.admin-with-sidebar {
-    grid-template-columns: auto 320px;
+    grid-template-columns: auto $admin-sidebar-width;
     grid-template-areas:
       "admin-header admin-header"
-      "admin-page admin-sidebar";
-    .admin-sidebar {
-      grid-area: admin-sidebar;
-      overflow-x: auto;
-    }
+      "admin-page   admin-sidebar"
+      "admin-footer admin-sidebar";
   }
 
-  &.admin-with-sidecar.admin-with-sidebar {
-    grid-template-columns: 90px auto 320px;
+  
+  // Layout with Sidecar & Sidenav
+  &.admin-with-sidecar.admin-with-sidenav {
+    grid-template-columns: $admin-sidecar-width $admin-sidenav-width auto;
     grid-template-areas:
-      "admin-header admin-header admin-header"
-      "admin-sidecar admin-page admin-sidebar";
-    .admin-sidecar {
-      grid-area: admin-sidecar;
-      overflow-x: auto;
-    }
-    .admin-sidebar {
-      grid-area: admin-sidebar;
-      overflow-x: auto;
-    }
+      "admin-header  admin-header admin-header"
+      "admin-sidecar admin-sidenav admin-page"
+      "admin-sidecar admin-sidenav admin-footer";
+  }
+  
+  // Layout with Sidecar & Sidebar
+  &.admin-with-sidecar.admin-with-sidebar {
+    grid-template-columns: $admin-sidecar-width auto $admin-sidebar-width;
+    grid-template-areas:
+      "admin-header  admin-header admin-header"
+      "admin-sidecar admin-page   admin-sidebar"
+      "admin-sidecar admin-footer admin-sidebar";
+  }
+  
+  // Layout with Sidenav & Sidebar
+  &.admin-with-sidenav.admin-with-sidebar {
+    grid-template-columns: $admin-sidenav-width auto $admin-sidebar-width;
+    grid-template-areas:
+      "admin-header  admin-header admin-header"
+      "admin-sidenav admin-page   admin-sidebar"
+      "admin-sidenav admin-footer admin-sidebar";
   }
 
-  .admin-header {
-    grid-area: admin-header;
+  // Layout with Sidecar, Sidenav, & Sidebar
+  &.admin-with-sidecar.admin-with-sidenav.admin-with-sidebar {
+    grid-template-columns: $admin-sidecar-width $admin-sidenav-width auto $admin-sidebar-width;
+    grid-template-areas:
+      "admin-header  admin-header  admin-header admin-header"
+      "admin-sidecar admin-sidenav admin-page   admin-sidebar"
+      "admin-sidecar admin-sidenav admin-footer admin-sidebar";
   }
 
-  .admin-header,
-  .admin-header .navbar {
-    height: 60px;
-    min-height: 60px;
-    max-height: 60px;
+  // Padding
+  .admin-sidenav, .admin-page, .admin-sidebar {
+    padding: $admin-spacer-y $admin-spacer-x;
+  }
+  .admin-sidecar {
+    padding: $admin-spacer-y 0;
+  }
+  .admin-footer {
+    padding: $admin-spacer-y/2 0 0 $admin-spacer-x ;
   }
 
-  .admin-page {
-    grid-area: admin-page;
+  // Colors
+  .admin-sidecar {
+    border-right: $admin-sidecar-border-size solid $admin-sidecar-border-color;
+    background-color: $admin-sidecar-bg-color;
+    color: $admin-sidecar-color;
   }
 
+  .admin-sidecar-item {
+    color: $admin-sidecar-color;
+  }
+
+  .admin-sidenav {
+    border-right: $admin-sidenav-border-size solid $admin-sidenav-border-color;
+    background-color: $admin-sidenav-bg-color;
+  }
+
+  .admin-sidebar {
+    border-left: $admin-sidebar-border-size solid $admin-sidebar-border-color;
+    background-color: $admin-sidebar-bg-color;
+  }
+
+  .admin-footer {
+    border-top: $admin-footer-border-size solid $admin-footer-border-color;
+    background-color: $admin-footer-bg-color;
+  }
+
+  // Special Page Views
   .admin-table-view,
   .admin-list-view {
     padding: 0;
@@ -80,10 +137,6 @@
     overflow: visible;
   }
 
-  .admin-footer {
-    grid-area: admin-footer;
-    border-top: 1px solid #ccc;
-    background-color: #e9ecef;
-  }
+  
 
 }

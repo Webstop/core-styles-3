@@ -8,10 +8,6 @@
   background-color: rgb(101, 179, 243);
 }
 
-.bg-title-head {
-  background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
-}
-
 .inner-shadow {
   -moz-box-shadow:    inset 0 -7px 7px -7px #000000;
   -webkit-box-shadow: inset 0 -7px 7px -7px #000000;
@@ -72,6 +68,14 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
 
   .icon-code-snip {
     font-size: 10px;
+  }
+
+  .bd-clipboard {
+    float: right;
+    max-width: 36px;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
   .btn-clipboard {

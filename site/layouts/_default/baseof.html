@@ -14,14 +14,10 @@
   </head>
   <body>
     
-    {{ partial "docs-navbar" . }} 
     {{ block "main" . }}
     <!-- The part of the page that begins to differ between templates -->
     {{ end }}
 
-    {{ block "footer" . }}
-    <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
-    {{ end }}
 
     <script src="https://kit.fontawesome.com/42f15b97e3.js" crossorigin="anonymous"></script>
     <script

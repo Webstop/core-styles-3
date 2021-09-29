@@ -2,6 +2,13 @@
 
 // Note: we want to use default fonts in the actual code examples and documentation.
 
+blockquote {
+  margin: 1rem 0;
+  border-left: 4px solid #ccc;
+  padding: 0 0.5rem 0 1rem;
+  background: #eee;
+}
+
 .wsg-content .wsg-content {
   h1, h2, h3, h4, h5, h6 {
     font-family: $wsg-sans-serif;
@@ -31,7 +38,7 @@ body, .serif {
 }
 
 
-.sans-serif, .btn, .nav-link, .dropdown-item {
+.sans-serif, .btn, .nav-link, .dropdown-item, .admin-sidenav {
   font-family: $wsg-sans-serif;
 }
 
@@ -78,5 +85,6 @@ p {
     font-family: $font-family-monospace;
   }
 }
+
 
 

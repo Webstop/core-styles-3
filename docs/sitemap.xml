@@ -19,7 +19,39 @@
   </url>
   
   <url>
+    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/admin_base/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/admin_with_sidebar/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/admin_with_sidecar/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/admin_with_sidecar_and_sidebar/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/admin_with_sidecar_and_sidenav/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/admin_with_sidecar_and_sidenav_and_sidebar/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/admin_with_sidenav/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/404.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/layouts/admin-admin/</loc>
   </url>
   
   <url>
@@ -48,10 +80,6 @@
   
   <url>
     <loc>https://guides.webstop.com/articles/</loc>
-  </url>
-  
-  <url>
-    <loc>https://guides.webstop.com/docs/</loc>
   </url>
   
   <url>
@@ -103,6 +131,10 @@
   </url>
   
   <url>
+    <loc>https://guides.webstop.com/docs/3.0/layouts/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/guides/3.0/development-approach/</loc>
   </url>
   
@@ -116,6 +148,10 @@
   
   <url>
     <loc>https://guides.webstop.com/docs/3.0/components/grocery/newsprints/newsprint-compartment/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/</loc>
   </url>
   
   <url>
@@ -144,6 +180,10 @@
   
   <url>
     <loc>https://guides.webstop.com/docs/3.0/getting-started/introduction/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/</loc>
   </url>
   
   <url>
