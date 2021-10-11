@@ -2,6 +2,7 @@ languageCode:           "en"
 title:                  "Core-Styles 3"
 baseURL:                "https://guides.webstop.com"
 enableInlineShortcodes: true
+sectionPagesMenu: "main"
 
 markup:
   goldmark:

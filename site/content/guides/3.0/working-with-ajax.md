@@ -5,6 +5,9 @@ description: Guide for working with components that utilize AJAX .
 group: guide
 toc: false
 source: Webstop
+menu: 
+  guides:
+    parent: Guides
 ---
 
 When working with AJAX you will sometimes need a response from the server that changes based on the data you submit 
@@ -36,7 +39,7 @@ make requests to either one at localhost simply by changing the port. We run our
 and our Sinatra app on port `4567`.
 
 - Jekyll server: [`{{ jekyll_host }}`]({{ jekyll_host }})
-- Sinatra server: [`{{ sinatra_host }}/alert_success`]({{ sinatra_host }}/alert_success)
+- Sinatra server: [`/ajax/alert_success`](/ajax/alert_success)
 
 
 ### File Structure
@@ -68,7 +71,7 @@ get '/foo' do
 end
 ```
 
-This will respond to any `get` request coming into `{{ sinatra_host }}/foo`, and will return the 
+This will respond to any `get` request coming into `/ajax/foo`, and will return the 
 `sinatra/views/foo.erb` file as specified by the `erb` tag on the last line. And it's that simple. The contents of the 
 view file don't need to do any anything fancy, just represent what a result would look like. 
 

@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>
+  <head>
+    <meta charset="utf-8" />
+    <title> Core-Styles 3 </title>
     
-     Core-Styles 3
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/docs.css" />
+  </head>
+  <body>
     
-  </title>
+    
 
-
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/docs.css">
-</head>
-<body>
-
-<nav class="navbar navbar-expand-lg sticky-top navbar-dark wsg-header shadow">
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark wsg-header shadow">
   <div class="container-fluid">
-    <a class="navbar-brand ms-2" href="/"><img src="https://www.webstop.com/assets/Webstop-logos/webstop-twocolor-landscape-dark-bg-72dpi-e6425f6d6e9ec4cc90742a883b2997bb28191590bfd8762222ed4723865dcaef.png" width="165px"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand ms-2" href="/"><img
+        src="https://www.webstop.com/assets/Webstop-logos/webstop-twocolor-landscape-dark-bg-72dpi-e6425f6d6e9ec4cc90742a883b2997bb28191590bfd8762222ed4723865dcaef.png" style="max-width: 127px; /* 889/7 = 127 */"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -27,27 +30,31 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/docs/">Docs</a>
+          <a class="nav-link" href="/docs/3.0/components/ajax/ajax-form/">Docs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">Dev</a>
+          <a class="nav-link" href="/guides/3.0/development-approach/">Dev</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/guides/">Guides</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
             More
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li>
-              <a class="dropdown-item" href="https://github.com/Webstop/core-styles-3#core-styles-3" target="_blank">GitHub</a>
+              <a class="dropdown-item" href="https://github.com/Webstop/core-styles-3#core-styles-3"
+                target="_blank">GitHub</a>
             </li>
             <li>
-              <a class="dropdown-item" href="https://github.com/Webstop/webstop-wiki#webstop-app-builders-wiki" target="_blank">Wiki</a>
+              <a class="dropdown-item" href="https://github.com/Webstop/webstop-wiki#webstop-app-builders-wiki"
+                target="_blank">Wiki</a>
             </li>
             <li>
-              <a class="dropdown-item" href="https://github.com/Webstop/core-specs#webstop-core-specifications" target="_blank">Specs</a>
+              <a class="dropdown-item" href="https://github.com/Webstop/core-specs#webstop-core-specifications"
+                target="_blank">Specs</a>
             </li>
           </ul>
         </li>
@@ -55,90 +62,382 @@
     </div>
   </div>
 </nav>
+ 
 
-
-
-
-<section class="mt-0 mb-0 pb-0 pt-0">
-  
-    <div class="   pt-3 pb-3   d-flex  justify-content-center align-items-center bg-title-head inner-shadow" style="">
-      <div class="container ">
-        <div class="row d-flex justify-content-center ">
-          <div class="col-sm-12 col-md-7 p-0 p-md-2 ">
-            <h1
-              class="bg-light shadow text-center p-md-2 mb-3 p-1 mb-md-3 page-title ">
-              Working with AJAX</h1>
-            <p class="text-center text-light lead">Guide for working with components that utilize AJAX .</p>
-           
+  <section class="mt-0 mb-0 pb-0 pt-0">
+    
+      <div class="pt-3 pb-3 d-flex justify-content-center align-items-center bg-title-head inner-shadow" style="">
+        <div class="container ">
+          <div class="row d-flex justify-content-center ">
+            <div class="col-sm-12 col-md-7 p-0 p-md-2 ">
+              <h1
+                class="bg-light shadow text-center p-md-2 mb-3 p-1 mb-md-3 page-title ">
+                Working with AJAX</h1>
+              <p class="text-center text-light lead">Guide for working with components that utilize AJAX .</p>
+             
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  
-</section>
+    
+  </section>
 
-<div class="container-fluid bd-layout">
- 
-  <div class="row">
-  <div class="col-md-3 col-lg-2 d-md-block wsg-sidebar collapse ">
-    <nav id="sidebarMenu" >
-  <ul class="list-unstyled">
-    <li class="my-2">
-      <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Contents </button>
-      <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
-        <li><a class="d-inline-flex align-items-center rounded" href="#typography">Typography</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#images">Images</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#tables">Tables</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#figures">Figures</a></li>
-      </ul>
-    </li>
-    <li class="my-2">
-      <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#forms-collapse" aria-controls="forms-collapse">Forms</button>
-      <ul class="list-unstyled ps-3 collapse" id="forms-collapse">
-        <li><a class="d-inline-flex align-items-center rounded" href="#overview">Overview</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#disabled-forms">Disabled forms</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#sizing">Sizing</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#input-group">Input group</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#floating-labels">Floating labels</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#validation">Validation</a></li>
-      </ul>
-    </li>
-    <li class="my-2">
-      <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#components-collapse" aria-controls="components-collapse">Components</button>
-      <ul class="list-unstyled ps-3 collapse" id="components-collapse">
-        <li><a class="d-inline-flex align-items-center rounded" href="#accordion">Accordion</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#alerts">Alerts</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#badge">Badge</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#breadcrumb">Breadcrumb</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#buttons">Buttons</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#button-group">Button group</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#card">Card</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#carousel">Carousel</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#dropdowns">Dropdowns</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#list-group">List group</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#modal">Modal</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#navs">Navs</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#navbar">Navbar</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#pagination">Pagination</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#popovers">Popovers</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#progress">Progress</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#scrollspy">Scrollspy</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#spinners">Spinners</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#toasts">Toasts</a></li>
-        <li><a class="d-inline-flex align-items-center rounded" href="#tooltips">Tooltips</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-    </div>
+  <div class="container-fluid bd-layout">
+   
+    <div class="row">
+      <div class="col-md-3 col-lg-2 d-md-block wsg-sidebar collapse left-nav">
+        <aside>
+  <nav class="collapse show flex" id="docs-nav" aria-label="Docs navigation">
+    <ul class="list-unstyled mb-0 py-3 pt-md-1">
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" type="button" data-bs-toggle="collapse"
+          data-bs-target="#getstart-menu-collapse" aria-expanded="false" aria-controls="getstart-menu-collapse">
+          <strong> Getting Started</strong>
+        </button>
 
-  <div class="col-md-8 col-xl-8 py-md-3 pl-md-5 bd-main">
-    <div class="bd-content ps-lg-4">
+        <div
+          class="collapse "
+          id="getstart-menu-collapse">
+
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/getting-started/conventions/" class="d-inline-flex rounded">Conventions</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
       
 
-      <p>Docs Template</p>
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#guides-menu-collapse"
+          aria-expanded="false">
+          <strong> Guides</strong>
+        </button>
 
-      <p>When working with AJAX you will sometimes need a response from the server that changes based on the data you submit
+        <div
+          class="collapse  show "
+          id="guides-menu-collapse">
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/guides/3.0/overview/" class="d-inline-flex rounded">Guide Overview</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/guides/3.0/components/" class="d-inline-flex rounded">Front-End Components</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/guides/3.0/development-approach/" class="d-inline-flex rounded">Development Approach</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/guides/3.0/development-process/" class="d-inline-flex rounded">Development Process</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4  left-nav-active ">
+              <a href="/guides/3.0/working-with-ajax/" class="d-inline-flex rounded">Working with AJAX</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
+
+
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#layout-menu-collapse"
+          aria-expanded="false">
+          <strong> Layouts</strong>
+        </button>
+
+        <div
+          class="collapse "
+          id="layout-menu-collapse">
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/layouts/admin-admin/" class="d-inline-flex rounded">Admin Layout</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/layouts/site/" class="d-inline-flex rounded">Site Structure</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
+
+
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#ajax-menu-collapse"
+          aria-expanded="false">
+          <strong> Ajax</strong>
+        </button>
+
+        <div
+          class="collapse "
+          id="ajax-menu-collapse">
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/ajax/ajax-form/" class="d-inline-flex rounded">Ajax Form</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/ajax/ajax-load/" class="d-inline-flex rounded">Ajax Load</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/ajax/ajax-modal/" class="d-inline-flex rounded">Ajax Modal</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
+
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#forms-menu-collapse"
+          aria-expanded="false">
+          <strong> Forms</strong>
+        </button>
+
+        <div
+          class="collapse "
+          id="forms-menu-collapse">
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/forms/checkbox-selector/" class="d-inline-flex rounded">Checkbox Selector</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/forms/form-toggles/" class="d-inline-flex rounded">Form Toggles</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
+
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#icons-menu-collapse"
+          aria-expanded="false">
+          <strong> Icons</strong>
+        </button>
+
+        <div
+          class="collapse "
+          id="icons-menu-collapse">
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/icons/core-icons/" class="d-inline-flex rounded">Core Icons</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
+
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#tagging-menu-collapse"
+          aria-expanded="false">
+          <strong> Tagging</strong>
+        </button>
+
+        <div
+          class="collapse "
+          id="tagging-menu-collapse">
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/tagging/tag-search/" class="d-inline-flex rounded">Tag Search</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/tagging/tags/" class="d-inline-flex rounded">Tags</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
+
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#analytics-menu-collapse"
+          aria-expanded="false">
+          <strong> Analytics</strong>
+        </button>
+
+        <div
+          class="collapse "
+          id="analytics-menu-collapse">
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/grocery/analytics/tracking/" class="d-inline-flex rounded">Aye, Analytics Tracking</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
+
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#utilities-menu-collapse"
+          aria-expanded="false">
+          <strong> Utilities</strong>
+        </button>
+
+        <div
+          class="collapse "
+          id="utilities-menu-collapse">
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/utilities/max-width/" class="d-inline-flex rounded">Max Width</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
+
+      
+      
+      <li
+        class="py-2 ps-4 ">
+        <a href="/docs/3.0/components/search/" class="d-inline-flex rounded">Live Search</a>
+      </li>
+      
+      <li
+        class="py-2 ps-4 ">
+        <a href="/docs/3.0/components/toolbar/" class="d-inline-flex rounded">Toolbar</a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside> 
+        </div>
+
+      <div class="col-md-8 col-xl-8 pb-md-3 pl-md-5 bd-main">
+        <div class="bd-content ps-lg-4">
+          
+
+          <p>When working with AJAX you will sometimes need a response from the server that changes based on the data you submit
 along with an AJAX request. This can be challenging when working with our <a href="https://jekyllrb.com">Jekyll</a>
 site because it is a simple static site generator. How do you know the fancy JavaScript you are writing in the
 core-styles development site is sending the required data correctly if it is being submitted to a simple
@@ -161,7 +460,7 @@ make requests to either one at localhost simply by changing the port. We run our
 and our Sinatra app on port <code>4567</code>.</p>
 <ul>
 <li>Jekyll server: [<code>{{ jekyll_host }}</code>]({{ jekyll_host }})</li>
-<li>Sinatra server: [<code>{{ sinatra_host }}/alert_success</code>]({{ sinatra_host }}/alert_success)</li>
+<li>Sinatra server: <a href="/ajax/alert_success"><code>/ajax/alert_success</code></a></li>
 </ul>
 <h3 id="file-structure">File Structure</h3>
 <p>In the root of the core-styles repo you&rsquo;ll find a folder named <code>sinatra</code>, this contains all your Sinatra related files.</p>
@@ -181,7 +480,7 @@ wish to return, these are erb files so you can put programming logic in there li
   <span class="n">response</span><span class="o">[</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span> <span class="c1"># this allows AJAX from Jekyll pages</span>
   <span class="n">erb</span><span class="p">(</span> <span class="ss">:foo</span><span class="p">,</span> <span class="ss">layout</span><span class="p">:</span> <span class="ss">:layout_empty</span> <span class="p">)</span>
 <span class="k">end</span>
-</code></pre></div><p>This will respond to any <code>get</code> request coming into <code>{{ sinatra_host }}/foo</code>, and will return the
+</code></pre></div><p>This will respond to any <code>get</code> request coming into <code>/ajax/foo</code>, and will return the
 <code>sinatra/views/foo.erb</code> file as specified by the <code>erb</code> tag on the last line. And it&rsquo;s that simple. The contents of the
 view file don&rsquo;t need to do any anything fancy, just represent what a result would look like.</p>
 <p>Here is real example we are using for the search results of the <a href="/docs/components/search/">Live Search</a> component.
@@ -213,30 +512,51 @@ other ruby code like <code>if</code> statements.</p>
   <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Success!<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> You did it! You should feel very proud of yourself right now!
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-    </div>
-  </div>
-  <div class="col-md-2 col-lg-2">
-    <div class=" on-page ps-lg-4 pt-2">
-      
-      <div class="">
-       
-        <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/webstop/core-styles-3/blob/master/site/content/guides/3.0/working-with-ajax.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
-      
+        </div>
+      </div>
+      <div class="col-md-2 col-lg-2">
+        <div class=" on-page ps-lg-4 pt-2">
+          
+          <div class="">
+           
+            <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/webstop/core-styles-3/blob/master/site/content/guides/3.0/working-with-ajax.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+          
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-</div>
+  
 
 
-
-
-<script src="https://kit.fontawesome.com/070d2da37d.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-<script src="/vendor/clipboard/dist/clipboard.min.js" crossorigin="anonymous"></script>
-<script src="/js/docs.js" crossorigin="anonymous"></script>
-<script src="/js/icon-grid.js" crossorigin="anonymous"></script>
-<script src="/js/muuri.js" crossorigin="anonymous"></script>
-</body>
+    <script src="https://kit.fontawesome.com/42f15b97e3.js" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="/vendor/clipboard/dist/clipboard.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/docs.js" crossorigin="anonymous"></script>
+    <script src="/js/icon-grid.js" crossorigin="anonymous"></script>
+    <script src="/js/muuri.js" crossorigin="anonymous"></script>
+    <script src="/js/core-styles/tags.js" defer></script>
+    <script src="/js/core-styles/ajax-form.js"></script>
+    <script src="/js/core-styles/ajax-load.js"></script>
+    <script src="/js/core-styles/bootstrap-data-attributes.js"></script>
+    <script src="/js/core-styles/checkbox-selector.js"></script>
+    <script src="/js/core-styles/shopping-list-power-bar.js"></script>
+    <script src="/js/core-styles/form-toggles.js"></script>
+    <script src="/js/core-styles/search.js"></script>
+    <script src="/js/core-styles/circular-cookies.js"></script>
+  </body>
 </html>

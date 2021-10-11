@@ -7,11 +7,39 @@ $body-bg:  $theme-bg !default;
 // Layout
 $header-height: 55px !default;
 
+// Admin Layout
+// Admin Layout Sizes
+$admin-sidecar-width:        90px !default;
+$admin-sidenav-width:        320px !default;
+$admin-sidebar-width:        320px !default;
+$admin-header-height:        60px !default;
+$admin-footer-height:        40px !default;
+$admin-spacer-y:             $spacer !default;
+$admin-spacer-x:             $spacer !default;
+
+// Admin Layout Colors
+$admin-sidecar-color:        #fff !default;
+$admin-sidecar-bg-color:     $primary !default;
+$admin-sidecar-border-color: $primary !default;
+$admin-sidecar-border-size:  0 !default;
+$admin-sidenav-bg-color:     #e9ecef !default;
+$admin-sidenav-border-color: #ccc !default;
+$admin-sidenav-border-size:  1px !default;
+$admin-sidebar-bg-color:     #dbe3eb !default;
+$admin-sidebar-border-color: darken($admin-sidebar-bg-color, 10%) !default;
+$admin-sidebar-border-size:  0 !default;
+$admin-footer-bg-color:      #e9ecef !default;
+$admin-footer-border-color:  #ccc !default;
+$admin-footer-border-size:   1px !default;
+
+
+
+
 // Toolbar
-$toolbar-spacer: $spacer !default;
-$toolbar-padding-x: $toolbar-spacer !default;
-$toolbar-padding-y: ($toolbar-spacer / 2) !default;
-$toolbar-bg: $theme-primary !default;
+$toolbar-spacer:       $spacer !default;
+$toolbar-padding-x:    $toolbar-spacer !default;
+$toolbar-padding-y:    ($toolbar-spacer / 2) !default;
+$toolbar-bg:           $theme-primary !default;
 $toolbar-border-color: darken($toolbar-bg, 15%) !default;
 //$toolbar-min-height: 58px !default;
 
@@ -19,8 +47,8 @@ $toolbar-border-color: darken($toolbar-bg, 15%) !default;
 // ===========
 
 // Circulars
-$circular-max-column-width: 375px;
-$circular-min-column-width: 160px;
+$circular-max-column-width:    375px;
+$circular-min-column-width:    160px;
 $circular-sm-max-column-width: 375px;
 $circular-sm-min-column-width: 265px;
 
@@ -36,6 +64,7 @@ $store-min-column-width: 290px;
 // Bootstrap
 $bootstrap-purple: #563d7c;
 $readable: 34.25rem + (1.25rem * 2);
+$table-bg: #fff;
 
 // Webstop
 $webstop-blue: #0194d3;

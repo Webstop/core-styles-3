@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="admin admin-with-sidebar">
+  <header class="admin-header" role="banner">
+    {{ partial "docs-navbar" . }}
+  </header>
+  <main class="admin-page" role="main">
+    {{ .Content }}
+  </main>
+  <aside class="admin-sidebar">
+    {{ block "sidebar" . }}
+       <h4>Sidebar, defined by <code>admin-sidebar</code></h4>
+       
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    {{ end }}
+  </aside>
+  <footer class="admin-footer" role="contentinfo">
+    {{ block "footer" . }}
+      <nav aria-label="breadcrumb navigation">
+        <ol class="breadcrumb sans-serif">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/docs/">Docs</a></li>
+          <li class="breadcrumb-item"><a href="/docs/3.0/layouts/admin/">Admin Layouts</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Admin Layout with Sidenav &amp; Sidebar</li>
+        </ol>
+      </nav>
+    {{ end }}
+  </footer>
+</div>
+{{ end }}

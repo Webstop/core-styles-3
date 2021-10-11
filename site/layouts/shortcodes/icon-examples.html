@@ -1,85 +1,83 @@
 <section class="grid-demo">
-  <div class="container px-5 py-5">
-  <div class="icon-grid">
-    <div class="grid-controls">
-      <div class="grid-control search">
-        <input
-          class="grid-control-field search-field form-control"
-          type="text"
-          name="search"
-          placeholder="Search..."
-        />
-        <div class="grid-control-icon">
-          <i class="fas fa-search fa-2x"></i>
+  <div class="container px-1 py-1">
+    <div class="icon-grid">
+      <div class="grid-controls">
+        <div class="grid-control search">
+          <input
+            class="grid-control-field search-field form-control"
+            type="text"
+            name="search"
+            placeholder="Search..."
+          />
+          <div class="grid-control-icon">
+            <i class="fas fa-search fa-lg"></i>
+          </div>
+        </div>
+        <div class="grid-control filter">
+          <select class="grid-control-field filter-field form-control">
+            <option value="" selected>All</option>
+            <option value="admin">Admin</option>
+            <option value="webstop">Webstop</option>
+            <option value="retailer">Retailer</option>
+            <option value="UI">UI</option>
+            <option value="brand">Brands</option>
+            <option value="food">Food</option>
+            <option value="symbols">Symbol</option>
+            <option value="social">Social</option>
+          </select>
+          <div class="grid-control-icon">
+            <i class="fas fa-filter fa-lg"></i>
+          </div>
+          <div class="grid-select-arrow">
+            <i class="fas fa-angle-down fa-lg"></i>
+          </div>
+        </div>
+        <div class="grid-control sort">
+          <select class="grid-control-field sort-field form-control">
+            <option value="title" selected>Title</option>
+            <option value="style">Style</option>
+          </select>
+          <div class="grid-control-icon">
+            <i class="fas fa-arrows fa-lg"></i>
+          </div>
+          <div class="grid-select-arrow">
+            <i class="fas fa-angle-down fa-lg"></i>
+          </div>
+        </div>
+        <div class="grid-control layout">
+          <select class="grid-control-field layout-field form-control">
+            <option value="left-top" selected>Left Top</option>
+            
+           
+          </select>
+          <div class="grid-control-icon">
+            <i class="fas fa-align-left fa-lg"></i>
+          </div>
+          <div class="grid-select-arrow">
+            <i class="fas fa-angle-down fa-lg"></i>
+          </div>
         </div>
       </div>
-      <div class="grid-control filter">
-        <select class="grid-control-field filter-field form-control">
-          <option value="" selected>All</option>
-          <option value="admin">Admin</option>
-          <option value="food">Food</option>
-          <option value="social">Socials</option>
-          <option value="brand">Brands</option>
-        </select>
-        <div class="grid-control-icon">
-          <i class="fas fa-filter fa-2x"></i>
-        </div>
-        <div class="grid-select-arrow">
-          <i class="fas fa-angle-down fa-lg"></i>
-        </div>
-      </div>
-      <div class="grid-control sort">
-        <select class="grid-control-field sort-field form-control">
-        
-          <option value="title">Title</option>
-          
-        </select>
-        <div class="grid-control-icon">
-          <i class="fas fa-arrows fa-2x"></i>
-        </div>
-        <div class="grid-select-arrow">
-          <i class="fas fa-angle-down fa-lg"></i>
-        </div>
-      </div>
-      <div class="grid-control layout">
-        <select class="grid-control-field layout-field form-control">
-          <option value="left-top" selected>Left Top</option>
-        
-          <option value="right-top">Right Top</option>
-        
-          <option value="left-bottom">Left Bottom</option>
-         
-          <option value="right-bottom">Right Bottom</option>
-         
-        </select>
-        <div class="grid-control-icon">
-          <i class="fas fa-align-left fa-2x"></i>
-        </div>
-        <div class="grid-select-arrow">
-          <i class="fas fa-angle-down fa-lg"></i>
-        </div>
-      </div>
-    </div>
 
-    <div class="grid icon-examples row p-4">
+    <div class="grid icon-examples row p-2">
       {{ range .Site.Data.icons }}
-        <div class="grid-item item col-md-3 mb-3"  data-toggle="{{ .category }}" data-title="{{ .name }}">
+        <div class="grid-item item col-md-3 mb-3" data-style="{{ .style }}" data-toggle="{{ .category }}" data-title="{{ .name }} {{ .search }}">
           <div class="grid-item-content icon-example card h-100">
             <div class="card-body text-center">
              
               <p class="icon-example-html"><i class="{{ .style }} {{ .icon }} fa-3x"></i></p>
-              <h3 class="grid-card-title icon-example-title">{{ .name }}</h3>
+              <h3 class="grid-card-title">{{ .name }}</h3>
               <code class="icon-example-code code">&#x3C;i class=&#x22;{{ .style }} {{ .icon }}&#x22;&#x3E;&#x3C;/i&#x3E;</code>
                             
             </div>
-            <div class="card-footer">
+            <div class="card-footer icon-card-footer">
               <div class="d-grid">
-                <button class="btn-clipboard btn btn-primary" type="button">Copy Code</button>
+                <button class="btn-clipboard btn btn-primary" type="button" data-clipboard-text="&#x3C;i class=&#x22;{{ .style }} {{ .icon }}&#x22;&#x3E;&#x3C;/i&#x3E;" title data-bs-original-title="Copy to clipboard">Copy Code</button>
               </div>
               <span class="icon-example-clipboard-code visually-hidden" id="copyingText">&#x3C;i class=&#x22;{{ .style }} {{ .icon }}&#x22;&#x3E;&#x3C;/i&#x3E;</span>
             </div>
             <div class="grid-card-handle"></div>
-          </div>
+          </div> 
         </div>
       {{ end }}
     </div>
@@ -102,5 +100,6 @@
 
     
   </div>
-  </div>
+  </div> 
 </section>
+
