@@ -171,14 +171,14 @@
         </button>
 
         <div
-          class="collapse "
+          class="collapse  show "
           id="layout-menu-collapse">
           
           <ul class="list-unstyled fw-normal pb-1 small">
 
             <li
-              class="py-2 ps-4 ">
-              <a href="/docs/3.0/layouts/admin-admin/" class="d-inline-flex rounded">Admin Layout</a>
+              class="py-2 ps-4  left-nav-active ">
+              <a href="/docs/3.0/layouts/admin/" class="d-inline-flex rounded">Admin Layout</a>
             </li>
 
           </ul>
@@ -417,14 +417,13 @@
       <h1 class="docs-heading-title shadow">
         Admin Layout
       </h1>
-      <p class="docs-heading-tagline">Website layout for administration pages.</p>    
+      <p class="docs-heading-tagline">Website layout for administration pages.</p>
     </section>
     <blockquote>
 <p>Prior to Core-Styles v3 administration pages were served in a separate framework called Admin-Styles. We soon realized
 we wanted access to all the things in core-styles from admin pages, and that the thing we found most valuable from
 Admin-Styles was the page layout features. Now the page layout features of Admin-Styles are included as part of Core-Styles.</p>
 </blockquote>
-<p><a href="/docs/3.0/layouts/admin-admin/">Alternate Layout</a></p>
 <h2 id="base-admin-example">Base Admin Example</h2>
 <p>This example contains a header, footer, and main content sections.</p>
 <div class="row">
@@ -649,6 +648,49 @@ Admin-Styles was the page layout features. Now the page layout features of Admin
     Admin Footer...
   <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><h2 id="sidecar-and-sidebar-example-1">Sidecar and Sidebar Example</h2>
+<div class="row">
+  <div class="col-auto">
+    <table style="width: 250px;"> 
+      <tr>
+        <td colspan="3" style="background-color: #369; height: 15px;"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #eee; width: 60px;" rowspan="2"></td>
+        <td style="background-color: #ccc; height: 120px;"></td>
+        <td style="background-color: #eee; width: 60px;" rowspan="2"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ddd; height: 5px;"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="col">
+    <a href="/docs/3.0/layouts/examples/admin_with_sidecar_and_sidebar" class="btn btn-outline-primary">
+      View Sidecar & Sidebar Example Page <i class="fas fa-angle-right"></i>
+    </a>
+  </div>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin admin-with-sidenav admin-with-sidebar&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-header&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;banner&#34;</span><span class="p">&gt;</span>
+    Admin Header...
+  <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-sidenav&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;navigation&#34;</span><span class="p">&gt;</span>
+      Admin Sidenav Navigation...
+  <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-sidenav&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;navigation&#34;</span><span class="p">&gt;</span>
+      Admin Sidenav Navigation...
+  <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">main</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-page&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;main&#34;</span><span class="p">&gt;</span>
+    Admin Page Main Content...
+  <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">aside</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-sidebar&#34;</span><span class="p">&gt;</span>
+    Admin Sidebar...
+  <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-footer&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;contentinfo&#34;</span><span class="p">&gt;</span>
+    Admin Footer...
+  <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="sidecar-sidenav-and-sidebar-example">Sidecar, Sidenav, and Sidebar Example</h2>
 <div class="row">
   <div class="col-auto">
@@ -851,6 +893,7 @@ page layout. These settings are explained in the chart below.</p>
     <li><a href="#sidecar--sidenav-example">Sidecar &amp; Sidenav Example</a></li>
     <li><a href="#sidebar-example">Sidebar Example</a></li>
     <li><a href="#sidecar-and-sidebar-example">Sidecar and Sidebar Example</a></li>
+    <li><a href="#sidecar-and-sidebar-example-1">Sidecar and Sidebar Example</a></li>
     <li><a href="#sidecar-sidenav-and-sidebar-example">Sidecar, Sidenav, and Sidebar Example</a></li>
     <li><a href="#ruby-on-rails-support">Ruby On Rails Support</a>
       <ul>
@@ -874,7 +917,7 @@ page layout. These settings are explained in the chart below.</p>
   
   <footer class="admin-footer docs-footer" role="contentinfo">
     
-    <nav aria-label="breadcrumb navigation">
+      <nav aria-label="breadcrumb navigation">
   <ol class="breadcrumb sans-serif">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
     
@@ -1111,7 +1154,6 @@ page layout. These settings are explained in the chart below.</p>
     
   </ol>
 </nav>
-
     
   </footer>
 </div>

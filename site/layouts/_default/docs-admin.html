@@ -11,7 +11,7 @@
       <h1 class="docs-heading-title shadow">
         {{ .Title | markdownify }}
       </h1>
-      <p class="docs-heading-tagline">{{ .Page.Params.Description | markdownify }}</p>
+      <p class="docs-heading-tagline">{{ .Page.Params.Description | markdownify }}</p>    
     </section>
     {{ .Content }}
   </main>
@@ -25,7 +25,15 @@
   {{ end }}
   <footer class="admin-footer docs-footer" role="contentinfo">
     {{ block "footer" . }}
-      {{ partial "breadcrumbs.html" . }}
+    {{ partial "breadcrumbs.html" . }}
+<!--       <nav aria-label="breadcrumb navigation">
+        <ol class="breadcrumb sans-serif">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/docs/">Docs</a></li>
+          <li class="breadcrumb-item"><a href="/docs/3.0/layouts/admin/">Admin Layouts</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Admin Layout with Sidenav &amp; Sidebar</li>
+        </ol>
+      </nav> -->
     {{ end }}
   </footer>
 </div>

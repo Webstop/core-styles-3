@@ -13,8 +13,6 @@ menu:
 we wanted access to all the things in core-styles from admin pages, and that the thing we found most valuable from 
 Admin-Styles was the page layout features. Now the page layout features of Admin-Styles are included as part of Core-Styles.
 
-[Alternate Layout](/docs/3.0/layouts/admin-admin/)
-
 ## Base Admin Example
 
 This example contains a header, footer, and main content sections.
@@ -257,6 +255,54 @@ This example contains a header, footer, and main content sections.
   </header>
   <nav class="admin-sidecar" role="navigation">
       Admin Sidecar Navigation...
+  </nav>
+  <nav class="admin-sidenav" role="navigation">
+      Admin Sidenav Navigation...
+  </nav>
+  <main class="admin-page" role="main">
+    Admin Page Main Content...
+  </main>
+  <aside class="admin-sidebar">
+    Admin Sidebar...
+  </aside>
+  <footer class="admin-footer" role="contentinfo">
+    Admin Footer...
+  </footer>
+</div>
+```
+
+## Sidecar and Sidebar Example
+
+<div class="row">
+  <div class="col-auto">
+    <table style="width: 250px;"> 
+      <tr>
+        <td colspan="3" style="background-color: #369; height: 15px;"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #eee; width: 60px;" rowspan="2"></td>
+        <td style="background-color: #ccc; height: 120px;"></td>
+        <td style="background-color: #eee; width: 60px;" rowspan="2"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ddd; height: 5px;"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="col">
+    <a href="/docs/3.0/layouts/examples/admin_with_sidecar_and_sidebar" class="btn btn-outline-primary">
+      View Sidecar & Sidebar Example Page <i class="fas fa-angle-right"></i>
+    </a>
+  </div>
+</div>
+
+```html
+<div class="admin admin-with-sidenav admin-with-sidebar">
+  <header class="admin-header" role="banner">
+    Admin Header...
+  </header>
+  <nav class="admin-sidenav" role="navigation">
+      Admin Sidenav Navigation...
   </nav>
   <nav class="admin-sidenav" role="navigation">
       Admin Sidenav Navigation...
