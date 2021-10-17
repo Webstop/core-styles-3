@@ -135,7 +135,7 @@ This example contains a header, footer, and main content sections.
 </div>
 ```
 
-## Sidecar & Sidenav Example
+## Sidecar and Sidenav Example
 
 <div class="row">
   <div class="col-auto">
@@ -256,9 +256,6 @@ This example contains a header, footer, and main content sections.
   <nav class="admin-sidecar" role="navigation">
       Admin Sidecar Navigation...
   </nav>
-  <nav class="admin-sidenav" role="navigation">
-      Admin Sidenav Navigation...
-  </nav>
   <main class="admin-page" role="main">
     Admin Page Main Content...
   </main>
@@ -271,7 +268,7 @@ This example contains a header, footer, and main content sections.
 </div>
 ```
 
-## Sidecar and Sidebar Example
+## Sidenav and Sidebar Example
 
 <div class="row">
   <div class="col-auto">
@@ -290,8 +287,8 @@ This example contains a header, footer, and main content sections.
     </table>
   </div>
   <div class="col">
-    <a href="/docs/3.0/layouts/examples/admin_with_sidecar_and_sidebar" class="btn btn-outline-primary">
-      View Sidecar & Sidebar Example Page <i class="fas fa-angle-right"></i>
+    <a href="/docs/3.0/layouts/examples/admin_with_sidenav_and_sidebar" class="btn btn-outline-primary">
+      View Sidenav & Sidebar Example Page <i class="fas fa-angle-right"></i>
     </a>
   </div>
 </div>
@@ -301,9 +298,6 @@ This example contains a header, footer, and main content sections.
   <header class="admin-header" role="banner">
     Admin Header...
   </header>
-  <nav class="admin-sidenav" role="navigation">
-      Admin Sidenav Navigation...
-  </nav>
   <nav class="admin-sidenav" role="navigation">
       Admin Sidenav Navigation...
   </nav>
