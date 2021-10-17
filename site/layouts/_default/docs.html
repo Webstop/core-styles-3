@@ -1,70 +1,40 @@
 {{ define "main" }}
-
-  {{ partial "docs-navbar" . }} 
-
-  <section class="mt-0 mb-0 pb-0 pt-0">
-    
-      <div class="pt-3 pb-3 d-flex justify-content-center align-items-center bg-title-head inner-shadow" style="">
-        <div class="container ">
-          <div class="row d-flex justify-content-center ">
-            <div class="col-sm-12 col-md-7 p-0 p-md-2 ">
-              <h1
-                class="bg-light shadow text-center p-md-2 mb-3 p-1 mb-md-3 page-title ">
-                {{ .Title | markdownify }}</h1>
-              <p class="text-center text-light lead">{{ .Page.Params.Description | markdownify }}</p>
-             
-            </div>
-          </div>
-        </div>
+<div class="admin admin-with-sidenav {{ if (eq .Page.Params.toc true) }}admin-with-sidebar{{ end }}">
+  <header class="admin-header" role="banner">
+    {{ partial "docs-navbar" . }}
+  </header>
+  <nav class="admin-sidenav" role="navigation">
+    {{ partial "docs-sidenav.html" . }}
+  </nav>
+  <main class="admin-page" role="main">
+    <section class="docs-heading inner-shadow">
+      <h1 class="docs-heading-title shadow">
+        {{ .Title | markdownify }}
+      </h1>
+      <p class="docs-heading-tagline">{{ .Page.Params.Description | markdownify }}</p>    
+    </section>
+    {{ .Content }}
+  </main>
+  {{ if (eq .Page.Params.toc true) }}
+    <aside class="admin-sidebar">
+      <h4 class="border-bottom">On this page</h4>
+      <div class="table-of-contents">
+        {{ .TableOfContents }}
       </div>
-    
-  </section>
-
-  <div class="container-fluid bd-layout">
-   
-    <div class="row">
-      <div class="col-md-3 col-lg-2 d-md-block wsg-sidebar collapse left-nav">
-        {{ partial "docs-sidenav.html" . }} 
-        </div>
-
-      <div class="col-md-8 col-xl-8 pb-md-3 pl-md-5 bd-main">
-        <div class="bd-content ps-lg-4">
-          {{ if .Page.Params.sections }}
-          <div class="row g-3">
-            {{ range .Page.Params.sections }}
-            <div class="col-md-6">
-              <a class="d-block text-decoration-none" href="../{{ urlize .title }}/">
-                <strong class="d-block h5 mb-0">{{ .title }}</strong>
-                <span class="text-secondary">{{ .description }}</span>
-              </a>
-            </div>
-            {{ end }}
-          </div>
-          {{ end }}
-
-          {{ .Content }}
-        </div>
-      </div>
-      <div class="col-md-2 col-lg-2">
-        <div class=" on-page ps-lg-4 pt-2">
-          {{ if (eq .Page.Params.toc true) }}
-            <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-1 mb-lg-5 text-muted">
-              <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
-              <div class="table-of-contents">
-                {{ .TableOfContents }}
-              </div>
-            </div>
-          {{ end }}
-          <div class="">
-           
-            <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="{{ .Site.Params.repo }}/blob/master/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
-          
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  {{ range .Page.Params.extra_js -}}
-    <script{{ with .async }} async{{ end }} src="{{ .src }}"></script>
-  {{- end -}}
+    </aside>
+  {{ end }}
+  <footer class="admin-footer docs-footer" role="contentinfo">
+    {{ block "footer" . }}
+    {{ partial "breadcrumbs.html" . }}
+<!--       <nav aria-label="breadcrumb navigation">
+        <ol class="breadcrumb sans-serif">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/docs/">Docs</a></li>
+          <li class="breadcrumb-item"><a href="/docs/3.0/layouts/admin/">Admin Layouts</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Admin Layout with Sidenav &amp; Sidebar</li>
+        </ol>
+      </nav> -->
+    {{ end }}
+  </footer>
+</div>
 {{ end }}

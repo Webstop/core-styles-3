@@ -1,5 +1,5 @@
 ---
-title: Core-Styles 3.0 Documentation
+title: Layouts
 layout: list
 ---
 

@@ -36,28 +36,29 @@
       <div class="container">
         <div class="row d-flex">
           {{ range .Pages }}
-          <div class="col-md-4 mb-4 ">
-            <div class="card card-box h-100">
-              <div class="card-body  text-center">
-              <div class="title">
-                <h3>
-                  <a href="{{ .URL }}" class="card-title">{{ .Title }}</a>
-                </h3>
-              </div>
-              <div class="text">
-                <p class="card-text">{{ .Description }}</p>
+            {{ if .Title }}
+              <div class="col-md-4 mb-4 ">
+                <div class="card card-box h-100">
+                  <div class="card-body  text-center">
+                  <div class="title">
+                    <h3>
+                      <a href="{{ .URL }}" class="card-title">{{ .Title }}</a>
+                    </h3>
+                  </div>
+                  <div class="text">
+                    <p class="card-text">{{ .Description }}</p>
+                  </div>
+                </div>
+                <div class="card-footer text-center">
+                  <div class="d-grid gap-2">
+                    <button class="btn learn-more-btn" type="button">
+                      <a href="{{ .URL }}" class="learn-more-btn-text">Learn More</a>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="card-footer text-center">
-              <div class="d-grid gap-2">
-                <button class="btn learn-more-btn" type="button">
-                  <a href="{{ .URL }}" class="learn-more-btn-text">Learn More</a>
-                </button>
-              </div>
-              <a href="{{ .Permalink }}">Learn More</a>
-            </div>
-          </div>
-        </div>
+          {{ end }}
         {{ end }}
       </div>
     </div>

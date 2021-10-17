@@ -15,8 +15,9 @@
   <body>
     
     
-
-  <nav class="navbar navbar-expand-lg sticky-top navbar-dark wsg-header shadow">
+<div class="admin admin-with-sidenav admin-with-sidebar">
+  <header class="admin-header" role="banner">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark wsg-header shadow">
   <div class="container-fluid">
     <a class="navbar-brand ms-2" href="/"><img
         src="https://www.webstop.com/assets/Webstop-logos/webstop-twocolor-landscape-dark-bg-72dpi-e6425f6d6e9ec4cc90742a883b2997bb28191590bfd8762222ed4723865dcaef.png" style="max-width: 127px; /* 889/7 = 127 */"></a>
@@ -62,31 +63,10 @@
     </div>
   </div>
 </nav>
- 
 
-  <section class="mt-0 mb-0 pb-0 pt-0">
-    
-      <div class="pt-3 pb-3 d-flex justify-content-center align-items-center bg-title-head inner-shadow" style="">
-        <div class="container ">
-          <div class="row d-flex justify-content-center ">
-            <div class="col-sm-12 col-md-7 p-0 p-md-2 ">
-              <h1
-                class="bg-light shadow text-center p-md-2 mb-3 p-1 mb-md-3 page-title ">
-                Tag Search</h1>
-              <p class="text-center text-light lead">Search for and assign tags in a web form.</p>
-             
-            </div>
-          </div>
-        </div>
-      </div>
-    
-  </section>
-
-  <div class="container-fluid bd-layout">
-   
-    <div class="row">
-      <div class="col-md-3 col-lg-2 d-md-block wsg-sidebar collapse left-nav">
-        <aside>
+  </header>
+  <nav class="admin-sidenav" role="navigation">
+    <aside>
   <nav class="collapse show flex" id="docs-nav" aria-label="Docs navigation">
     <ul class="list-unstyled mb-0 py-3 pt-md-1">
       
@@ -430,14 +410,16 @@
       
     </ul>
   </nav>
-</aside> 
-        </div>
-
-      <div class="col-md-8 col-xl-8 pb-md-3 pl-md-5 bd-main">
-        <div class="bd-content ps-lg-4">
-          
-
-          <h2 id="tag-search">Tag Search</h2>
+</aside>
+  </nav>
+  <main class="admin-page" role="main">
+    <section class="docs-heading inner-shadow">
+      <h1 class="docs-heading-title shadow">
+        Tag Search
+      </h1>
+      <p class="docs-heading-tagline">Search for and assign tags in a web form.</p>    
+    </section>
+    <h2 id="tag-search">Tag Search</h2>
 <p>The Tag Search component is a convent way to assign tags in a web form.</p>
 <p>When assigning tags, it is useful if the same tags get reused, and things like typos
 or similarly names tags are avoided. This is where the Tag Search component comes into
@@ -555,15 +537,12 @@ This allows us to use this component to edit records with pre-existing tags.</p>
   <span class="na">data-tag-search-results</span><span class="o">=</span><span class="s">&#34;#tag-search-results&#34;</span>
 <span class="p">&gt;</span></code></pre></div></p>
 
-        </div>
-      </div>
-      <div class="col-md-2 col-lg-2">
-        <div class=" on-page ps-lg-4 pt-2">
-          
-            <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-1 mb-lg-5 text-muted">
-              <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
-              <div class="table-of-contents">
-                <nav id="TableOfContents">
+  </main>
+  
+    <aside class="admin-sidebar">
+      <h4 class="border-bottom">On this page</h4>
+      <div class="table-of-contents">
+        <nav id="TableOfContents">
   <ul>
     <li><a href="#tag-search">Tag Search</a>
       <ul>
@@ -574,19 +553,306 @@ This allows us to use this component to edit records with pre-existing tags.</p>
     <li><a href="#attributes-of-the-search-field">Attributes of the Search Field</a></li>
   </ul>
 </nav>
-              </div>
-            </div>
-          
-          <div class="">
-           
-            <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/webstop/core-styles-3/blob/master/site/content/docs/3.0/components/tagging/tag-search.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
-          
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
+    </aside>
   
+  <footer class="admin-footer docs-footer" role="contentinfo">
+    
+    <nav aria-label="breadcrumb navigation">
+  <ol class="breadcrumb sans-serif">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/">Docs</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/">3.0</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/">Components</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/tagging/">Tagging</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/tagging/tag-search/">Tag search</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+        
+    
+  </ol>
+</nav>
+
+    
+  </footer>
+</div>
+
 
 
     <script src="https://kit.fontawesome.com/42f15b97e3.js" crossorigin="anonymous"></script>

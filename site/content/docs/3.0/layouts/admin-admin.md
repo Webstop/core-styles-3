@@ -1,5 +1,5 @@
 ---
-layout: docs-admin
+layout: docs
 title: Admin Layout
 description: Website layout for administration pages.
 toc: true
