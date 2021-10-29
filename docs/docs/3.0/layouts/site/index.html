@@ -421,59 +421,28 @@
     </section>
     <h2 id="basic-example">Basic Example</h2>
 <p>The <code>site</code> class resides on the root element of a website. It should sit inside the body of</p>
-<div class="my-3 p-5 example">
-
-<div class="site site-fluid">
-  <div class="site-row row">
-    <div class="site-main-col col">
-      <header class="site-header" role="banner">
-        Site Header...
-      </header>
-      <main class="site-content" role="main">
-        Site Main Content...
-      </main>
-      <footer class="site-footer" role="contentinfo">
-        Site Footer...
-        <div class="site-debug-toggle" aria-hidden="true">🐞</div>
-      </footer>
-      <div class="site-debug" aria-hidden="true">
-        <h4 class="site-debug-title">🐞 Website Debug Code</h4>
-        <p>
-          Please ignore this section. This section is for the website developers to help
-          them debug problems &amp; check the current status of web pages. This was opened
-          by clicking or tapping the debug (🐞) icon in the lower right of the page. You can
-          close this debug section by clicking the icon again.
-        </p>
-        Site Debug Code...
-      </div>
-    </div>
-    <aside class="site-aside col-auto" id="site-aside">
-      <div class="site-aside-slider" id="site-aside-slider">
-        Shopping List...
-      </div>
-    </aside>
+<div class="row">
+  <div class="col-auto">
+    <table style="width: 250px;"> 
+      <tr>
+        <td style="background-color: #369; height: 15px;"></td>
+        <td style="background-color: #eee; width: 60px;" rowspan="3"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ccc; height: 120px;"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ddd; height: 5px;"></td>
+      </tr>
+    </table>
   </div>
-
-  <div class="site-modal modal fade" id="site-modal" tabindex="-1" role="dialog" aria-labelledby="site-modal-title" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="site-modal-content modal-content">
-        <div class="modal-header">
-          <h4 class="site-modal-title modal-title" id="site-modal-title"></h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="site-modal-body modal-body" id="site-modal-body"></div>
-        <div class="site-modal-footer modal-footer">
-          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
+  <div class="col">
+    <a href="/docs/3.0/layouts/examples/site" class="btn btn-outline-primary">
+      View Site Example Page <i class="fas fa-angle-right"></i>
+    </a>
   </div>
-
-
 </div>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site site-fluid&#34;</span><span class="p">&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site site-fluid&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-row row&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-main-col col&#34;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-header&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;banner&#34;</span><span class="p">&gt;</span>
@@ -520,10 +489,8 @@
       <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-
-
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="options">Options</h2>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><h2 id="options">Options</h2>
 <p>We can customize our site by adding a subclass to our site object.</p>
 <table class="table table-bordered table-striped">
   <thead>

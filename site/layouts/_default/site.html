@@ -1,0 +1,141 @@
+{{ define "main" }}
+
+<div class="site site-fluid">
+  <div class="site-row row">
+    <div class="site-main-col col">
+      <header class="site-header" role="banner">
+        {{ partial "docs-navbar" . }}
+      </header>
+      <main class="site-content" role="main">
+        <nav class="toolbar" aria-label="Feature navigation.">
+          <div class="toolbar-body">
+            <div class="toolbar-group btn-group" role="group" aria-label="Circular Departments Navigation">
+              <div class="dropdown btn-group" role="group">
+                <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="d-none d-lg-inline">Departments</span>
+                  <span class="d-inline d-lg-none">Depts</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right dropdown-menu-md-left">
+                  <a href="#" class="dropdown-item">Lorem Ipsum Dolor</a>
+                  <a href="#" class="dropdown-item">Sed ut Perspiciatis</a>
+                  <a href="#" class="dropdown-item">Nemo Enim Ipsam</a>
+                  <a href="#" class="dropdown-item">Consectetur Adipisicing</a>
+                </div>
+              </div>
+            </div>
+            <div class="d-none d-lg-inline-flex">
+              <form class="search-form" action="/circulars/search/" method="post" data-search="live" data-target="#search-results" data-hide=".search-hidden">
+                <input type="hidden" name="date" value="">
+                <div class="toolbar-group input-group mr-0">
+                  <input class="search-from-search-text form-control" type="text" name="search" value="" placeholder="Search" aria-label="Enter text to search circulars.">
+                  <a href="#" class="search-form-clear icon-cancel-circle-solid" aria-label="Clear Search"></a>
+                  <div class="input-group-append">
+                    <button class="search-from-submit btn btn-light" type="submit" aria-label="Submit Search">
+                      <i class="icon-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="toolbar-group ml-auto d-none d-md-inline-flex">
+              <a href="#" class="toolbar-text-item site-aside-slider-toggle" data-aye-click="shopping list toggle"><strong class="d-none d-lg-inline"><span class="d-none d-xl-inline">Shopping </span>List</strong> <i class="icon-shopping-list"></i></a>
+            </div>
+          </div>
+        </nav>
+        {{ .Content }}
+      </main>
+      <footer class="site-footer" role="contentinfo">
+        {{ block "footer" . }}
+        <h4 class="mt-4">Site footer</h4>
+        <p>Defined by <code>site-footer</code></p>
+        <nav>
+          <ul class="row">
+            <li class="col-6 col-md">
+              <h4>Dignissimos</h4>
+              <ul>
+                <li>Lorem Ipsum Dolor</li>
+                <li>Sed ut Perspiciatis</li>
+                <li>Nemo Enim Ipsam</li>
+                <li>Consectetur Adipisicing</li>
+              </ul>
+            </li>
+            <li class="col-6 col-md">
+              <h4>Voluptatem</h4>
+              <ul>
+                <li>Lorem Ipsum Dolor</li>
+                <li>Sed ut Perspiciatis</li>
+                <li>Nemo Enim Ipsam</li>
+                <li>Consectetur Adipisicing</li>
+              </ul>
+            </li>
+            <li class="col-6 col-md">
+              <h4>Accusantium</h4>
+              <ul>
+                <li>Lorem Ipsum Dolor</li>
+                <li>Sed ut Perspiciatis</li>
+                <li>Nemo Enim Ipsam</li>
+                <li>Consectetur Adipisicing</li>
+              </ul>
+            </li>
+            <li class="col-6 col-md">
+              <h4>Laudantium</h4>
+              <ul>
+                <li>Lorem Ipsum Dolor</li>
+                <li>Sed ut Perspiciatis</li>
+                <li>Nemo Enim Ipsam</li>
+                <li>Consectetur Adipisicing</li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <hr>
+        <nav aria-label="breadcrumb navigation">
+          <ol class="breadcrumb sans-serif">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/docs/">Docs</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0">3.0</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0/layouts/">Layouts</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0/layouts/site/">Site Layout</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Site Layout Example</li>
+          </ol>
+        </nav>
+        {{ end }}
+        <div class="site-debug-toggle" aria-hidden="true">🐞</div>
+      </footer>
+      <div class="site-debug" aria-hidden="true">
+        <h4 class="site-debug-title">🐞 Website Debug Code</h4>
+        <p>
+          Please ignore this section. This section is for the website developers to help
+          them debug problems &amp; check the current status of web pages. This was opened
+          by clicking or tapping the debug (🐞) icon in the lower right of the page. You can
+          close this debug section by clicking the icon again.
+        </p>
+        Site Debug Code...
+      </div>
+    </div>
+    <aside class="site-aside col-auto" id="site-aside">
+      <div class="site-aside-slider" id="site-aside-slider">
+        Shopping List...
+      </div>
+    </aside>
+  </div>
+
+  <div class="site-modal modal fade" id="site-modal" tabindex="-1" role="dialog" aria-labelledby="site-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="site-modal-content modal-content">
+        <div class="modal-header">
+          <h4 class="site-modal-title modal-title" id="site-modal-title"></h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="site-modal-body modal-body" id="site-modal-body"></div>
+        <div class="site-modal-footer modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ end }}

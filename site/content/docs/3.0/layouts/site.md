@@ -13,8 +13,30 @@ menu:
 
 The `site` class resides on the root element of a website. It should sit inside the body of  
 
-{{< example >}}
+<div class="row">
+  <div class="col-auto">
+    <table style="width: 250px;"> 
+      <tr>
+        <td style="background-color: #369; height: 15px;"></td>
+        <td style="background-color: #eee; width: 60px;" rowspan="3"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ccc; height: 120px;"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ddd; height: 5px;"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="col">
+    <a href="/docs/3.0/layouts/examples/site" class="btn btn-outline-primary">
+      View Site Example Page <i class="fas fa-angle-right"></i>
+    </a>
+  </div>
+</div>
 
+
+```html
 <div class="site site-fluid">
   <div class="site-row row">
     <div class="site-main-col col">
@@ -62,10 +84,8 @@ The `site` class resides on the root element of a website. It should sit inside 
       </div>
     </div>
   </div>
-
-
 </div>
-{{< /example>}}
+```
 
 
 
