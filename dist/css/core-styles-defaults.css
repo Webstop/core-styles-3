@@ -10685,6 +10685,109 @@ textarea.form-control-lg {
   font-family: "Libre Baskerville";
 }
 
+.admin {
+  grid-template-columns: auto;
+  grid-template-rows: 60px auto 40px;
+  display: grid;
+  grid-template-areas: "admin-header" "admin-page" "admin-footer";
+  height: 100vh;
+  overflow-x: hidden;
+}
+.admin .admin-header {
+  grid-area: admin-header;
+  overflow: visible;
+}
+.admin .admin-sidecar {
+  grid-area: admin-sidecar;
+  overflow-x: auto;
+}
+.admin .admin-sidenav {
+  grid-area: admin-sidenav;
+  overflow-x: auto;
+}
+.admin .admin-page {
+  grid-area: admin-page;
+  overflow-x: auto;
+}
+.admin .admin-sidebar {
+  grid-area: admin-sidebar;
+  overflow-x: auto;
+}
+.admin .admin-footer {
+  grid-area: admin-footer;
+  overflow: hidden;
+}
+.admin.admin-with-sidecar {
+  grid-template-columns: 90px auto;
+  grid-template-areas: "admin-header  admin-header" "admin-sidecar admin-page" "admin-sidecar admin-footer";
+}
+.admin.admin-with-sidenav {
+  grid-template-columns: 320px auto;
+  grid-template-areas: "admin-header  admin-header" "admin-sidenav admin-page" "admin-sidenav admin-footer";
+}
+.admin.admin-with-sidebar {
+  grid-template-columns: auto 320px;
+  grid-template-areas: "admin-header admin-header" "admin-page   admin-sidebar" "admin-footer admin-sidebar";
+}
+.admin.admin-with-sidecar.admin-with-sidenav {
+  grid-template-columns: 90px 320px auto;
+  grid-template-areas: "admin-header  admin-header admin-header" "admin-sidecar admin-sidenav admin-page" "admin-sidecar admin-sidenav admin-footer";
+}
+.admin.admin-with-sidecar.admin-with-sidebar {
+  grid-template-columns: 90px auto 320px;
+  grid-template-areas: "admin-header  admin-header admin-header" "admin-sidecar admin-page   admin-sidebar" "admin-sidecar admin-footer admin-sidebar";
+}
+.admin.admin-with-sidenav.admin-with-sidebar {
+  grid-template-columns: 320px auto 320px;
+  grid-template-areas: "admin-header  admin-header admin-header" "admin-sidenav admin-page   admin-sidebar" "admin-sidenav admin-footer admin-sidebar";
+}
+.admin.admin-with-sidecar.admin-with-sidenav.admin-with-sidebar {
+  grid-template-columns: 90px 320px auto 320px;
+  grid-template-areas: "admin-header  admin-header  admin-header admin-header" "admin-sidecar admin-sidenav admin-page   admin-sidebar" "admin-sidecar admin-sidenav admin-footer admin-sidebar";
+}
+.admin .admin-sidenav, .admin .admin-page, .admin .admin-sidebar {
+  padding: 1rem 1rem;
+}
+.admin .admin-sidecar {
+  padding: 1rem 0;
+}
+.admin .admin-footer {
+  padding: 0.5rem 0 0 1rem;
+}
+.admin .admin-sidecar {
+  border-right: 0 solid #0d6efd;
+  background-color: #0d6efd;
+  color: #fff;
+}
+.admin .admin-sidecar-item {
+  color: #fff;
+}
+.admin .admin-sidenav {
+  border-right: 1px solid #ccc;
+  background-color: #e9ecef;
+}
+.admin .admin-sidebar {
+  border-left: 0 solid #bacad9;
+  background-color: #dbe3eb;
+}
+.admin .admin-footer {
+  border-top: 1px solid #ccc;
+  background-color: #e9ecef;
+}
+.admin .admin-table-view,
+.admin .admin-list-view {
+  padding: 0;
+}
+.admin .admin-table-view {
+  overflow: visible;
+}
+.admin .admin-page-flush {
+  padding: 0;
+}
+.admin .admin-page-overflow-visible {
+  overflow: visible;
+}
+
 .site .site-main-col {
   margin: 0;
   padding: 0;
