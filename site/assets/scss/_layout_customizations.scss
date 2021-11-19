@@ -5,7 +5,7 @@
 }
 
 .wsg-title-header-section {
-  background-color: rgb(101, 179, 243);
+  background-color: $blue;
 }
 
 .inner-shadow {
@@ -15,6 +15,44 @@
 
 }
 
+/* SCROLLBAR*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: lighten($blue, 25%); 
+  border-radius:0.75rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: lighten($blue, 20%); 
+}
+/* END SCROLLBAR */
+
+/* ADMIN LAYOUT */
+
+.admin .admin-sidenav {
+  border-right: 0px solid #ccc;
+  background-color: $gray;
+}
+
+.admin .admin-sidebar {
+  border-left: 0 solid #bacad9;
+  background-color: $gray-100;
+}
+
+/* END ADMIN LAYOUT */
+
+/* Cards */
+
 .card-box {
   background-clip: border-box;
   border-radius: 12px;
@@ -22,28 +60,41 @@
   background: #ffffff;
   box-shadow: 0 2px 7px rgb(96 97 112 / 20%);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-} 
-
-.card-box:hover {
-
-  -webkit-box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0,0,0,0);
-box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0,0,0,0);}
-
-.multi-shadow {
-  -webkit-box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0,0,0,0);
-box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0,0,0,0);
+  &:hover {
+    transition: all 0.5s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    border: 1px solid #cccccc;
+    background-color: white;
+    transform: scale(1.02);
+    transform-origin: 50% 50%;
+  }
 }
 
-.page-title {
-  font-weight: 900;
-  font-size: 50px;
-  border-radius: 15px; 
-  box-shadow:  5px 5px 5px #777777,
-             -5px -5px 5px #ffffff;
+.card-title {
+  color: black;
+  text-decoration: none;
 }
+
+
+.card-footer {
+  width: 100%;
+  border:none;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 0.75rem;
+}
+
+.card-footer:last-child {
+  width: 100%;
+  border:none;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 0.75rem;
+}
+
+/* END Cards */
+
 
 .wsg-sidebar {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, arial, sans-serif;
+  font-family: $wsg-sans-serif;
   font-size: 16px;
   opacity: 0.95;
   position: -webkit-sticky;
@@ -61,12 +112,11 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
 
   .highlight {
     margin-bottom: 1rem;
-    background-color: #f8f9fa;
+    background-color: $gray-100;
     padding: 1rem 1.5rem;
-    border-bottom-right-radius: .25rem;
-    border-bottom-left-radius: .25rem;
-   margin-left: 0rem;
-   margin-right: 4rem;
+    border-radius: 0.75rem;  
+    margin-left: 0rem;
+    margin-right: 4rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     z-index: 91;
     overflow: visible;
@@ -89,15 +139,8 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
     background-color: #5FB8FF;
   }
 
-  .card-title {
-    color: black;
-    text-decoration: none;
-  }
-
-
-
   .get-started-btn {
-    background-color: #000000;
+    background-color: $dark;
     transition: all .2s ease-in-out; 
     align-items: center;
   }
@@ -109,16 +152,16 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
     color: #fff;
     font-size: 20px;
     font-weight: 400;
-    font-family: "Montserrat", sans-serif;
+    font-family:  $wsg-sans-serif;
     letter-spacing: .20px;
     text-decoration: none;
     padding-left: 50px;
     padding-right: 50px;
   }
   .get-started-btn-text:hover {
-    color: #289FED;
+    color: #fff;
     font-weight: 500;
-    font-family: "Montserrat", sans-serif;
+    font-family: $wsg-sans-serif;
     letter-spacing: .20px;
     text-decoration: none;
   }
@@ -139,14 +182,14 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
   .learn-more-btn-text {
     color: #fff;
     font-weight: 400;
-    font-family: "Montserrat", sans-serif;
+    font-family:  $wsg-sans-serif;
     letter-spacing: .20px;
     text-decoration: none;
   }
   .learn-more-btn-text:hover {
     color: #fff;
     font-weight: 500;
-    font-family: "Montserrat", sans-serif;
+    font-family: $wsg-sans-serif;
     letter-spacing: .20px;
     text-decoration: none;
   }
@@ -179,7 +222,7 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
   height: 3rem;
   margin-bottom: .5rem;
   background-color: lighten($primary, 25%);
-  border-radius: .25rem;
+  border-radius: 0.75rem; 
 }
 
 .bd-example-container-sidebar {
@@ -187,14 +230,14 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
   width: 4rem;
   height: 8rem;
   background-color: lighten($primary, 50%);
-  border-radius: .25rem;
+  border-radius: 0.75rem; 
 }
 
 .bd-example-container-body {
   height: 8rem;
   margin-right: 4.5rem;
   background-color: lighten(purple, 25%);
-  border-radius: .25rem;
+  border-radius: 0.75rem; 
 }
 
 .bd-example-container-fluid {
@@ -202,12 +245,12 @@ box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0p
 }
 
   .example {
-    font-family: "Montserrat", sans-serif;
+    font-family:  $wsg-sans-serif;
     letter-spacing: .20px;
     margin-right: 0;
     margin-left: 0;
     border-width: 0.5px;
-    border-radius: .25rem;
+    border-radius: 0.75rem; 
    
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     z-index: 99;
@@ -232,7 +275,7 @@ pre {
 
 
   .table-of-contents {
-    font-family: "Montserrat", sans-serif;
+    font-family:  $wsg-sans-serif;
   }
 
   #table-of-contents, ul, li {
@@ -561,10 +604,8 @@ select.grid-control-field::-ms-expand {
  size: 10px;
 }
 
-.card-footer {
-  width: 100%;
-  border:none;
-}
+
+
 /* Grid Footer */
 
 .grid-footer {
@@ -610,7 +651,7 @@ select.grid-control-field::-ms-expand {
   white-space: nowrap;
   background: #fff;
   border: 0.5rem solid #777;
-  color:#0194d3!important;
+  color:$webstop-blue!important;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
   cursor: pointer;

@@ -20,7 +20,7 @@ menu:
 ## Tag with Color & Close
 
 {{< example >}}
-<span class="tag bg-primary">Blueberry <i class="icon-cancel"></i></span>
+<span class="tag bg-primary">Blueberry <i class="fas fa-xmark"></i></span>
 {{< /example >}} 
 
 
@@ -31,17 +31,17 @@ This will apply consistent spacing around your tags.
 
 {{< example >}}
 <div class="tag-group">
-  <span class="tag bg-danger">Strawberry <i class="icon-cancel"></i></span>
-  <span class="tag bg-success">Lime <i class="icon-cancel"></i></span>
-  <span class="tag bg-warning">Lemon <i class="icon-cancel"></i></span>
-  <span class="tag bg-primary">Blueberry <i class="icon-cancel"></i></span>
-  <span class="tag bg-danger">Strawberry <i class="icon-cancel"></i></span>
-  <span class="tag bg-success">Lime <i class="icon-cancel"></i></span>
-  <span class="tag bg-warning">Lemon <i class="icon-cancel"></i></span>
-  <span class="tag bg-primary">Blueberry <i class="icon-cancel"></i></span>
-  <span class="tag bg-danger">Strawberry <i class="icon-cancel"></i></span>
-  <span class="tag bg-success">Lime <i class="icon-cancel"></i></span>
-  <span class="tag bg-warning">Lemon <i class="icon-cancel"></i></span>
-  <span class="tag bg-primary">Blueberry <i class="icon-cancel"></i></span>
+  <span class="tag bg-danger">Strawberry <i class="fas fa-xmark"></i></span>
+  <span class="tag bg-success">Lime <i class="fas fa-xmark"></i></span>
+  <span class="tag bg-warning">Lemon <i class="fas fa-xmark"></i></span>
+  <span class="tag bg-primary">Blueberry <i class="fas fa-xmark"></i></span>
+  <span class="tag bg-danger">Strawberry <i class="fas fa-xmark"></i></span>
+  <span class="tag bg-success">Lime <i class="fas fa-xmark"></i></span>
+  <span class="tag bg-warning">Lemon <i class="fas fa-xmark"></i></span>
+  <span class="tag bg-primary">Blueberry <i class="fas fa-xmark"></i></span>
+  <span class="tag bg-danger">Strawberry <i class="fas fa-xmark"></i></span>
+  <span class="tag bg-success">Lime <i class="fas fa-xmark"></i></span>
+  <span class="tag bg-warning">Lemon <i class="fas fa-xmark"></i></span>
+  <span class="tag bg-primary">Blueberry <i class="fas fa-xmark"></i></span>
 </div>
 {{< /example >}}
