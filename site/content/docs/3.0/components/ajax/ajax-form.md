@@ -62,7 +62,7 @@ is returned.
 
 The `data-ajax-form` & `action` attributes are required. The rest are optional.
 
-<table class="table table-bordered>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Options</th>
