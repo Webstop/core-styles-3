@@ -35,7 +35,7 @@ and applied them to our environment.
                 need to get the most out of your design system.</p>
         </div>
         <div class="mt-2 mb-4 col-6">
-            <div class="card h-100">
+            <div class="card card-box h-100">
                 <div class="card-body">
                     <h4 class="mb-4 text-center">Front-End Components</h4>
                     <p>
@@ -46,12 +46,14 @@ and applied them to our environment.
                     </p>
                 </div>
                 <div class="card-footer text-center">
-                    <a href="/guides/3.0/components/" class="btn btn-primary btn-block">Learn More </a>
+                 <div class="d-grid ">
+                    <a href="/guides/3.0/components/" class="btn learn-more-btn" type="button"><span class="learn-more-btn-text">Learn More</span></a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="mt-2 mb-4 col-6">
-            <div class="card h-100">
+            <div class="card card-box h-100">
                 <div class="card-body">
                     <h4 class="mb-4 text-center">Development Approach</h4>
                     <p>
@@ -64,12 +66,14 @@ and applied them to our environment.
                     </p>
                 </div>
                 <div class="card-footer text-center">
-                    <a href="/guides/3.0/development-approach/" class="btn btn-primary btn-block">Learn More</a>
+                 <div class="d-grid ">
+                    <a href="/guides/3.0/development-approach/" class="btn learn-more-btn" type="button"><span class="learn-more-btn-text">Learn More</span></a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="mt-2 mb-4 col-6">
-            <div class="card h-100">
+            <div class="card card-box h-100">
                 <div class="card-body">
                     <h4 class=" mb-4 text-center">Devlopement Process</h4>
                     <p>
@@ -80,12 +84,14 @@ and applied them to our environment.
                     </p>
                 </div>
                 <div class="card-footer text-center">
-                    <a href="/guides/3.0/development-process/" class="btn btn-primary btn-block">Learn More </i></a>
+                 <div class="d-grid ">
+                    <a href="/guides/3.0/development-process/" class="btn learn-more-btn" type="button"><span class="learn-more-btn-text">Learn More</span></a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="mt-2 mb-4 col-6">
-            <div class="card h-100">
+            <div class="card card-box h-100">
                 <div class="card-body">
                     <h4 class=" mb-4 text-center">Explore: Extra Topics</h4>
                     <h5 class=" mb-4 text-center">Working with AJAX</h5>
@@ -94,7 +100,9 @@ and applied them to our environment.
                     </p>
                 </div>
                 <div class="card-footer text-center">
-                    <a href="/guides/3.0/working-with-ajax/" class="btn btn-primary btn-block">Learn More </i></a>
+                 <div class="d-grid ">
+                    <a href="/guides/3.0/working-with-ajax/" class="btn learn-more-btn" type="button"><span class="learn-more-btn-text">Learn More</span></a>
+                </div>
                 </div>
             </div>
         </div>
