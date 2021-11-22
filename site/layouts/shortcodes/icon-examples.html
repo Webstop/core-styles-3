@@ -62,10 +62,10 @@
     <div class="grid icon-examples row p-2">
       {{ range .Site.Data.icons }}
         <div class="grid-item item col-md-3 mb-3" data-style="{{ .style }}" data-toggle="{{ .category }}" data-title="{{ .name }} {{ .search }}">
-          <div class="grid-item-content icon-example card-box card h-100">
+          <div class="grid-item-content icon-example card card-box h-100">
             <div class="card-body text-center">
-             
-              <p class="icon-example-html"><i class="{{ .style }} {{ .icon }} fa-3x"></i></p>
+             <div class="py-2">
+              <span class="icon-example-html"><i class="{{ .style }} {{ .icon }} fa-3x"></i></span></div>
               <h3 class="grid-card-title">{{ .name }}</h3>
               <code class="icon-example-code code">&#x3C;i class=&#x22;{{ .style }} {{ .icon }}&#x22;&#x3E;&#x3C;/i&#x3E;</code>
                             
