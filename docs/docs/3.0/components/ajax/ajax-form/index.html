@@ -422,8 +422,8 @@
     <h2 id="examples">Examples</h2>
 <p>Here are a couple of use examples of the AJAX Form feature.</p>
 <h3 id="basic-example">Basic Example</h3>
-<p>This example contains the minimum attributes need. The form contains the <code>data-ajax-form</code> attribute 
-which triggers the form to submit via ajax instead of a web page reload. The <code>action</code> attribute 
+<p>This example contains the minimum attributes need. The form contains the <code>data-ajax-form</code> attribute
+which triggers the form to submit via ajax instead of a web page reload. The <code>action</code> attribute
 specifies the URL to pull the content from, the content is expected to be in HTML format.</p>
 <div class="my-3 p-5 example">
 <form data-ajax-form action="/ajax/alert_success">
@@ -436,8 +436,7 @@ specifies the URL to pull the content from, the content is expected to be in HTM
   </button>
 </form>
 
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">
-<span class="p">&lt;</span><span class="nt">form</span> <span class="na">data-ajax-form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">data-ajax-form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;title-example&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;py-2&#34;</span><span class="p">&gt;</span>Title<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control p-2&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;title-example&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;title-example&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Title&#34;</span><span class="p">&gt;</span>
@@ -445,14 +444,12 @@ specifies the URL to pull the content from, the content is expected to be in HTM
   <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary mt-3&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span><span class="p">&gt;</span>
     Save Title
   <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
-
-</code></pre></div>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="example-with-all-options">Example with All Options</h3>
-<p>In the following example we enable all of the optional attributes, including <code>data-target</code> and 
-<code>data-power-bar</code>. By default the ajax will replace the form with the ajax content, in this example 
-we select a different target using the <code>data-target</code> attribute, it accepts standard jQuery selectors. 
-The <code>data-power-bar</code> attribute triggers a reload of the Shopping List Power Bar after the ajax content 
+<p>In the following example we enable all of the optional attributes, including <code>data-target</code> and
+<code>data-power-bar</code>. By default the ajax will replace the form with the ajax content, in this example
+we select a different target using the <code>data-target</code> attribute, it accepts standard jQuery selectors.
+The <code>data-power-bar</code> attribute triggers a reload of the Shopping List Power Bar after the ajax content
 is returned.</p>
 <div class="my-3 p-5 example">
 <form data-ajax-form action="/ajax/alert_error" data-target="#target-1" data-power-bar>
@@ -467,8 +464,7 @@ is returned.</p>
 <div id="target-1" class="mt-4">
   <div class="alert alert-success">Ajax Content goes here.</div>
 </div>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">
-<span class="p">&lt;</span><span class="nt">form</span> <span class="na">data-ajax-form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_error&#34;</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#target-1&#34;</span> <span class="na">data-power-bar</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">data-ajax-form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_error&#34;</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#target-1&#34;</span> <span class="na">data-power-bar</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;title-example&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;py-2&#34;</span><span class="p">&gt;</span>Title<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control p-2&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;title-example&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;title-example&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Title&#34;</span><span class="p">&gt;</span>
@@ -479,8 +475,7 @@ is returned.</p>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;target-1&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-4&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-success&#34;</span><span class="p">&gt;</span>Ajax Content goes here.<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="attributes">Attributes</h2>
 <p>The <code>data-ajax-form</code> &amp; <code>action</code> attributes are required. The rest are optional.</p>
 <table class="table table-bordered>

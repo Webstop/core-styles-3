@@ -420,36 +420,36 @@
       <p class="docs-heading-tagline"></p>
     </section>
     <h2 id="use-class-selectors-for-styling">Use Class Selectors for Styling</h2>
-<p>Styling should only be applied to HTML class attributes with very few exceptions. The one exception is when you are changing 
+<p>Styling should only be applied to HTML class attributes with very few exceptions. The one exception is when you are changing
 the styling of <em>every element on the site</em>, like when changing the font of all text on the site. Otherwise use class names.</p>
 <h3 id="why-only-classes">Why only classes?</h3>
-<p><strong>When compared to styling HTML tags</strong>, class names let you focus on just the elements you want to style, your styling won&rsquo;t 
-have unintended consequences of affecting the styling of elements you didn&rsquo;t intend to if only namespaced classes are 
-involved. This is the biggest issue I run into with bad naming. Someone makes a CSS ruleset that uses an HTML tag as part 
+<p><strong>When compared to styling HTML tags</strong>, class names let you focus on just the elements you want to style, your styling won&rsquo;t
+have unintended consequences of affecting the styling of elements you didn&rsquo;t intend to if only namespaced classes are
+involved. This is the biggest issue I run into with bad naming. Someone makes a CSS ruleset that uses an HTML tag as part
 of the selector and it ends up applying that styling to things they didn&rsquo;t intend it to.</p>
-<p>Sometimes I see something like this done <code>.some-class li</code> and the developer thinks they are safe because they used a class, 
-but then later we discover that there are some li tags nested inside the <code>.some-class</code> that get affected. Instead it 
+<p>Sometimes I see something like this done <code>.some-class li</code> and the developer thinks they are safe because they used a class,
+but then later we discover that there are some li tags nested inside the <code>.some-class</code> that get affected. Instead it
 should be written like <code>.namespace .namespace-attribute</code></p>
-<p><strong>When compared to styling HTML id attributes</strong>, class names let you build reusable styles. Remember the very definition 
-of an id attribute states that it should be a value that&rsquo;s unique on the page, so it can literally only exist once on 
-the page. If their is more than one id of the same name on the page we have a bug and are violating the W3C specifications. 
+<p><strong>When compared to styling HTML id attributes</strong>, class names let you build reusable styles. Remember the very definition
+of an id attribute states that it should be a value that&rsquo;s unique on the page, so it can literally only exist once on
+the page. If their is more than one id of the same name on the page we have a bug and are violating the W3C specifications.
 Plus there&rsquo;s no real advantage to an id over a class.</p>
-<p>The id is for JavaScript. Think of the id attribute as being meant for JavaScript features to 
-be able to identify one element from another, like when you add a circular item to a shopping list, how does the script 
-logic know one circular item from the dozen or so other circular items on the page? The id attribute acts as the unique 
+<p>The id is for JavaScript. Think of the id attribute as being meant for JavaScript features to
+be able to identify one element from another, like when you add a circular item to a shopping list, how does the script
+logic know one circular item from the dozen or so other circular items on the page? The id attribute acts as the unique
 identifier which enables this.</p>
-<p><strong>When compared to styling the HTML style attribute</strong>, class names allow you to place the styles in a consistent place, 
-engage in a separation of concerns (html in one file, css in another, &amp; javascript in another), and build reusable styling. 
+<p><strong>When compared to styling the HTML style attribute</strong>, class names allow you to place the styles in a consistent place,
+engage in a separation of concerns (html in one file, css in another, &amp; javascript in another), and build reusable styling.
 Most of the time when someone styles the</p>
 <p><em>There&rsquo;s really no down side to always styling class attributes, and quite a few issues are avoided when you do.</em></p>
 <h2 id="component-naming-conventions">Component Naming Conventions</h2>
-<p>Nearly everything should be a component. Only when desiring to update the base styling of <em>every element on the site</em> 
+<p>Nearly everything should be a component. Only when desiring to update the base styling of <em>every element on the site</em>
 should you style anything in a pattern other than the component pattern.
 <em>See the <a href="/docs/3.0/guides/components">components guide</a> for more details on creating
 components.</em></p>
-<p>The base component will be enclosed in a class of it&rsquo;s name. 
+<p>The base component will be enclosed in a class of it&rsquo;s name.
 E.G. a coupon will be enclosed in an element (perhaps a <code>div</code> tag) with the <code>.coupon</code> class.</p>
-<p>The class names of the component will be prefixed by the component&rsquo;s name. 
+<p>The class names of the component will be prefixed by the component&rsquo;s name.
 E.G. the class for a coupon&rsquo;s title will be <code>.coupon-title</code>.</p>
 <p>The class names for a single item will be singular and when we have a collection of items the wrapper class will be the plural version of the components name.</p>
 <h3 id="example">Example</h3>
@@ -471,15 +471,15 @@ E.G. the class for a coupon&rsquo;s title will be <code>.coupon-title</code>.</p
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   ...
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><p>If you haven&rsquo;t read the <a href="/docs/3.0/guides/components">components guide</a> guide lately it is a good idea to review it now. 
-It has valuable information about things like the various types of class names and the conventions for naming them, the 
-order classes should be applied to the HTML class attribute, and etc. See the <a href="/docs/3.0/guides/components">components guide</a> 
+</code></pre></div><p>If you haven&rsquo;t read the <a href="/docs/3.0/guides/components">components guide</a> guide lately it is a good idea to review it now.
+It has valuable information about things like the various types of class names and the conventions for naming them, the
+order classes should be applied to the HTML class attribute, and etc. See the <a href="/docs/3.0/guides/components">components guide</a>
 for more details on creating components.</p>
 <h2 id="use-semantic-design">Use Semantic Design</h2>
-<p>HTML tags are designed to communicate meaning. A common mistake developers make is placing content into <code>div</code> tags when 
-a more appropriate tag exists. For example, headings have <code>h1</code> through <code>h6</code> tags, paragraphs have <code>p</code> tags, lists have 
+<p>HTML tags are designed to communicate meaning. A common mistake developers make is placing content into <code>div</code> tags when
+a more appropriate tag exists. For example, headings have <code>h1</code> through <code>h6</code> tags, paragraphs have <code>p</code> tags, lists have
 <code>ul</code> and <code>ol</code> tags, and etc. Th</p>
-<p>Don&rsquo;t just place everything into <code>div</code> tags. The <code>div</code> tag is only meant to be a container for being able to apply layout 
+<p>Don&rsquo;t just place everything into <code>div</code> tags. The <code>div</code> tag is only meant to be a container for being able to apply layout
 to non-semantic elements.</p>
 
   </main>
