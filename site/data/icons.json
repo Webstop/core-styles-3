@@ -1,6 +1,6 @@
 [
   {
-    "name": "User",
+    "name": "Account",
     "style": "fad",
     "icon": "fa-user-circle",
     "search": "account profile user ",
@@ -9,7 +9,7 @@
   {
     "name": "Shopping List",
     "style": "fad",
-    "icon": "fa-clipboard-list-check",
+    "icon": "fa-list-check",
     "search": "shopping list ",
     "category": "webstop"
   },
@@ -33,13 +33,6 @@
     "icon": "fa-bars",
     "search": "toggle menu hamburger lines expand",
     "category": "UI"
-  },
-  {
-    "name": "Cart",
-    "style": "fad",
-    "icon": "fa-shopping-cart",
-    "search": "shopping cart checkout grocery",
-    "category": "admin"
   },
   {
     "name": "Arrow Up",
@@ -71,7 +64,7 @@
   },
   {
     "name": "Check",
-    "style": "fad",
+    "style": "fas",
     "icon": "fa-check",
     "search": "check checkmark correct tick",
     "category": "UI"
@@ -105,6 +98,13 @@
     "category": "retailer"
   },
   {
+    "name": "Tag",
+    "style": "fad",
+    "icon": "fa-tag",
+    "search": "tag coupon sale price",
+    "category": "retailer"
+  },
+  {
     "name": "Phone",
     "style": "fad",
     "icon": "fa-mobile-alt",
@@ -126,11 +126,11 @@
     "category": "admin"
   },
   {
-    "name": "Newsletter ",
+    "name": "Newsletter",
     "style": "fad",
-    "icon": "fa-newspaper",
+    "icon": "fa-paper-plane",
     "search": "newsletter newspaper emails",
-    "category": "feature"
+    "category": "admin"
   },
   {
     "name": "Pharmacy",
@@ -235,7 +235,7 @@
     "style": "fad",
     "icon": "fa-print",
     "search": "print printable printer",
-    "category": "feature"
+    "category": "admin"
   },
   {
     "name": "Employee",
@@ -424,14 +424,14 @@
     "style": "fad",
     "icon": "fa-qrcode",
     "search": "QR scan codes",
-    "category": "feature"
+    "category": "admin"
   },
   {
     "name": "Barcode Scan",
     "style": "fad",
     "icon": "fa-barcode-scan",
     "search": "barcodes scan codes bar code scannable",
-    "category": "feature"
+    "category": "admin"
   },
   {
     "name": "AWS",
@@ -582,8 +582,8 @@
   },
   {
     "name": "lasso",
-    "style": "fab",
-    "icon": "",
+    "style": "fak",
+    "icon": "fa-lasso",
     "search": "lasso code",
     "category": "brand"
   },
@@ -634,7 +634,7 @@
     "style": "fad",
     "icon": "fa-rocket-launch",
     "search": "rocket launch ",
-    "category": "feature"
+    "category": "admin"
   },
   {
     "name": "Save",
@@ -767,21 +767,21 @@
     "style": "fad",
     "icon": "fa-cloud",
     "search": "cloud internet",
-    "category": "feature"
+    "category": "admin"
   },
   {
     "name": "Cloud Download",
     "style": "fad",
     "icon": "fa-cloud-download",
     "search": "cloud internet download",
-    "category": "feature"
+    "category": "admin"
   },
   {
     "name": "Cloud Upload",
     "style": "fad",
     "icon": "fa-cloud-upload",
     "search": "cloud internet upload",
-    "category": "feature"
+    "category": "admin"
   },
   {
     "name": "Settings",
@@ -812,25 +812,18 @@
     "category": "admin"
   },
   {
-    "name": "Calendar",
-    "style": "fad",
-    "icon": "fa-calendar",
-    "search": "calendar calender date month week year",
-    "category": "date/time"
-  },
-  {
     "name": "Camera",
     "style": "fad",
     "icon": "fa-camera",
     "search": "camera photo picture images media",
-    "category": "feature"
+    "category": "admin"
   },
   {
     "name": "Comment",
     "style": "fad",
     "icon": "fa-comment",
     "search": "comment",
-    "category": "feature"
+    "category": "admin"
   },
   {
     "name": "Cut",
@@ -868,24 +861,17 @@
     "category": "UI"
   },
   {
-    "name": "Envelope",
-    "style": "fad",
-    "icon": "fa-envelope",
-    "search": "envelope mail message letter newsletter",
-    "category": "feature"
-  },
-  {
     "name": "Envelope Open",
     "style": "fad",
     "icon": "fa-envelope-open-text",
     "search": "envelope mail message opened letter newsletter",
-    "category": "feature"
+    "category": "admin"
   },
   {
-    "name": "Warning",
+    "name": "Warning Caution Error",
     "style": "fad",
     "icon": "fa-exclamation-triangle",
-    "search": "warning error bug issue 404 glitch notification exclamation mark hazard",
+    "search": "warning caution error bug issue 404 glitch notification exclamation mark hazard",
     "category": "symbols"
   },
   {
@@ -1047,7 +1033,7 @@
     "style": "fad",
     "icon": "fa-id-card",
     "search": "ID card license identification",
-    "category": "feature"
+    "category": "admin"
   },
   {
     "name": "Image",
@@ -1173,7 +1159,7 @@
     "style": "fad",
     "icon": "fa-shield",
     "search": "shield block",
-    "category": "feature"
+    "category": "admin"
   },
   {
     "name": "Shopping Cart",
@@ -1250,12 +1236,12 @@
     "style": "fad",
     "icon": "fa-ticket",
     "search": "ticket",
-    "category": "feature"
+    "category": "admin"
   },
   {
-    "name": "Close",
+    "name": "Close Circle",
     "style": "fad",
-    "icon": "fa-times-circle",
+    "icon": "fa-circle-xmark",
     "search": "close x end escape exit",
     "category": "UI"
   },
@@ -1275,7 +1261,7 @@
   },
   {
     "name": "Trademark",
-    "style": "fad",
+    "style": "fas",
     "icon": "fa-trademark",
     "search": "trademark trade mark tm",
     "category": "symbols"
@@ -1321,5 +1307,13 @@
     "icon": "fa-watch-calculator",
     "search": "calculator watch",
     "category": "devices"
+  }
+  ,
+  {
+    "name": "Add Create",
+    "style": "fad",
+    "icon": "fa-plus-circle",
+    "search": "add create new plus",
+    "category": "admin"
   }
 ]

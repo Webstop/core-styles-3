@@ -1,4 +1,7 @@
 {{ define "main" }}
+<header class="admin-header" role="banner">
+  {{ partial "docs-navbar" . }}
+</header>
   <section class="mt-0 mb-0 pb-0 pt-0">
     <div class="bg-title-head pt-3 pb-3 d-flex justify-content-center align-items-center inner-shadow">
       <div class="container">
@@ -23,7 +26,7 @@
   </section>
 
   <main class="index p-5">
-    <section class="pt-5 pb-5">
+  
       <div class="container">
         <div class="row d-flex">
           {{ range .Pages }}
@@ -39,10 +42,11 @@
                     </div>
                   </div>
                   <div class="card-footer text-center">
-                    <div class="d-grid gap-2">
-                      <button class="btn learn-more-btn" type="button">
-                        <a href="{{ .URL }}" class="learn-more-btn-text">Learn More</a>
-                      </button>
+                    <div class="d-grid">
+                      <a href="{{ .URL }}" class="btn learn-more-btn" type="button">
+                          <span class="learn-more-btn-text">Learn More</span>
+                        
+                      </a>  
                     </div>
                   </div>
                 </div>
@@ -51,6 +55,6 @@
           {{ end }}
         </div>
       </div>
-    </section>
+   
   </main>
 {{ end }}
