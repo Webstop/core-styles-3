@@ -14,10 +14,10 @@
   }
 
   // Insert copy to clipboard button before .highlight
-  var btnHtml = '<div class="bd-clipboard"><button type="button" class="btn-clipboard btn btn-primary btn-sm float-end" title="Copy to clipboard">Copy</button></div>'
+  var btnHtml = '<div class="bd-clipboard"><button type="button" class="btn-clipboard btn btn-secondary btn-sm" title="Copy to clipboard"><i class="fad fa-cut"></i> Copy</button></div>'
   document.querySelectorAll('div.highlight')
     .forEach(function (element) {
-      element.insertAdjacentHTML('beforebegin', btnHtml)
+      element.insertAdjacentHTML('afterbegin', btnHtml)
     })
 
   document.querySelectorAll('.btn-clipboard')
