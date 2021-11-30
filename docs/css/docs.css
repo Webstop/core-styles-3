@@ -11597,7 +11597,7 @@ textarea.form-control-lg {
 }
 /* CSS Customizations done by Mickey*/
 .wsg-header {
-  background-color: #000;
+  background-color: #01000b;
 }
 
 .wsg-title-header-section {
@@ -11622,7 +11622,7 @@ textarea.form-control-lg {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #80d9ff;
+  background: #c1c1c1;
   border-radius: 0.75rem;
 }
 
@@ -11647,16 +11647,16 @@ textarea.form-control-lg {
 /* Cards */
 .card-box {
   background-clip: border-box;
-  border-radius: 12px;
-  border: none !important;
+  border-radius: 1rem;
+  border: 0.5px solid #eee !important;
   background: #ffffff;
-  box-shadow: 0 2px 7px rgba(96, 97, 112, 0.2);
+  box-shadow: 0 2px 4px rgba(96, 97, 112, 0.5);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .card-box:hover {
   transition: all 0.5s ease-out;
-  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
-  border: 1px solid #cccccc;
+  box-shadow: 0px 3px 5px rgba(38, 38, 38, 0.2);
+  border: 1px solid #e0e0e0;
   background-color: white;
   transform: scale(1.02);
   transform-origin: 50% 50%;
@@ -11671,14 +11671,15 @@ textarea.form-control-lg {
   width: 100%;
   border: none;
   background-color: rgba(0, 0, 0, 0.03);
-  border-radius: 0.75rem;
+  border-radius: 0rem 0rem 0.75rem 0.75rem;
+  padding: 1.25rem;
 }
 
 .card-footer:last-child {
   width: 100%;
   border: none;
   background-color: rgba(0, 0, 0, 0.03);
-  border-radius: 0.75rem;
+  border-radius: 0rem 0rem 0.75rem 0.75rem;
 }
 
 /* END Cards */
@@ -11775,7 +11776,7 @@ textarea.form-control-lg {
   color: #fff;
   font-weight: 400;
   font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  letter-spacing: 0.2px;
+  letter-spacing: 1px;
   text-decoration: none;
 }
 
@@ -11783,7 +11784,7 @@ textarea.form-control-lg {
   color: #fff;
   font-weight: 500;
   font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  letter-spacing: 0.2px;
+  letter-spacing: 1px;
   text-decoration: none;
 }
 
@@ -12213,7 +12214,7 @@ select.grid-control-field::-ms-expand {
 
 /* Button */
 .btn {
-  border-radius: 6px;
+  border-radius: 0.375rem;
 }
 
 @keyframes gridButton {
@@ -12315,6 +12316,7 @@ select.grid-control-field::-ms-expand {
 
 .bg-title-head {
   background: #00b3ff;
+  background: linear-gradient(90deg, #00b3ff 0%, #13b9ff 50%, #00b3ff 100%);
 }
 
 .docs-heading {

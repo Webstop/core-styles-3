@@ -481,7 +481,7 @@ so by adding or removing the Bootstrap class <code>d-none</code>.</p>
 Any html elements with a <code>data-form-toggle</code> attribute containing the <code>name</code> value of the checkbox will toggle between displaying and
 hiding when the checkbox is selected and unselected. Place a <code>d-none</code> class on the element with the <code>data-form-toggle</code> attribute
 to hide the content by default, commonly done when the checkbox is unchecked on page load.</p>
-<div class="my-3 p-5 example">
+<div class="my-3 p-3 example">
 <div class="form-group form-check">
   <input class="form-check-input" data-form-toggle-trigger type="checkbox" value="1" 
     name="has-contact-us" id="has-contact-us">
@@ -503,7 +503,7 @@ to hide the content by default, commonly done when the checkbox is unchecked on 
 <h3 id="checked-example">Checked Example</h3>
 <p>The content can also default to showing by omitting the <code>d-none</code> class on the element with the <code>data-form-toggle</code> attribute,
 useful for checkboxes that are already checked when the page is rendered.</p>
-<div class="my-3 p-5 example">
+<div class="my-3 p-3 example">
 <div class="form-group form-check">
   <input class="form-check-input" data-form-toggle-trigger type="checkbox" value="1" checked="checked" 
     name="has-custom-pages-cms" id="has-custom-pages-cms">
@@ -526,7 +526,7 @@ useful for checkboxes that are already checked when the page is rendered.</p>
 <p>Most of the time you&rsquo;ll want the additional content displayed when the checkbox is checked and hidden when it&rsquo;s unchecked. Sometimes
 you&rsquo;ll want the opposite behavior. This is easy to control by the <code>d-none</code> class on the element with the <code>data-form-toggle</code>
 attribute.</p>
-<div class="my-3 p-5 example">
+<div class="my-3 p-3 example">
 <div class="form-group form-check">
   <input class="form-check-input" data-form-toggle-trigger type="checkbox" value="1" checked="checked" 
     name="same-address" id="same-address">
@@ -581,7 +581,7 @@ attribute.</p>
 <p>There are two basic ways to have multiple elements toggle. The first method is the place all of the items you&rsquo;d like to toggle
 inside a wrapper and to toggle the wrapper. The first method can be seen in the Reverse Toggle Example above. The second
 method is to to place the <code>data-form-toggle</code> attribute on multiple elements as illustrated below.</p>
-<div class="my-3 p-5 example">
+<div class="my-3 p-3 example">
 <div class="form-group form-check">
   <input class="form-check-input" data-form-toggle-trigger type="checkbox" value="1" 
     name="has-contact-us-2" id="has-contact-us-2">
@@ -616,7 +616,7 @@ this sort of indentation is to reach for Bootstrap&rsquo;s built-in
 Bootstrap spacing classes line up neatly. However the same <code>form-check</code> class used to align the text in a standard Bootstrap
 checkbox element can be used to provide indentation. The example below shows a number of common use cases
 for indenting using the <code>form-check</code> class.</p>
-<div class="my-3 p-5 example">
+<div class="my-3 p-3 example">
 <div class="form-group form-check">
   <input class="form-check-input" data-form-toggle-trigger type="checkbox" value="1" 
     name="has-circulars" id="has-circulars" checked>
@@ -807,7 +807,7 @@ for a content toggle to be useful it needs to trigger based on which <em>value</
 </table>
 <h3 id="radio-button-example">Radio Button Example</h3>
 <p>Remember to place the <code>data-form-toggle-trigger</code> on every radio button, even those who don&rsquo;t display extra content.</p>
-<div class="my-3 p-5 example">
+<div class="my-3 p-3 example">
 <div class="form-group form-check">
   <input type="radio" name="ad-type" id="ad-type-none" value="none" class="form-check-input" data-form-toggle-trigger>
   <label class="form-check-label" for="ad-type-none">No Circular</label>
@@ -845,7 +845,7 @@ for a content toggle to be useful it needs to trigger based on which <em>value</
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="select-list-example">Select List Example</h3>
-<div class="my-3 p-5 example">
+<div class="my-3 p-3 example">
 <div class="form-group">
   <label for="qty">Quantity</label>
   <select class="form-control" name="qty" id="qty" data-form-toggle-trigger>
@@ -879,7 +879,7 @@ for a content toggle to be useful it needs to trigger based on which <em>value</
 multiple values. To do this, use a coma separated list in the <code>data-form-toggle-show-for</code> attribute, and omit the
 <code>data-form-toggle-match</code> attribute.</p>
 <p>This first example uses radio buttons and has a content section that is displayed for two options and hidden for the other two.</p>
-<div class="my-3 p-5 example">
+<div class="my-3 p-3 example">
 <div class="form-group form-check">
   <input type="radio" name="ad-type-2" id="ad-type-2-none" value="none" class="form-check-input" data-form-toggle-trigger>
   <label class="form-check-label" for="ad-type-2-none">No Circular</label>
@@ -925,7 +925,7 @@ multiple values. To do this, use a coma separated list in the <code>data-form-to
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <p>This second example uses a select list and has a content section that is displayed for two options and hidden for the other two.</p>
-<div class="my-3 p-5 example">
+<div class="my-3 p-3 example">
 <div class="form-group">
   <label for="qty-2">Quantity</label>
   <select class="form-control" name="qty-2" id="qty-2" data-form-toggle-trigger>
@@ -961,7 +961,7 @@ multiple values. To do this, use a coma separated list in the <code>data-form-to
 ensure only the correct value triggers the toggle.</p>
 <p>In the following example a match using the default <code>contain</code> method would cause a match on <code>A</code>, <code>AAA</code>, and <code>AAA</code>. Using
 <code>data-form-toggle-match=&quot;exact&quot;</code> we are able to match on only <code>AAA</code> as desired.</p>
-<div class="my-3 p-5 example">
+<div class="my-3 p-3 example">
 <div class="form-group">
   <label for="letter">Award Level</label>
   <select class="form-control" name="award" id="award" data-form-toggle-trigger>
