@@ -1,7 +1,7 @@
 /* CSS Customizations done by Mickey*/
 
 .wsg-header {
-  background-color:#000;
+  background-color: $dark;
 }
 
 .wsg-title-header-section {
@@ -27,7 +27,7 @@
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: lighten($blue, 25%); 
+  background: #c1c1c1; 
   border-radius:0.75rem;
 }
 
@@ -55,15 +55,15 @@
 
 .card-box {
   background-clip: border-box;
-  border-radius: 12px;
-  border: none!important;
+  border-radius: 1rem;
+  border: 0.5px solid #eee!important;
   background: #ffffff;
-  box-shadow: 0 2px 7px rgb(96 97 112 / 20%);
+  box-shadow: 0 2px 4px rgba(96, 97, 112, 50%);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   &:hover {
     transition: all 0.5s ease-out;
-    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
-    border: 1px solid #cccccc;
+    box-shadow: 0px 3px 5px rgba(38, 38, 38, 0.2);
+    border: 1px solid rgb(224, 224, 224);
     background-color: white;
     transform: scale(1.02);
     transform-origin: 50% 50%;
@@ -80,14 +80,15 @@
   width: 100%;
   border:none;
   background-color: rgba(0, 0, 0, 0.03);
-  border-radius: 0.75rem;
+  border-radius: 0rem 0rem 0.75rem 0.75rem;
+  padding:1.25rem;
 }
 
 .card-footer:last-child {
   width: 100%;
   border:none;
   background-color: rgba(0, 0, 0, 0.03);
-  border-radius: 0.75rem;
+  border-radius: 0rem 0rem 0.75rem 0.75rem;
 }
 
 /* END Cards */
@@ -182,14 +183,14 @@
     color: #fff;
     font-weight: 400;
     font-family:  $wsg-sans-serif;
-    letter-spacing: .20px;
+    letter-spacing: 1px;
     text-decoration: none;
   }
   .learn-more-btn-text:hover {
     color: #fff;
     font-weight: 500;
     font-family: $wsg-sans-serif;
-    letter-spacing: .20px;
+    letter-spacing: 1px;
     text-decoration: none;
   }
 
@@ -620,7 +621,8 @@ select.grid-control-field::-ms-expand {
 /* Button */
 
 .btn {
-  border-radius: 6px;
+  border-radius: 0.375rem;
+  
 }
 
 @keyframes gridButton {
