@@ -59,6 +59,10 @@
   </url>
   
   <url>
+    <loc>https://guides.webstop.com/docs/3.0/icons/admin-icons/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/docs/3.0/layouts/admin/</loc>
   </url>
   
@@ -127,7 +131,7 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/icons/core-icons/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/icons/core-icons/</loc>
   </url>
   
   <url>
@@ -199,7 +203,7 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/utilities/max-width/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/utilities/max-width/</loc>
   </url>
   
   <url>

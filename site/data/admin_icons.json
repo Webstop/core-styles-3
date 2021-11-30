@@ -1,0 +1,128 @@
+[
+  {
+    "name": "AWS",
+    "style": "fab",
+    "icon": "fa-aws",
+    "search": "amazon web services s3 servers cloud",
+    "category": "brand"
+  },
+  {
+    "name": "code",
+    "style": "fad",
+    "icon": "fa-code",
+    "search": "code programming language",
+    "category": "admin"
+  },
+  {
+    "name": "database",
+    "style": "fad",
+    "icon": "fa-database",
+    "search": "database",
+    "category": "admin"
+  },
+  {
+    "name": "debug",
+    "style": "fad",
+    "icon": "fa-debug",
+    "search": "bugs debug fix glitch bug bugfix",
+    "category": "admin"
+  },
+  {
+    "name": "docker",
+    "style": "fab",
+    "icon": "fa-docker",
+    "search": "docker",
+    "category": "brand"
+  },
+  {
+    "name": "dropbox",
+    "style": "fab",
+    "icon": "fa-dropbox",
+    "search": "dropbox",
+    "category": "brand"
+  },
+  {
+    "name": "duck",
+    "style": "fad",
+    "icon": "fa-duck",
+    "search": "duck cyberduck FTP SFTP servers",
+    "category": "brand"
+  },
+  {
+    "name": "elementor",
+    "style": "fab",
+    "icon": "fa-elementor",
+    "search": "elementor wordpress plugin wp",
+    "category": "brand"
+  },
+  {
+    "name": "ember",
+    "style": "fab",
+    "icon": "fa-ember",
+    "search": "ember js javascript programming language",
+    "category": "brand"
+  },
+  {
+    "name": "git",
+    "style": "fab",
+    "icon": "fa-git",
+    "search": "github code programming language servers git",
+    "category": "brand"
+  },
+  {
+    "name": "git-square",
+    "style": "fab",
+    "icon": "fa-git-square",
+    "search": "git github code programming language servers",
+    "category": "brand"
+  },
+  {
+    "name": "github",
+    "style": "fab",
+    "icon": "fa-github",
+    "search": "git github code programming language servers",
+    "category": "brand"
+  },
+  {
+    "name": "github-square",
+    "style": "fab",
+    "icon": "fa-github-square",
+    "search": "git github code programming language servers",
+    "category": "brand"
+  },
+  {
+    "name": "google",
+    "style": "fab",
+    "icon": "fa-google",
+    "search": "google",
+    "category": "brand"
+  },
+  {
+    "name": "google-drive",
+    "style": "fab",
+    "icon": "fa-google-drive",
+    "search": "google drive gdrive cloud",
+    "category": "brand"
+  },
+  {
+    "name": "html5",
+    "style": "fab",
+    "icon": "fa-html5",
+    "search": "html coding markup markdown",
+    "category": "brand"
+  },
+  {
+    "name": "js",
+    "style": "fab",
+    "icon": "fa-js-square",
+    "search": "js javascript script",
+    "category": "brand"
+  },
+  {
+    "name": "jsfiddle",
+    "style": "fab",
+    "icon": "fa-jsfiddle",
+    "search": "js javascript script fiddle jsfiddle",
+    "category": "brand"
+  }
+]
