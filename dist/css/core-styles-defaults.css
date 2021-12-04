@@ -11179,6 +11179,18 @@ textarea.form-control-lg {
   font-family: "Libre Baskerville";
 }
 
+.max-width-1140 {
+  max-width: 1140px;
+}
+
+.max-width-1440 {
+  max-width: 1440px;
+}
+
+.max-width-1600 {
+  max-width: 1600px;
+}
+
 .admin {
   grid-template-columns: auto;
   grid-template-rows: 60px auto 40px;
@@ -11341,6 +11353,24 @@ textarea.form-control-lg {
 }
 .site.site-debug-on .site-debug {
   display: block;
+}
+
+.card-deck .card {
+  margin-bottom: 0.75rem;
+}
+@media (min-width: 576px) {
+  .card-deck {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+  }
+  .card-deck .card {
+    flex: 1 0 0%;
+    margin-right: 0.75rem;
+    margin-bottom: 0;
+    margin-left: 0.75rem;
+  }
 }
 
 .is-select .check-unselect-text {
