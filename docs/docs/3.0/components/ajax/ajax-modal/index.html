@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title> Core-Styles 3 </title>
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/docs.css" />
+  </head>
+  <body>
+    
+    
+<div class="admin admin-with-sidenav admin-with-sidebar">
+  <header class="admin-header" role="banner">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark wsg-header shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-2" href="/"><img
+        src="https://www.webstop.com/assets/Webstop-logos/webstop-twocolor-landscape-dark-bg-72dpi-e6425f6d6e9ec4cc90742a883b2997bb28191590bfd8762222ed4723865dcaef.png" style="max-width: 127px; /* 889/7 = 127 */"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/docs/3.0/components/ajax/ajax-form/">Docs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/guides/3.0/development-approach/">Dev</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/guides/">Guides</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/core-styles-3#core-styles-3"
+                target="_blank">GitHub</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/webstop-wiki#webstop-app-builders-wiki"
+                target="_blank">Wiki</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/core-specs#webstop-core-specifications"
+                target="_blank">Specs</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  </header>
+  <nav class="admin-sidenav" role="navigation">
+    <aside>
+  <nav class="collapse show flex" id="docs-nav" aria-label="Docs navigation">
+    <ul class="list-unstyled mb-0 py-3 pt-md-1">
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" type="button" data-bs-toggle="collapse"
+          data-bs-target="#getstart-menu-collapse" aria-expanded="false" aria-controls="getstart-menu-collapse">
+          <strong> Getting Started</strong>
+        </button>
+
+        <div
+          class="collapse "
+          id="getstart-menu-collapse">
+
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/getting-started/conventions/" class="d-inline-flex rounded">Conventions</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
+
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#guides-menu-collapse"
+          aria-expanded="false">
+          <strong> Guides</strong>
+        </button>
+
+        <div
+          class="collapse "
+          id="guides-menu-collapse">
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/guides/3.0/overview/" class="d-inline-flex rounded">Guide Overview</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/guides/3.0/components/" class="d-inline-flex rounded">Front-End Components</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/guides/3.0/development-approach/" class="d-inline-flex rounded">Development Approach</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/guides/3.0/development-process/" class="d-inline-flex rounded">Development Process</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/guides/3.0/working-with-ajax/" class="d-inline-flex rounded">Working with AJAX</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
+
+
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#layout-menu-collapse"
+          aria-expanded="false">
+          <strong> Layouts</strong>
+        </button>
+
+        <div
+          class="collapse "
+          id="layout-menu-collapse">
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/layouts/admin/" class="d-inline-flex rounded">Admin Layout</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/layouts/site/" class="d-inline-flex rounded">Public Site Layout</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
+
+
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#ajax-menu-collapse"
+          aria-expanded="false">
+          <strong> Ajax</strong>
+        </button>
+
+        <div
+          class="collapse  show "
+          id="ajax-menu-collapse">
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/ajax/ajax-form/" class="d-inline-flex rounded">Ajax Form</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/ajax/ajax-load/" class="d-inline-flex rounded">Ajax Load</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4  left-nav-active ">
+              <a href="/docs/3.0/components/ajax/ajax-modal/" class="d-inline-flex rounded">Ajax Modal</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
+
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#forms-menu-collapse"
+          aria-expanded="false">
+          <strong> Forms</strong>
+        </button>
+
+        <div
+          class="collapse "
+          id="forms-menu-collapse">
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/forms/checkbox-selector/" class="d-inline-flex rounded">Checkbox Selector</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/forms/form-toggles/" class="d-inline-flex rounded">Form Toggles</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
+
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#icons-menu-collapse"
+          aria-expanded="false">
+          <strong> Icons</strong>
+        </button>
+
+        <div
+          class="collapse "
+          id="icons-menu-collapse">
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/icons/admin-icons/" class="d-inline-flex rounded">Admin Icons</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/icons/core-icons/" class="d-inline-flex rounded">Core Icons</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
+
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#tagging-menu-collapse"
+          aria-expanded="false">
+          <strong> Tagging</strong>
+        </button>
+
+        <div
+          class="collapse "
+          id="tagging-menu-collapse">
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/tagging/tag-search/" class="d-inline-flex rounded">Tag Search</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/tagging/tags/" class="d-inline-flex rounded">Tags</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
+
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#analytics-menu-collapse"
+          aria-expanded="false">
+          <strong> Analytics</strong>
+        </button>
+
+        <div
+          class="collapse "
+          id="analytics-menu-collapse">
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/grocery/analytics/tracking/" class="d-inline-flex rounded">Aye, Analytics Tracking</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
+
+      
+      
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#utilities-menu-collapse"
+          aria-expanded="false">
+          <strong> Utilities</strong>
+        </button>
+
+        <div
+          class="collapse "
+          id="utilities-menu-collapse">
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/utilities/max-width/" class="d-inline-flex rounded">Max Width</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
+
+      
+      
+      <li
+        class="py-2 ps-4 ">
+        <a href="/docs/3.0/components/card-deck/" class="d-inline-flex rounded">Card Decks</a>
+      </li>
+      
+      <li
+        class="py-2 ps-4 ">
+        <a href="/docs/3.0/components/search/" class="d-inline-flex rounded">Live Search</a>
+      </li>
+      
+      <li
+        class="py-2 ps-4 ">
+        <a href="/docs/3.0/components/toolbar/" class="d-inline-flex rounded">Toolbar</a>
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+  </nav>
+  <main class="admin-page" role="main">
+    <section class="docs-heading inner-shadow">
+      <h1 class="docs-heading-title shadow">
+        Ajax Modal
+      </h1>
+      <p class="docs-heading-tagline">A modal available site-wide for AJAX content.</p>
+    </section>
+    <p>The <code>site-model</code> is included on every page when you used the code found on the <a href="/docs/3.0/layouts/site/">site layout</a> page.</p>
+<h2 id="example">Example</h2>
+<p>When you set the <code>data-target</code> of a modal trigger to <code>#site-modal</code>, then you are indicating you want to use the site wide
+modal, which enables remote content loading via AJAX. The <code>data-load</code> attribute specifies the URL to pull the body
+content from, it is expected to be in HTML format. You should also include the <code>data-title</code> to set the text for the title of the modal.</p>
+<div class="my-3 p-3 example">
+<button data-toggle="modal" data-target="#site-modal" data-load="{{ sinatra_host }}/shopping_lists/list/new" data-title="New Shopping List" data-footer="hide" class="btn btn-primary">
+  New Shopping List
+</button>
+
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;modal&#34;</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#site-modal&#34;</span> <span class="na">data-load</span><span class="o">=</span><span class="s">&#34;{{ sinatra_host }}/shopping_lists/list/new&#34;</span> <span class="na">data-title</span><span class="o">=</span><span class="s">&#34;New Shopping List&#34;</span> <span class="na">data-footer</span><span class="o">=</span><span class="s">&#34;hide&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span><span class="p">&gt;</span>
+  New Shopping List
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="options">Options</h2>
+<p>The Site Modal inherits all the abilities of a standard modal, and is extended with the following options.</p>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Options</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="text-nowrap">data-title</code></td>
+      <td>Attribute used to set the title of the modal.</td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">data-load</code></td>
+      <td>
+        Attribute specifies the URL of the content you want AJAX'd into the modal body. The AJAX request should return 
+        HTML content to display inside the modal. 
+      </td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">data-footer</code></td>
+      <td>
+        By default the modal will display a footer with a close button. To hide the footer and it's content, include the 
+        attribute <code class="text-nowrap">data-footer</code> set to <code class="text-nowrap">hide</code>
+        (<code class="text-nowrap">data-footer="hide"</code>) on the trigger element.
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- this site-modal should probably be an include? -->
+<div class="site-modal modal fade" id="site-modal" tabindex="-1" role="dialog" aria-labelledby="site-modal-title" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="site-modal-content modal-content">
+      <div class="modal-header">
+        <h4 class="site-modal-title modal-title" id="site-modal-title"></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="site-modal-body modal-body" id="site-modal-body"></div>
+      <div class="site-modal-footer modal-footer" id="site-modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </main>
+  
+    <aside class="admin-sidebar">
+      <h4 class="border-bottom">On this page</h4>
+      <div class="table-of-contents">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#example">Example</a></li>
+    <li><a href="#options">Options</a></li>
+  </ul>
+</nav>
+      </div>
+    </aside>
+  
+  <footer class="admin-footer docs-footer" role="contentinfo">
+    
+      <nav aria-label="breadcrumb navigation">
+  <ol class="breadcrumb sans-serif">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/">Docs</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/">3.0</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/">Components</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/ajax/">Ajax</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/ajax/ajax-modal/">Ajax modal</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+        
+    
+  </ol>
+</nav>
+    
+  </footer>
+</div>
+
+
+
+    <script src="https://kit.fontawesome.com/42f15b97e3.js" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="/vendor/clipboard/dist/clipboard.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/docs.js" crossorigin="anonymous"></script>
+    <script src="/js/icon-grid.js" crossorigin="anonymous"></script>
+    <script src="/js/muuri.js" crossorigin="anonymous"></script>
+    <script src="/js/core-styles/tags.js" defer></script>
+    <script src="/js/core-styles/ajax-form.js"></script>
+    <script src="/js/core-styles/ajax-load.js"></script>
+    <script src="/js/core-styles/bootstrap-data-attributes.js"></script>
+    <script src="/js/core-styles/checkbox-selector.js"></script>
+    <script src="/js/core-styles/shopping-list-power-bar.js"></script>
+    <script src="/js/core-styles/form-toggles.js"></script>
+    <script src="/js/core-styles/search.js"></script>
+    <script src="/js/core-styles/circular-cookies.js"></script>
+  </body>
+</html>
