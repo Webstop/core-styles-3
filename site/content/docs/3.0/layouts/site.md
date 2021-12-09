@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Site Structure
+title: Public Site Layout
 description: The basic template for laying out a site's structure.
 group: layout
 toc: true
