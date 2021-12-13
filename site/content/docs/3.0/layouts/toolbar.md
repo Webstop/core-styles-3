@@ -5,8 +5,9 @@ description: Navigation, settings, and controls for page features.
 group: components
 toc: true
 source: Webstop
-menu:
-  orphan:
+menu: 
+  layout:
+    parent: Layouts
 ---
 
 ## Examples
