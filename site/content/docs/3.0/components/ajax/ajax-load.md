@@ -9,7 +9,7 @@ menu:
     parent: Ajax
 ---
 
-  
+
 
 ## Examples
 
