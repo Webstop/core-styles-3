@@ -6,13 +6,13 @@ group: grocery
 toc: true
 source: Webstop
 menu: 
-  analytics:
-    parent: Analytics
+  dev:
+    parent: Dev 
 ---
 
 
 Aye, analytics provides a convent way to track activity on web and mobile pages. It extends Ahoy 
-analytics with a data attribute interface and a set of special attributes.
+analytics with a data attribute interface and a set of special attributes. 
 
 tl;dr [skip to examples](#examples)
 
@@ -46,21 +46,21 @@ the action with the value submitted. The following examples illustrate how the e
 
 The following view action will record `view coupon` in the name field of the events database table:
 
-{{< highlight >}}  
+{{< highlight go >}}
 <div data-aye-view="coupon">...</div>
-{{< /highlight >}} 
+{{< / highlight >}}
 
 The following click action will record `click coupon` in the name field of the events database table:
 
-{{< highlight >}}  
+{{< highlight go >}}
 <a href="/coupon" data-aye-click="coupon">...</a>
-{{< /highlight >}}  
+{{< / highlight >}}
 
 The following submit action will record `submit coupon` in the name field of the events database table:
 
-{{< highlight >}}  
+{{< highlight go >}}
 <form data-aye-submit="coupon">...</form>
-{{< /highlight >}}  
+{{< / highlight >}}
 
 
 
@@ -248,13 +248,13 @@ convert it to snake case (e.g. `recipe_title`), before submitting it to the API.
 
 The example above will write the following to the properties json database field:
 
-{{< highlight >}}  
+{{< highlight go >}}
 properties: {
   recipe_id: 23517,
   recipe_number: 7233,
   recipe_title: 'Silly Muffin'
 }
-{{< /highlight >}}  
+{{< / highlight >}}
 
 
 ### Track Submit Example
@@ -318,26 +318,26 @@ the web page. Aye uses these data attributes to craft the URL used to submit tra
 
 For **local development** you'd have the following data attributes:
 
-{{< highlight >}}  
+{{< highlight go >}}
 <body data-retailer-id="767" data-environment="development">
-{{< /highlight >}}  
+{{< / highlight >}}
 
 For **local testing** you'd have the following data attributes:
 
-{{< highlight >}}  
+{{< highlight go >}}
 <body data-retailer-id="767" data-environment="test">
-{{< /highlight >}}  
+{{< / highlight >}}
 
 For **production** you'd have the following data attributes:
 
-{{< highlight >}}  
+{{< highlight go >}}
 <body data-retailer-id="767" data-environment="production">
-{{< /highlight >}}  
+{{< / highlight >}}
 
 For **other environments** you can specify the following:
 
-{{< highlight >}}  
+{{< highlight go >}}
 <body data-retailer-id="767" data-api-host="http://grocery.core1.rails1.webstophq.com">
-{{< /highlight >}}  
+{{< / highlight >}}
 
 _The example above would be used for Webstop's Core 1 testing server._
