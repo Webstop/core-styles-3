@@ -5,11 +5,14 @@ description: The easy way to gather analytics about specific page elements.
 group: grocery
 toc: true
 source: Webstop
+menu: 
+  dev:
+    parent: Dev 
 ---
 
 
 Aye, analytics provides a convent way to track activity on web and mobile pages. It extends Ahoy 
-analytics with a data attribute interface and a set of special attributes.
+analytics with a data attribute interface and a set of special attributes. 
 
 tl;dr [skip to examples](#examples)
 
