@@ -11238,13 +11238,6 @@ textarea.form-control-lg {
   white-space: nowrap;
   overflow: hidden;
   overflow-y: auto;
-  padding: 1rem 1.5rem;
-  border-radius: 0.75rem;
-  margin-left: 0rem;
-  margin-right: 4rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  z-index: 91;
-  overflow: visible;
 }
 
 .chroma {
@@ -11256,17 +11249,24 @@ textarea.form-control-lg {
   overflow: visible;
 }
 
+.bd-clipboard {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
 .icon-code-snip {
   font-size: 10px;
 }
 
-.bd-clipboard {
-  float: right;
-  max-width: 36px;
-  top: 0;
-  right: 0;
-}
-
+/*
+  .bd-clipboard {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+*/
 /** Button Stuff **/
 .btn-clipboard {
   background-color: #5FB8FF;

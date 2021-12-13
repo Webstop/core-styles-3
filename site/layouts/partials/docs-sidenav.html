@@ -208,22 +208,22 @@
       {{ end }}
 
       {{ $currentPage := . }}
-      {{ range .Site.Menus.analytics }}
+      {{ range .Site.Menus.dev }}
       {{ if .HasChildren }}
       <li class="mb-1">
-        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#analytics-menu-collapse"
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#dev-menu-collapse"
           aria-expanded="false">
           <strong> {{ .Name }}</strong>
         </button>
 
         <div
-          class="collapse {{if or ($currentPage.IsMenuCurrent "analytics" .) ($currentPage.HasMenuCurrent "analytics" .) }} show {{end}}"
-          id="analytics-menu-collapse">
+          class="collapse {{if or ($currentPage.IsMenuCurrent "dev" .) ($currentPage.HasMenuCurrent "dev" .) }} show {{end}}"
+          id="dev-menu-collapse">
           {{ range .Children }}
           <ul class="list-unstyled fw-normal pb-1 small">
 
             <li
-              class="py-2 ps-4 {{if or ($currentPage.IsMenuCurrent "analytics" .) ($currentPage.HasMenuCurrent "analytics" .) }} left-nav-active {{end}}">
+              class="py-2 ps-4 {{if or ($currentPage.IsMenuCurrent "dev" .) ($currentPage.HasMenuCurrent "dev" .) }} left-nav-active {{end}}">
               <a href="{{ .URL }}" class="d-inline-flex rounded">{{ .Name }}</a>
             </li>
 
