@@ -3,7 +3,7 @@
 
 /* Background */
 
-.chroma { color: #ccc; }
+.chroma {  }
 
 /* Other */
 
@@ -68,6 +68,9 @@
 /* NameBuiltinPseudo */
 
 .chroma .bp { color: #43a5fc }
+/* NameAttribute */ 
+
+.chroma .na { color: #d75f00  }
 
 /* NameClass */
 
@@ -95,15 +98,18 @@
 
 /* NameTag */
 
-.chroma .nt { color: #43a5fc }
+.chroma .nt { color: #369 }
 
 /* NameVariable */
 
 .chroma .nv { color: #43a5fc }
 
+
+.chroma .p { color: #535353; }
+
 /* LiteralString */
 
-.chroma .s { color: #32b0b0 }
+.chroma .s { color: #FFC66D }
 
 /* LiteralStringAffix */
 
