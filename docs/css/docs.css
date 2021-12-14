@@ -12041,6 +12041,10 @@ p {
 
 /* Name */
 /* NameAttribute */
+.chroma .na {
+  color: #af0000;
+}
+
 /* NameBuiltin */
 .chroma .nb {
   color: #0087ff;
@@ -12298,10 +12302,6 @@ p {
 }
 
 /* Background */
-.chroma {
-  color: #ccc;
-}
-
 /* Other */
 .chroma .x {
   color: #d75f00;
@@ -12369,7 +12369,7 @@ p {
 
 /* KeywordPseudo */
 .chroma .kp {
-  color: #5f8700;
+  color: #84a732;
 }
 
 /* KeywordReserved */
@@ -12395,6 +12395,11 @@ p {
 /* NameBuiltinPseudo */
 .chroma .bp {
   color: #43a5fc;
+}
+
+/* NameAttribute */
+.chroma .na {
+  color: #d75f00;
 }
 
 /* NameClass */
@@ -12429,7 +12434,7 @@ p {
 
 /* NameTag */
 .chroma .nt {
-  color: #43a5fc;
+  color: #1f75c0;
 }
 
 /* NameVariable */
@@ -12437,9 +12442,13 @@ p {
   color: #43a5fc;
 }
 
+.chroma .p {
+  color: #535353;
+}
+
 /* LiteralString */
 .chroma .s {
-  color: #32b0b0;
+  color: #FFC66D;
 }
 
 /* LiteralStringAffix */
@@ -12504,7 +12513,7 @@ p {
 
 /* LiteralStringSymbol */
 .chroma .ss {
-  color: #32b0b0;
+  color: #FFC66D;
 }
 
 /* LiteralNumber */

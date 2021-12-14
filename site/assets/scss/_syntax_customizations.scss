@@ -3,7 +3,7 @@
 
 /* Background */
 
-.chroma { color: #ccc; }
+.chroma {  }
 
 /* Other */
 
@@ -47,7 +47,7 @@
 
 /* KeywordPseudo */
 
-.chroma .kp { color: #5f8700 }
+.chroma .kp { color: #84a732 }
 
 /* KeywordReserved */
 
@@ -68,6 +68,9 @@
 /* NameBuiltinPseudo */
 
 .chroma .bp { color: #43a5fc }
+/* NameAttribute */ 
+
+.chroma .na { color: #d75f00  }
 
 /* NameClass */
 
@@ -95,15 +98,18 @@
 
 /* NameTag */
 
-.chroma .nt { color: #43a5fc }
+.chroma .nt { color: #1f75c0 }
 
 /* NameVariable */
 
 .chroma .nv { color: #43a5fc }
 
+
+.chroma .p { color: #535353; }
+
 /* LiteralString */
 
-.chroma .s { color: #32b0b0 }
+.chroma .s { color: #FFC66D }
 
 /* LiteralStringAffix */
 
@@ -155,7 +161,7 @@
 
 /* LiteralStringSymbol */
 
-.chroma .ss { color: #32b0b0 }
+.chroma .ss { color: #FFC66D }
 
 /* LiteralNumber */
 
