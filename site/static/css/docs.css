@@ -12369,7 +12369,7 @@ p {
 
 /* KeywordPseudo */
 .chroma .kp {
-  color: #5f8700;
+  color: #84a732;
 }
 
 /* KeywordReserved */
@@ -12434,7 +12434,7 @@ p {
 
 /* NameTag */
 .chroma .nt {
-  color: #369;
+  color: #1f75c0;
 }
 
 /* NameVariable */
@@ -12513,7 +12513,7 @@ p {
 
 /* LiteralStringSymbol */
 .chroma .ss {
-  color: #32b0b0;
+  color: #FFC66D;
 }
 
 /* LiteralNumber */
