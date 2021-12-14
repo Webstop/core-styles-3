@@ -12301,7 +12301,11 @@ p {
   text-align: right;
 }
 
-/* Background */
+/* Chroma Word Wrap */
+.chroma {
+  white-space: break-spaces;
+}
+
 /* Other */
 .chroma .x {
   color: #d75f00;
