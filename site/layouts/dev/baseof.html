@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
+    <!--  <link rel="stylesheet" href="/docs/3.0/dist/css/core-styles-defaults.css">-->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/dev.css" />
+  </head>
+  <body>
+
+
+    {{ block "main" . }}
+    <!-- The part of the page that begins to differ between templates -->
+    {{ end }}
+
+
+    <script src="https://kit.fontawesome.com/42f15b97e3.js" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="/vendor/clipboard/dist/clipboard.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/docs.js" crossorigin="anonymous"></script>
+    <script src="/js/icon-grid.js" crossorigin="anonymous"></script>
+    <script src="/js/muuri.js" crossorigin="anonymous"></script>
+    <script src="/js/core-styles/tags.js" defer></script>
+    <script src="/js/core-styles/ajax-form.js"></script>
+    <script src="/js/core-styles/ajax-load.js"></script>
+    <script src="/js/core-styles/bootstrap-data-attributes.js"></script>
+    <script src="/js/core-styles/checkbox-selector.js"></script>
+    <script src="/js/core-styles/shopping-list-power-bar.js"></script>
+    <script src="/js/core-styles/form-toggles.js"></script>
+    <script src="/js/core-styles/search.js"></script>
+    <script src="/js/core-styles/circular-cookies.js"></script>
+  </body>
+</html>

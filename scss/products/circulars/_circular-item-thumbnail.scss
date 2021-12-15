@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/* circular-item: an individual ad item */
+.circular-item-thumbnail {
+
+  .circular-item-body {
+    padding: 5px;
+    //padding-left: 15px;
+  }
+
+  .circular-item-heading,
+  .circular-item-description,
+  .circular-item-details,
+  .circular-item-expiration-date,
+  .circular-item-sale-dates,
+  .circular-item-more-info {
+    text-align: center;
+    font-size: 0.625rem; // 10/16=0.625
+  }
+
+  .circular-item-title {
+    text-align: center;
+    font-size: 1.125rem; // 18/16=1.125
+  }
+
+  .circular-item-non-digital-coupon {
+    border-style: dashed;
+    border-color: #090;
+    border-width: 2px;
+    padding-left: 10px;
+    padding-right: 2px;
+  }
+
+  .circular-item-images {
+    padding: 0;
+    padding-top: 2px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 1px;
+    width: 85px;
+  }
+
+  .circular-item-image {
+    padding: 0;
+    margin: 0;
+    width: 85px;
+    height: 83px;
+  }
+
+  .circular-item-info-trigger {
+    margin-bottom: 0;
+  }
+
+  .circular-item-heading,
+  .circular-item-title,
+  .price,
+  .circular-item-description,
+  .circular-item-details,
+  .circular-item-expiration-date,
+  .circular-item-sale-dates,
+  .circular-item-more-info,
+  .circular-item-recipe {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .price {
+    text-align: center;
+  }
+
+
+
+  .circular-item-recipe {
+    font-size: 0.75rem; // 12/16=0.75
+  }
+
+  // iPad & Desktop
+  @include media-breakpoint-up(sm) {
+    .circular-item-body {
+      padding: 10px;
+      padding-left: 15px;
+    }
+
+    .circular-item-heading,
+    .circular-item-description,
+    .circular-item-details,
+    .circular-item-expiration-date,
+    .circular-item-sale-dates,
+    .circular-item-more-info {
+      text-align: left;
+      font-size: 0.75rem; // 12/16 = 0.75
+    }
+
+    .circular-item-title {
+      font-size: 1.5rem; // 24/16 = 1.5
+    }
+
+    .circular-item-images {
+      padding-right: 15px;
+      float: left;
+      width: 100px;
+    }
+
+    /* Makes the 2nd column to sit next to the first without wrapping under. */
+    .circular-item-text-col {overflow: hidden;}
+
+    .circular-item-bottom-row {
+      clear: both;
+    }
+
+    .circular-item-details {
+      padding-left: 100px;
+    }
+
+    .price {
+      text-align: left;
+      .price-prefix {
+        min-width: 100px;
+        display: inline-block;
+      }
+    }
+
+    .circular-item-recipe {
+      font-size: 1rem;
+      clear: left;
+    }
+
+  }
+
+}

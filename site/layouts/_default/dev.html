@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="site site-fluid">
+  <header class="site-header" role="banner">
+    {{ partial "docs-navbar" . }}
+  </header>
+  <main class="site-content" role="main">
+    {{ .Content }}
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    {{ block "footer" . }}
+      {{ partial "breadcrumbs.html" . }}
+    {{ end }}
+  </footer>
+</div>
+{{ end }}

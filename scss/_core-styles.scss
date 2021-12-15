@@ -7,6 +7,7 @@
   'variables',
   'webstop-brand',
   // Utilities
+  'utilities/box',
   'utilities/max-width',
   // Layout
   'layout/admin',
@@ -15,10 +16,17 @@
   // Components
   'components/card-deck',
   'components/checkbox-selector',
+  'components/price',
   'components/search',
   'components/tags',
   'components/sidebar',
-  'components/toolbar'
+  'components/toolbar',
+  // Products
+  'products/circulars/circulars',
+  'products/circulars/circular',
+  'products/circulars/circular-item',
+  'products/circulars/circular-item-standard'
+  // TODO: include all circular files, currently only have enough for Sprouts Demo
 ;
 
 //@import

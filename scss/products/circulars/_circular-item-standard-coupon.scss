@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+.circular-item-standard-coupon {
+  border: 2px dashed $primary;
+
+  &::after {
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    font-size: 2rem;
+    line-height: 0.35;
+    content: '✃';
+    color: $primary;
+  }
+
+  .circular-item-body {
+    padding: 5px 10px;
+  }
+
+  .circular-item-title {
+    text-align: center;
+    font-size: 1.125rem; // 18/16=1.125
+  }
+
+  .circular-item-expiration-date {
+    text-align: center;
+  }
+
+  .circular-item-title,
+  .circular-item-description,
+  .circular-item-expiration-date,
+  .circular-item-recipe {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .circular-item-description,
+  .circular-item-expiration-date,
+  .circular-item-recipe {
+    font-size: 0.75rem; // 12/16=0.75
+  }
+
+  // iPad & Desktop
+  @include media-breakpoint-up(sm){
+    .circular-item-body {
+      padding: 10px 20px;
+    }
+
+    .circular-item-title {
+      font-size: 2rem;
+    }
+
+    .circular-item-title,
+    .circular-item-description,
+    .circular-item-expiration-date,
+    .circular-item-recipe {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+
+    .circular-item-description,
+    .circular-item-expiration-date,
+    .circular-item-recipe {
+      font-size: 1rem;
+    }
+
+  }
+
+}

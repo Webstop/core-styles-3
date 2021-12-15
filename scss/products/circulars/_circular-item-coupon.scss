@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+.circular-item-coupon {
+  border: 2px dashed $primary;
+
+  &::after {
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    font-size: 2rem;
+    line-height: 0.35;
+    content: '✃';
+    color: $primary;
+  }
+
+  .circular-item-body {
+    padding: 10px;
+    padding-bottom: 68px;
+  }
+
+  .circular-item-title {
+    font-size: 2rem;
+  }
+
+  .circular-item-heading,
+  .circular-item-title,
+  .price,
+  .circular-item-description,
+  .circular-item-details,
+  .circular-item-expiration-date,
+  .circular-item-sale-dates,
+  .circular-item-more-info,
+  .circular-item-recipe {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  .circular-item-recipe {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+  }
+  .circular-item-footer {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .shopping-list-item {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+  }
+
+}

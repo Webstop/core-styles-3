@@ -1,0 +1,284 @@
+---
+layout: admin-sidebar-circular
+title: Item Entry
+description: Entry screen in ad builder
+group: guide
+toc: true
+source: Webstop
+menu:
+  guides:
+    parent: Ad Builder
+    weight: 2
+---
+
+<style>
+  .card-standard {
+    border-color: #aaa;
+    box-shadow: 5px 5px 10px #d9d6c1;
+    margin-bottom: 1.5rem;
+  }
+  .circular-item {
+    max-width: 350px;
+  }
+
+
+  .ad-layout-table {
+    width: 250px;
+    background-color: #fff;
+    border-collapse: separate;
+    border-spacing: 5px;
+    border: 2px solid #333;
+  }
+  .ad-layout-table .ad-layout-cell {
+    background-color: #ddd;
+    min-width: 25px;
+    color: rgb(220, 53, 69);
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .ad-layout-table .ad-layout-cell-completed {
+    background-color: #c3c3c3;
+    color: rgb(25, 135, 84);
+    font-size: 2rem;
+  }
+  .ad-layout-table .ad-layout-cell-selected {
+    background-color: #369;
+    color: #fff;
+  }
+  .ad-layout-table .ad-layout-cell-filler {
+    min-height: 75px;
+    padding: 0;
+    padding-top: 15px;
+    margin: 0;
+
+  }
+  .ad-layout-table .ad-layout-cell-filler-short {
+    min-height: 50px;
+    padding-top: 5px;
+  }
+</style>
+
+<div class="row">
+  <div class="col">
+    <h4><i class="fa-duotone fa-file-plus me-2"></i>Entry Form</h4>
+    <p>Ad Item ID: 25584624</p>
+    <div class="card box-readable box-shadowed box-stackable box-centered">
+      <div class="card-body">
+        <h1>New Ad Item</h1>
+        <form>
+
+          <p class="float-end text-muted">Source Product ID: 9568</p>
+          <label for="form-image" class="form-label">Image</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="form-image" placeholder="sweet_corn_1k.jpg">
+            <span class="input-group-text">Open Image Finder</span>
+          </div>
+          <div class="mb-3">
+            <label for="form-heading" class="form-label">Heading</label>
+            <input type="text" class="form-control form-control-sm" id="form-heading" value="LOCAL! Amaize! Sweet Corn - The Best Corn You'll Ever Eat!">
+          </div>
+          <div class="mb-3">
+            <label for="form-title" class="form-label">Title</label>
+            <input type="text" class="form-control form-control-lg" id="form-title" value="Homegrown Amaize! Sweet Corn">
+          </div>
+          <div class="mb-3">
+            <label for="form-description" class="form-label">Description</label>
+            <input type="text" class="form-control form-control-sm" id="form-description" value="White Sweet Corn with an Amazing Flavor, Distinctively Delicious Pop and Crunch">
+          </div>
+          <div class="row">
+            <div class="col mb-3">
+              <label for="form-price-prefix" class="form-label">Prefix</label>
+              <input type="text" class="form-control form-control-sm text-end" id="form-price-prefix" value="12 for">
+            </div>
+            <div class="col mb-3">
+              <label for="form-price" class="form-label">Price</label>
+              <input type="text" class="form-control form-control-lg" id="form-price" value="4.99">
+            </div>
+            <div class="col mb-3">
+              <label for="form-price-sufix" class="form-label">Suffix</label>
+              <input type="text" class="form-control form-control-sm" id="form-price-sufix" value="lb. ">
+            </div>
+            <div class="col mb-3 form-check" style="padding-top: 30px;">
+              <input type="checkbox" class="form-check-input" id="form-card" checked>
+              <label class="form-check-label" for="form-card">Show Loyalty Card</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="form-details" class="form-label">Description</label>
+            <input type="text" class="form-control form-control-sm" id="form-details" value="Available for a Limited Time">
+          </div>
+          <p class="float-end text-muted">Recipe ID: 4578</p>
+          <label for="form-recipe" class="form-label">Recipe</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="form-recipe" placeholder="Amaize Sweet Corn Summer Spreads">
+            <span class="input-group-text">Open Recipe Finder</span>
+          </div>
+          <div class="row pt-3" style="border-top: 1px solid #ccc;">
+            <div class="col"></div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary btn-lg">
+                <i class="fa-duotone fa-circle-plus me-1"></i>
+                Save Ad Item
+              </button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="col-auto">
+    <h4><i class="fa-duotone fa-file-image me-2"></i>Live Preview</h4>
+    <p>Single Column Item, Standard Format <a href=""><i class="fa-duotone fa-pen-to-square ms-2"></i> Edit</a></p>
+    <article class="circular-item circular-item-standard card card-standard" id="circular-item-1">
+      <img src="/assets/images/circular-items/sweet_corn_1k.jpg" alt="Picture of Homegrown Amaize! Sweet Corn" class="circular-item-image card-img-top img-fluid">
+      <div class="circular-item-body card-body">
+        <p class="circular-item-heading">LOCAL! Amaize! Sweet Corn - The Best Corn You'll Ever Eat!</p>
+        <h3 class="circular-item-title">Homegrown Amaize! Sweet Corn</h3>
+        <p class="circular-item-description">White Sweet Corn with an Amazing Flavor, Distinctively Delicious Pop and Crunch</p>
+        <p class="price price-big-dollars">
+          <span class="price-prefix">12 for</span>
+          <span class="price-dollar-sign">$</span>
+          <span class="price-dollars">4</span>
+          <span class="price-cents">99</span>
+          <span class="price-suffix">lb.</span>
+          <img class="price-suffix-icon" src="/assets/images/Card_45x29.gif" alt="with Card">
+        </p>
+
+        <p class="circular-item-details">Available for a Limited Time</p>
+        <p class="circular-item-sale-dates text-danger">Starts 4/10/2050</p>
+        <p class="circular-item-recipe">
+          <span class="circular-item-recipe-label">Recipe:</span>
+          <a href="http://www.topsmarkets.com/Recipes/Detail/7417/Amaize_Sweet_Corn_Summer_Spreads/" class="circular-item-recipe-title-link">
+            Amaize Sweet Corn Summer Spreads
+          </a>
+        </p>
+      </div>
+      <div class="circular-item-footer card-footer">
+        <div class="shopping-list-item">
+          <form action="/shopping_list/add/circular_item/[self-&gt;id]/qty/" class="shopping-list-item-form">
+            <div class="row justify-content-end">
+              <div class="shopping-list-item-qty-col col-12 col-sm">
+                <div class="shopping-list-item-qty-group input-group ms-3">
+                  <div class="input-group-prepend">
+                    <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
+                  </div>
+                  <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control" id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
+                </div>
+              </div>
+              <div class="shopping-list-item-btn-col col-12 col-sm-auto">
+                <button type="submit" class="shopping-list-item-btn btn btn-primary btn-block btn-sm-inline-block">
+                  <i class="fa-duotone fa-circle-plus me-1"></i>
+                  Add to Shopping List
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </article>
+    <div class="alert alert-warning" style="max-width: 350px;" role="alert">
+      <h4 class="alert-heading">Digital Coupons</h4>
+      <p>No currently live digital coupons match this item.</p>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="use-digital-coupons" checked>
+        <label class="form-check-label" for="use-digital-coupons">Display Coupons Next to Item When Available</label>
+      </div>
+    </div>
+    <a href="#" class="btn btn-outline-secondary btn-sm float-end me-2">Hide</a>
+    <h4>0 UPCs &amp; 1 PLU</h4>
+    <p>PLU: 4078</p>
+
+  </div>
+  <div class="col-auto">
+    <h4><i class="fa-duotone fa-map me-2"></i>Page Layout</h4>
+    <p>Page 3 of 6, Row 3, Column 3</p>
+    <table class="ad-layout-table mb-4">
+      <!--  <tr>-->
+      <!--    <td colspan="2" style="background-color: #369; height: 15px;"></td>-->
+      <!--  </tr>-->
+      <!--  <tr>-->
+      <!--    <td style="background-color: #ccc; height: 120px;"></td>-->
+      <!--    <td style="background-color: #eee; width: 60px;" rowspan="2"></td>-->
+      <!--  </tr>-->
+      <!--  <tr>-->
+      <!--    <td style="background-color: #ddd; height: 5px;"></td>-->
+      <!--  </tr>-->
+      <tr>
+        <td class="ad-layout-cell ad-layout-cell" colspan="4"><div class="ad-layout-cell-filler-short"><div><div>✖</div></div></div></td>
+      </tr>
+      <tr>
+        <td class="ad-layout-cell ad-layout-cell-completed" colspan="3"><div class="ad-layout-cell-filler">✔</div></td>
+        <td class="ad-layout-cell ad-layout-cell-completed" rowspan="2"><div class="ad-layout-cell-filler">✔</div></td>
+      </tr>
+      <tr>
+        <td class="ad-layout-cell ad-layout-cell-completed"><div class="ad-layout-cell-filler">✔</div></td>
+        <td class="ad-layout-cell ad-layout-cell-completed"><div class="ad-layout-cell-filler">✔</div></td>
+        <td class="ad-layout-cell ad-layout-cell-selected">●</td>
+      </tr>
+      <tr>
+        <td class="ad-layout-cell" colspan="4"><div class="ad-layout-cell-filler-short"><div><div>✖</div></div></div></td>
+      </tr>
+      <tr>
+        <td class="ad-layout-cell"><div class="ad-layout-cell-filler">✖</div></td>
+        <td class="ad-layout-cell" colspan="2"><div class="ad-layout-cell-filler">✖</div></td>
+        <td class="ad-layout-cell"><div class="ad-layout-cell-filler">✖</div></td>
+      </tr>
+      <!--  <tr>-->
+      <!--    <td class="ad-layout-cell" colspan="2"><div class="ad-layout-cell-filler"></div></td>-->
+      <!--    <td class="ad-layout-cell"></td>-->
+      <!--    <td class="ad-layout-cell"></td>-->
+      <!--  </tr>-->
+      <!--  <tr>-->
+      <!--    <td class="ad-layout-cell"><div class="ad-layout-cell-filler"></div></td>-->
+      <!--    <td class="ad-layout-cell"></td>-->
+      <!--    <td class="ad-layout-cell" colspan="2"></td>-->
+      <!--  </tr>-->
+      <tr>
+        <td class="ad-layout-cell"><div class="ad-layout-cell-filler">✖</div></td>
+        <td class="ad-layout-cell"><div class="ad-layout-cell-filler">✖</div></td>
+        <td class="ad-layout-cell"><div class="ad-layout-cell-filler">✖</div></td>
+        <td class="ad-layout-cell"><div class="ad-layout-cell-filler">✖</div></td>
+      </tr>
+      <tr>
+        <td class="ad-layout-cell" colspan="4"><div class="ad-layout-cell-filler">✖</div></td>
+      </tr>
+    </table>
+
+    <h4><i class="fak fa-weeklyad me-2"></i> Circular <small class="float-end text-muted">ID: 68428</small></h4>
+    <p>Home For The Holidays!</p>
+    <div class="btn-group mb-3" role="group">
+      <button type="button" class="btn btn-outline-dark">Review</button>
+      <button type="button" class="btn btn-outline-dark">Settings</button>
+      <button type="button" class="btn btn-outline-dark">Versions&nbsp;</button>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Start</th>
+          <th>End</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Display</th>
+          <td>4/3/2050</td>
+          <td>4/17/2050</td>
+        </tr>
+        <tr>
+          <th>Valid</th>
+          <td>4/10/2050</td>
+          <td>4/17/2050</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+

@@ -5,6 +5,8 @@ $theme-active-bg: lighten($theme-primary, 7.5%) !default;
 $body-bg:  $theme-bg !default;
 
 // Layout
+// ------
+
 $header-height: 55px !default;
 
 // Admin Layout
@@ -32,7 +34,13 @@ $admin-footer-bg-color:      #e9ecef !default;
 $admin-footer-border-color:  #ccc !default;
 $admin-footer-border-size:   1px !default;
 
+// Utilities
+// ---------
 
+$readable: 34.25rem + (1.25rem * 2);
+
+// Components
+// ----------
 
 // Card Deck
 $card-deck-margin: $card-group-margin !default;
@@ -66,7 +74,6 @@ $store-min-column-width: 290px;
 
 // Bootstrap
 $bootstrap-purple: #563d7c;
-$readable: 34.25rem + (1.25rem * 2);
 $table-bg: #fff;
 
 // Webstop

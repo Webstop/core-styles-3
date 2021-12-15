@@ -11381,6 +11381,72 @@ textarea.form-control-lg {
   display: none;
 }
 
+.price {
+  /* Setting font size to zero prevents whitespace between the spans from affecting the display */
+  font-size: 0;
+}
+.price .price-overlay,
+.price .price-prefix,
+.price .price-dollar-sign,
+.price .price-dollars,
+.price .price-cents,
+.price .price-cent-sign,
+.price .price-suffix,
+.price .price-suffix-icon {
+  font-size: 1.125rem;
+  vertical-align: text-top;
+  display: inline;
+  line-height: 1;
+}
+.price.price-big-overlay .price-overlay, .price.price-big-dollars .price-dollars, .price.price-big-cents .price-cents {
+  font-size: 2.5rem;
+  line-height: 0.8;
+  vertical-align: text-top;
+}
+.price .price-overlay,
+.price .price-dollars,
+.price .price-cents {
+  font-weight: bold;
+}
+.price .price-prefix {
+  text-align: right;
+}
+.price .price-prefix:after,
+.price .price-suffix:before {
+  opacity: 0;
+  content: ":";
+  color: #fff;
+}
+.price.price-prefix-no-space .price-suffix:before {
+  content: "";
+}
+.price.price-suffix-no-space .prefix:after {
+  content: "";
+}
+.price .price-suffix-icon {
+  margin: 0;
+  padding: 0;
+  margin-left: 0.3125rem;
+  height: 1.5rem;
+  display: inline-block;
+}
+@media (min-width: 576px) {
+  .price .price-overlay,
+.price .price-prefix,
+.price .price-dollar-sign,
+.price .price-dollars,
+.price .price-cents,
+.price .price-cent-sign,
+.price .price-suffix,
+.price .price-suffix-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .price.price-big-overlay .price-overlay, .price.price-big-dollars .price-dollars, .price.price-big-cents .price-cents {
+    font-size: 3.75rem;
+  }
+}
+
 .search-form .search-from-search-text {
   padding-right: 24px;
 }
@@ -11590,6 +11656,35 @@ textarea.form-control-lg {
   .toolbar .circular-toolbar {
     position: relative;
   }
+}
+/* circulars: collection of ads */
+.circulars .circular-preview-title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.circulars .circular-preview-title-badge {
+  font-size: 1.2rem;
+}
+.circulars.circulars-banner-max-width-1140 .circular-item-banner {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.circulars.circulars-content-width-1140 .circular-content {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.circulars.circulars-content-width-1440 .circular-content {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.circulars.circulars-content-width-1600 .circular-content {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=core-styles-defaults.css.map */
