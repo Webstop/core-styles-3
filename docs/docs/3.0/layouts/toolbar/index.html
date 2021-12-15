@@ -195,7 +195,7 @@
         </button>
 
         <div
-          class="collapse "
+          class="collapse  show "
           id="layout-menu-collapse">
           
           <ul class="list-unstyled fw-normal pb-1 small">
@@ -211,7 +211,16 @@
 
             <li
               class="py-2 ps-4 ">
-              <a href="/docs/3.0/layouts/site/" class="d-inline-flex rounded">Site Structure</a>
+              <a href="/docs/3.0/layouts/site/" class="d-inline-flex rounded">Public Site Layout</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4  left-nav-active ">
+              <a href="/docs/3.0/layouts/toolbar/" class="d-inline-flex rounded">Toolbar</a>
             </li>
 
           </ul>
@@ -298,6 +307,15 @@
 
           </ul>
           
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/forms/search/" class="d-inline-flex rounded">Live Search</a>
+            </li>
+
+          </ul>
+          
         </div>
       </li>
       
@@ -377,30 +395,6 @@
 
       
       
-      
-      <li class="mb-1">
-        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#analytics-menu-collapse"
-          aria-expanded="false">
-          <strong> Analytics</strong>
-        </button>
-
-        <div
-          class="collapse "
-          id="analytics-menu-collapse">
-          
-          <ul class="list-unstyled fw-normal pb-1 small">
-
-            <li
-              class="py-2 ps-4 ">
-              <a href="/docs/3.0/components/grocery/analytics/tracking/" class="d-inline-flex rounded">Aye, Analytics Tracking</a>
-            </li>
-
-          </ul>
-          
-        </div>
-      </li>
-      
-      
 
       
       
@@ -434,16 +428,6 @@
       <li
         class="py-2 ps-4 ">
         <a href="/docs/3.0/components/card-deck/" class="d-inline-flex rounded">Card Decks</a>
-      </li>
-      
-      <li
-        class="py-2 ps-4 ">
-        <a href="/docs/3.0/components/search/" class="d-inline-flex rounded">Live Search</a>
-      </li>
-      
-      <li
-        class="py-2 ps-4  left-nav-active ">
-        <a href="/docs/3.0/components/toolbar/" class="d-inline-flex rounded">Toolbar</a>
       </li>
       
     </ul>
@@ -592,74 +576,62 @@ The <code>toolbar-group</code> class provides consistent position and margins be
 <div class="toolbar-detached">
 <div class="my-3 p-3 example">
 <nav class="toolbar">
-<div class="toolbar-group" role="group" aria-label="Basic example">
-    <form class="form-inline">
-     <label class="sr-only" for="inlineFormInputName2">Name</label>
-      <input type="text" class="form-control mr-2" id="inlineFormInputName2" placeholder="Jane Doe">
-      <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
-      <div class="input-group mr-2">
-        <div class="input-group-prepend">
-          <div class="input-group-text">@</div>
-        </div>
-        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
-      </div>
-    </form>
-  </div>
+
   <div class="toolbar-group" role="group" aria-label="Basic example">
-    <form class="form-inline">
-      <label class="sr-only" for="inlineFormInputName2">Name</label>
-      <input type="text" class="form-control mr-2" id="inlineFormInputName2" placeholder="Jane Doe">
-      <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
-      <div class="input-group mr-2">
-        <div class="input-group-prepend">
-          <div class="input-group-text">@</div>
-        </div>
-        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
-      </div>
-      <div class="form-check mr-2">
-        <input class="form-check-input" type="checkbox" id="inlineFormCheck">
-        <label class="form-check-label" for="inlineFormCheck">
-          Remember me
-        </label>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    <form class="row gx-2 gy-2 align-items-center">
+  <div class="col-sm-4">
+    <label class="visually-hidden" for="specificSizeInputName">Name</label>
+    <input type="text" class="form-control" id="specificSizeInputName" placeholder="Jane Doe">
+  </div>
+  <div class="col-sm-4">
+    <label class="visually-hidden" for="specificSizeInputGroupUsername">Username</label>
+    <div class="input-group">
+      <div class="input-group-text">@</div>
+      <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Username">
+    </div>
+  </div>
+  <div class="col-auto">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+      <label class="form-check-label" for="autoSizingCheck2">
+        Remember me
+      </label>
+    </div>
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
   </div>
 </nav>
 
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toolbar&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toolbar-group&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;group&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Basic example&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-inline&#34;</span><span class="p">&gt;</span>
-     <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sr-only&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;inlineFormInputName2&#34;</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control mr-2&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;inlineFormInputName2&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Jane Doe&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sr-only&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;inlineFormInputGroupUsername2&#34;</span><span class="p">&gt;</span>Username<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group mr-2&#34;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-prepend&#34;</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>@<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;inlineFormInputGroupUsername2&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Username&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toolbar-group&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;group&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Basic example&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-inline&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sr-only&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;inlineFormInputName2&#34;</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control mr-2&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;inlineFormInputName2&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Jane Doe&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sr-only&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;inlineFormInputGroupUsername2&#34;</span><span class="p">&gt;</span>Username<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group mr-2&#34;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-prepend&#34;</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>@<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;inlineFormInputGroupUsername2&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Username&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check mr-2&#34;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;inlineFormCheck&#34;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;inlineFormCheck&#34;</span><span class="p">&gt;</span>
-          Remember me
-        <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span><span class="p">&gt;</span>Submit<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row gx-2 gy-2 align-items-center&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-4&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;specificSizeInputName&#34;</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;specificSizeInputName&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Jane Doe&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-4&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;specificSizeInputGroupUsername&#34;</span><span class="p">&gt;</span>Username<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>@<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;specificSizeInputGroupUsername&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Username&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;autoSizingCheck2&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;autoSizingCheck2&#34;</span><span class="p">&gt;</span>
+        Remember me
+      <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span><span class="p">&gt;</span>Submit<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
 </div>
@@ -910,7 +882,7 @@ adjust the alignment of your toolbar groups.</p>
             
         
         
-            <li class="breadcrumb-item"><a href="/docs/3.0/components/">Components</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0/layouts/">Layouts</a></li>
         
     
         
@@ -955,7 +927,7 @@ adjust the alignment of your toolbar groups.</p>
             
         
         
-            <li class="breadcrumb-item"><a href="/docs/3.0/components/toolbar/">Toolbar</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0/layouts/toolbar/">Toolbar</a></li>
         
     
         

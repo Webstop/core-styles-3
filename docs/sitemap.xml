@@ -95,11 +95,11 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/analytics/tracking/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/components/analytics/tracking-save/</loc>
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/analytics/tracking/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/components/analytics/tracking/</loc>
   </url>
   
   <url>
@@ -211,7 +211,7 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/search/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/components/forms/search/</loc>
   </url>
   
   <url>
@@ -224,6 +224,10 @@
   
   <url>
     <loc>https://guides.webstop.com/docs/3.0/components/grocery/price/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/layouts/site/</loc>
   </url>
   
   <url>
@@ -240,10 +244,6 @@
   
   <url>
     <loc>https://guides.webstop.com/docs/3.0/components/grocery/shopping-lists/shopping-list-power-bar/</loc>
-  </url>
-  
-  <url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/site/</loc>
   </url>
   
   <url>
@@ -283,7 +283,7 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/toolbar/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/layouts/toolbar/</loc>
   </url>
   
   <url>

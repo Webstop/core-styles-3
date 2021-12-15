@@ -7,10 +7,8 @@ source: Webstop
 menu: 
   ajax:
     parent: Ajax
-      
 ---
-
-  
+ 
 
 ## Examples
 

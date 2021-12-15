@@ -5,8 +5,9 @@ description: Navigation, settings, and controls for page features.
 group: components
 toc: true
 source: Webstop
-menu:
-  orphan:
+menu: 
+  layout:
+    parent: Layouts
 ---
 
 ## Examples
@@ -93,38 +94,32 @@ Inline forms can be placed inside a toolbar.
 
 {{< example >}}
 <nav class="toolbar">
-<div class="toolbar-group" role="group" aria-label="Basic example">
-    <form class="form-inline">
-     <label class="sr-only" for="inlineFormInputName2">Name</label>
-      <input type="text" class="form-control mr-2" id="inlineFormInputName2" placeholder="Jane Doe">
-      <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
-      <div class="input-group mr-2">
-        <div class="input-group-prepend">
-          <div class="input-group-text">@</div>
-        </div>
-        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
-      </div>
-    </form>
-  </div>
+
   <div class="toolbar-group" role="group" aria-label="Basic example">
-    <form class="form-inline">
-      <label class="sr-only" for="inlineFormInputName2">Name</label>
-      <input type="text" class="form-control mr-2" id="inlineFormInputName2" placeholder="Jane Doe">
-      <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
-      <div class="input-group mr-2">
-        <div class="input-group-prepend">
-          <div class="input-group-text">@</div>
-        </div>
-        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
-      </div>
-      <div class="form-check mr-2">
-        <input class="form-check-input" type="checkbox" id="inlineFormCheck">
-        <label class="form-check-label" for="inlineFormCheck">
-          Remember me
-        </label>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    <form class="row gx-2 gy-2 align-items-center">
+  <div class="col-sm-4">
+    <label class="visually-hidden" for="specificSizeInputName">Name</label>
+    <input type="text" class="form-control" id="specificSizeInputName" placeholder="Jane Doe">
+  </div>
+  <div class="col-sm-4">
+    <label class="visually-hidden" for="specificSizeInputGroupUsername">Username</label>
+    <div class="input-group">
+      <div class="input-group-text">@</div>
+      <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Username">
+    </div>
+  </div>
+  <div class="col-auto">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+      <label class="form-check-label" for="autoSizingCheck2">
+        Remember me
+      </label>
+    </div>
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
   </div>
 </nav>
 

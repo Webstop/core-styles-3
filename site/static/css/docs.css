@@ -12386,10 +12386,16 @@ textarea.form-control-lg {
     margin-bottom: 1rem;
   }
 */
+/** Button Stuff **/
+.btn-clipboard {
+  background-color: #5FB8FF;
+}
+
 .get-started-btn {
   background-color: #01000b;
   transition: all 0.2s ease-in-out;
   align-items: center;
+  border-color: transparent;
 }
 
 .get-started-btn:hover {
@@ -12418,6 +12424,7 @@ textarea.form-control-lg {
 
 .learn-more-btn {
   background-color: #5fb8ff;
+  border-color: transparent !important;
   transition: all 0.2s ease-in-out;
 }
 
@@ -12442,6 +12449,63 @@ textarea.form-control-lg {
   text-decoration: none;
 }
 
+.btn {
+  border-radius: 0.375rem;
+}
+
+@keyframes gridButton {
+  0% {
+    transform: scale(1, 1) rotateZ(0deg);
+  }
+  50% {
+    transform: scale(1.1, 1.1) rotateZ(90deg);
+  }
+  100% {
+    transform: scale(1, 1) rotateZ(180deg);
+  }
+}
+.grid-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  width: 6rem;
+  height: 6rem;
+  white-space: nowrap;
+  background: #fff;
+  border: 0.5rem solid #777;
+  color: #0194d3 !important;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 3rem;
+}
+
+.grid-button.processing {
+  animation-name: gridButton;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+
+.grid-button:focus {
+  outline: 0;
+  border: 0.7rem double #000;
+  padding: 1rem;
+}
+
+/** End Button Stuff **/
 /** Docs template layout stuff */
 .left-nav {
   padding-right: 0px;
@@ -12867,62 +12931,6 @@ select.grid-control-field::-ms-expand {
 }
 
 /* Button */
-.btn {
-  border-radius: 0.375rem;
-}
-
-@keyframes gridButton {
-  0% {
-    transform: scale(1, 1) rotateZ(0deg);
-  }
-  50% {
-    transform: scale(1.1, 1.1) rotateZ(90deg);
-  }
-  100% {
-    transform: scale(1, 1) rotateZ(180deg);
-  }
-}
-.grid-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin: 0;
-  padding: 1.2rem;
-  font-size: 1.6rem;
-  font-weight: 700;
-  width: 6rem;
-  height: 6rem;
-  white-space: nowrap;
-  background: #fff;
-  border: 0.5rem solid #777;
-  color: #0194d3 !important;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border-radius: 3rem;
-}
-
-.grid-button.processing {
-  animation-name: gridButton;
-  animation-duration: 0.2s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  animation-delay: 0s;
-}
-
-.grid-button:focus {
-  outline: 0;
-  border: 0.7rem double #000;
-  padding: 1rem;
-}
-
 /* Icon Examples */
 .icon-example {
   max-width: 350px;
@@ -13152,6 +13160,10 @@ p {
 
 /* Name */
 /* NameAttribute */
+.chroma .na {
+  color: #af0000;
+}
+
 /* NameBuiltin */
 .chroma .nb {
   color: #0087ff;
@@ -13408,9 +13420,9 @@ p {
   text-align: right;
 }
 
-/* Background */
+/* Chroma Word Wrap */
 .chroma {
-  color: #ccc;
+  white-space: break-spaces;
 }
 
 /* Other */
@@ -13480,7 +13492,7 @@ p {
 
 /* KeywordPseudo */
 .chroma .kp {
-  color: #5f8700;
+  color: #84a732;
 }
 
 /* KeywordReserved */
@@ -13506,6 +13518,11 @@ p {
 /* NameBuiltinPseudo */
 .chroma .bp {
   color: #43a5fc;
+}
+
+/* NameAttribute */
+.chroma .na {
+  color: #d75f00;
 }
 
 /* NameClass */
@@ -13540,7 +13557,7 @@ p {
 
 /* NameTag */
 .chroma .nt {
-  color: #43a5fc;
+  color: #1f75c0;
 }
 
 /* NameVariable */
@@ -13548,9 +13565,13 @@ p {
   color: #43a5fc;
 }
 
+.chroma .p {
+  color: #535353;
+}
+
 /* LiteralString */
 .chroma .s {
-  color: #32b0b0;
+  color: #FFC66D;
 }
 
 /* LiteralStringAffix */
@@ -13615,7 +13636,7 @@ p {
 
 /* LiteralStringSymbol */
 .chroma .ss {
-  color: #32b0b0;
+  color: #FFC66D;
 }
 
 /* LiteralNumber */

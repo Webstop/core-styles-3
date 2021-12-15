@@ -22,18 +22,18 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f1f1f1; 
 }
-
+ 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
+  background: #c1c1c1; 
   border-radius:0.75rem;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: lighten($blue, 20%);
+  background: lighten($blue, 20%); 
 }
 /* END SCROLLBAR */
 
@@ -107,7 +107,7 @@
   border-bottom: 1px solid rgba(0,0,0,.1);
 
 
-}
+  }
 
 /* Code Examples */
 
@@ -145,64 +145,136 @@
     margin-bottom: 1rem;
   }
 */
-.get-started-btn {
-  background-color: $dark;
-  transition: all .2s ease-in-out;
+
+  /** Button Stuff **/
+  .btn-clipboard {
+    background-color: #5FB8FF;
+  }
+
+  .get-started-btn {
+    background-color: $dark;
+    transition: all .2s ease-in-out; 
+    align-items: center;
+    border-color: transparent;
+  }
+  .get-started-btn:hover {
+    background-color: #0a0c0e;
+    transform: scale(1.05); 
+  }
+  .get-started-btn-text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    font-family:  $wsg-sans-serif;
+    letter-spacing: .20px;
+    text-decoration: none;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .get-started-btn-text:hover {
+    color: #fff;
+    font-weight: 500;
+    font-family: $wsg-sans-serif;
+    letter-spacing: .20px;
+    text-decoration: none;
+  }
+
+
+
+
+  .learn-more-btn {
+    background-color: #5fb8ff;
+    border-color: transparent!important;
+    transition: all .2s ease-in-out; 
+  }
+  .learn-more-btn:hover {
+    background-color: #52b0fd;
+   
+    box-shadow:inset .1rem .1rem 0.5rem #4695d6, 
+    inset -.2rem -.2rem 1rem #72bbf7;
+  }
+  .learn-more-btn-text {
+    color: #fff;
+    font-weight: 400;
+    font-family:  $wsg-sans-serif;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+  .learn-more-btn-text:hover {
+    color: #fff;
+    font-weight: 500;
+    font-family: $wsg-sans-serif;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+
+  
+.btn {
+  border-radius: 0.375rem;
+  
+}
+
+@keyframes gridButton {
+  0% {
+    transform: scale(1, 1) rotateZ(0deg);
+  }
+  50% {
+    transform: scale(1.1, 1.1) rotateZ(90deg);
+  }
+  100% {
+    transform: scale(1, 1) rotateZ(180deg);
+  }
+}
+
+.grid-button {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  position: relative;
+  margin: 0;
+
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  width: 6rem;
+  height: 6rem;
+  white-space: nowrap;
+  background: #fff;
+  border: 0.5rem solid #777;
+  color:$webstop-blue!important;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 3rem;
 }
-.get-started-btn:hover {
-  background-color: #0a0c0e;
-  transform: scale(1.05);
+.grid-button.processing {
+  animation-name: gridButton;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
 }
-.get-started-btn-text {
-  color: #fff;
-  font-size: 20px;
-  font-weight: 400;
-  font-family:  $wsg-sans-serif;
-  letter-spacing: .20px;
-  text-decoration: none;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-.get-started-btn-text:hover {
-  color: #fff;
-  font-weight: 500;
-  font-family: $wsg-sans-serif;
-  letter-spacing: .20px;
-  text-decoration: none;
+.grid-button:focus {
+  outline: 0;
+  border: 0.7rem double #000;
+  padding: 1rem;
 }
 
-.learn-more-btn {
-  background-color: #5fb8ff;
-  transition: all .2s ease-in-out;
-}
-.learn-more-btn:hover {
-  background-color: #52b0fd;
+/** End Button Stuff **/
 
-  box-shadow:inset .1rem .1rem 0.5rem #4695d6,
-  inset -.2rem -.2rem 1rem #72bbf7;
-}
-.learn-more-btn-text {
-  color: #fff;
-  font-weight: 400;
-  font-family:  $wsg-sans-serif;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
-.learn-more-btn-text:hover {
-  color: #fff;
-  font-weight: 500;
-  font-family: $wsg-sans-serif;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
 
-/** Docs template layout stuff */
+  /** Docs template layout stuff */ 
 
-.left-nav {
-  padding-right: 0px;
-  padding-left: 0px;
-}
+ .left-nav {
+   padding-right: 0px;
+   padding-left: 0px;
+ } 
 .left-nav-link {
   border-bottom: 1px solid #e5e5e5;
 }
@@ -212,7 +284,7 @@
 }
 
 /** Examples and Highlights **/
-
+ 
 .bd-example-container {
   min-width: 16rem;
   max-width: 25rem;
@@ -224,7 +296,7 @@
   height: 3rem;
   margin-bottom: .5rem;
   background-color: lighten($primary, 25%);
-  border-radius: 0.75rem;
+  border-radius: 0.75rem; 
 }
 
 .bd-example-container-sidebar {
@@ -232,14 +304,14 @@
   width: 4rem;
   height: 8rem;
   background-color: lighten($primary, 50%);
-  border-radius: 0.75rem;
+  border-radius: 0.75rem; 
 }
 
 .bd-example-container-body {
   height: 8rem;
   margin-right: 4.5rem;
   background-color: lighten(purple, 25%);
-  border-radius: 0.75rem;
+  border-radius: 0.75rem; 
 }
 
 .bd-example-container-fluid {
@@ -252,8 +324,8 @@
     margin-right: 0;
     margin-left: 0;
     border-width: 0.5px;
-    border-radius: 0.75rem;
-
+    border-radius: 0.75rem; 
+   
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     z-index: 99;
   }
@@ -266,13 +338,13 @@ pre {
     overflow: auto;
     font-size: 0.875em;
 }
-
+  
   .on-page {
     position: -webkit-sticky;
     position: sticky;
     top: 4rem;
     z-index: 1000;
-    overflow-y: auto;
+    overflow-y: auto; 
   }
 
 
@@ -305,21 +377,21 @@ pre {
     border:1px solid #dbdbdb;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     margin-bottom: 50px;
-
+   
   }
 
-
+  
   th, td {
     text-align: left;
     padding: 10px;
     border:1px solid #dbdbdb;
   }
-
-
-
+  
+ 
+ 
   /** Core Icons Grid**/
-
-
+ 
+ 
   .list-features {
 
     list-style: none;
@@ -621,61 +693,3 @@ select.grid-control-field::-ms-expand {
 }
 
 /* Button */
-
-.btn {
-  border-radius: 0.375rem;
-
-}
-
-@keyframes gridButton {
-  0% {
-    transform: scale(1, 1) rotateZ(0deg);
-  }
-  50% {
-    transform: scale(1.1, 1.1) rotateZ(90deg);
-  }
-  100% {
-    transform: scale(1, 1) rotateZ(180deg);
-  }
-}
-
-.grid-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin: 0;
-
-  padding: 1.2rem;
-  font-size: 1.6rem;
-  font-weight: 700;
-  width: 6rem;
-  height: 6rem;
-  white-space: nowrap;
-  background: #fff;
-  border: 0.5rem solid #777;
-  color:$webstop-blue!important;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border-radius: 3rem;
-}
-.grid-button.processing {
-  animation-name: gridButton;
-  animation-duration: 0.2s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  animation-delay: 0s;
-}
-.grid-button:focus {
-  outline: 0;
-  border: 0.7rem double #000;
-  padding: 1rem;
-}
-

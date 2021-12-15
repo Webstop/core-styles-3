@@ -5,9 +5,6 @@ description: The easy way to gather analytics about specific page elements.
 group: grocery
 toc: true
 source: Webstop
-menu: 
-  analytics:
-    parent: Analytics
 ---
 
 
@@ -46,21 +43,21 @@ the action with the value submitted. The following examples illustrate how the e
 
 The following view action will record `view coupon` in the name field of the events database table:
 
-{{< highlight >}}  
+{% highlight html %}
 <div data-aye-view="coupon">...</div>
-{{< /highlight >}} 
+{% endhighlight %}
 
 The following click action will record `click coupon` in the name field of the events database table:
 
-{{< highlight >}}  
+{% highlight html %}
 <a href="/coupon" data-aye-click="coupon">...</a>
-{{< /highlight >}}  
+{% endhighlight %}
 
 The following submit action will record `submit coupon` in the name field of the events database table:
 
-{{< highlight >}}  
+{% highlight html %}
 <form data-aye-submit="coupon">...</form>
-{{< /highlight >}}  
+{% endhighlight %}
 
 
 
@@ -175,7 +172,7 @@ By adding the `data-aye-click` attribute our aye.js analytics javascript
 will watch the element and create a record in our analytics database when the 
 the consumer clicks the element.
 
-{{< example >}}
+{% capture example %}
 <button class="btn btn-primary" 
   data-aye-click="add recipe ingredient" 
   data-aye-app-id="8" 
@@ -185,7 +182,8 @@ the consumer clicks the element.
   data-aye-context-id="10">
   Add Ingredient
 </button> 
-{{< /example >}}
+{% endcapture %}
+{% include example.html content=example %} 
 
 Placing `data-aye-click` on an element alone doesn't give us much useful data to record. 
 We augment the analytics record with additional data by adding more `data-aye-*` attributes.
@@ -205,7 +203,7 @@ By adding the `data-aye-view` attribute our aye.js analytics javascript
 will discover the element and create a record in our analytics database when the 
 the consumer visits a web page containing the element.
 
-{{< example >}}
+{% capture example %}
 <img src="/assets/images/aye-analytics/7233_Recipe_SIMG.jpg" style="max-width: 325px;"
   data-aye-view="recipe"  
   data-aye-app-id="1" 
@@ -218,7 +216,8 @@ the consumer visits a web page containing the element.
   data-aye-property-recipe-id="23517"
   data-aye-property-recipe-number="7233"
   data-aye-property-recipe-title="Silly Muffin"> 
-{{< /example >}}
+{% endcapture %}
+{% include example.html content=example %} 
 
 Placing `data-aye-view` on an element alone doesn't give us much useful data to record. 
 We augment the analytics record with additional data by adding more `data-aye-*` attributes.
@@ -248,13 +247,13 @@ convert it to snake case (e.g. `recipe_title`), before submitting it to the API.
 
 The example above will write the following to the properties json database field:
 
-{{< highlight >}}  
+{% highlight json %}
 properties: {
   recipe_id: 23517,
   recipe_number: 7233,
   recipe_title: 'Silly Muffin'
 }
-{{< /highlight >}}  
+{% endhighlight %}
 
 
 ### Track Submit Example
@@ -263,7 +262,7 @@ By adding the `data-aye-submit` attribute to a form, our aye.js analytics javasc
 will watch the form and create a record in our analytics database when the 
 the consumer submits the form.
 
-{{< example >}}
+{% capture example %}
 <form
   data-aye-submit="newsletter sign-up" 
   data-aye-app-id="6"
@@ -278,7 +277,8 @@ the consumer submits the form.
   </div>
   <button type="submit" class="btn btn-primary">Subscribe to Newsletter</button>
 </form> 
-{{< /example >}}
+{% endcapture %}
+{% include example.html content=example %} 
 
 Placing `data-aye-submit` on an element alone doesn't give us much useful data to record. 
 We augment the analytics record with additional data by adding more `data-aye-*` attributes.
@@ -318,26 +318,26 @@ the web page. Aye uses these data attributes to craft the URL used to submit tra
 
 For **local development** you'd have the following data attributes:
 
-{{< highlight >}}  
+{% highlight html %}
 <body data-retailer-id="767" data-environment="development">
-{{< /highlight >}}  
+{% endhighlight %}
 
 For **local testing** you'd have the following data attributes:
 
-{{< highlight >}}  
+{% highlight html %}
 <body data-retailer-id="767" data-environment="test">
-{{< /highlight >}}  
+{% endhighlight %}
 
 For **production** you'd have the following data attributes:
 
-{{< highlight >}}  
+{% highlight html %}
 <body data-retailer-id="767" data-environment="production">
-{{< /highlight >}}  
+{% endhighlight %}
 
 For **other environments** you can specify the following:
 
-{{< highlight >}}  
+{% highlight html %}
 <body data-retailer-id="767" data-api-host="http://grocery.core1.rails1.webstophq.com">
-{{< /highlight >}}  
+{% endhighlight %}
 
 _The example above would be used for Webstop's Core 1 testing server._
