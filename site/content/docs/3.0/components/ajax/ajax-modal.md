@@ -21,7 +21,7 @@ content from, it is expected to be in HTML format. You should also include the `
 
 
 {{< example >}}
-<button data-toggle="modal" data-target="#site-modal" data-load="{{ sinatra_host }}/shopping_lists/list/new" data-title="New Shopping List" data-footer="hide" class="btn btn-primary">
+<button data-toggle="modal" data-target="#site-modal" data-load="{{ sinatra_host }}/shopping_lists/list/new" data-title="New Shopping List" data-footer="hide" class="btn btn-primary ">
   New Shopping List
 </button>
 

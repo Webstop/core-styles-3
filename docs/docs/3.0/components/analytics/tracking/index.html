@@ -686,7 +686,7 @@ supplying the data to the Webstop event tracking API.</p>
 will watch the element and create a record in our analytics database when the
 the consumer clicks the element.</p>
 <p>{% capture example %}
-<button class="btn btn-primary" 
+<button class="btn btn-primary wsg-btn-primary" 
 data-aye-click="add recipe ingredient" 
 data-aye-app-id="8" 
 data-aye-resource="RecipeIngredient" 
@@ -773,7 +773,7 @@ the consumer submits the form.</p>
     <label for="email">Email Address</label>
     <input type="email" data-aye-property-email class="form-control" id="email">
   </div>
-  <button type="submit" class="btn btn-primary">Subscribe to Newsletter</button>
+  <button type="submit" class="btn btn-primary wsg-btn-primary">Subscribe to Newsletter</button>
 </form> 
 {% endcapture %}
 {% include example.html content=example %} 

@@ -1,13 +1,13 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   const dragContainer = document.querySelector('.drag-container');
-  const gridElement = document.querySelector('.grid');
-  const filterField = document.querySelector('.grid-control-field.filter-field');
-  const searchField = document.querySelector('.grid-control-field.search-field');
-  const sortField = document.querySelector('.grid-control-field.sort-field');
-  const layoutField = document.querySelector('.grid-control-field.layout-field');
-  const addButton = document.querySelector('.grid-button.add-more-items');
-  const itemTemplate = document.querySelector('.grid-item-template');
+  const gridElement = document.querySelector('.wsg-grid');
+  const filterField = document.querySelector('.wsg-grid-control-field.filter-field');
+  const searchField = document.querySelector('.wsg-grid-control-field.search-field');
+  const sortField = document.querySelector('.wsg-grid-control-field.sort-field');
+  const layoutField = document.querySelector('.wsg-grid-control-field.layout-field');
+  const addButton = document.querySelector('.wsg-grid-button.add-more-items');
+  const itemTemplate = document.querySelector('.wsg-grid-item-template');
   const characters = 'abcdefghijklmnopqrstuvwxyz';
   const style = ['solid', 'duotone', 'regular', 'lite'];
 
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
   //
 
   const grid = new Muuri(gridElement, {
-    items: '.grid-item',
+    items: '.wsg-grid-item',
     showDuration: 400,
     showEasing: 'ease',
     hideDuration: 400,
@@ -73,8 +73,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add/remove items bindings.
     addButton.addEventListener('click', addItems);
     gridElement.addEventListener('click', (e) => {
-      if (e.target.matches('.grid-card-remove')) {
-        removeItem(grid.getItem(e.target.closest('.grid-item')));
+      if (e.target.matches('.wsg-grid-card-remove')) {
+        removeItem(grid.getItem(e.target.closest('.wsg-grid-item')));
       }
     });
   }

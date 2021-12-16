@@ -1,20 +1,20 @@
 <section class="grid-demo">
   <div class="container px-1 py-1">
     <div class="icon-grid">
-      <div class="grid-controls">
-        <div class="grid-control search">
+      <div class="wsg-grid-controls">
+        <div class="wsg-grid-control search">
           <input
-            class="grid-control-field search-field form-control"
+            class="wsg-grid-control-field search-field form-control"
             type="text"
             name="search"
             placeholder="Search..."
           />
-          <div class="grid-control-icon">
+          <div class="wsg-grid-control-icon">
             <i class="fas fa-search fa-lg"></i>
           </div>
         </div>
-        <div class="grid-control filter">
-          <select class="grid-control-field filter-field form-control">
+        <div class="wsg-grid-control filter">
+          <select class="wsg-grid-control-field filter-field form-control">
             <option value="" selected>All</option>
             <option value="admin">Admin</option>
             <option value="webstop">Webstop</option>
@@ -25,32 +25,32 @@
             <option value="symbols">Symbol</option>
             <option value="social">Social</option>
           </select>
-          <div class="grid-control-icon">
+          <div class="wsg-grid-control-icon">
             <i class="fas fa-filter fa-lg"></i>
           </div>
           <div class="grid-select-arrow">
             <i class="fas fa-angle-down fa-lg"></i>
           </div>
         </div>
-        <div class="grid-control sort">
-          <select class="grid-control-field sort-field form-control">
+        <div class="wsg-grid-control sort">
+          <select class="wsg-grid-control-field sort-field form-control">
             <option value="title" selected>Title</option>
             <option value="style">Style</option>
           </select>
-          <div class="grid-control-icon">
+          <div class="wsg-grid-control-icon">
             <i class="fas fa-arrows fa-lg"></i>
           </div>
           <div class="grid-select-arrow">
             <i class="fas fa-angle-down fa-lg"></i>
           </div>
         </div>
-        <div class="grid-control layout">
-          <select class="grid-control-field layout-field form-control">
+        <div class="wsg-grid-control layout">
+          <select class="wsg-grid-control-field layout-field form-control">
             <option value="left-top" selected>Left Top</option>
 
 
           </select>
-          <div class="grid-control-icon">
+          <div class="wsg-grid-control-icon">
             <i class="fas fa-align-left fa-lg"></i>
           </div>
           <div class="grid-select-arrow">
@@ -59,10 +59,10 @@
         </div>
       </div>
 
-      <div class="grid icon-examples row p-2">
+      <div class="wsg-grid icon-examples row p-2">
         {{ range .Site.Data.icons }}
-        <div class="grid-item item col-md-3 mb-3" data-style="{{ .style }}" data-toggle="{{ .category }}" data-title="{{ .name }} {{ .search }}">
-          <div class="grid-item-content icon-example card card-box h-100">
+        <div class="wsg-grid-item item col-md-3 mb-3" data-style="{{ .style }}" data-toggle="{{ .category }}" data-title="{{ .name }} {{ .search }}">
+          <div class="wsg-grid-item-content icon-example card card-box wsg-card-box h-100">
             <div class="card-body text-center">
               <div class="py-2">
                 <span class="icon-example-html"><i class="{{ .style }} {{ .icon }} fa-3x"></i></span></div>
@@ -70,9 +70,9 @@
               <code class="icon-example-code code">&#x3C;i class=&#x22;{{ .style }} {{ .icon }}&#x22;&#x3E;&#x3C;/i&#x3E;</code>
 
             </div>
-            <div class="card-footer icon-card-footer">
+            <div class="card-footer wsg-card-footer icon-card-footer">
               <div class="d-grid">
-                <button class="btn-clipboard btn btn-primary" type="button" data-clipboard-text="&#x3C;i class=&#x22;{{ .style }} {{ .icon }}&#x22;&#x3E;&#x3C;/i&#x3E;" title data-bs-original-title="Copy to clipboard">Copy Code</button>
+                <button class="btn-clipboard btn btn-primary wsg-btn wsg-btn-primary  " type="button" data-clipboard-text="&#x3C;i class=&#x22;{{ .style }} {{ .icon }}&#x22;&#x3E;&#x3C;/i&#x3E;" title data-bs-original-title="Copy to clipboard">Copy Code</button>
               </div>
               <span class="icon-example-clipboard-code visually-hidden" id="copyingText">&#x3C;i class=&#x22;{{ .style }} {{ .icon }}&#x22;&#x3E;&#x3C;/i&#x3E;</span>
             </div>
@@ -82,14 +82,14 @@
         {{ end }}
       </div>
 
-      <template class="grid-item-template">
-        <div class="grid-item">
-          <div class="grid-item-content">
-            <div class="grid-card">
-              <div class="grid-card-title"></div>
-              <div class="grid-card-details"></div>
-              <div class="grid-card-handle"></div>
-              <div class="grid-card-remove">
+      <template class="wsg-grid-item-template">
+        <div class="wsg-grid-item">
+          <div class="wsg-grid-item-content">
+            <div class="wsg-grid-card">
+              <div class="wsg-grid-card-title"></div>
+              <div class="wsg-grid-card-details"></div>
+              <div class="wsg-grid-card-handle"></div>
+              <div class="wsg-grid-card-remove">
                 <i class="fas fa-times"></i>
               </div>
             </div>

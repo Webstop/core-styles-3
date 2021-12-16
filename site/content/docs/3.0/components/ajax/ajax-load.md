@@ -23,7 +23,7 @@ the AJAX content with the `data-target` attribute, it accepts standard jQuery se
 
 
 {{< example >}}
-<button data-ajax-load data-target="#ajax-target-1" data-load="/ajax/alert_success" class="btn btn-primary mb-2">
+<button data-ajax-load data-target="#ajax-target-1" data-load="/ajax/alert_success" class="btn btn-primary  mb-2">
   Load Content
 </button>
 
@@ -40,7 +40,7 @@ In the following example we replace the button that triggers the request with th
 
 {{< example >}}
 <div id="ajax-target-replace">
-  <button data-ajax-load data-target="#ajax-target-replace" data-load="/ajax/alert_success" class="btn btn-primary">
+  <button data-ajax-load data-target="#ajax-target-replace" data-load="/ajax/alert_success" class="btn btn-primary ">
     Replace Me with AJAX Content!
   </button>
 </div>

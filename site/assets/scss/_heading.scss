@@ -1,4 +1,25 @@
-.page-title {
+.wsg-header {
+  background-color: $wsg-dark;
+}
+
+.wsg-title-header-section {
+  background-color: $webstop-blue;
+}
+
+// Background Gradient
+.wsg-title-head {
+  background: rgb(0,179,255);
+  background: linear-gradient(90deg, rgba(0,179,255,1) 0%, rgba(19,185,255,1) 50%, rgba(0,179,255,1) 100%);
+}
+
+.wsg-inner-shadow {
+  -moz-box-shadow:    inset 0 -7px 7px -7px #777;
+  -webkit-box-shadow: inset 0 -7px 7px -7px #777;
+  box-shadow:         inset 0 -7px 7px -7px #777;
+
+}
+
+.wsg-page-title {
   font-weight: 900;
   font-size: 50px;
   border-radius: 15px;
@@ -6,16 +27,13 @@
               -5px -5px 5px #ffffff;
 }
 
-.bg-title-head {
-  background: rgb(0,179,255);
-  background: linear-gradient(90deg, rgba(0,179,255,1) 0%, rgba(19,185,255,1) 50%, rgba(0,179,255,1) 100%);
-}
+
 
 .docs-heading {
   margin: -$spacer;
   margin-bottom: $spacer;
   padding: $spacer;
-  background: $blue;
+  background: $wsg-blue-alt;
 
 
   .docs-heading-title {
