@@ -34,7 +34,7 @@
           <a class="nav-link" href="/docs/3.0/components/ajax/ajax-form/">Docs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/guides/3.0/development-approach/">Dev</a>
+          <a class="nav-link" href="/dev/ad-builder/">Dev</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/guides/">Guides</a>
@@ -97,30 +97,6 @@
       
       
 
-      
-      
-      
-      <li class="mb-1">
-        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#guides-menu-collapse"
-          aria-expanded="false">
-          <strong> Ad Builder</strong>
-        </button>
-
-        <div
-          class="collapse "
-          id="guides-menu-collapse">
-          
-          <ul class="list-unstyled fw-normal pb-1 small">
-
-            <li
-              class="py-2 ps-4 ">
-              <a href="/dev/ad-builder/item-entry/" class="d-inline-flex rounded">Item Entry</a>
-            </li>
-
-          </ul>
-          
-        </div>
-      </li>
       
       
       
@@ -395,6 +371,30 @@
 
       
       
+      
+      <li class="mb-1">
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#dev-menu-collapse"
+          aria-expanded="false">
+          <strong> Dev</strong>
+        </button>
+
+        <div
+          class="collapse "
+          id="dev-menu-collapse">
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/dev/tracking/" class="d-inline-flex rounded">Aye, Analytics Tracking</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </li>
+      
+      
 
       
       
@@ -442,8 +442,8 @@
       <p class="docs-heading-tagline">Website layout for administration pages.</p>
     </section>
     <blockquote>
-<p>Prior to Core-Styles v3 administration pages were served in a separate framework called Admin-Styles. We soon realized
-we wanted access to all the things in core-styles from admin pages, and that the thing we found most valuable from
+<p>Prior to Core-Styles v3 administration pages were served in a separate framework called Admin-Styles. We soon realized 
+we wanted access to all the things in core-styles from admin pages, and that the thing we found most valuable from 
 Admin-Styles was the page layout features. Now the page layout features of Admin-Styles are included as part of Core-Styles.</p>
 </blockquote>
 <h2 id="base-admin-example">Base Admin Example</h2>
@@ -749,14 +749,14 @@ Admin-Styles was the page layout features. Now the page layout features of Admin
   <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="ruby-on-rails-support">Ruby On Rails Support</h2>
-<p>Most of the time we don&rsquo;t talk about any back-end technology in our front-end framework. With the admin layout
+<p>Most of the time we don&rsquo;t talk about any back-end technology in our front-end framework. With the admin layout 
 system we have built out a unique system to control page layout, so we are going to explain it here.</p>
 <h3 id="admin-layout-template">Admin Layout Template</h3>
-<p>At the heart of the layout system is the <code>admin_v3</code> layout template. To use it place <code>layout 'admin_v3'</code>
-near the top of your controller. This is typically done right after any actions are called, like the <code>before_action</code>.
+<p>At the heart of the layout system is the <code>admin_v3</code> layout template. To use it place <code>layout 'admin_v3'</code> 
+near the top of your controller. This is typically done right after any actions are called, like the <code>before_action</code>. 
 This one template handles all admin page layouts.</p>
 <h3 id="the-page-map">The <code>@page</code> Map</h3>
-<p>In the application controller we define a map called <code>@page</code>. The <code>@page</code> variable contains boolean settings which control the
+<p>In the application controller we define a map called <code>@page</code>. The <code>@page</code> variable contains boolean settings which control the 
 page layout. These settings are explained in the chart below.</p>
 <p>The <code>@page</code> hash is set at the top of a view file to control how that view will be presented in the admin layout template.</p>
 <!-- DEFAULTS
@@ -900,7 +900,7 @@ page layout. These settings are explained in the chart below.</p>
   
     <aside class="admin-sidebar">
       <h4 class="border-bottom">On this page</h4>
-      <div class="table-of-contents">
+      <div class="wsg-table-of-contents">
         <nav id="TableOfContents">
   <ul>
     <li><a href="#base-admin-example">Base Admin Example</a></li>
