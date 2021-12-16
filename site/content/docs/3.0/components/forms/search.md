@@ -28,7 +28,7 @@ text field to watch; the field the consumer types search terms into.
     <input class="search-from-search-text form-control" type="text" name="search" placeholder="Search" aria-label="Enter text to search for.">
     <a href="#" class="search-form-clear icon-cancel-circle-solid" aria-label="Clear Search"></a>
     <div class="input-group-append">
-      <button class="search-from-submit btn btn-primary" type="submit" aria-label="Submit Search">
+      <button class="search-from-submit btn btn-primary " type="submit" aria-label="Submit Search">
         <i class="fas fa-search"></i>
       </button>
     </div>
@@ -75,7 +75,7 @@ place the `toolbar-group` class on other elements will likely produce undesirabl
       <input class="search-from-search-text form-control" type="text" name="search" placeholder="Search" aria-label="Enter text to search for.">
       <a href="#" class="search-form-clear icon-cancel-circle-solid" aria-label="Clear Search"></a>
       <div class="input-group-append">
-        <button class="search-from-submit btn btn-primary" type="submit" aria-label="Submit Search">
+        <button class="search-from-submit btn btn-primary " type="submit" aria-label="Submit Search">
           <i class="fas fa-search"></i>
         </button>
       </div>
@@ -105,7 +105,7 @@ Search forms can have any number of fields and the AJAX request will submit them
       <input class="search-from-search-text form-control" type="text" name="search" placeholder="Search" aria-label="Enter text to search for.">
       <a href="#" class="search-form-clear icon-cancel-circle-solid" aria-label="Clear Search"></a>
       <div class="input-group-append">
-        <button class="search-from-submit btn btn-primary" type="submit" aria-label="Submit Search">
+        <button class="search-from-submit btn btn-primary " type="submit" aria-label="Submit Search">
          <i class="fas fa-search"></i>
         </button>
       </div>
@@ -137,7 +137,7 @@ Search forms can have any number of fields and the AJAX request will submit them
       Example Checkbox Selection 2
     </label>
   </div>
-  <button class="btn btn-primary mt-2">Search</button>
+  <button class="btn btn-primary  mt-2">Search</button>
 </form>
 
 <hr>

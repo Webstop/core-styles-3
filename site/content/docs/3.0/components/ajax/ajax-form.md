@@ -5,8 +5,8 @@ description: An easy way to submit form contents & load the response into a sect
 toc: true
 source: Webstop
 menu: 
-  ajax:
-    parent: Ajax
+    ajax:
+      parent: Ajax
 ---
  
 
@@ -26,7 +26,7 @@ specifies the URL to pull the content from, the content is expected to be in HTM
     <label for="title-example" class="py-2">Title</label>
     <input type="text" class="form-control p-2" name="title-example" id="title-example" placeholder="Title">
   </div>
-  <button class="btn btn-primary mt-3" type="submit">
+  <button class="btn btn-primary  mt-3" type="submit">
     Save Title
   </button>
 </form>
@@ -47,7 +47,7 @@ is returned.
     <label for="title-example" class="py-2">Title</label>
     <input type="text" class="form-control p-2" name="title-example" id="title-example" placeholder="Title">
   </div>
-  <button class="btn btn-primary mt-3" type="submit">
+  <button class="btn btn-primary  mt-3" type="submit">
     Save Title
   </button>
 </form>
