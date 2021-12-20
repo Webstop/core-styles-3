@@ -6,11 +6,12 @@ group: components
 toc: true
 source: Webstop
 menu:
-  orphan:
+  cards:
+    parent: Cards
 ---
 
 {{< example >}}
-<div class="card-deck">
+<div class="card-deck"> 
   <div class="card">
     {{< placeholder width="100%" height="200" class="card-img-top" text="Image cap" >}}
     <div class="card-body">

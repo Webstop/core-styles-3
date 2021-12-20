@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/docs.css" />
   </head>
   <body>
-    
+
     
 <div class="admin admin-with-sidenav admin-with-sidebar">
   <header class="admin-header" role="banner">
@@ -21,7 +21,7 @@
   <div class="container-fluid">
     <a class="navbar-brand ms-2" href="/"><img
         src="https://www.webstop.com/assets/Webstop-logos/webstop-twocolor-landscape-dark-bg-72dpi-e6425f6d6e9ec4cc90742a883b2997bb28191590bfd8762222ed4723865dcaef.png" style="max-width: 127px; /* 889/7 = 127 */"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -73,7 +73,7 @@
       
       
       <li class="mb-1">
-        <button class="btn d-inline-flex rounded" type="button" data-bs-toggle="collapse"
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse"
           data-bs-target="#getstart-menu-collapse" aria-expanded="false" aria-controls="getstart-menu-collapse">
           <strong> Getting Started</strong>
         </button>
@@ -418,6 +418,15 @@
 
           </ul>
           
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/utilities/min-width/" class="d-inline-flex rounded">Min Width</a>
+            </li>
+
+          </ul>
+          
         </div>
       </li>
       
@@ -425,14 +434,10 @@
 
       
       
-      <li
-        class="py-2 ps-4 ">
-        <a href="/docs/3.0/components/card-deck/" class="d-inline-flex rounded">Card Decks</a>
-      </li>
-      
     </ul>
   </nav>
 </aside>
+
   </nav>
   <main class="admin-page" role="main">
     <section class="docs-heading inner-shadow">
@@ -450,17 +455,17 @@ The <code>toolbar-group</code> class provides consistent position and margins be
 <div class="my-3 p-3 example">
 <nav class="toolbar">
   <div class="toolbar-group btn-group" role="group" aria-label="Basic example">
-    <button type="button" class="btn btn-light">Left</button>
-    <button type="button" class="btn btn-light">Middle</button>
-    <button type="button" class="btn btn-light">Right</button>
+    <button class="btn btn-light">Left</button>
+    <button class="btn btn-light">Middle</button>
+    <button class="btn btn-light">Right</button>
   </div>
 
   <div class="toolbar-group">
-    <button type="button" class="btn btn-light">Alone</button>
+    <button class="btn btn-light">Alone</button>
   </div>
   <div class="toolbar-group">
     <div class="dropdown">
-      <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-light dropdown-toggle"" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Dropdown
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -473,7 +478,7 @@ The <code>toolbar-group</code> class provides consistent position and margins be
 
   <div class="toolbar-group btn-group" role="group" aria-label="Basic example">
     <div class="dropdown btn-group" role="group">
-      <button class="btn btn-light dropdown-toggle" type="button" id="dropdownLeftMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-light dropdown-toggle"" id="dropdownLeftMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Left
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownLeftMenuButton">
@@ -483,7 +488,7 @@ The <code>toolbar-group</code> class provides consistent position and margins be
       </div>
     </div>
     <div class="dropdown btn-group" role="group">
-      <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMiddleMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-light dropdown-toggle"" id="dropdownMiddleMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Middle
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMiddleMenuButton">
@@ -493,7 +498,7 @@ The <code>toolbar-group</code> class provides consistent position and margins be
       </div>
     </div>
     <div class="dropdown btn-group" role="group">
-      <button class="btn btn-light dropdown-toggle" type="button" id="dropdownRightMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-light dropdown-toggle"" id="dropdownRightMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Right
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownRightMenuButton">
@@ -511,17 +516,17 @@ The <code>toolbar-group</code> class provides consistent position and margins be
 </nav>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toolbar&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toolbar-group btn-group&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;group&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Basic example&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Left<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Middle<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Right<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Left<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Middle<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Right<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toolbar-group&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Alone<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Alone<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toolbar-group&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light dropdown-toggle&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;dropdownMenuButton&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span> <span class="na">aria-haspopup</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light dropdown-toggle&#34;</span><span class="err">&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;dropdownMenuButton&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span> <span class="na">aria-haspopup</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>
         Dropdown
       <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-menu&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;dropdownMenuButton&#34;</span><span class="p">&gt;</span>
@@ -534,7 +539,7 @@ The <code>toolbar-group</code> class provides consistent position and margins be
 
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toolbar-group btn-group&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;group&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Basic example&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown btn-group&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;group&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light dropdown-toggle&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;dropdownLeftMenuButton&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span> <span class="na">aria-haspopup</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light dropdown-toggle&#34;</span><span class="err">&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;dropdownLeftMenuButton&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span> <span class="na">aria-haspopup</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>
         Left
       <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-menu&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;dropdownLeftMenuButton&#34;</span><span class="p">&gt;</span>
@@ -544,7 +549,7 @@ The <code>toolbar-group</code> class provides consistent position and margins be
       <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown btn-group&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;group&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light dropdown-toggle&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;dropdownMiddleMenuButton&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span> <span class="na">aria-haspopup</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light dropdown-toggle&#34;</span><span class="err">&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;dropdownMiddleMenuButton&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span> <span class="na">aria-haspopup</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>
         Middle
       <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-menu&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;dropdownMiddleMenuButton&#34;</span><span class="p">&gt;</span>
@@ -554,7 +559,7 @@ The <code>toolbar-group</code> class provides consistent position and margins be
       <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown btn-group&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;group&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light dropdown-toggle&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;dropdownRightMenuButton&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span> <span class="na">aria-haspopup</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light dropdown-toggle&#34;</span><span class="err">&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;dropdownRightMenuButton&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span> <span class="na">aria-haspopup</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>
         Right
       <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-menu&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;dropdownRightMenuButton&#34;</span><span class="p">&gt;</span>
@@ -642,9 +647,9 @@ adjust the alignment of your toolbar groups.</p>
 <div class="my-3 p-3 example">
 <nav class="toolbar">
   <div class="toolbar-group btn-group" role="group" aria-label="Basic example">
-    <button type="button" class="btn btn-light">Left</button>
-    <button type="button" class="btn btn-light">Middle</button>
-    <button type="button" class="btn btn-light">Right</button>
+    <button class="btn btn-light">Left</button>
+    <button class="btn btn-light">Middle</button>
+    <button class="btn btn-light">Right</button>
   </div>
   <div class="toolbar-group" role="group" aria-label="Basic example">
     <form class="form-inline">
@@ -663,9 +668,9 @@ adjust the alignment of your toolbar groups.</p>
 
 <nav class="toolbar justify-content-between">
   <div class="toolbar-group btn-group" role="group" aria-label="Basic example">
-    <button type="button" class="btn btn-light">Left</button>
-    <button type="button" class="btn btn-light">Middle</button>
-    <button type="button" class="btn btn-light">Right</button>
+    <button class="btn btn-light">Left</button>
+    <button class="btn btn-light">Middle</button>
+    <button class="btn btn-light">Right</button>
   </div>
   <div class="toolbar-group" role="group" aria-label="Basic example">
     <form class="form-inline">
@@ -682,9 +687,9 @@ adjust the alignment of your toolbar groups.</p>
 
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toolbar&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toolbar-group btn-group&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;group&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Basic example&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Left<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Middle<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Right<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Left<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Middle<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Right<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toolbar-group&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;group&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Basic example&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-inline&#34;</span><span class="p">&gt;</span>
@@ -703,9 +708,9 @@ adjust the alignment of your toolbar groups.</p>
 
 <span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toolbar justify-content-between&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toolbar-group btn-group&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;group&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Basic example&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Left<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Middle<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Right<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Left<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Middle<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span><span class="p">&gt;</span>Right<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toolbar-group&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;group&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Basic example&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-inline&#34;</span><span class="p">&gt;</span>
@@ -1011,6 +1016,7 @@ adjust the alignment of your toolbar groups.</p>
     <script src="/js/core-styles/bootstrap-data-attributes.js"></script>
     <script src="/js/core-styles/checkbox-selector.js"></script>
     <script src="/js/core-styles/shopping-list-power-bar.js"></script>
+    <script src="/js/core-styles/filter-search.js"></script>
     <script src="/js/core-styles/form-toggles.js"></script>
     <script src="/js/core-styles/search.js"></script>
     <script src="/js/core-styles/circular-cookies.js"></script>

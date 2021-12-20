@@ -73,13 +73,13 @@ The `site` class resides on the root element of a website. It should sit inside 
       <div class="site-modal-content modal-content">
         <div class="modal-header">
           <h4 class="site-modal-title modal-title" id="site-modal-title"></h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <button class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
         <div class="site-modal-body modal-body" id="site-modal-body"></div>
         <div class="site-modal-footer modal-footer">
-          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+          <button class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>

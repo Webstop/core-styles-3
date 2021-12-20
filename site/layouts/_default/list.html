@@ -26,7 +26,7 @@
   </section>
 
   <main class="index p-5">
-  
+
       <div class="container">
         <div class="row d-flex">
           {{ range .Pages }}
@@ -43,10 +43,9 @@
                   </div>
                   <div class="card-footer text-center">
                     <div class="d-grid">
-                      <a href="{{ .URL }}" class="btn learn-more-btn" type="button">
+                      <a href="{{ .URL }}" class="btn learn-more-btn">
                           <span class="learn-more-btn-text">Learn More</span>
-                        
-                      </a>  
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -55,6 +54,6 @@
           {{ end }}
         </div>
       </div>
-   
+
   </main>
 {{ end }}

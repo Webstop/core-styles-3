@@ -103,7 +103,7 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/card-deck/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/components/cards/card-deck/</loc>
   </url>
   
   <url>
@@ -216,6 +216,10 @@
   
   <url>
     <loc>https://guides.webstop.com/docs/3.0/utilities/max-width/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/utilities/min-width/</loc>
   </url>
   
   <url>

@@ -24,17 +24,17 @@ The `toolbar-group` class provides consistent position and margins between toolb
 {{< example >}}
 <nav class="toolbar">
   <div class="toolbar-group btn-group" role="group" aria-label="Basic example">
-    <button type="button" class="btn btn-light">Left</button>
-    <button type="button" class="btn btn-light">Middle</button>
-    <button type="button" class="btn btn-light">Right</button>
+    <button class="btn btn-light">Left</button>
+    <button class="btn btn-light">Middle</button>
+    <button class="btn btn-light">Right</button>
   </div>
 
   <div class="toolbar-group">
-    <button type="button" class="btn btn-light">Alone</button>
+    <button class="btn btn-light">Alone</button>
   </div>
   <div class="toolbar-group">
     <div class="dropdown">
-      <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-light dropdown-toggle"" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Dropdown
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -47,7 +47,7 @@ The `toolbar-group` class provides consistent position and margins between toolb
 
   <div class="toolbar-group btn-group" role="group" aria-label="Basic example">
     <div class="dropdown btn-group" role="group">
-      <button class="btn btn-light dropdown-toggle" type="button" id="dropdownLeftMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-light dropdown-toggle"" id="dropdownLeftMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Left
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownLeftMenuButton">
@@ -57,7 +57,7 @@ The `toolbar-group` class provides consistent position and margins between toolb
       </div>
     </div>
     <div class="dropdown btn-group" role="group">
-      <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMiddleMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-light dropdown-toggle"" id="dropdownMiddleMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Middle
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMiddleMenuButton">
@@ -67,7 +67,7 @@ The `toolbar-group` class provides consistent position and margins between toolb
       </div>
     </div>
     <div class="dropdown btn-group" role="group">
-      <button class="btn btn-light dropdown-toggle" type="button" id="dropdownRightMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-light dropdown-toggle"" id="dropdownRightMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Right
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownRightMenuButton">
@@ -136,9 +136,9 @@ adjust the alignment of your toolbar groups.
 {{< example >}}
 <nav class="toolbar">
   <div class="toolbar-group btn-group" role="group" aria-label="Basic example">
-    <button type="button" class="btn btn-light">Left</button>
-    <button type="button" class="btn btn-light">Middle</button>
-    <button type="button" class="btn btn-light">Right</button>
+    <button class="btn btn-light">Left</button>
+    <button class="btn btn-light">Middle</button>
+    <button class="btn btn-light">Right</button>
   </div>
   <div class="toolbar-group" role="group" aria-label="Basic example">
     <form class="form-inline">
@@ -157,9 +157,9 @@ adjust the alignment of your toolbar groups.
 
 <nav class="toolbar justify-content-between">
   <div class="toolbar-group btn-group" role="group" aria-label="Basic example">
-    <button type="button" class="btn btn-light">Left</button>
-    <button type="button" class="btn btn-light">Middle</button>
-    <button type="button" class="btn btn-light">Right</button>
+    <button class="btn btn-light">Left</button>
+    <button class="btn btn-light">Middle</button>
+    <button class="btn btn-light">Right</button>
   </div>
   <div class="toolbar-group" role="group" aria-label="Basic example">
     <form class="form-inline">

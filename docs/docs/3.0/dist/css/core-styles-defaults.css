@@ -11202,6 +11202,18 @@ textarea.form-control-lg {
   margin-bottom: 1.5rem;
 }
 
+.max-width-320 {
+  max-width: 320px;
+}
+
+.max-width-360 {
+  max-width: 360px;
+}
+
+.max-width-450 {
+  max-width: 450px;
+}
+
 .max-width-1140 {
   max-width: 1140px;
 }
@@ -11212,6 +11224,26 @@ textarea.form-control-lg {
 
 .max-width-1600 {
   max-width: 1600px;
+}
+
+.min-width-120 {
+  min-width: 120px;
+}
+
+.min-width-200 {
+  min-width: 200px;
+}
+
+.min-width-250 {
+  min-width: 250px;
+}
+
+.min-width-320 {
+  min-width: 320px;
+}
+
+.min-width-450 {
+  min-width: 450px;
 }
 
 .admin {
@@ -11391,7 +11423,6 @@ textarea.form-control-lg {
   .card-deck .card {
     flex: 1 0 0%;
     margin-right: 0.75rem;
-    margin-bottom: 0;
     margin-left: 0.75rem;
   }
 }

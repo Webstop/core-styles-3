@@ -1,20 +1,46 @@
 
-  function myFunction() {
-    // get the OUTER html of the element you want to copy
-    var text = document.getElementById('icon').outerHTML;
+  // function myFunction() {
+  //   // get the OUTER html of the element you want to copy
+  //   var text = document.getElementById('icon').outerHTML;
+  //
+  //   // put that outerHTML into another textbox for copying
+  //   var tempTextbox = document.getElementById('copyingText');
+  //   tempTextbox.value = text;
+  //
+  //   tempTextbox.focus();
+  //   tempTextbox.select();
+  //
+  //   document.execCommand("Copy");
+  // }
 
-    // put that outerHTML into another textbox for copying
-    var tempTextbox = document.getElementById('copyingText');
-    tempTextbox.value = text;
+  // function itemSearch() {
+  //   // Declare variables
+  //   let input, filter, ul, li, a, i, txtValue;
+  //   let searchFields = document.getElementsByClassName('search-input');
+  //   input = document.getElementById('search-input');
+  //   filter = input.value.toUpperCase();
+  //   ul = document.getElementById("myUL");
+  //   li = ul.getElementsByTagName('li');
+  //
+  //   // Loop through all list items, and hide those who don't match the search query
+  //   for (i = 0; i < li.length; i++) {
+  //     a = li[i].getElementsByTagName("a")[0];
+  //     txtValue = a.textContent || a.innerText;
+  //     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+  //       li[i].style.display = "";
+  //     } else {
+  //       li[i].style.display = "none";
+  //     }
+  //   }
+  // }
 
-    tempTextbox.focus();
-    tempTextbox.select();
 
-    document.execCommand("Copy");
-  }
+
+
+
 
   // Insert copy to clipboard button before .highlight
-  var btnHtml = '<div class="bd-clipboard"><button type="button" class="btn-clipboard btn btn-secondary btn-sm" title="Copy to clipboard"><i class="fad fa-cut"></i> Copy</button></div>'
+  var btnHtml = '<div class="bd-clipboard"><button class="btn-clipboard btn btn-secondary btn-sm" title="Copy to clipboard"><i class="fad fa-cut"></i> Copy</button></div>'
   document.querySelectorAll('div.highlight')
     .forEach(function (element) {
       element.insertAdjacentHTML('afterbegin', btnHtml)
