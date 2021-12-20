@@ -12440,11 +12440,11 @@ color: rgb(101, 255, 195);
   background-color: #01000b;
 }
 
-.wsg-title-header-section {
+.wsg-title-bg {
   background-color: #0194d3;
 }
 
-.wsg-title-head {
+.wsg-title-bg-gradient {
   background: #00b3ff;
   background: linear-gradient(90deg, #00b3ff 0%, #13b9ff 50%, #00b3ff 100%);
 }
