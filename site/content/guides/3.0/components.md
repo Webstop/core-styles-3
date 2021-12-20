@@ -321,7 +321,7 @@ An easy example to understand is the button object. The button component
 looks something like this:
 
 {{< example >}}
-<button type="submit" class="btn btn-primary">
+<button type="submit" class="btn btn-primary ">
   Add to Shopping List
 </button>
 {{< /example >}}
@@ -335,7 +335,7 @@ at the bottom of each component, so we use a `btn` component.
   <div class="circular-item-heading">Wow!</div>
   <div class="circular-item-title">Some Awesome Deal!</div>
  ... 
-   <button type="submit" class="btn btn-primary">
+   <button type="submit" class="btn btn-primary ">
      Add to Shopping List
    </button>
  </div>
@@ -387,7 +387,7 @@ more basic components:
             </div>
           </div>
           <div class="shopping-list-item-btn-col col-12 col-sm-auto">
-            <button type="submit" class="shopping-list-item-btn btn btn-primary btn-block btn-sm-inline-block">
+            <button type="submit" class="shopping-list-item-btn btn btn-primary  btn-block btn-sm-inline-block">
               <i class="icon-plus-circle-solid"></i>
               <span class="d-inline d-sm-none">Add to</span>
               <span class="d-none d-sm-inline"><span class="sr-only">Add to </span>Shopping</span>

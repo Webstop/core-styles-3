@@ -117,7 +117,7 @@ Inline forms can be placed inside a toolbar.
     </div>
   </div>
   <div class="col-auto">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary ">Submit</button>
   </div>
 </form>
   </div>
