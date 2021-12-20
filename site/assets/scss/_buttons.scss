@@ -3,81 +3,81 @@
     background-color: #5FB8FF;
   }
 
+  .wsg-btn {
+    border-radius: 0.375rem;
+    
+  }
+
   .get-started-btn {
     background-color: $dark;
     transition: all .2s ease-in-out; 
     align-items: center;
     border-color: transparent;
-  }
-  .get-started-btn:hover {
-    background-color: #0a0c0e;
-    transform: scale(1.05); 
-  }
-  .get-started-btn-text {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 400;
-    font-family:  $wsg-sans-serif;
-    letter-spacing: .20px;
-    text-decoration: none;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-  .get-started-btn-text:hover {
-    color: #fff;
-    font-weight: 500;
-    font-family: $wsg-sans-serif;
-    letter-spacing: .20px;
-    text-decoration: none;
+    &:hover {
+      background-color: #0a0c0e;
+      transform: scale(1.05); 
+    }
+    .get-started-btn-text {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 400;
+      font-family:  $wsg-sans-serif;
+      letter-spacing: .20px;
+      text-decoration: none;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .get-started-btn-text:hover {
+      color: #fff;
+      font-weight: 500;
+      font-family: $wsg-sans-serif;
+      letter-spacing: .20px;
+      text-decoration: none;
+    }
   }
 
   .learn-more-btn {
     background-color: $wsg-blue-alt;
     border-color: transparent!important;
     transition: all .2s ease-in-out; 
-  }
-  .learn-more-btn:hover {
-    background-color: #52b0fd;
-   
-    box-shadow:inset .1rem .1rem 0.5rem #4695d6, 
-    inset -.2rem -.2rem 1rem #72bbf7;
-  }
-  .learn-more-btn-text {
-    color: #fff;
-    font-weight: 500;
-    font-family:  $wsg-sans-serif;
-    letter-spacing: 1px;
-    text-decoration: none;
-  }
-  .learn-more-btn-text:hover {
-    color: #fff;
+      &:hover {
+        background-color: #52b0fd;
+        box-shadow:inset .1rem .1rem 0.5rem #4695d6, 
+        inset -.2rem -.2rem 1rem #72bbf7;
+      }
     
-    font-family: $wsg-sans-serif;
-    letter-spacing: 1px;
-    text-decoration: none;
-  }
+      .learn-more-btn-text {
+        color: #fff;
+        font-weight: 500;
+        font-family:  $wsg-sans-serif;
+        letter-spacing: 1px;
+        text-decoration: none;
+      }
+      .learn-more-btn-text:hover {
+        color: #fff;
+        
+        font-family: $wsg-sans-serif;
+        letter-spacing: 1px;
+        text-decoration: none;
+      }
+    }
+  
 
-  
-.wsg-btn {
-  border-radius: 0.375rem;
-  
-}
 .wsg-btn-primary {
   color: #fff;
     font-weight: 400;
     font-family:  $wsg-sans-serif;
     letter-spacing: 1px;
     text-decoration: none;
-  background-color: $webstop-blue;
+    background-color: $webstop-blue;
     border-color: transparent!important;
     transition: all .2s ease-in-out; 
-}
-
-.wsg-btn-primary:hover {
-  background-color: lighten($wsg-blue-alt, 5%);
-  box-shadow:inset .1rem .1rem 0.5rem darken($wsg-blue-alt, 5%), 
-  inset -.1rem -.1rem 0.5rem darken($wsg-blue-alt, 15%);
-}
+      &:hover {
+      background-color: lighten($wsg-blue-alt, 5%);
+      box-shadow:inset .1rem .1rem 0.5rem darken($wsg-blue-alt, 5%), 
+      inset -.1rem -.1rem 0.5rem darken($wsg-blue-alt, 15%);
+    }
+  }
 
 @keyframes gridButton {
   0% {
@@ -97,7 +97,6 @@
   align-items: center;
   position: relative;
   margin: 0;
-
   padding: 1.2rem;
   font-size: 1.6rem;
   font-weight: 700;

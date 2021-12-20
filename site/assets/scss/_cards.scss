@@ -28,12 +28,11 @@
   background-color: rgba(0, 0, 0, 0.03);
   border-radius: 0rem 0rem 0.75rem 0.75rem;
   padding:1.25rem;
-}
-
-.wsg-card-footer:last-child {
-  width: 100%;
-  border:none;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-radius: 0rem 0rem 0.75rem 0.75rem;
+    &:last-child {
+    width: 100%;
+    border:none;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 0rem 0rem 0.75rem 0.75rem;
+  }
 }
 
