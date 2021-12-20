@@ -2,12 +2,12 @@
   background-color: $wsg-dark;
 }
 
-.wsg-title-header-section {
+.wsg-title-bg {
   background-color: $webstop-blue;
 }
 
 // Background Gradient
-.wsg-title-head {
+.wsg-title-bg-gradient {
   background: rgb(0,179,255);
   background: linear-gradient(90deg, rgba(0,179,255,1) 0%, rgba(19,185,255,1) 50%, rgba(0,179,255,1) 100%);
 }
