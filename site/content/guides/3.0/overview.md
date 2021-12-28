@@ -47,7 +47,7 @@ and applied them to our environment.
                 </div>
                 <div class="card-footer text-center">
                  <div class="d-grid ">
-                    <a href="/guides/3.0/components/" class="btn learn-more-btn""><span class="learn-more-btn-text">Learn More</span></a>
+                    <a href="/guides/3.0/components/" class="btn btn-primary learn-more-btn"><span class="learn-more-btn-text">Learn More</span></a>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@ and applied them to our environment.
                 </div>
                 <div class="card-footer text-center">
                  <div class="d-grid ">
-                    <a href="/guides/3.0/development-approach/" class="btn learn-more-btn""><span class="learn-more-btn-text">Learn More</span></a>
+                    <a href="/guides/3.0/development-approach/" class="btn btn-primary learn-more-btn"><span class="learn-more-btn-text">Learn More</span></a>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@ and applied them to our environment.
                 </div>
                 <div class="card-footer text-center">
                  <div class="d-grid ">
-                    <a href="/guides/3.0/development-process/" class="btn learn-more-btn""><span class="learn-more-btn-text">Learn More</span></a>
+                    <a href="/guides/3.0/development-process/" class="btn btn-primary learn-more-btn"><span class="learn-more-btn-text">Learn More</span></a>
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@ and applied them to our environment.
                 </div>
                 <div class="card-footer text-center">
                  <div class="d-grid ">
-                    <a href="/guides/3.0/working-with-ajax/" class="btn learn-more-btn""><span class="learn-more-btn-text">Learn More</span></a>
+                    <a href="/guides/3.0/working-with-ajax/" class="btn btn-primary learn-more-btn"><span class="learn-more-btn-text">Learn More</span></a>
                 </div>
                 </div>
             </div>

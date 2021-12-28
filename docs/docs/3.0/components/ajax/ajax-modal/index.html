@@ -475,17 +475,20 @@
     </section>
     <p>The <code>site-model</code> is included on every page when you used the code found on the <a href="/docs/3.0/layouts/site/">site layout</a> page.</p>
 <h2 id="example">Example</h2>
-<p>When you set the <code>data-target</code> of a modal trigger to <code>#site-modal</code>, then you are indicating you want to use the site wide
-modal, which enables remote content loading via AJAX. The <code>data-load</code> attribute specifies the URL to pull the body
+<p>When you set the <code>data-target</code> of a modal trigger to <code>#site-modal</code>, then you are indicating you want to use the site wide 
+modal, which enables remote content loading via AJAX. The <code>data-load</code> attribute specifies the URL to pull the body 
 content from, it is expected to be in HTML format. You should also include the <code>data-title</code> to set the text for the title of the modal.</p>
 <div class="my-3 p-3 example">
 <button data-toggle="modal" data-target="#site-modal" data-load="{{ sinatra_host }}/shopping_lists/list/new" data-title="New Shopping List" data-footer="hide" class="btn btn-primary ">
   New Shopping List
 </button>
 
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;modal&#34;</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#site-modal&#34;</span> <span class="na">data-load</span><span class="o">=</span><span class="s">&#34;{{ sinatra_host }}/shopping_lists/list/new&#34;</span> <span class="na">data-title</span><span class="o">=</span><span class="s">&#34;New Shopping List&#34;</span> <span class="na">data-footer</span><span class="o">=</span><span class="s">&#34;hide&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary &#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;modal&#34;</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#site-modal&#34;</span> <span class="na">data-load</span><span class="o">=</span><span class="s">&#34;{{ sinatra_host }}/shopping_lists/list/new&#34;</span> <span class="na">data-title</span><span class="o">=</span><span class="s">&#34;New Shopping List&#34;</span> <span class="na">data-footer</span><span class="o">=</span><span class="s">&#34;hide&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary &#34;</span><span class="p">&gt;</span>
   New Shopping List
-<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+</code></pre></div>
 <h2 id="options">Options</h2>
 <p>The Site Modal inherits all the abilities of a standard modal, and is extended with the following options.</p>
 <table class="table table-bordered table-striped">

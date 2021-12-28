@@ -1,0 +1,81 @@
+/** Examples and Highlights **/
+
+.highlight {
+  margin-bottom: $spacer;
+  position: relative;
+  white-space:nowrap;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.chroma {
+  margin: 0;
+  background-color: #333;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  overflow: visible;
+}
+
+.bd-clipboard {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+
+
+.bd-example-container {
+  min-width: 16rem;
+  max-width: 25rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bd-example-container-header {
+  height: 3rem;
+  margin-bottom: .5rem;
+  background-color: lighten($wsg-primary, 25%);
+  border-radius: 0.75rem;
+}
+
+.bd-example-container-sidebar {
+  float: right;
+  width: 4rem;
+  height: 8rem;
+  background-color: lighten($wsg-primary, 50%);
+  border-radius: 0.75rem;
+}
+
+.bd-example-container-body {
+  height: 8rem;
+  margin-right: 4.5rem;
+  background-color: lighten(purple, 25%);
+  border-radius: 0.75rem;
+}
+
+.bd-example-container-fluid {
+  max-width: none;
+}
+
+  .example {
+    font-family:  $wsg-sans-serif;
+    letter-spacing: .20px;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 0.5px;
+    border-radius: 0.75rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px;
+    z-index: 99;
+  }
+
+
+pre {
+    display: block;
+    margin-top: .5rem;
+    margin-bottom: .50rem;
+    overflow: auto;
+    font-size: 0.875em;
+}

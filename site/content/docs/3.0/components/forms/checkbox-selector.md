@@ -29,7 +29,7 @@ attribute needs have the name of the group set as it's value, in this case the g
 it the same value you used in the `data-check-selector-for` attribute. In this case `pets`.  
 
 {{< example >}}
-<button data-check-selector-for="pets" data-check-selector-state="select" class="is-select btn btn-outline-primary">
+<button data-check-selector-for="pets" data-check-selector-state="select" class="is-select btn btn-outline-primary wsg-btn-outline-primary">
   <span class="check-select-text">Select All</span>
   <span class="check-unselect-text">Unselect All</span>
 </button>

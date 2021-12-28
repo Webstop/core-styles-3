@@ -299,7 +299,7 @@
     "name": "Kosher",
     "style": "fak",
     "icon": "fa-kosher",
-    "search": "jewish",
+    "search": "jewish kosher",
     "category": "food",
     "note": ""
   },
@@ -650,10 +650,10 @@
   {
     "name": "lasso",
     "style": "fak",
-    "icon": "fa-lasso",
+    "icon": "fa-lassosoft",
     "search": "lasso code",
     "category": "brand",
-    "note": ""
+    "note": "This is for Lasso"
   },
   {
     "name": "linux",

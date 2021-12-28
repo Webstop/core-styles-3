@@ -1,6 +1,13 @@
   /** Button Stuff **/
   .btn-clipboard {
-    background-color: #5FB8FF;
+    background-color: $wsg-blue-alt;
+    border-color: transparent!important;
+    transition: all .2s ease-in-out; 
+      &:hover, :focus {
+        background-color: darken($wsg-blue-alt, 10%);
+        box-shadow:inset .1rem .1rem 0.5rem #4695d6, 
+        inset -.2rem -.2rem 1rem #72bbf7;
+      }
   }
 
   .wsg-btn {
@@ -40,8 +47,8 @@
     background-color: $wsg-blue-alt;
     border-color: transparent!important;
     transition: all .2s ease-in-out; 
-      &:hover {
-        background-color: #52b0fd;
+      &:hover, :focus {
+        background-color: darken($wsg-blue-alt, 10%);
         box-shadow:inset .1rem .1rem 0.5rem #4695d6, 
         inset -.2rem -.2rem 1rem #72bbf7;
       }
@@ -55,7 +62,6 @@
       }
       .learn-more-btn-text:hover {
         color: #fff;
-        
         font-family: $wsg-sans-serif;
         letter-spacing: 1px;
         text-decoration: none;
@@ -72,12 +78,23 @@
     background-color: $webstop-blue;
     border-color: transparent!important;
     transition: all .2s ease-in-out; 
-      &:hover {
-      background-color: lighten($wsg-blue-alt, 5%);
-      box-shadow:inset .1rem .1rem 0.5rem darken($wsg-blue-alt, 5%), 
-      inset -.1rem -.1rem 0.5rem darken($wsg-blue-alt, 15%);
-    }
+      &:hover, :focus {
+        background-color: darken($wsg-blue-alt, 10%);
+        box-shadow:inset .1rem .1rem 0.5rem darken($wsg-blue-alt, 5%), 
+        inset -.1rem -.1rem 0.5rem darken($wsg-blue-alt, 15%);
+      }
   }
+
+.wsg-btn-outline-primary {
+  border-color: $wsg-blue-alt;
+  color: $webstop-blue;
+  &:hover, :focus {
+    background-color: darken($wsg-blue-alt, 10%);
+    border-color: $webstop-blue;
+    box-shadow:inset .1rem .1rem 0.5rem #4695d6, 
+    inset -.2rem -.2rem 1rem #72bbf7;
+  }
+}
 
 @keyframes gridButton {
   0% {
