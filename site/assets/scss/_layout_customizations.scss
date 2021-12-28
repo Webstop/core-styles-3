@@ -69,12 +69,12 @@
   }
 */
 
-  /** Docs template layout stuff */ 
+  /** Docs template layout stuff */
 
  .wsg-left-nav {
    padding-right: 0px;
    padding-left: 0px;
- } 
+ }
 .wsg-left-nav-link {
   border-bottom: 1px solid #e5e5e5;
 }
@@ -83,7 +83,7 @@
 }
 
 /** Examples and Highlights **/
- 
+
 .bd-example-container {
   min-width: 16rem;
   max-width: 25rem;
@@ -95,7 +95,7 @@
   height: 3rem;
   margin-bottom: .5rem;
   background-color: lighten($wsg-primary, 25%);
-  border-radius: 0.75rem; 
+  border-radius: 0.75rem;
 }
 
 .bd-example-container-sidebar {
@@ -103,14 +103,14 @@
   width: 4rem;
   height: 8rem;
   background-color: lighten($wsg-primary, 50%);
-  border-radius: 0.75rem; 
+  border-radius: 0.75rem;
 }
 
 .bd-example-container-body {
   height: 8rem;
   margin-right: 4.5rem;
   background-color: lighten(purple, 25%);
-  border-radius: 0.75rem; 
+  border-radius: 0.75rem;
 }
 
 .bd-example-container-fluid {
@@ -123,8 +123,8 @@
     margin-right: 0;
     margin-left: 0;
     border-width: 0.5px;
-    border-radius: 0.75rem; 
-   
+    border-radius: 0.75rem;
+
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     z-index: 99;
   }
@@ -137,13 +137,13 @@ pre {
     overflow: auto;
     font-size: 0.875em;
 }
-  
+
   .on-page {
     position: -webkit-sticky;
     position: sticky;
     top: 4rem;
     z-index: 1000;
-    overflow-y: auto; 
+    overflow-y: auto;
   }
 
 
@@ -151,37 +151,37 @@ pre {
     font-family:  $wsg-sans-serif;
   }
 
- .wsg-table-of-contents, ul, li {
+ .wsg-table-of-contents ul li {
     list-style-type: none;
     text-decoration: none;
   }
 
- .wsg-table-of-contents, a {
+ .wsg-table-of-contents a {
     list-style-type: none;
     text-decoration: none;
     color: #333;
   }
 
- .wsg-table-of-contents, ul {
+ .wsg-table-of-contents ul {
     padding-left: 2px;
   }
 
-  .wsg-table-of-contents, li {
+  .wsg-table-of-contents li {
     padding-left: 8px;
   }
 
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    border:1px solid #dbdbdb;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    margin-bottom: 50px;
-   
-  }
-
-  
-  th, td {
-    text-align: left;
-    padding: 10px;
-    border:1px solid #dbdbdb;
-  }
+  //table {
+  //  border-collapse: collapse;
+  //  width: 100%;
+  //  border:1px solid #dbdbdb;
+  //  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  //  margin-bottom: 50px;
+  //
+  //}
+  //
+  //
+  //th, td {
+  //  text-align: left;
+  //  padding: 10px;
+  //  border:1px solid #dbdbdb;
+  //}

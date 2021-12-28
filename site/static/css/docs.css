@@ -12383,89 +12383,28 @@ pre {
   font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.wsg-table-of-contents, ul, li {
+.wsg-table-of-contents ul li {
   list-style-type: none;
   text-decoration: none;
 }
 
-.wsg-table-of-contents, a {
+.wsg-table-of-contents a {
   list-style-type: none;
   text-decoration: none;
   color: #333;
 }
 
-.wsg-table-of-contents, ul {
+.wsg-table-of-contents ul {
   padding-left: 2px;
 }
 
-.wsg-table-of-contents, li {
+.wsg-table-of-contents li {
   padding-left: 8px;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid #dbdbdb;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  margin-bottom: 50px;
-}
-
-th, td {
-  text-align: left;
-  padding: 10px;
-  border: 1px solid #dbdbdb;
-}
-
 /** Core Icons Grid**/
-.list-features {
-  list-style: none;
-}
-
-.wsg-icon-grid {
-  position: relative;
-}
-
-.wsg-grid {
-  position: relative;
-}
-
-.item {
-  position: absolute;
-  width: 225px;
-  height: 300px;
-  line-height: 200px;
-  margin: 5px;
-  z-index: 1;
-}
-
-.item.muuri-item-hidden {
-  z-index: 0;
-}
-
-.item.muuri-item-releasing {
-  z-index: 2;
-}
-
-.item.muuri-item-dragging {
-  z-index: 3;
-}
-
-.item-content {
-  position: relative;
-  font-family: sans-serif;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  border: 1px solid #F44336;
-  border-radius: 3px;
-  font-size: 25px;
-  color: #F44336;
-  cursor: pointer;
-}
-
-.item.muuri-item-dragging .item-content,
-.item.muuri-item-releasing .item-content {
-  background: #FFCDD2;
+.wsg-icon {
+  min-width: 265px;
 }
 
 /* Controls */

@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Admin Icons
-description: Icons for Admin pages.
+title: UI Icons
+description: Icons for UI elements.
 group: components
 toc: true
 source: Webstop
@@ -19,7 +19,7 @@ and expands it with custom icons for proprietary Webstop products.
 <i class="fa-duotone fa-bug"></i>
 {{< /example >}}
 
-## Suggested Icons
+## Preferred UI Icons
 
 The following icons are approved by our design team for general usage. More icons 
 can be found at [Font Awesome v6](https://fontawesome.com/v6.0/icons). You have 
@@ -29,4 +29,4 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
   <input type="text" class="form-control" data-filter-search data-filter-selector=".wsg-icon" placeholder="Search Icons">
 </div>
 
-{{< icons admin >}} 
+{{< icons UI >}} 

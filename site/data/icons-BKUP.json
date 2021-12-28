@@ -1,1490 +1,1319 @@
 [
   {
     "name": "Account",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-user-circle",
-    "search": "consumer account profile user person people",
-    "category": "admin, UI",
-    "note": "This is the main icon for user accounts, commonly found in the navbar."
+    "search": "account profile user ",
+    "category": "admin"
   },
   {
     "name": "Shopping List",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-list-check",
     "search": "shopping list ",
-    "category": "webstop",
-    "note": "This icon should be used whenever referencing Webstop's Shopping List product."
+    "category": "webstop"
   },
   {
     "name": "Coffee",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-coffee-pot",
     "search": "coffee espresso",
-    "category": "food",
-    "note": ""
+    "category": "food"
   },
   {
     "name": "Email",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-envelope",
     "search": "email e-mail envelope",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Hamburger Menu",
-    "style": "fa-regular",
+    "style": "far",
     "icon": "fa-bars",
     "search": "toggle menu hamburger lines expand",
-    "category": "UI",
-    "note": "This usually in the top left of the mobile navbar, it represents opening and closing the site-wide navigation."
+    "category": "UI"
   },
   {
     "name": "Arrow Up",
-    "style": "fa-solid",
+    "style": "fas",
     "icon": "fa-angle-up",
     "search": "up arrow direction",
-    "category": "UI, popular",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Arrow Down",
-    "style": "fa-solid",
+    "style": "fas",
     "icon": "fa-angle-down",
     "search": "down arrow direction",
-    "category": "UI, popular",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Arrow Right",
-    "style": "fa-solid",
+    "style": "fas",
     "icon": "fa-angle-right",
     "search": "right forward arrow direction next",
-    "category": "UI, popular",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Arrow Left",
-    "style": "fa-solid",
+    "style": "fas",
     "icon": "fa-angle-left",
     "search": "right back arrow direction return",
-    "category": "UI, popular",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Check",
-    "style": "fa-solid",
+    "style": "fas",
     "icon": "fa-check",
     "search": "check checkmark correct tick",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
+  },
+  {
+    "name": "Close",
+    "style": "far",
+    "icon": "fa-times",
+    "search": "close x exit stop end",
+    "category": "UI"
   },
   {
     "name": "Help",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-question-circle",
     "search": "help question ?",
-    "category": "symbols, popular",
-    "note": ""
+    "category": "symbols"
   },
   {
     "name": "Info",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-info-circle",
     "search": "Info",
-    "category": "UI, popular",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Tags",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-tags",
     "search": "tags coupon sale price",
-    "category": "retailer",
-    "note": ""
+    "category": "retailer"
   },
   {
     "name": "Tag",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-tag",
     "search": "tag coupon sale price",
-    "category": "retailer",
-    "note": ""
+    "category": "retailer"
   },
   {
     "name": "Phone",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-mobile-alt",
     "search": "phone contact call",
-    "category": "devices",
-    "note": ""
+    "category": "devices"
   },
   {
     "name": "Sign In ",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-sign-in",
     "search": "sign in login",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Sign Out",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-sign-out",
     "search": "logout log out sign",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Newsletter",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-paper-plane",
     "search": "newsletter newspaper emails",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Pharmacy",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-prescription-bottle-alt",
     "search": "pharmacy medicine bottle prescription medication",
-    "category": "department",
-    "note": ""
+    "category": "department"
   },
   {
     "name": "Search Location",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-search-location",
     "search": "search location find lookup",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Recipe",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-oven",
     "search": "Recipe",
-    "category": "webstop",
-    "note": ""
+    "category": "webstop"
   },
   {
     "name": "Weekly Ad",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-calendar-star",
     "search": "weekly ad circular digital",
-    "category": "webstop",
-    "note": ""
+    "category": "webstop"
   },
   {
     "name": "Calendar",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-calendar-alt",
     "search": "calendar calander date month",
-    "category": "date/time",
-    "note": ""
+    "category": "date/time"
   },
   {
     "name": "Coupon",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-ticket",
     "search": "coupons",
-    "category": "webstop",
-    "note": ""
+    "category": "webstop"
   },
   {
     "name": "Produce",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-carrot",
     "search": "produce carrot vegetables fruit fresh veggies",
-    "category": "food",
-    "note": ""
+    "category": "food"
   },
   {
     "name": "Meat",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-meat",
     "search": "meat beef pork poultry chicken",
-    "category": "food",
-    "note": ""
+    "category": "food"
   },
   {
     "name": "Dairy",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-cow",
     "search": "dairy milk cow",
-    "category": "food",
-    "note": ""
+    "category": "food"
   },
   {
     "name": "Vegan",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-leaf",
     "search": "vegan",
-    "category": "symbols",
-    "note": ""
+    "category": "symbols"
   },
   {
     "name": "Vegetarian",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-salad",
     "search": "vegetarian",
-    "category": "symbols",
-    "note": ""
+    "category": "symbols"
   },
   {
     "name": "Contact",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-paper-plane",
     "search": "contact",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Edit",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-edit",
     "search": "edit pencil",
-    "category": "UI, popular",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Share",
-    "style": "fa-duotone",
-    "icon": "fa-arrow-up-from-square",
-    "search": "share social",
-    "category": "UI, popular",
-    "note": ""
+    "style": "fad",
+    "icon": "fa-share-square",
+    "search": "share",
+    "category": "UI"
   },
   {
     "name": "Printable",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-print",
     "search": "print printable printer",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Employee",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-person-dolly",
     "search": "employee worker staff",
-    "category": "retailer",
-    "note": ""
+    "category": "retailer"
   },
   {
     "name": "Bakery",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-pie",
     "search": "bakery pie sweets",
-    "category": "food",
-    "note": ""
+    "category": "food"
   },
   {
     "name": "Dessert",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-ice-cream",
     "search": "dessert ice cream sweets icecream",
-    "category": "food",
-    "note": ""
+    "category": "food"
   },
   {
     "name": "Weekly Ad",
     "style": "fak",
     "icon": "fa-weeklyad",
     "search": "circular",
-    "category": "webstop",
-    "note": ""
+    "category": "webstop"
   },
   {
     "name": "Kosher",
     "style": "fak",
     "icon": "fa-kosher",
     "search": "jewish",
-    "category": "food",
-    "note": ""
+    "category": "food"
   },
   {
     "name": "Non-Dairy",
     "style": "fak",
     "icon": "fa-non-dairy",
     "search": "no dairy cow milk free",
-    "category": "food",
-    "note": ""
+    "category": "food"
   },
   {
     "name": "Gluten-Free",
     "style": "fak",
     "icon": "fa-gluten-free",
     "search": "no gluten wheatless wheat",
-    "category": "food",
-    "note": ""
+    "category": "food"
   },
   {
     "name": "Clock",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-clock",
     "search": "clock time hour",
-    "category": "date/time",
-    "note": ""
+    "category": "date/time"
   },
   {
     "name": "Healthy",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-heart",
     "search": "healthy heart love favorite favourite",
-    "category": "symbols",
-    "note": ""
+    "category": "symbols"
   },
   {
     "name": "Money",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-money-bill-alt",
     "search": "money",
-    "category": "retailer",
-    "note": ""
+    "category": "retailer"
   },
   {
     "name": "Search",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-search",
     "search": "search magnifying inspect filter look up lookup find",
-    "category": "UI, popular",
-    "note": ""
+    "category": "UI"
+  },
+  {
+    "name": "Link",
+    "style": "fad",
+    "icon": "fa-link",
+    "search": "link hyperlink",
+    "category": "UI"
   },
   {
     "name": "Storefront",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-store",
     "search": "store grocery business shop storefront retail",
-    "category": "retailer",
-    "note": ""
+    "category": "retailer"
   },
   {
     "name": "Seafood",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-fish",
     "search": "fish seafood",
-    "category": "food",
-    "note": ""
+    "category": "food"
   },
   {
     "name": "Frozen",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-temperature-frigid",
     "search": "frozen cold freezer",
-    "category": "food",
-    "note": ""
+    "category": "food"
   },
   {
     "name": "Alcohol",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-glass-cheers",
     "search": "alcohol wine whiskey beer drinks spirits drinking drinks",
-    "category": "food",
-    "note": ""
+    "category": "food"
   },
   {
     "name": "Beauty",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-pump-soap",
     "search": "beauty toiletries soap clean cosmetics makeup",
-    "category": "department",
-    "note": ""
+    "category": "department"
   },
   {
     "name": "Catering",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-concierge-bell",
     "search": "catering",
-    "category": "service",
-    "note": ""
+    "category": "service"
   },
   {
     "name": "Delivery",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-truck-container",
     "search": "delivery truck",
-    "category": "service",
-    "note": ""
+    "category": "service"
   },
   {
     "name": "Curbside",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-truck-loading",
     "search": "curbside pickup truck",
-    "category": "service",
-    "note": ""
+    "category": "service"
   },
   {
     "name": "Gifts",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-gifts",
     "search": "gifts presents charity",
-    "category": "retailer",
-    "note": ""
+    "category": "retailer"
   },
   {
     "name": "Gift Card",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-gift-card",
     "search": "gifts giftcards card",
-    "category": "retailer",
-    "note": ""
+    "category": "retailer"
   },
   {
     "name": "Floral",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-flower-daffodil",
     "search": "floral flourist flowers",
-    "category": "department",
-    "note": ""
+    "category": "department"
   },
   {
     "name": "Sale",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-badge-dollar",
     "search": "sale",
-    "category": "retailer",
-    "note": ""
+    "category": "retailer"
   },
   {
     "name": "Community",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-users",
     "search": "community people locals neighborhood neighbourhood",
-    "category": "retailer",
-    "note": ""
+    "category": "retailer"
   },
   {
     "name": "Charity",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-hand-holding-heart",
     "search": "charity gifts giving hands heart love care",
-    "category": "retailer",
-    "note": ""
+    "category": "retailer"
   },
   {
     "name": "QR Code",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-qrcode",
     "search": "QR scan codes",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Barcode Scan",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-barcode-scan",
     "search": "barcodes scan codes bar code scannable",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "AWS",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-aws",
     "search": "amazon web services s3 servers cloud",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "code",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-code",
     "search": "code programming language",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "database",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-database",
     "search": "database",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "debug",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-debug",
     "search": "bugs debug fix glitch bug bugfix",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "docker",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-docker",
     "search": "docker",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "dropbox",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-dropbox",
     "search": "dropbox",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "duck",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-duck",
     "search": "duck cyberduck FTP SFTP servers",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "elementor",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-elementor",
     "search": "elementor wordpress plugin wp",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "ember",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-ember",
     "search": "ember js javascript programming language",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "git",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-git",
     "search": "github code programming language servers git",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "git-square",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-git-square",
     "search": "git github code programming language servers",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "github",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-github",
     "search": "git github code programming language servers",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "github-square",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-github-square",
     "search": "git github code programming language servers",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "google",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-google",
     "search": "google",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "google-drive",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-google-drive",
     "search": "google drive gdrive cloud",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "html5",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-html5",
     "search": "html coding markup markdown",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "js",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-js-square",
     "search": "js javascript script",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "jsfiddle",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-jsfiddle",
     "search": "js javascript script fiddle jsfiddle",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "laptop",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-laptop",
     "search": "laptop device desktop",
-    "category": "devices",
-    "note": ""
+    "category": "devices"
   },
   {
     "name": "laptop code",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-laptop-code",
     "search": "laptop code",
-    "category": "devices",
-    "note": ""
+    "category": "devices"
   },
   {
     "name": "laptop-medical",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-laptop-medical",
     "search": "laptop medical",
-    "category": "devices",
-    "note": ""
+    "category": "devices"
   },
   {
     "name": "lasso",
     "style": "fak",
     "icon": "fa-lasso",
     "search": "lasso code",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "linux",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-linux",
     "search": "linux OS operating system",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "markdown",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-markdown",
     "search": "markdown mark down code file html",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "node-js",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-node-js",
     "search": "js javascript script node code",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "npm",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-npm",
     "search": "npm",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "php",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-php",
     "search": "php programming file code language",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "readme",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-readme",
     "search": "readme read readable txt text file",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "Rocket Launch",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-rocket-launch",
     "search": "rocket launch ",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Save",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-save",
     "search": "save",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Slack",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-slack",
     "search": "slack message messaging messenger app",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "stack-overflow",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-stack-overflow",
     "search": "stack overflow",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "wordpress",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-wordpress",
     "search": "wp wordpress",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "yarn",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-yarn",
     "search": "yarn",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "Chrome",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-chrome",
     "search": "chrome google internet browser",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "Safari",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-safari",
     "search": "safari apple internet browser",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "Firefox",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-firefox",
     "search": "firefox internet browser",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "Edge",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-edge",
     "search": "edge microsoft internet browser explorer",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "Pinterest",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-pinterest-square",
     "search": "pintrest",
-    "category": "social",
-    "note": ""
+    "category": "social"
   },
   {
     "name": "Twitter",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-twitter-square",
     "search": "twitter tweet",
-    "category": "social",
-    "note": ""
+    "category": "social"
   },
   {
     "name": "Vimeo",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-vimeo-square",
     "search": "vimeo video",
-    "category": "social",
-    "note": ""
+    "category": "social"
   },
   {
     "name": "Facebook",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-facebook-square",
     "search": "facebook",
-    "category": "social",
-    "note": ""
+    "category": "social"
   },
   {
     "name": "Youtube",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-youtube-square",
     "search": "youtube videos",
-    "category": "social",
-    "note": ""
+    "category": "social"
   },
   {
     "name": "Instagram",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-instagram-square",
     "search": "instagram",
-    "category": "social",
-    "note": ""
+    "category": "social"
   },
   {
     "name": "Google Play",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-google-play",
     "search": "google play store",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "App Store",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-firefox",
     "search": "apple apps appstore app store",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "External Link",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-external-link",
     "search": "external link offsite hyperlink",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Cloud",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-cloud",
     "search": "cloud internet",
-    "category": "admin, popular",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Cloud Download",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-cloud-download",
     "search": "cloud internet download",
-    "category": "admin, popular",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Cloud Upload",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-cloud-upload",
     "search": "cloud internet upload",
-    "category": "admin, popular",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Settings",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-cogs",
     "search": "settings gears cogs config",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": " At",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-at",
     "search": "at ampersand tag @",
-    "category": "symbols",
-    "note": ""
+    "category": "symbols"
   },
   {
     "name": "Bookmark",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-bookmark",
     "search": "bookmark favorite favourite",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Bug",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-bug",
     "search": "bug glitch error gremlin issue",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Camera",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-camera",
     "search": "camera photo picture images media",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Comment",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-comment",
     "search": "comment",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Cut",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-cut",
     "search": "scissors cut snip",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "CSS3",
-    "style": "fa-brands",
+    "style": "fab",
     "icon": "fa-css3-alt",
     "search": "ccs style styling stylesheets cascading",
-    "category": "brand",
-    "note": ""
+    "category": "brand"
   },
   {
     "name": "Edit",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-edit",
     "search": "edit",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
-    "name": "Vertical Ellipsis",
-    "style": "fa-regular",
-    "icon": "fa-ellipsis-vertical",
+    "name": "Ellipsis-V",
+    "style": "fad",
+    "icon": "fa-ellipsis-v",
     "search": "ellipse oval circle ellipsis ellipses",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
-    "name": "Ellipsis",
-    "style": "fa-regular",
-    "icon": "fa-ellipsis",
+    "name": "Ellipsis-H",
+    "style": "fad",
+    "icon": "fa-ellipsis-h",
     "search": "ellipse oval circle ellipsis ellipses",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Envelope Open",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-envelope-open-text",
     "search": "envelope mail message opened letter newsletter",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Warning Caution Error",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-exclamation-triangle",
     "search": "warning caution error bug issue 404 glitch notification exclamation mark hazard",
-    "category": "symbols",
-    "note": ""
+    "category": "symbols"
   },
   {
     "name": "File",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-file",
     "search": "files",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "File Alt",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-file-alt",
     "search": "files",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "File Chart",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-file-chart-line",
     "search": "files charts",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "File Check",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-file-check",
     "search": "files check correct",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "File Code",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-file-code",
     "search": "code coded files",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "File CSV",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-file-csv",
     "search": "csv spreadsheet files db database numbers excel",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "File Download",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-file-download",
     "search": "download downloadable files",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "File Edit",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-file-edit",
     "search": "edit editable files",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "File Image",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-file-image",
     "search": "image media files",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "Add File",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-file-plus",
     "search": "add addable files",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "Delete File",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-file-minus",
     "search": "delete deletable remove deleatable files",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "File User",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-file-user",
     "search": "user files",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "Folder",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-folder",
     "search": "folders",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "Folders",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-folders",
     "search": "folders",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "Open Folder",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-folder-open",
     "search": "open folders",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "Add Folder",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-folder-plus",
     "search": "add folders",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "Delete Folder",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-folder-minus",
     "search": "delete remove folders",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "Folder Tree",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-folder-tree",
     "search": "folder tree folders structure filepath path files directory organize",
-    "category": "files",
-    "note": ""
+    "category": "files"
   },
   {
     "name": "Grin",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-grin",
     "search": "grin smile smiley face emoji emote",
-    "category": "symbols",
-    "note": ""
+    "category": "symbols"
   },
   {
     "name": "Hourglass",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-hourglass",
     "search": "hourglass loading",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "House",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-house",
     "search": "house home homepage",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "User Home",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-house-user",
     "search": "user home",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "ID Card",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-id-card",
     "search": "ID card license identification",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Image",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-image",
     "search": "img picture image photo",
-    "category": "media",
-    "note": ""
+    "category": "media"
   },
   {
     "name": "Images",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-images",
     "search": "images pictures photos",
-    "category": "media",
-    "note": ""
+    "category": "media"
   },
   {
     "name": "Info",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-info-circle",
     "search": "i info about information",
-    "category": "symbols",
-    "note": ""
+    "category": "symbols"
   },
   {
     "name": "Lock",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-lock",
     "search": "lock locked restricted",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Unlock",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-unlock",
     "search": "unlock unlocked unrestricted",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Map Marked",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-map-marked-alt",
     "search": "marked map location",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Map Marker",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-map-marker-alt",
     "search": "marker map location",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Delete",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-minus-circle",
     "search": "delete remove",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Pointer",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-mouse-pointer",
     "search": "mouse pointer cursor",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "TV",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-tv",
     "search": "television tv t.v. movie video device",
-    "category": "devices",
-    "note": ""
+    "category": "devices"
   },
   {
     "name": "Phone",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-phone",
     "search": "phone call contact telephone",
-    "category": "devices",
-    "note": ""
+    "category": "devices"
   },
   {
     "name": "Phone Square",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-phone-square",
     "search": "phone call contact telephone",
-    "category": "devices",
-    "note": ""
+    "category": "devices"
   },
   {
     "name": "Play",
-    "style": "fa-solid",
+    "style": "fas",
     "icon": "fa-play",
     "search": "play",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Prescription",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-prescription",
     "search": "rx prescription medication medicine",
-    "category": "retailer",
-    "note": ""
+    "category": "retailer"
   },
   {
     "name": "Receipt",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-receipt",
     "search": "receipt",
-    "category": "retailer",
-    "note": ""
+    "category": "retailer"
   },
   {
     "name": "Recycle",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-recycle",
     "search": "recycle trash",
-    "category": "symbols",
-    "note": ""
+    "category": "symbols"
   },
   {
     "name": "RSS",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-rss-square",
     "search": "RSS feed",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Shield",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-shield",
     "search": "shield block",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Shopping Cart",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-shopping-cart",
     "search": "shopping cart grocery",
-    "category": "retailer",
-    "note": ""
+    "category": "retailer"
   },
   {
     "name": "Shopping Bag",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-shopping-bag",
     "search": "shopping bag grocery",
-    "category": "retailer",
-    "note": ""
+    "category": "retailer"
   },
   {
     "name": "Shopping Basket",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-shopping-basket",
     "search": "shopping basket grocery",
-    "category": "retailer",
-    "note": ""
+    "category": "retailer"
   },
   {
     "name": "Sort",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-sort",
     "search": "sort sortable filter arrange",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Sort Down",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-sort-down",
     "search": "sort sortable filter down descending arrange",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Sort Up",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-sort-up",
     "search": "sort sortable filter up ascending arrange",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Star",
-    "style": "fa-solid",
+    "style": "fas",
     "icon": "fa-star",
     "search": "star favorite favourite",
-    "category": "symbols",
-    "note": ""
+    "category": "symbols"
   },
   {
     "name": "Half Star",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-star-half",
     "search": "half star",
-    "category": "symbols",
-    "note": ""
+    "category": "symbols"
   },
   {
     "name": "Thumbs Down",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-thumbs-down",
     "search": "thumbs down dislike bad negative poor",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Thumbs Up",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-thumbs-up",
     "search": "thumbs up like good positive",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Ticket",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-ticket",
     "search": "ticket",
-    "category": "admin",
-    "note": ""
+    "category": "admin"
   },
   {
     "name": "Close Circle",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-circle-xmark",
-    "search": "close x end escape exit stop end cancel",
-    "category": "UI",
-    "note": ""
+    "search": "close x end escape exit",
+    "category": "UI"
   },
   {
     "name": "Toggle On",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-toggle-on",
     "search": "toggle on turn on activate enable",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Toggle Off",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-toggle-off",
     "search": "toggle off turn off deactivate disable",
-    "category": "UI",
-    "note": ""
+    "category": "UI"
   },
   {
     "name": "Trademark",
-    "style": "fa-solid",
+    "style": "fas",
     "icon": "fa-trademark",
     "search": "trademark trade mark tm",
-    "category": "symbols",
-    "note": ""
+    "category": "symbols"
   },
   {
     "name": "Wallet",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-wallet",
     "search": "wallet pay paid money",
-    "category": "retailer",
-    "note": ""
+    "category": "retailer"
   },
   {
     "name": "Phone Laptop",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-phone-laptop",
     "search": "phone laptop responsive devices mobile desktop",
-    "category": "devices",
-    "note": ""
+    "category": "devices"
   },
   {
     "name": "Tablet",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-tablet-alt",
     "search": "tablet device mobile ipad",
-    "category": "devices",
-    "note": ""
+    "category": "devices"
   },
   {
     "name": "Landscape",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-rectangle-landscape",
     "search": "landscape orientation horizontal",
-    "category": "devices",
-    "note": ""
+    "category": "devices"
   },
   {
     "name": "Portrait",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-rectangle-portrait",
     "search": "portrait orientation vertical",
-    "category": "devices",
-    "note": ""
+    "category": "devices"
   },
   {
     "name": "Watch Calculator",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-watch-calculator",
     "search": "calculator watch",
-    "category": "devices",
-    "note": ""
-  },
+    "category": "devices"
+  }
+  ,
   {
     "name": "Add Create",
-    "style": "fa-duotone",
+    "style": "fad",
     "icon": "fa-plus-circle",
     "search": "add create new plus",
-    "category": "admin, popular",
-    "note": ""
+    "category": "admin"
   }
 ]
