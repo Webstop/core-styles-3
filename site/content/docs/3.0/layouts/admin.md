@@ -32,7 +32,7 @@ This example contains a header, footer, and main content sections.
     </table>
   </div>
   <div class="col">
-    <a href="/docs/3.0/layouts/examples/admin_base" class="btn btn-outline-primary">
+    <a href="/docs/3.0/layouts/examples/admin_base" class="btn btn-outline-primary wsg-btn-outline-primary">
       View Base Admin Example Page <i class="fas fa-angle-right"></i>
     </a>
   </div>
@@ -71,7 +71,7 @@ This example contains a header, footer, and main content sections.
     </table>
   </div>
   <div class="col">
-    <a href="/docs/3.0/layouts/examples/admin_with_sidecar" class="btn btn-outline-primary">
+    <a href="/docs/3.0/layouts/examples/admin_with_sidecar" class="btn btn-outline-primary wsg-btn-outline-primary">
       View Sidecar Example Page <i class="fas fa-angle-right"></i>
     </a>
   </div>
@@ -112,7 +112,7 @@ This example contains a header, footer, and main content sections.
     </table>
   </div>
   <div class="col">
-    <a href="/docs/3.0/layouts/examples/admin_with_sidenav" class="btn btn-outline-primary">
+    <a href="/docs/3.0/layouts/examples/admin_with_sidenav" class="btn btn-outline-primary wsg-btn-outline-primary">
       View Sidenav Example Page <i class="fas fa-angle-right"></i>
     </a>
   </div>
@@ -154,7 +154,7 @@ This example contains a header, footer, and main content sections.
     </table>
   </div>
   <div class="col">
-    <a href="/docs/3.0/layouts/examples/admin_with_sidecar_and_sidenav" class="btn btn-outline-primary">
+    <a href="/docs/3.0/layouts/examples/admin_with_sidecar_and_sidenav" class="btn btn-outline-primary wsg-btn-outline-primary">
       View Sidecar &amp; Sidenav Example Page <i class="fas fa-angle-right"></i>
     </a>
   </div>
@@ -199,7 +199,7 @@ This example contains a header, footer, and main content sections.
     </table>
   </div>
   <div class="col">
-    <a href="/docs/3.0/layouts/examples/admin_with_sidebar" class="btn btn-outline-primary">
+    <a href="/docs/3.0/layouts/examples/admin_with_sidebar" class="btn btn-outline-primary wsg-btn-outline-primary">
       View Sidebar Example Page <i class="fas fa-angle-right"></i>
     </a>
   </div>
@@ -242,7 +242,7 @@ This example contains a header, footer, and main content sections.
     </table>
   </div>
   <div class="col">
-    <a href="/docs/3.0/layouts/examples/admin_with_sidecar_and_sidebar" class="btn btn-outline-primary">
+    <a href="/docs/3.0/layouts/examples/admin_with_sidecar_and_sidebar" class="btn btn-outline-primary wsg-btn-outline-primary">
       View Sidecar & Sidebar Example Page <i class="fas fa-angle-right"></i>
     </a>
   </div>
@@ -287,7 +287,7 @@ This example contains a header, footer, and main content sections.
     </table>
   </div>
   <div class="col">
-    <a href="/docs/3.0/layouts/examples/admin_with_sidenav_and_sidebar" class="btn btn-outline-primary">
+    <a href="/docs/3.0/layouts/examples/admin_with_sidenav_and_sidebar" class="btn btn-outline-primary wsg-btn-outline-primary">
       View Sidenav & Sidebar Example Page <i class="fas fa-angle-right"></i>
     </a>
   </div>
@@ -333,7 +333,7 @@ This example contains a header, footer, and main content sections.
     </table>
   </div>
   <div class="col">
-    <a href="/docs/3.0/layouts/examples/admin_with_sidecar_and_sidenav_and_sidebar" class="btn btn-outline-primary">
+    <a href="/docs/3.0/layouts/examples/admin_with_sidecar_and_sidenav_and_sidebar" class="btn btn-outline-primary wsg-btn-outline-primary">
       View Sidecar, Sidenav & Sidebar Example Page <i class="fas fa-angle-right"></i>
     </a>
   </div>

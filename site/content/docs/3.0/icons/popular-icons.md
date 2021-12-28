@@ -42,13 +42,13 @@ and expands it with custom icons for proprietary Webstop products.
   <tr>
     <td>Compelling Title</td>
     <td class="text-end">
-      <a href="#" class="btn btn-outline-primary ms-3">
+      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
         <i class="fa-regular fa-angle-right"></i> Show
       </a>
-      <a href="#" class="btn btn-outline-primary ms-3">
+      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
         <i class="fa-duotone fa-edit"></i> Edit
       </a>
-      <a href="#" class="btn btn-outline-primary ms-3">
+      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
         <i class="fa-duotone fa-circle-minus"></i> Delete
       </a>
     </td>
@@ -56,13 +56,13 @@ and expands it with custom icons for proprietary Webstop products.
   <tr>
     <td>Compelling Title</td>
     <td class="text-end">
-      <a href="#" class="btn btn-outline-primary ms-3">
+      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
         <i class="fa-solid fa-angle-right"></i> Show
       </a>
-      <a href="#" class="btn btn-outline-primary ms-3">
+      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
         <i class="fa-solid fa-edit"></i> Edit
       </a>
-      <a href="#" class="btn btn-outline-primary ms-3">
+      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
         <i class="fa-solid fa-circle-minus"></i> Delete
       </a>
     </td>
