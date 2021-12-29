@@ -12511,10 +12511,24 @@ blockquote {
   background: #eee;
 }
 
-.wsg-content .wsg-content h1, .wsg-content .wsg-content .h1, .wsg-content .wsg-content h2, .wsg-content .wsg-content .h2, .wsg-content .wsg-content h3, .wsg-content .wsg-content .h3, .wsg-content .wsg-content h4, .wsg-content .wsg-content .h4, .wsg-content .wsg-content h5, .wsg-content .wsg-content .h5, .wsg-content .wsg-content h6, .wsg-content .wsg-content .h6 {
+.wsg-content h1, .wsg-content .h1, .wsg-content h2, .wsg-content .h2, .wsg-content h3, .wsg-content .h3, .wsg-content h4, .wsg-content .h4, .wsg-content h5, .wsg-content .h5, .wsg-content h6, .wsg-content .h6 {
   font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
+}
+.wsg-content h2, .wsg-content .h2 {
+  padding-top: 35px;
+  padding-bottom: 10px;
+}
+.wsg-content h3, .wsg-content .h3 {
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+.wsg-content p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .wsg-title,
@@ -12531,29 +12545,6 @@ body, .serif {
 
 .sans-serif, .btn, .nav-link, .dropdown-item, .admin-sidenav {
   font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  -webkit-font-smoothing: antialiased;
-}
-
-h2, .h2 {
-  padding-top: 35px;
-  padding-bottom: 10px;
-}
-
-h3, .h3 {
-  padding-top: 25px;
-  padding-bottom: 10px;
-}
-
-p {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .chroma, code, kbd, pre, samp {

@@ -9,13 +9,30 @@ blockquote {
   background: #eee;
 }
 
-.wsg-content .wsg-content {
+.wsg-content {
   h1, h2, h3, h4, h5, h6 {
     font-family: $wsg-sans-serif;
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
+  }  
+  h2 {
+    padding-top: 35px;
+    padding-bottom: 10px;
+  }
+  
+  h3 {
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
+  
+  p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
+
 
 .wsg-title,
 .wsg-page-header h1 {
@@ -40,30 +57,6 @@ body, .serif {
 
 .sans-serif, .btn, .nav-link, .dropdown-item, .admin-sidenav {
   font-family: $wsg-sans-serif;
-}
-
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $wsg-sans-serif;
-  font-weight: 700;
-  -webkit-font-smoothing: antialiased;
-}
-
-h2 {
-  padding-top: 35px;
-  padding-bottom: 10px;
-}
-
-h3 {
-  padding-top: 25px;
-  padding-bottom: 10px;
-}
-
-p {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 
