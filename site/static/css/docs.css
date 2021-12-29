@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Bootstrap v5.1.1 (https://getbootstrap.com/)
+ * Bootstrap v5.0.0-beta1 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -12917,6 +12917,16 @@ p {
 /* GenericTraceback */
 /* GenericUnderline */
 /* TextWhitespace */
+.chroma {
+  margin: 0;
+  background-color: #000;
+  color: #cccccc;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  overflow: visible;
+}
+
 .chroma .ln {
   min-width: 50px;
   width: 50px;
@@ -12985,7 +12995,7 @@ p {
 
 /* KeywordDeclaration */
 .chroma .kd {
-  color: #43a5fc;
+  color: #5fb8ff;
 }
 
 /* KeywordNamespace */
@@ -13000,7 +13010,7 @@ p {
 
 /* KeywordReserved */
 .chroma .kr {
-  color: #43a5fc;
+  color: #5fb8ff;
 }
 
 /* KeywordType */
@@ -13015,12 +13025,12 @@ p {
 
 /* NameBuiltin */
 .chroma .nb {
-  color: #43a5fc;
+  color: #5fb8ff;
 }
 
 /* NameBuiltinPseudo */
 .chroma .bp {
-  color: #43a5fc;
+  color: #5fb8ff;
 }
 
 /* NameAttribute */
@@ -13030,7 +13040,7 @@ p {
 
 /* NameClass */
 .chroma .nc {
-  color: #43a5fc;
+  color: #5fb8ff;
 }
 
 /* NameConstant */
@@ -13040,7 +13050,7 @@ p {
 
 /* NameDecorator */
 .chroma .nd {
-  color: #43a5fc;
+  color: #5fb8ff;
 }
 
 /* NameEntity */
@@ -13055,17 +13065,17 @@ p {
 
 /* NameFunction */
 .chroma .nf {
-  color: #43a5fc;
+  color: #5fb8ff;
 }
 
 /* NameTag */
 .chroma .nt {
-  color: #1f75c0;
+  color: #0194d3;
 }
 
 /* NameVariable */
 .chroma .nv {
-  color: #43a5fc;
+  color: #5fb8ff;
 }
 
 .chroma .p {
@@ -13250,7 +13260,7 @@ p {
 
 /* GenericSubheading */
 .chroma .gu {
-  color: #43a5fc;
+  color: #5fb8ff;
 }
 
 /*# sourceMappingURL=docs.css.map */
