@@ -29,7 +29,7 @@ The `site` class resides on the root element of a website. It should sit inside 
     </table>
   </div>
   <div class="col">
-    <a href="/docs/3.0/layouts/examples/site" class="btn btn-outline-primary">
+    <a href="/docs/3.0/layouts/examples/site" class="btn btn-outline-primary wsg-btn-outline-primary">
       View Site Example Page <i class="fas fa-angle-right"></i>
     </a>
   </div>

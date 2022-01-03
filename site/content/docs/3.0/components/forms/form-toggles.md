@@ -6,8 +6,9 @@ group: components
 toc: true
 source: Webstop
 menu: 
-  forms:
-    parent: Forms
+    Components:
+      tags: "Forms"
+      parent: Components
 ---
 
 Section Toggles reveal or hide additional form content or information based on selections made within the form. It does 

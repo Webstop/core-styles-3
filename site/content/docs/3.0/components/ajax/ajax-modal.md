@@ -5,8 +5,9 @@ description: A modal available site-wide for AJAX content.
 toc: true
 source: Webstop
 menu: 
-  ajax:
-    parent: Ajax
+  Components:
+      tags: "Ajax"
+      parent: Components
 ---
 
   

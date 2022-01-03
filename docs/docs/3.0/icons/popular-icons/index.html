@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/docs.css" />
   </head>
   <body>
-
+<section class="wsg-content">
     
 <div class="admin admin-with-sidenav admin-with-sidebar">
   <header class="admin-header" role="banner">
@@ -211,14 +211,14 @@
       
       
       <li class="mb-1">
-        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#ajax-menu-collapse"
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#components-menu-collapse"
           aria-expanded="false">
-          <strong> Ajax</strong>
+          <strong> Components</strong>
         </button>
 
         <div
           class="collapse "
-          id="ajax-menu-collapse">
+          id="components-menu-collapse">
           
           <ul class="list-unstyled fw-normal pb-1 small">
 
@@ -247,24 +247,6 @@
 
           </ul>
           
-        </div>
-      </li>
-      
-      
-
-      
-      
-      
-      <li class="mb-1">
-        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#forms-menu-collapse"
-          aria-expanded="false">
-          <strong> Forms</strong>
-        </button>
-
-        <div
-          class="collapse "
-          id="forms-menu-collapse">
-          
           <ul class="list-unstyled fw-normal pb-1 small">
 
             <li
@@ -292,8 +274,29 @@
 
           </ul>
           
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/tagging/tag-search/" class="d-inline-flex rounded">Tag Search</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/components/tagging/tags/" class="d-inline-flex rounded">Tags</a>
+            </li>
+
+          </ul>
+          
         </div>
       </li>
+      
+      
+
       
       
 
@@ -362,58 +365,25 @@
 
       
       
-      
-      <li class="mb-1">
-        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#tagging-menu-collapse"
-          aria-expanded="false">
-          <strong> Tagging</strong>
-        </button>
-
-        <div
-          class="collapse "
-          id="tagging-menu-collapse">
-          
-          <ul class="list-unstyled fw-normal pb-1 small">
-
-            <li
-              class="py-2 ps-4 ">
-              <a href="/docs/3.0/components/tagging/tag-search/" class="d-inline-flex rounded">Tag Search</a>
-            </li>
-
-          </ul>
-          
-          <ul class="list-unstyled fw-normal pb-1 small">
-
-            <li
-              class="py-2 ps-4 ">
-              <a href="/docs/3.0/components/tagging/tags/" class="d-inline-flex rounded">Tags</a>
-            </li>
-
-          </ul>
-          
-        </div>
-      </li>
-      
-      
 
       
       
       
       <li class="mb-1">
-        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#dev-menu-collapse"
+        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#grocery-menu-collapse"
           aria-expanded="false">
-          <strong> Dev</strong>
+          <strong> Grocery</strong>
         </button>
 
         <div
           class="collapse "
-          id="dev-menu-collapse">
+          id="grocery-menu-collapse">
           
           <ul class="list-unstyled fw-normal pb-1 small">
 
             <li
               class="py-2 ps-4 ">
-              <a href="/docs/3.0/dev/tracking/" class="d-inline-flex rounded">Aye, Analytics Tracking</a>
+              <a href="/docs/3.0/grocery/tracking/" class="d-inline-flex rounded">Aye, Analytics Tracking</a>
             </li>
 
           </ul>
@@ -501,13 +471,13 @@ and expands it with custom icons for proprietary Webstop products.</p>
   <tr>
     <td>Compelling Title</td>
     <td class="text-end">
-      <a href="#" class="btn btn-outline-primary ms-3">
+      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
         <i class="fa-regular fa-angle-right"></i> Show
       </a>
-      <a href="#" class="btn btn-outline-primary ms-3">
+      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
         <i class="fa-duotone fa-edit"></i> Edit
       </a>
-      <a href="#" class="btn btn-outline-primary ms-3">
+      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
         <i class="fa-duotone fa-circle-minus"></i> Delete
       </a>
     </td>
@@ -515,13 +485,13 @@ and expands it with custom icons for proprietary Webstop products.</p>
   <tr>
     <td>Compelling Title</td>
     <td class="text-end">
-      <a href="#" class="btn btn-outline-primary ms-3">
+      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
         <i class="fa-solid fa-angle-right"></i> Show
       </a>
-      <a href="#" class="btn btn-outline-primary ms-3">
+      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
         <i class="fa-solid fa-edit"></i> Edit
       </a>
-      <a href="#" class="btn btn-outline-primary ms-3">
+      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
         <i class="fa-solid fa-circle-minus"></i> Delete
       </a>
     </td>
@@ -568,8 +538,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
         
         <span class="visually-hidden">up arrow direction</span>
         <div class="card-body text-center">
-          <i class="wsg-icon-example fa-solid fa-angle-up fa-3x"></i>
-          <i class="wsg-icon-example fa-solid fa-angle-up ms-2"></i>
+          <i class="wsg-icon-example fa-solid fa-angle-up wsg-icon-theme fa-3x"></i>
+          <i class="wsg-icon-example fa-solid fa-angle-up wsg-icon-theme ms-2"></i>
           <h3 class="wsg-icon-title card-title">Arrow Up</h3>
     
           <code class="icon-example-code code">fa-solid fa-angle-up</code>
@@ -594,8 +564,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
 
 
         </div>
-        <div class="card-footer">
-          <div class="btn btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-angle-up-modal">
+        <div class="card-footer wsg-card-footer">
+          <div class="btn btn-outline-primary wsg-btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-angle-up-modal">
             View  Examples
           </div>
           <div class="row gx-2">
@@ -621,8 +591,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
         
         <span class="visually-hidden">down arrow direction</span>
         <div class="card-body text-center">
-          <i class="wsg-icon-example fa-solid fa-angle-down fa-3x"></i>
-          <i class="wsg-icon-example fa-solid fa-angle-down ms-2"></i>
+          <i class="wsg-icon-example fa-solid fa-angle-down wsg-icon-theme fa-3x"></i>
+          <i class="wsg-icon-example fa-solid fa-angle-down wsg-icon-theme ms-2"></i>
           <h3 class="wsg-icon-title card-title">Arrow Down</h3>
     
           <code class="icon-example-code code">fa-solid fa-angle-down</code>
@@ -647,8 +617,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
 
 
         </div>
-        <div class="card-footer">
-          <div class="btn btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-angle-down-modal">
+        <div class="card-footer wsg-card-footer">
+          <div class="btn btn-outline-primary wsg-btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-angle-down-modal">
             View  Examples
           </div>
           <div class="row gx-2">
@@ -674,8 +644,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
         
         <span class="visually-hidden">right forward arrow direction next</span>
         <div class="card-body text-center">
-          <i class="wsg-icon-example fa-solid fa-angle-right fa-3x"></i>
-          <i class="wsg-icon-example fa-solid fa-angle-right ms-2"></i>
+          <i class="wsg-icon-example fa-solid fa-angle-right wsg-icon-theme fa-3x"></i>
+          <i class="wsg-icon-example fa-solid fa-angle-right wsg-icon-theme ms-2"></i>
           <h3 class="wsg-icon-title card-title">Arrow Right</h3>
     
           <code class="icon-example-code code">fa-solid fa-angle-right</code>
@@ -700,8 +670,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
 
 
         </div>
-        <div class="card-footer">
-          <div class="btn btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-angle-right-modal">
+        <div class="card-footer wsg-card-footer">
+          <div class="btn btn-outline-primary wsg-btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-angle-right-modal">
             View  Examples
           </div>
           <div class="row gx-2">
@@ -727,8 +697,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
         
         <span class="visually-hidden">right back arrow direction return</span>
         <div class="card-body text-center">
-          <i class="wsg-icon-example fa-solid fa-angle-left fa-3x"></i>
-          <i class="wsg-icon-example fa-solid fa-angle-left ms-2"></i>
+          <i class="wsg-icon-example fa-solid fa-angle-left wsg-icon-theme fa-3x"></i>
+          <i class="wsg-icon-example fa-solid fa-angle-left wsg-icon-theme ms-2"></i>
           <h3 class="wsg-icon-title card-title">Arrow Left</h3>
     
           <code class="icon-example-code code">fa-solid fa-angle-left</code>
@@ -753,8 +723,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
 
 
         </div>
-        <div class="card-footer">
-          <div class="btn btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-angle-left-modal">
+        <div class="card-footer wsg-card-footer">
+          <div class="btn btn-outline-primary wsg-btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-angle-left-modal">
             View  Examples
           </div>
           <div class="row gx-2">
@@ -782,8 +752,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
         
         <span class="visually-hidden">help question ?</span>
         <div class="card-body text-center">
-          <i class="wsg-icon-example fa-duotone fa-question-circle fa-3x"></i>
-          <i class="wsg-icon-example fa-duotone fa-question-circle ms-2"></i>
+          <i class="wsg-icon-example fa-duotone fa-question-circle wsg-icon-theme fa-3x"></i>
+          <i class="wsg-icon-example fa-duotone fa-question-circle wsg-icon-theme ms-2"></i>
           <h3 class="wsg-icon-title card-title">Help</h3>
     
           <code class="icon-example-code code">fa-duotone fa-question-circle</code>
@@ -808,8 +778,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
 
 
         </div>
-        <div class="card-footer">
-          <div class="btn btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-question-circle-modal">
+        <div class="card-footer wsg-card-footer">
+          <div class="btn btn-outline-primary wsg-btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-question-circle-modal">
             View  Examples
           </div>
           <div class="row gx-2">
@@ -835,8 +805,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
         
         <span class="visually-hidden">Info</span>
         <div class="card-body text-center">
-          <i class="wsg-icon-example fa-duotone fa-info-circle fa-3x"></i>
-          <i class="wsg-icon-example fa-duotone fa-info-circle ms-2"></i>
+          <i class="wsg-icon-example fa-duotone fa-info-circle wsg-icon-theme fa-3x"></i>
+          <i class="wsg-icon-example fa-duotone fa-info-circle wsg-icon-theme ms-2"></i>
           <h3 class="wsg-icon-title card-title">Info</h3>
     
           <code class="icon-example-code code">fa-duotone fa-info-circle</code>
@@ -861,8 +831,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
 
 
         </div>
-        <div class="card-footer">
-          <div class="btn btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-info-circle-modal">
+        <div class="card-footer wsg-card-footer">
+          <div class="btn btn-outline-primary wsg-btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-info-circle-modal">
             View  Examples
           </div>
           <div class="row gx-2">
@@ -924,8 +894,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
         
         <span class="visually-hidden">edit pencil</span>
         <div class="card-body text-center">
-          <i class="wsg-icon-example fa-duotone fa-edit fa-3x"></i>
-          <i class="wsg-icon-example fa-duotone fa-edit ms-2"></i>
+          <i class="wsg-icon-example fa-duotone fa-edit wsg-icon-theme fa-3x"></i>
+          <i class="wsg-icon-example fa-duotone fa-edit wsg-icon-theme ms-2"></i>
           <h3 class="wsg-icon-title card-title">Edit</h3>
     
           <code class="icon-example-code code">fa-duotone fa-edit</code>
@@ -950,8 +920,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
 
 
         </div>
-        <div class="card-footer">
-          <div class="btn btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-edit-modal">
+        <div class="card-footer wsg-card-footer">
+          <div class="btn btn-outline-primary wsg-btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-edit-modal">
             View  Examples
           </div>
           <div class="row gx-2">
@@ -977,8 +947,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
         
         <span class="visually-hidden">share social</span>
         <div class="card-body text-center">
-          <i class="wsg-icon-example fa-duotone fa-arrow-up-from-square fa-3x"></i>
-          <i class="wsg-icon-example fa-duotone fa-arrow-up-from-square ms-2"></i>
+          <i class="wsg-icon-example fa-duotone fa-arrow-up-from-square wsg-icon-theme fa-3x"></i>
+          <i class="wsg-icon-example fa-duotone fa-arrow-up-from-square wsg-icon-theme ms-2"></i>
           <h3 class="wsg-icon-title card-title">Share</h3>
     
           <code class="icon-example-code code">fa-duotone fa-arrow-up-from-square</code>
@@ -1003,8 +973,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
 
 
         </div>
-        <div class="card-footer">
-          <div class="btn btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-arrow-up-from-square-modal">
+        <div class="card-footer wsg-card-footer">
+          <div class="btn btn-outline-primary wsg-btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-arrow-up-from-square-modal">
             View  Examples
           </div>
           <div class="row gx-2">
@@ -1052,8 +1022,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
         
         <span class="visually-hidden">search magnifying inspect filter look up lookup find</span>
         <div class="card-body text-center">
-          <i class="wsg-icon-example fa-duotone fa-search fa-3x"></i>
-          <i class="wsg-icon-example fa-duotone fa-search ms-2"></i>
+          <i class="wsg-icon-example fa-duotone fa-search wsg-icon-theme fa-3x"></i>
+          <i class="wsg-icon-example fa-duotone fa-search wsg-icon-theme ms-2"></i>
           <h3 class="wsg-icon-title card-title">Search</h3>
     
           <code class="icon-example-code code">fa-duotone fa-search</code>
@@ -1078,8 +1048,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
 
 
         </div>
-        <div class="card-footer">
-          <div class="btn btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-search-modal">
+        <div class="card-footer wsg-card-footer">
+          <div class="btn btn-outline-primary wsg-btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-search-modal">
             View  Examples
           </div>
           <div class="row gx-2">
@@ -1231,8 +1201,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
         
         <span class="visually-hidden">cloud internet</span>
         <div class="card-body text-center">
-          <i class="wsg-icon-example fa-duotone fa-cloud fa-3x"></i>
-          <i class="wsg-icon-example fa-duotone fa-cloud ms-2"></i>
+          <i class="wsg-icon-example fa-duotone fa-cloud wsg-icon-theme fa-3x"></i>
+          <i class="wsg-icon-example fa-duotone fa-cloud wsg-icon-theme ms-2"></i>
           <h3 class="wsg-icon-title card-title">Cloud</h3>
     
           <code class="icon-example-code code">fa-duotone fa-cloud</code>
@@ -1257,8 +1227,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
 
 
         </div>
-        <div class="card-footer">
-          <div class="btn btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-cloud-modal">
+        <div class="card-footer wsg-card-footer">
+          <div class="btn btn-outline-primary wsg-btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-cloud-modal">
             View  Examples
           </div>
           <div class="row gx-2">
@@ -1284,8 +1254,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
         
         <span class="visually-hidden">cloud internet download</span>
         <div class="card-body text-center">
-          <i class="wsg-icon-example fa-duotone fa-cloud-download fa-3x"></i>
-          <i class="wsg-icon-example fa-duotone fa-cloud-download ms-2"></i>
+          <i class="wsg-icon-example fa-duotone fa-cloud-download wsg-icon-theme fa-3x"></i>
+          <i class="wsg-icon-example fa-duotone fa-cloud-download wsg-icon-theme ms-2"></i>
           <h3 class="wsg-icon-title card-title">Cloud Download</h3>
     
           <code class="icon-example-code code">fa-duotone fa-cloud-download</code>
@@ -1310,8 +1280,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
 
 
         </div>
-        <div class="card-footer">
-          <div class="btn btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-cloud-download-modal">
+        <div class="card-footer wsg-card-footer">
+          <div class="btn btn-outline-primary wsg-btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-cloud-download-modal">
             View  Examples
           </div>
           <div class="row gx-2">
@@ -1337,8 +1307,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
         
         <span class="visually-hidden">cloud internet upload</span>
         <div class="card-body text-center">
-          <i class="wsg-icon-example fa-duotone fa-cloud-upload fa-3x"></i>
-          <i class="wsg-icon-example fa-duotone fa-cloud-upload ms-2"></i>
+          <i class="wsg-icon-example fa-duotone fa-cloud-upload wsg-icon-theme fa-3x"></i>
+          <i class="wsg-icon-example fa-duotone fa-cloud-upload wsg-icon-theme ms-2"></i>
           <h3 class="wsg-icon-title card-title">Cloud Upload</h3>
     
           <code class="icon-example-code code">fa-duotone fa-cloud-upload</code>
@@ -1363,8 +1333,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
 
 
         </div>
-        <div class="card-footer">
-          <div class="btn btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-cloud-upload-modal">
+        <div class="card-footer wsg-card-footer">
+          <div class="btn btn-outline-primary wsg-btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-cloud-upload-modal">
             View  Examples
           </div>
           <div class="row gx-2">
@@ -1540,8 +1510,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
         
         <span class="visually-hidden">add create new plus</span>
         <div class="card-body text-center">
-          <i class="wsg-icon-example fa-duotone fa-plus-circle fa-3x"></i>
-          <i class="wsg-icon-example fa-duotone fa-plus-circle ms-2"></i>
+          <i class="wsg-icon-example fa-duotone fa-plus-circle wsg-icon-theme fa-3x"></i>
+          <i class="wsg-icon-example fa-duotone fa-plus-circle wsg-icon-theme ms-2"></i>
           <h3 class="wsg-icon-title card-title">Add Create</h3>
     
           <code class="icon-example-code code">fa-duotone fa-plus-circle</code>
@@ -1566,8 +1536,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
 
 
         </div>
-        <div class="card-footer">
-          <div class="btn btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-plus-circle-modal">
+        <div class="card-footer wsg-card-footer">
+          <div class="btn btn-outline-primary wsg-btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#fa-plus-circle-modal">
             View  Examples
           </div>
           <div class="row gx-2">
@@ -2250,7 +2220,7 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
 </div>
 
 
-
+  </section>
     <script src="https://kit.fontawesome.com/42f15b97e3.js" crossorigin="anonymous"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"

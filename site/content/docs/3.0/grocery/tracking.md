@@ -6,8 +6,8 @@ group: grocery
 toc: true
 source: Webstop
 menu: 
-  dev:
-    parent: Dev 
+  grocery:
+    parent: Grocery 
 ---
 
 

@@ -5,8 +5,9 @@ description: An easy way to load HTML content into a section of the page.
 toc: true
 source: Webstop
 menu: 
-  ajax:
-    parent: Ajax
+  Components:
+      tags: "Ajax"
+      parent: Components
 ---
 
 
