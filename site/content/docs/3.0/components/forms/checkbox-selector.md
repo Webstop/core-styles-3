@@ -6,8 +6,9 @@ group: components
 toc: true
 source: Webstop
 menu: 
-  forms:
-    parent: Forms
+    Components:
+      tags: "Forms"
+      parent: Components
 ---
 
 When you have a large group of checkboxes it is helpful to be able to have a Select All or Unselect All button that will 
