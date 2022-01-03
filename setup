@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-docker-compose build
-docker-compose run --rm bash --version ; npm install
+docker compose build
