@@ -12096,15 +12096,6 @@ color: rgb(101, 255, 195);
   overflow-y: auto;
 }
 
-.chroma {
-  margin: 0;
-  background-color: #333;
-  padding: 1rem 1.5rem;
-  border-radius: 0.75rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  overflow: visible;
-}
-
 .bd-clipboard {
   margin: 0;
   padding: 0;

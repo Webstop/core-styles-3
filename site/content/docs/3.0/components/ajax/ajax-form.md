@@ -5,8 +5,9 @@ description: An easy way to submit form contents & load the response into a sect
 toc: true
 source: Webstop
 menu: 
-    ajax:
-      parent: Ajax
+    Components:
+      tags: "Ajax"
+      parent: Components
 ---
  
 

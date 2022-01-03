@@ -5,9 +5,10 @@ description: Get search results as you type.
 group: components
 toc: true
 source: Webstop
-menu:
-  forms:
-    parent: Forms
+menu: 
+    Components:
+      tags: "Forms"
+      parent: Components
 ---
 
   
