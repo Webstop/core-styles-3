@@ -17,7 +17,7 @@
     
 <div class="admin admin-with-sidenav admin-with-sidebar">
   <header class="admin-header" role="banner">
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark wsg-header shadow">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark wsg-header shadow">
   <div class="container-fluid">
     <a class="navbar-brand ms-2" href="/"><img
         src="https://www.webstop.com/assets/Webstop-logos/webstop-twocolor-landscape-dark-bg-72dpi-e6425f6d6e9ec4cc90742a883b2997bb28191590bfd8762222ed4723865dcaef.png" style="max-width: 127px; /* 889/7 = 127 */"></a>
@@ -445,7 +445,7 @@
     </section>
     <p>Live search watches a search field and makes AJAX requests as you type.</p>
 <h2 id="examples">Examples</h2>
-<p>The base <code>search-form</code> class defines the search form. The <code>search-from-search-text</code> class identifies the
+<p>The base <code>search-form</code> class defines the search form. The <code>search-from-search-text</code> class identifies the 
 text field to watch; the field the consumer types search terms into.</p>
 <h3 id="basic-search-example">Basic Search Example</h3>
 <div class="toolbar-detached">
@@ -469,7 +469,8 @@ text field to watch; the field the consumer types search terms into.</p>
   <p>This section should get replaced by search results when a search is active, and reappear when the search is exited.</p>
 </section>
 
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-form&#34;</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/search_results/&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;post&#34;</span> <span class="na">data-search</span><span class="o">=</span><span class="s">&#34;live&#34;</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#search-results&#34;</span> <span class="na">data-hide</span><span class="o">=</span><span class="s">&#34;.search-hidden&#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">
+<span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-form&#34;</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/search_results/&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;post&#34;</span> <span class="na">data-search</span><span class="o">=</span><span class="s">&#34;live&#34;</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#search-results&#34;</span> <span class="na">data-hide</span><span class="o">=</span><span class="s">&#34;.search-hidden&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-from-search-text form-control&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;search&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Search&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Enter text to search for.&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-form-clear icon-cancel-circle-solid&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Clear Search&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
@@ -486,10 +487,12 @@ text field to watch; the field the consumer types search terms into.</p>
 <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-hidden&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Some Page Content<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This section should get replaced by search results when a search is active, and reappear when the search is exited.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span></code></pre></div>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+
+</code></pre></div>
 </div>
 <h4 id="important-attributes">Important Attributes</h4>
-<p>The following attributes are required for Live Search to function. <strong>They are all placed on the root <code>form</code> element</strong>,
+<p>The following attributes are required for Live Search to function. <strong>They are all placed on the root <code>form</code> element</strong>, 
 the same form element the <code>search-form</code> is placed on.</p>
 <table>
 <thead>
@@ -520,7 +523,7 @@ the same form element the <code>search-form</code> is placed on.</p>
 <br>
 <h3 id="search-form-in-a-toolbar-example">Search Form in a Toolbar Example</h3>
 <p>Inline search forms can be placed inside a toolbar.</p>
-<p>Notice the <code>toolbar-group</code> class is placed inside the form on the same element containing the <code>input-group</code>, trying to
+<p>Notice the <code>toolbar-group</code> class is placed inside the form on the same element containing the <code>input-group</code>, trying to 
 place the <code>toolbar-group</code> class on other elements will likely produce undesirable results.</p>
 <div class="toolbar-detached">
 <div class="my-3 p-3 example">
@@ -543,7 +546,8 @@ place the <code>toolbar-group</code> class on other elements will likely produce
   <h4>Some Page Content</h4>
   <p>This section should get replaced by search results when a search is active, and reappear when the search is exited.</p>
 </section>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toolbar&#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">
+<span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toolbar&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-form&#34;</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/search_results&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;post&#34;</span> <span class="na">data-search</span><span class="o">=</span><span class="s">&#34;live&#34;</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#search-results-toolbar&#34;</span> <span class="na">data-hide</span><span class="o">=</span><span class="s">&#34;.search-hidden-toolbar&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toolbar-group input-group&#34;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-from-search-text form-control&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;search&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Search&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Enter text to search for.&#34;</span><span class="p">&gt;</span>
@@ -561,10 +565,11 @@ place the <code>toolbar-group</code> class on other elements will likely produce
 <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-hidden-toolbar&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Some Page Content<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This section should get replaced by search results when a search is active, and reappear when the search is exited.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span></code></pre></div>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</code></pre></div>
 </div> 
 <h3 id="complex-search-form-example">Complex Search Form Example</h3>
-<p>Search forms can have any number of fields and the AJAX request will submit them along with the
+<p>Search forms can have any number of fields and the AJAX request will submit them along with the 
 <code>search-from-search-text</code> field.</p>
 <div class="toolbar-detached">
 <div class="my-3 p-3 example">
@@ -615,7 +620,8 @@ place the <code>toolbar-group</code> class on other elements will likely produce
   <h4>Some Page Content</h4>
   <p>This section should get replaced by search results when a search is active, and reappear when the search is exited.</p>
 </section>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-form&#34;</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/search_results&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;post&#34;</span> <span class="na">data-search</span><span class="o">=</span><span class="s">&#34;live&#34;</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#search-results-complex&#34;</span> <span class="na">data-hide</span><span class="o">=</span><span class="s">&#34;.search-hidden-complex&#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">
+<span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-form&#34;</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/search_results&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;post&#34;</span> <span class="na">data-search</span><span class="o">=</span><span class="s">&#34;live&#34;</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#search-results-complex&#34;</span> <span class="na">data-hide</span><span class="o">=</span><span class="s">&#34;.search-hidden-complex&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group&#34;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-from-search-text form-control&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;search&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Search&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Enter text to search for.&#34;</span><span class="p">&gt;</span>
@@ -661,7 +667,8 @@ place the <code>toolbar-group</code> class on other elements will likely produce
 <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-hidden-complex&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Some Page Content<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This section should get replaced by search results when a search is active, and reappear when the search is exited.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span></code></pre></div>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</code></pre></div>
 </div>
 
   </main>

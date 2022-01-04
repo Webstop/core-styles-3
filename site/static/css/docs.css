@@ -11787,6 +11787,10 @@ textarea.form-control-lg {
   --fa-secondary-color: #5fb8ff;
 }
 
+.wsg-icon-title {
+  text-transform: capitalize;
+}
+
 /* Controls */
 .wsg-grid-controls {
   font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -12138,7 +12142,7 @@ color: rgb(101, 255, 195);
 }
 
 .example {
-  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   letter-spacing: 0.2px;
   margin-right: 0;
   margin-left: 0;
@@ -12450,7 +12454,7 @@ pre {
 }
 
 .wsg-header {
-  background-color: #01000b;
+  background-color: #01000b !important;
 }
 
 .wsg-title-bg {
