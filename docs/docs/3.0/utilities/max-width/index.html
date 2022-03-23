@@ -409,6 +409,15 @@
           <ul class="list-unstyled fw-normal pb-1 small">
 
             <li
+              class="py-2 ps-4 ">
+              <a href="/docs/3.0/utilities/box/" class="d-inline-flex rounded">Box Utilities</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
               class="py-2 ps-4  left-nav-active ">
               <a href="/docs/3.0/utilities/max-width/" class="d-inline-flex rounded">Max Width</a>
             </li>
@@ -455,12 +464,38 @@ across the web page.</p>
   <p>Some things we should consider adding:</p>
   <ol>
     <li>Sizes that match Bootstrap standard media query sizes like `max-width-sm`, `max-width-lg` & etc.</li>
-    <li>Sizes for content like cards in a card-deck so we have standard sizes there.</li>
+    <li>
+      Sizes for content like cards in a card-deck so we have standard sizes there.
+      <ol>
+        <li>Sizes so when a card deck is used under a page that's got a max-width we know the size to use to make even columns.</li>
+      </ol>
+    </li>
     <li>Sizes that work with media queries like `max-width-sm-320`, `max-width-lg-640` & etc.</li>
   </ol>
 </div>
-<h2 id="component-examples">Component Examples</h2>
-<h3 id="max-width-320-example">Max Width 320 Example</h3>
+<h2 id="max-width-for-components">Max-Width for Components</h2>
+<p>The following max-width classes were designed for use on components within a page layout.</p>
+<h3 id="readable-max-width">Readable Max-Width</h3>
+<p>The <code>.readable</code> class can be applied to elements to make them conform to a width that is comfortable for a reader to enjoy.
+Studies have shown that articles of text where the line length is too long are a strain on the eye and readers can have
+difficulty maintaining their place when moving to a new line.</p>
+<p>We use the <code>$readable</code> Sass variable to control this width.
+We carefully studies and evaluated this issue to determine the optimum width to use, so caution should be exercised when
+changing the value of that variable.</p>
+<p>We use the<code>.readable</code> class on a large variety of content, including body text and forms.</p>
+<div class="my-3 p-3 example">
+<div class="card readable">
+  <div class="card-body">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card readable&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="max-width-320">Max Width 320</h3>
+<p>The class <code>max-width-320</code> will constrain an element to 320 pixels wide.</p>
 <div class="my-3 p-3 example">
 <div class="card max-width-320">
   <div class="card-body">
@@ -472,7 +507,8 @@ across the web page.</p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="max-width-450-example">Max Width 450 Example</h3>
+<h3 id="max-width-450">Max Width 450</h3>
+<p>The class <code>max-width-450</code> will constrain an element to 450 pixels wide.</p>
 <div class="my-3 p-3 example">
 <div class="card max-width-450">
   <div class="card-body">
@@ -485,8 +521,8 @@ across the web page.</p>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="body-content-examples">Body Content Examples</h2>
-<p>We provide three standard sizes for page width, <code>1140</code>, <code>1440</code>,
-and <code>1600</code> pixels wide.</p>
+<p>We provide three standard sizes for page width, <code>1140</code>, <code>1440</code>, and <code>1600</code> pixels wide. These are
+usually applied to the main body content of a page, with headers and footers remaining unaffected.</p>
 <h3 id="max-width-1140-example">Max Width 1140 Example</h3>
 <div class="my-3 p-3 example">
 <div class="max-width-1140">
@@ -496,7 +532,6 @@ and <code>1600</code> pixels wide.</p>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="max-width-1440-example">Max Width 1440 Example</h3>
-<div class="toolbar-detached">
 <div class="my-3 p-3 example">
 <div class="max-width-1440">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -504,9 +539,7 @@ and <code>1600</code> pixels wide.</p>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;max-width-1440&#34;</span><span class="p">&gt;</span>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-</div>
 <h3 id="max-width-1600-example">Max Width 1600 Example</h3>
-<div class="toolbar-detached">
 <div class="my-3 p-3 example">
 <div class="max-width-1600">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -514,13 +547,11 @@ and <code>1600</code> pixels wide.</p>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;max-width-1600&#34;</span><span class="p">&gt;</span>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-</div>
 <h2 id="centering">Centering</h2>
 <p>You&rsquo;ll most likely want the content you are applying the max width to be centered on
 the page. This can easily be accomplished by adding Bootstrap&rsquo;s margin utility class
-<code>mx-auto</code>.</p>
+<code>mx-auto</code> or our <code>box-center</code> class.</p>
 <h3 id="centered-max-width-1140-example">Centered Max Width 1140 Example</h3>
-<div class="toolbar-detached">
 <div class="my-3 p-3 example">
 <div class="max-width-1140 mx-auto">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -528,7 +559,6 @@ the page. This can easily be accomplished by adding Bootstrap&rsquo;s margin uti
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;max-width-1140 mx-auto&#34;</span><span class="p">&gt;</span>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-</div>
 
   </main>
   
@@ -537,10 +567,11 @@ the page. This can easily be accomplished by adding Bootstrap&rsquo;s margin uti
       <div class="wsg-table-of-contents">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#component-examples">Component Examples</a>
+    <li><a href="#max-width-for-components">Max-Width for Components</a>
       <ul>
-        <li><a href="#max-width-320-example">Max Width 320 Example</a></li>
-        <li><a href="#max-width-450-example">Max Width 450 Example</a></li>
+        <li><a href="#readable-max-width">Readable Max-Width</a></li>
+        <li><a href="#max-width-320">Max Width 320</a></li>
+        <li><a href="#max-width-450">Max Width 450</a></li>
       </ul>
     </li>
     <li><a href="#body-content-examples">Body Content Examples</a>

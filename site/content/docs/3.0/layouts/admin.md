@@ -347,6 +347,9 @@ This example contains a header, footer, and main content sections.
   <nav class="admin-sidecar" role="navigation">
       Admin Sidecar Navigation...
   </nav>
+  <nav class="admin-sidenav" role="navigation">
+    Admin Sidenav Navigation...
+  </nav>
   <main class="admin-page" role="main">
     Admin Page Main Content...
   </main>

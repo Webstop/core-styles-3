@@ -1,6 +1,7 @@
 /** Examples and Highlights **/
 
 .highlight {
+  margin-top: $spacer;
   margin-bottom: $spacer;
   position: relative;
   white-space:nowrap;
@@ -8,9 +9,7 @@
   overflow-y: auto;
 }
 
-
-
-.bd-clipboard {
+.wsg-clipboard {
   margin: 0;
   padding: 0;
   position: absolute;
@@ -18,23 +17,21 @@
   right: 8px;
 }
 
-
-
-.bd-example-container {
+.wsg-example-container {
   min-width: 16rem;
   max-width: 25rem;
   margin-right: auto;
   margin-left: auto;
 }
 
-.bd-example-container-header {
+.wsg-example-container-header {
   height: 3rem;
   margin-bottom: .5rem;
   background-color: lighten($wsg-primary, 25%);
   border-radius: 0.75rem;
 }
 
-.bd-example-container-sidebar {
+.wsg-example-container-sidebar {
   float: right;
   width: 4rem;
   height: 8rem;
@@ -42,14 +39,14 @@
   border-radius: 0.75rem;
 }
 
-.bd-example-container-body {
+.wsg-example-container-body {
   height: 8rem;
   margin-right: 4.5rem;
   background-color: lighten(purple, 25%);
   border-radius: 0.75rem;
 }
 
-.bd-example-container-fluid {
+.wsg-example-container-fluid {
   max-width: none;
 }
 
@@ -81,7 +78,7 @@
   }
 
 
-pre {
+.chroma {
     display: block;
     margin-top: .5rem;
     margin-bottom: .50rem;

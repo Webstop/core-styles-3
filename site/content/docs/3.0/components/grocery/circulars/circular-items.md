@@ -9,7 +9,7 @@ source: Webstop
 
 
 
-<div class="bd-example" style="min-width: 816px; max-width: 1221px;">
+<div class="wsg-example" style="min-width: 816px; max-width: 1221px;">
   <div class="row">
     <div class="col">
       <h4 class="text-center">
@@ -77,7 +77,7 @@ source: Webstop
 
 ## Example Grid of Mixed Circular Items
 
-<div class="bd-example">
+<div class="wsg-example">
   <div class="row">
     {% include examples/circular-items/_circular-item-banner-example.html %}
     {% include examples/circular-items/_circular-item-standard-promotion-example.html %}

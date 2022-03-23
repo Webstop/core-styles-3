@@ -30,7 +30,7 @@ class is unnecessary.
 This layout is achieved by giving the circular items a `col` class within the context 
 of a `row`.
 
-<div class="bd-example">
+<div class="wsg-example">
   <div class="row">
     {% include examples/circular-items/_circular-item-coupon-example.html %}
     {% include examples/circular-items/_circular-item-coupon-example.html %}
@@ -45,7 +45,7 @@ of a `row`.
 
 ### Mixed Items Example
 
-<div class="bd-example">
+<div class="wsg-example">
   <div class="row">
     {% include examples/circular-items/_circular-item-coupon-example.html %}
     {% include examples/circular-items/_circular-item-coupon-example.html %}

@@ -13,7 +13,7 @@ The stores listing component is intended to provide an easy way to navigate thro
 list of stores. For retailers with locations in multiple states, it provides a tabbed list of stages so 
 consumers are able to easily navigate to the state they are interested in.
 
-<div class="bd-example">
+<div class="wsg-example">
 {% include examples/stores/_stores-list-example.html %}
 </div>
 {% highlight html %}

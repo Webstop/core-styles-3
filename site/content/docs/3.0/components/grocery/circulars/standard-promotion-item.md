@@ -99,7 +99,7 @@ The following button examples are effective calls to action. They are forced to 
 
 #### Grid of Standard Promotion Circular Items
 
-<div class="bd-example">
+<div class="wsg-example">
   <div class="row">
     {% include examples/circular-items/_circular-item-standard-promotion-example.html %}
     {% include examples/circular-items/_circular-item-standard-promotion-example.html %}
@@ -114,7 +114,7 @@ The following button examples are effective calls to action. They are forced to 
 
 ### Mixed Items
 
-<div class="bd-example">
+<div class="wsg-example">
   <div class="row">
     {% include examples/circular-items/_circular-item-standard-promotion-example.html %}
     {% include examples/circular-items/_circular-item-standard-example.html %}

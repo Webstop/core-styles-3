@@ -22,7 +22,7 @@ page and retreats back off the page.
 </div>
 
 ### Shopping List Power Bar in a Site Layout
-<div class="bd-example">
+<div class="wsg-example">
   {% include examples/shopping-lists/_shopping-list-power-bar-site-example.html %}
 </div>
 

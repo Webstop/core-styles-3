@@ -29,7 +29,7 @@ The original digital circular ad item. With a `85px` x `83px` image.
 
 #### Grid of Thumbnail Circular Items
 
-<div class="bd-example">
+<div class="wsg-example">
   <div class="row">
     {% include examples/circular-items/_circular-item-thumbnail-example.html %} 
     {% include examples/circular-items/_circular-item-thumbnail-example.html %}
@@ -44,7 +44,7 @@ The original digital circular ad item. With a `85px` x `83px` image.
 
 ### Mixed Items Example
 
-<div class="bd-example">
+<div class="wsg-example">
   <div class="row">
     {% include examples/circular-items/_circular-item-standard-example.html %}
     {% include examples/circular-items/_circular-item-standard-example.html %}

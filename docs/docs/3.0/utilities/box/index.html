@@ -15,7 +15,7 @@
   <body>
 <section class="wsg-content">
     
-<div class="admin admin-with-sidenav ">
+<div class="admin admin-with-sidenav admin-with-sidebar">
   <header class="admin-header" role="banner">
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark wsg-header shadow">
   <div class="container-fluid">
@@ -403,13 +403,13 @@
         </button>
 
         <div
-          class="collapse "
+          class="collapse  show "
           id="utilities-menu-collapse">
           
           <ul class="list-unstyled fw-normal pb-1 small">
 
             <li
-              class="py-2 ps-4 ">
+              class="py-2 ps-4  left-nav-active ">
               <a href="/docs/3.0/utilities/box/" class="d-inline-flex rounded">Box Utilities</a>
             </li>
 
@@ -448,147 +448,86 @@
   <main class="admin-page" role="main">
     <section class="docs-heading inner-shadow">
       <h1 class="docs-heading-title shadow">
-        Introduction
+        Box Utilities
       </h1>
-      <p class="docs-heading-tagline"></p>
+      <p class="docs-heading-tagline">Common styling for block components.</p>
     </section>
-    <p>Webstop&rsquo;s front-end framework contains finely crafted HTML5, CSS3 &amp; JavaScript designed to produce compelling web experiences for grocery retailer websites. Our framework takes advantage of modern tools to create mobile-first responsive websites.</p>
-<p>This guide will help you get your website up and running with our modern framework in short order.</p>
-<h2 id="contents">Contents</h2>
-<ul>
-<li>Will be replaced with the ToC, excluding the &ldquo;Contents&rdquo; header
-{:toc}</li>
-</ul>
-<h2 id="quick-start">Quick start</h2>
-<p>To install Webstop&rsquo;s front-end framework simply place the following script tag on any authorized website.</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;//api.grocerywebsite.com/front_end_framework/render_assets&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-</code></pre></div><p>This script will look at the domain name of the page it&rsquo;s placed on to determine which retailer site is being used. This will include all the CSS and JavaScript required for the framework, including jQuery, Tether, Bootstrap, &amp; .</p>
-<h3 id="options">Options</h3>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>js</code></td>
-<td><code>true</code></td>
-<td>Set to <code>false</code> to exclude the JavaScript files.</td>
-</tr>
-<tr>
-<td><code>css</code></td>
-<td><code>true</code></td>
-<td>Set to <code>false</code> to exclude the Stylesheet files.</td>
-</tr>
-<tr>
-<td><code>analytics</code></td>
-<td><code>true</code></td>
-<td>Set to <code>false</code> to exclude analytics.</td>
-</tr>
-<tr>
-<td><code>retailer</code></td>
-<td><code>nil</code></td>
-<td>The <code>retailer_id</code> value. An integer assigned by Webstop.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="examples">Examples</h4>
-<p>The following examples illustrate the use of the options listed above.</p>
-<h5 id="basic-example">Basic Example</h5>
-<p>Using this version will render all the CSS &amp; JavaScript for a retailer&rsquo;s site.</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;//api.grocerywebsite.com/front_end_framework/render_assets&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-</code></pre></div><p class="alert alert-warning" role="alert">
-  <strong>Heads Up!</strong> In the basic example above the Webstop server will use the domain name of the page requesting the script to determine which retailer's files to return. If the domain is not setup on Webstop's servers it will fall back to the base framework without any of the retailer's settings, customizations, branding, or theme elements. Use the Retailer ID example below for development environments or for other domains not registered in Webstop's system.
-</p>
-<h5 id="development-example">Development Example</h5>
-<p>Use this version for development environments (e.g. <code>http://localhost</code>), or other times when the domain name isn&rsquo;t associated with the retailer in Webstop&rsquo;s system. Also, when in non-production environments you&rsquo;ll want to turn off analytics.</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;//api.grocerywebsite.com/front_end_framework/render_assets?retailer=767&amp;analytics=false&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-</code></pre></div><p class="alert alert-success" role="alert">
-  <strong>Tip!</strong> There's no down side to including the retailer ID parameter at all times and in all environments.
-</p>
-<h2 id="starter-template">Starter template</h2>
-<p>Be sure to have your pages set up with the latest design and development standards. That means:</p>
-<ul>
-<li>Using an HTML5 doctype</li>
-<li>Forcing Internet Explorer to use its latest rendering mode (<a href="http://stackoverflow.com/q/6771258">read more</a>)</li>
-<li>And, utilizing the viewport meta tag.</li>
-</ul>
-<p>Put it all together and your pages should look like this:</p>
-<p>{% highlight html %}</p>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags always come first -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-<pre><code>&lt;!-- Webstop CSS --&gt;
-&lt;script src=&quot;//api.grocerywebsite.com/front_end_framework/render_assets?js=false&quot;&gt;&lt;/script&gt;
-&lt;!-- Your custom CSS goes here --&gt;
-</code></pre>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-<pre><code>&lt;!-- Webstop JavaScript --&gt;
-&lt;!-- This will include jQuery, Tether, Bootstrap JS, &amp; Grocery Modules JS. --&gt;
-&lt;script src=&quot;//api.grocerywebsite.com/front_end_framework/render_assets?css=false&quot;&gt;&lt;/script&gt;
-&lt;!-- Your custom JS goes here --&gt;
-</code></pre>
-  </body>
-</html>
-{% endhighlight %}
-<p>That&rsquo;s all you need for overall page requirements. Visit the [Layout docs]({{ site.baseurl }}/layout/overview) to start laying out your site&rsquo;s content and components.</p>
-<h2 id="important-globals">Important globals</h2>
-<p>The framework employs a handful of important global styles and settings that you&rsquo;ll need to be aware of when using it, all of which are almost exclusively geared towards the <em>normalization</em> of cross browser styles. Let&rsquo;s dive in.</p>
-<h3 id="html5-doctype">HTML5 doctype</h3>
-<p>The framework requires the use of the HTML5 doctype. Without it, you&rsquo;ll see some funky incomplete styling, but including it shouldn&rsquo;t cause any considerable hiccups.</p>
-<p>{% highlight html %}</p>
-<!DOCTYPE html>
-<html lang="en">
-  ...
-</html>
-{% endhighlight %}
-<h3 id="responsive-meta-tag">Responsive meta tag</h3>
-<p>The framework is developed <em>mobile-first</em> utilizing <em>responsive design</em>, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, <strong>add the responsive viewport meta tag</strong> to your <code>&lt;head&gt;</code>.</p>
-<p>{% highlight html %}</p>
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-{% endhighlight %}
-<p>You can see an example of this in action in the <a href="#starter-template">starter template</a>.</p>
-<h3 id="box-sizing">Box-sizing</h3>
-<p>For more straightforward sizing in CSS, we switch the global <code>box-sizing</code> value from <code>content-box</code> to <code>border-box</code>. This ensures <code>padding</code> does not affect the final computed width of an element, but it can cause problems with some third party software like Google Maps and Google Custom Search Engine.</p>
-<p>On the rare occasion you need to override it, use something like the following:</p>
-<p>{% highlight scss %}
-.selector-for-some-widget {
--webkit-box-sizing: content-box;
--moz-box-sizing: content-box;
-box-sizing: content-box;
-}
-{% endhighlight %}</p>
-<p>With the above snippet, nested elements—including generated content via <code>:before</code> and <code>:after</code>—will all inherit the specified <code>box-sizing</code> for that <code>.selector-for-some-widget</code>.</p>
-<p>Learn more about <a href="https://css-tricks.com/box-sizing/">box model and sizing at CSS Tricks</a>.</p>
-<h3 id="reset-via-normalizecss--reboot">Reset via Normalize.css &amp; Reboot</h3>
-<p>For improved cross-browser rendering, we use <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> to correct small inconsistencies across browsers and devices. We further build on this with Bootstrap&rsquo;s, slightly more opinionated styles with [Reboot]({{ site.baseurl }}/content/reboot/).</p>
-<h2 id="support">Support</h2>
-<p class="alert alert-danger" role="alert">
-  <strong>TODO:</strong> Add Webstop support & contact information here
-</p>
-<hr>
-<p>Welcome to the WSG!</p>
-<p class="alert alert-info">
-<strong>Attention Webstop Staff:</strong> Webstop's front-end framework is already installed inside the Core-Rails, Core-Ember, & Core-Lasso apps; it is so comes pre-installed in all retailer custom Rails apps. <em>The following Installation notes are for 3rd party vendors only.</em>
-</p>
-<p>To install the WSG use one of the following methods.</p>
-<h3 id="ruby-gem-installation">Ruby Gem Installation</h3>
-<p><code>command to install</code></p>
-<h3 id="node-module-installation">Node Module Installation</h3>
-<p><code>command to install</code></p>
-<h3 id="bower-component-installation">Bower Component Installation</h3>
-<p><code>command to install</code></p>
+    <p>These utility classes can be applied to items with display block and other similar box elements.</p>
+<h2 id="examples">Examples</h2>
+<h3 id="box-center-example">Box Center Example</h3>
+<p>Use the <code>.box-center</code> class to center your boxes. Here we demonstrate it applied to a card. You can alternatively use the
+Bootstrap utility class <code>.mx-auto</code> to product the same effect.</p>
+<div class="my-3 p-3 example">
+<div class="card box-center max-width-320">
+  <div class="card-body">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card box-center max-width-320&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<blockquote>
+<p><em>Note:</em> If you want to center text use the Bootstrap utility <code>.text-center</code>.</p>
+</blockquote>
+<h3 id="box-stackable-example">Box Stackable Example</h3>
+<p>Use the <code>.box-stackable</code> class to give your boxes a nice bottom margin so they don&rsquo;t butt against each other when stacked.
+Here we demonstrate it applied to a card.</p>
+<div class="my-3 p-3 example">
+<div class="card box-stackable">
+  <div class="card-body">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+</div>
+<div class="card box-stackable">
+  <div class="card-body">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card box-stackable&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card box-stackable&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="change-notes">Change Notes</h2>
+<h3 id="box-shadow">Box Shadow</h3>
+<p>Previous iterations of Core Styles had classes for box shadows, box level shadows were added to Bootstrap with version 5,
+so we no longer provide <code>.box-shadow</code> or <code>.card-shadowed</code> classes.</p>
+<p>Documentation can be found here: <a href="https://getbootstrap.com/docs/5.1/utilities/shadows/">Bootstrap Shadows</a></p>
+<h3 id="box-readable">Box Readable</h3>
+<p>Previous iterations of Core Styles had classes for readable width elements here, the <code>.readable</code> class has been added to
+the max-width section, so we no longer provide <code>.box-readable</code> or <code>.card-readable</code> classes.</p>
+<p>Documentation can be found here: <a href="/docs/3.0/utilities/max-width#readable-example">Readable at Max Width Utilities</a></p>
 
   </main>
+  
+    <aside class="admin-sidebar">
+      <h4 class="border-bottom">On this page</h4>
+      <div class="wsg-table-of-contents">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#examples">Examples</a>
+      <ul>
+        <li><a href="#box-center-example">Box Center Example</a></li>
+        <li><a href="#box-stackable-example">Box Stackable Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#change-notes">Change Notes</a>
+      <ul>
+        <li><a href="#box-shadow">Box Shadow</a></li>
+        <li><a href="#box-readable">Box Readable</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </aside>
   
   <footer class="admin-footer docs-footer" role="contentinfo">
     
@@ -732,7 +671,7 @@ box-sizing: content-box;
             
         
         
-            <li class="breadcrumb-item"><a href="/docs/3.0/components/">Components</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0/utilities/">Utilities</a></li>
         
     
         
@@ -777,7 +716,7 @@ box-sizing: content-box;
             
         
         
-            <li class="breadcrumb-item"><a href="/docs/3.0/components/grocery/">Grocery</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0/utilities/box/">Box</a></li>
         
     
         
@@ -819,116 +758,6 @@ box-sizing: content-box;
         
             
         
-            
-        
-            
-        
-            
-        
-        
-            <li class="breadcrumb-item"><a href="/docs/3.0/components/grocery/shopping-lists/">Shopping lists</a></li>
-        
-    
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-        
-            
-        
-            
-        
-        
-            <li class="breadcrumb-item"><a href="/docs/3.0/components/grocery/shopping-lists/recipes/">Recipes</a></li>
-        
-    
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
             
         
             

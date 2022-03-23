@@ -1,0 +1,12 @@
+// Tables
+
+.wsg-table, table {
+  @extend .table;
+  @extend .table-bordered;
+  th, td {
+    font-family: $wsg-sans-serif;
+    code {
+      white-space: nowrap;
+    }
+  }
+}

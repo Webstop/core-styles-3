@@ -44,7 +44,7 @@ basic approaches for handling text at various responsive sizes.
 
 Here you can see how the banner creates new section headings within a group of circular items.
 
-<div class="bd-example">
+<div class="wsg-example">
   <div class="row">
     {% include examples/circular-items/_circular-item-banner-example.html %}
     {% include examples/circular-items/_circular-item-standard-promotion-example.html %}
