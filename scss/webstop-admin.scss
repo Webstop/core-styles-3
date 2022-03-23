@@ -4,8 +4,10 @@
 // retailer_:id.css from the core-customizations app. This file won't contain any retailer specific styling.
 
 @import
+'webstop-admin-variables',
 '../node_modules/bootstrap/scss/bootstrap',
-'../scss/core-styles'
+'core-styles',
+'webstop-admin-typography'
 ;
 
 
