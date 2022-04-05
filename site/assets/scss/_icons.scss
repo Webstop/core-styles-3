@@ -1,23 +1,29 @@
- /** Core Icons Grid**/
+/** Core Icons Grid**/
 
- .wsg-icon {
-   min-width: 265px;
-   background-clip: border-box;
-   border-radius: 1rem;
-   border: 0.5px solid #eee!important;
-   background: #ffffff;
-   box-shadow: 0 2px 4px rgba(70, 70, 70, 0.5);
-   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-   &:hover {
-     transition: all 0.5s ease-out;
-     box-shadow: 0px 3px 5px rgba(38, 38, 38, 0.2);
-     border: 1px solid rgb(224, 224, 224);
-     background-color: white;
-     transform: scale(1.02);
-     transform-origin: 50% 50%;
-   }
- }
- .icon-code-snip {
+//.wsg-icon {
+//  min-width: 265px;
+//  background-clip: border-box;
+//  border-radius: 1rem;
+//  border: 0.5px solid #eee!important;
+//  background: #ffffff;
+//  box-shadow: 0 2px 4px rgba(70, 70, 70, 0.5);
+//  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+//  &:hover {
+//    transition: all 0.5s ease-out;
+//    box-shadow: 0px 3px 5px rgba(38, 38, 38, 0.2);
+//    border: 1px solid rgb(224, 224, 224);
+//    background-color: white;
+//    transform: scale(1.02);
+//    transform-origin: 50% 50%;
+//  }
+//}
+
+.wsg-icon:hover {
+  transition: all 0.5s ease-out;
+  box-shadow: 0px 3px 5px rgba(38, 38, 38, 0.2);
+}
+
+.icon-code-snip {
   font-size: 10px;
 }
 

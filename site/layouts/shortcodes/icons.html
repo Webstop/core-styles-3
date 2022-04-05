@@ -3,7 +3,7 @@
 <section class="wsg-icons card-deck">
   {{ range .Site.Data.icons }}
     {{ if strings.Contains .category $category }}
-      <div class="wsg-icon card max-width-360 mb-4" style="min-width: 265px;">
+      <div class="wsg-icon card max-width-360 min-width-270 mb-4 shadow">
         <!-- This hidden element is hear to allow search on terms beyond the text displayed in the card. -->
         <span class="visually-hidden">{{ .search }}</span>
         <div class="card-body text-center">
@@ -34,19 +34,19 @@
 
         </div>
         <div class="card-footer wsg-card-footer">
-          <div class="btn btn-outline-primary wsg-btn-outline-primary d-block" data-bs-toggle="modal" data-bs-target="#{{ .icon }}-modal">
+          <div class="btn btn-outline-primary wsg-btn-outline-primary d-block mb-3" data-bs-toggle="modal" data-bs-target="#{{ .icon }}-modal">
             View {{ if .note }} Notes &amp; {{ end }} Examples
           </div>
           <div class="row gx-2">
             <div class="col">
               <div><!-- this div needs to be here for the copy script to work -->
-                <p class="btn-clipboard btn btn-primary d-block mb-0 text-nowrap" data-clipboard-text="&#x3C;i class=&#x22;{{ .style }} {{ .icon }}&#x22;&#x3E;&#x3C;/i&#x3E;" data-bs-original-title="Copy HTML Tag to Clipboard">Copy HTML</p>
+                <p class="btn btn-primary d-block mb-0 text-nowrap" data-clipboard-text="&#x3C;i class=&#x22;{{ .style }} {{ .icon }}&#x22;&#x3E;&#x3C;/i&#x3E;" data-bs-original-title="Copy HTML Tag to Clipboard">Copy HTML</p>
               </div>
               <span class="icon-example-clipboard-code visually-hidden">&#x3C;i class=&#x22;{{ .style }} {{ .icon }}&#x22;&#x3E;&#x3C;/i&#x3E;</span>
             </div>
             <div class="col">
               <div><!-- this div needs to be here for the copy script to work -->
-                <p class="btn-clipboard btn btn-primary d-block mb-0 text-nowrap" data-clipboard-text="{{ .style }} {{ .icon }}" data-bs-original-title="Copy CSS Class to Clipboard">Copy CSS</p>
+                <p class="btn btn-primary d-block mb-0 text-nowrap" data-clipboard-text="{{ .style }} {{ .icon }}" data-bs-original-title="Copy CSS Class to Clipboard">Copy CSS</p>
               </div>
               <span class="icon-example-clipboard-code visually-hidden">{{ .style }} {{ .icon }}</span>
             </div>
@@ -60,10 +60,8 @@
 
 {{ range .Site.Data.icons }}
   {{ if strings.Contains .category $category }}
-<!--    {{ if .note }}-->
-      <!-- Note Modal -->
       <div class="modal fade" id="{{ .icon }}-modal" tabindex="-1" aria-labelledby="{{ .icon }}-modal-label" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered ">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="{{ .icon }}-modal-label">{{ .name }}</h5>
@@ -76,6 +74,7 @@
                 <p><code class="icon-example-code code">&#x3C;i class=&#x22;{{ .style }} {{ .icon }}&#x22;&#x3E;&#x3C;/i&#x3E;</code></p>
                 <p><code class="icon-example-code code">{{ .style }} {{ .icon }}</code></p>
               </div>
+              {{ if .note }}<p><strong>{{ .note }}</strong></p>{{ end }}
               <h5 class="mt-4">Examples</h5>
               <div class="row">
                 <div class="col">
@@ -147,24 +146,16 @@
                   </p>
                 </div>
               </div>
-              <p><strong>{{ .note }}</strong></p>
               <p>Search Terms: <small class="text-muted">{{ .search }}</small></p>
               <p>Categories: <small class="text-muted text-uppercase">{{ .category }}</small></p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
-                <i class="fa-duotone fa-circle-xmark"></i> Close duotone
-              </button>
-              <button type="button" class="btn btn-primary ms-3" data-bs-dismiss="modal">
-                <i class="fa-solid fa-circle-xmark"></i> Close solid
-              </button>
-              <button type="button" class="btn btn-primary ms-3" data-bs-dismiss="modal">
-                <i class="fa-regular fa-circle-xmark"></i> Close regular
+              <button type="button" class="btn btn-outline-primary ms-3" data-bs-dismiss="modal">
+                <i class="fa-solid fa-circle-xmark"></i> Close
               </button>
             </div>
           </div>
         </div>
       </div>
-<!--    {{ end }}-->
   {{ end }}
 {{ end }}

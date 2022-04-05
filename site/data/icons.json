@@ -1,7 +1,7 @@
 [
   {
     "name": "Account",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-user-circle",
     "search": "consumer account profile user person people",
     "category": "admin, UI",
@@ -9,7 +9,7 @@
   },
   {
     "name": "Shopping List",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-list-check",
     "search": "shopping list ",
     "category": "webstop",
@@ -17,7 +17,7 @@
   },
   {
     "name": "Coffee",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-coffee-pot",
     "search": "coffee espresso",
     "category": "food",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Email",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-envelope",
     "search": "email e-mail envelope",
     "category": "admin",
@@ -81,7 +81,7 @@
   },
   {
     "name": "Help",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-question-circle",
     "search": "help question ?",
     "category": "symbols, popular",
@@ -89,7 +89,7 @@
   },
   {
     "name": "Info",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-info-circle",
     "search": "Info",
     "category": "UI, popular",
@@ -97,7 +97,7 @@
   },
   {
     "name": "Tags",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-tags",
     "search": "tags coupon sale price",
     "category": "retailer",
@@ -105,7 +105,7 @@
   },
   {
     "name": "Tag",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-tag",
     "search": "tag coupon sale price",
     "category": "retailer",
@@ -113,7 +113,7 @@
   },
   {
     "name": "Phone",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-mobile-alt",
     "search": "phone contact call",
     "category": "devices",
@@ -121,7 +121,7 @@
   },
   {
     "name": "Sign In ",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-sign-in",
     "search": "sign in login",
     "category": "admin",
@@ -129,7 +129,7 @@
   },
   {
     "name": "Sign Out",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-sign-out",
     "search": "logout log out sign",
     "category": "admin",
@@ -137,7 +137,7 @@
   },
   {
     "name": "Newsletter",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-paper-plane",
     "search": "newsletter newspaper emails",
     "category": "admin",
@@ -145,7 +145,7 @@
   },
   {
     "name": "Pharmacy",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-prescription-bottle-alt",
     "search": "pharmacy medicine bottle prescription medication",
     "category": "department",
@@ -153,7 +153,7 @@
   },
   {
     "name": "Search Location",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-search-location",
     "search": "search location find lookup",
     "category": "UI",
@@ -161,7 +161,7 @@
   },
   {
     "name": "Recipe",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-oven",
     "search": "Recipe",
     "category": "webstop",
@@ -169,7 +169,7 @@
   },
   {
     "name": "Weekly Ad",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-message-dollar",
     "search": "weekly ad circular digital",
     "category": "webstop",
@@ -177,7 +177,7 @@
   },
   {
     "name": "Calendar",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-calendar-alt",
     "search": "calendar calander date month",
     "category": "date/time",
@@ -185,7 +185,7 @@
   },
   {
     "name": "Coupon",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-ticket",
     "search": "coupons",
     "category": "webstop",
@@ -193,7 +193,7 @@
   },
   {
     "name": "Produce",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-carrot",
     "search": "produce carrot vegetables fruit fresh veggies",
     "category": "food",
@@ -201,7 +201,7 @@
   },
   {
     "name": "Meat",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-meat",
     "search": "meat beef pork poultry chicken",
     "category": "food",
@@ -209,7 +209,7 @@
   },
   {
     "name": "Dairy",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-cow",
     "search": "dairy milk cow",
     "category": "food",
@@ -217,7 +217,7 @@
   },
   {
     "name": "Vegan",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-leaf",
     "search": "vegan",
     "category": "symbols",
@@ -225,7 +225,7 @@
   },
   {
     "name": "Vegetarian",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-salad",
     "search": "vegetarian",
     "category": "symbols",
@@ -233,23 +233,15 @@
   },
   {
     "name": "Contact",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-paper-plane",
     "search": "contact",
     "category": "admin",
     "note": ""
   },
   {
-    "name": "Edit",
-    "style": "fa-duotone",
-    "icon": "fa-edit",
-    "search": "edit pencil",
-    "category": "UI, popular",
-    "note": ""
-  },
-  {
     "name": "Share",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-arrow-up-from-square",
     "search": "share social",
     "category": "UI, popular",
@@ -257,7 +249,7 @@
   },
   {
     "name": "Printable",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-print",
     "search": "print printable printer",
     "category": "admin",
@@ -265,7 +257,7 @@
   },
   {
     "name": "Employee",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-person-dolly",
     "search": "employee worker staff",
     "category": "retailer",
@@ -273,7 +265,7 @@
   },
   {
     "name": "Bakery",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-pie",
     "search": "bakery pie sweets",
     "category": "food",
@@ -281,7 +273,7 @@
   },
   {
     "name": "Dessert",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-ice-cream",
     "search": "dessert ice cream sweets icecream",
     "category": "food",
@@ -321,7 +313,7 @@
   },
   {
     "name": "Clock",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-clock",
     "search": "clock time hour",
     "category": "date/time",
@@ -329,7 +321,7 @@
   },
   {
     "name": "Healthy",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-heart",
     "search": "healthy heart love favorite favourite",
     "category": "symbols",
@@ -337,7 +329,7 @@
   },
   {
     "name": "Money",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-money-bill-alt",
     "search": "money",
     "category": "retailer",
@@ -345,7 +337,7 @@
   },
   {
     "name": "Search",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-search",
     "search": "search magnifying inspect filter look up lookup find",
     "category": "UI, popular",
@@ -353,7 +345,7 @@
   },
   {
     "name": "Storefront",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-store",
     "search": "store grocery business shop storefront retail",
     "category": "retailer",
@@ -361,7 +353,7 @@
   },
   {
     "name": "Seafood",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-fish",
     "search": "fish seafood",
     "category": "food",
@@ -369,7 +361,7 @@
   },
   {
     "name": "Frozen",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-temperature-frigid",
     "search": "frozen cold freezer",
     "category": "food",
@@ -377,7 +369,7 @@
   },
   {
     "name": "Alcohol",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-glass-cheers",
     "search": "alcohol wine whiskey beer drinks spirits drinking drinks",
     "category": "food",
@@ -385,7 +377,7 @@
   },
   {
     "name": "Beauty",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-pump-soap",
     "search": "beauty toiletries soap clean cosmetics makeup",
     "category": "department",
@@ -393,7 +385,7 @@
   },
   {
     "name": "Catering",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-concierge-bell",
     "search": "catering",
     "category": "service",
@@ -401,7 +393,7 @@
   },
   {
     "name": "Delivery",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-truck-container",
     "search": "delivery truck",
     "category": "service",
@@ -409,7 +401,7 @@
   },
   {
     "name": "Curbside",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-truck-loading",
     "search": "curbside pickup truck",
     "category": "service",
@@ -417,7 +409,7 @@
   },
   {
     "name": "Gifts",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-gifts",
     "search": "gifts presents charity",
     "category": "retailer",
@@ -425,7 +417,7 @@
   },
   {
     "name": "Gift Card",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-gift-card",
     "search": "gifts giftcards card",
     "category": "retailer",
@@ -433,7 +425,7 @@
   },
   {
     "name": "Floral",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-flower-daffodil",
     "search": "floral flourist flowers",
     "category": "department",
@@ -441,7 +433,7 @@
   },
   {
     "name": "Sale",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-badge-dollar",
     "search": "sale",
     "category": "retailer",
@@ -449,7 +441,7 @@
   },
   {
     "name": "Community",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-users",
     "search": "community people locals neighborhood neighbourhood",
     "category": "retailer",
@@ -457,7 +449,7 @@
   },
   {
     "name": "Charity",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-hand-holding-heart",
     "search": "charity gifts giving hands heart love care",
     "category": "retailer",
@@ -465,7 +457,7 @@
   },
   {
     "name": "QR Code",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-qrcode",
     "search": "QR scan codes",
     "category": "admin",
@@ -473,7 +465,7 @@
   },
   {
     "name": "Barcode Scan",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-barcode-scan",
     "search": "barcodes scan codes bar code scannable",
     "category": "admin",
@@ -489,7 +481,7 @@
   },
   {
     "name": "code",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-code",
     "search": "code programming language",
     "category": "admin",
@@ -497,7 +489,7 @@
   },
   {
     "name": "database",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-database",
     "search": "database",
     "category": "admin",
@@ -505,7 +497,7 @@
   },
   {
     "name": "debug",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-debug",
     "search": "bugs debug fix glitch bug bugfix",
     "category": "admin",
@@ -529,7 +521,7 @@
   },
   {
     "name": "duck",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-duck",
     "search": "duck cyberduck FTP SFTP servers",
     "category": "brand",
@@ -625,7 +617,7 @@
   },
   {
     "name": "laptop",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-laptop",
     "search": "laptop device desktop",
     "category": "devices",
@@ -633,7 +625,7 @@
   },
   {
     "name": "laptop code",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-laptop-code",
     "search": "laptop code",
     "category": "devices",
@@ -641,7 +633,7 @@
   },
   {
     "name": "laptop-medical",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-laptop-medical",
     "search": "laptop medical",
     "category": "devices",
@@ -705,7 +697,7 @@
   },
   {
     "name": "Rocket Launch",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-rocket-launch",
     "search": "rocket launch ",
     "category": "admin",
@@ -713,7 +705,7 @@
   },
   {
     "name": "Save",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-save",
     "search": "save",
     "category": "UI",
@@ -849,7 +841,7 @@
   },
   {
     "name": "External Link",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-external-link",
     "search": "external link offsite hyperlink",
     "category": "UI",
@@ -857,7 +849,7 @@
   },
   {
     "name": "Cloud",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-cloud",
     "search": "cloud internet",
     "category": "admin, popular",
@@ -865,7 +857,7 @@
   },
   {
     "name": "Cloud Download",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-cloud-download",
     "search": "cloud internet download",
     "category": "admin, popular",
@@ -873,7 +865,7 @@
   },
   {
     "name": "Cloud Upload",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-cloud-upload",
     "search": "cloud internet upload",
     "category": "admin, popular",
@@ -881,7 +873,7 @@
   },
   {
     "name": "Settings",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-cogs",
     "search": "settings gears cogs config",
     "category": "UI",
@@ -889,7 +881,7 @@
   },
   {
     "name": " At",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-at",
     "search": "at ampersand tag @",
     "category": "symbols",
@@ -897,7 +889,7 @@
   },
   {
     "name": "Bookmark",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-bookmark",
     "search": "bookmark favorite favourite",
     "category": "UI",
@@ -905,7 +897,7 @@
   },
   {
     "name": "Bug",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-bug",
     "search": "bug glitch error gremlin issue",
     "category": "admin",
@@ -913,7 +905,7 @@
   },
   {
     "name": "Camera",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-camera",
     "search": "camera photo picture images media",
     "category": "admin",
@@ -921,7 +913,7 @@
   },
   {
     "name": "Comment",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-comment",
     "search": "comment",
     "category": "admin",
@@ -929,7 +921,7 @@
   },
   {
     "name": "Cut",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-cut",
     "search": "scissors cut snip",
     "category": "UI",
@@ -945,7 +937,7 @@
   },
   {
     "name": "Edit",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-edit",
     "search": "edit",
     "category": "UI",
@@ -969,7 +961,7 @@
   },
   {
     "name": "Envelope Open",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-envelope-open-text",
     "search": "envelope mail message opened letter newsletter",
     "category": "admin",
@@ -977,7 +969,7 @@
   },
   {
     "name": "Warning Caution Error",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-exclamation-triangle",
     "search": "warning caution error bug issue 404 glitch notification exclamation mark hazard",
     "category": "symbols",
@@ -985,7 +977,7 @@
   },
   {
     "name": "File",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-file",
     "search": "files",
     "category": "files",
@@ -993,7 +985,7 @@
   },
   {
     "name": "File Alt",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-file-alt",
     "search": "files",
     "category": "files",
@@ -1001,7 +993,7 @@
   },
   {
     "name": "File Chart",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-file-chart-line",
     "search": "files charts",
     "category": "files",
@@ -1009,7 +1001,7 @@
   },
   {
     "name": "File Check",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-file-check",
     "search": "files check correct",
     "category": "files",
@@ -1017,7 +1009,7 @@
   },
   {
     "name": "File Code",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-file-code",
     "search": "code coded files",
     "category": "files",
@@ -1025,7 +1017,7 @@
   },
   {
     "name": "File CSV",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-file-csv",
     "search": "csv spreadsheet files db database numbers excel",
     "category": "files",
@@ -1033,7 +1025,7 @@
   },
   {
     "name": "File Download",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-file-download",
     "search": "download downloadable files",
     "category": "files",
@@ -1041,7 +1033,7 @@
   },
   {
     "name": "File Edit",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-file-edit",
     "search": "edit editable files",
     "category": "files",
@@ -1049,7 +1041,7 @@
   },
   {
     "name": "File Image",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-file-image",
     "search": "image media files",
     "category": "files",
@@ -1057,7 +1049,7 @@
   },
   {
     "name": "Add File",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-file-plus",
     "search": "add addable files",
     "category": "files",
@@ -1065,7 +1057,7 @@
   },
   {
     "name": "Delete File",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-file-minus",
     "search": "delete deletable remove deleatable files",
     "category": "files",
@@ -1073,7 +1065,7 @@
   },
   {
     "name": "File User",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-file-user",
     "search": "user files",
     "category": "files",
@@ -1081,7 +1073,7 @@
   },
   {
     "name": "Folder",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-folder",
     "search": "folders",
     "category": "files",
@@ -1089,7 +1081,7 @@
   },
   {
     "name": "Folders",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-folders",
     "search": "folders",
     "category": "files",
@@ -1097,7 +1089,7 @@
   },
   {
     "name": "Open Folder",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-folder-open",
     "search": "open folders",
     "category": "files",
@@ -1105,7 +1097,7 @@
   },
   {
     "name": "Add Folder",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-folder-plus",
     "search": "add folders",
     "category": "files",
@@ -1113,7 +1105,7 @@
   },
   {
     "name": "Delete Folder",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-folder-minus",
     "search": "delete remove folders",
     "category": "files",
@@ -1121,7 +1113,7 @@
   },
   {
     "name": "Folder Tree",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-folder-tree",
     "search": "folder tree folders structure filepath path files directory organize",
     "category": "files",
@@ -1129,7 +1121,7 @@
   },
   {
     "name": "Grin",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-grin",
     "search": "grin smile smiley face emoji emote",
     "category": "symbols",
@@ -1137,7 +1129,7 @@
   },
   {
     "name": "Hourglass",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-hourglass",
     "search": "hourglass loading",
     "category": "UI",
@@ -1145,7 +1137,7 @@
   },
   {
     "name": "House",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-house",
     "search": "house home homepage",
     "category": "UI",
@@ -1153,7 +1145,7 @@
   },
   {
     "name": "User Home",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-house-user",
     "search": "user home",
     "category": "admin",
@@ -1161,7 +1153,7 @@
   },
   {
     "name": "ID Card",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-id-card",
     "search": "ID card license identification",
     "category": "admin",
@@ -1169,7 +1161,7 @@
   },
   {
     "name": "Image",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-image",
     "search": "img picture image photo",
     "category": "media",
@@ -1177,7 +1169,7 @@
   },
   {
     "name": "Images",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-images",
     "search": "images pictures photos",
     "category": "media",
@@ -1185,7 +1177,7 @@
   },
   {
     "name": "Info",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-info-circle",
     "search": "i info about information",
     "category": "symbols",
@@ -1193,7 +1185,7 @@
   },
   {
     "name": "Lock",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-lock",
     "search": "lock locked restricted",
     "category": "UI",
@@ -1201,7 +1193,7 @@
   },
   {
     "name": "Unlock",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-unlock",
     "search": "unlock unlocked unrestricted",
     "category": "UI",
@@ -1209,7 +1201,7 @@
   },
   {
     "name": "Map Marked",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-map-marked-alt",
     "search": "marked map location",
     "category": "UI",
@@ -1217,7 +1209,7 @@
   },
   {
     "name": "Map Marker",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-map-marker-alt",
     "search": "marker map location",
     "category": "UI",
@@ -1225,7 +1217,7 @@
   },
   {
     "name": "Delete",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-minus-circle",
     "search": "delete remove",
     "category": "UI",
@@ -1233,7 +1225,7 @@
   },
   {
     "name": "Pointer",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-mouse-pointer",
     "search": "mouse pointer cursor",
     "category": "UI",
@@ -1241,7 +1233,7 @@
   },
   {
     "name": "TV",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-tv",
     "search": "television tv t.v. movie video device",
     "category": "devices",
@@ -1249,7 +1241,7 @@
   },
   {
     "name": "Phone",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-phone",
     "search": "phone call contact telephone",
     "category": "devices",
@@ -1257,7 +1249,7 @@
   },
   {
     "name": "Phone Square",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-phone-square",
     "search": "phone call contact telephone",
     "category": "devices",
@@ -1273,7 +1265,7 @@
   },
   {
     "name": "Prescription",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-prescription",
     "search": "rx prescription medication medicine",
     "category": "retailer",
@@ -1281,7 +1273,7 @@
   },
   {
     "name": "Receipt",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-receipt",
     "search": "receipt",
     "category": "retailer",
@@ -1289,7 +1281,7 @@
   },
   {
     "name": "Recycle",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-recycle",
     "search": "recycle trash",
     "category": "symbols",
@@ -1297,7 +1289,7 @@
   },
   {
     "name": "RSS",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-rss-square",
     "search": "RSS feed",
     "category": "admin",
@@ -1305,7 +1297,7 @@
   },
   {
     "name": "Shield",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-shield",
     "search": "shield block",
     "category": "admin",
@@ -1313,7 +1305,7 @@
   },
   {
     "name": "Shopping Cart",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-shopping-cart",
     "search": "shopping cart grocery",
     "category": "retailer",
@@ -1321,7 +1313,7 @@
   },
   {
     "name": "Shopping Bag",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-shopping-bag",
     "search": "shopping bag grocery",
     "category": "retailer",
@@ -1329,7 +1321,7 @@
   },
   {
     "name": "Shopping Basket",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-shopping-basket",
     "search": "shopping basket grocery",
     "category": "retailer",
@@ -1337,7 +1329,7 @@
   },
   {
     "name": "Sort",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-sort",
     "search": "sort sortable filter arrange",
     "category": "UI",
@@ -1345,7 +1337,7 @@
   },
   {
     "name": "Sort Down",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-sort-down",
     "search": "sort sortable filter down descending arrange",
     "category": "UI",
@@ -1353,7 +1345,7 @@
   },
   {
     "name": "Sort Up",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-sort-up",
     "search": "sort sortable filter up ascending arrange",
     "category": "UI",
@@ -1369,7 +1361,7 @@
   },
   {
     "name": "Half Star",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-star-half",
     "search": "half star",
     "category": "symbols",
@@ -1377,7 +1369,7 @@
   },
   {
     "name": "Thumbs Down",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-thumbs-down",
     "search": "thumbs down dislike bad negative poor",
     "category": "UI",
@@ -1385,7 +1377,7 @@
   },
   {
     "name": "Thumbs Up",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-thumbs-up",
     "search": "thumbs up like good positive",
     "category": "UI",
@@ -1393,7 +1385,7 @@
   },
   {
     "name": "Ticket",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-ticket",
     "search": "ticket",
     "category": "admin",
@@ -1401,7 +1393,7 @@
   },
   {
     "name": "Close Circle",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-circle-xmark",
     "search": "close x end escape exit stop end cancel",
     "category": "UI",
@@ -1409,7 +1401,7 @@
   },
   {
     "name": "Toggle On",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-toggle-on",
     "search": "toggle on turn on activate enable",
     "category": "UI",
@@ -1417,7 +1409,7 @@
   },
   {
     "name": "Toggle Off",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-toggle-off",
     "search": "toggle off turn off deactivate disable",
     "category": "UI",
@@ -1433,7 +1425,7 @@
   },
   {
     "name": "Wallet",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-wallet",
     "search": "wallet pay paid money",
     "category": "retailer",
@@ -1441,7 +1433,7 @@
   },
   {
     "name": "Phone Laptop",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-phone-laptop",
     "search": "phone laptop responsive devices mobile desktop",
     "category": "devices",
@@ -1449,7 +1441,7 @@
   },
   {
     "name": "Tablet",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-tablet-alt",
     "search": "tablet device mobile ipad",
     "category": "devices",
@@ -1457,7 +1449,7 @@
   },
   {
     "name": "Landscape",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-rectangle-landscape",
     "search": "landscape orientation horizontal",
     "category": "devices",
@@ -1465,7 +1457,7 @@
   },
   {
     "name": "Portrait",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-rectangle-portrait",
     "search": "portrait orientation vertical",
     "category": "devices",
@@ -1473,18 +1465,163 @@
   },
   {
     "name": "Watch Calculator",
-    "style": "fa-duotone",
+    "style": "fa-solid",
     "icon": "fa-watch-calculator",
     "search": "calculator watch",
     "category": "devices",
     "note": ""
   },
   {
-    "name": "Add Create",
-    "style": "fa-duotone",
-    "icon": "fa-plus-circle",
-    "search": "add create new plus",
-    "category": "admin, popular",
-    "note": ""
+    "name": "Add or Create",
+    "style": "fak",
+    "icon": "fa-add-circle",
+    "search": "add create new plus expand circle solid",
+    "category": "admin, UI, popular, CRUD, CRUD-preferred",
+    "note": "Our preferred icon for adding a new record in CRUD style operations."
+  },
+  {
+    "name": "Alternative for Add",
+    "style": "fak",
+    "icon": "fa-add-hexagon",
+    "search": "add create new plus expand solid",
+    "category": "admin, UI, CRUD, CRUD-alt",
+    "note": "An alternative icon for adding a new record in CRUD style operations. We recommend using the preferred icon `fa-add-circle`."
+  },
+  {
+    "name": "Alternative for Add",
+    "style": "fak",
+    "icon": "fa-add-octagon",
+    "search": "add create new plus expand solid",
+    "category": "admin, UI, CRUD, CRUD-alt",
+    "note": "An alternative icon for adding a new record in CRUD style operations. We recommend using the preferred icon `fa-add-circle`."
+  },
+  {
+    "name": "Alternative for Add",
+    "style": "fak",
+    "icon": "fa-add-square",
+    "search": "add create new plus expand solid",
+    "category": "admin, UI, CRUD, CRUD-alt",
+    "note": "An alternative icon for adding a new record in CRUD style operations. We recommend using the preferred icon `fa-add-circle`."
+  },
+  {
+    "name": "Alternative for Add",
+    "style": "fak",
+    "icon": "fa-add",
+    "search": "add create new plus expand solid",
+    "category": "admin, UI, CRUD, CRUD-alt",
+    "note": "An alternative icon for adding a new record in CRUD style operations. We recommend using the preferred icon `fa-add-circle`."
+  },
+  {
+    "name": "Delete or Remove",
+    "style": "fak",
+    "icon": "fa-delete-circle",
+    "search": "delete remove end contract collapse destroy minus solid",
+    "category": "admin, UI, popular, CRUD, CRUD-preferred",
+    "note": "Our preferred icon for deleting a record in CRUD style operations."
+  },
+  {
+    "name": "Alternative for Delete",
+    "style": "fak",
+    "icon": "fa-delete-hexagon",
+    "search": "delete remove end contract collapse destroy minus solid",
+    "category": "admin, UI, CRUD, CRUD-alt",
+    "note": "An alternative icon for deleting a record in CRUD style operations. We recommend using the preferred icon `fa-delete-circle`."
+  },
+  {
+    "name": "Alternative for Delete",
+    "style": "fak",
+    "icon": "fa-delete-octagon",
+    "search": "delete remove end contract collapse destroy minus solid",
+    "category": "admin, UI, CRUD, CRUD-alt",
+    "note": "An alternative icon for deleting a record in CRUD style operations. We recommend using the preferred icon `fa-delete-circle`."
+  },
+  {
+    "name": "Alternative for Delete",
+    "style": "fak",
+    "icon": "fa-delete-square",
+    "search": "delete remove end contract collapse destroy minus solid",
+    "category": "admin, UI, CRUD, CRUD-alt",
+    "note": "An alternative icon for deleting a record in CRUD style operations. We recommend using the preferred icon `fa-delete-circle`."
+  },
+  {
+    "name": "Alternative for Delete",
+    "style": "fak",
+    "icon": "fa-delete",
+    "search": "delete remove end contract collapse destroy minus solid",
+    "category": "admin, UI, CRUD, CRUD-alt",
+    "note": "An alternative icon for deleting a record in CRUD style operations. We recommend using the preferred icon `fa-delete-circle`."
+  },
+  {
+    "name": "Edit or Update",
+    "style": "fa-solid",
+    "icon": "fa-edit",
+    "search": "edit pencil update modify",
+    "category": "admin, UI, popular, CRUD, CRUD-preferred",
+    "note": "Our preferred icon for editing an existing record in CRUD style operations."
+  },
+  {
+    "name": "View or Show",
+    "style": "fa-solid",
+    "icon": "fa-circle-chevron-right",
+    "search": "read show view display visit select go",
+    "category": "admin, UI, popular, CRUD, CRUD-preferred",
+    "note": "Our preferred icon for displaying an existing record in CRUD style operations."
+  },
+  {
+    "name": "Alternative for View",
+    "style": "fa-solid",
+    "icon": "fa-square-chevron-right",
+    "search": "read show view display visit select go",
+    "category": "admin, UI, CRUD, CRUD-alt",
+    "note": "An alternative icon for displaying a record in CRUD style operations. We recommend using the preferred icon `fa-circle-chevron-right`."
+  },
+  {
+    "name": "Alternative for View",
+    "style": "fa-solid",
+    "icon": "fa-chevron-right",
+    "search": "read show view display visit select go",
+    "category": "admin, UI",
+    "note": "An alternative icon for displaying a record in CRUD style operations. We recommend using the preferred icon `fa-circle-chevron-right`."
+  },
+  {
+    "name": "Cancel or Close",
+    "style": "fak",
+    "icon": "fa-cancel-circle",
+    "search": "cancel close end hide remove escape return undo",
+    "category": "admin, UI, popular",
+    "note": "Our preferred icon for adding a new record in CRUD style operations."
+  },
+  {
+    "name": "Alternative for Cancel",
+    "style": "fak",
+    "icon": "fa-cancel-hexagon",
+    "search": "cancel close end hide remove escape return undo",
+    "category": "admin, UI",
+    "note": "An alternative icon for canceling an action or closing a window. We recommend using the preferred icon `fa-cancel-circle`."
+  },
+  {
+    "name": "Alternative for Cancel",
+    "style": "fak",
+    "icon": "fa-cancel-octagon",
+    "search": "cancel close end hide remove escape return undo",
+    "category": "admin, UI",
+    "note": "An alternative icon for canceling an action or closing a window. We recommend using the preferred icon `fa-cancel-circle`."
+  },
+  {
+    "name": "Alternative for Cancel",
+    "style": "fak",
+    "icon": "fa-cancel-square",
+    "search": "cancel close end hide remove escape return undo",
+    "category": "admin, UI",
+    "note": "An alternative icon for canceling an action or closing a window. We recommend using the preferred icon `fa-cancel-circle`."
+  },
+  {
+    "name": "Alternative for Cancel",
+    "style": "fak",
+    "icon": "fa-cancel",
+    "search": "cancel close end hide remove escape return undo",
+    "category": "admin, UI",
+    "note": "An alternative icon for canceling an action or closing a window. We recommend using the preferred icon `fa-cancel-circle`."
   }
+
 ]

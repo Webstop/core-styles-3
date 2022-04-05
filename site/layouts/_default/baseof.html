@@ -19,7 +19,9 @@
     {{ end }}
 
   </section>
-    <script src="https://kit.fontawesome.com/42f15b97e3.js" crossorigin="anonymous"></script>
+{{ range .Site.Data.font_awesome_config }}
+    <script src="https://kit.fontawesome.com/{{ .kit_key }}.js" crossorigin="anonymous"></script>
+{{ end }}
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       crossorigin="anonymous"

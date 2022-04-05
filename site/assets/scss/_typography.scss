@@ -14,23 +14,24 @@ blockquote {
     font-family: $wsg-sans-serif;
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
+    margin-top: 2rem;
   }
-  h2 {
-    padding-top: 35px;
-    padding-bottom: 10px;
-  }
-
-  h3 {
-    padding-top: 25px;
-    padding-bottom: 10px;
-  }
-
-  p {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
+  //h2 {
+  //  padding-top: 35px;
+  //  padding-bottom: 10px;
+  //}
+  //
+  //h3 {
+  //  padding-top: 25px;
+  //  padding-bottom: 10px;
+  //}
+  //
+  //p {
+  //  padding-top: 10px;
+  //  padding-bottom: 10px;
+  //  margin-top: 1rem;
+  //  margin-bottom: 1rem;
+  //}
 }
 
 
@@ -69,7 +70,10 @@ body, .serif {
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: $font-family-sans-serif;
-    font-weight: 500; // seems weird but reboot sets headings to 500
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
   }
   code, kbd, pre, samp {
     font-family: $font-family-monospace;
