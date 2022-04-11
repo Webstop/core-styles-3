@@ -11236,6 +11236,18 @@ textarea.form-control-lg {
   min-width: 450px;
 }
 
+@media all {
+  .page-break {
+    display: none;
+  }
+}
+@media print {
+  .page-break {
+    clear: both;
+    display: block;
+    break-after: always;
+  }
+}
 .admin {
   grid-template-columns: auto;
   grid-template-rows: 60px auto 40px;
@@ -12247,6 +12259,11 @@ textarea.form-control-lg {
 
 */
 /** Core Icons Grid**/
+.wsg-icon:hover {
+  transition: all 0.5s ease-out;
+  box-shadow: 0px 3px 5px rgba(38, 38, 38, 0.2);
+}
+
 .icon-code-snip {
   font-size: 10px;
 }

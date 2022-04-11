@@ -226,13 +226,13 @@
         </button>
 
         <div
-          class="collapse  show "
+          class="collapse "
           id="components-menu-collapse">
           
           <ul class="list-unstyled fw-normal pb-1 small">
 
             <li
-              class="py-2 ps-4  left-nav-active ">
+              class="py-2 ps-4 ">
               <a href="/docs/3.0/components/ajax/ajax-form/" class="d-inline-flex rounded">Ajax Form</a>
             </li>
 
@@ -421,7 +421,7 @@
         </button>
 
         <div
-          class="collapse "
+          class="collapse  show "
           id="utilities-menu-collapse">
           
           <ul class="list-unstyled fw-normal pb-1 small">
@@ -454,7 +454,7 @@
           <ul class="list-unstyled fw-normal pb-1 small">
 
             <li
-              class="py-2 ps-4 ">
+              class="py-2 ps-4  left-nav-active ">
               <a href="/docs/3.0/utilities/page-break/" class="d-inline-flex rounded">Page Break</a>
             </li>
 
@@ -475,104 +475,27 @@
   <main class="admin-page" role="main">
     <section class="docs-heading inner-shadow">
       <h1 class="docs-heading-title shadow">
-        Ajax Form
+        Page Break
       </h1>
-      <p class="docs-heading-tagline">An easy way to submit form contents &amp; load the response into a section of the page.</p>
+      <p class="docs-heading-tagline">Force page breaks when printing pages.</p>
     </section>
-    <h2 id="examples">Examples</h2>
-<p>Here are a couple of use examples of the AJAX Form feature.</p>
-<h3 id="basic-example">Basic Example</h3>
-<p>This example contains the minimum attributes need. The form contains the <code>data-ajax-form</code> attribute
-which triggers the form to submit via ajax instead of a web page reload. The <code>action</code> attribute
-specifies the URL to pull the content from, the content is expected to be in HTML format.</p>
+    <p>The Page Break utility allows you to specify a new physical page when printing a web page. It doesn&rsquo;t affect the view in a web browser.</p>
+<h2 id="example">Example</h2>
+<p>Use the <code>page-break</code> class on an empty element to create a block element that forces a page break after the element on printed pages. When the element is empty it hides the element on non-print contexts (web browers).</p>
 <div class="my-3 p-3 example">
-<form data-ajax-form action="/ajax/alert_success">
-  <div class="form-group">
-    <label for="title-example" class="py-2">Title</label>
-    <input type="text" class="form-control p-2" name="title-example" id="title-example" placeholder="Title">
-  </div>
-  <button class="btn btn-primary  mt-3" type="submit">
-    Save Title
-  </button>
-</form>
-
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">data-ajax-form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;title-example&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;py-2&#34;</span><span class="p">&gt;</span>Title<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control p-2&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;title-example&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;title-example&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Title&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary  mt-3&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span><span class="p">&gt;</span>
-    Save Title
-  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="example-with-all-options">Example with All Options</h3>
-<p>In the following example we enable all of the optional attributes, including <code>data-target</code> and
-<code>data-power-bar</code>. By default the ajax will replace the form with the ajax content, in this example
-we select a different target using the <code>data-target</code> attribute, it accepts standard jQuery selectors.
-The <code>data-power-bar</code> attribute triggers a reload of the Shopping List Power Bar after the ajax content
-is returned.</p>
+<p>Printed page 1 ends here.</p>
+<div class="page-break"></div>
+<p>Printed page 2 starts here.</p>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Printed page 1 ends here.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;page-break&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Printed page 2 starts here.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
+<p>It can also be used on any block level element.</p>
 <div class="my-3 p-3 example">
-<form data-ajax-form action="/ajax/alert_error" data-target="#target-1" data-power-bar>
-  <div class="form-group">
-    <label for="title-example" class="py-2">Title</label>
-    <input type="text" class="form-control p-2" name="title-example" id="title-example" placeholder="Title">
-  </div>
-  <button class="btn btn-primary  mt-3" type="submit">
-    Save Title
-  </button>
-</form>
-<div id="target-1" class="mt-4">
-  <div class="alert alert-success">Ajax Content goes here.</div>
-</div>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">data-ajax-form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_error&#34;</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#target-1&#34;</span> <span class="na">data-power-bar</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;title-example&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;py-2&#34;</span><span class="p">&gt;</span>Title<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control p-2&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;title-example&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;title-example&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Title&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary  mt-3&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span><span class="p">&gt;</span>
-    Save Title
-  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;target-1&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-4&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-success&#34;</span><span class="p">&gt;</span>Ajax Content goes here.<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="attributes">Attributes</h2>
-<p>The <code>data-ajax-form</code> &amp; <code>action</code> attributes are required. The rest are optional.</p>
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>Options</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="text-nowrap">data-ajax-form</code></td>
-      <td>The presence of this attribute indicates submitting on this form should trigger an AJAX load.</td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">action</code></td>
-      <td>
-        Attribute specifies the URL of the content you want AJAX'd. The AJAX request should return 
-        HTML content to display inside the target element. 
-      </td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">data-target</code></td>
-      <td>
-        The DOM node to load the content into. Uses standard jQuery selectors, usually targets an id attribute 
-        (e.g. <code class="text-nowrap">#some-target</code>). Optional, if the <code class="text-nowrap">data-target</code> attribute isn't 
-        present the content will replace the ajax form.
-      </td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">data-power-bar</code></td>
-      <td>
-        When present, completing the ajax call triggers a reload of the Shopping List Power Bar.
-      </td>
-    </tr>
-  </tbody>
-</table>
+<p class="page-break">Printed page 1 ends here.</p>
+<p>Printed page 2 starts here.</p>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;page-break&#34;</span><span class="p">&gt;</span>Printed page 1 ends here.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Printed page 2 starts here.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
+<p>Warning about doing this, it adds <code>display: block;</code> and <code>clear: both;</code> to the element when printed, which can sometimes cause unexpected results, and results different than the web view. We therefore recommend using <code>page-break</code> on an empty <code>div</code> like the first example.</p>
 
   </main>
   
@@ -581,13 +504,7 @@ is returned.</p>
       <div class="wsg-table-of-contents">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#examples">Examples</a>
-      <ul>
-        <li><a href="#basic-example">Basic Example</a></li>
-        <li><a href="#example-with-all-options">Example with All Options</a></li>
-      </ul>
-    </li>
-    <li><a href="#attributes">Attributes</a></li>
+    <li><a href="#example">Example</a></li>
   </ul>
 </nav>
       </div>
@@ -735,7 +652,7 @@ is returned.</p>
             
         
         
-            <li class="breadcrumb-item"><a href="/docs/3.0/components/">Components</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0/utilities/">Utilities</a></li>
         
     
         
@@ -780,7 +697,7 @@ is returned.</p>
             
         
         
-            <li class="breadcrumb-item"><a href="/docs/3.0/components/ajax/">Ajax</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0/utilities/page-break/">Page break</a></li>
         
     
         
@@ -820,59 +737,6 @@ is returned.</p>
                 
             
         
-            
-        
-            
-        
-            
-        
-            
-        
-        
-            <li class="breadcrumb-item"><a href="/docs/3.0/components/ajax/ajax-form/">Ajax form</a></li>
-        
-    
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
             
         
             
