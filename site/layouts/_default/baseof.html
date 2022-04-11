@@ -20,7 +20,7 @@
 
   </section>
 {{ range .Site.Data.font_awesome_config }}
-    <script src="https://kit.fontawesome.com/{{ .kit_key }}.js" crossorigin="anonymous"></script>
+    {{ if .kit_key }}<script src="https://kit.fontawesome.com/{{ .kit_key }}.js" crossorigin="anonymous"></script>{{ end }}
 {{ end }}
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
