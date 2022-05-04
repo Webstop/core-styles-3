@@ -2,7 +2,7 @@
 
 <section class="wsg-icons card-deck">
   {{ range .Site.Data.icons }}
-    {{ if strings.Contains .category $category }}
+    {{ if in .category $category }}
       <div class="wsg-icon card max-width-360 min-width-270 mb-4 shadow">
         <!-- This hidden element is hear to allow search on terms beyond the text displayed in the card. -->
         <span class="visually-hidden">{{ .search }}</span>
@@ -31,7 +31,6 @@
 <!--            </div>-->
 <!--          </div>-->
 
-
         </div>
         <div class="card-footer wsg-card-footer">
           <div class="btn btn-outline-primary wsg-btn-outline-primary d-block mb-3" data-bs-toggle="modal" data-bs-target="#{{ .icon }}-modal">
@@ -59,7 +58,7 @@
 
 
 {{ range .Site.Data.icons }}
-  {{ if strings.Contains .category $category }}
+  {{ if in .category $category }}
       <div class="modal fade" id="{{ .icon }}-modal" tabindex="-1" aria-labelledby="{{ .icon }}-modal-label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered ">
           <div class="modal-content">
@@ -147,7 +146,7 @@
                 </div>
               </div>
               <p>Search Terms: <small class="text-muted">{{ .search }}</small></p>
-              <p>Categories: <small class="text-muted text-uppercase">{{ .category }}</small></p>
+              <p>Categories: <small class="text-muted text-uppercase">{{ delimit .category ", " }}</small></p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-primary ms-3" data-bs-dismiss="modal">

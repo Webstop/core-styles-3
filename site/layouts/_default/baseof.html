@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
     <!--  <link rel="stylesheet" href="/docs/3.0/dist/css/core-styles-defaults.css">-->
+    {{ range .Site.Data.font_awesome_config }}
+      {{ if .kit_key }}<script src="https://kit.fontawesome.com/{{ .kit_key }}.js" crossorigin="anonymous"></script>{{ end }}
+    {{ end }}
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -19,9 +22,7 @@
     {{ end }}
 
   </section>
-{{ range .Site.Data.font_awesome_config }}
-    {{ if .kit_key }}<script src="https://kit.fontawesome.com/{{ .kit_key }}.js" crossorigin="anonymous"></script>{{ end }}
-{{ end }}
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       crossorigin="anonymous"

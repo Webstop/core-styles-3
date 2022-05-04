@@ -1,0 +1,108 @@
+[
+
+  {
+    "name": "Add or Create",
+    "style": "fak",
+    "icon": "fa-add-circle",
+    "search": "add create new plus expand circle solid",
+    "category": ["admin", "UI", "popular", "CRUD", "CRUD-preferred"],
+    "note": "Our preferred icon for adding a new record in CRUD style operations."
+  },
+  {
+    "name": "Alternative for Add no Crud",
+    "style": "fak",
+    "icon": "fa-add-hexagon",
+    "search": "add create new plus expand solid",
+    "category": ["admin", "UI",  "CRUD-alt", "popular-alt"],
+    "note": "An alternative icon for adding a new record in CRUD style operations. We recommend using the preferred icon `fa-add-circle`."
+  },
+  {
+    "name": "Alternative for Add",
+    "style": "fak",
+    "icon": "fa-add-octagon",
+    "search": "add create new plus expand solid",
+    "category": ["admin", "UI",  "CRUD-alt", "popular-alt"],
+    "note": "An alternative icon for adding a new record in CRUD style operations. We recommend using the preferred icon `fa-add-circle`."
+  },
+  {
+    "name": "Alternative for Add",
+    "style": "fak",
+    "icon": "fa-add-square",
+    "search": "add create new plus expand solid",
+    "category": ["admin", "UI",  "CRUD-alt", "popular-alt"],
+    "note": "An alternative icon for adding a new record in CRUD style operations. We recommend using the preferred icon `fa-add-circle`."
+  },
+  {
+    "name": "Alternative for Add",
+    "style": "fak",
+    "icon": "fa-add",
+    "search": "add create new plus expand solid",
+    "category": ["admin", "UI",  "CRUD-alt", "popular-alt"],
+    "note": "An alternative icon for adding a new record in CRUD style operations. We recommend using the preferred icon `fa-add-circle`."
+  },
+  {
+    "name": "Delete or Remove",
+    "style": "fak",
+    "icon": "fa-delete-circle",
+    "search": "delete remove end contract collapse destroy minus solid",
+    "category": ["admin", "UI", "popular", "CRUD", "CRUD-preferred"],
+    "note": "Our preferred icon for deleting a record in CRUD style operations."
+  },
+  {
+    "name": "Alternative for Delete",
+    "style": "fak",
+    "icon": "fa-delete-hexagon",
+    "search": "delete remove end contract collapse destroy minus solid",
+    "category": ["admin", "UI",  "CRUD-alt", "popular-alt"],
+    "note": "An alternative icon for deleting a record in CRUD style operations. We recommend using the preferred icon `fa-delete-circle`."
+  },
+  {
+    "name": "Alternative for Delete",
+    "style": "fak",
+    "icon": "fa-delete-octagon",
+    "search": "delete remove end contract collapse destroy minus solid",
+    "category": ["admin", "UI",  "CRUD-alt", "popular-alt"],
+    "note": "An alternative icon for deleting a record in CRUD style operations. We recommend using the preferred icon `fa-delete-circle`."
+  },
+  {
+    "name": "Alternative for Delete",
+    "style": "fak",
+    "icon": "fa-delete-square",
+    "search": "delete remove end contract collapse destroy minus solid",
+    "category": ["admin", "UI",  "CRUD-alt", "popular-alt"],
+    "note": "An alternative icon for deleting a record in CRUD style operations. We recommend using the preferred icon `fa-delete-circle`."
+  },
+  {
+    "name": "Alternative for Delete",
+    "style": "fak",
+    "icon": "fa-delete",
+    "search": "delete remove end contract collapse destroy minus solid",
+    "category":["admin", "UI",  "CRUD-alt", "popular-alt"],
+    "note": "An alternative icon for deleting a record in CRUD style operations. We recommend using the preferred icon `fa-delete-circle`."
+  },
+  {
+    "name": "Edit or Update",
+    "style": "fa-solid",
+    "icon": "fa-edit",
+    "search": "edit pencil update modify",
+    "category": ["admin", "UI", "popular", "CRUD", "CRUD-preferred"],
+    "note": "Our preferred icon for editing an existing record in CRUD style operations."
+  },
+  {
+    "name": "View or Show",
+    "style": "fa-solid",
+    "icon": "fa-circle-chevron-right",
+    "search": "read show view display visit select go",
+    "category": ["admin", "UI", "popular", "CRUD", "CRUD-preferred"],
+    "note": "Our preferred icon for displaying an existing record in CRUD style operations."
+  },
+  {
+    "name": "Alternative for View",
+    "style": "fa-solid",
+    "icon": "fa-square-chevron-right",
+    "search": "read show view display visit select go",
+    "category": ["admin", "UI",  "CRUD-alt", "popular-alt"],
+    "note": "An alternative icon for displaying a record in CRUD style operations. We recommend using the preferred icon `fa-circle-chevron-right`."
+  }
+
+]

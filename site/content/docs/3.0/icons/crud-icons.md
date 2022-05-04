@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Popular Icons
-description: Popular Icons for UI elements.
+title: CRUD Icons
+description: Create, Read, Update, and Delete Icons for UI elements.
 group: components
 toc: true
 source: Webstop
@@ -10,8 +10,7 @@ menu:
     parent: Icons
 ---
 
-Our icon set uses [Font Awesome v6](https://fontawesome.com/v6.0/icons) as the base icon set 
-and expands it with custom icons for proprietary Webstop products.
+These icons are CRUDdy, or is it cruddy?
 
 ## Example
 
@@ -25,7 +24,7 @@ and expands it with custom icons for proprietary Webstop products.
   </button>
 </div>
 
-<table class="table">
+<table class="table mt-3">
 <thead>
   <tr>
     <th>Title</th>
@@ -33,9 +32,9 @@ and expands it with custom icons for proprietary Webstop products.
   </tr>
 </thead>
 <tbody>
-
+<!--
   <tr>
-    <td>Compelling Title</td>
+    <td>Lorem ipsum dolor sit amet</td>
     <td class="text-end">
       <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
         <i class="fa-solid fa-circle-chevron-right me-1"></i> Show
@@ -49,7 +48,7 @@ and expands it with custom icons for proprietary Webstop products.
     </td>
   </tr>
  <tr>
-    <td>Compelling Title</td>
+    <td>Consectetur adipisicing elit</td>
     <td class="text-end">
       <div class="btn-group" role="group" aria-label="Record Actions">
         <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary">
@@ -64,8 +63,11 @@ and expands it with custom icons for proprietary Webstop products.
       </div>
     </td>
   </tr>
+-->
+
+
   <tr>
-    <td>Compelling Title</td>
+    <td>Sed do eiusmod tempor incididunt</td>
     <td class="text-end">
       <a href="#" class="text-decoration-none">
         <i class="fa-solid fa-circle-chevron-right"></i> Show
@@ -84,7 +86,7 @@ and expands it with custom icons for proprietary Webstop products.
 
 
 
-## Preferred Popular Icons
+## Preferred CRUD Icons
 
 The following icons are approved by our design team for general usage. More icons 
 can be found at [Font Awesome v6](https://fontawesome.com/v6.0/icons). You have 
@@ -94,12 +96,8 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
   <input type="text" class="form-control" data-filter-search data-filter-selector=".wsg-icon" placeholder="Search Icons">
 </div>
 
-{{< icons popular >}} 
+{{< icons CRUD >}} 
 
-## Alternatives to Popular Icons
+## Alternative CRUD Icons
 
-The following icons are approved by our design team for general usage. More icons
-can be found at [Font Awesome v6](https://fontawesome.com/v6.0/icons). You have
-all the Font Awesome v6 icons available, but the use of some of them is discouraged.
-
-{{< icons popular-alt >}} 
+{{< icons CRUD-alt >}} 
