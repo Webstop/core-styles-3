@@ -2,48 +2,43 @@
   <header class="admin-header" role="banner">
     {{ partial "docs-navbar" . }}
   </header>
-  <section class="mt-0 mb-0 pb-0 pt-0">
-    <div class="wsg-title-bg-gradient pt-3 pb-3 d-flex justify-content-center align-items-center wsg-inner-shadow">
-      <div class="container">
-        <div class="row d-flex justify-content-center">
-          <div class="col-sm-12 col-md-7 p-0 p-md-2">
-            <h1 class=" bg-light shadow text-center p-md-2 mb-3p-1 mb-md-3 wsg-page-title">
-              {{ .Title }}
-            </h1>
-          </div>
-        </div>
-      </div>
-    </div>
+
+
+<main>
+
+
+  <section class="docs-heading inner-shadow">
+    <h1 class="docs-heading-title shadow">
+      {{ .Title | markdownify }}
+    </h1>
+    {{ if .Page.Params.Description }}
+      <p class="docs-heading-tagline">{{ .Page.Params.Description | markdownify }}</p>
+    {{ end }}
   </section>
 
-  <main class="index p-5">
-
-    <div class="container">
-      <div class="row d-flex">
-        {{ range .Pages }}
-          {{ if .Title }}
-            <div class="col-md-4 mb-4 ">
-              <div class="card card-box wsg-card-box h-100">
-                <div class="card-body text-center">
-                  <div class="title">
-                    <h3><a href="{{ .URL }}" class="wsg-card-title card-title">{{ .Title }}</a></h3>
-                  </div>
-                  <div class="text">
-                    <p class="card-text">{{ .Description }}</p>
-                  </div>
-                </div>
-                <div class="card-footer wsg-card-footer text-center">
-                  <div class="d-grid">
-                    <a href="{{ .URL }}" class="btn btn-primary learn-more-btn d-block">Learn More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          {{ end }}
-        {{ end }}
-      </div>
+  {{ if .Content}}
+    <div class="container mt-5">
+      {{.Content}}
     </div>
+  {{ end }}
 
-  </main>
+  <div class="card-deck max-width-1600 my-5 mx-auto">
+    {{ range .Pages }}
+      {{ if .Title }}
+        <div class="card shadow min-width-320 max-width-375">
+          <div class="card-body">
+            <h3 class="card-title text-center"><a href="{{ .URL }}" class="text-decoration-none">{{ .Title }}</a></h3>
+            <p class="card-text">{{ .Description }}</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-grid ">
+              <a href="{{ .URL }}" class="btn btn-primary learn-more-btn"><span class="learn-more-btn-text">Learn More</span></a>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</main>
 
 {{ end }}

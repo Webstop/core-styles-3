@@ -6,31 +6,18 @@
       <div class="wsg-icon card max-width-360 min-width-270 mb-4 shadow">
         <!-- This hidden element is hear to allow search on terms beyond the text displayed in the card. -->
         <span class="visually-hidden">{{ .search }}</span>
-        <div class="card-body text-center">
-          <i class="wsg-icon-example {{ .style }} {{ .icon }} wsg-icon-theme fa-3x"></i>
-          <i class="wsg-icon-example {{ .style }} {{ .icon }} wsg-icon-theme ms-2"></i>
-          <h3 class="wsg-icon-title card-title">{{ .name }}</h3>
-    <!--      <code class="icon-example-code code">&#x3C;i class=&#x22;{{ .style }} {{ .icon }}&#x22;&#x3E;&#x3C;/i&#x3E;</code>-->
-          <code class="icon-example-code code">{{ .style }} {{ .icon }}</code>
-<!--          <h5>Examples</h5>-->
-<!--          <div class="row gx-2">-->
-<!--            <div class="col">-->
-<!--              <p class="btn btn-outline-secondary d-block">-->
-<!--                <i class="wsg-icon-example {{ .style }} {{ .icon }}"></i> Text-->
-<!--              </p>-->
-<!--            </div>-->
-<!--            <div class="col">-->
-<!--              <p class="">-->
-<!--                <i class="wsg-icon-example {{ .style }} {{ .icon }}"></i> Text-->
-<!--              </p>-->
-<!--            </div>-->
-<!--            <div class="col">-->
-<!--              <p class="btn btn-secondary d-block">-->
-<!--                <i class="wsg-icon-example {{ .style }} {{ .icon }}"></i> Text-->
-<!--              </p>-->
-<!--            </div>-->
-<!--          </div>-->
-
+        <div class="card-body">
+          <div class="row">
+            <div class="col"></div>
+            <div class="col-auto">
+              <i class="wsg-icon-example {{ .style }} {{ .icon }} wsg-icon-theme fa-3x"></i>
+            </div>
+            <div class="col wsg-icon-small-example-col">
+              <i class="wsg-icon-example {{ .style }} {{ .icon }} wsg-icon-theme ms-2"></i>
+            </div>
+          </div>
+          <h3 class="wsg-icon-title card-title text-center">{{ .name }}</h3>
+          <p class="text-center"><code class="icon-example-code code">{{ .style }} {{ .icon }}</code></p>
         </div>
         <div class="card-footer wsg-card-footer">
           <div class="btn btn-outline-primary wsg-btn-outline-primary d-block mb-3" data-bs-toggle="modal" data-bs-target="#{{ .icon }}-modal">

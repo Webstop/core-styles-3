@@ -6,9 +6,10 @@ group: components
 toc: true
 source: Webstop
 menu:
-  cards:
-    parent: Cards
+cards:
+parent: Cards
 ---
+
 
 {{< example >}}
 <div class="card-deck"> 

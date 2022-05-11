@@ -11184,6 +11184,11 @@ textarea.form-control-lg {
   margin-bottom: 1.5rem;
 }
 
+i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
+  width: 1rem;
+  min-width: 1rem;
+}
+
 .readable {
   max-width: 36.75rem;
 }
@@ -11237,7 +11242,7 @@ textarea.form-control-lg {
 }
 
 @media all {
-  .page-break {
+  .page-break:empty {
     display: none;
   }
 }

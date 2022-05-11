@@ -2,7 +2,7 @@
 
 .card-deck {
   .card {
-    margin-bottom: $card-deck-margin;
+    margin-bottom: $card-deck-margin * 2;
   }
 
   @include media-breakpoint-up(sm) {

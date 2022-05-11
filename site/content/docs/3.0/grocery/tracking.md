@@ -11,6 +11,8 @@ menu:
 ---
 
 
+### Heads up, this doesn't belong here. We have an analytics section under components.
+
 Aye, analytics provides a convent way to track activity on web and mobile pages. It extends Ahoy 
 analytics with a data attribute interface and a set of special attributes. 
 

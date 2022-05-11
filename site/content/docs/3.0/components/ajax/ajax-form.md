@@ -7,7 +7,7 @@ source: Webstop
 menu: 
     Components:
       tags: "Ajax"
-      parent: Components
+      parent: Ajax
 ---
  
 

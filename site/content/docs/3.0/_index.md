@@ -1,5 +1,6 @@
 ---
-title: Core-Styles 3.0 Documentation
+title: Core-Styles Documentation
 layout: list
+description: Documentation for our CS3 components.
 ---
 

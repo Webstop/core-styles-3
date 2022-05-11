@@ -11,7 +11,9 @@
       <h1 class="docs-heading-title shadow">
         {{ .Title | markdownify }}
       </h1>
-      <p class="docs-heading-tagline">{{ .Page.Params.Description | markdownify }}</p>
+      {{ if .Page.Params.Description }}
+        <p class="docs-heading-tagline">{{ .Page.Params.Description | markdownify }}</p>
+      {{ end }}
     </section>
     {{ .Content }}
   </main>

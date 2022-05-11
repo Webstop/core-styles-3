@@ -18,13 +18,17 @@ These icons are CRUDdy, or is it cruddy?
 <i class="fak fa-add-circle"></i>
 {{< /example >}}
 
+### Typical Usage
+
+The following are some examples of how we typically 
+
 <div class="text-end">
   <button class="btn btn-primary">
     <i class="fak fa-add-circle me-1"></i> New Record
   </button>
 </div>
 
-<table class="table mt-3">
+<table class="table mt-3" style="border-color: #fff; border-bottom-color: #ccc;">
 <thead>
   <tr>
     <th>Title</th>
@@ -32,40 +36,6 @@ These icons are CRUDdy, or is it cruddy?
   </tr>
 </thead>
 <tbody>
-<!--
-  <tr>
-    <td>Lorem ipsum dolor sit amet</td>
-    <td class="text-end">
-      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
-        <i class="fa-solid fa-circle-chevron-right me-1"></i> Show
-      </a>
-      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
-        <i class="fa-solid fa-edit me-1"></i> Edit
-      </a>
-      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
-        <i class="fak fa-delete-circle me-1"></i> Delete
-      </a>
-    </td>
-  </tr>
- <tr>
-    <td>Consectetur adipisicing elit</td>
-    <td class="text-end">
-      <div class="btn-group" role="group" aria-label="Record Actions">
-        <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary">
-          <i class="fa-solid fa-circle-chevron-right"></i> Show
-        </a>
-        <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary">
-          <i class="fa-solid fa-edit"></i> Edit
-        </a>
-        <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary">
-          <i class="fak fa-delete-circle"></i> Delete
-        </a>
-      </div>
-    </td>
-  </tr>
--->
-
-
   <tr>
     <td>Sed do eiusmod tempor incididunt</td>
     <td class="text-end">

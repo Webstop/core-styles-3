@@ -75,6 +75,10 @@
   </url>
   
   <url>
+    <loc>https://guides.webstop.com/docs/3.0/components/ajax/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/docs/3.0/components/ajax/ajax-form/</loc>
   </url>
   
@@ -92,6 +96,10 @@
   
   <url>
     <loc>https://guides.webstop.com/docs/3.0/icons/all-icons/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/components/analytics/</loc>
   </url>
   
   <url>
@@ -119,7 +127,7 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/cards/card-deck/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/bootstrap-extentions/card-decks/</loc>
   </url>
   
   <url>
@@ -155,6 +163,10 @@
   </url>
   
   <url>
+    <loc>https://guides.webstop.com/docs/3.0/icons/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/</loc>
   </url>
   
@@ -164,6 +176,30 @@
   
   <url>
     <loc>https://guides.webstop.com/docs/3.0/icons/crud-icons/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/bootstrap-extentions/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/components/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/getting-started/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/layouts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/utilities/</loc>
   </url>
   
   <url>
@@ -191,11 +227,19 @@
   </url>
   
   <url>
+    <loc>https://guides.webstop.com/docs/3.0/components/forms/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/docs/3.0/components/forms/form-toggles/</loc>
   </url>
   
   <url>
     <loc>https://guides.webstop.com/guides/3.0/components/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/components/grocery/</loc>
   </url>
   
   <url>
@@ -220,10 +264,6 @@
   
   <url>
     <loc>https://guides.webstop.com/dev/ad-builder/item-entry/</loc>
-  </url>
-  
-  <url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/</loc>
   </url>
   
   <url>
@@ -296,6 +336,10 @@
   
   <url>
     <loc>https://guides.webstop.com/docs/3.0/components/tagging/tag-search/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/components/tagging/</loc>
   </url>
   
   <url>

@@ -3,86 +3,85 @@
     <ul class="list-unstyled mb-0 py-3 pt-md-1">
       {{ $currentPage := . }}
       {{ range .Site.Menus.getstart }}
-      {{ if .HasChildren }}
-      <li class="mb-1">
-        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse"
-          data-bs-target="#getstart-menu-collapse" aria-expanded="false" aria-controls="getstart-menu-collapse">
-          <strong> {{ .Name }}</strong>
-        </button>
+        {{ if .HasChildren }}
+          <li class="mb-1">
+            <button class="btn d-inline-flex rounded" data-bs-toggle="collapse"
+              data-bs-target="#getstart-menu-collapse" aria-expanded="false" aria-controls="getstart-menu-collapse">
+              <strong> {{ .Name }}</strong>
+            </button>
 
-        <div
-          class="collapse {{if or ($currentPage.IsMenuCurrent "getstart" .) ($currentPage.HasMenuCurrent "getstart" .) }} show {{end}}"
-          id="getstart-menu-collapse">
+            <div
+              class="collapse {{if or ($currentPage.IsMenuCurrent "getstart" .) ($currentPage.HasMenuCurrent "getstart" .) }} show {{end}}"
+              id="getstart-menu-collapse">
 
-          {{ range .Children }}
-          <ul class="list-unstyled fw-normal pb-1 small">
+              {{ range .Children }}
+                <ul class="list-unstyled fw-normal pb-1 small">
 
-            <li
-              class="py-2 ps-4 {{if or ($currentPage.IsMenuCurrent "getstart" .) ($currentPage.HasMenuCurrent "getstart" .) }} left-nav-active {{end}}">
-              <a href="{{ .URL }}" class="d-inline-flex rounded">{{ .Name }}</a>
-            </li>
+                  <li
+                    class="py-2 ps-4 {{if or ($currentPage.IsMenuCurrent "getstart" .) ($currentPage.HasMenuCurrent "getstart" .) }} left-nav-active {{end}}">
+                    <a href="{{ .URL }}" class="d-inline-flex rounded">{{ .Name }}</a>
+                  </li>
 
-          </ul>
-          {{ end }}
-        </div>
-      </li>
-      {{ else }}
-
-      {{ end }}
+                </ul>
+              {{ end }}
+            </div>
+          </li>
+        {{ else }}
+        {{ end }}
       {{ end }}
 
       {{ $currentPage := . }}
       {{ range .Site.Menus.guides }}
-      {{ if .HasChildren }}
-      <li class="mb-1">
-        <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#guides-menu-collapse"
-          aria-expanded="false">
-          <strong> {{ .Name }}</strong>
-        </button>
+        {{ if .HasChildren }}
+          <li class="mb-1">
+            <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#guides-menu-collapse"
+              aria-expanded="false">
+              <strong> {{ .Name }}</strong>
+            </button>
 
-        <div
-          class="collapse {{if or ($currentPage.IsMenuCurrent "guides" .) ($currentPage.HasMenuCurrent "guides" .) }} show {{end}}"
-          id="guides-menu-collapse">
-          {{ range .Children }}
-          <ul class="list-unstyled fw-normal pb-1 small">
+            <div
+              class="collapse {{if or ($currentPage.IsMenuCurrent "guides" .) ($currentPage.HasMenuCurrent "guides" .) }} show {{end}}"
+              id="guides-menu-collapse">
+              {{ range .Children }}
+              <ul class="list-unstyled fw-normal pb-1 small">
 
-            <li
-              class="py-2 ps-4 {{if or ($currentPage.IsMenuCurrent "guides" .) ($currentPage.HasMenuCurrent "guides" .) }} left-nav-active {{end}}">
-              <a href="{{ .URL }}" class="d-inline-flex rounded">{{ .Name }}</a>
-            </li>
+                <li
+                  class="py-2 ps-4 {{if or ($currentPage.IsMenuCurrent "guides" .) ($currentPage.HasMenuCurrent "guides" .) }} left-nav-active {{end}}">
+                  <a href="{{ .URL }}" class="d-inline-flex rounded">{{ .Name }}</a>
+                </li>
 
-          </ul>
-          {{ end }}
-        </div>
-      </li>
-      {{ else }}
+              </ul>
+              {{ end }}
+            </div>
+          </li>
+        {{ else }}
 
-      {{ end }}
+        {{ end }}
       {{ end }}
 
 
       {{ $currentPage := . }}
       {{ range .Site.Menus.layout }}
-      {{ if .HasChildren }}
+        {{ if .HasChildren }}
       <li class="mb-1">
         <button class="btn d-inline-flex rounded" data-bs-toggle="collapse" data-bs-target="#layout-menu-collapse"
-          aria-expanded="false">
+                aria-expanded="false">
           <strong> {{ .Name }}</strong>
         </button>
 
         <div
           class="collapse {{if or ($currentPage.IsMenuCurrent "layout" .) ($currentPage.HasMenuCurrent "layout" .) }} show {{end}}"
-          id="layout-menu-collapse">
-          {{ range .Children }}
-          <ul class="list-unstyled fw-normal pb-1 small">
+        id="layout-menu-collapse">
+        {{ range .Children }}
+        <ul class="list-unstyled fw-normal pb-1 small">
 
-            <li
-              class="py-2 ps-4 {{if or ($currentPage.IsMenuCurrent "layout" .) ($currentPage.HasMenuCurrent "layout" .) }} left-nav-active {{end}}">
-              <a href="{{ .URL }}" class="d-inline-flex rounded">{{ .Name }}</a>
-            </li>
+          <li
+            class="py-2 ps-4 {{if or ($currentPage.IsMenuCurrent "layout" .) ($currentPage.HasMenuCurrent "layout" .) }} left-nav-active {{end}}">
+          <a href="{{ .URL }}" class="d-inline-flex rounded">{{ .Name }}</a>
+          </li>
 
-          </ul>
-          {{ end }}
+        </ul>
+        {{ end }}
         </div>
       </li>
       {{ else }}

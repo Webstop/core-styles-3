@@ -71,6 +71,18 @@ The class `max-width-320` will constrain an element to 320 pixels wide.
 </div>
 {{< /example >}}
 
+### Max Width 375
+
+The class `max-width-375` will constrain an element to 320 pixels wide.
+
+{{< example >}}
+<div class="card max-width-375">
+  <div class="card-body">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+</div>
+{{< /example >}}
+
 ### Max Width 450
 
 The class `max-width-450` will constrain an element to 450 pixels wide.

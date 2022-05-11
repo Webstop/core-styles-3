@@ -19,71 +19,6 @@ and expands it with custom icons for proprietary Webstop products.
 <i class="fak fa-add-circle"></i>
 {{< /example >}}
 
-<div class="text-end">
-  <button class="btn btn-primary">
-    <i class="fak fa-add-circle me-1"></i> New Record
-  </button>
-</div>
-
-<table class="table">
-<thead>
-  <tr>
-    <th>Title</th>
-    <th class="text-end">Actions</th>
-  </tr>
-</thead>
-<tbody>
-
-  <tr>
-    <td>Compelling Title</td>
-    <td class="text-end">
-      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
-        <i class="fa-solid fa-circle-chevron-right me-1"></i> Show
-      </a>
-      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
-        <i class="fa-solid fa-edit me-1"></i> Edit
-      </a>
-      <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary ms-3">
-        <i class="fak fa-delete-circle me-1"></i> Delete
-      </a>
-    </td>
-  </tr>
- <tr>
-    <td>Compelling Title</td>
-    <td class="text-end">
-      <div class="btn-group" role="group" aria-label="Record Actions">
-        <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary">
-          <i class="fa-solid fa-circle-chevron-right"></i> Show
-        </a>
-        <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary">
-          <i class="fa-solid fa-edit"></i> Edit
-        </a>
-        <a href="#" class="btn btn-outline-primary wsg-btn-outline-primary">
-          <i class="fak fa-delete-circle"></i> Delete
-        </a>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td>Compelling Title</td>
-    <td class="text-end">
-      <a href="#" class="text-decoration-none">
-        <i class="fa-solid fa-circle-chevron-right"></i> Show
-      </a>
-      <a href="#" class="ms-3 text-decoration-none">
-        <i class="fa-solid fa-edit"></i> Edit
-      </a>
-      <a href="#" class="ms-3 text-decoration-none">
-        <i class="fak fa-delete-circle"></i> Delete
-      </a>
-    </td>
-  </tr>
-
-</tbody>
-</table>
-
-
-
 ## Preferred Popular Icons
 
 The following icons are approved by our design team for general usage. More icons 
@@ -98,8 +33,7 @@ all the Font Awesome v6 icons available, but the use of some of them is discoura
 
 ## Alternatives to Popular Icons
 
-The following icons are approved by our design team for general usage. More icons
-can be found at [Font Awesome v6](https://fontawesome.com/v6.0/icons). You have
-all the Font Awesome v6 icons available, but the use of some of them is discouraged.
+For most uses you should use the Popular Icons listed above. The following icons are 
+are available for unusual use cases or to match specific branding requirements.
 
 {{< icons popular-alt >}} 

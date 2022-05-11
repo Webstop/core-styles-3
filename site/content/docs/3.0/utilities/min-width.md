@@ -12,7 +12,30 @@ menu:
 
 The min width utility classes set the minimum width of components.
 
+```css
+.min-width-120 {
+min-width: 120px;
+}
+.min-width-200 {
+min-width: 200px;
+}
 
+.min-width-250 {
+min-width: 250px;
+}
+
+.min-width-270 {
+min-width: 270px;
+}
+
+.min-width-320 {
+min-width: 320px;
+}
+
+.min-width-450 {
+min-width: 450px;
+}
+```
 
 ## Examples
 
