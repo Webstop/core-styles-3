@@ -11201,6 +11201,10 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
   max-width: 360px;
 }
 
+.max-width-375 {
+  max-width: 375px;
+}
+
 .max-width-450 {
   max-width: 450px;
 }
@@ -11418,7 +11422,7 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
 }
 
 .card-deck .card {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 @media (min-width: 576px) {
   .card-deck {
