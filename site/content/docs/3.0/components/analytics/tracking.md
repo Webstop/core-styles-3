@@ -1,24 +1,28 @@
 ---
 layout: docs
-title: Aye, Analytics Tracking 
+title: Aye, Analytics Tracker
 description: The easy way to gather analytics about specific page elements.
-group: grocery
+group: components
 toc: true
 source: Webstop
+menu:
+  Components:
+    tags: "Analytics"
+    parent: Components
 ---
 
 
-Aye, analytics provides a convent way to track activity on web and mobile pages. It extends Ahoy 
+Aye, analytics provides a convent way to track activity on web and mobile pages. It extends Ahoy
 analytics with a data attribute interface and a set of special attributes.
 
 tl;dr [skip to examples](#examples)
 
 ## Data Attributes
 
-Nearly all analytics tracking can be enabled and configured through HTML alone with data 
-attributes (our preferred way of using JavaScript functionality). 
+Nearly all analytics tracking can be enabled and configured through HTML alone with data
+attributes (our preferred way of using JavaScript functionality).
 
-This document focuses on using our tracking on the front-end HTML. We also provide a JSON API, 
+This document focuses on using our tracking on the front-end HTML. We also provide a JSON API,
 and Rails helper methods for tracking as well, but those are beyond the scope of this document.
 
 
@@ -35,29 +39,29 @@ We provide three base types of tracking actions. The value is used to populate t
 
 #### Action Names
 
-These tracking action attributes require a value to populate the event record's name field. The value submitted to the API will combine the name of 
+These tracking action attributes require a value to populate the event record's name field. The value submitted to the API will combine the name of
 the action with the value submitted. The following examples illustrate how the event name setting works.
 
 
-##### Action Name Examples 
+##### Action Name Examples
 
 The following view action will record `view coupon` in the name field of the events database table:
 
-{% highlight html %}
+{{< highlight go >}}
 <div data-aye-view="coupon">...</div>
-{% endhighlight %}
+{{< / highlight >}}
 
 The following click action will record `click coupon` in the name field of the events database table:
 
-{% highlight html %}
+{{< highlight go >}}
 <a href="/coupon" data-aye-click="coupon">...</a>
-{% endhighlight %}
+{{< / highlight >}}
 
 The following submit action will record `submit coupon` in the name field of the events database table:
 
-{% highlight html %}
+{{< highlight go >}}
 <form data-aye-submit="coupon">...</form>
-{% endhighlight %}
+{{< / highlight >}}
 
 
 
@@ -80,6 +84,43 @@ The following optional attributes provide data to the tracking API. _Try to prov
 | `data-aye-tags`           | Tags group data together. The format is: 1. all lowercase, 2. comas to separate tags (e.g. `erie insider, free offer, monopoly`). |
 
 
+### Resource vs. Context
+
+The difference between the resource and context attributes is the most common source of confusion in the Aye attributes.
+The resource is the object you are tracking. For example, if the item you are tracking is a coupon offer with an id of
+`123` the value of your `data-aye-resource` would be `Offer` (matches the Rails model name), and the `data-aye-resource-id`
+would be `123`. We embed coupons all sorts of places, sometimes they are in the coupon gallery, sometimes they are in a
+digital circular, sometimes in a recipe and etc. This is the purpose of the context, to record *where* the item was being
+displayed. For example, if our coupon offer is displayed inside recipe `456` then we'd have a context like `data-aye-context`
+is `Recipe` and `data-aye-context-id` is `456`.
+
+{{< highlight go >}}
+<div data-aye-view="coupon" 
+  data-aye-resource="Offer" 
+  data-aye-resource-id="123"
+  data-aye-context="Recipe" 
+  data-aye-context-id="456">
+...
+</div>
+{{< / highlight >}}
+
+Often times the context and resource are the same. For example, a recipe that is displayed on the recipe detail page
+might look like the following (this is an [actual recipe](https://www.topsmarkets.com/Recipes/Detail/7643/Mini_Turkey_Pizzas/)).
+
+{{< highlight go >}}
+<div data-aye-view="recipe" 
+  data-aye-resource="Recipe" 
+  data-aye-resource-id="25264"
+  data-aye-context="Recipe" 
+  data-aye-context-id="25264"
+  data-aye-property-recipe-number="7643"
+  data-aye-property-title="Mini Turkey Pizzas"
+  data-aye-property-exclusive-id="69">
+...
+</div>
+{{< / highlight >}}
+
+
 ## Data Lists
 
 Below you'll find the value lists for the `data-aye-app-id` attribute and the `data-aye-property-marketing-type` attribute.
@@ -87,9 +128,9 @@ Below you'll find the value lists for the `data-aye-app-id` attribute and the `d
 
 ### Product ID List
 
-These values are used by the `data-aye-app-id` attribute. The following values match those found 
-in core-rails `app` database. You can find the full list on the 
-[core-admin apps page](https://admin.grocerywebsite.com/apps).  
+These values are used by the `data-aye-app-id` attribute. The following values match those found
+in core-rails `app` database. You can find the full list on the
+[core-admin apps page](https://admin.grocerywebsite.com/apps).
 
 | ID | Name |
 |---:|:-----|
@@ -105,7 +146,7 @@ in core-rails `app` database. You can find the full list on the
 | 10 | store locator
 | 11 | donations
 
-_You can find the full list on the [core-admin apps page](https://admin.grocerywebsite.com/apps)._  
+_You can find the full list on the [core-admin apps page](https://admin.grocerywebsite.com/apps)._
 
 
 ### Circular Property Marketing Type List
@@ -162,30 +203,29 @@ original List
 
 ## Examples
 
-The following examples will write a record to our analytics database by 
-supplying the data to the Webstop event tracking API. 
+The following examples will write a record to our analytics database by
+supplying the data to the Webstop event tracking API.
 
 
 ### Track Click Example
 
-By adding the `data-aye-click` attribute our aye.js analytics javascript 
-will watch the element and create a record in our analytics database when the 
+By adding the `data-aye-click` attribute our aye.js analytics javascript
+will watch the element and create a record in our analytics database when the
 the consumer clicks the element.
 
-{% capture example %}
-<button class="btn btn-primary " 
-  data-aye-click="add recipe ingredient" 
-  data-aye-app-id="8" 
-  data-aye-resource="RecipeIngredient" 
-  data-aye-resource-id="120" 
-  data-aye-context="Recipe" 
-  data-aye-context-id="10">
-  Add Ingredient
-</button> 
-{% endcapture %}
-{% include example.html content=example %} 
+{{< example >}}
+<button class="btn btn-primary "
+data-aye-click="add recipe ingredient"
+data-aye-app-id="8"
+data-aye-resource="RecipeIngredient"
+data-aye-resource-id="120"
+data-aye-context="Recipe"
+data-aye-context-id="10">
+Add Ingredient
+</button>
+{{< /example >}}
 
-Placing `data-aye-click` on an element alone doesn't give us much useful data to record. 
+Placing `data-aye-click` on an element alone doesn't give us much useful data to record.
 We augment the analytics record with additional data by adding more `data-aye-*` attributes.
 
 In this case the analytics record will record that:
@@ -199,27 +239,26 @@ In this case the analytics record will record that:
 
 ### Track View Example
 
-By adding the `data-aye-view` attribute our aye.js analytics javascript 
-will discover the element and create a record in our analytics database when the 
+By adding the `data-aye-view` attribute our aye.js analytics javascript
+will discover the element and create a record in our analytics database when the
 the consumer visits a web page containing the element.
 
-{% capture example %}
+{{< example >}}
 <img src="/assets/images/aye-analytics/7233_Recipe_SIMG.jpg" style="max-width: 325px;"
-  data-aye-view="recipe"  
-  data-aye-app-id="1" 
-  data-aye-resource="AdItem" 
-  data-aye-resource-id="1000" 
-  data-aye-resource-label="Recipe: Silly Muffin" 
-  data-aye-context="Ad" 
-  data-aye-context-id="500" 
-  data-aye-property-marketing-type="Recipe"
-  data-aye-property-recipe-id="23517"
-  data-aye-property-recipe-number="7233"
-  data-aye-property-recipe-title="Silly Muffin"> 
-{% endcapture %}
-{% include example.html content=example %} 
+data-aye-view="recipe"  
+data-aye-app-id="1"
+data-aye-resource="AdItem"
+data-aye-resource-id="1000"
+data-aye-resource-label="Recipe: Silly Muffin"
+data-aye-context="Ad"
+data-aye-context-id="500"
+data-aye-property-marketing-type="Recipe"
+data-aye-property-recipe-id="23517"
+data-aye-property-recipe-number="7233"
+data-aye-property-recipe-title="Silly Muffin">
+{{< /example >}}
 
-Placing `data-aye-view` on an element alone doesn't give us much useful data to record. 
+Placing `data-aye-view` on an element alone doesn't give us much useful data to record.
 We augment the analytics record with additional data by adding more `data-aye-*` attributes.
 
 In this case the analytics record will record that:
@@ -239,30 +278,30 @@ _That's **a lot** of useful information to build analytics reports and dashboard
 
 #### About Properties
 
-Notice the use of the three `data-aye-property-*` attributes. You can record any arbitrary set 
-of data using the property prefix, everything in the attribute name after the prefix 
-(`data-aye-property-`) will be used as a key in the properties field in the analytics database. 
-When naming your aye properties use dash case (e.g. `recipe-title`), the aye.js script will 
+Notice the use of the three `data-aye-property-*` attributes. You can record any arbitrary set
+of data using the property prefix, everything in the attribute name after the prefix
+(`data-aye-property-`) will be used as a key in the properties field in the analytics database.
+When naming your aye properties use dash case (e.g. `recipe-title`), the aye.js script will
 convert it to snake case (e.g. `recipe_title`), before submitting it to the API.
 
 The example above will write the following to the properties json database field:
 
-{% highlight json %}
+{{< highlight go >}}
 properties: {
-  recipe_id: 23517,
-  recipe_number: 7233,
-  recipe_title: 'Silly Muffin'
+recipe_id: 23517,
+recipe_number: 7233,
+recipe_title: 'Silly Muffin'
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 
 ### Track Submit Example
 
-By adding the `data-aye-submit` attribute to a form, our aye.js analytics javascript 
-will watch the form and create a record in our analytics database when the 
+By adding the `data-aye-submit` attribute to a form, our aye.js analytics javascript
+will watch the form and create a record in our analytics database when the
 the consumer submits the form.
 
-{% capture example %}
+{{< example >}}
 <form
   data-aye-submit="newsletter sign-up" 
   data-aye-app-id="6"
@@ -270,17 +309,16 @@ the consumer submits the form.
   data-aye-resource-id="20" 
   data-aye-context="Ads" 
   data-aye-context-id="1000">
-  
+
   <div class="form-group">
     <label for="email">Email Address</label>
     <input type="email" data-aye-property-email class="form-control" id="email">
   </div>
   <button type="submit" class="btn btn-primary ">Subscribe to Newsletter</button>
 </form> 
-{% endcapture %}
-{% include example.html content=example %} 
+{{< /example >}}
 
-Placing `data-aye-submit` on an element alone doesn't give us much useful data to record. 
+Placing `data-aye-submit` on an element alone doesn't give us much useful data to record.
 We augment the analytics record with additional data by adding more `data-aye-*` attributes.
 
 In this case the analytics record will record that:
@@ -294,10 +332,10 @@ In this case the analytics record will record that:
 
 ## Setup & Installation
 
-You might have noticed that Aye has zero CSS, it's all about the JavaScript interface. There are three JavaScript files 
+You might have noticed that Aye has zero CSS, it's all about the JavaScript interface. There are three JavaScript files
 we need to install in the correct order for this to work.
 
-#### JavaScript Files <small class="text-muted">(listed in order)</small>: 
+#### JavaScript Files <small class="text-muted">(listed in order)</small>:
 
 1. `/dist/js/core-styles/config.js`
 2. `/dist/js/ahoy/ahoy.js`
@@ -305,7 +343,7 @@ we need to install in the correct order for this to work.
 
 ---
 
-Using Aye.js requires a few things be setup on your site template. Specifically, some data attributes on the body tag of 
+Using Aye.js requires a few things be setup on your site template. Specifically, some data attributes on the body tag of
 the web page. Aye uses these data attributes to craft the URL used to submit tracking events.
 
 | Attribute          | Description |
@@ -318,26 +356,27 @@ the web page. Aye uses these data attributes to craft the URL used to submit tra
 
 For **local development** you'd have the following data attributes:
 
-{% highlight html %}
+{{< highlight go >}}
 <body data-retailer-id="767" data-environment="development">
-{% endhighlight %}
+{{< / highlight >}}
 
 For **local testing** you'd have the following data attributes:
 
-{% highlight html %}
+{{< highlight go >}}
 <body data-retailer-id="767" data-environment="test">
-{% endhighlight %}
+{{< / highlight >}}
 
 For **production** you'd have the following data attributes:
 
-{% highlight html %}
+{{< highlight go >}}
 <body data-retailer-id="767" data-environment="production">
-{% endhighlight %}
+{{< / highlight >}}
 
 For **other environments** you can specify the following:
 
-{% highlight html %}
+{{< highlight go >}}
 <body data-retailer-id="767" data-api-host="http://grocery.core1.rails1.webstophq.com">
-{% endhighlight %}
+{{< / highlight >}}
 
 _The example above would be used for Webstop's Core 1 testing server._
+

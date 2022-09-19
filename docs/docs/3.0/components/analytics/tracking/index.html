@@ -253,7 +253,7 @@
         </button>
 
         <div
-          class="collapse "
+          class="collapse  show "
           id="components-menu-collapse">
           
           <ul class="list-unstyled fw-normal pb-1 small">
@@ -270,6 +270,15 @@
             <li
               class="py-2 ps-4 ">
               <a href="/docs/3.0/components/ajax/ajax-modal/" class="d-inline-flex rounded">Ajax Modal</a>
+            </li>
+
+          </ul>
+          
+          <ul class="list-unstyled fw-normal pb-1 small">
+
+            <li
+              class="py-2 ps-4  left-nav-active ">
+              <a href="/docs/3.0/components/analytics/tracking/" class="d-inline-flex rounded">Aye, Analytics Tracker</a>
             </li>
 
           </ul>
@@ -502,7 +511,7 @@
   <main class="admin-page" role="main">
     <section class="docs-heading inner-shadow">
       <h1 class="docs-heading-title shadow">
-        Aye, Analytics Tracking
+        Aye, Analytics Tracker
       </h1>
       
         <p class="docs-heading-tagline">The easy way to gather analytics about specific page elements.</p>
@@ -545,17 +554,11 @@ and Rails helper methods for tracking as well, but those are beyond the scope of
 the action with the value submitted. The following examples illustrate how the event name setting works.</p>
 <h5 id="action-name-examples">Action Name Examples</h5>
 <p>The following view action will record <code>view coupon</code> in the name field of the events database table:</p>
-<p>{% highlight html %}</p>
-<div data-aye-view="coupon">...</div>
-{% endhighlight %}
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-aye-view</span><span class="o">=</span><span class="s">&#34;coupon&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <p>The following click action will record <code>click coupon</code> in the name field of the events database table:</p>
-<p>{% highlight html %}
-<a href="/coupon" data-aye-click="coupon">&hellip;</a>
-{% endhighlight %}</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/coupon&#34;</span> <span class="na">data-aye-click</span><span class="o">=</span><span class="s">&#34;coupon&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></div>
 <p>The following submit action will record <code>submit coupon</code> in the name field of the events database table:</p>
-<p>{% highlight html %}</p>
-<form data-aye-submit="coupon">...</form>
-{% endhighlight %}
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">data-aye-submit</span><span class="o">=</span><span class="s">&#34;coupon&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="attributes">Attributes</h3>
 <p>The following optional attributes provide data to the tracking API. <em>Try to provide as many attributes as the available data allows.</em></p>
 <table>
@@ -612,6 +615,33 @@ the action with the value submitted. The following examples illustrate how the e
 </tr>
 </tbody>
 </table>
+<h3 id="resource-vs-context">Resource vs. Context</h3>
+<p>The difference between the resource and context attributes is the most common source of confusion in the Aye attributes.
+The resource is the object you are tracking. For example, if the item you are tracking is a coupon offer with an id of
+<code>123</code> the value of your <code>data-aye-resource</code> would be <code>Offer</code> (matches the Rails model name), and the <code>data-aye-resource-id</code>
+would be <code>123</code>. We embed coupons all sorts of places, sometimes they are in the coupon gallery, sometimes they are in a
+digital circular, sometimes in a recipe and etc. This is the purpose of the context, to record <em>where</em> the item was being
+displayed. For example, if our coupon offer is displayed inside recipe <code>456</code> then we&rsquo;d have a context like <code>data-aye-context</code>
+is <code>Recipe</code> and <code>data-aye-context-id</code> is <code>456</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-aye-view</span><span class="o">=</span><span class="s">&#34;coupon&#34;</span> 
+  <span class="na">data-aye-resource</span><span class="o">=</span><span class="s">&#34;Offer&#34;</span> 
+  <span class="na">data-aye-resource-id</span><span class="o">=</span><span class="s">&#34;123&#34;</span>
+  <span class="na">data-aye-context</span><span class="o">=</span><span class="s">&#34;Recipe&#34;</span> 
+  <span class="na">data-aye-context-id</span><span class="o">=</span><span class="s">&#34;456&#34;</span><span class="p">&gt;</span>
+...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Often times the context and resource are the same. For example, a recipe that is displayed on the recipe detail page
+might look like the following (this is an <a href="https://www.topsmarkets.com/Recipes/Detail/7643/Mini_Turkey_Pizzas/">actual recipe</a>).</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-aye-view</span><span class="o">=</span><span class="s">&#34;recipe&#34;</span> 
+  <span class="na">data-aye-resource</span><span class="o">=</span><span class="s">&#34;Recipe&#34;</span> 
+  <span class="na">data-aye-resource-id</span><span class="o">=</span><span class="s">&#34;25264&#34;</span>
+  <span class="na">data-aye-context</span><span class="o">=</span><span class="s">&#34;Recipe&#34;</span> 
+  <span class="na">data-aye-context-id</span><span class="o">=</span><span class="s">&#34;25264&#34;</span>
+  <span class="na">data-aye-property-recipe-number</span><span class="o">=</span><span class="s">&#34;7643&#34;</span>
+  <span class="na">data-aye-property-title</span><span class="o">=</span><span class="s">&#34;Mini Turkey Pizzas&#34;</span>
+  <span class="na">data-aye-property-exclusive-id</span><span class="o">=</span><span class="s">&#34;69&#34;</span><span class="p">&gt;</span>
+...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="data-lists">Data Lists</h2>
 <p>Below you&rsquo;ll find the value lists for the <code>data-aye-app-id</code> attribute and the <code>data-aye-property-marketing-type</code> attribute.</p>
 <h3 id="product-id-list">Product ID List</h3>
@@ -752,18 +782,25 @@ supplying the data to the Webstop event tracking API.</p>
 <p>By adding the <code>data-aye-click</code> attribute our aye.js analytics javascript
 will watch the element and create a record in our analytics database when the
 the consumer clicks the element.</p>
-<p>{% capture example %}
-<button class="btn btn-primary " 
-data-aye-click="add recipe ingredient" 
-data-aye-app-id="8" 
-data-aye-resource="RecipeIngredient" 
-data-aye-resource-id="120" 
-data-aye-context="Recipe" 
+<div class="my-3 p-3 example">
+<button class="btn btn-primary "
+data-aye-click="add recipe ingredient"
+data-aye-app-id="8"
+data-aye-resource="RecipeIngredient"
+data-aye-resource-id="120"
+data-aye-context="Recipe"
 data-aye-context-id="10">
 Add Ingredient
 </button>
-{% endcapture %}
-{% include example.html content=example %}</p>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary &#34;</span>
+<span class="na">data-aye-click</span><span class="o">=</span><span class="s">&#34;add recipe ingredient&#34;</span>
+<span class="na">data-aye-app-id</span><span class="o">=</span><span class="s">&#34;8&#34;</span>
+<span class="na">data-aye-resource</span><span class="o">=</span><span class="s">&#34;RecipeIngredient&#34;</span>
+<span class="na">data-aye-resource-id</span><span class="o">=</span><span class="s">&#34;120&#34;</span>
+<span class="na">data-aye-context</span><span class="o">=</span><span class="s">&#34;Recipe&#34;</span>
+<span class="na">data-aye-context-id</span><span class="o">=</span><span class="s">&#34;10&#34;</span><span class="p">&gt;</span>
+Add Ingredient
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
 <p>Placing <code>data-aye-click</code> on an element alone doesn&rsquo;t give us much useful data to record.
 We augment the analytics record with additional data by adding more <code>data-aye-*</code> attributes.</p>
 <p>In this case the analytics record will record that:</p>
@@ -779,21 +816,31 @@ We augment the analytics record with additional data by adding more <code>data-a
 <p>By adding the <code>data-aye-view</code> attribute our aye.js analytics javascript
 will discover the element and create a record in our analytics database when the
 the consumer visits a web page containing the element.</p>
-<p>{% capture example %}
+<div class="my-3 p-3 example">
 <img src="/assets/images/aye-analytics/7233_Recipe_SIMG.jpg" style="max-width: 325px;"
 data-aye-view="recipe"  
-data-aye-app-id="1" 
-data-aye-resource="AdItem" 
-data-aye-resource-id="1000" 
-data-aye-resource-label="Recipe: Silly Muffin" 
-data-aye-context="Ad" 
-data-aye-context-id="500" 
+data-aye-app-id="1"
+data-aye-resource="AdItem"
+data-aye-resource-id="1000"
+data-aye-resource-label="Recipe: Silly Muffin"
+data-aye-context="Ad"
+data-aye-context-id="500"
 data-aye-property-marketing-type="Recipe"
 data-aye-property-recipe-id="23517"
 data-aye-property-recipe-number="7233"
 data-aye-property-recipe-title="Silly Muffin">
-{% endcapture %}
-{% include example.html content=example %}</p>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/images/aye-analytics/7233_Recipe_SIMG.jpg&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;max-width: 325px;&#34;</span>
+<span class="na">data-aye-view</span><span class="o">=</span><span class="s">&#34;recipe&#34;</span>  
+<span class="na">data-aye-app-id</span><span class="o">=</span><span class="s">&#34;1&#34;</span>
+<span class="na">data-aye-resource</span><span class="o">=</span><span class="s">&#34;AdItem&#34;</span>
+<span class="na">data-aye-resource-id</span><span class="o">=</span><span class="s">&#34;1000&#34;</span>
+<span class="na">data-aye-resource-label</span><span class="o">=</span><span class="s">&#34;Recipe: Silly Muffin&#34;</span>
+<span class="na">data-aye-context</span><span class="o">=</span><span class="s">&#34;Ad&#34;</span>
+<span class="na">data-aye-context-id</span><span class="o">=</span><span class="s">&#34;500&#34;</span>
+<span class="na">data-aye-property-marketing-type</span><span class="o">=</span><span class="s">&#34;Recipe&#34;</span>
+<span class="na">data-aye-property-recipe-id</span><span class="o">=</span><span class="s">&#34;23517&#34;</span>
+<span class="na">data-aye-property-recipe-number</span><span class="o">=</span><span class="s">&#34;7233&#34;</span>
+<span class="na">data-aye-property-recipe-title</span><span class="o">=</span><span class="s">&#34;Silly Muffin&#34;</span><span class="p">&gt;</span></code></pre></div>
 <p>Placing <code>data-aye-view</code> on an element alone doesn&rsquo;t give us much useful data to record.
 We augment the analytics record with additional data by adding more <code>data-aye-*</code> attributes.</p>
 <p>In this case the analytics record will record that:</p>
@@ -817,18 +864,16 @@ of data using the property prefix, everything in the attribute name after the pr
 When naming your aye properties use dash case (e.g. <code>recipe-title</code>), the aye.js script will
 convert it to snake case (e.g. <code>recipe_title</code>), before submitting it to the API.</p>
 <p>The example above will write the following to the properties json database field:</p>
-<p>{% highlight json %}
-properties: {
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">properties: {
 recipe_id: 23517,
 recipe_number: 7233,
-recipe_title: &lsquo;Silly Muffin&rsquo;
-}
-{% endhighlight %}</p>
+recipe_title: &#39;Silly Muffin&#39;
+}</code></pre></div>
 <h3 id="track-submit-example">Track Submit Example</h3>
 <p>By adding the <code>data-aye-submit</code> attribute to a form, our aye.js analytics javascript
 will watch the form and create a record in our analytics database when the
 the consumer submits the form.</p>
-<p>{% capture example %}</p>
+<div class="my-3 p-3 example">
 <form
   data-aye-submit="newsletter sign-up" 
   data-aye-app-id="6"
@@ -836,14 +881,27 @@ the consumer submits the form.</p>
   data-aye-resource-id="20" 
   data-aye-context="Ads" 
   data-aye-context-id="1000">
+
   <div class="form-group">
     <label for="email">Email Address</label>
     <input type="email" data-aye-property-email class="form-control" id="email">
   </div>
   <button type="submit" class="btn btn-primary ">Subscribe to Newsletter</button>
 </form> 
-{% endcapture %}
-{% include example.html content=example %} 
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span>
+  <span class="na">data-aye-submit</span><span class="o">=</span><span class="s">&#34;newsletter sign-up&#34;</span> 
+  <span class="na">data-aye-app-id</span><span class="o">=</span><span class="s">&#34;6&#34;</span>
+  <span class="na">data-aye-resource</span><span class="o">=</span><span class="s">&#34;GroceryNewsletter&#34;</span> 
+  <span class="na">data-aye-resource-id</span><span class="o">=</span><span class="s">&#34;20&#34;</span> 
+  <span class="na">data-aye-context</span><span class="o">=</span><span class="s">&#34;Ads&#34;</span> 
+  <span class="na">data-aye-context-id</span><span class="o">=</span><span class="s">&#34;1000&#34;</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;email&#34;</span><span class="p">&gt;</span>Email Address<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;email&#34;</span> <span class="na">data-aye-property-email</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;email&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary &#34;</span><span class="p">&gt;</span>Subscribe to Newsletter<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span> </code></pre></div>
 <p>Placing <code>data-aye-submit</code> on an element alone doesn&rsquo;t give us much useful data to record.
 We augment the analytics record with additional data by adding more <code>data-aye-*</code> attributes.</p>
 <p>In this case the analytics record will record that:</p>
@@ -891,21 +949,13 @@ the web page. Aye uses these data attributes to craft the URL used to submit tra
 </table>
 <h3 id="examples-1">Examples</h3>
 <p>For <strong>local development</strong> you&rsquo;d have the following data attributes:</p>
-<p>{% highlight html %}</p>
-<body data-retailer-id="767" data-environment="development">
-{% endhighlight %}
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;767&#34;</span> <span class="na">data-environment</span><span class="o">=</span><span class="s">&#34;development&#34;</span><span class="p">&gt;</span></code></pre></div>
 <p>For <strong>local testing</strong> you&rsquo;d have the following data attributes:</p>
-<p>{% highlight html %}</p>
-<body data-retailer-id="767" data-environment="test">
-{% endhighlight %}
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;767&#34;</span> <span class="na">data-environment</span><span class="o">=</span><span class="s">&#34;test&#34;</span><span class="p">&gt;</span></code></pre></div>
 <p>For <strong>production</strong> you&rsquo;d have the following data attributes:</p>
-<p>{% highlight html %}</p>
-<body data-retailer-id="767" data-environment="production">
-{% endhighlight %}
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;767&#34;</span> <span class="na">data-environment</span><span class="o">=</span><span class="s">&#34;production&#34;</span><span class="p">&gt;</span></code></pre></div>
 <p>For <strong>other environments</strong> you can specify the following:</p>
-<p>{% highlight html %}</p>
-<body data-retailer-id="767" data-api-host="http://grocery.core1.rails1.webstophq.com">
-{% endhighlight %}
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;767&#34;</span> <span class="na">data-api-host</span><span class="o">=</span><span class="s">&#34;http://grocery.core1.rails1.webstophq.com&#34;</span><span class="p">&gt;</span></code></pre></div>
 <p><em>The example above would be used for Webstop&rsquo;s Core 1 testing server.</em></p>
 
   </main>
@@ -919,6 +969,7 @@ the web page. Aye uses these data attributes to craft the URL used to submit tra
       <ul>
         <li><a href="#actions">Actions</a></li>
         <li><a href="#attributes">Attributes</a></li>
+        <li><a href="#resource-vs-context">Resource vs. Context</a></li>
       </ul>
     </li>
     <li><a href="#data-lists">Data Lists</a>
