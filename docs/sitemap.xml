@@ -15,10 +15,6 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/shopping-lists/circular-item/</loc>
-  </url>
-  
-  <url>
     <loc>https://guides.webstop.com/docs/3.0/layouts/examples/admin_base/</loc>
   </url>
   
@@ -115,11 +111,7 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/tracking/</loc>
-  </url>
-  
-  <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/circulars/banner-item/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/banner-item/</loc>
   </url>
   
   <url>
@@ -135,23 +127,15 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/circulars/circular-items/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/circular-items/</loc>
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/circulars/navigation/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/navigation/</loc>
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/circulars/circular/</loc>
-  </url>
-  
-  <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/newsprints/newsprint/</loc>
-  </url>
-  
-  <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/recipes/my-cook-book/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/</loc>
   </url>
   
   <url>
@@ -215,11 +199,7 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/circulars/coupon-item/</loc>
-  </url>
-  
-  <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/newsprints/newsprint-compartment/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/coupon-item/</loc>
   </url>
   
   <url>
@@ -239,10 +219,6 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/</loc>
-  </url>
-  
-  <url>
     <loc>https://guides.webstop.com/guides/3.0/overview/</loc>
   </url>
   
@@ -251,15 +227,11 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/recipes/recipes/</loc>
-  </url>
-  
-  <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/shopping-lists/recipes/</loc>
-  </url>
-  
-  <url>
     <loc>https://guides.webstop.com/docs/3.0/getting-started/introduction/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/shopping-lists/recipes/</loc>
   </url>
   
   <url>
@@ -283,6 +255,22 @@
   </url>
   
   <url>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/recipes/my-cook-book/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/newsprints/newsprint/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/newsprints/newsprint-compartment/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/newsprints/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/docs/3.0/utilities/page-break/</loc>
   </url>
   
@@ -291,7 +279,7 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/price/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/price/</loc>
   </url>
   
   <url>
@@ -299,11 +287,19 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/recipes/recipe/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/recipes/recipe/</loc>
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/circulars/recipe-item/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/recipe-item/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/recipes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/recipes/recipes/</loc>
   </url>
   
   <url>
@@ -311,27 +307,35 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/shopping-lists/shopping-list-power-bar/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/shopping-lists/</loc>
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/circulars/standard-circular-item/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/shopping-lists/shopping-list-power-bar/</loc>
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/circulars/standard-coupon-item/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/standard-circular-item/</loc>
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/circulars/standard-promotion-item/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/standard-coupon-item/</loc>
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/stores/store-list-item/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/standard-promotion-item/</loc>
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/stores/stores-list/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/stores/store-list-item/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/stores/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/stores/stores-list/</loc>
   </url>
   
   <url>
@@ -351,7 +355,7 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/docs/3.0/components/grocery/circulars/thumbnail-circular-item/</loc>
+    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/thumbnail-circular-item/</loc>
   </url>
   
   <url>
