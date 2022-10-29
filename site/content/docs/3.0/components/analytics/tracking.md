@@ -7,13 +7,19 @@ toc: true
 source: Webstop
 menu:
   Components:
-    tags: "Analytics"
+    tags: "Analytics, Ahoy, Aye"
     parent: Components
 ---
 
 
 Aye, analytics provides a convent way to track activity on web and mobile pages. It extends Ahoy
 analytics with a data attribute interface and a set of special attributes.
+
+
+
+Aye, analytics provides a convent way to track activity on web and mobile pages. It extends Ahoy 
+analytics with a data attribute interface and a set of special attributes. 
+
 
 tl;dr [skip to examples](#examples)
 
@@ -214,18 +220,17 @@ will watch the element and create a record in our analytics database when the
 the consumer clicks the element.
 
 {{< example >}}
-<button class="btn btn-primary "
-data-aye-click="add recipe ingredient"
-data-aye-app-id="8"
-data-aye-resource="RecipeIngredient"
-data-aye-resource-id="120"
-data-aye-context="Recipe"
-data-aye-context-id="10">
-Add Ingredient
-</button>
+<button class="btn btn-primary " 
+  data-aye-click="add recipe ingredient" 
+  data-aye-app-id="8" 
+  data-aye-resource="RecipeIngredient" 
+  data-aye-resource-id="120" 
+  data-aye-context="Recipe" 
+  data-aye-context-id="10">
+  Add Ingredient
+</button> 
 {{< /example >}}
 
-Placing `data-aye-click` on an element alone doesn't give us much useful data to record.
 We augment the analytics record with additional data by adding more `data-aye-*` attributes.
 
 In this case the analytics record will record that:
@@ -245,20 +250,20 @@ the consumer visits a web page containing the element.
 
 {{< example >}}
 <img src="/assets/images/aye-analytics/7233_Recipe_SIMG.jpg" style="max-width: 325px;"
-data-aye-view="recipe"  
-data-aye-app-id="1"
-data-aye-resource="AdItem"
-data-aye-resource-id="1000"
-data-aye-resource-label="Recipe: Silly Muffin"
-data-aye-context="Ad"
-data-aye-context-id="500"
-data-aye-property-marketing-type="Recipe"
-data-aye-property-recipe-id="23517"
-data-aye-property-recipe-number="7233"
-data-aye-property-recipe-title="Silly Muffin">
+  data-aye-view="recipe"  
+  data-aye-app-id="1" 
+  data-aye-resource="AdItem" 
+  data-aye-resource-id="1000" 
+  data-aye-resource-label="Recipe: Silly Muffin" 
+  data-aye-context="Ad" 
+  data-aye-context-id="500" 
+  data-aye-property-marketing-type="Recipe"
+  data-aye-property-recipe-id="23517"
+  data-aye-property-recipe-number="7233"
+  data-aye-property-recipe-title="Silly Muffin"> 
 {{< /example >}}
 
-Placing `data-aye-view` on an element alone doesn't give us much useful data to record.
+Placing `data-aye-view` on an element alone doesn't give us much useful data to record. 
 We augment the analytics record with additional data by adding more `data-aye-*` attributes.
 
 In this case the analytics record will record that:
@@ -288,9 +293,9 @@ The example above will write the following to the properties json database field
 
 {{< highlight go >}}
 properties: {
-recipe_id: 23517,
-recipe_number: 7233,
-recipe_title: 'Silly Muffin'
+  recipe_id: 23517,
+  recipe_number: 7233,
+  recipe_title: 'Silly Muffin'
 }
 {{< / highlight >}}
 
