@@ -97,3 +97,57 @@ you can only use bash through the special `bash` container. The bash container
 is based on the same Hugo image as the other containers but it starts with the 
 bash command instead of the hugo command, and it installs Sass in a global 
 context to you have access to the `sass` command.
+
+## Deploying
+
+Follow these steps to deploy the Framework.
+
+1. Update the version number in the `package.json` file (remember the new version number).
+2. Run the CSS compile script. We will launch a node container and run the script that moves all our latest CSS and JavaScript into the `dist` folder.
+- Run the `./bash` command.
+- then run `npm run css-compile`.
+- then type `exit` to leave the node container.
+3. Commit & Push
+- Do a `git add -A`.
+- then a `git commit -m "some message"`.
+- then `git push origin master`.
+  - go to github and make a pull request, or `git push origin master`.
+4. Tag the Release
+- Visit [core-styles-3 releases](https://github.com/Webstop/core-styles-3/releases) in a web browser.
+- Click the `Draft New Release` button.
+- Enter the same version number you used in step 1 with a `v` appended to the front (e.g. `1.0.2` is `v1.0.2`).
+- Write a Helpful Title, and optionally a description.
+- Click `Publish Release`.
+
+At this point you've deployed the code and tagged it. It is ready and available
+to be installed as a Node module via a package manager like NPM or Yarn.
+
+### Installing via NPM
+
+In the project you'd like to include the new version of core-styles-3 in:
+
+1. Update the version in the `package.json` file (in the project root).
+
+Your `package.json` file will looks something like this, likely with a lot more stuff in it.
+
+```json
+{
+  "name": "core-customizations",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "5.2.2",
+    "core-styles-3": "github:webstop/core-styles-3#v1.0.2",
+    "jquery": "3.6.1",
+    "@popperjs/core": "^2.11.6"
+  }
+}
+```
+
+On the line that reads `"core-styles-3": "github:webstop/core-styles-3#v1.0.2",`
+you'll want to change that version number at the end of the line from `v1.0.2` to whatever version number you used
+when tagging a release on the Github website.
+
+2. Then run `npm update`
+
+Now you should have the latest version of the node module installed in your app.
