@@ -152,14 +152,6 @@
     "note": ""
   },
   {
-    "name": "Search Location",
-    "style": "fa-solid",
-    "icon": "fa-search-location",
-    "search": "search location find lookup",
-    "category": ["UI"],
-    "note": ""
-  },
-  {
     "name": "Recipe",
     "style": "fa-solid",
     "icon": "fa-oven",
@@ -704,14 +696,6 @@
     "note": ""
   },
   {
-    "name": "Save",
-    "style": "fa-solid",
-    "icon": "fa-save",
-    "search": "save",
-    "category": ["UI"],
-    "note": ""
-  },
-  {
     "name": "Slack",
     "style": "fa-brands",
     "icon": "fa-slack",
@@ -874,7 +858,7 @@
   {
     "name": "Settings",
     "style": "fa-solid",
-    "icon": "fa-cogs",
+    "icon": "fa-gear",
     "search": "settings gears cogs config",
     "category": ["UI"],
     "note": ""
@@ -920,14 +904,6 @@
     "note": ""
   },
   {
-    "name": "Cut",
-    "style": "fa-solid",
-    "icon": "fa-cut",
-    "search": "scissors cut snip",
-    "category": ["UI"],
-    "note": ""
-  },
-  {
     "name": "CSS3",
     "style": "fa-brands",
     "icon": "fa-css3-alt",
@@ -949,7 +925,7 @@
     "icon": "fa-ellipsis-vertical",
     "search": "ellipse oval circle ellipsis ellipses",
     "category": ["UI"],
-    "note": ""
+    "note": "Menu for more options."
   },
   {
     "name": "Ellipsis",
@@ -957,7 +933,7 @@
     "icon": "fa-ellipsis",
     "search": "ellipse oval circle ellipsis ellipses",
     "category": ["UI"],
-    "note": ""
+    "note": "Menu for more options."
   },
   {
     "name": "Envelope Open",
@@ -1128,20 +1104,12 @@
     "note": ""
   },
   {
-    "name": "Hourglass",
-    "style": "fa-solid",
-    "icon": "fa-hourglass",
-    "search": "hourglass loading",
-    "category": ["UI"],
-    "note": ""
-  },
-  {
     "name": "House",
     "style": "fa-solid",
     "icon": "fa-house",
     "search": "house home homepage",
     "category": ["UI"],
-    "note": ""
+    "note": "Links to Home Page."
   },
   {
     "name": "User Home",
@@ -1189,15 +1157,7 @@
     "icon": "fa-lock",
     "search": "lock locked restricted",
     "category": ["UI"],
-    "note": ""
-  },
-  {
-    "name": "Unlock",
-    "style": "fa-solid",
-    "icon": "fa-unlock",
-    "search": "unlock unlocked unrestricted",
-    "category": ["UI"],
-    "note": ""
+    "note": "Secure"
   },
   {
     "name": "Map Marked",
@@ -1220,14 +1180,6 @@
     "style": "fa-solid",
     "icon": "fa-minus-circle",
     "search": "delete remove",
-    "category": ["UI"],
-    "note": ""
-  },
-  {
-    "name": "Pointer",
-    "style": "fa-solid",
-    "icon": "fa-mouse-pointer",
-    "search": "mouse pointer cursor",
     "category": ["UI"],
     "note": ""
   },
@@ -1392,14 +1344,6 @@
     "note": ""
   },
   {
-    "name": "Close Circle",
-    "style": "fa-solid",
-    "icon": "fa-circle-xmark",
-    "search": "close x end escape exit stop end cancel",
-    "category": ["UI"],
-    "note": ""
-  },
-  {
     "name": "Toggle On",
     "style": "fa-solid",
     "icon": "fa-toggle-on",
@@ -1484,7 +1428,7 @@
     "style": "fak",
     "icon": "fa-add-hexagon",
     "search": "add create new plus expand solid",
-    "category": ["admin", "UI", "CRUD", "CRUD-alt", "popular-alt"],
+    "category": ["admin", "UI", "CRUD-alt", "popular-alt"],
     "note": "An alternative icon for adding a new record in CRUD style operations. We recommend using the preferred icon `fa-add-circle`."
   },
   {
@@ -1492,7 +1436,7 @@
     "style": "fak",
     "icon": "fa-add-octagon",
     "search": "add create new plus expand solid",
-    "category": ["admin", "UI", "CRUD", "CRUD-alt", "popular-alt"],
+    "category": ["admin", "UI", "CRUD-alt", "popular-alt"],
     "note": "An alternative icon for adding a new record in CRUD style operations. We recommend using the preferred icon `fa-add-circle`."
   },
   {
@@ -1500,7 +1444,7 @@
     "style": "fak",
     "icon": "fa-add-square",
     "search": "add create new plus expand solid",
-    "category": ["admin", "UI", "CRUD", "CRUD-alt", "popular-alt"],
+    "category": ["admin", "UI", "CRUD-alt", "popular-alt"],
     "note": "An alternative icon for adding a new record in CRUD style operations. We recommend using the preferred icon `fa-add-circle`."
   },
   {
@@ -1508,7 +1452,7 @@
     "style": "fak",
     "icon": "fa-add",
     "search": "add create new plus expand solid",
-    "category": ["admin", "UI", "CRUD", "CRUD-alt", "popular-alt"],
+    "category": ["admin", "UI", "CRUD-alt", "popular-alt"],
     "note": "An alternative icon for adding a new record in CRUD style operations. We recommend using the preferred icon `fa-add-circle`."
   },
   {
@@ -1524,7 +1468,7 @@
     "style": "fak",
     "icon": "fa-delete-hexagon",
     "search": "delete remove end contract collapse destroy minus solid",
-    "category": ["admin", "UI", "CRUD", "CRUD-alt", "popular-alt"],
+    "category": ["admin", "UI", "CRUD-alt", "popular-alt"],
     "note": "An alternative icon for deleting a record in CRUD style operations. We recommend using the preferred icon `fa-delete-circle`."
   },
   {
@@ -1532,7 +1476,7 @@
     "style": "fak",
     "icon": "fa-delete-octagon",
     "search": "delete remove end contract collapse destroy minus solid",
-    "category": ["admin", "UI", "CRUD", "CRUD-alt", "popular-alt"],
+    "category": ["admin", "UI", "CRUD-alt", "popular-alt"],
     "note": "An alternative icon for deleting a record in CRUD style operations. We recommend using the preferred icon `fa-delete-circle`."
   },
   {
@@ -1540,7 +1484,7 @@
     "style": "fak",
     "icon": "fa-delete-square",
     "search": "delete remove end contract collapse destroy minus solid",
-    "category": ["admin", "UI", "CRUD", "CRUD-alt", "popular-alt"],
+    "category": ["admin", "UI", "CRUD-alt", "popular-alt"],
     "note": "An alternative icon for deleting a record in CRUD style operations. We recommend using the preferred icon `fa-delete-circle`."
   },
   {
@@ -1548,7 +1492,7 @@
     "style": "fak",
     "icon": "fa-delete",
     "search": "delete remove end contract collapse destroy minus solid",
-    "category": ["admin", "UI", "CRUD", "CRUD-alt", "popular-alt"],
+    "category": ["admin", "UI", "CRUD-alt", "popular-alt"],
     "note": "An alternative icon for deleting a record in CRUD style operations. We recommend using the preferred icon `fa-delete-circle`."
   },
   {
@@ -1572,7 +1516,7 @@
     "style": "fa-solid",
     "icon": "fa-square-chevron-right",
     "search": "read show view display visit select go",
-    "category": ["admin", "UI", "CRUD", "CRUD-alt", "popular-alt"],
+    "category": ["admin", "UI", "CRUD-alt", "popular-alt"],
     "note": "An alternative icon for displaying a record in CRUD style operations. We recommend using the preferred icon `fa-circle-chevron-right`."
   },
   {
@@ -1589,7 +1533,7 @@
     "icon": "fa-cancel-circle",
     "search": "cancel close end hide remove escape return undo",
     "category": ["admin", "UI", "popular"],
-    "note": "Our preferred icon for adding a new record in CRUD style operations."
+    "note": "For canceling a process or modal. Not delete."
   },
   {
     "name": "Alternative for Cancel",
@@ -1622,6 +1566,62 @@
     "search": "cancel close end hide remove escape return undo",
     "category": ["admin", "UI", "popular-alt"],
     "note": "An alternative icon for canceling an action or closing a window. We recommend using the preferred icon `fa-cancel-circle`."
+  },
+  {
+    "name": "Sign-In & Login",
+    "style": "fa-solid",
+    "icon": "fa-person-to-portal",
+    "search": "user login signin log-in sign-in consumer account",
+    "category": ["UI", "users", "popular"],
+    "note": "The preferred icon for Sign-In and Login."
+  },
+  {
+    "name": "Sign-Up & Registration",
+    "style": "fa-solid",
+    "icon": "fa-user-plus",
+    "search": "user signup sign-up registration register consumer account",
+    "category": ["UI", "users", "popular"],
+    "note": "The preferred icon for creating a new consumer account."
+  },
+  {
+    "name": "Alternative for Sign-In",
+    "style": "fa-solid",
+    "icon": "fa-person-walking-arrow-right",
+    "search": "user login signin log-in sign-in consumer account",
+    "category": ["UI", "users", "popular-alt"],
+    "note": "An alternative icon for Sign-In & Login. We recommend using the preferred icon `fa-person-to-portal`."
+  },
+  {
+    "name": "Sign-Out & Logout",
+    "style": "fa-solid",
+    "icon": "fa-person-from-portal",
+    "search": "user logout signout log-out sign-out consumer account",
+    "category": ["UI", "users", "popular"],
+    "note": "The preferred icon for Sign-Out and Logout."
+  },
+  {
+    "name": "Edit Account",
+    "style": "fa-solid",
+    "icon": "fa-user-pen",
+    "search": "user profile update edit consumer account",
+    "category": ["UI", "users", "popular"],
+    "note": "The preferred icon for Profile Updates."
+  },
+  {
+    "name": "Account Confirmation",
+    "style": "fa-solid",
+    "icon": "fa-user-check",
+    "search": "user confirmation success consumer account",
+    "category": ["UI", "users", "popular"],
+    "note": "The preferred icon for successful consumer account interactions."
+  },
+  {
+    "name": "Account Settings",
+    "style": "fa-solid",
+    "icon": "fa-user-gear",
+    "search": "user settings consumer account",
+    "category": ["UI", "users", "popular"],
+    "note": "The preferred icon for editing consumer settings or options."
   }
 
 ]
