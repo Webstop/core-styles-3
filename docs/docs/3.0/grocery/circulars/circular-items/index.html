@@ -576,15 +576,14 @@
         <div class="row justify-content-end">
           <div class="shopping-list-item-qty-col col-12 col-sm">
             <div class="shopping-list-item-qty-group input-group ">
-              <div class="input-group-prepend">
-                <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
-              </div>
-              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control"  id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
+
+              <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
+              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control" placeholder="01" id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
             </div>
           </div>
           <div class="shopping-list-item-btn-col col-12 col-sm-auto">
             <button type="submit" class="shopping-list-item-btn btn btn-primary btn-block btn-sm-inline-block">
-              <i class="icon-plus-circle-solid"></i>
+              <i class="fak fa-add-circle"></i>
               <span class="d-inline d-sm-none">Add to</span>
               <span class="d-none d-sm-inline"><span class="sr-only">Add to </span>Shopping</span>
               List
@@ -613,8 +612,8 @@
     <p class="circular-item-description">Enter before 10/11/2020! Entry form, rules, and other details in the link below.</p>
   </div>
   <div class="circular-item-footer card-footer">
-    <button class="circular-item-button btn btn-primary btn-block" target="_blank">
-        Learn More & Enter! <i class="icon-arrow-right"></i>
+    <button class="circular-item-button btn btn-primary d-block w-100" target="_blank">
+        Learn More & Enter! <i class="fa-solid fa-angle-right"></i>
       </button>
   </div>
 </article>
@@ -668,15 +667,14 @@
         <div class="row justify-content-end">
           <div class="shopping-list-item-qty-col col-12 col-sm">
             <div class="shopping-list-item-qty-group input-group ">
-              <div class="input-group-prepend">
-                <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
-              </div>
-              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control"  id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
+
+              <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
+              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control" placeholder="01" id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
             </div>
           </div>
           <div class="shopping-list-item-btn-col col-12 col-sm-auto">
             <button type="submit" class="shopping-list-item-btn btn btn-primary btn-block btn-sm-inline-block">
-              <i class="icon-plus-circle-solid"></i>
+              <i class="fak fa-add-circle"></i>
               <span class="d-inline d-sm-none">Add to</span>
               <span class="d-none d-sm-inline"><span class="sr-only">Add to </span>Shopping</span>
               List
@@ -716,9 +714,9 @@
   <div class="circular-item-footer card-footer">
         <div class="shopping-list-item">
       <form action="/shopping_list/add/circular_item/:id/qty/" class="shopping-list-item-form">
-        <div class="text-sm-right">
+        <div class="text-sm-end">
           <button type="submit" class="btn btn-primary btn-block btn-sm-inline-block">
-            <i class="icon-plus-circle-solid"></i> Clip Coupon
+            <i class="fak fa-add-circle"></i> Clip Coupon
           </button>
         </div>
       </form>
@@ -737,15 +735,18 @@
       <article class="circular-item circular-item-coupon card card-standard col"  id="circular-item-1">
   <div class="circular-item-body card-body">
 
-    <div class="media">
-      <img src="/assets/images/circular-items/dove_coupon.png" alt="Picture of Offer Products" class="circular-item-image img-fluid">
+    <div class="d-flex">
+      <div class="flex-shrink-0">
+        <img src="/assets/images/circular-items/dove_coupon.png" alt="Picture of Offer Products" class="circular-item-image img-fluid">
+      </div>
 
-      <div class="media-body">
+      <div class="flex-grow-1 ms-3">
         <h3 class="circular-item-title">Save $1.00</h3>
         <p class="circular-item-description">on any ONE (1) Dove Body Wash (22 oz. or larger) or Shower Foam (13.5 oz.) (excludes trial and travel sizes and Dove Men+Care)</p>
         <p class="circular-item-expiration-date text-muted text-right">Expires: 10/30/2020</p>
       </div>
     </div>
+
 
     <p class="circular-item-recipe">
       <span class="circular-item-recipe-label">Recipe:</span>
@@ -760,7 +761,7 @@
           <fieldset>
             <input type="hidden" name="URL" value="WeeklyAd/Index/" id="URL0_2">
               <button type="submit" class="btn btn-primary">
-                <i class="icon-plus-circle-solid"></i> Add Coupon
+                <i class="fak fa-add-circle"></i> Add Coupon
               </button>
           </fieldset>
         </form>
@@ -801,7 +802,7 @@
 <h2 id="example-grid-of-mixed-circular-items">Example Grid of Mixed Circular Items</h2>
 <div class="wsg-example">
   <div class="row">
-    <div class="col-12">
+      <div class="col-12">
   <article class="circular-item circular-item-banner card card-standard" id="circular-item-1">
     <a class="circular-item-link" href="https://www.topsmarkets.com/Recipes/Detail/8288/Creamy_Corn_Filled_Sweet_Peppers/">
       <img src="/assets/images/circular-items/banner-image.jpg" alt="What is Naturally Raised Organic Meat? Click to Watch Video." class="circular-item-banner-image card-img img-fluid">
@@ -809,7 +810,7 @@
   </article>
 </div>
 
-    <article class="circular-item circular-item-standard-promotion card card-standard col"  id="circular-item-1">
+      <article class="circular-item circular-item-standard-promotion card card-standard col"  id="circular-item-1">
   <a class="circular-item-standard-promotion-link" href="https://www.topsmarkets.com/Recipes/Detail/8288/Creamy_Corn_Filled_Sweet_Peppers/">
     <img src="/assets/images/image-items/recipe_8288_2k_square.jpg" alt="Picture of Sweet Corn Recipe Contest!" class="circular-item-image card-img-top img-fluid">
   </a>
@@ -818,15 +819,15 @@
     <p class="circular-item-description">Enter before 10/11/2020! Entry form, rules, and other details in the link below.</p>
   </div>
   <div class="circular-item-footer card-footer">
-    <button class="circular-item-button btn btn-primary btn-block" target="_blank">
-        Learn More & Enter! <i class="icon-arrow-right"></i>
+    <button class="circular-item-button btn btn-primary d-block w-100" target="_blank">
+        Learn More & Enter! <i class="fa-solid fa-angle-right"></i>
       </button>
   </div>
 </article>
 
 
 
-    <article class="circular-item circular-item-standard card card-standard col" id="circular-item-1">
+      <article class="circular-item circular-item-standard card card-standard col" id="circular-item-1">
   <img src="/assets/images/circular-items/sweet_corn_1k.jpg" alt="Picture of Homegrown Amaize! Sweet Corn" class="circular-item-image card-img-top img-fluid">
   <div class="circular-item-body card-body">
     <p class="circular-item-heading">LOCAL! Amaize! Sweet Corn - The Best Corn You'll Ever Eat!</p>
@@ -859,15 +860,14 @@
         <div class="row justify-content-end">
           <div class="shopping-list-item-qty-col col-12 col-sm">
             <div class="shopping-list-item-qty-group input-group ">
-              <div class="input-group-prepend">
-                <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
-              </div>
-              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control"  id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
+
+              <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
+              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control" placeholder="01" id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
             </div>
           </div>
           <div class="shopping-list-item-btn-col col-12 col-sm-auto">
             <button type="submit" class="shopping-list-item-btn btn btn-primary btn-block btn-sm-inline-block">
-              <i class="icon-plus-circle-solid"></i>
+              <i class="fak fa-add-circle"></i>
               <span class="d-inline d-sm-none">Add to</span>
               <span class="d-none d-sm-inline"><span class="sr-only">Add to </span>Shopping</span>
               List
@@ -880,7 +880,7 @@
   </div>
 </article>
 
-    <article class="circular-item circular-item-standard card card-standard col" id="circular-item-1">
+      <article class="circular-item circular-item-standard card card-standard col" id="circular-item-1">
   <img src="/assets/images/circular-items/sweet_corn_1k.jpg" alt="Picture of Homegrown Amaize! Sweet Corn" class="circular-item-image card-img-top img-fluid">
   <div class="circular-item-body card-body">
     <p class="circular-item-heading">LOCAL! Amaize! Sweet Corn - The Best Corn You'll Ever Eat!</p>
@@ -913,15 +913,14 @@
         <div class="row justify-content-end">
           <div class="shopping-list-item-qty-col col-12 col-sm">
             <div class="shopping-list-item-qty-group input-group ">
-              <div class="input-group-prepend">
-                <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
-              </div>
-              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control"  id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
+
+              <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
+              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control" placeholder="01" id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
             </div>
           </div>
           <div class="shopping-list-item-btn-col col-12 col-sm-auto">
             <button type="submit" class="shopping-list-item-btn btn btn-primary btn-block btn-sm-inline-block">
-              <i class="icon-plus-circle-solid"></i>
+              <i class="fak fa-add-circle"></i>
               <span class="d-inline d-sm-none">Add to</span>
               <span class="d-none d-sm-inline"><span class="sr-only">Add to </span>Shopping</span>
               List
@@ -934,18 +933,21 @@
   </div>
 </article>
 
-    <article class="circular-item circular-item-coupon card card-standard col"  id="circular-item-1">
+      <article class="circular-item circular-item-coupon card card-standard col"  id="circular-item-1">
   <div class="circular-item-body card-body">
 
-    <div class="media">
-      <img src="/assets/images/circular-items/dove_coupon.png" alt="Picture of Offer Products" class="circular-item-image img-fluid">
+    <div class="d-flex">
+      <div class="flex-shrink-0">
+        <img src="/assets/images/circular-items/dove_coupon.png" alt="Picture of Offer Products" class="circular-item-image img-fluid">
+      </div>
 
-      <div class="media-body">
+      <div class="flex-grow-1 ms-3">
         <h3 class="circular-item-title">Save $1.00</h3>
         <p class="circular-item-description">on any ONE (1) Dove Body Wash (22 oz. or larger) or Shower Foam (13.5 oz.) (excludes trial and travel sizes and Dove Men+Care)</p>
         <p class="circular-item-expiration-date text-muted text-right">Expires: 10/30/2020</p>
       </div>
     </div>
+
 
     <p class="circular-item-recipe">
       <span class="circular-item-recipe-label">Recipe:</span>
@@ -960,7 +962,7 @@
           <fieldset>
             <input type="hidden" name="URL" value="WeeklyAd/Index/" id="URL0_2">
               <button type="submit" class="btn btn-primary">
-                <i class="icon-plus-circle-solid"></i> Add Coupon
+                <i class="fak fa-add-circle"></i> Add Coupon
               </button>
           </fieldset>
         </form>
@@ -969,7 +971,7 @@
   </div>
 </article>
 
-    <article class="circular-item circular-item-standard card card-standard col" id="circular-item-1">
+      <article class="circular-item circular-item-standard card card-standard col" id="circular-item-1">
   <img src="/assets/images/circular-items/sweet_corn_1k.jpg" alt="Picture of Homegrown Amaize! Sweet Corn" class="circular-item-image card-img-top img-fluid">
   <div class="circular-item-body card-body">
     <p class="circular-item-heading">LOCAL! Amaize! Sweet Corn - The Best Corn You'll Ever Eat!</p>
@@ -1002,15 +1004,14 @@
         <div class="row justify-content-end">
           <div class="shopping-list-item-qty-col col-12 col-sm">
             <div class="shopping-list-item-qty-group input-group ">
-              <div class="input-group-prepend">
-                <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
-              </div>
-              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control"  id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
+
+              <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
+              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control" placeholder="01" id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
             </div>
           </div>
           <div class="shopping-list-item-btn-col col-12 col-sm-auto">
             <button type="submit" class="shopping-list-item-btn btn btn-primary btn-block btn-sm-inline-block">
-              <i class="icon-plus-circle-solid"></i>
+              <i class="fak fa-add-circle"></i>
               <span class="d-inline d-sm-none">Add to</span>
               <span class="d-none d-sm-inline"><span class="sr-only">Add to </span>Shopping</span>
               List
@@ -1023,7 +1024,7 @@
   </div>
 </article>
 
-    <article class="circular-item circular-item-standard card card-standard col" id="circular-item-1">
+      <article class="circular-item circular-item-standard card card-standard col" id="circular-item-1">
   <img src="/assets/images/circular-items/sweet_corn_1k.jpg" alt="Picture of Homegrown Amaize! Sweet Corn" class="circular-item-image card-img-top img-fluid">
   <div class="circular-item-body card-body">
     <p class="circular-item-heading">LOCAL! Amaize! Sweet Corn - The Best Corn You'll Ever Eat!</p>
@@ -1056,15 +1057,14 @@
         <div class="row justify-content-end">
           <div class="shopping-list-item-qty-col col-12 col-sm">
             <div class="shopping-list-item-qty-group input-group ">
-              <div class="input-group-prepend">
-                <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
-              </div>
-              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control"  id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
+
+              <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
+              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control" placeholder="01" id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
             </div>
           </div>
           <div class="shopping-list-item-btn-col col-12 col-sm-auto">
             <button type="submit" class="shopping-list-item-btn btn btn-primary btn-block btn-sm-inline-block">
-              <i class="icon-plus-circle-solid"></i>
+              <i class="fak fa-add-circle"></i>
               <span class="d-inline d-sm-none">Add to</span>
               <span class="d-none d-sm-inline"><span class="sr-only">Add to </span>Shopping</span>
               List
@@ -1077,7 +1077,7 @@
   </div>
 </article>
 
-    <div class="col-12">
+      <div class="col-12">
   <article class="circular-item circular-item-banner card card-standard" id="circular-item-1">
     <a class="circular-item-link" href="https://www.topsmarkets.com/Recipes/Detail/8288/Creamy_Corn_Filled_Sweet_Peppers/">
       <img src="/assets/images/circular-items/banner-image.jpg" alt="What is Naturally Raised Organic Meat? Click to Watch Video." class="circular-item-banner-image card-img img-fluid">
@@ -1085,7 +1085,7 @@
   </article>
 </div>
 
-    <article class="circular-item circular-item-standard-promotion card card-standard col"  id="circular-item-1">
+      <article class="circular-item circular-item-standard-promotion card card-standard col"  id="circular-item-1">
   <a class="circular-item-standard-promotion-link" href="https://www.topsmarkets.com/Recipes/Detail/8288/Creamy_Corn_Filled_Sweet_Peppers/">
     <img src="/assets/images/image-items/recipe_8288_2k_square.jpg" alt="Picture of Sweet Corn Recipe Contest!" class="circular-item-image card-img-top img-fluid">
   </a>
@@ -1094,15 +1094,15 @@
     <p class="circular-item-description">Enter before 10/11/2020! Entry form, rules, and other details in the link below.</p>
   </div>
   <div class="circular-item-footer card-footer">
-    <button class="circular-item-button btn btn-primary btn-block" target="_blank">
-        Learn More & Enter! <i class="icon-arrow-right"></i>
+    <button class="circular-item-button btn btn-primary d-block w-100" target="_blank">
+        Learn More & Enter! <i class="fa-solid fa-angle-right"></i>
       </button>
   </div>
 </article>
 
 
 
-    <article class="circular-item circular-item-thumbnail card card-standard col" id="circular-item-1">
+      <article class="circular-item circular-item-thumbnail card card-standard col" id="circular-item-1">
   <div class="circular-item-body card-body">
     <div class="circluar-item-top-row ">
       <div class="circular-item-images">
@@ -1142,15 +1142,14 @@
         <div class="row justify-content-end">
           <div class="shopping-list-item-qty-col col-12 col-sm">
             <div class="shopping-list-item-qty-group input-group ">
-              <div class="input-group-prepend">
-                <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
-              </div>
-              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control"  id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
+
+              <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
+              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control" placeholder="01" id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
             </div>
           </div>
           <div class="shopping-list-item-btn-col col-12 col-sm-auto">
             <button type="submit" class="shopping-list-item-btn btn btn-primary btn-block btn-sm-inline-block">
-              <i class="icon-plus-circle-solid"></i>
+              <i class="fak fa-add-circle"></i>
               <span class="d-inline d-sm-none">Add to</span>
               <span class="d-none d-sm-inline"><span class="sr-only">Add to </span>Shopping</span>
               List
@@ -1163,7 +1162,7 @@
   </div>
 </article>
 
-    <article class="circular-item circular-item-thumbnail card card-standard col" id="circular-item-1">
+      <article class="circular-item circular-item-thumbnail card card-standard col" id="circular-item-1">
   <div class="circular-item-body card-body">
     <div class="circluar-item-top-row ">
       <div class="circular-item-images">
@@ -1203,15 +1202,14 @@
         <div class="row justify-content-end">
           <div class="shopping-list-item-qty-col col-12 col-sm">
             <div class="shopping-list-item-qty-group input-group ">
-              <div class="input-group-prepend">
-                <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
-              </div>
-              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control"  id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
+
+              <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
+              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control" placeholder="01" id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
             </div>
           </div>
           <div class="shopping-list-item-btn-col col-12 col-sm-auto">
             <button type="submit" class="shopping-list-item-btn btn btn-primary btn-block btn-sm-inline-block">
-              <i class="icon-plus-circle-solid"></i>
+              <i class="fak fa-add-circle"></i>
               <span class="d-inline d-sm-none">Add to</span>
               <span class="d-none d-sm-inline"><span class="sr-only">Add to </span>Shopping</span>
               List
@@ -1224,18 +1222,21 @@
   </div>
 </article>
 
-    <article class="circular-item circular-item-coupon card card-standard col"  id="circular-item-1">
+      <article class="circular-item circular-item-coupon card card-standard col"  id="circular-item-1">
   <div class="circular-item-body card-body">
 
-    <div class="media">
-      <img src="/assets/images/circular-items/dove_coupon.png" alt="Picture of Offer Products" class="circular-item-image img-fluid">
+    <div class="d-flex">
+      <div class="flex-shrink-0">
+        <img src="/assets/images/circular-items/dove_coupon.png" alt="Picture of Offer Products" class="circular-item-image img-fluid">
+      </div>
 
-      <div class="media-body">
+      <div class="flex-grow-1 ms-3">
         <h3 class="circular-item-title">Save $1.00</h3>
         <p class="circular-item-description">on any ONE (1) Dove Body Wash (22 oz. or larger) or Shower Foam (13.5 oz.) (excludes trial and travel sizes and Dove Men+Care)</p>
         <p class="circular-item-expiration-date text-muted text-right">Expires: 10/30/2020</p>
       </div>
     </div>
+
 
     <p class="circular-item-recipe">
       <span class="circular-item-recipe-label">Recipe:</span>
@@ -1250,7 +1251,7 @@
           <fieldset>
             <input type="hidden" name="URL" value="WeeklyAd/Index/" id="URL0_2">
               <button type="submit" class="btn btn-primary">
-                <i class="icon-plus-circle-solid"></i> Add Coupon
+                <i class="fak fa-add-circle"></i> Add Coupon
               </button>
           </fieldset>
         </form>
@@ -1259,7 +1260,7 @@
   </div>
 </article>
 
-    <article class="circular-item circular-item-thumbnail card card-standard col" id="circular-item-1">
+      <article class="circular-item circular-item-thumbnail card card-standard col" id="circular-item-1">
   <div class="circular-item-body card-body">
     <div class="circluar-item-top-row ">
       <div class="circular-item-images">
@@ -1299,15 +1300,14 @@
         <div class="row justify-content-end">
           <div class="shopping-list-item-qty-col col-12 col-sm">
             <div class="shopping-list-item-qty-group input-group ">
-              <div class="input-group-prepend">
-                <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
-              </div>
-              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control"  id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
+
+              <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
+              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control" placeholder="01" id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
             </div>
           </div>
           <div class="shopping-list-item-btn-col col-12 col-sm-auto">
             <button type="submit" class="shopping-list-item-btn btn btn-primary btn-block btn-sm-inline-block">
-              <i class="icon-plus-circle-solid"></i>
+              <i class="fak fa-add-circle"></i>
               <span class="d-inline d-sm-none">Add to</span>
               <span class="d-none d-sm-inline"><span class="sr-only">Add to </span>Shopping</span>
               List
@@ -1320,7 +1320,7 @@
   </div>
 </article>
 
-    <article class="circular-item circular-item-thumbnail card card-standard col" id="circular-item-1">
+      <article class="circular-item circular-item-thumbnail card card-standard col" id="circular-item-1">
   <div class="circular-item-body card-body">
     <div class="circluar-item-top-row ">
       <div class="circular-item-images">
@@ -1360,15 +1360,14 @@
         <div class="row justify-content-end">
           <div class="shopping-list-item-qty-col col-12 col-sm">
             <div class="shopping-list-item-qty-group input-group ">
-              <div class="input-group-prepend">
-                <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
-              </div>
-              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control"  id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
+
+              <span class="shopping-list-item-qty-label input-group-text" id="shopping-list-qty-label-1">Qty</span>
+              <input type="text" name="Qty" value="12" maxlength="2" class="shopping-list-item-qty form-control" placeholder="01" id="shopping-list-item-qty-1" aria-label="Username" aria-describedby="shopping-list-qty-label-1">
             </div>
           </div>
           <div class="shopping-list-item-btn-col col-12 col-sm-auto">
             <button type="submit" class="shopping-list-item-btn btn btn-primary btn-block btn-sm-inline-block">
-              <i class="icon-plus-circle-solid"></i>
+              <i class="fak fa-add-circle"></i>
               <span class="d-inline d-sm-none">Add to</span>
               <span class="d-none d-sm-inline"><span class="sr-only">Add to </span>Shopping</span>
               List

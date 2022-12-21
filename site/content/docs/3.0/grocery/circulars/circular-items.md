@@ -92,20 +92,19 @@ menu:
 
 <div class="wsg-example">
   <div class="row">
-    {{< circular/circular-item-banner-example >}}
-    {{< circular/circular-item-standard-promotion-example >}}
-    {{< circular/circular-item-standard-example >}}
-    {{< circular/circular-item-standard-example >}}
-    {{< circular/circular-item-coupon-example >}}
-    {{< circular/circular-item-standard-example >}}
-    {{< circular/circular-item-standard-example >}}
-    {{< circular/circular-item-banner-example >}}
-    {{< circular/circular-item-standard-promotion-example >}}
-    {{< circular/circular-item-thumbnail-example >}}
-    {{< circular/circular-item-thumbnail-example >}}
-    {{< circular/circular-item-coupon-example >}}
-    {{< circular/circular-item-thumbnail-example >}}
-    {{< circular/circular-item-thumbnail-example >}}
-
+      {{< circular/circular-item-banner-example >}}
+      {{< circular/circular-item-standard-promotion-example >}}
+      {{< circular/circular-item-standard-example >}}
+      {{< circular/circular-item-standard-example >}}
+      {{< circular/circular-item-coupon-example >}}
+      {{< circular/circular-item-standard-example >}}
+      {{< circular/circular-item-standard-example >}}
+      {{< circular/circular-item-banner-example >}}
+      {{< circular/circular-item-standard-promotion-example >}}
+      {{< circular/circular-item-thumbnail-example >}}
+      {{< circular/circular-item-thumbnail-example >}}
+      {{< circular/circular-item-coupon-example >}}
+      {{< circular/circular-item-thumbnail-example >}}
+      {{< circular/circular-item-thumbnail-example >}}
   </div>
 </div>

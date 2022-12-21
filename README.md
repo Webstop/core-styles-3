@@ -97,3 +97,9 @@ you can only use bash through the special `bash` container. The bash container
 is based on the same Hugo image as the other containers but it starts with the 
 bash command instead of the hugo command, and it installs Sass in a global 
 context to you have access to the `sass` command.
+
+## CSS Compiling issue
+
+There is currently an issue with the recompiling scripts. Although they seem to run, they do not actually automatically compile the css as desired. In order to work around this, use the `bash` container mentioned above and run the following<br>
+**npm run css-compile-docs** - manually compiles the css for the documentation site<br>
+**npm run css-compile** - manually compiles the css outside the documentation site

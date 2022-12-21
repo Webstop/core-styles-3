@@ -11795,6 +11795,7 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
   }
   .circular-item.card {
     margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
   }
 }
 .circular-item.circular-item-max {
@@ -12022,6 +12023,26 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
   padding-right: 5px;
   text-align: left;
 }
+.circular-item-standard.circular-item-price-top .circular-item-body {
+  position: relative;
+  padding-top: calc(1rem + 48px);
+}
+.circular-item-standard.circular-item-price-top .price {
+  position: absolute;
+  top: calc(1rem / 2);
+  text-align: center;
+  width: 100%;
+}
+.circular-item-standard.circular-item-price-bottom .circular-item-body {
+  position: relative;
+  padding-bottom: calc(1rem + 48px);
+}
+.circular-item-standard.circular-item-price-bottom .price {
+  position: absolute;
+  bottom: calc(1rem / 2);
+  text-align: center;
+  width: 100%;
+}
 @media (min-width: 576px) {
   .circular-item-standard .circular-item-body {
     padding: 10px;
@@ -12217,6 +12238,26 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
   padding-left: 5px;
   padding-right: 5px;
   text-align: left;
+}
+.circular-item-standard.circular-item-price-top .circular-item-body {
+  position: relative;
+  padding-top: calc(1rem + 48px);
+}
+.circular-item-standard.circular-item-price-top .price {
+  position: absolute;
+  top: calc(1rem / 2);
+  text-align: center;
+  width: 100%;
+}
+.circular-item-standard.circular-item-price-bottom .circular-item-body {
+  position: relative;
+  padding-bottom: calc(1rem + 48px);
+}
+.circular-item-standard.circular-item-price-bottom .price {
+  position: absolute;
+  bottom: calc(1rem / 2);
+  text-align: center;
+  width: 100%;
 }
 @media (min-width: 576px) {
   .circular-item-standard .circular-item-body {
