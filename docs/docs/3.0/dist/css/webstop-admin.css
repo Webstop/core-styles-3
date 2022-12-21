@@ -11795,6 +11795,7 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
   }
   .circular-item.card {
     margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
   }
 }
 .circular-item.circular-item-max {
