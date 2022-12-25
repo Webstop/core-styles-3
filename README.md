@@ -151,3 +151,12 @@ when tagging a release on the Github website.
 2. Then run `npm update`
 
 Now you should have the latest version of the node module installed in your app.
+
+## CSS Compiling issue
+
+There is currently an issue with the recompiling scripts. Although they seem to run, they do not actually automatically compile the css as desired. 
+In order to work around this, use the `bash` container mentioned above and run the following
+
+- **npm run css-compile-docs**: manually compiles the css for the documentation & development site.
+- **npm run css-compile**: manually compiles the css for production distribution (places it in the `dist` folder).
+

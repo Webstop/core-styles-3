@@ -26,6 +26,7 @@
     min-width: $circular-sm-min-column-width;
     &.card {
       margin-right: $grid-gutter-width/2;
+      margin-bottom: $grid-gutter-width/2;
     }
   }
 
