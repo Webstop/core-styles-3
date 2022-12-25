@@ -1,6 +1,6 @@
 {
   "name": "core-styles-3",
-  "version": "3.0.0-beta-1",
+  "version": "3.0.0-beta-2",
   "description": "Design System for Webstop's grocery websites.",
   "author": "Greg Hemphill",
   "license": "private",
@@ -18,7 +18,8 @@
     "NA-watch-css-main": "nodemon -L --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
     "watch-css-docs": "nodemon -L --watch site/assets/scss/ --ext scss --exec \"npm run css-compile-docs\"",
     "js-move": "cp -R ./js ./dist",
-    "js-move-docs": "cp -R ./js/ ./site/static/js/core-styles"
+    "js-move-docs": "cp -R ./js ./site/static/js/core-styles",
+    "dist": "npm-run-all --parallel js-move css-compile"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,7 @@
   },
   "homepage": "https://guides.webstop.com/",
   "dependencies": {
-    "bootstrap": "^5.1.3"
+    "bootstrap": "^5.2.3"
   },
   "peerDependencies": {
     "@popperjs/core": "^2.11.5"
