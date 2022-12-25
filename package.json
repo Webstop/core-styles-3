@@ -16,7 +16,9 @@
     "watch": "npm-run-all --parallel watch-*",
     "watch-css-main": "nodemon -L --watch scss/ --ext scss --exec \"npm-run-all css-compile\"",
     "NA-watch-css-main": "nodemon -L --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
-    "watch-css-docs": "nodemon -L --watch site/assets/scss/ --ext scss --exec \"npm run css-compile-docs\""
+    "watch-css-docs": "nodemon -L --watch site/assets/scss/ --ext scss --exec \"npm run css-compile-docs\"",
+    "js-move": "cp -R ./js ./dist",
+    "js-move-docs": "cp -R ./js/ ./site/static/js/core-styles"
   },
   "repository": {
     "type": "git",
