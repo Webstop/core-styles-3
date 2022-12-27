@@ -46,28 +46,28 @@ Tower (2k) Square Image Circular Item.
   <div class="col text-center">
     <h5>10 Characters</h5>
     <button class="circular-image-item-button btn btn-primary  mb-2" style="width: 223px;">
-      1234567890 <i class="icon-arrow-right"></i>
+      1234567890 <i class="fa-solid fa-angle-right"></i>
     </button>
     <p>Short text like the 10 character example will nicely center in the button at any size.</p>
   </div>
   <div class="col text-center">
     <h5>18 Characters</h5>
     <button class="circular-image-item-button btn btn-primary  mb-2" style="width: 223px;">
-      123456789012345678 <i class="icon-arrow-right"></i>
+      123456789012345678 <i class="fa-solid fa-angle-right"></i>
     </button>
     <p>18 characters is about as big as we can get without the button design looking broken.</p>
   </div>
   <div class="col text-center">
     <h5>20 Characters</h5>
     <button class="circular-image-item-button btn btn-primary  mb-2" style="width: 223px;">
-      12345678901234567890 <i class="icon-arrow-right"></i>
+      12345678901234567890 <i class="fa-solid fa-angle-right"></i>
     </button>
     <p>At 20 characters the right arrow is uncomfortably close to the right side, it looks like a design mistake.</p>
    </div>
   <div class="col text-center">
     <h5>23 Characters</h5>
     <button class="circular-image-item-button btn btn-primary  mb-2" style="width: 223px;">
-      12345678901234567890123 <i class="icon-arrow-right"></i>
+      12345678901234567890123 <i class="fa-solid fa-angle-right"></i>
     </button>
     <p>23 characters pushes content off the edge of the button, which is hidden from view.</p>
   </div>
@@ -79,25 +79,25 @@ The following button examples are effective calls to action. They are forced to 
 (`223px`) used in a Tower (2k) Square Image Circular Item.
 
 <button class="circular-image-item-button btn btn-primary  mb-2" style="width: 223px;">
-  Learn More! <i class="icon-arrow-right"></i>
+  Learn More! <i class="fa-solid fa-angle-right"></i>
 </button>
 <button class="circular-image-item-button btn btn-primary  mb-2" style="width: 223px;">
-  Click Here! <i class="icon-arrow-right"></i>
+  Click Here! <i class="fa-solid fa-angle-right"></i>
 </button>
 <button class="circular-image-item-button btn btn-primary  mb-2" style="width: 223px;">
-  Enter Contest! <i class="icon-arrow-right"></i>
+  Enter Contest! <i class="fa-solid fa-angle-right"></i>
 </button>
 <button class="circular-image-item-button btn btn-primary  mb-2" style="width: 223px;">
-  Subscribe! <i class="icon-arrow-right"></i>
+  Subscribe! <i class="fa-solid fa-angle-right"></i>
 </button>
 <button class="circular-image-item-button btn btn-primary  mb-2" style="width: 223px;">
-  Newsletter Sign-Up! <i class="icon-arrow-right"></i>
+  Newsletter Sign-Up! <i class="fa-solid fa-angle-right"></i>
 </button>
 <button class="circular-image-item-button btn btn-primary  mb-2" style="width: 223px;">
-  Enter To Win! <i class="icon-arrow-right"></i>
+  Enter To Win! <i class="fa-solid fa-angle-right"></i>
 </button>
 <button class="circular-image-item-button btn btn-primary  mb-2" style="width: 223px;">
-  Watch Video! <i class="icon-arrow-right"></i>
+  Watch Video! <i class="fa-solid fa-angle-right"></i>
 </button>
 
 #### Grid of Standard Promotion Circular Items
