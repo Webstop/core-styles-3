@@ -11794,8 +11794,12 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
     min-width: 265px;
   }
   .circular-item.card {
+    padding-left: 0px;
+    padding-right: 0px;
     margin-right: 0.75rem;
     margin-bottom: 0.75rem;
+    margin-left: 0.75rem;
+    margin-top: 0.75rem;
   }
 }
 .circular-item.circular-item-max {
@@ -12077,9 +12081,6 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .circular-item-standard .shopping-list-item-qty-col {
-    padding-left: 0;
-  }
 }
 
 .circular-item-standard-coupon {
@@ -12292,9 +12293,6 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
   .circular-item-standard .circular-item-recipe {
     padding-left: 10px;
     padding-right: 10px;
-  }
-  .circular-item-standard .shopping-list-item-qty-col {
-    padding-left: 0;
   }
 }
 

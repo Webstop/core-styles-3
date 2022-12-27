@@ -25,8 +25,12 @@
     max-width: $circular-sm-max-column-width;
     min-width: $circular-sm-min-column-width;
     &.card {
+      padding-left: 0px;
+      padding-right: 0px;
       margin-right: $grid-gutter-width/2;
       margin-bottom: $grid-gutter-width/2;
+      margin-left: $grid-gutter-width/2;
+      margin-top: $grid-gutter-width/2;
     }
   }
 
