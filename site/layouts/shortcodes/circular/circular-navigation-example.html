@@ -62,6 +62,14 @@
     </div>
     <div class="d-none d-lg-inline-flex">
       <form class="search-form" action="/circulars/search/" method="post" data-search="live"data-target="#search-results" data-hide=".search-hidden">
+
+        <input type="hidden" name="date" value="">
+        <div class="input-group mb-3">
+          <input type="text" class="search-from-search-text form-control" name="search" value="" placeholder="Search" aria-label="Enter text to search circulars." aria-describedby="search-button">
+          <button class="btn btn-primary" type="button" id="search-button"><i class="fa-solid fa-search"></i><span class="sr-only">Search Circular</span></button>
+        </div>
+
+<!--
         <input type="hidden" name="date" value="">
         <div class="toolbar-group input-group mr-0">
           <input class="search-from-search-text form-control" type="text" name="search" value="" placeholder="Search" aria-label="Enter text to search circulars.">
@@ -72,10 +80,19 @@
             </button>
           </div>
         </div>
+-->
+
       </form>
     </div>
     <div class="d-inline-flex d-lg-none">
       <form class="search-form" action="/circulars/search/" method="post" data-search="live"data-target="#search-results" data-hide=".search-hidden">
+
+        <div class="input-group mb-3">
+          <input type="text" class="search-from-search-text form-control" name="search" value="" placeholder="Search" aria-label="Enter text to search circulars." aria-describedby="search-button">
+          <button class="btn btn-primary" type="button" id="search-button"><i class="fa-solid fa-search"></i><span class="sr-only">Search Circular</span></button>
+        </div>
+
+        <!--
         <div class="toolbar-group">
           <input type="hidden" name="date" value="">
           <div class="dropleft">
@@ -91,6 +108,7 @@
             </div>
           </div>
         </div>
+      -->
       </form>
     </div>
     <div class="toolbar-group ml-auto d-none d-md-inline-flex">
