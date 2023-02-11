@@ -3,6 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://guides.webstop.com/ajax/ajax_form/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/ajax/ajax_form_2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/ajax/ajax_form_3/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/ajax/alert_error/</loc>
   </url>
   

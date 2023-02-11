@@ -3,7 +3,7 @@
 
 $(function() {
 
-  $('[data-ajax-load]').on('click', function(event){
+  $(document.body).on('click', '[data-ajax-load]', function(event){
     event.preventDefault();
 
     let $this = $(this);

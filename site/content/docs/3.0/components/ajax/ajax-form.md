@@ -57,6 +57,24 @@ is returned.
 </div>
 {{< /example >}}
 
+### Repeating Example
+
+This example returns a result which contains another `data-ajax-form` form. This is useful for error responses or other 
+instances where you want to results to contain another Ajax Form. This example takes you through 3 forms that are all 
+brought onto the page via Ajax until finally arriving at the final success message.
+
+{{< example >}}
+<form data-ajax-form action="/ajax/ajax_form">
+  <div class="form-group">
+    <label for="title-example" class="py-2">Title for Ajax Form 0 of 3</label>
+    <input type="text" class="form-control p-2" name="title-example" id="title-example" placeholder="Title">
+  </div>
+  <button class="btn btn-primary  mt-3" type="submit">
+    Save Title
+  </button>
+</form>
+{{< /example >}}
+
 ## Attributes
 
 The `data-ajax-form` & `action` attributes are required. The rest are optional.
