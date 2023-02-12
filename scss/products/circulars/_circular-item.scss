@@ -1,5 +1,5 @@
 .circular-items {
-  padding-right: $grid-gutter-width/2;
+  padding-right: calc($grid-gutter-width/2);
   .col-12 {
     padding-right: 0;
   }
@@ -7,7 +7,7 @@
     & {
       padding-right: 0;
       .col-12 {
-        padding-right: $grid-gutter-width/2;
+        padding-right: calc($grid-gutter-width/2);
       }
     }
   }
@@ -27,10 +27,10 @@
     &.card {
       padding-left: 0px;
       padding-right: 0px;
-      margin-right: $grid-gutter-width/2;
-      margin-bottom: $grid-gutter-width/2;
-      margin-left: $grid-gutter-width/2;
-      margin-top: $grid-gutter-width/2;
+      margin-right: calc($grid-gutter-width/2);
+      margin-bottom: calc($grid-gutter-width/2);
+      margin-left: calc($grid-gutter-width/2);
+      margin-top: calc($grid-gutter-width/2);
     }
   }
 
@@ -39,7 +39,7 @@
   }
 
   &.circular-item-avg {
-    width: $circular-min-column-width + ($circular-max-column-width - $circular-min-column-width)/2;
+    width: $circular-min-column-width + calc(($circular-max-column-width - $circular-min-column-width)/2);
   }
 
   &.circular-item-min {

@@ -37,7 +37,7 @@ $admin-footer-border-size:   1px !default;
 // Utilities
 // ---------
 
-$readable: 34.25rem + (1.25rem * 2);
+$readable: 34.25rem + (1.25rem * 2) !default;
 
 // Components
 // ----------
@@ -49,7 +49,7 @@ $card-deck-margin: $card-group-margin !default;
 // Toolbar
 $toolbar-spacer:       $spacer !default;
 $toolbar-padding-x:    $toolbar-spacer !default;
-$toolbar-padding-y:    ($toolbar-spacer / 2) !default;
+$toolbar-padding-y:    calc($toolbar-spacer/2) !default;
 $toolbar-bg:           $theme-primary !default;
 $toolbar-border-color: darken($toolbar-bg, 15%) !default;
 //$toolbar-min-height: 58px !default;
@@ -58,23 +58,23 @@ $toolbar-border-color: darken($toolbar-bg, 15%) !default;
 // ===========
 
 // Circulars
-$circular-max-column-width:    375px;
-$circular-min-column-width:    160px;
-$circular-sm-max-column-width: 375px;
-$circular-sm-min-column-width: 265px;
+$circular-max-column-width:    375px !default;
+$circular-min-column-width:    160px !default;
+$circular-sm-max-column-width: 375px !default;
+$circular-sm-min-column-width: 265px !default;
 
 // Shopping List
 $shopping-list-column-width: 250px !default;
 
 // Stores
-$store-max-column-width: 100%;
-$store-min-column-width: 290px;
+$store-max-column-width: 100%  !default;
+$store-min-column-width: 290px !default;
 
 // ---
 
 // Bootstrap
 $bootstrap-purple: #563d7c;
-$table-bg: #fff;
+$table-bg: #fff !default;
 
 // Webstop
 $webstop-blue: #0194d3;

@@ -6,6 +6,7 @@ $(function() {
   // Here we set the thee possible events types data-aye-view, data-aye-click, & data-aye-submit
 
   // Sends an ahoy track when the element is served to the browser.
+  // TODO: enhance to track items brought onto the page via Ajax. It currently only works on items in the initial page render.
   $('[data-aye-view]').each(function(){
     let $element = $(this);
     let cargo = ayeCargo(this);
@@ -13,14 +14,14 @@ $(function() {
   });
 
   // Sends an ahoy track when the user clicks on the element.
-  $('[data-aye-click]').on('click', function(){
+  $(document.body).on('click', '[data-aye-click]',  function(){
     let $element = $(this);
     let cargo = ayeCargo(this);
     ahoy.track('click ' + $element.attr('data-aye-click'), cargo);
   });
 
   // Sends an ahoy track when a form is submitted. Place on the form tag.
-  $('[data-aye-submit]').on('submit', function(){
+  $(document.body).on('submit', '[data-aye-submit]', function(){
     let $element = $(this);
     let cargo = ayeCargo(this);
     cargo = ayeFormidable($element, cargo);

@@ -24,7 +24,7 @@
       "admin-sidecar admin-page"
       "admin-sidecar admin-footer";
   }
-  
+
   // Layout with Sidenav
   &.admin-with-sidenav {
     grid-template-columns: $admin-sidenav-width auto;
@@ -33,7 +33,7 @@
       "admin-sidenav admin-page"
       "admin-sidenav admin-footer";
   }
-  
+
   // Layout with Sidebar
   &.admin-with-sidebar {
     grid-template-columns: auto $admin-sidebar-width;
@@ -43,7 +43,7 @@
       "admin-footer admin-sidebar";
   }
 
-  
+
   // Layout with Sidecar & Sidenav
   &.admin-with-sidecar.admin-with-sidenav {
     grid-template-columns: $admin-sidecar-width $admin-sidenav-width auto;
@@ -52,7 +52,7 @@
       "admin-sidecar admin-sidenav admin-page"
       "admin-sidecar admin-sidenav admin-footer";
   }
-  
+
   // Layout with Sidecar & Sidebar
   &.admin-with-sidecar.admin-with-sidebar {
     grid-template-columns: $admin-sidecar-width auto $admin-sidebar-width;
@@ -61,7 +61,7 @@
       "admin-sidecar admin-page   admin-sidebar"
       "admin-sidecar admin-footer admin-sidebar";
   }
-  
+
   // Layout with Sidenav & Sidebar
   &.admin-with-sidenav.admin-with-sidebar {
     grid-template-columns: $admin-sidenav-width auto $admin-sidebar-width;
@@ -88,7 +88,7 @@
     padding: $admin-spacer-y 0;
   }
   .admin-footer {
-    padding: $admin-spacer-y/2 0 0 $admin-spacer-x ;
+    padding: calc($admin-spacer-y/2) 0 0 $admin-spacer-x ;
   }
 
   // Colors
@@ -137,5 +137,5 @@
     overflow: visible;
   }
 
- 
+
 }
