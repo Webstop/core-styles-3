@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 
-docker-compose run --rm bash --version ; npm run watch
+# The following stopped working
+# docker-compose run --rm bash --version ; npm run watch
+
+echo 'Once the shell prompt becomes available enter `npm run watch` (without the quotes) to start the watch script.'
+
+docker run --rm -it -v $(pwd):/src klakegg/hugo:0.80.0-ext-alpine shell
