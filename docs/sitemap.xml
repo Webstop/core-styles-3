@@ -59,6 +59,10 @@
   </url>
   
   <url>
+    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/public/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/docs/3.0/layouts/examples/site/</loc>
   </url>
   
@@ -76,6 +80,10 @@
   
   <url>
     <loc>https://guides.webstop.com/docs/3.0/icons/admin-icons/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/dev/layouts/admin/</loc>
   </url>
   
   <url>
@@ -207,11 +215,11 @@
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/guides/3.0/development-process/</loc>
+    <loc>https://guides.webstop.com/dev/</loc>
   </url>
   
   <url>
-    <loc>https://guides.webstop.com/dev/</loc>
+    <loc>https://guides.webstop.com/guides/3.0/development-process/</loc>
   </url>
   
   <url>
@@ -252,6 +260,10 @@
   
   <url>
     <loc>https://guides.webstop.com/dev/ad-builder/item-entry/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/dev/layouts/</loc>
   </url>
   
   <url>
@@ -296,6 +308,10 @@
   
   <url>
     <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/price/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/dev/layouts/public/</loc>
   </url>
   
   <url>

@@ -12030,6 +12030,108 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
   overflow: visible;
 }
 
+.public {
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  display: grid;
+  grid-template-areas: "public-header" "public-page" "public-footer";
+  overflow-x: hidden;
+}
+.public .public-header {
+  grid-area: public-header;
+  overflow: visible;
+}
+.public .public-sidecar {
+  grid-area: public-sidecar;
+  overflow-x: auto;
+}
+.public .public-sidenav {
+  grid-area: public-sidenav;
+  overflow-x: auto;
+}
+.public .public-page {
+  grid-area: public-page;
+  overflow-x: auto;
+}
+.public .public-sidebar {
+  grid-area: public-sidebar;
+  overflow-x: auto;
+}
+.public .public-footer {
+  grid-area: public-footer;
+  overflow: visible;
+}
+.public.public-with-sidecar {
+  grid-template-columns: 90px auto;
+  grid-template-areas: "public-header  public-header" "public-sidecar public-page" "public-sidecar public-footer";
+}
+.public.public-with-sidenav {
+  grid-template-columns: 320px auto;
+  grid-template-areas: "public-header  public-header" "public-sidenav public-page" "public-sidenav public-footer";
+}
+.public.public-with-sidebar {
+  grid-template-columns: auto 320px;
+  grid-template-areas: "public-header public-header" "public-page   public-sidebar" "public-footer public-sidebar";
+}
+.public.public-with-sidecar.public-with-sidenav {
+  grid-template-columns: 90px 320px auto;
+  grid-template-areas: "public-header  public-header public-header" "public-sidecar public-sidenav public-page" "public-sidecar public-sidenav public-footer";
+}
+.public.public-with-sidecar.public-with-sidebar {
+  grid-template-columns: 90px auto 320px;
+  grid-template-areas: "public-header  public-header public-header" "public-sidecar public-page   public-sidebar" "public-sidecar public-footer public-sidebar";
+}
+.public.public-with-sidenav.public-with-sidebar {
+  grid-template-columns: 320px auto 320px;
+  grid-template-areas: "public-header  public-header public-header" "public-sidenav public-page   public-sidebar" "public-sidenav public-footer public-sidebar";
+}
+.public.public-with-sidecar.public-with-sidenav.public-with-sidebar {
+  grid-template-columns: 90px 320px auto 320px;
+  grid-template-areas: "public-header  public-header  public-header public-header" "public-sidecar public-sidenav public-page   public-sidebar" "public-sidecar public-sidenav public-footer public-sidebar";
+}
+.public .public-sidenav, .public .public-page, .public .public-sidebar {
+  padding: 1rem 1rem;
+}
+.public .public-sidecar {
+  padding: 1rem 0;
+}
+.public .public-footer {
+  padding: 0.5rem 0 0 1rem;
+}
+.public .public-sidecar {
+  border-right: 0 solid #0d6efd;
+  background-color: #0d6efd;
+  color: #fff;
+}
+.public .public-sidecar-item {
+  color: #fff;
+}
+.public .public-sidenav {
+  border-right: 1px solid #ccc;
+  background-color: #e9ecef;
+}
+.public .public-sidebar {
+  border-left: 0 solid #bacad9;
+  background-color: #dbe3eb;
+}
+.public .public-footer {
+  border-top: 1px solid #ccc;
+  background-color: #e9ecef;
+}
+.public .sidecar, .public .public-sidenav, .public .public-sidebar {
+  height: 100vh;
+}
+.public .public-table-view,
+.public .public-list-view {
+  padding: 0;
+}
+.public .public-table-view {
+  overflow: visible;
+}
+.public .public-page-flush {
+  padding: 0;
+}
+
 .site .site-main-col {
   margin: 0;
   padding: 0;
