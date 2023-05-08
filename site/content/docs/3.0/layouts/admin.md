@@ -450,7 +450,7 @@ The `@page` hash is set at the top of a view file to control how that view will 
 
 ### Edit Page Example
 
-<img src="/assets/images/admin_layout/admin_layout_edit_tracker.png" class="img-fluid" alt="Edit Page">
+<img src="/assets/images/layout/layout_edit_tracker.png" class="img-fluid" alt="Edit Page">
 
 
 ```html
@@ -481,7 +481,7 @@ The admin system is designed to accommodate the following common layout types.
 
 ### Data Tables Index Page
 
-<img src="/assets/images/admin_layout/admin_layout_data_tables_index_page.png" class="img-fluid" alt="Index Page Using Data Tables">
+<img src="/assets/images/layout/layout_data_tables_index_page.png" class="img-fluid" alt="Index Page Using Data Tables">
 
 ```ruby
 @page[:tables]  = true
@@ -491,7 +491,7 @@ The admin system is designed to accommodate the following common layout types.
 
 ### New Resource Form Page
 
-<img src="/assets/images/admin_layout/admin_layout_new_from_page.png" class="img-fluid" alt="New Resource Form Page">
+<img src="/assets/images/layout/layout_new_from_page.png" class="img-fluid" alt="New Resource Form Page">
 
 ```ruby
 @page[:header]  = false
@@ -500,7 +500,7 @@ The admin system is designed to accommodate the following common layout types.
 
 ### Show Resource Page
 
-<img src="/assets/images/admin_layout/admin_layout_show_page.png" class="img-fluid" alt="Show Resource Page">
+<img src="/assets/images/layout/layout_show_page.png" class="img-fluid" alt="Show Resource Page">
 
 ```ruby
 @page[:header]  = false

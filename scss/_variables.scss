@@ -39,23 +39,26 @@ $admin-footer-border-size:   1px !default;
 $public-sidecar-width:        90px !default;
 $public-sidenav-width:        320px !default;
 $public-sidebar-width:        320px !default;
-//$public-header-height:        60px !default;
+$public-header-height:        60px !default;
 //$public-footer-height:        40px !default;
 $public-spacer-y:             $spacer !default;
 $public-spacer-x:             $spacer !default;
 
 // Public Layout Colors
-$public-sidecar-color:        #fff !default;
+$public-header-bg-color:      transparent !default;
+$public-header-border-color:  #ccc !default;
+$public-header-border-size:   1px !default;
+$public-sidecar-color:        $white !default;
 $public-sidecar-bg-color:     $primary !default;
 $public-sidecar-border-color: $primary !default;
 $public-sidecar-border-size:  0 !default;
-$public-sidenav-bg-color:     #e9ecef !default;
+$public-sidenav-bg-color:     transparent !default;
 $public-sidenav-border-color: #ccc !default;
 $public-sidenav-border-size:  1px !default;
-$public-sidebar-bg-color:     #dbe3eb !default;
+$public-sidebar-bg-color:     transparent !default;
 $public-sidebar-border-color: darken($public-sidebar-bg-color, 10%) !default;
-$public-sidebar-border-size:  0 !default;
-$public-footer-bg-color:      #e9ecef !default;
+$public-sidebar-border-size:  1px !default;
+$public-footer-bg-color:      transparent !default;
 $public-footer-border-color:  #ccc !default;
 $public-footer-border-size:   1px !default;
 

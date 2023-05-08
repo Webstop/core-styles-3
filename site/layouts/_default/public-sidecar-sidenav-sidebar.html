@@ -1,0 +1,86 @@
+ {{ define "main" }}
+<div class="public public-borders public-with-sidecar public-with-sidenav public-with-sidebar">
+  <header class="public-header" role="banner">
+    {{ block "header" . }}
+    <h4>
+      Header
+      <span class="ps-2" style="opacity: 0.2; font-size: 0.8em;">
+        <span class="d-inline d-sm-none">XS</span>
+        <span class="d-none d-sm-inline d-md-none">SM</span>
+        <span class="d-none d-md-inline d-lg-none">MD</span>
+        <span class="d-none d-lg-inline d-xl-none">LG</span>
+        <span class="d-none d-xl-inline d-xxl-none">XL</span>
+        <span class="d-none d-xxl-inline">XXL</span>
+      </span>
+    </h4>
+    {{ end }}
+  </header>
+  <nav class="public-sidecar" role="navigation">
+    {{ block "sidecar" . }}
+    <h2>SC</h2>
+    {{ end }}
+  </nav>
+  <nav class="public-sidenav" role="navigation">
+    {{ block "sidenav" . }}
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">SideNAV</h4>
+      </div>
+    </div>
+    {{ end }}
+  </nav>
+  <div class="public-page">
+    <main class="public-content" role="main">
+      {{ .Content }}
+    </main>
+    <footer class="public-footer" role="contentinfo">
+      {{ block "footer" . }}
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li><a href="#">Footer Link</a></li>
+            <li><a href="#">Footer Link</a></li>
+            <li><a href="#">Footer Link</a></li>
+            <li><a href="#">Footer Link</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li><a href="#">Footer Link</a></li>
+            <li><a href="#">Footer Link</a></li>
+            <li><a href="#">Footer Link</a></li>
+            <li><a href="#">Footer Link</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li><a href="#">Footer Link</a></li>
+            <li><a href="#">Footer Link</a></li>
+            <li><a href="#">Footer Link</a></li>
+            <li><a href="#">Footer Link</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li><a href="#">Footer Link</a></li>
+            <li><a href="#">Footer Link</a></li>
+            <li><a href="#">Footer Link</a></li>
+            <li><a href="#">Footer Link</a></li>
+          </ul>
+        </div>
+      </div>
+      {{ end }}
+    </footer>
+  </div>
+
+  <aside class="public-sidebar" role="navigation" aria-label="Secondary">
+    {{ block "sidebar" . }}
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    {{ end }}
+  </aside>
+
+</div>
+
+{{ end }}

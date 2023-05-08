@@ -2,99 +2,183 @@
   grid-template-columns: auto;
   grid-template-rows: auto;
   display: grid;
+  //grid-template-areas:
+  //  "public-header"
+  //  "public-page"
+  //  "public-footer";
   grid-template-areas:
     "public-header"
-    "public-page"
-    "public-footer";
-  //height: 100vh;
+    "public-page";
+  height: 100vh;
   overflow-x: hidden;
 
   .public-header  { grid-area: public-header;  overflow: visible; }
-  .public-sidecar { grid-area: public-sidecar; overflow-x: auto;  }
-  .public-sidenav { grid-area: public-sidenav; overflow-x: auto;  }
-  .public-page    { grid-area: public-page;    overflow-x: auto;  }
-  .public-sidebar { grid-area: public-sidebar; overflow-x: auto;  }
-  .public-footer  { grid-area: public-footer;  overflow: visible;  }
+  .public-sidecar { grid-area: public-sidecar; overflow-x: auto; display: none; }
+  .public-sidenav { grid-area: public-sidenav; overflow-x: auto; display: none; }
+  .public-page    { grid-area: public-page;    overflow-x: auto; display: block; }
+  .public-sidebar { grid-area: public-sidebar; overflow-x: auto; display: none;}
+  //.public-footer  { grid-area: public-footer;  overflow: visible; }
 
-  // Layout with Sidecar
-  &.public-with-sidecar {
-    grid-template-columns: $public-sidecar-width auto;
-    grid-template-areas:
-      "public-header  public-header"
-      "public-sidecar public-page"
-      "public-sidecar public-footer";
-  }
-
-  // Layout with Sidenav
-  &.public-with-sidenav {
-    grid-template-columns: $public-sidenav-width auto;
-    grid-template-areas:
-      "public-header  public-header"
-      "public-sidenav public-page"
-      "public-sidenav public-footer";
-  }
-
-  // Layout with Sidebar
-  &.public-with-sidebar {
-    grid-template-columns: auto $public-sidebar-width;
-    grid-template-areas:
-      "public-header public-header"
-      "public-page   public-sidebar"
-      "public-footer public-sidebar";
-  }
-
+  //@include media-breakpoint-up(lg) { }
+  //
+  //// Layout with Sidecar
+  //&.public-with-sidecar {
+  //  grid-template-columns: $public-sidecar-width auto;
+  //  grid-template-areas:
+  //    "public-header  public-header"
+  //    "public-sidecar public-page"
+  //    "public-sidecar public-footer";
+  //  @include media-breakpoint-up(xl) { .public-sidecar { display: block; } }
+  //}
+  //
+  //// Layout with Sidenav
+  //&.public-with-sidenav {
+  //  grid-template-columns: $public-sidenav-width auto;
+  //  grid-template-areas:
+  //    "public-header  public-header"
+  //    "public-sidenav public-page"
+  //    "public-sidenav public-footer";
+  //  @include media-breakpoint-up(xl) { .public-sidenav { display: block; } }
+  //}
+  //
+  //// Layout with Sidebar
+  //&.public-with-sidebar {
+  //  grid-template-columns: auto $public-sidebar-width;
+  //  grid-template-areas:
+  //    "public-header public-header"
+  //    "public-page   public-sidebar"
+  //    "public-footer public-sidebar";
+  //  @include media-breakpoint-up(xl) { .public-sidebar { display: block; } }
+  //}
+  //
 
   // Layout with Sidecar & Sidenav
   &.public-with-sidecar.public-with-sidenav {
-    grid-template-columns: $public-sidecar-width $public-sidenav-width auto;
-    grid-template-areas:
-      "public-header  public-header public-header"
-      "public-sidecar public-sidenav public-page"
-      "public-sidecar public-sidenav public-footer";
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: $public-sidecar-width $public-sidenav-width auto;
+      //grid-template-areas:
+      //  "public-header  public-header public-header"
+      //  "public-sidecar public-sidenav public-page"
+      //  "public-sidecar public-sidenav public-footer";
+      grid-template-areas:
+        "public-header  public-header public-header"
+        "public-sidecar public-sidenav public-page";
+      .public-sidecar { display: block; }
+      .public-sidenav { display: block; }
+    }
   }
 
-  // Layout with Sidecar & Sidebar
-  &.public-with-sidecar.public-with-sidebar {
-    grid-template-columns: $public-sidecar-width auto $public-sidebar-width;
-    grid-template-areas:
-      "public-header  public-header public-header"
-      "public-sidecar public-page   public-sidebar"
-      "public-sidecar public-footer public-sidebar";
-  }
+  //// Layout with Sidecar & Sidebar
+  //&.public-with-sidecar.public-with-sidebar {
+  //  grid-template-columns: $public-sidecar-width auto $public-sidebar-width;
+  //  grid-template-areas:
+  //    "public-header  public-header public-header"
+  //    "public-sidecar public-page   public-sidebar"
+  //    "public-sidecar public-footer public-sidebar";
+  //  @include media-breakpoint-up(xl) { .public-sidecar { display: block; } }
+  //  @include media-breakpoint-up(xl) { .public-sidebar { display: block; } }
+  //}
+  //
 
   // Layout with Sidenav & Sidebar
   &.public-with-sidenav.public-with-sidebar {
-    grid-template-columns: $public-sidenav-width auto $public-sidebar-width;
-    grid-template-areas:
-      "public-header  public-header public-header"
-      "public-sidenav public-page   public-sidebar"
-      "public-sidenav public-footer public-sidebar";
+    @include media-breakpoint-up(xl)  {
+      grid-template-columns: auto $public-sidebar-width;
+      //grid-template-areas:
+      //  "public-header public-header"
+      //  "public-page   public-sidebar"
+      //  "public-footer public-sidebar";
+      grid-template-areas:
+        "public-header public-header"
+        "public-page   public-sidebar";
+      .public-sidebar { display: block; }
+    }
+
+    @include media-breakpoint-up(xxl) {
+      grid-template-columns: $public-sidenav-width auto $public-sidebar-width;
+      //grid-template-areas:
+      //  "public-header  public-header public-header"
+      //  "public-sidenav public-page   public-sidebar"
+      //  "public-sidenav public-footer public-sidebar";
+      grid-template-areas:
+        "public-header  public-header public-header"
+        "public-sidenav public-page   public-sidebar";
+      .public-sidenav { display: block; }
+    }
+
   }
 
   // Layout with Sidecar, Sidenav, & Sidebar
   &.public-with-sidecar.public-with-sidenav.public-with-sidebar {
-    grid-template-columns: $public-sidecar-width $public-sidenav-width auto $public-sidebar-width;
-    grid-template-areas:
-      "public-header  public-header  public-header public-header"
-      "public-sidecar public-sidenav public-page   public-sidebar"
-      "public-sidecar public-sidenav public-footer public-sidebar";
+
+    @include media-breakpoint-up(xl)  {
+      grid-template-columns: auto $public-sidebar-width;
+      //grid-template-areas:
+      //  "public-header public-header"
+      //  "public-page   public-sidebar"
+      //  "public-footer public-sidebar";
+      grid-template-areas:
+        "public-header public-header"
+        "public-page   public-sidebar";
+      .public-sidebar { display: block; }
+    }
+
+    @include media-breakpoint-up(xxl) {
+      grid-template-columns: $public-sidecar-width $public-sidenav-width auto $public-sidebar-width;
+      //grid-template-areas:
+      //  "public-header  public-header  public-header public-header"
+      //  "public-sidecar public-sidenav public-page   public-sidebar"
+      //  "public-sidecar public-sidenav public-footer public-sidebar";
+      grid-template-areas:
+        "public-header  public-header  public-header public-header"
+        "public-sidecar public-sidenav public-page   public-sidebar";
+      .public-sidecar { display: block; }
+      .public-sidenav { display: block; }
+    }
+    @include media-breakpoint-up(xxl) {  }
+
   }
 
+  // Borders
+  &.public-borders {
+    .public-header  {
+      border-bottom: $public-header-border-size solid $public-header-border-color;
+      background-color: $public-header-bg-color;
+    }
+    .public-sidecar {
+      border-right: $public-sidecar-border-size solid $public-sidecar-border-color;
+      background-color: $public-sidecar-bg-color;
+    }
+    .public-sidenav {
+      border-right: $public-sidenav-border-size solid $public-sidenav-border-color;
+      background-color: $public-sidenav-bg-color;
+    }
+    .public-page    {  }
+    .public-sidebar {
+      border-left: $public-sidebar-border-size solid $public-sidebar-border-color;
+      background-color: $public-sidebar-bg-color;
+    }
+    .public-footer {
+      border-top: $public-footer-border-size solid $public-footer-border-color;
+      background-color: $public-footer-bg-color;
+    }
+  }
+
+
   // Padding
-  .public-sidenav, .public-page, .public-sidebar {
+  .public-sidenav, .public-content, .public-sidebar {
     padding: $public-spacer-y $public-spacer-x;
   }
   .public-sidecar {
     padding: $public-spacer-y 0;
   }
   .public-footer {
-    padding: calc($public-spacer-y/2) 0 0 $public-spacer-x ;
+    // padding: calc($public-spacer-y/2) 0 0 $public-spacer-x;
+    padding: $public-spacer-y $public-spacer-x;
   }
 
   // Colors
   .public-sidecar {
-    border-right: $public-sidecar-border-size solid $public-sidecar-border-color;
-    background-color: $public-sidecar-bg-color;
     color: $public-sidecar-color;
   }
 
@@ -102,24 +186,19 @@
     color: $public-sidecar-color;
   }
 
-  .public-sidenav {
-    border-right: $public-sidenav-border-size solid $public-sidenav-border-color;
-    background-color: $public-sidenav-bg-color;
-  }
 
-  .public-sidebar {
-    border-left: $public-sidebar-border-size solid $public-sidebar-border-color;
-    background-color: $public-sidebar-bg-color;
-  }
 
-  .public-footer {
-    border-top: $public-footer-border-size solid $public-footer-border-color;
-    background-color: $public-footer-bg-color;
-  }
+
+
+
 
   // Height
-  .sidecar, .public-sidenav, .public-sidebar {
-    height: 100vh;
+  .public-sidecar, .public-sidenav, .public-sidebar {
+    height: calc(100vh - $public-header-height);
+  }
+
+  .public-header {
+    height: $public-header-height;
   }
 
   // Special Page Views
@@ -138,3 +217,34 @@
   }
 
 }
+
+
+// Responsive tables
+//
+// Generate series of `.table-responsive-*` classes for configuring the screen
+// size of where your table will overflow.
+
+//@each $breakpoint in map-keys($grid-breakpoints) {
+//  $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+//
+//  @include media-breakpoint-down($breakpoint) {
+//    .table-responsive#{$infix} {
+//      overflow-x: auto;
+//      -webkit-overflow-scrolling: touch;
+//    }
+//  }
+//}
+
+
+@include media-breakpoint-down(sm) {
+
+}
+
+//$grid-breakpoints: (
+//  xs: 0,
+//  sm: 576px,
+//  md: 768px,
+//  lg: 992px,
+//  xl: 1200px,
+//  xxl: 1400px
+//) !default;

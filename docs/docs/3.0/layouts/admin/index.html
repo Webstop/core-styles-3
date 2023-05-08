@@ -196,6 +196,14 @@
               <ul class="list-unstyled fw-normal pb-1 small">
 
                 <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/layouts/public/" class="d-inline-flex rounded">Public Layout</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
                   <a href="/docs/3.0/layouts/site/" class="d-inline-flex rounded">Public Site Layout</a>
                 </li>
 
@@ -929,7 +937,7 @@ page layout. These settings are explained in the chart below.</p>
   </tbody>
 </table>
 <h3 id="edit-page-example">Edit Page Example</h3>
-<img src="/assets/images/admin_layout/admin_layout_edit_tracker.png" class="img-fluid" alt="Edit Page">
+<img src="/assets/images/layout/layout_edit_tracker.png" class="img-fluid" alt="Edit Page">
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="err">&lt;</span>%
   @page[:header]  = false
   @page[:sidebar] = true
@@ -951,16 +959,16 @@ page layout. These settings are explained in the chart below.</p>
 </code></pre></div><h2 id="design-patterns">Design Patterns</h2>
 <p>The admin system is designed to accommodate the following common layout types.</p>
 <h3 id="data-tables-index-page">Data Tables Index Page</h3>
-<img src="/assets/images/admin_layout/admin_layout_data_tables_index_page.png" class="img-fluid" alt="Index Page Using Data Tables">
+<img src="/assets/images/layout/layout_data_tables_index_page.png" class="img-fluid" alt="Index Page Using Data Tables">
 <div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="vi">@page</span><span class="o">[</span><span class="ss">:tables</span><span class="o">]</span>  <span class="o">=</span> <span class="kp">true</span>
 <span class="vi">@page</span><span class="o">[</span><span class="ss">:flush</span><span class="o">]</span>   <span class="o">=</span> <span class="kp">true</span>
 <span class="vi">@page</span><span class="o">[</span><span class="ss">:sidebar</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span>
 </code></pre></div><h3 id="new-resource-form-page">New Resource Form Page</h3>
-<img src="/assets/images/admin_layout/admin_layout_new_from_page.png" class="img-fluid" alt="New Resource Form Page">
+<img src="/assets/images/layout/layout_new_from_page.png" class="img-fluid" alt="New Resource Form Page">
 <div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="vi">@page</span><span class="o">[</span><span class="ss">:header</span><span class="o">]</span>  <span class="o">=</span> <span class="kp">false</span>
 <span class="vi">@page</span><span class="o">[</span><span class="ss">:sidebar</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span>
 </code></pre></div><h3 id="show-resource-page">Show Resource Page</h3>
-<img src="/assets/images/admin_layout/admin_layout_show_page.png" class="img-fluid" alt="Show Resource Page">
+<img src="/assets/images/layout/layout_show_page.png" class="img-fluid" alt="Show Resource Page">
 <div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="vi">@page</span><span class="o">[</span><span class="ss">:header</span><span class="o">]</span>  <span class="o">=</span> <span class="kp">false</span>
 <span class="vi">@page</span><span class="o">[</span><span class="ss">:sidebar</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span>
 </code></pre></div><h2 id="attributes">Attributes</h2>
