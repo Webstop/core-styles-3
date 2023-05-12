@@ -190,10 +190,8 @@
 
 
 
-
-
   // Height
-  .public-sidecar, .public-sidenav, .public-sidebar {
+  .public-sidecar, .public-sidenav, .public-page, .public-sidebar {
     height: calc(100vh - $public-header-height);
   }
 

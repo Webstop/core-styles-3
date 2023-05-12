@@ -17,16 +17,12 @@
   </header>
   <nav class="public-sidecar" role="navigation">
     {{ block "sidecar" . }}
-    <h2>SC</h2>
+    <h2 class="mx-auto d-inline-block">SC</h2>
     {{ end }}
   </nav>
   <nav class="public-sidenav" role="navigation">
     {{ block "sidenav" . }}
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">SideNAV</h4>
-      </div>
-    </div>
+    {{ partial "layout-sidenav.html" }}
     {{ end }}
   </nav>
   <div class="public-page">
@@ -35,40 +31,7 @@
     </main>
     <footer class="public-footer" role="contentinfo">
       {{ block "footer" . }}
-      <div class="row">
-        <div class="col">
-          <ul>
-            <li><a href="#">Footer Link</a></li>
-            <li><a href="#">Footer Link</a></li>
-            <li><a href="#">Footer Link</a></li>
-            <li><a href="#">Footer Link</a></li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul>
-            <li><a href="#">Footer Link</a></li>
-            <li><a href="#">Footer Link</a></li>
-            <li><a href="#">Footer Link</a></li>
-            <li><a href="#">Footer Link</a></li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul>
-            <li><a href="#">Footer Link</a></li>
-            <li><a href="#">Footer Link</a></li>
-            <li><a href="#">Footer Link</a></li>
-            <li><a href="#">Footer Link</a></li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul>
-            <li><a href="#">Footer Link</a></li>
-            <li><a href="#">Footer Link</a></li>
-            <li><a href="#">Footer Link</a></li>
-            <li><a href="#">Footer Link</a></li>
-          </ul>
-        </div>
-      </div>
+        {{ partial "layout-footer.html" }}
       {{ end }}
     </footer>
   </div>

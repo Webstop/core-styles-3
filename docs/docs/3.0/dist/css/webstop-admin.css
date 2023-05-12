@@ -12148,7 +12148,7 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
 .public .public-sidecar-item {
   color: #fff;
 }
-.public .public-sidecar, .public .public-sidenav, .public .public-sidebar {
+.public .public-sidecar, .public .public-sidenav, .public .public-page, .public .public-sidebar {
   height: calc(100vh - 60px);
 }
 .public .public-header {

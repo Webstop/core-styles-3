@@ -1,5 +1,5 @@
 ---
-layout: public
+layout: public-base
 ---
 
 # Public Layout Example
