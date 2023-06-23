@@ -11,7 +11,7 @@ $(function() {
 
   loadShoppingListPowerBar();
 
-  $('.site-aside-slider-toggle').on('click', function(event){
+  $(document.body).on('change', '.site-aside-slider-toggle', function(event){
     event.preventDefault();
     let $aside = $('#site-aside-slider');
     if( $aside.hasClass('site-aside-slider-open') ){
@@ -29,7 +29,7 @@ $(function() {
 
   let $modal = $('#shopping-list-modal')
 
-  $modal.on('show.bs.modal', function(event) {
+  $(document.body).on('show.bs.modal', '#shopping-list-modal', function(event) {
     // jQuery Objects
     let $form        = $modal.find('.shopping-list-form')
     let $errors      = $form.find('.shopping-list-form-errors')
@@ -117,7 +117,7 @@ $(function() {
 
   })
 
-  $modal.on('hidden.bs.modal', function() {
+  $(document.body).on('hidden.bs.modal', '#shopping-list-modal', function(event) {
     console.log('modal fully hidden')
     loadShoppingListPowerBar();
   })
