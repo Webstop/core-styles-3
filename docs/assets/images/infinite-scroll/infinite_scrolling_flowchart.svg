@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="97 -1337 1132 964" width="1132" height="964">
+  <defs>
+    <filter id="Shadow" filterUnits="userSpaceOnUse" x="-16.2" y="-1433.4">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="1.308"/>
+      <feOffset in="blur" result="offset" dx="0" dy="2"/>
+      <feFlood flood-color="black" flood-opacity=".5" result="flood"/>
+      <feComposite in="flood" in2="offset" operator="in"/>
+    </filter>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="black">
+      <g>
+        <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <g id="Canvas_1" stroke="none" stroke-opacity="1" fill="none" stroke-dasharray="none" fill-opacity="1">
+    <title>Canvas 1</title>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_2_shadow" filter="url(#Shadow)">
+        <path d="M 499.4 -1335 L 832.6 -1335 C 872.0128 -1335 904 -1294.904 904 -1245.5 C 904 -1196.096 872.0128 -1156 832.6 -1156 L 499.4 -1156 C 459.9872 -1156 428 -1196.096 428 -1245.5 C 428 -1294.904 459.9872 -1335 499.4 -1335 Z" fill="white"/>
+        <path d="M 499.4 -1335 L 832.6 -1335 C 872.0128 -1335 904 -1294.904 904 -1245.5 C 904 -1196.096 872.0128 -1156 832.6 -1156 L 499.4 -1156 C 459.9872 -1156 428 -1196.096 428 -1245.5 C 428 -1294.904 459.9872 -1335 499.4 -1335 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_3_shadow" filter="url(#Shadow)">
+        <rect x="101" y="-1076" width="476" height="179" fill="white"/>
+        <rect x="101" y="-1076" width="476" height="179" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_4_shadow" filter="url(#Shadow)">
+        <rect x="749" y="-1076" width="476" height="179" fill="white"/>
+        <rect x="749" y="-1076" width="476" height="179" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_5_shadow" filter="url(#Shadow)">
+        <rect x="749" y="-817" width="476" height="179" fill="white"/>
+        <rect x="749" y="-817" width="476" height="179" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_6_shadow" filter="url(#Shadow)">
+        <rect x="101" y="-817" width="476" height="179" fill="white"/>
+        <rect x="101" y="-817" width="476" height="179" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_7_shadow" filter="url(#Shadow)">
+        <rect x="101" y="-558" width="476" height="179" fill="white"/>
+        <rect x="101" y="-558" width="476" height="179" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_2">
+        <title>Squashed Rectangle</title>
+        <path d="M 499.4 -1335 L 832.6 -1335 C 872.0128 -1335 904 -1294.904 904 -1245.5 C 904 -1196.096 872.0128 -1156 832.6 -1156 L 499.4 -1156 C 459.9872 -1156 428 -1196.096 428 -1245.5 C 428 -1294.904 459.9872 -1335 499.4 -1335 Z" fill="white"/>
+        <path d="M 499.4 -1335 L 832.6 -1335 C 872.0128 -1335 904 -1294.904 904 -1245.5 C 904 -1196.096 872.0128 -1156 832.6 -1156 L 499.4 -1156 C 459.9872 -1156 428 -1196.096 428 -1245.5 C 428 -1294.904 459.9872 -1335 499.4 -1335 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(480.6 -1324.5)" fill="black">
+          <tspan font-family="Helvetica" font-weight="bold" font-size="18" fill="black" x="52.882904" y="18">IIFE Initializes Infinite Scrolling</tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="31.198334" y="36">HTML elements with a data-load-on-view attribute</tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="48.16855" y="53">are registered with the loadOnView function. </tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="62.831635" y="87">All matching elements are set to hidden </tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="124.31064" y="104">except the first one.</tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="19.269623" y="138">Elements with paging-trigger class are registered with</tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="95.1246" y="155">The pagingObserver function</tspan>
+        </text>
+      </g>
+      <g id="Graphic_3">
+        <rect x="101" y="-1076" width="476" height="179" fill="white"/>
+        <rect x="101" y="-1076" width="476" height="179" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(106 -1031.5)" fill="black">
+          <tspan font-family="Helvetica" font-weight="bold" font-size="18" fill="black" x="141.15869" y="18">loadOnView Function</tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="40.660645" y="36">HTML elements supplied to this method are registered with an </tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="26.014648" y="53">IntersectionObserver which monitors when they enter the viewport.</tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="50.50781" y="87">The load method is triggered when they enter the viewport. </tspan>
+        </text>
+      </g>
+      <g id="Graphic_4">
+        <rect x="749" y="-1076" width="476" height="179" fill="white"/>
+        <rect x="749" y="-1076" width="476" height="179" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(754 -1040)" fill="black">
+          <tspan font-family="Helvetica" font-weight="bold" font-size="18" fill="black" x="133.47266" y="18">pagingObserver Object</tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="59.46289" y="36">Uses IntersectionObserver to determine when to update </tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="95.62842" y="53">pagination to indicate which page has focus.</tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="72.30762" y="87">When a page-trigger is in the viewport it invokes the </tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="60.97705" y="104">updatePaging function and the paging display changes. </tspan>
+        </text>
+      </g>
+      <g id="Graphic_5">
+        <rect x="749" y="-817" width="476" height="179" fill="white"/>
+        <rect x="749" y="-817" width="476" height="179" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(754 -764)" fill="black">
+          <tspan font-family="Helvetica" font-weight="bold" font-size="18" fill="black" x="133.00684" y="18">updatePaging Function</tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="51.649414" y="36">Updates a standard paging component to display the page</tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="46.618164" y="53">currently within the viewport. It also changes the highlighting</tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="132.98682" y="70">of pages in the dropdown menu.</tspan>
+        </text>
+      </g>
+      <g id="Graphic_6">
+        <rect x="101" y="-817" width="476" height="179" fill="white"/>
+        <rect x="101" y="-817" width="476" height="179" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(106 -764)" fill="black">
+          <tspan font-family="Helvetica" font-weight="bold" font-size="18" fill="black" x="174.00781" y="18">load Function</tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="11.074707" y="36">Makes an AJAX request and replaces the contents of an HTML element </tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="38.05957" y="53">with the results. Registers a new pagingObserver, and runs the </tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="129.60986" y="70">enableNewLoadOnView function. </tspan>
+        </text>
+      </g>
+      <g id="Graphic_7">
+        <title>Rectangle</title>
+        <rect x="101" y="-558" width="476" height="179" fill="white"/>
+        <rect x="101" y="-558" width="476" height="179" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(106 -522)" fill="black">
+          <tspan font-family="Helvetica" font-weight="bold" font-size="18" fill="black" x="90.14258" y="18">enableNextLoadOnView Function</tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="43.487305" y="36">Locates the next data-load-on-view element and changes the</tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="42.342285" y="53">display property so the element is now visible to the observer. </tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="50.89746" y="87">Assumes the element has already been registered with the</tspan>
+          <tspan font-family="Helvetica" font-size="14" fill="black" x="99.26172" y="104">observer found in the loadOnView function.</tspan>
+        </text>
+      </g>
+      <g id="Line_8">
+        <path d="M 666 -1156 L 666 -1116 L 339 -1116 L 339 -1085.9" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="miter" stroke-width="1"/>
+      </g>
+      <g id="Line_9">
+        <path d="M 667 -1152 L 666.8945 -1116.1445 L 987 -1116.1445 L 987 -1085.9" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="miter" stroke-width="1"/>
+      </g>
+      <g id="Line_12">
+        <line x1="339" y1="-897" x2="339" y2="-826.9" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="miter" stroke-width="1"/>
+      </g>
+      <g id="Line_13">
+        <line x1="339" y1="-638" x2="339" y2="-567.9" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="miter" stroke-width="1"/>
+      </g>
+      <g id="Line_14">
+        <title>Line</title>
+        <path d="M 577 -468.5 L 663 -468.5 L 663 -986.5 L 739.1 -986.5" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="miter" stroke-width="1"/>
+      </g>
+      <g id="Line_15">
+        <line x1="987" y1="-897" x2="987" y2="-826.9" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="miter" stroke-width="1"/>
+      </g>
+      <g id="Line_16">
+        <line x1="613" y1="-468.5" x2="586.9" y2="-468.5" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="miter" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

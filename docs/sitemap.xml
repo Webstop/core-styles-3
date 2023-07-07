@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://guides.webstop.com/ajax/ajax_basic_infinite_scroll/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/ajax/ajax_form/</loc>
   </url>
   
@@ -12,6 +16,22 @@
   
   <url>
     <loc>https://guides.webstop.com/ajax/ajax_form_3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/ajax/ajax_load_on_view/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/ajax/ajax_page_1/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/ajax/ajax_page_2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/ajax/ajax_page_3/</loc>
   </url>
   
   <url>
@@ -127,6 +147,10 @@
   </url>
   
   <url>
+    <loc>https://guides.webstop.com/docs/3.0/components/ajax/infinite-scroll-demos/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/docs/3.0/components/ajax/ajax-form/</loc>
   </url>
   
@@ -168,6 +192,10 @@
   
   <url>
     <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/banner-item/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/components/ajax/infinite-scroll-demos/basic-infinite-scroll-demo/</loc>
   </url>
   
   <url>
@@ -283,6 +311,18 @@
   </url>
   
   <url>
+    <loc>https://guides.webstop.com/docs/3.0/components/navigation/html-test/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/components/ajax/infinite-scroll/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/components/ajax/infinite-scroll-demos/infinite-scroll-with-paging-demo/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/docs/3.0/getting-started/introduction/</loc>
   </url>
   
@@ -303,6 +343,10 @@
   </url>
   
   <url>
+    <loc>https://guides.webstop.com/docs/3.0/components/ajax/infinite-scroll-demos/load-on-view-demo/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/resources/lorem_ipsum/</loc>
   </url>
   
@@ -319,6 +363,10 @@
   </url>
   
   <url>
+    <loc>https://guides.webstop.com/docs/3.0/components/navigation/</loc>
+  </url>
+  
+  <url>
     <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/newsprints/newsprint/</loc>
   </url>
   
@@ -332,6 +380,10 @@
   
   <url>
     <loc>https://guides.webstop.com/docs/3.0/utilities/page-break/</loc>
+  </url>
+  
+  <url>
+    <loc>https://guides.webstop.com/docs/3.0/components/navigation/paging/</loc>
   </url>
   
   <url>

@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title> Paging at Core-Styles 3 </title>
+    
+    
+      <script src="https://kit.fontawesome.com/8bda546f76.js" crossorigin="anonymous"></script>
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/docs.css" />
+  </head>
+  <body>
+<section class="wsg-content">
+    
+<div class="admin admin-with-sidenav admin-with-sidebar">
+  <header class="admin-header" role="banner">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark wsg-header shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-2" href="/"><img
+        src="https://www.webstop.com/assets/Webstop-logos/webstop-twocolor-landscape-dark-bg-72dpi-e6425f6d6e9ec4cc90742a883b2997bb28191590bfd8762222ed4723865dcaef.png" style="max-width: 127px; /* 889/7 = 127 */"></a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Docs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dev/ad-builder/">Dev</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/guides/">Guides</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/core-styles-3#core-styles-3"
+                target="_blank">GitHub</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/webstop-wiki#webstop-app-builders-wiki"
+                target="_blank">Wiki</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/core-specs#webstop-core-specifications"
+                target="_blank">Specs</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  </header>
+  <nav class="admin-sidenav" role="navigation">
+    <aside>
+  <nav class="collapse show flex" id="docs-nav" aria-label="Docs navigation">
+    <ul class="list-unstyled mb-0 py-3 pt-md-1">
+      
+      
+        
+          <li class="mb-1">
+            <button class="btn" data-bs-toggle="collapse"
+              data-bs-target="#getstart-menu-collapse" aria-expanded="false" aria-controls="getstart-menu-collapse">
+              <strong> Getting Started</strong>
+            </button>
+
+            <div
+              class="collapse "
+              id="getstart-menu-collapse">
+
+              
+                <ul class="list-unstyled fw-normal pb-1 small">
+
+                  <li
+                    class="py-2 ps-4 ">
+                    <a href="/docs/3.0/getting-started/introduction/" class="d-inline-flex rounded">Introduction</a>
+                  </li>
+
+                </ul>
+              
+                <ul class="list-unstyled fw-normal pb-1 small">
+
+                  <li
+                    class="py-2 ps-4 ">
+                    <a href="/docs/3.0/getting-started/conventions/" class="d-inline-flex rounded">Conventions</a>
+                  </li>
+
+                </ul>
+              
+            </div>
+          </li>
+        
+      
+
+      
+      
+        
+          <li class="mb-1">
+            <button class="btn" data-bs-toggle="collapse" data-bs-target="#guides-menu-collapse"
+              aria-expanded="false">
+              <strong> Guides</strong>
+            </button>
+
+            <div
+              class="collapse "
+              id="guides-menu-collapse">
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li
+                  class="py-2 ps-4 ">
+                  <a href="/guides/3.0/overview/" class="d-inline-flex rounded">Guide Overview</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li
+                  class="py-2 ps-4 ">
+                  <a href="/guides/3.0/components/" class="d-inline-flex rounded">Front-End Components</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li
+                  class="py-2 ps-4 ">
+                  <a href="/guides/3.0/development-approach/" class="d-inline-flex rounded">Development Approach</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li
+                  class="py-2 ps-4 ">
+                  <a href="/guides/3.0/development-process/" class="d-inline-flex rounded">Development Process</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li
+                  class="py-2 ps-4 ">
+                  <a href="/guides/3.0/working-with-ajax/" class="d-inline-flex rounded">Working with AJAX</a>
+                </li>
+
+              </ul>
+              
+            </div>
+          </li>
+        
+      
+
+
+      
+      
+        
+          <li class="mb-1">
+            <button class="btn" data-bs-toggle="collapse" data-bs-target="#layout-menu-collapse" aria-expanded="false">
+              <strong> Layouts</strong>
+            </button>
+
+            <div
+              class="collapse "
+              id="layout-menu-collapse">
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/layouts/admin/" class="d-inline-flex rounded">Admin Layout</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/layouts/public/" class="d-inline-flex rounded">Public Layout</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/layouts/site/" class="d-inline-flex rounded">Public Site Layout</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/layouts/toolbar/" class="d-inline-flex rounded">Toolbar</a>
+                </li>
+
+              </ul>
+              
+            </div>
+          </li>
+        
+      
+
+
+      
+      
+        
+          <li class="mb-1">
+            <button class="btn" data-bs-toggle="collapse" data-bs-target="#components-menu-collapse" aria-expanded="false">
+              <strong> Components</strong>
+            </button class="btn">
+
+            <div class="collapse  show " id="components-menu-collapse">
+              <ul class="list-unstyled fw-normal pb-1 small">
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/ajax/ajax-form/" class="d-inline-flex rounded">Ajax Form</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/ajax/ajax-load/" class="d-inline-flex rounded">Ajax Load</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/ajax/ajax-modal/" class="d-inline-flex rounded">Ajax Modal</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/analytics/tracking/" class="d-inline-flex rounded">Aye, Analytics Tracker</a>
+                    </li>
+                  
+                
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/forms/checkbox-selector/" class="d-inline-flex rounded">Checkbox Selector</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/forms/form-toggles/" class="d-inline-flex rounded">Form Toggles</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/navigation/html-test/" class="d-inline-flex rounded">html test</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/ajax/infinite-scroll/" class="d-inline-flex rounded">Infinite Scroll</a>
+                    </li>
+                  
+                
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/forms/search/" class="d-inline-flex rounded">Live Search</a>
+                    </li>
+                  
+                
+                  
+                
+                  
+                    <li class="py-2 ps-4  left-nav-active ">
+                      <a href="/docs/3.0/components/navigation/paging/" class="d-inline-flex rounded">Paging</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/tagging/tag-search/" class="d-inline-flex rounded">Tag Search</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/tagging/tags/" class="d-inline-flex rounded">Tags</a>
+                    </li>
+                  
+                
+              </ul>
+            </div>
+          </li>
+        
+      
+
+      
+      
+        
+          <li class="mb-1">
+            <button class="btn" data-bs-toggle="collapse" data-bs-target="#icons-menu-collapse" aria-expanded="false">
+              <strong> Icons</strong>
+            </button>
+
+            <div class="collapse " id="icons-menu-collapse">
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/icons/overview/" class="d-inline-flex rounded">1st Icons Overview</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/icons/admin-icons/" class="d-inline-flex rounded">Admin Icons</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/icons/all-icons/" class="d-inline-flex rounded">All Icons</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/icons/core-icons/" class="d-inline-flex rounded">Core Icons</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/icons/crud-icons/" class="d-inline-flex rounded">CRUD Icons</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/icons/popular-icons/" class="d-inline-flex rounded">Popular Icons</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/icons/ui-icons/" class="d-inline-flex rounded">UI Icons</a>
+                </li>
+
+              </ul>
+              
+            </div>
+          </li>
+        
+      
+
+      
+      
+
+      
+      
+        
+          <li class="mb-1">
+            <button class="btn" data-bs-toggle="collapse" data-bs-target="#grocery-menu-collapse" aria-expanded="false">
+              <strong> Grocery</strong>
+            </button>
+
+            <div class="collapse " id="grocery-menu-collapse">
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/tracking/" class="d-inline-flex rounded">Aye, Analytics Tracking</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/banner-item/" class="d-inline-flex rounded">Banner Circular Item</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/circular-items/" class="d-inline-flex rounded">Circular Items</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/navigation/" class="d-inline-flex rounded">Circular Navigation</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/coupon-item/" class="d-inline-flex rounded">Digital Coupon Circular Item</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/price/" class="d-inline-flex rounded">Price</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/recipe-item/" class="d-inline-flex rounded">Recipe Circular Item</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/standard-circular-item/" class="d-inline-flex rounded">Standard Circular Item</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/standard-coupon-item/" class="d-inline-flex rounded">Standard Digital Coupon Circular Item</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/standard-promotion-item/" class="d-inline-flex rounded">Standard Promotion Circular Item</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/thumbnail-circular-item/" class="d-inline-flex rounded">Thumbnail (Classic) Circular Item</a>
+                </li>
+
+              </ul>
+              
+            </div>
+          </li>
+        
+      
+
+      
+      
+        
+          <li class="mb-1">
+            <button class="btn" data-bs-toggle="collapse" data-bs-target="#utilities-menu-collapse" aria-expanded="false">
+              <strong> Utilities</strong>
+            </button>
+
+            <div class="collapse " id="utilities-menu-collapse">
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/utilities/box/" class="d-inline-flex rounded">Box Utilities</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/utilities/max-width/" class="d-inline-flex rounded">Max Width</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/utilities/min-width/" class="d-inline-flex rounded">Min Width</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/utilities/page-break/" class="d-inline-flex rounded">Page Break</a>
+                </li>
+
+              </ul>
+              
+            </div>
+          </li>
+        
+      
+
+      
+      
+    </ul>
+  </nav>
+</aside>
+
+  </nav>
+  <main class="admin-page" role="main">
+    <section class="docs-heading inner-shadow">
+      <h1 class="docs-heading-title shadow">
+        Paging
+      </h1>
+      
+        <p class="docs-heading-tagline">A compact and flexible pagination solution.</p>
+      
+    </section>
+    <h2 id="basic-paging-example">Basic Paging Example</h2>
+<div class="my-3 p-3 example">
+<div class="paging btn-group" role="group" aria-label="Basic outlined example">
+  <a href="#" class="paging-prev btn btn-outline-primary"><i class="fa-solid fa-angle-left"></i><span class="sr-only">Previous Page</span></a>
+  <div class="paging-dropdown btn-group" role="group">
+    <button type="button" class="paging-current-page btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="d-none d-sm-inline">Page 2 of 3</span>
+      <span class="d-inline d-sm-none">Pg. 2</span>
+    </button>
+    <ul class="paging-dropdown-menu dropdown-menu">
+      <li><a class="paging-menu-title dropdown-item" href="#"><strong class="paging-menu-title-text">Section Title</strong></a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 1 of 3</a></li>
+      <li><a class="paging-page dropdown-item active" href="#">Page 2 of 3</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 3 of 3</a></li>
+    </ul>
+  </div>
+  <a href="#" class="paging-next btn btn-outline-primary"><i class="fa-solid fa-angle-right"></i><span class="sr-only">Next Page</span></a>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging btn-group&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;group&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Basic outlined example&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-prev btn btn-outline-primary&#34;</span><span class="p">&gt;&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fa-solid fa-angle-left&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sr-only&#34;</span><span class="p">&gt;</span>Previous Page<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-dropdown btn-group&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;group&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-current-page btn btn-primary dropdown-toggle&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-none d-sm-inline&#34;</span><span class="p">&gt;</span>Page 2 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline d-sm-none&#34;</span><span class="p">&gt;</span>Pg. 2<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-dropdown-menu dropdown-menu&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-menu-title dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;&lt;</span><span class="nt">strong</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-menu-title-text&#34;</span><span class="p">&gt;</span>Section Title<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-page dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Page 1 of 3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-page dropdown-item active&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Page 2 of 3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-page dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Page 3 of 3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-next btn btn-outline-primary&#34;</span><span class="p">&gt;&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fa-solid fa-angle-right&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sr-only&#34;</span><span class="p">&gt;</span>Next Page<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="css-classes">CSS Classes</h3>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>paging</code></td>
+<td>Required</td>
+<td>Namespace for the paging component. Placed on the root element of the component.</td>
+</tr>
+<tr>
+<td><code>paging-prev</code></td>
+<td>Required</td>
+<td>Placed on the button for navigation to the previous page.</td>
+</tr>
+<tr>
+<td><code>paging-next</code></td>
+<td>Required</td>
+<td>Placed on the button for navigation to the next page.</td>
+</tr>
+<tr>
+<td><code>paging-dropdown</code></td>
+<td>Required</td>
+<td>Placed on the root element of the dropdown menu.</td>
+</tr>
+<tr>
+<td><code>paging-current-page</code></td>
+<td>Required</td>
+<td>Placed on button that acts as a dropdown trigger. It displays the current page.</td>
+</tr>
+<tr>
+<td><code>paging-dropdown-menu</code></td>
+<td>Required</td>
+<td>Placed on the list of dropdown items.</td>
+</tr>
+<tr>
+<td><code>paging-menu-title</code></td>
+<td>Optional</td>
+<td>Used when a section heading is desired withing the dropdown menu.</td>
+</tr>
+<tr>
+<td><code>paging-page</code></td>
+<td>Required</td>
+<td>The individual page links in the dropdown menu.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="paging-vs-pagination">Paging vs. Pagination</h2>
+<p>Bootstrap already provides a <a href="https://getbootstrap.com/docs/5.3/components/pagination/" target="_blank">Pagination</a>
+feature, Paging is an alternative solution to navigating multiple pages of content. This alternative feature is called
+Paging instead of Pagination to avoid namespace collisions. By having this feature under the <code>paging</code> namespace it allows
+you to use either solution.</p>
+<h3 id="side-by-side-comparisons">Side by Side Comparisons</h3>
+<p>The following examples use the Bootstrap <code>pagination</code> feature followed by the Core-Styles <code>paging</code> feature on the next line.
+This should help illustrate the differences clearly.</p>
+<h3 id="small-dataset-comparison">Small Dataset Comparison</h3>
+<p>With a small dataset there isn&rsquo;t much difference between the two solutions.</p>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-left"></i><span class="sr-only">Previous Page</span></a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">4</a></li>
+    <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-right"></i><span class="sr-only">Next Page</span></a></li>
+  </ul>
+</nav>
+<div class="paging btn-group" role="group" aria-label="Basic outlined example">
+  <a href="#" class="paging-prev btn btn-outline-primary"><i class="fa-solid fa-angle-left"></i><span class="sr-only">Previous Page</span></a>
+  <div class="paging-dropdown btn-group" role="group">
+    <button type="button" class="paging-current-page btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="d-none d-sm-inline">Page 2 of 4</span>
+      <span class="d-inline d-sm-none">Pg. 2</span>
+    </button>
+    <ul class="paging-dropdown-menu dropdown-menu">
+      <li><a class="paging-page dropdown-item" href="#">Page 1 of 25</a></li>
+      <li><a class="paging-page dropdown-item active" href="#">Page 2 of 4</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 3 of 4</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 4 of 4</a></li>
+    </ul>
+  </div>
+  <a href="#" class="paging-next btn btn-outline-primary"><i class="fa-solid fa-angle-right"></i><span class="sr-only">Next Page</span></a>
+</div>
+<h3 id="large-dataset-comparison">Large Dataset Comparison</h3>
+<p>With a larger dataset the differences become more apparent. With a large dataset the Paging feature occupies roughly the
+same amount of space in the page layout, but the Pagination feature requires exponentially more space as the number of
+pages increases. The impact of this becomes even more dramatic on mobile devices where screen width is limited.</p>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-left"></i><span class="sr-only">Previous Page</span></a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">4</a></li>
+    <li class="page-item"><a class="page-link" href="#">5</a></li>
+    <li class="page-item"><a class="page-link" href="#">6</a></li>
+    <li class="page-item"><a class="page-link" href="#">7</a></li>
+    <li class="page-item"><a class="page-link" href="#">8</a></li>
+    <li class="page-item"><a class="page-link" href="#">9</a></li>
+    <li class="page-item"><a class="page-link" href="#">10</a></li>
+    <li class="page-item"><a class="page-link" href="#">11</a></li>
+    <li class="page-item"><a class="page-link" href="#">12</a></li>
+    <li class="page-item"><a class="page-link" href="#">13</a></li>
+    <li class="page-item"><a class="page-link" href="#">14</a></li>
+    <li class="page-item"><a class="page-link" href="#">15</a></li>
+    <li class="page-item"><a class="page-link" href="#">16</a></li>
+    <li class="page-item"><a class="page-link" href="#">17</a></li>
+    <li class="page-item"><a class="page-link" href="#">18</a></li>
+    <li class="page-item"><a class="page-link" href="#">19</a></li>
+    <li class="page-item"><a class="page-link" href="#">20</a></li>
+    <li class="page-item"><a class="page-link" href="#">21</a></li>
+    <li class="page-item"><a class="page-link" href="#">22</a></li>
+    <li class="page-item"><a class="page-link" href="#">23</a></li>
+    <li class="page-item"><a class="page-link" href="#">24</a></li>
+    <li class="page-item"><a class="page-link" href="#">25</a></li>
+    <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-right"></i><span class="sr-only">Next Page</span></a></li>
+  </ul>
+</nav>
+<div class="paging btn-group" role="group" aria-label="Basic outlined example">
+  <a href="#" class="paging-prev btn btn-outline-primary"><i class="fa-solid fa-angle-left"></i><span class="sr-only">Previous Page</span></a>
+  <div class="paging-dropdown btn-group" role="group">
+    <button type="button" class="paging-current-page btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="d-none d-sm-inline">Page 2 of 25</span>
+      <span class="d-inline d-sm-none">Pg. 2</span>
+    </button>
+    <ul class="paging-dropdown-menu dropdown-menu">
+      <li><a class="paging-page dropdown-item" href="#">Page 1 of 25</a></li>
+      <li><a class="paging-page dropdown-item active" href="#">Page 2 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 3 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 4 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 5 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 6 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 7 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 8 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 9 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 10 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 11 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 12 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 13 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 14 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 15 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 16 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 17 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 18 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 19 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 20 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 21 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 22 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 23 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 24 of 25</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 25 of 25</a></li>
+    </ul>
+  </div>
+  <a href="#" class="paging-next btn btn-outline-primary"><i class="fa-solid fa-angle-right"></i><span class="sr-only">Next Page</span></a>
+</div>
+<h2 id="additional-benefits-of-paging">Additional Benefits of Paging</h2>
+<p>In addition to the compact size, there are a number of other benefits to Paging over Pagination components.</p>
+<h3 id="enhanced-content">Enhanced Content</h3>
+<p>Anything you can place in a standard Bootstrap Dropdown Menu can be placed in a Paging Dropdown Menu.</p>
+<h5 id="including">Including:</h5>
+<ul>
+<li>Dividers</li>
+<li>Section Headings</li>
+<li>Notes</li>
+<li>Longer Text (e.g. categories instead of pages)</li>
+<li>Images</li>
+<li>Forms</li>
+</ul>
+<h3 id="infinite-scroll-support">Infinite Scroll Support</h3>
+<p>The <a href="/docs/3.0/components/ajax/infinite-scroll/">Infinite Scroll</a> feature is designed to interact with a <code>paging</code> element
+when it is present on the same page as infinite scroll content.</p>
+<p>Infinite Scroll will set a URL in the <code>data-load-on-view</code> attribute. If this matches a URL of a <code>paging-page</code> element the
+<code>active</code> class will be added to that <code>paging-page</code> element. Also, it will use the <code>data-page-number</code> and <code>data-max-page-number</code>
+attributes to set the text in the <code>paging-current-page</code> element. It takes the format of <code>Page X of Y</code> for desktop
+breakpoints and <code>Pg. X</code> for mobile breakpoints. When a heading or other html element with a <code>paging-trigger</code> class
+enters the viewport, the parent element with the <code>data-load-on-view</code> attribute will become the current page.</p>
+<blockquote>
+<hr>
+<p>For more information on this functionality visit the documentation for the
+<a href="/docs/3.0/components/ajax/infinite-scroll/">Infinite Scroll</a> feature.</p>
+<hr>
+</blockquote>
+
+  </main>
+  
+    <aside class="admin-sidebar">
+      <h4 class="border-bottom">On this page</h4>
+      <div class="wsg-table-of-contents">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#basic-paging-example">Basic Paging Example</a>
+      <ul>
+        <li><a href="#css-classes">CSS Classes</a></li>
+      </ul>
+    </li>
+    <li><a href="#paging-vs-pagination">Paging vs. Pagination</a>
+      <ul>
+        <li><a href="#side-by-side-comparisons">Side by Side Comparisons</a></li>
+        <li><a href="#small-dataset-comparison">Small Dataset Comparison</a></li>
+        <li><a href="#large-dataset-comparison">Large Dataset Comparison</a></li>
+      </ul>
+    </li>
+    <li><a href="#additional-benefits-of-paging">Additional Benefits of Paging</a>
+      <ul>
+        <li><a href="#enhanced-content">Enhanced Content</a></li>
+        <li><a href="#infinite-scroll-support">Infinite Scroll Support</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </aside>
+  
+  <footer class="admin-footer docs-footer" role="contentinfo">
+    
+      <nav aria-label="breadcrumb navigation">
+  <ol class="breadcrumb sans-serif">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/">Docs</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/">3.0</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/">Components</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/navigation/">Navigation</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/navigation/paging/">Paging</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+        
+    
+  </ol>
+</nav>
+    
+  </footer>
+</div>
+
+
+  </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="/vendor/clipboard/dist/clipboard.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/docs.js" crossorigin="anonymous"></script>
+    <script src="/js/icon-grid.js" crossorigin="anonymous"></script>
+    <script src="/js/muuri.js" crossorigin="anonymous"></script>
+    <script src="/js/core-styles/tags.js" defer></script>
+    <script src="/js/core-styles/ajax-form.js"></script>
+    <script src="/js/core-styles/ajax-load.js"></script>
+    <script src="/js/core-styles/bootstrap-data-attributes.js"></script>
+    <script src="/js/core-styles/checkbox-selector.js"></script>
+    <script src="/js/core-styles/shopping-list-power-bar.js"></script>
+    <script src="/js/core-styles/filter-search.js"></script>
+    <script src="/js/core-styles/form-toggles.js"></script>
+    <script src="/js/core-styles/search.js"></script>
+    <script src="/js/core-styles/circular-cookies.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title> Infinite Scroll at Core-Styles 3 </title>
+    
+    
+      <script src="https://kit.fontawesome.com/8bda546f76.js" crossorigin="anonymous"></script>
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/docs.css" />
+  </head>
+  <body>
+<section class="wsg-content">
+    
+<div class="admin admin-with-sidenav admin-with-sidebar">
+  <header class="admin-header" role="banner">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark wsg-header shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-2" href="/"><img
+        src="https://www.webstop.com/assets/Webstop-logos/webstop-twocolor-landscape-dark-bg-72dpi-e6425f6d6e9ec4cc90742a883b2997bb28191590bfd8762222ed4723865dcaef.png" style="max-width: 127px; /* 889/7 = 127 */"></a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Docs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dev/ad-builder/">Dev</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/guides/">Guides</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/core-styles-3#core-styles-3"
+                target="_blank">GitHub</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/webstop-wiki#webstop-app-builders-wiki"
+                target="_blank">Wiki</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://github.com/Webstop/core-specs#webstop-core-specifications"
+                target="_blank">Specs</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  </header>
+  <nav class="admin-sidenav" role="navigation">
+    <aside>
+  <nav class="collapse show flex" id="docs-nav" aria-label="Docs navigation">
+    <ul class="list-unstyled mb-0 py-3 pt-md-1">
+      
+      
+        
+          <li class="mb-1">
+            <button class="btn" data-bs-toggle="collapse"
+              data-bs-target="#getstart-menu-collapse" aria-expanded="false" aria-controls="getstart-menu-collapse">
+              <strong> Getting Started</strong>
+            </button>
+
+            <div
+              class="collapse "
+              id="getstart-menu-collapse">
+
+              
+                <ul class="list-unstyled fw-normal pb-1 small">
+
+                  <li
+                    class="py-2 ps-4 ">
+                    <a href="/docs/3.0/getting-started/introduction/" class="d-inline-flex rounded">Introduction</a>
+                  </li>
+
+                </ul>
+              
+                <ul class="list-unstyled fw-normal pb-1 small">
+
+                  <li
+                    class="py-2 ps-4 ">
+                    <a href="/docs/3.0/getting-started/conventions/" class="d-inline-flex rounded">Conventions</a>
+                  </li>
+
+                </ul>
+              
+            </div>
+          </li>
+        
+      
+
+      
+      
+        
+          <li class="mb-1">
+            <button class="btn" data-bs-toggle="collapse" data-bs-target="#guides-menu-collapse"
+              aria-expanded="false">
+              <strong> Guides</strong>
+            </button>
+
+            <div
+              class="collapse "
+              id="guides-menu-collapse">
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li
+                  class="py-2 ps-4 ">
+                  <a href="/guides/3.0/overview/" class="d-inline-flex rounded">Guide Overview</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li
+                  class="py-2 ps-4 ">
+                  <a href="/guides/3.0/components/" class="d-inline-flex rounded">Front-End Components</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li
+                  class="py-2 ps-4 ">
+                  <a href="/guides/3.0/development-approach/" class="d-inline-flex rounded">Development Approach</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li
+                  class="py-2 ps-4 ">
+                  <a href="/guides/3.0/development-process/" class="d-inline-flex rounded">Development Process</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li
+                  class="py-2 ps-4 ">
+                  <a href="/guides/3.0/working-with-ajax/" class="d-inline-flex rounded">Working with AJAX</a>
+                </li>
+
+              </ul>
+              
+            </div>
+          </li>
+        
+      
+
+
+      
+      
+        
+          <li class="mb-1">
+            <button class="btn" data-bs-toggle="collapse" data-bs-target="#layout-menu-collapse" aria-expanded="false">
+              <strong> Layouts</strong>
+            </button>
+
+            <div
+              class="collapse "
+              id="layout-menu-collapse">
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/layouts/admin/" class="d-inline-flex rounded">Admin Layout</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/layouts/public/" class="d-inline-flex rounded">Public Layout</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/layouts/site/" class="d-inline-flex rounded">Public Site Layout</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/layouts/toolbar/" class="d-inline-flex rounded">Toolbar</a>
+                </li>
+
+              </ul>
+              
+            </div>
+          </li>
+        
+      
+
+
+      
+      
+        
+          <li class="mb-1">
+            <button class="btn" data-bs-toggle="collapse" data-bs-target="#components-menu-collapse" aria-expanded="false">
+              <strong> Components</strong>
+            </button class="btn">
+
+            <div class="collapse  show " id="components-menu-collapse">
+              <ul class="list-unstyled fw-normal pb-1 small">
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/ajax/ajax-form/" class="d-inline-flex rounded">Ajax Form</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/ajax/ajax-load/" class="d-inline-flex rounded">Ajax Load</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/ajax/ajax-modal/" class="d-inline-flex rounded">Ajax Modal</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/analytics/tracking/" class="d-inline-flex rounded">Aye, Analytics Tracker</a>
+                    </li>
+                  
+                
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/forms/checkbox-selector/" class="d-inline-flex rounded">Checkbox Selector</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/forms/form-toggles/" class="d-inline-flex rounded">Form Toggles</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/navigation/html-test/" class="d-inline-flex rounded">html test</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4  left-nav-active ">
+                      <a href="/docs/3.0/components/ajax/infinite-scroll/" class="d-inline-flex rounded">Infinite Scroll</a>
+                    </li>
+                  
+                
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/forms/search/" class="d-inline-flex rounded">Live Search</a>
+                    </li>
+                  
+                
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/navigation/paging/" class="d-inline-flex rounded">Paging</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/tagging/tag-search/" class="d-inline-flex rounded">Tag Search</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/tagging/tags/" class="d-inline-flex rounded">Tags</a>
+                    </li>
+                  
+                
+              </ul>
+            </div>
+          </li>
+        
+      
+
+      
+      
+        
+          <li class="mb-1">
+            <button class="btn" data-bs-toggle="collapse" data-bs-target="#icons-menu-collapse" aria-expanded="false">
+              <strong> Icons</strong>
+            </button>
+
+            <div class="collapse " id="icons-menu-collapse">
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/icons/overview/" class="d-inline-flex rounded">1st Icons Overview</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/icons/admin-icons/" class="d-inline-flex rounded">Admin Icons</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/icons/all-icons/" class="d-inline-flex rounded">All Icons</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/icons/core-icons/" class="d-inline-flex rounded">Core Icons</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/icons/crud-icons/" class="d-inline-flex rounded">CRUD Icons</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/icons/popular-icons/" class="d-inline-flex rounded">Popular Icons</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/icons/ui-icons/" class="d-inline-flex rounded">UI Icons</a>
+                </li>
+
+              </ul>
+              
+            </div>
+          </li>
+        
+      
+
+      
+      
+
+      
+      
+        
+          <li class="mb-1">
+            <button class="btn" data-bs-toggle="collapse" data-bs-target="#grocery-menu-collapse" aria-expanded="false">
+              <strong> Grocery</strong>
+            </button>
+
+            <div class="collapse " id="grocery-menu-collapse">
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/tracking/" class="d-inline-flex rounded">Aye, Analytics Tracking</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/banner-item/" class="d-inline-flex rounded">Banner Circular Item</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/circular-items/" class="d-inline-flex rounded">Circular Items</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/navigation/" class="d-inline-flex rounded">Circular Navigation</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/coupon-item/" class="d-inline-flex rounded">Digital Coupon Circular Item</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/price/" class="d-inline-flex rounded">Price</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/recipe-item/" class="d-inline-flex rounded">Recipe Circular Item</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/standard-circular-item/" class="d-inline-flex rounded">Standard Circular Item</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/standard-coupon-item/" class="d-inline-flex rounded">Standard Digital Coupon Circular Item</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/standard-promotion-item/" class="d-inline-flex rounded">Standard Promotion Circular Item</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/grocery/circulars/thumbnail-circular-item/" class="d-inline-flex rounded">Thumbnail (Classic) Circular Item</a>
+                </li>
+
+              </ul>
+              
+            </div>
+          </li>
+        
+      
+
+      
+      
+        
+          <li class="mb-1">
+            <button class="btn" data-bs-toggle="collapse" data-bs-target="#utilities-menu-collapse" aria-expanded="false">
+              <strong> Utilities</strong>
+            </button>
+
+            <div class="collapse " id="utilities-menu-collapse">
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/utilities/box/" class="d-inline-flex rounded">Box Utilities</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/utilities/max-width/" class="d-inline-flex rounded">Max Width</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/utilities/min-width/" class="d-inline-flex rounded">Min Width</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/utilities/page-break/" class="d-inline-flex rounded">Page Break</a>
+                </li>
+
+              </ul>
+              
+            </div>
+          </li>
+        
+      
+
+      
+      
+    </ul>
+  </nav>
+</aside>
+
+  </nav>
+  <main class="admin-page" role="main">
+    <section class="docs-heading inner-shadow">
+      <h1 class="docs-heading-title shadow">
+        Infinite Scroll
+      </h1>
+      
+        <p class="docs-heading-tagline">Load new pages of content as users scroll to the bottom of the page.</p>
+      
+    </section>
+    <p>This approach allows you to lazy load content on a page as the target elements enter
+the viewport.</p>
+<h2 id="examples">Examples</h2>
+<p>The capabilities discussed on this page consist of three main parts:</p>
+<ol>
+<li>A Load on View (<code>loadOnView</code>) function which watches for when an HTML element enters the viewport and then populates the element with content fetched from the server.</li>
+<li>A set of features the enable Infinite Scrolling.</li>
+<li>A set of features that allow pagination to match the content being viewed from the Infinite Scroll.</li>
+</ol>
+<p>These pieces can be used independently of each other, but when combined together they produce a very nice user experience.</p>
+<p>All of this is managed via a simple interface that uses HTML attributes to control and manage it. No need to write any additional JavaScript.</p>
+<h5 id="preamble-loading-spinner">Preamble: Loading Spinner</h5>
+<p>In the following examples you&rsquo;ll see &ldquo;<code>...loading spinner...</code>&rdquo;. This is placeholder text used to keep from distracting
+us from the important content. In your actual code, use the following whenever you see &ldquo;<code>...loading spinner...</code>&quot;:</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-center m-4&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block-inline&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;spinner-border&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;status&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h3 pb-2&#34;</span><span class="p">&gt;</span>Loading...<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>  
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><h3 id="load-on-view-example">Load on View Example</h3>
+<p>In the most basic form of lazy loading content we have the Load on View feature. This feature allows you to load in
+HTML content via AJAX only when the HTML element enters the web browser&rsquo;s viewport.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_1&#34;</span><span class="p">&gt;</span>
+  ...loading spinner...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><a href="/docs/3.0/components/ajax/infinite-scroll-demos/load-on-view-demo/" class="btn btn-outline-primary mb-3" target="_blank">
+  Load on View Demo
+  <i class="fa-duotone fa-up-right-from-square ms-2"></i>
+</a>
+<p>Here our JavaScript will set an observer on any HTML elements with a <code>data-load-on-view</code> attribute. The value of the
+<code>data-load-on-view</code> attribute represents the URL to fetch content from.</p>
+<p>When the observed element enters the browser&rsquo;s viewport, a fetch request will be made to retrieve the contents of the
+element with the HTML response from the supplied URL.</p>
+<h3 id="basic-infinite-scroll-example">Basic Infinite Scroll Example</h3>
+<p>In the most basic form of lazy loading content we have the Load on View feature. This feature allows you to load in
+HTML content via AJAX only when the HTML element enters the web browser&rsquo;s viewport.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_1&#34;</span> <span class="na">data-infinite-scroll</span><span class="p">&gt;</span>
+  ...loading spinner...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_2&#34;</span> <span class="na">data-infinite-scroll</span><span class="p">&gt;</span>
+  ...loading spinner...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_3&#34;</span> <span class="na">data-infinite-scroll</span><span class="p">&gt;</span>
+  ...loading spinner...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><a href="/docs/3.0/components/ajax/infinite-scroll-demos/basic-infinite-scroll-demo/" class="btn btn-outline-primary" target="_blank">
+  Basic Infinite Scroll Demo
+  <i class="fa-duotone fa-up-right-from-square ms-2"></i>
+</a>
+<h3 id="infinite-scroll-with-paging-example">Infinite Scroll with Paging Example</h3>
+<p>In the most basic form of lazy loading content we have the Load on View feature. This feature allows you to load in
+HTML content via AJAX only when the HTML element enters the web browser&rsquo;s viewport.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_1&#34;</span> <span class="na">data-infinite-scroll</span> <span class="na">data-page-number</span><span class="o">=</span><span class="s">&#34;1&#34;</span> <span class="na">data-max-page-number</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>
+  ...loading spinner...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_2&#34;</span> <span class="na">data-infinite-scroll</span> <span class="na">data-page-number</span><span class="o">=</span><span class="s">&#34;2&#34;</span> <span class="na">data-max-page-number</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>
+  ...loading spinner...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_3&#34;</span> <span class="na">data-infinite-scroll</span> <span class="na">data-page-number</span><span class="o">=</span><span class="s">&#34;3&#34;</span> <span class="na">data-max-page-number</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>
+  ...loading spinner...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><a href="/docs/3.0/components/ajax/infinite-scroll-demos/infinite-scroll-with-paging-demo/" class="btn btn-outline-primary" target="_blank">
+  Infinite Scroll with Paging Demo
+  <i class="fa-duotone fa-up-right-from-square ms-2"></i>
+</a>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data-load-on-view</code></td>
+<td>String, Required</td>
+<td>Place on the HTML element to load content into. Value is the URL path to fetch content from. Must return valid HTML.</td>
+</tr>
+<tr>
+<td><code>data-infinite-scroll</code></td>
+<td>Optional</td>
+<td>Required for Infinite Scroll support. The maximum number of pages of content available.</td>
+</tr>
+<tr>
+<td><code>data-page-number</code></td>
+<td>Integer, Optional</td>
+<td>Required for Paging support. The page number this content represents.</td>
+</tr>
+<tr>
+<td><code>data-max-page-number</code></td>
+<td>Integer, Optional</td>
+<td>Required for Paging support. The maximum number of pages of content available.</td>
+</tr>
+</tbody>
+</table>
+<div class="alert alert-info" role="alert">
+  This concludes the documentation for using Infinite Scroll in your projects. The documentation below is for developers who want to fix a bug or 
+  add features to the JavaScript code.
+</div>
+<h2 id="javascript-development">JavaScript Development</h2>
+<p>The following section is only for those who need to fix a bug or add a feature to the Javascript code.</p>
+<h3 id="javascriptmethod-interactions">JavaScriptMethod Interactions</h3>
+<p>The following chart describes how all the pieces fit together. After the chart we have a detailed description of each javascript method.</p>
+<a href="/assets/images/infinite-scroll/infinite_scrolling_flowchart.svg" target="_blank">
+  <img src="/assets/images/infinite-scroll/infinite_scrolling_flowchart.svg" alt="" style="width: 100%;">
+</a>
+<h3 id="javascript-methods">JavaScript Methods</h3>
+<h4 id="load-function"><code>load()</code> Function</h4>
+<p>Vanilla JS replacement for jQuery&rsquo;s <code>load</code> method with support for infinite scrolling, &amp; paging.</p>
+<p>Makes an AJAX request and replaces the contents of an HTML element with the results. Registers a new pagingObserver, and runs the enableNewLoadOnView function.</p>
+<h4 id="enablenextloadonview-function"><code>enableNextLoadOnView()</code> Function</h4>
+<p>The setup: a series of HTML elements with <code>data-load-on-view</code> attributes. All but the first one is set to <code>display: none</code>. Each time we ajax in content for a <code>data-load-on-view</code> elemen t the next <code>data-load-on-view</code> element is switched to <code>display: block</code>. This allows an Intersection Observer to watch for the next element to enter the view port.</p>
+<h4 id="updatepaging-function"><code>updatePaging()</code> Function</h4>
+<p>Updates a standard <code>paging</code> display with the currently in view page. It updates the text in the menu item, and which item in the dropdown list is highlighted.</p>
+<h4 id="pagingobserver-object"><code>pagingObserver</code> Object</h4>
+<p>An <code>IntersectionObserver</code> object designed to look for an element which should run the <code>updatePaging()</code> function when in view.</p>
+<h4 id="loadonview-function"><code>loadOnView</code> Function</h4>
+<p>Registers an HTML element with an IntersectionObserver that monitors when the element enters the viewport.</p>
+<p>When the element enters the viewport is will check if the element has been loaded previously, if not it will envoke the <code>load</code> function. It also updates the brower history to enable Google Analytics pageview tracking. It sets the <code>is-loaded</code> class on elements once they are loaded.</p>
+<h4 id="data-attribute-dsl">Data Attribute DSL</h4>
+<p>An IIFE (Immediately Invoked Function Expression) which initializes infinite scroll capabilities.</p>
+<p>First, it looks for all HTML elements with a <code>data-load-on-view</code> attribute. It takes this list of elements and does two things with them:</p>
+<ol>
+<li>It sets <code>display: block</code> on the first one it finds and <code>display: none</code> on the rest.</li>
+<li>It registers them with the <code>loadOnView</code> function. Which sets an IntersectionObserver to watch for when the element enters the viewport.</li>
+</ol>
+<p>Second, it looks for all HTML elements with a <code>paging-trigger</code> class and regsiters them with the <code>pagingObserver</code>. This is done allow content loaded directly on the page (say page 1) to also use the <code>pagingObserver</code>. Instead of just the content loaded via the <code>loadOnView</code> method.</p>
+
+  </main>
+  
+    <aside class="admin-sidebar">
+      <h4 class="border-bottom">On this page</h4>
+      <div class="wsg-table-of-contents">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#examples">Examples</a>
+      <ul>
+        <li></li>
+        <li><a href="#load-on-view-example">Load on View Example</a></li>
+        <li><a href="#basic-infinite-scroll-example">Basic Infinite Scroll Example</a></li>
+        <li><a href="#infinite-scroll-with-paging-example">Infinite Scroll with Paging Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#attributes">Attributes</a></li>
+    <li><a href="#javascript-development">JavaScript Development</a>
+      <ul>
+        <li><a href="#javascriptmethod-interactions">JavaScriptMethod Interactions</a></li>
+        <li><a href="#javascript-methods">JavaScript Methods</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </aside>
+  
+  <footer class="admin-footer docs-footer" role="contentinfo">
+    
+      <nav aria-label="breadcrumb navigation">
+  <ol class="breadcrumb sans-serif">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/">Docs</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/">3.0</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/">Components</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/ajax/">Ajax</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/ajax/infinite-scroll/">Infinite scroll</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+        
+    
+  </ol>
+</nav>
+    
+  </footer>
+</div>
+
+
+  </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="/vendor/clipboard/dist/clipboard.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/docs.js" crossorigin="anonymous"></script>
+    <script src="/js/icon-grid.js" crossorigin="anonymous"></script>
+    <script src="/js/muuri.js" crossorigin="anonymous"></script>
+    <script src="/js/core-styles/tags.js" defer></script>
+    <script src="/js/core-styles/ajax-form.js"></script>
+    <script src="/js/core-styles/ajax-load.js"></script>
+    <script src="/js/core-styles/bootstrap-data-attributes.js"></script>
+    <script src="/js/core-styles/checkbox-selector.js"></script>
+    <script src="/js/core-styles/shopping-list-power-bar.js"></script>
+    <script src="/js/core-styles/filter-search.js"></script>
+    <script src="/js/core-styles/form-toggles.js"></script>
+    <script src="/js/core-styles/search.js"></script>
+    <script src="/js/core-styles/circular-cookies.js"></script>
+  </body>
+</html>

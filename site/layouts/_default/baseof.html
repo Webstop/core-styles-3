@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
+    <title>{{ block "title" . }} {{ .Title }} at {{ .Site.Title }} {{ end }}</title>
     <!--  <link rel="stylesheet" href="/docs/3.0/dist/css/core-styles-defaults.css">-->
     {{ range .Site.Data.font_awesome_config }}
       {{ if .kit_key }}<script src="https://kit.fontawesome.com/{{ .kit_key }}.js" crossorigin="anonymous"></script>{{ end }}
