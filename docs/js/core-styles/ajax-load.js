@@ -112,9 +112,6 @@ function enableNextLoadOnView(current){
 
 const pagingObserver = new IntersectionObserver(entries => {
 
-  // Available data when an intersection happens
-  console.log(entries);
-
   // Element enters the viewport
   if(entries[0].intersectionRatio !== 0) {
     let parent = entries[0].target.closest('[data-page-number]');
@@ -158,8 +155,6 @@ function updatePaging(source) {
       }
     })
   })
-
-  console.log(`updatePaging`);
 }
 
 
@@ -168,19 +163,23 @@ function updatePaging(source) {
   // Vanilla JS version of Data Attribute DSL
   let targets = document.querySelectorAll('[data-load-on-view]');
   let count   = 0;
-  targets.forEach((target) => {
-    let url      = target.getAttribute('data-load-on-view');
-    let infinite = target.hasAttribute('data-infinite-scroll');
-    let display  = target.getAttribute('data-display-as');
-    let loaded   = target.classList.contains('is-loaded');
-    display = display || 'block';
-    // count == 0 || loaded ? display = display : display = 'none';
-    if(count != 0 && !loaded){display = 'none';}
-    target.style.display = display;
-    loadOnView(target, url, infinite);
-    count++;
-  })
+  if(targets.length !== 0) {
+    targets.forEach((target) => {
+      let url      = target.getAttribute('data-load-on-view');
+      let infinite = target.hasAttribute('data-infinite-scroll');
+      let display  = target.getAttribute('data-display-as');
+      let loaded   = target.classList.contains('is-loaded');
+      display = display || 'block';
+      // count == 0 || loaded ? display = display : display = 'none';
+      if(count != 0 && !loaded){display = 'none';}
+      target.style.display = display;
+      loadOnView(target, url, infinite);
+      count++;
+    })
+    // Register any triggers on the initial page, not just the one's loaded via ALAX
+    let pagingTrigger = document.querySelector('.paging-trigger');
+    if(pagingTrigger) { pagingObserver.observe(pagingTrigger); }
+  }
 
-  pagingObserver.observe(document.querySelector('.paging-trigger'));
 
 })();
