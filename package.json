@@ -9,7 +9,7 @@
     "css-lint": "",
     "css-prefix": "",
     "css-minify": "",
-    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:dist/css/",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:dist/core-styles/css/",
     "css-compile-docs": "sass --style expanded --source-map --embed-sources --no-error-css site/assets/scss/:site/static/css/",
     "docs-build": "hugo --cleanDestinationDir",
     "NA-watch-docs": "nodemon -L --watch site/ --ext md,html --exec \"npm-run-all docs-build\"",
@@ -17,11 +17,20 @@
     "watch-css-main": "nodemon -L --watch scss/ --ext scss --exec \"npm-run-all css-compile\"",
     "NA-watch-css-main": "nodemon -L --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
     "watch-css-docs": "nodemon -L --watch site/assets/scss/ --ext scss --exec \"npm run css-compile-docs\"",
-    "js-move": "rm -rf dist/js ; cp -R js dist",
-    "js-move-docs-NA": "rm -rf ./site/static/js/core-styles ; cp -fR ./js/* ./site/static/js/core-styles",
+    "js-move-cs3-bkup": "rm -rf dist/js ; cp -R js dist",
+    "js-move": "npm-run-all --parallel js-move-ahoy js-move-bootstrap js-move-core-styles js-move-popper js-move-jquery js-move-js-cookie",
+    "js-move-ahoy": "rm -rf dist/ahoy/js ; cp -R node_modules/ahoy.js/dist dist/ahoy/js",
+    "js-move-bootstrap": "rm -rf dist/bootstrap/js ; cp -R node_modules/bootstrap/dist/js dist/bootstrap",
+    "js-move-core-styles": "rm -rf dist/core-styles/js ; cp -R js dist/core-styles",
+    "js-move-popper": "rm -rf dist/@popperjs/ ; cp -R node_modules/@popperjs/core/dist dist/@popperjs",
+    "js-move-jquery": "rm -rf dist/jquery/js ; cp -R node_modules/jquery/dist/ dist/jquery/js",
+    "js-move-js-cookie": "rm -rf dist/js-cookie/js ; cp -R node_modules/js-cookie/dist/ dist/js-cookie/js",
     "js-move-docs": "rm -rf site/static/js/core-styles ; cp -R js site/static/js/core-styles",
+    "js-move-docs-ahoy": "rm -rf dist/ahoy/js ; cp -R node_modules/ahoy.js/dist site/static/js/ahoy/js",
+    "js-move-docs-bootstrap": "rm -rf dist/bootstrap/js ; cp -R node_modules/bootstrap/dist/js site/static/js/bootstrap",
+    "js-move-docs-core-styles": "rm -rf site/static/js/core-styles ; cp -R js site/static/js/core-styles",
     "dist": "npm-run-all --parallel js-move css-compile",
-    "docs": "npm-run-all --parallel js-move-docs css-compile-docs",
+    "docs": "npm-run-all --parallel js-move-docs js-move-docs-ahoy css-compile-docs",
     "pushable": "npm-run-all --parallel dist docs"
   },
   "repository": {
@@ -30,13 +39,16 @@
   },
   "homepage": "https://guides.webstop.com/",
   "dependencies": {
-    "bootstrap": "^5.2.3"
+    "@popperjs/core": "^2.11.8",
+    "ahoy.js": "^0.4.3",
+    "bootstrap": "^5.3.1",
+    "jquery": "^3.7.0",
+    "js-cookie": "^3.0.5"
   },
   "peerDependencies": {
-    "@popperjs/core": "^2.11.5"
+    "@popperjs/core": "^2.11.8"
   },
   "devDependencies": {
-    "@popperjs/core": "^2.11.5",
     "bootstrap-5-docs": "github:hemphill/bootstrap-5-docs#main",
     "hugo-bin": "^0.85.3",
     "nodemon": "^2.0.15",
