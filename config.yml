@@ -58,6 +58,8 @@ module:
 params:
   current_version:      "3.0.0-alpha-1"
   docs_version:         "3.0"
+  styler_version:       "3.0"
+  icons_kit_key:        "8bda546f76"
   repo:                 "https://github.com/webstop/core-styles-3"
   website:              "https://guides.webstop.com"
 

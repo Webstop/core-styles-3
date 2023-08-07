@@ -89,6 +89,15 @@ checked into git. The files found in the `node_modules` folder are defined
 in the `package.json` file. Node modules are how we include 3rd party libraries 
 and frameworks for JavaScript and CSS, things like Bootstrap 5.
 
+### Creating New Javascript files
+
+When you want to add a new javascript file, the following must be done in order to use it:
+
+- List the new file in the `site/content/docs/3.0/getting-started/introduciton.md` page.
+- Add the file to the documentation website at `site/layouts/_default/baseof.html`.
+- Add the file to the core-lasso and tops-lasso websites
+- Add the file to the styler gem (2 templates, used for core-rails).
+
 ## Docker Notes
 
 The base hugo image runs the `hugo` command everytime you start a container. 
@@ -102,7 +111,7 @@ context to you have access to the `sass` command.
 
 Follow these steps to deploy the Framework.
 
-1. Update the version number in the `package.json` file (remember the new version number).
+1. Update the `version` number in the `package.json` file & `current_verison` number in the `config.yml` file (remember the new version number).
 2. Run the CSS compile script. We will launch a node container and run the script that moves all our latest CSS and JavaScript into the `dist` folder.
 - Run the `./bash` command.
 - then run `npm run css-compile`.
@@ -136,10 +145,10 @@ Your `package.json` file will looks something like this, likely with a lot more 
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "bootstrap": "5.2.2",
+    "bootstrap": "5.3.1",
     "core-styles-3": "github:webstop/core-styles-3#v1.0.2",
-    "jquery": "3.6.1",
-    "@popperjs/core": "^2.11.6"
+    "jquery": "3.7.0",
+    "@popperjs/core": "^2.11.8"
   }
 }
 ```

@@ -28,14 +28,11 @@ There are 3 parts needed to get Core-Styles 3 installed in a project.
 
 **Important Icon Note:** _The value `8bda546f76` is the unique Kit Key which represents the current build of core-icons, this will probably be a variable in your implementation and need to be replaced by the latest value._
 
-
 ```html
 <link rel="stylesheet" href="https://s3.grocerywebsite.com/customizations_v2/retailer_2661/stylesheets/retailer_2661.css">
-<script src="https://kit.fontawesome.com/8bda546f76.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/{{ .Site.Params.icons_kit_key }}.js" crossorigin="anonymous"></script>
 ```
-
 **At the End of the `<body>` tag, include the following:**
-
 
 ```html
 <!-- External Libraries -->
@@ -45,23 +42,22 @@ There are 3 parts needed to get Core-Styles 3 installed in a project.
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/src/js.cookie.min.js"></script>
 <!-- Core-Styles jS Files -->
 <!-- These three need to go first, in this order, and with these attributes. -->
-<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v0.6.9/dist/core-styles/js/config.js"></script>
+<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/config.js"></script>
 <script src="/js/ahoy/ahoy.min.js" defer=""></script>
-<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v0.6.9/dist/core-styles/js/aye.js" type="module"></script>
+<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/aye.js" type="module"></script>
 <!-- The rest of the files are simply listed in alphabetical order. -->
-<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v0.6.9/dist/core-styles/js/ajax-form.js"></script>
-<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v0.6.9/dist/core-styles/js/ajax-load.js"></script>
-<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v0.6.9/dist/core-styles/js/ajax-modal.js"></script>
-<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v0.6.9/dist/core-styles/js/bootstrap-data-attributes.js"></script>
-<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v0.6.9/dist/core-styles/js/btn-disabled.js"></script>
-<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v0.6.9/dist/core-styles/js/checkbox-selector.js"></script>
-<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v0.6.9/dist/core-styles/js/circular-cookies.js"></script>
-<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v0.6.9/dist/core-styles/js/filter-search.js"></script>
-<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v0.6.9/dist/core-styles/js/form-toggles.js"></script>
-<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v0.6.9/dist/core-styles/js/search.js"></script>
-<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v0.6.9/dist/core-styles/js/shopping-list-power-bar.js"></script>
-<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v0.6.9/dist/core-styles/js/tags.js"></script>
-
+<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/ajax-form.js"></script>
+<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/ajax-load.js"></script>
+<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/ajax-modal.js"></script>
+<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/bootstrap-data-attributes.js"></script>
+<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/btn-disabled.js"></script>
+<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/checkbox-selector.js"></script>
+<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/circular-cookies.js"></script>
+<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/filter-search.js"></script>
+<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/form-toggles.js"></script>
+<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/search.js"></script>
+<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/shopping-list-power-bar.js"></script>
+<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/tags.js"></script>
 ```
 
 First we include the 3rd party javascript libraries. Then we include our custom javascript files. 
