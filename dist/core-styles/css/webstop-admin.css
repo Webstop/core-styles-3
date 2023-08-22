@@ -13072,6 +13072,12 @@ textarea.form-control-lg {
   font-family: "Libre Baskerville", Baskerville, "Baskerville Old Face", Georgia, serif;
 }
 
+.btn .btn-plain {
+  background: transparent;
+  padding: 0;
+  border: 0;
+}
+
 .box-stackable {
   margin-bottom: 1.5rem;
 }
@@ -13231,7 +13237,7 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
   background-color: #e9ecef;
 }
 .admin .admin-sidebar {
-  border-left: 0 solid #bacad9;
+  border-left: 1px solid #bacad9;
   background-color: #dbe3eb;
 }
 .admin .admin-footer {
@@ -13253,11 +13259,15 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
 }
 
 .public {
+  grid-auto-columns: 0;
+  grid-auto-rows: 0;
   grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-rows: 60px auto;
   display: grid;
   grid-template-areas: "public-header" "public-page";
   height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
   overflow-x: hidden;
 }
 .public .public-header {
@@ -13284,6 +13294,60 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
   overflow-x: auto;
   display: none;
 }
+.public .public-sidenav-grid-btn {
+  display: none;
+}
+.public .public-sidebar-grid-btn {
+  display: none;
+}
+.public .public-sidebar-offcanvas-btn {
+  display: none;
+}
+@media (min-width: 576px) {
+  .public.public-with-sidecar {
+    grid-template-columns: 90px auto;
+    grid-template-areas: "public-header  public-header" "public-sidecar public-page" "public-sidecar public-footer";
+  }
+  .public.public-with-sidecar .public-sidecar {
+    display: block;
+  }
+}
+.public.public-with-sidenav .public-sidenav-offcanvas-btn {
+  display: block;
+}
+@media (min-width: 1200px) {
+  .public.public-with-sidenav {
+    grid-template-columns: 320px auto;
+    grid-template-areas: "public-header  public-header" "public-sidenav public-page" "public-sidenav public-footer";
+  }
+  .public.public-with-sidenav .public-sidenav {
+    display: block;
+  }
+  .public.public-with-sidenav .public-sidenav-grid-btn {
+    display: block;
+  }
+  .public.public-with-sidenav .public-sidenav-offcanvas-btn {
+    display: none;
+  }
+}
+.public.public-with-sidebar .public-sidebar-offcanvas-btn {
+  display: block;
+}
+@media (min-width: 1200px) {
+  .public.public-with-sidebar {
+    grid-template-columns: auto 320px;
+    grid-template-areas: "public-header public-header" "public-page   public-sidebar" "public-footer public-sidebar";
+  }
+  .public.public-with-sidebar .public-sidebar {
+    display: block;
+  }
+  .public.public-with-sidebar .public-sidebar-grid-btn {
+    display: block;
+  }
+  .public.public-with-sidebar .public-sidebar-offcanvas-btn {
+    display: none;
+  }
+}
 @media (min-width: 1200px) {
   .public.public-with-sidecar.public-with-sidenav {
     grid-template-columns: 90px 320px auto;
@@ -13297,22 +13361,96 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
   }
 }
 @media (min-width: 1200px) {
+  .public.public-with-sidecar.public-with-sidebar {
+    grid-auto-columns: 0;
+    grid-auto-rows: 0;
+    grid-template-columns: 90px auto 320px;
+    grid-template-areas: "public-header  public-header public-header" "public-sidecar public-page   public-sidebar" "public-sidecar public-footer public-sidebar";
+  }
+  .public.public-with-sidecar.public-with-sidebar .public-sidecar {
+    display: block;
+  }
+  .public.public-with-sidecar.public-with-sidebar .public-sidebar {
+    display: block;
+  }
+}
+.public.public-with-sidenav.public-with-sidebar .public-sidenav-offcanvas-btn {
+  display: block;
+}
+.public.public-with-sidenav.public-with-sidebar .public-sidebar-offcanvas-btn {
+  display: block;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
   .public.public-with-sidenav.public-with-sidebar {
+    grid-auto-columns: 0;
+    grid-auto-rows: 0;
     grid-template-columns: auto 320px;
     grid-template-areas: "public-header public-header" "public-page   public-sidebar";
   }
   .public.public-with-sidenav.public-with-sidebar .public-sidebar {
     display: block;
   }
+  .public.public-with-sidenav.public-with-sidebar .public-sidenav {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  .public.public-with-sidenav.public-with-sidebar .public-sidebar-offcanvas-btn {
+    display: none;
+  }
+  .public.public-with-sidenav.public-with-sidebar .public-sidebar-grid-btn {
+    display: block;
+  }
+  .public.public-with-sidenav.public-with-sidebar.public-hide-sidebar {
+    grid-template-columns: auto;
+    grid-template-areas: "public-header" "public-page";
+  }
+  .public.public-with-sidenav.public-with-sidebar.public-hide-sidebar .public-sidebar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
 }
 @media (min-width: 1400px) {
   .public.public-with-sidenav.public-with-sidebar {
+    grid-auto-rows: 0;
     grid-template-columns: 320px auto 320px;
     grid-template-areas: "public-header  public-header public-header" "public-sidenav public-page   public-sidebar";
+  }
+  .public.public-with-sidenav.public-with-sidebar .public-sidebar {
+    display: block;
   }
   .public.public-with-sidenav.public-with-sidebar .public-sidenav {
     display: block;
   }
+  .public.public-with-sidenav.public-with-sidebar .public-sidenav-offcanvas-btn {
+    display: none;
+  }
+  .public.public-with-sidenav.public-with-sidebar .public-sidenav-grid-btn {
+    display: block;
+  }
+  .public.public-with-sidenav.public-with-sidebar.public-hide-sidebar {
+    grid-template-columns: 320px auto;
+    grid-template-areas: "public-header public-header" "public-sidenav public-page";
+  }
+  .public.public-with-sidenav.public-with-sidebar.public-hide-sidebar .public-sidebar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
+.public.public-with-sidenav.public-with-sidebar.public-hide-sidenav {
+  grid-template-columns: auto 320px;
+  grid-template-areas: "public-header public-header" "public-page   public-sidebar";
+}
+.public.public-with-sidenav.public-with-sidebar.public-hide-sidenav .public-sidenav {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.public.public-with-sidenav.public-with-sidebar.public-hide-sidenav.public-hide-sidebar {
+  grid-template-columns: auto;
+  grid-template-areas: "public-header" "public-page";
 }
 @media (min-width: 1200px) {
   .public.public-with-sidecar.public-with-sidenav.public-with-sidebar {
@@ -13348,15 +13486,21 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
   background-color: transparent;
 }
 .public.public-borders .public-sidebar {
-  border-left: 1px solid rgba(0, 0, 0, 0);
+  border-left: 1px solid #ccc;
   background-color: transparent;
 }
 .public.public-borders .public-footer {
   border-top: 1px solid #ccc;
   background-color: transparent;
 }
-.public .public-sidenav, .public .public-content, .public .public-sidebar {
+.public .public-sidenav {
+  padding: 0 0;
+}
+.public .public-content {
   padding: 1rem 1rem;
+}
+.public .public-sidebar {
+  padding: 0 0;
 }
 .public .public-sidecar {
   padding: 1rem 0;

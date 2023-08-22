@@ -1,65 +1,92 @@
+//.public-header  { grid-area: public-header;  overflow: visible; }
+//.public-sidecar { grid-area: public-sidecar; overflow-x: auto; display: block; }
+//.public-sidenav { grid-area: public-sidenav; overflow-x: auto; display: block; }
+//.public-page    { grid-area: public-page;    overflow-x: auto; display: block; }
+//.public-sidebar { grid-area: public-sidebar; overflow-x: auto; display: block; }
+
 .public {
+  grid-auto-columns: 0;
+  grid-auto-rows: 0;
   grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-rows: $public-header-height auto;
   display: grid;
-  //grid-template-areas:
-  //  "public-header"
-  //  "public-page"
-  //  "public-footer";
   grid-template-areas:
     "public-header"
     "public-page";
   height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
   overflow-x: hidden;
 
   .public-header  { grid-area: public-header;  overflow: visible; }
   .public-sidecar { grid-area: public-sidecar; overflow-x: auto; display: none; }
   .public-sidenav { grid-area: public-sidenav; overflow-x: auto; display: none; }
   .public-page    { grid-area: public-page;    overflow-x: auto; display: block; }
-  .public-sidebar { grid-area: public-sidebar; overflow-x: auto; display: none;}
+  .public-sidebar { grid-area: public-sidebar; overflow-x: auto; display: none; }
+
+  .public-sidenav-grid-btn      { display: none; }
+  .public-sidebar-grid-btn      { display: none; }
+  .public-sidebar-offcanvas-btn { display: none; }
+
+
+  //.public-header  { grid-area: public-header;  overflow: visible; }
+  //.public-sidecar { grid-area: public-sidecar; overflow-x: auto; display: block; }
+  //.public-sidenav { grid-area: public-sidenav; overflow-x: auto; display: block; }
+  //.public-page    { grid-area: public-page;    overflow-x: auto; display: block; }
+  //.public-sidebar { grid-area: public-sidebar; overflow-x: auto; display: block; }
+
+
   //.public-footer  { grid-area: public-footer;  overflow: visible; }
 
-  //@include media-breakpoint-up(lg) { }
-  //
-  //// Layout with Sidecar
-  //&.public-with-sidecar {
-  //  grid-template-columns: $public-sidecar-width auto;
-  //  grid-template-areas:
-  //    "public-header  public-header"
-  //    "public-sidecar public-page"
-  //    "public-sidecar public-footer";
-  //  @include media-breakpoint-up(xl) { .public-sidecar { display: block; } }
-  //}
-  //
-  //// Layout with Sidenav
-  //&.public-with-sidenav {
-  //  grid-template-columns: $public-sidenav-width auto;
-  //  grid-template-areas:
-  //    "public-header  public-header"
-  //    "public-sidenav public-page"
-  //    "public-sidenav public-footer";
-  //  @include media-breakpoint-up(xl) { .public-sidenav { display: block; } }
-  //}
-  //
-  //// Layout with Sidebar
-  //&.public-with-sidebar {
-  //  grid-template-columns: auto $public-sidebar-width;
-  //  grid-template-areas:
-  //    "public-header public-header"
-  //    "public-page   public-sidebar"
-  //    "public-footer public-sidebar";
-  //  @include media-breakpoint-up(xl) { .public-sidebar { display: block; } }
-  //}
-  //
+ // @include media-breakpoint-up(lg) { }
+
+  // Layout with Sidecar
+  &.public-with-sidecar {
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: $public-sidecar-width auto;
+      grid-template-areas:
+        "public-header  public-header"
+        "public-sidecar public-page"
+        "public-sidecar public-footer";
+      .public-sidecar { display: block; }
+    }
+  }
+
+  // Layout with Sidenav
+  &.public-with-sidenav {
+    .public-sidenav-offcanvas-btn { display: block; }
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: $public-sidenav-width auto;
+      grid-template-areas:
+        "public-header  public-header"
+        "public-sidenav public-page"
+        "public-sidenav public-footer";
+      .public-sidenav { display: block; }
+      .public-sidenav-grid-btn { display: block; }
+      .public-sidenav-offcanvas-btn { display: none; }
+    }
+  }
+
+  // Layout with Sidebar
+  &.public-with-sidebar {
+    .public-sidebar-offcanvas-btn { display: block; }
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: auto $public-sidebar-width;
+      grid-template-areas:
+        "public-header public-header"
+        "public-page   public-sidebar"
+        "public-footer public-sidebar";
+      .public-sidebar { display: block; }
+      .public-sidebar-grid-btn      { display: block; }
+      .public-sidebar-offcanvas-btn { display: none; }
+    }
+  }
+
 
   // Layout with Sidecar & Sidenav
   &.public-with-sidecar.public-with-sidenav {
     @include media-breakpoint-up(xl) {
       grid-template-columns: $public-sidecar-width $public-sidenav-width auto;
-      //grid-template-areas:
-      //  "public-header  public-header public-header"
-      //  "public-sidecar public-sidenav public-page"
-      //  "public-sidecar public-sidenav public-footer";
       grid-template-areas:
         "public-header  public-header public-header"
         "public-sidecar public-sidenav public-page";
@@ -68,42 +95,80 @@
     }
   }
 
-  //// Layout with Sidecar & Sidebar
-  //&.public-with-sidecar.public-with-sidebar {
-  //  grid-template-columns: $public-sidecar-width auto $public-sidebar-width;
-  //  grid-template-areas:
-  //    "public-header  public-header public-header"
-  //    "public-sidecar public-page   public-sidebar"
-  //    "public-sidecar public-footer public-sidebar";
-  //  @include media-breakpoint-up(xl) { .public-sidecar { display: block; } }
-  //  @include media-breakpoint-up(xl) { .public-sidebar { display: block; } }
-  //}
-  //
+  // Layout with Sidecar & Sidebar
+  &.public-with-sidecar.public-with-sidebar {
+    @include media-breakpoint-up(xl) {
+      grid-auto-columns: 0;
+      grid-auto-rows: 0;
+      grid-template-columns: $public-sidecar-width auto $public-sidebar-width;
+      grid-template-areas:
+        "public-header  public-header public-header"
+        "public-sidecar public-page   public-sidebar"
+        "public-sidecar public-footer public-sidebar";
+      .public-sidecar { display: block; }
+      .public-sidebar { display: block; }
+    }
+  }
+
 
   // Layout with Sidenav & Sidebar
   &.public-with-sidenav.public-with-sidebar {
-    @include media-breakpoint-up(xl)  {
+    .public-sidenav-offcanvas-btn { display: block; }
+    .public-sidebar-offcanvas-btn { display: block; }
+    @include media-breakpoint-only(xl)  {
+      grid-auto-columns: 0;
+      grid-auto-rows: 0;
       grid-template-columns: auto $public-sidebar-width;
-      //grid-template-areas:
-      //  "public-header public-header"
-      //  "public-page   public-sidebar"
-      //  "public-footer public-sidebar";
       grid-template-areas:
         "public-header public-header"
         "public-page   public-sidebar";
       .public-sidebar { display: block; }
+      .public-sidenav { display: none; width: 0; height: 0; }
+      .public-sidebar-offcanvas-btn { display: none;  }
+      .public-sidebar-grid-btn      { display: block; }
+
+      &.public-hide-sidebar {
+        grid-template-columns: auto;
+        grid-template-areas:
+          "public-header"
+          "public-page";
+        .public-sidebar { display: none; width: 0; height: 0; }
+      }
     }
 
     @include media-breakpoint-up(xxl) {
+      grid-auto-rows: 0;
       grid-template-columns: $public-sidenav-width auto $public-sidebar-width;
-      //grid-template-areas:
-      //  "public-header  public-header public-header"
-      //  "public-sidenav public-page   public-sidebar"
-      //  "public-sidenav public-footer public-sidebar";
       grid-template-areas:
         "public-header  public-header public-header"
         "public-sidenav public-page   public-sidebar";
+      .public-sidebar { display: block; }
       .public-sidenav { display: block; }
+      .public-sidenav-offcanvas-btn { display: none;  }
+      .public-sidenav-grid-btn      { display: block; }
+
+      &.public-hide-sidebar {
+        grid-template-columns: $public-sidenav-width auto;
+        grid-template-areas:
+          "public-header public-header"
+          "public-sidenav public-page";
+        .public-sidebar { display: none; width: 0; height: 0; }
+      }
+    }
+
+    &.public-hide-sidenav {
+      grid-template-columns: auto $public-sidebar-width;
+      grid-template-areas:
+          "public-header public-header"
+          "public-page   public-sidebar";
+      .public-sidenav { display: none; width: 0; height: 0; }
+    }
+
+    &.public-hide-sidenav.public-hide-sidebar {
+      grid-template-columns: auto;
+      grid-template-areas:
+        "public-header"
+        "public-page";
     }
 
   }
@@ -113,10 +178,6 @@
 
     @include media-breakpoint-up(xl)  {
       grid-template-columns: auto $public-sidebar-width;
-      //grid-template-areas:
-      //  "public-header public-header"
-      //  "public-page   public-sidebar"
-      //  "public-footer public-sidebar";
       grid-template-areas:
         "public-header public-header"
         "public-page   public-sidebar";
@@ -125,10 +186,6 @@
 
     @include media-breakpoint-up(xxl) {
       grid-template-columns: $public-sidecar-width $public-sidenav-width auto $public-sidebar-width;
-      //grid-template-areas:
-      //  "public-header  public-header  public-header public-header"
-      //  "public-sidecar public-sidenav public-page   public-sidebar"
-      //  "public-sidecar public-sidenav public-footer public-sidebar";
       grid-template-areas:
         "public-header  public-header  public-header public-header"
         "public-sidecar public-sidenav public-page   public-sidebar";
@@ -153,7 +210,6 @@
       border-right: $public-sidenav-border-size solid $public-sidenav-border-color;
       background-color: $public-sidenav-bg-color;
     }
-    .public-page    {  }
     .public-sidebar {
       border-left: $public-sidebar-border-size solid $public-sidebar-border-color;
       background-color: $public-sidebar-bg-color;
@@ -166,15 +222,20 @@
 
 
   // Padding
-  .public-sidenav, .public-content, .public-sidebar {
-    padding: $public-spacer-y $public-spacer-x;
+  .public-sidenav {
+    padding: $public-sidenav-spacer-y $public-sidenav-spacer-x;
+  }
+  .public-content {
+    padding: $public-content-spacer-y $public-content-spacer-x;
+  }
+  .public-sidebar {
+    padding: $public-sidebar-spacer-y $public-sidebar-spacer-x;
   }
   .public-sidecar {
-    padding: $public-spacer-y 0;
+    padding: $public-sidecar-spacer-y $public-sidecar-spacer-x;
   }
   .public-footer {
-    // padding: calc($public-spacer-y/2) 0 0 $public-spacer-x;
-    padding: $public-spacer-y $public-spacer-x;
+    padding: $public-footer-spacer-y $public-footer-spacer-x;
   }
 
   // Colors

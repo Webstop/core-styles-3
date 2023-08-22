@@ -55,6 +55,7 @@ There are 3 parts needed to get Core-Styles 3 installed in a project.
 <script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/circular-cookies.js"></script>
 <script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/filter-search.js"></script>
 <script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/form-toggles.js"></script>
+<script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/public.js"></script>
 <script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/search.js"></script>
 <script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/shopping-list-power-bar.js"></script>
 <script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v{{ .Site.Params.current_version }}/dist/core-styles/js/tags.js"></script>
