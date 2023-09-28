@@ -294,22 +294,30 @@ This example contains a header, footer, and main content sections.
 </div>
 
 ```html
-<div class="public public-with-sidenav public-with-sidebar">
+<div class="public public-borders public-with-sidenav public-with-sidebar">
   <header class="public-header" role="banner">
-    Public Header...
+    Header...
+    <nav class="public-sidenav-mobile offcanvas offcanvas-start" tabindex="-1"  id="public-sidenav-mobile" role="navigation">
+      Mobile Left Side Navigation...
+    </nav>
+    <aside class="public-sidebar-mobile offcanvas offcanvas-end" style="overflow-x: hidden; overflow-y: auto;" tabindex="-1" id="public-sidebar-mobile" role="navigation" aria-label="Secondary">
+      Mobile Right Side Shopping List...
+    </aside>
   </header>
   <nav class="public-sidenav" role="navigation">
-      Public Sidenav Navigation...
+    Desktop Left Side Navigation...
   </nav>
-  <main class="public-page" role="main">
-    Public Page Main Content...
-  </main>
-  <aside class="public-sidebar">
-    Public Sidebar...
+  <div class="public-page">
+    <main class="public-content" role="main">
+      Main Content...
+    </main>
+    <footer class="public-footer" role="contentinfo">
+      Footer...
+    </footer>
+  </div>
+  <aside class="public-sidebar" role="complementary" aria-label="">
+    Desktop Right Side Shopping List...
   </aside>
-  <footer class="public-footer" role="contentinfo">
-    Public Footer...
-  </footer>
 </div>
 ```
 

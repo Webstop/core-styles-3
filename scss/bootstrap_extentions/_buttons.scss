@@ -1,10 +1,33 @@
-// Card deck
+// Extend Bootstrap Buttons
 
 .btn {
-  .btn-plain {
+  &.btn-plain {
     background: transparent;
     padding: 0;
     border: 0;
   }
-
+  &.bg-primary-subtle:hover {
+    background: $primary !important;
+  }
+  &.bg-secondary-subtle:hover {
+    background: $secondary !important;
+  }
+  &.bg-success-subtle:hover {
+    background: $success !important;
+  }
+  &.bg-info-subtle:hover {
+    background: $info !important;
+  }
+  &.bg-warning-subtle:hover {
+    background: $warning !important;
+  }
+  &.bg-danger-subtle:hover {
+    background: $danger !important;
+  }
+  &.bg-light-subtle:hover {
+    background: $light !important;
+  }
+  &.bg-dark-subtle:hover {
+    background: $dark !important;
+  }
 }

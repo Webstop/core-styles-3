@@ -13072,10 +13072,34 @@ textarea.form-control-lg {
   font-family: "Libre Baskerville", Baskerville, "Baskerville Old Face", Georgia, serif;
 }
 
-.btn .btn-plain {
+.btn.btn-plain {
   background: transparent;
   padding: 0;
   border: 0;
+}
+.btn.bg-primary-subtle:hover {
+  background: #017baf !important;
+}
+.btn.bg-secondary-subtle:hover {
+  background: #6c757d !important;
+}
+.btn.bg-success-subtle:hover {
+  background: #198754 !important;
+}
+.btn.bg-info-subtle:hover {
+  background: #0dcaf0 !important;
+}
+.btn.bg-warning-subtle:hover {
+  background: #ffc107 !important;
+}
+.btn.bg-danger-subtle:hover {
+  background: #dc3545 !important;
+}
+.btn.bg-light-subtle:hover {
+  background: #f8f9fa !important;
+}
+.btn.bg-dark-subtle:hover {
+  background: #212529 !important;
 }
 
 .box-stackable {
@@ -14468,7 +14492,7 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Montserrat, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
 }
