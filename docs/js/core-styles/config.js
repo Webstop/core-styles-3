@@ -2,36 +2,18 @@
 
 // NOTE: this file must be loaded **before** ahoy.js. Don't use jQuery or any other lib that requires an object to execute before the code executes.
 
-// Ahoy Config
+(function(webstop, ahoy){
 
-(function(){
-  // const page = document.body;
-  // let retailerID  = page.dataset.retailerId;
-  // let environment = page.dataset.environment;
-  // let apiHost     = page.dataset.apiHost;
+  let retailerID= document.body.getAttribute('data-retailer-id');
+  let apiHost   = document.body.getAttribute('data-api-host');
+  let webHost   = document.body.getAttribute('data-web-host');
 
+  webstop.retailerID = retailerID;
+  webstop.apiHost    = apiHost;
+  webstop.webHost    = webHost;
 
-  let retailerID  = document.body.getAttribute('data-retailer-id');
-  let environment = document.body.getAttribute('data-environment');
-  let apiHost     = document.body.getAttribute('data-api-host');
+  ahoy.visitParams   = {retailer_id: retailerID};
+  ahoy.visitsUrl     = apiHost + "/api/v1/retailers/" + retailerID + "/aye/visit.json";
+  ahoy.eventsUrl     = apiHost + "/api/v1/retailers/" + retailerID + "/aye/event.json";
 
-  if (environment == 'production') {
-    apiHost = 'https://api.grocerywebsite.com';
-  } else if (environment == 'development') {
-    apiHost = 'http://grocery.local:3000';
-  }
-
-  window.webstop = {
-    retailerID: retailerID,
-    environment: environment,
-    apiHost: apiHost
-  };
-
-  window.ahoy = {
-    visitParams: {retailer_id: retailerID},
-    //visitsUrl: apiHost + "/ahoy/visits",
-    //eventsUrl: apiHost + "/ahoy/events"
-    visitsUrl: apiHost + "/api/v1/retailers/" + retailerID + "/aye/visit.json",
-    eventsUrl: apiHost + "/api/v1/retailers/" + retailerID + "/aye/event.json"
-  };
-})();
+})( window.webstop = window.webstop || {},  window.ahoy = window.ahoy || {} );

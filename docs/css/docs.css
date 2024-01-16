@@ -13072,10 +13072,34 @@ textarea.form-control-lg {
   font-family: "Libre Baskerville", Baskerville, "Baskerville Old Face", Georgia, serif;
 }
 
-.btn .btn-plain {
+.btn.btn-plain {
   background: transparent;
   padding: 0;
   border: 0;
+}
+.btn.bg-primary-subtle:hover {
+  background: #0194d3 !important;
+}
+.btn.bg-secondary-subtle:hover {
+  background: #6c757d !important;
+}
+.btn.bg-success-subtle:hover {
+  background: #198754 !important;
+}
+.btn.bg-info-subtle:hover {
+  background: #0dcaf0 !important;
+}
+.btn.bg-warning-subtle:hover {
+  background: #ffc107 !important;
+}
+.btn.bg-danger-subtle:hover {
+  background: #dc3545 !important;
+}
+.btn.bg-light-subtle:hover {
+  background: #f8f9fa !important;
+}
+.btn.bg-dark-subtle:hover {
+  background: #212529 !important;
 }
 
 .box-stackable {

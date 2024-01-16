@@ -114,7 +114,7 @@ Follow these steps to deploy the Framework.
 1. Update the `version` number in the `package.json` file & `current_verison` number in the `config.yml` file (remember the new version number).
 2. Run the CSS compile script. We will launch a node container and run the script that moves all our latest CSS and JavaScript into the `dist` folder.
 - Run the `./bash` command.
-- then run `npm run css-compile`.
+- then run `npm run pushable`.
 - then type `exit` to leave the node container.
 3. Commit & Push
 - Do a `git add -A`.
