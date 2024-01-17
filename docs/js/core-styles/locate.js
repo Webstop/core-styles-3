@@ -28,6 +28,7 @@
 
   // Private Method locate();
   webstop.locator.locate = function(display_messages) {
+    display_messages = !!(display_messages && message);
 
     function success(position) {
       const latitude = position.coords.latitude;
@@ -60,6 +61,7 @@
     trigger = document.querySelector("[data-locate]");
     if (trigger) {
       target = document.querySelector(trigger.getAttribute('data-locate-target'));
+      message = document.querySelector(trigger.getAttribute('data-locate-message'));
       hide_trigger = trigger.hasAttribute('data-locate-hide-me');
       locate_on_load = trigger.hasAttribute('data-locate-on-load');
       has_action_url = trigger.hasAttribute('data-locate-action-url');
