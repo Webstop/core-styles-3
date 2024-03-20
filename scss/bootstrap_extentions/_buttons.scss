@@ -1,5 +1,10 @@
 // Extend Bootstrap Buttons
 
+// We keep this outside .btn because we want it to be easily overridden.
+[class^='btn-outline-'], [class*=' btn-outline-']{
+  background-color: $light;
+}
+
 .btn {
   &.btn-plain {
     background: transparent;
