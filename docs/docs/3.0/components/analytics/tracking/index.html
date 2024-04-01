@@ -302,6 +302,12 @@
                 
                   
                     <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/text-editors/markdown/" class="d-inline-flex rounded">Markdown Editor</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
                       <a href="/docs/3.0/components/navigation/paging/" class="d-inline-flex rounded">Paging</a>
                     </li>
                   
@@ -603,11 +609,11 @@ and Rails helper methods for tracking as well, but those are beyond the scope of
 the action with the value submitted. The following examples illustrate how the event name setting works.</p>
 <h5 id="action-name-examples">Action Name Examples</h5>
 <p>The following view action will record <code>view coupon</code> in the name field of the events database table:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-aye-view</span><span class="o">=</span><span class="s">&#34;coupon&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-aye-view</span><span class="o">=</span><span class="s">&#34;coupon&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 <p>The following click action will record <code>click coupon</code> in the name field of the events database table:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/coupon&#34;</span> <span class="na">data-aye-click</span><span class="o">=</span><span class="s">&#34;coupon&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/coupon&#34;</span> <span class="na">data-aye-click</span><span class="o">=</span><span class="s">&#34;coupon&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></span></span></code></pre></div>
 <p>The following submit action will record <code>submit coupon</code> in the name field of the events database table:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">data-aye-submit</span><span class="o">=</span><span class="s">&#34;coupon&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">data-aye-submit</span><span class="o">=</span><span class="s">&#34;coupon&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
 <h3 id="attributes">Attributes</h3>
 <p>The following optional attributes provide data to the tracking API. <em>Try to provide as many attributes as the available data allows.</em></p>
 <table>
@@ -672,25 +678,25 @@ would be <code>123</code>. We embed coupons all sorts of places, sometimes they 
 digital circular, sometimes in a recipe and etc. This is the purpose of the context, to record <em>where</em> the item was being
 displayed. For example, if our coupon offer is displayed inside recipe <code>456</code> then we&rsquo;d have a context like <code>data-aye-context</code>
 is <code>Recipe</code> and <code>data-aye-context-id</code> is <code>456</code>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-aye-view</span><span class="o">=</span><span class="s">&#34;coupon&#34;</span> 
-  <span class="na">data-aye-resource</span><span class="o">=</span><span class="s">&#34;Offer&#34;</span> 
-  <span class="na">data-aye-resource-id</span><span class="o">=</span><span class="s">&#34;123&#34;</span>
-  <span class="na">data-aye-context</span><span class="o">=</span><span class="s">&#34;Recipe&#34;</span> 
-  <span class="na">data-aye-context-id</span><span class="o">=</span><span class="s">&#34;456&#34;</span><span class="p">&gt;</span>
-...
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-aye-view</span><span class="o">=</span><span class="s">&#34;coupon&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-resource</span><span class="o">=</span><span class="s">&#34;Offer&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-resource-id</span><span class="o">=</span><span class="s">&#34;123&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-context</span><span class="o">=</span><span class="s">&#34;Recipe&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-context-id</span><span class="o">=</span><span class="s">&#34;456&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 <p>Often times the context and resource are the same. For example, a recipe that is displayed on the recipe detail page
 might look like the following (this is an <a href="https://www.topsmarkets.com/Recipes/Detail/7643/Mini_Turkey_Pizzas/">actual recipe</a>).</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-aye-view</span><span class="o">=</span><span class="s">&#34;recipe&#34;</span> 
-  <span class="na">data-aye-resource</span><span class="o">=</span><span class="s">&#34;Recipe&#34;</span> 
-  <span class="na">data-aye-resource-id</span><span class="o">=</span><span class="s">&#34;25264&#34;</span>
-  <span class="na">data-aye-context</span><span class="o">=</span><span class="s">&#34;Recipe&#34;</span> 
-  <span class="na">data-aye-context-id</span><span class="o">=</span><span class="s">&#34;25264&#34;</span>
-  <span class="na">data-aye-property-recipe-number</span><span class="o">=</span><span class="s">&#34;7643&#34;</span>
-  <span class="na">data-aye-property-title</span><span class="o">=</span><span class="s">&#34;Mini Turkey Pizzas&#34;</span>
-  <span class="na">data-aye-property-exclusive-id</span><span class="o">=</span><span class="s">&#34;69&#34;</span><span class="p">&gt;</span>
-...
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-aye-view</span><span class="o">=</span><span class="s">&#34;recipe&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-resource</span><span class="o">=</span><span class="s">&#34;Recipe&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-resource-id</span><span class="o">=</span><span class="s">&#34;25264&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-context</span><span class="o">=</span><span class="s">&#34;Recipe&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-context-id</span><span class="o">=</span><span class="s">&#34;25264&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-property-recipe-number</span><span class="o">=</span><span class="s">&#34;7643&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-property-title</span><span class="o">=</span><span class="s">&#34;Mini Turkey Pizzas&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-property-exclusive-id</span><span class="o">=</span><span class="s">&#34;69&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 <h2 id="data-lists">Data Lists</h2>
 <p>Below you&rsquo;ll find the value lists for the <code>data-aye-app-id</code> attribute and the <code>data-aye-property-marketing-type</code> attribute.</p>
 <h3 id="product-id-list">Product ID List</h3>
@@ -841,15 +847,15 @@ the consumer clicks the element.</p>
   data-aye-context-id="10">
   Add Ingredient
 </button> 
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary &#34;</span> 
-  <span class="na">data-aye-click</span><span class="o">=</span><span class="s">&#34;add recipe ingredient&#34;</span> 
-  <span class="na">data-aye-app-id</span><span class="o">=</span><span class="s">&#34;8&#34;</span> 
-  <span class="na">data-aye-resource</span><span class="o">=</span><span class="s">&#34;RecipeIngredient&#34;</span> 
-  <span class="na">data-aye-resource-id</span><span class="o">=</span><span class="s">&#34;120&#34;</span> 
-  <span class="na">data-aye-context</span><span class="o">=</span><span class="s">&#34;Recipe&#34;</span> 
-  <span class="na">data-aye-context-id</span><span class="o">=</span><span class="s">&#34;10&#34;</span><span class="p">&gt;</span>
-  Add Ingredient
-<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span> </code></pre></div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary &#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-click</span><span class="o">=</span><span class="s">&#34;add recipe ingredient&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-app-id</span><span class="o">=</span><span class="s">&#34;8&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-resource</span><span class="o">=</span><span class="s">&#34;RecipeIngredient&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-resource-id</span><span class="o">=</span><span class="s">&#34;120&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-context</span><span class="o">=</span><span class="s">&#34;Recipe&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-context-id</span><span class="o">=</span><span class="s">&#34;10&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  Add Ingredient
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span> </span></span></code></pre></div>
 <p>We augment the analytics record with additional data by adding more <code>data-aye-*</code> attributes.</p>
 <p>In this case the analytics record will record that:</p>
 <ol>
@@ -877,18 +883,18 @@ the consumer visits a web page containing the element.</p>
   data-aye-property-recipe-id="23517"
   data-aye-property-recipe-number="7233"
   data-aye-property-recipe-title="Silly Muffin"> 
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/images/aye-analytics/7233_Recipe_SIMG.jpg&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;max-width: 325px;&#34;</span>
-  <span class="na">data-aye-view</span><span class="o">=</span><span class="s">&#34;recipe&#34;</span>  
-  <span class="na">data-aye-app-id</span><span class="o">=</span><span class="s">&#34;1&#34;</span> 
-  <span class="na">data-aye-resource</span><span class="o">=</span><span class="s">&#34;AdItem&#34;</span> 
-  <span class="na">data-aye-resource-id</span><span class="o">=</span><span class="s">&#34;1000&#34;</span> 
-  <span class="na">data-aye-resource-label</span><span class="o">=</span><span class="s">&#34;Recipe: Silly Muffin&#34;</span> 
-  <span class="na">data-aye-context</span><span class="o">=</span><span class="s">&#34;Ad&#34;</span> 
-  <span class="na">data-aye-context-id</span><span class="o">=</span><span class="s">&#34;500&#34;</span> 
-  <span class="na">data-aye-property-marketing-type</span><span class="o">=</span><span class="s">&#34;Recipe&#34;</span>
-  <span class="na">data-aye-property-recipe-id</span><span class="o">=</span><span class="s">&#34;23517&#34;</span>
-  <span class="na">data-aye-property-recipe-number</span><span class="o">=</span><span class="s">&#34;7233&#34;</span>
-  <span class="na">data-aye-property-recipe-title</span><span class="o">=</span><span class="s">&#34;Silly Muffin&#34;</span><span class="p">&gt;</span> </code></pre></div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/images/aye-analytics/7233_Recipe_SIMG.jpg&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;max-width: 325px;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-view</span><span class="o">=</span><span class="s">&#34;recipe&#34;</span>  
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-app-id</span><span class="o">=</span><span class="s">&#34;1&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-resource</span><span class="o">=</span><span class="s">&#34;AdItem&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-resource-id</span><span class="o">=</span><span class="s">&#34;1000&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-resource-label</span><span class="o">=</span><span class="s">&#34;Recipe: Silly Muffin&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-context</span><span class="o">=</span><span class="s">&#34;Ad&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-context-id</span><span class="o">=</span><span class="s">&#34;500&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-property-marketing-type</span><span class="o">=</span><span class="s">&#34;Recipe&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-property-recipe-id</span><span class="o">=</span><span class="s">&#34;23517&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-property-recipe-number</span><span class="o">=</span><span class="s">&#34;7233&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-property-recipe-title</span><span class="o">=</span><span class="s">&#34;Silly Muffin&#34;</span><span class="p">&gt;</span> </span></span></code></pre></div>
 <p>Placing <code>data-aye-view</code> on an element alone doesn&rsquo;t give us much useful data to record.
 We augment the analytics record with additional data by adding more <code>data-aye-*</code> attributes.</p>
 <p>In this case the analytics record will record that:</p>
@@ -912,11 +918,11 @@ of data using the property prefix, everything in the attribute name after the pr
 When naming your aye properties use dash case (e.g. <code>recipe-title</code>), the aye.js script will
 convert it to snake case (e.g. <code>recipe_title</code>), before submitting it to the API.</p>
 <p>The example above will write the following to the properties json database field:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">properties: {
-  recipe_id: 23517,
-  recipe_number: 7233,
-  recipe_title: &#39;Silly Muffin&#39;
-}</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">properties: {
+</span></span><span class="line"><span class="cl">  recipe_id: 23517,
+</span></span><span class="line"><span class="cl">  recipe_number: 7233,
+</span></span><span class="line"><span class="cl">  recipe_title: &#39;Silly Muffin&#39;
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div>
 <h3 id="track-submit-example">Track Submit Example</h3>
 <p>By adding the <code>data-aye-submit</code> attribute to a form, our aye.js analytics javascript
 will watch the form and create a record in our analytics database when the
@@ -936,20 +942,20 @@ the consumer submits the form.</p>
   </div>
   <button type="submit" class="btn btn-primary ">Subscribe to Newsletter</button>
 </form> 
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span>
-  <span class="na">data-aye-submit</span><span class="o">=</span><span class="s">&#34;newsletter sign-up&#34;</span> 
-  <span class="na">data-aye-app-id</span><span class="o">=</span><span class="s">&#34;6&#34;</span>
-  <span class="na">data-aye-resource</span><span class="o">=</span><span class="s">&#34;GroceryNewsletter&#34;</span> 
-  <span class="na">data-aye-resource-id</span><span class="o">=</span><span class="s">&#34;20&#34;</span> 
-  <span class="na">data-aye-context</span><span class="o">=</span><span class="s">&#34;Ads&#34;</span> 
-  <span class="na">data-aye-context-id</span><span class="o">=</span><span class="s">&#34;1000&#34;</span><span class="p">&gt;</span>
-
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;email&#34;</span><span class="p">&gt;</span>Email Address<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;email&#34;</span> <span class="na">data-aye-property-email</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;email&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary &#34;</span><span class="p">&gt;</span>Subscribe to Newsletter<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span> </code></pre></div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span>
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-submit</span><span class="o">=</span><span class="s">&#34;newsletter sign-up&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-app-id</span><span class="o">=</span><span class="s">&#34;6&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-resource</span><span class="o">=</span><span class="s">&#34;GroceryNewsletter&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-resource-id</span><span class="o">=</span><span class="s">&#34;20&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-context</span><span class="o">=</span><span class="s">&#34;Ads&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-aye-context-id</span><span class="o">=</span><span class="s">&#34;1000&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;email&#34;</span><span class="p">&gt;</span>Email Address<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;email&#34;</span> <span class="na">data-aye-property-email</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;email&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary &#34;</span><span class="p">&gt;</span>Subscribe to Newsletter<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span> </span></span></code></pre></div>
 <p>Placing <code>data-aye-submit</code> on an element alone doesn&rsquo;t give us much useful data to record.
 We augment the analytics record with additional data by adding more <code>data-aye-*</code> attributes.</p>
 <p>In this case the analytics record will record that:</p>
@@ -997,13 +1003,13 @@ the web page. Aye uses these data attributes to craft the URL used to submit tra
 </table>
 <h3 id="examples-1">Examples</h3>
 <p>For <strong>local development</strong> you&rsquo;d have the following data attributes:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;767&#34;</span> <span class="na">data-environment</span><span class="o">=</span><span class="s">&#34;development&#34;</span><span class="p">&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;767&#34;</span> <span class="na">data-environment</span><span class="o">=</span><span class="s">&#34;development&#34;</span><span class="p">&gt;</span></span></span></code></pre></div>
 <p>For <strong>local testing</strong> you&rsquo;d have the following data attributes:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;767&#34;</span> <span class="na">data-environment</span><span class="o">=</span><span class="s">&#34;test&#34;</span><span class="p">&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;767&#34;</span> <span class="na">data-environment</span><span class="o">=</span><span class="s">&#34;test&#34;</span><span class="p">&gt;</span></span></span></code></pre></div>
 <p>For <strong>production</strong> you&rsquo;d have the following data attributes:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;767&#34;</span> <span class="na">data-environment</span><span class="o">=</span><span class="s">&#34;production&#34;</span><span class="p">&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;767&#34;</span> <span class="na">data-environment</span><span class="o">=</span><span class="s">&#34;production&#34;</span><span class="p">&gt;</span></span></span></code></pre></div>
 <p>For <strong>other environments</strong> you can specify the following:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;767&#34;</span> <span class="na">data-api-host</span><span class="o">=</span><span class="s">&#34;http://grocery.core1.rails1.webstophq.com&#34;</span><span class="p">&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;767&#34;</span> <span class="na">data-api-host</span><span class="o">=</span><span class="s">&#34;http://grocery.core1.rails1.webstophq.com&#34;</span><span class="p">&gt;</span></span></span></code></pre></div>
 <p><em>The example above would be used for Webstop&rsquo;s Core 1 testing server.</em></p>
 
   </main>
@@ -1352,34 +1358,37 @@ the web page. Aye uses these data attributes to craft the URL used to submit tra
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/src/js.cookie.min.js"></script>
 
+
+    <script src="/js/core-styles.js"></script>
     
     <script
       src="/vendor/clipboard/dist/clipboard.min.js"
       crossorigin="anonymous"
     ></script>
     <script src="/js/docs.js" crossorigin="anonymous"></script>
-    
-    
-    <script src="/js/core-styles/config.js"></script>
-    <script src="/js/ahoy/ahoy.min.js" defer=""></script>
-    <script src="/js/core-styles/aye.js" type="module"></script>
-    
-    <script src="/js/core-styles/ajax-form.js"></script>
-    <script src="/js/core-styles/ajax-load.js"></script>
-    <script src="/js/core-styles/ajax-modal.js"></script>
-    <script src="/js/core-styles/bootstrap-data-attributes.js"></script>
-    <script src="/js/core-styles/btn-disabled.js"></script>
-    <script src="/js/core-styles/checkbox-selector.js"></script>
-    <script src="/js/core-styles/circular-cookies.js"></script>
-    <script src="/js/core-styles/filter-search.js"></script>
-    <script src="/js/core-styles/form-toggles.js"></script>
-    <script src="/js/core-styles/locate.js"></script>
-    <script src="/js/core-styles/public.js"></script>
-    <script src="/js/core-styles/search.js"></script>
-    <script src="/js/core-styles/shopping-list-power-bar.js"></script>
-    <script src="/js/core-styles/tags.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   </body>
 </html>

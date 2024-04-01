@@ -27,12 +27,12 @@
       {{ if .Title }}
         <div class="card shadow min-width-270 max-width-450">
           <div class="card-body">
-            <h3 class="card-title text-center"><a href="{{ .URL }}" class="text-decoration-none">{{ .Title }}</a></h3>
+            <h3 class="card-title text-center"><a href="{{ .RelPermalink  }}" class="text-decoration-none">{{ .Title }}</a></h3>
             <p class="card-text">{{ .Description }}</p>
           </div>
           <div class="card-footer">
             <div class="d-grid ">
-              <a href="{{ .URL }}" class="btn btn-primary learn-more-btn"><span class="learn-more-btn-text">Learn More</span></a>
+              <a href="{{ .RelPermalink  }}" class="btn btn-primary learn-more-btn"><span class="learn-more-btn-text">Learn More</span></a>
             </div>
           </div>
         </div>

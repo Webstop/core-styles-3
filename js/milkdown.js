@@ -1,0 +1,15 @@
+import "@babel/cli";
+import "@babel/core";
+import "@babel/preset-env";
+import "@milkdown/core";
+import "@milkdown/ctx";
+import "@milkdown/preset-commonmark";
+import "@milkdown/preset-gfm";
+import "@milkdown/prose";
+import "@milkdown/theme-nord";
+import "@milkdown/transformer";
+import "@popperjs/core";
+import "@rollup/plugin-babel";
+import "@rollup/plugin-commonjs";
+import "@rollup/plugin-node-resolve";
+import "@rollup/plugin-replace";

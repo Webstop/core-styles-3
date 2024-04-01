@@ -302,6 +302,12 @@
                 
                   
                     <li class="py-2 ps-4 ">
+                      <a href="/docs/3.0/components/text-editors/markdown/" class="d-inline-flex rounded">Markdown Editor</a>
+                    </li>
+                  
+                
+                  
+                    <li class="py-2 ps-4 ">
                       <a href="/docs/3.0/components/navigation/paging/" class="d-inline-flex rounded">Paging</a>
                     </li>
                   
@@ -577,20 +583,20 @@ the viewport.</p>
 <p>All of this is managed via a simple interface that uses HTML attributes to control and manage it. No need to write any additional JavaScript.</p>
 <h5 id="preamble-loading-spinner">Preamble: Loading Spinner</h5>
 <p>In the following examples you&rsquo;ll see &ldquo;<code>...loading spinner...</code>&rdquo;. This is placeholder text used to keep from distracting
-us from the important content. In your actual code, use the following whenever you see &ldquo;<code>...loading spinner...</code>&quot;:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-center m-4&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block-inline&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;spinner-border&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;status&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h3 pb-2&#34;</span><span class="p">&gt;</span>Loading...<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>  
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="load-on-view-example">Load on View Example</h3>
+us from the important content. In your actual code, use the following whenever you see &ldquo;<code>...loading spinner...</code>&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-center m-4&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block-inline&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;spinner-border&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;status&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h3 pb-2&#34;</span><span class="p">&gt;</span>Loading...<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>  
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="load-on-view-example">Load on View Example</h3>
 <p>In the most basic form of lazy loading content we have the Load on View feature. This feature allows you to load in
 HTML content via AJAX only when the HTML element enters the web browser&rsquo;s viewport.</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_1&#34;</span><span class="p">&gt;</span>
-  ...loading spinner...
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><a href="/docs/3.0/components/ajax/infinite-scroll-demos/load-on-view-demo/" class="btn btn-outline-primary mb-3" target="_blank">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_1&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...loading spinner...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><a href="/docs/3.0/components/ajax/infinite-scroll-demos/load-on-view-demo/" class="btn btn-outline-primary mb-3" target="_blank">
   Load on View Demo
   <i class="fa-duotone fa-up-right-from-square ms-2"></i>
 </a>
@@ -601,32 +607,32 @@ element with the HTML response from the supplied URL.</p>
 <h3 id="basic-infinite-scroll-example">Basic Infinite Scroll Example</h3>
 <p>In the most basic form of lazy loading content we have the Load on View feature. This feature allows you to load in
 HTML content via AJAX only when the HTML element enters the web browser&rsquo;s viewport.</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_1&#34;</span> <span class="na">data-infinite-scroll</span><span class="p">&gt;</span>
-  ...loading spinner...
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_2&#34;</span> <span class="na">data-infinite-scroll</span><span class="p">&gt;</span>
-  ...loading spinner...
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_3&#34;</span> <span class="na">data-infinite-scroll</span><span class="p">&gt;</span>
-  ...loading spinner...
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><a href="/docs/3.0/components/ajax/infinite-scroll-demos/basic-infinite-scroll-demo/" class="btn btn-outline-primary" target="_blank">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_1&#34;</span> <span class="na">data-infinite-scroll</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...loading spinner...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_2&#34;</span> <span class="na">data-infinite-scroll</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...loading spinner...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_3&#34;</span> <span class="na">data-infinite-scroll</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...loading spinner...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><a href="/docs/3.0/components/ajax/infinite-scroll-demos/basic-infinite-scroll-demo/" class="btn btn-outline-primary" target="_blank">
   Basic Infinite Scroll Demo
   <i class="fa-duotone fa-up-right-from-square ms-2"></i>
 </a>
 <h3 id="infinite-scroll-with-paging-example">Infinite Scroll with Paging Example</h3>
 <p>In the most basic form of lazy loading content we have the Load on View feature. This feature allows you to load in
 HTML content via AJAX only when the HTML element enters the web browser&rsquo;s viewport.</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_1&#34;</span> <span class="na">data-infinite-scroll</span> <span class="na">data-page-number</span><span class="o">=</span><span class="s">&#34;1&#34;</span> <span class="na">data-max-page-number</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>
-  ...loading spinner...
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_2&#34;</span> <span class="na">data-infinite-scroll</span> <span class="na">data-page-number</span><span class="o">=</span><span class="s">&#34;2&#34;</span> <span class="na">data-max-page-number</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>
-  ...loading spinner...
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_3&#34;</span> <span class="na">data-infinite-scroll</span> <span class="na">data-page-number</span><span class="o">=</span><span class="s">&#34;3&#34;</span> <span class="na">data-max-page-number</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>
-  ...loading spinner...
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><a href="/docs/3.0/components/ajax/infinite-scroll-demos/infinite-scroll-with-paging-demo/" class="btn btn-outline-primary" target="_blank">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_1&#34;</span> <span class="na">data-infinite-scroll</span> <span class="na">data-page-number</span><span class="o">=</span><span class="s">&#34;1&#34;</span> <span class="na">data-max-page-number</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...loading spinner...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_2&#34;</span> <span class="na">data-infinite-scroll</span> <span class="na">data-page-number</span><span class="o">=</span><span class="s">&#34;2&#34;</span> <span class="na">data-max-page-number</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...loading spinner...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_3&#34;</span> <span class="na">data-infinite-scroll</span> <span class="na">data-page-number</span><span class="o">=</span><span class="s">&#34;3&#34;</span> <span class="na">data-max-page-number</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...loading spinner...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><a href="/docs/3.0/components/ajax/infinite-scroll-demos/infinite-scroll-with-paging-demo/" class="btn btn-outline-primary" target="_blank">
   Infinite Scroll with Paging Demo
   <i class="fa-duotone fa-up-right-from-square ms-2"></i>
 </a>
@@ -1030,34 +1036,37 @@ HTML content via AJAX only when the HTML element enters the web browser&rsquo;s 
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/src/js.cookie.min.js"></script>
 
+
+    <script src="/js/core-styles.js"></script>
     
     <script
       src="/vendor/clipboard/dist/clipboard.min.js"
       crossorigin="anonymous"
     ></script>
     <script src="/js/docs.js" crossorigin="anonymous"></script>
-    
-    
-    <script src="/js/core-styles/config.js"></script>
-    <script src="/js/ahoy/ahoy.min.js" defer=""></script>
-    <script src="/js/core-styles/aye.js" type="module"></script>
-    
-    <script src="/js/core-styles/ajax-form.js"></script>
-    <script src="/js/core-styles/ajax-load.js"></script>
-    <script src="/js/core-styles/ajax-modal.js"></script>
-    <script src="/js/core-styles/bootstrap-data-attributes.js"></script>
-    <script src="/js/core-styles/btn-disabled.js"></script>
-    <script src="/js/core-styles/checkbox-selector.js"></script>
-    <script src="/js/core-styles/circular-cookies.js"></script>
-    <script src="/js/core-styles/filter-search.js"></script>
-    <script src="/js/core-styles/form-toggles.js"></script>
-    <script src="/js/core-styles/locate.js"></script>
-    <script src="/js/core-styles/public.js"></script>
-    <script src="/js/core-styles/search.js"></script>
-    <script src="/js/core-styles/shopping-list-power-bar.js"></script>
-    <script src="/js/core-styles/tags.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   </body>
 </html>

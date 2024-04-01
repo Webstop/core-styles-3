@@ -5,4 +5,4 @@
 
 echo 'Once the shell prompt becomes available enter `npm run watch` (without the quotes) to start the watch script.'
 
-docker run --rm -it -v $(pwd):/src klakegg/hugo:0.80.0-ext-alpine shell
+docker run --rm -it -v $(pwd):/src klakegg/hugo:0.101.0-ext-alpine shell
