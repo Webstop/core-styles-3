@@ -19,15 +19,81 @@ to find nearby stores.
 
 The base `data-locate` attribute defines the locate button. 
 
+
+
+
+
 ### Basic Example
+
+| Rows | px/row | Pixels |
+|-----:|:------:|-------:|
+|    5 |  24px  |  120px |
+|   10 |  24px  |  240px |
+|   15 |  24px  |  360px |
+|   20 |  24px  |  480px |
+
+
+
+<div class="editor-toolbar btn-toolbar justify-content-between mb-3 px-0" style="margin-left: -1rem; margin-right: -1rem;" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group mx-3 mb-3" role="group">
+    <button type="button" id="editor-toolbar-h1" class="btn btn-outline-secondary"><i class="fa-sharp fa-solid fa-h1"></i></button>
+    <button type="button" id="editor-toolbar-h2" class="btn btn-outline-secondary"><i class="fa-sharp fa-solid fa-h2"></i></button>
+    <button type="button" id="editor-toolbar-h3" class="btn btn-outline-secondary"><i class="fa-sharp fa-solid fa-h3"></i></button>
+    <button type="button" id="editor-toolbar-h4" class="btn btn-outline-secondary"><i class="fa-sharp fa-solid fa-h4"></i></button>
+    <button type="button" id="editor-toolbar-h5" class="btn btn-outline-secondary"><i class="fa-sharp fa-solid fa-h5"></i></button>
+    <button type="button" id="editor-toolbar-h6" class="btn btn-outline-secondary"><i class="fa-sharp fa-solid fa-h6"></i></button>
+  </div>
+  <div class="btn-group mx-3 mb-3" role="group">
+    <button type="button" id="editor-toolbar-strong"   class="btn btn-outline-secondary"><i class="fa-sharp fa-solid fa-bold"></i></button>
+    <button type="button" id="editor-toolbar-emphasis" class="btn btn-outline-secondary"><i class="fa-sharp fa-solid fa-italic"></i></button>
+    <button type="button" id="editor-toolbar-strike" class="btn btn-outline-secondary"><i class="fa-sharp fa-solid fa-strikethrough"></i></button>
+  </div>
+  <div class="btn-group mx-3 mb-3" role="group">
+    <button type="button" id="editor-toolbar-table" class="btn btn-outline-secondary"><i class="fa-regular fa-table"></i></button>
+    <button type="button" id="editor-toolbar-ul"    class="btn btn-outline-secondary"><i class="fa-solid fa-list"></i></button>
+    <button type="button" id="editor-toolbar-ol"    class="btn btn-outline-secondary"><i class="fa-sharp fa-regular fa-list-ol"></i></button>
+    <button type="button" id="editor-toolbar-quote" class="btn btn-outline-secondary"><i class="fa-solid fa-quote-right"></i></button>
+  </div>
+  <div class="btn-group mx-3 mb-3" role="group">
+    <button type="button" id="editor-toolbar-image" class="btn btn-outline-secondary"><i class="fa-regular fa-image"></i></button>
+    <button type="button" id="editor-toolbar-link"  class="btn btn-outline-secondary"><i class="fa-duotone fa-arrow-up-right-from-square"></i></button>
+  </div>
+  <div class="btn-group mx-3 mb-3" role="group">
+    <button type="button" id="editor-toolbar-undo" class="btn btn-outline-secondary"><i class="fa-solid fa-rotate-left"></i></button>
+    <button type="button" id="editor-toolbar-redo" class="btn btn-outline-secondary"><i class="fa-solid fa-rotate-right"></i></button>
+  </div>
+
+</div>
 
 
 {{< example >}}
 <label for="markdown-example" class="form-label">Text Editor Example</label>
-<textarea data-markdown-editor class="form-control" rows="5"></textarea>
+<textarea data-markdown-editor class="form-control" name="some-name" id="some-id" rows="15">
+
+#### 2 Markdown H4 Heading
+
+You can type `|3x2|<space>` to create a table:
+
+| First Header   |    Second Header   |
+| -------------- | :----------------: |
+| Content Cell 1 | \`Content\` Cell 1 |
+| Content Cell 2 | **Content** Cell 2 |
+
+_Tables like the one above are made available by Github Flavored Markdown (GFM)._
+
+Links: [Webstop](https://webstop.com)
+
+#### Lists
+
+- bullet list
+- using dashes
+
+1. Numbered List
+2. Using Numbers
+</textarea>
 {{< /example >}}
 
-<div  id="markdown-example" ></div>
+
 
 <script src="/js/milkdown.js" type="module"></script>
 

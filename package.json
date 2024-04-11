@@ -37,7 +37,7 @@
     "js-docs-minify-main": "terser site/static/js/core-styles.js --compress --output site/static/js/core-styles.min.js",
 
     "js-docs-milkdown": "npm-run-all js-docs-compile-milkdown js-docs-minify-milkdown",
-    "js-docs-compile-milkdown": "rollup js/milkdown-bkup.js --config build/rollup.milkdown.config.mjs --file site/static/js/milkdown.js --format esm --sourcemap",
+    "js-docs-compile-milkdown": "rollup js/milkdown.js --config build/rollup.milkdown.config.mjs --file site/static/js/milkdown.js --format esm --sourcemap",
     "js-docs-minify-milkdown": "terser site/static/js/milkdown.js --compress --output site/static/js/milkdown.min.js",
 
     "watch": "npm-run-all --parallel watch-*",
@@ -55,6 +55,7 @@
     "type": "git",
     "url": "git+https://github.com/webstop/core-styles-3.git"
   },
+
   "homepage": "https://guides.webstop.com/",
   "dependencies": {},
   "devDependencies": {
@@ -63,11 +64,13 @@
     "@babel/preset-env": "^7.24.1",
     "@milkdown/core": "7.3.5",
     "@milkdown/ctx": "7.3.5",
+    "@milkdown/plugin-upload": "7.3.5",
     "@milkdown/preset-commonmark": "7.3.5",
     "@milkdown/preset-gfm": "7.3.5",
     "@milkdown/prose": "7.3.5",
     "@milkdown/theme-nord": "7.3.5",
     "@milkdown/transformer": "7.3.5",
+    "@milkdown-lab/plugin-menu": "1.2.2",
     "@popperjs/core": "^2.11.8",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",

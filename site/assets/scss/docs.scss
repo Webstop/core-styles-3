@@ -3,6 +3,7 @@
 @import
   'variables_bootstrap',
   '../../../node_modules/bootstrap/scss/bootstrap',
+  '../../../node_modules/@milkdown-lab/plugin-menu/style',
   '../../../scss/core-styles',
   'variables',
   'layout_customizations',
@@ -21,3 +22,7 @@
   'syntax_defaults',
   'syntax_customizations'
 ;
+
+.test-compile {
+  background: #0a53be;
+}
