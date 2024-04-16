@@ -2,7 +2,18 @@ import { defaultValueCtx, Editor, rootCtx } from '@milkdown/core';
 import { commonmark } from '@milkdown/preset-commonmark';
 import { gfm } from '@milkdown/preset-gfm';
 import { upload } from '@milkdown/plugin-upload';
-import { menu, menuDefaultConfig } from '@milkdown-lab/plugin-menu'
+//import { milkdownMenu } from "./milkdown-menu";
+
+let beforePluginMenu = 'Before Plugin Menu';
+console.log(beforePluginMenu);
+
+// import { menu, menuDefaultConfig } from '@milkdown-lab/plugin-menu'
+
+//milkdownMenu();
+
+let afterPluginMenu = 'After Plugin Menu';
+
+console.log(afterPluginMenu);
 
 // import './milkdown-menu';
 
@@ -34,15 +45,17 @@ import { menu, menuDefaultConfig } from '@milkdown-lab/plugin-menu'
     cssClasses.forEach((cssClass) => {
       div.classList.add(cssClass);
     });
-    // Set overflow behavior
-    div.style.overflow = "auto";
+
+        // Set overflow behavior
+    // div.style.overflow = "auto";
     // set the height, if there is a rows attribute
-    div.style.height = 'auto'; // reset the height
+    // div.style.height = 'auto'; // reset the height
     if (textarea.hasAttribute('rows')) {
       let rows = textarea.getAttribute('rows');
       let pixels = rows * 24; // 24 pixels per row
-      div.style.height = pixels + 'px';
+      div.style.minHeight = pixels + 'px';
     }
+
     // Place the new div right after the textarea
     textarea.insertAdjacentElement('afterend', div);
     textarea.style.display = "none";
@@ -64,7 +77,7 @@ import { menu, menuDefaultConfig } from '@milkdown-lab/plugin-menu'
     let editor = Editor.make().config(ctx => {
       ctx.set(rootCtx, div)
       ctx.set(defaultValueCtx, config.defaultValue)
-    }).use(commonmark).config(menuDefaultConfig).use(menu);
+    }).use(commonmark);//.config(menuDefaultConfig).use(menu);
     if (config.gfm)    editor = editor.use(gfm);
     if (config.upload) editor = editor.use(upload);
     // if (config.block)  editor = editor.use(block);

@@ -1,21 +1,18 @@
-var n$2 = /* @__PURE__ */ ((e) => (e.docTypeError = "docTypeError", e.contextNotFound = "contextNotFound", e.timerNotFound = "timerNotFound", e.ctxCallOutOfScope = "ctxCallOutOfScope", e.createNodeInParserFail = "createNodeInParserFail", e.stackOverFlow = "stackOverFlow", e.parserMatchError = "parserMatchError", e.serializerMatchError = "serializerMatchError", e.getAtomFromSchemaFail = "getAtomFromSchemaFail", e.expectDomTypeError = "expectDomTypeError", e.callCommandBeforeEditorView = "callCommandBeforeEditorView", e.missingRootElement = "missingRootElement", e.missingNodeInSchema = "missingNodeInSchema", e.missingMarkInSchema = "missingMarkInSchema", e.ctxNotBind = "ctxNotBind", e.missingYjsDoc = "missingYjsDoc", e))(n$2 || {});
+var n$1 = /* @__PURE__ */ ((e) => (e.docTypeError = "docTypeError", e.contextNotFound = "contextNotFound", e.timerNotFound = "timerNotFound", e.ctxCallOutOfScope = "ctxCallOutOfScope", e.createNodeInParserFail = "createNodeInParserFail", e.stackOverFlow = "stackOverFlow", e.parserMatchError = "parserMatchError", e.serializerMatchError = "serializerMatchError", e.getAtomFromSchemaFail = "getAtomFromSchemaFail", e.expectDomTypeError = "expectDomTypeError", e.callCommandBeforeEditorView = "callCommandBeforeEditorView", e.missingRootElement = "missingRootElement", e.missingNodeInSchema = "missingNodeInSchema", e.missingMarkInSchema = "missingMarkInSchema", e.ctxNotBind = "ctxNotBind", e.missingYjsDoc = "missingYjsDoc", e))(n$1 || {});
 class t extends Error {
   constructor(o, a) {
     super(a), this.name = "MilkdownError", this.code = o;
   }
 }
-const u$2 = (e, o) => typeof o == "function" ? "[Function]" : o, i$1 = (e) => JSON.stringify(e, u$2);
-function l$2(e) {
-  return new t(n$2.docTypeError, `Doc type error, unsupported type: ${i$1(e)}`);
+const u$1 = (e, o) => typeof o == "function" ? "[Function]" : o, i$1 = (e) => JSON.stringify(e, u$1);
+function l$1(e) {
+  return new t(n$1.docTypeError, `Doc type error, unsupported type: ${i$1(e)}`);
 }
-function d$4(e) {
-  return new t(n$2.contextNotFound, `Context "${e}" not found, do you forget to inject it?`);
+function d$2(e) {
+  return new t(n$1.contextNotFound, `Context "${e}" not found, do you forget to inject it?`);
 }
-function f$2(e) {
-  return new t(n$2.timerNotFound, `Timer "${e}" not found, do you forget to record it?`);
-}
-function p$2() {
-  return new t(n$2.ctxCallOutOfScope, "Should not call a context out of the plugin.");
+function p$1() {
+  return new t(n$1.ctxCallOutOfScope, "Should not call a context out of the plugin.");
 }
 function g$3(...e) {
   const o = e.reduce((a, c) => {
@@ -24,36 +21,21 @@ function g$3(...e) {
     const s = (r) => Array.isArray(r) ? r.map((m) => s(m)).join(", ") : r.toJSON ? i$1(r.toJSON()) : r.spec ? i$1(r.spec) : r.toString();
     return `${a}, ${s(c)}`;
   }, "Create prosemirror node from remark failed in parser");
-  return new t(n$2.createNodeInParserFail, o);
+  return new t(n$1.createNodeInParserFail, o);
 }
 function h$1() {
-  return new t(n$2.stackOverFlow, "Stack over flow, cannot pop on an empty stack.");
+  return new t(n$1.stackOverFlow, "Stack over flow, cannot pop on an empty stack.");
 }
-function w$5(e) {
-  return new t(n$2.parserMatchError, `Cannot match target parser for node: ${i$1(e)}.`);
+function w$1(e) {
+  return new t(n$1.parserMatchError, `Cannot match target parser for node: ${i$1(e)}.`);
 }
-function F$2(e) {
-  return new t(n$2.serializerMatchError, `Cannot match target serializer for node: ${i$1(e)}.`);
+function F$1(e) {
+  return new t(n$1.serializerMatchError, `Cannot match target serializer for node: ${i$1(e)}.`);
 }
-function S$5(e) {
-  return new t(n$2.expectDomTypeError, `Expect to be a dom, but get: ${i$1(e)}.`);
-}
-function y$2() {
+function y$1() {
   return new t(
-    n$2.callCommandBeforeEditorView,
+    n$1.callCommandBeforeEditorView,
     "You're trying to call a command before editor view initialized, make sure to get commandManager from ctx after editor view has been initialized"
-  );
-}
-function M$5(e) {
-  return new t(
-    n$2.missingNodeInSchema,
-    `Missing node in schema, milkdown cannot find "${e}" in schema.`
-  );
-}
-function x$4(e) {
-  return new t(
-    n$2.missingMarkInSchema,
-    `Missing mark in schema, milkdown cannot find "${e}" in schema.`
   );
 }
 
@@ -65,14 +47,14 @@ var e = (o, s, i) => (P$2(o, s, "read from private field"), i ? i.call(o) : s.ge
   if (s.has(o))
     throw TypeError("Cannot add the same private member more than once");
   s instanceof WeakSet ? s.add(o) : s.set(o, i);
-}, n$1 = (o, s, i, r) => (P$2(o, s, "write to private field"), r ? r.call(o, i) : s.set(o, i), i);
-let G$3 = class G {
+}, n = (o, s, i, r) => (P$2(o, s, "write to private field"), r ? r.call(o, i) : s.set(o, i), i);
+let G$1 = class G {
   constructor() {
     this.sliceMap = /* @__PURE__ */ new Map(), this.get = (s) => {
       const i = typeof s == "string" ? [...this.sliceMap.values()].find((r) => r.type.name === s) : this.sliceMap.get(s.id);
       if (!i) {
         const r = typeof s == "string" ? s : s.name;
-        throw d$4(r);
+        throw d$2(r);
       }
       return i;
     }, this.remove = (s) => {
@@ -81,27 +63,27 @@ let G$3 = class G {
     }, this.has = (s) => typeof s == "string" ? [...this.sliceMap.values()].some((i) => i.type.name === s) : this.sliceMap.has(s.id);
   }
 };
-var u$1, m$1, y$1;
-let V$2 = class V {
+var u, m$1, y;
+let V$1 = class V {
   /// @internal
   constructor(s, i, r) {
-    a(this, u$1, void 0);
+    a(this, u, void 0);
     /// @internal
     a(this, m$1, void 0);
-    a(this, y$1, void 0);
-    n$1(this, u$1, []), n$1(this, y$1, () => {
-      e(this, u$1).forEach((t) => t(e(this, m$1)));
+    a(this, y, void 0);
+    n(this, u, []), n(this, y, () => {
+      e(this, u).forEach((t) => t(e(this, m$1)));
     }), this.set = (t) => {
-      n$1(this, m$1, t), e(this, y$1).call(this);
+      n(this, m$1, t), e(this, y).call(this);
     }, this.get = () => e(this, m$1), this.update = (t) => {
-      n$1(this, m$1, t(e(this, m$1))), e(this, y$1).call(this);
-    }, this.type = r, n$1(this, m$1, i), s.set(r.id, this);
+      n(this, m$1, t(e(this, m$1))), e(this, y).call(this);
+    }, this.type = r, n(this, m$1, i), s.set(r.id, this);
   }
   /// Add a watcher for changes in the slice.
   /// Returns a function to remove the watcher.
   on(s) {
-    return e(this, u$1).push(s), () => {
-      n$1(this, u$1, e(this, u$1).filter((i) => i !== s));
+    return e(this, u).push(s), () => {
+      n(this, u, e(this, u).filter((i) => i !== s));
     };
   }
   /// Add a one-time watcher for changes in the slice.
@@ -115,192 +97,72 @@ let V$2 = class V {
   }
   /// Remove a watcher.
   off(s) {
-    n$1(this, u$1, e(this, u$1).filter((i) => i !== s));
+    n(this, u, e(this, u).filter((i) => i !== s));
   }
   /// Remove all watchers.
   offAll() {
-    n$1(this, u$1, []);
+    n(this, u, []);
   }
 };
-u$1 = new WeakMap(), m$1 = new WeakMap(), y$1 = new WeakMap();
-let W$5 = class W {
+u = new WeakMap(), m$1 = new WeakMap(), y = new WeakMap();
+let W$1 = class W {
   /// Create a slice type with a default value and a name.
   /// The name should be unique in the container.
   constructor(s, i) {
     this.id = Symbol(`Context-${i}`), this.name = i, this._defaultValue = s, this._typeInfo = () => {
-      throw p$2();
+      throw p$1();
     };
   }
   /// Create a slice with a container.
   /// You can also pass a value to override the default value.
   create(s, i = this._defaultValue) {
-    return new V$2(s, i, this);
+    return new V$1(s, i, this);
   }
 };
-const H$4 = (o, s) => new W$5(o, s);
-var D$2, x$3, R$4, w$4, S$4, f$1, M$4, T$4, j$4;
-let _$1 = class _ {
-  /// Create an inspector with container, clock and metadata.
-  constructor(s, i, r) {
-    /// @internal
-    a(this, D$2, void 0);
-    /// @internal
-    a(this, x$3, void 0);
-    /// @internal
-    a(this, R$4, void 0);
-    a(this, w$4, void 0);
-    a(this, S$4, void 0);
-    a(this, f$1, void 0);
-    a(this, M$4, void 0);
-    a(this, T$4, void 0);
-    a(this, j$4, void 0);
-    n$1(this, w$4, /* @__PURE__ */ new Set()), n$1(this, S$4, /* @__PURE__ */ new Set()), n$1(this, f$1, /* @__PURE__ */ new Map()), n$1(this, M$4, /* @__PURE__ */ new Map()), this.read = () => ({
-      metadata: e(this, D$2),
-      injectedSlices: [...e(this, w$4)].map((t) => ({
-        name: typeof t == "string" ? t : t.name,
-        value: e(this, T$4).call(this, t)
-      })),
-      consumedSlices: [...e(this, S$4)].map((t) => ({
-        name: typeof t == "string" ? t : t.name,
-        value: e(this, T$4).call(this, t)
-      })),
-      recordedTimers: [...e(this, f$1)].map(([t, { duration: h }]) => ({
-        name: t.name,
-        duration: h,
-        status: e(this, j$4).call(this, t)
-      })),
-      waitTimers: [...e(this, M$4)].map(([t, { duration: h }]) => ({
-        name: t.name,
-        duration: h,
-        status: e(this, j$4).call(this, t)
-      }))
-    }), this.onRecord = (t) => {
-      e(this, f$1).set(t, { start: Date.now(), duration: 0 });
-    }, this.onClear = (t) => {
-      e(this, f$1).delete(t);
-    }, this.onDone = (t) => {
-      const h = e(this, f$1).get(t);
-      h && (h.duration = Date.now() - h.start);
-    }, this.onWait = (t, h) => {
-      const v = Date.now();
-      h.finally(() => {
-        e(this, M$4).set(t, { duration: Date.now() - v });
-      });
-    }, this.onInject = (t) => {
-      e(this, w$4).add(t);
-    }, this.onRemove = (t) => {
-      e(this, w$4).delete(t);
-    }, this.onUse = (t) => {
-      e(this, S$4).add(t);
-    }, n$1(this, T$4, (t) => e(this, x$3).get(t).get()), n$1(this, j$4, (t) => e(this, R$4).get(t).status), n$1(this, x$3, s), n$1(this, R$4, i), n$1(this, D$2, r);
-  }
-};
-D$2 = new WeakMap(), x$3 = new WeakMap(), R$4 = new WeakMap(), w$4 = new WeakMap(), S$4 = new WeakMap(), f$1 = new WeakMap(), M$4 = new WeakMap(), T$4 = new WeakMap(), j$4 = new WeakMap();
-var d$3, l$1, b$2, c$3;
-const L$3 = class L {
-  /// Create a ctx object with container and clock.
-  constructor(s, i, r) {
-    /// @internal
-    a(this, d$3, void 0);
-    /// @internal
-    a(this, l$1, void 0);
-    /// @internal
-    a(this, b$2, void 0);
-    /// @internal
-    a(this, c$3, void 0);
-    this.produce = (t) => t && Object.keys(t).length ? new L(e(this, d$3), e(this, l$1), { ...t }) : this, this.inject = (t, h) => {
-      var O;
-      const v = t.create(e(this, d$3).sliceMap);
-      return h != null && v.set(h), (O = e(this, c$3)) == null || O.onInject(t), this;
-    }, this.remove = (t) => {
-      var h;
-      return e(this, d$3).remove(t), (h = e(this, c$3)) == null || h.onRemove(t), this;
-    }, this.record = (t) => {
-      var h;
-      return t.create(e(this, l$1).store), (h = e(this, c$3)) == null || h.onRecord(t), this;
-    }, this.clearTimer = (t) => {
-      var h;
-      return e(this, l$1).remove(t), (h = e(this, c$3)) == null || h.onClear(t), this;
-    }, this.isInjected = (t) => e(this, d$3).has(t), this.isRecorded = (t) => e(this, l$1).has(t), this.use = (t) => {
-      var h;
-      return (h = e(this, c$3)) == null || h.onUse(t), e(this, d$3).get(t);
-    }, this.get = (t) => this.use(t).get(), this.set = (t, h) => this.use(t).set(h), this.update = (t, h) => this.use(t).update(h), this.timer = (t) => e(this, l$1).get(t), this.done = (t) => {
-      var h;
-      this.timer(t).done(), (h = e(this, c$3)) == null || h.onDone(t);
-    }, this.wait = (t) => {
-      var v;
-      const h = this.timer(t).start();
-      return (v = e(this, c$3)) == null || v.onWait(t, h), h;
-    }, this.waitTimers = async (t) => {
-      await Promise.all(this.get(t).map((h) => this.wait(h)));
-    }, n$1(this, d$3, s), n$1(this, l$1, i), n$1(this, b$2, r), r && n$1(this, c$3, new _$1(s, i, r));
-  }
-  /// Get metadata of the ctx.
-  get meta() {
-    return e(this, b$2);
-  }
-  /// Get the inspector of the ctx.
-  get inspector() {
-    return e(this, c$3);
-  }
-};
-d$3 = new WeakMap(), l$1 = new WeakMap(), b$2 = new WeakMap(), c$3 = new WeakMap();
-let U$3 = L$3;
-let J$3 = class J {
-  constructor() {
-    this.store = /* @__PURE__ */ new Map(), this.get = (s) => {
-      const i = this.store.get(s.id);
-      if (!i)
-        throw f$2(s.name);
-      return i;
-    }, this.remove = (s) => {
-      this.store.delete(s.id);
-    }, this.has = (s) => this.store.has(s.id);
-  }
-};
-var C$3, g$2, E$3, p$1, I$2, k$2;
-let q$4 = class q {
+const H$2 = (o, s) => new W$1(o, s);
+var C$1, g$2, E$1, p, I, k$2;
+let q$2 = class q {
   /// @internal
   constructor(s, i) {
-    a(this, C$3, void 0);
+    a(this, C$1, void 0);
     a(this, g$2, void 0);
     /// @internal
-    a(this, E$3, void 0);
-    a(this, p$1, void 0);
-    a(this, I$2, void 0);
+    a(this, E$1, void 0);
+    a(this, p, void 0);
+    a(this, I, void 0);
     a(this, k$2, void 0);
-    n$1(this, C$3, null), n$1(this, g$2, null), n$1(this, p$1, "pending"), this.start = () => (e(this, C$3) ?? n$1(this, C$3, new Promise((r, t) => {
-      n$1(this, g$2, (h) => {
-        h instanceof CustomEvent && h.detail.id === e(this, E$3) && (n$1(this, p$1, "resolved"), e(this, I$2).call(this), h.stopImmediatePropagation(), r());
+    n(this, C$1, null), n(this, g$2, null), n(this, p, "pending"), this.start = () => (e(this, C$1) ?? n(this, C$1, new Promise((r, t) => {
+      n(this, g$2, (h) => {
+        h instanceof CustomEvent && h.detail.id === e(this, E$1) && (n(this, p, "resolved"), e(this, I).call(this), h.stopImmediatePropagation(), r());
       }), e(this, k$2).call(this, () => {
-        e(this, p$1) === "pending" && n$1(this, p$1, "rejected"), e(this, I$2).call(this), t(new Error(`Timing ${this.type.name} timeout.`));
-      }), n$1(this, p$1, "pending"), addEventListener(this.type.name, e(this, g$2));
-    })), e(this, C$3)), this.done = () => {
-      const r = new CustomEvent(this.type.name, { detail: { id: e(this, E$3) } });
+        e(this, p) === "pending" && n(this, p, "rejected"), e(this, I).call(this), t(new Error(`Timing ${this.type.name} timeout.`));
+      }), n(this, p, "pending"), addEventListener(this.type.name, e(this, g$2));
+    })), e(this, C$1)), this.done = () => {
+      const r = new CustomEvent(this.type.name, { detail: { id: e(this, E$1) } });
       dispatchEvent(r);
-    }, n$1(this, I$2, () => {
+    }, n(this, I, () => {
       e(this, g$2) && removeEventListener(this.type.name, e(this, g$2));
-    }), n$1(this, k$2, (r) => {
+    }), n(this, k$2, (r) => {
       setTimeout(() => {
         r();
       }, this.type.timeout);
-    }), n$1(this, E$3, Symbol(i.name)), this.type = i, s.set(i.id, this);
+    }), n(this, E$1, Symbol(i.name)), this.type = i, s.set(i.id, this);
   }
   /// The status of the timer.
   /// Can be `pending`, `resolved` or `rejected`.
   get status() {
-    return e(this, p$1);
+    return e(this, p);
   }
 };
-C$3 = new WeakMap(), g$2 = new WeakMap(), E$3 = new WeakMap(), p$1 = new WeakMap(), I$2 = new WeakMap(), k$2 = new WeakMap();
-let A$4 = class A {
+C$1 = new WeakMap(), g$2 = new WeakMap(), E$1 = new WeakMap(), p = new WeakMap(), I = new WeakMap(), k$2 = new WeakMap();
+let A$1 = class A {
   /// Create a timer type with a name and a timeout.
   /// The name should be unique in the clock.
   constructor(s, i = 3e3) {
-    this.create = (r) => new q$4(r, this), this.id = Symbol(`Timer-${s}`), this.name = s, this.timeout = i;
+    this.create = (r) => new q$2(r, this), this.id = Symbol(`Timer-${s}`), this.name = s, this.timeout = i;
   }
 };
-const K$3 = (o, s = 3e3) => new A$4(o, s);
+const K$1 = (o, s = 3e3) => new A$1(o, s);
 
 // ::- Persistent data structure representing an ordered mapping from
 // strings to values, with some convenient update methods.
@@ -1121,7 +983,7 @@ function insertInto(content, dist, insert, parent) {
     let inner = insertInto(child.content, dist - offset - 1, insert);
     return inner && content.replaceChild(index, child.copy(inner));
 }
-function replace$1($from, $to, slice) {
+function replace($from, $to, slice) {
     if (slice.openStart > $from.depth)
         throw new ReplaceError("Inserted content deeper than insertion position");
     if ($from.depth - slice.openStart != $to.depth - slice.openEnd)
@@ -1750,7 +1612,7 @@ class Node {
     [`ReplaceError`](https://prosemirror.net/docs/ref/#model.ReplaceError) is thrown.
     */
     replace(from, to, slice) {
-        return replace$1(this.resolve(from), this.resolve(to), slice);
+        return replace(this.resolve(from), this.resolve(to), slice);
     }
     /**
     Find the node directly after the given position.
@@ -3847,7 +3709,7 @@ function doc$2(options) {
  */
 
 /** @type {Options} */
-const emptyOptions$1 = {};
+const emptyOptions = {};
 
 /**
  * Get the text content of a node or list of nodes.
@@ -3863,7 +3725,7 @@ const emptyOptions$1 = {};
  *   Serialized `value`.
  */
 function toString(value, options) {
-  const settings = options || emptyOptions$1;
+  const settings = options || emptyOptions;
   const includeImageAlt =
     typeof settings.includeImageAlt === 'boolean'
       ? settings.includeImageAlt
@@ -5612,7 +5474,7 @@ const blockQuote = {
   continuation: {
     tokenize: tokenizeBlockQuoteContinuation
   },
-  exit: exit$1
+  exit
 };
 
 /**
@@ -5738,7 +5600,7 @@ function tokenizeBlockQuoteContinuation(effects, ok, nok) {
 }
 
 /** @type {Exiter} */
-function exit$1(effects) {
+function exit(effects) {
   effects.exit('blockQuote');
 }
 
@@ -6627,7 +6489,7 @@ const codeText = {
   name: 'codeText',
   tokenize: tokenizeCodeText,
   resolve: resolveCodeText,
-  previous: previous$1
+  previous
 };
 
 // To do: next major: don’t resolve, like `markdown-rs`.
@@ -6691,7 +6553,7 @@ function resolveCodeText(events) {
  * @this {TokenizeContext}
  * @type {Previous}
  */
-function previous$1(code) {
+function previous(code) {
   // If there is a previous code, there will always be a tail.
   return (
     code !== 96 ||
@@ -10988,7 +10850,7 @@ const listItemPrefixWhitespaceConstruct = {
 
 /** @type {Construct} */
 const indentConstruct = {
-  tokenize: tokenizeIndent$1,
+  tokenize: tokenizeIndent,
   partial: true
 };
 
@@ -11167,7 +11029,7 @@ function tokenizeListContinuation(effects, ok, nok) {
  * @type {Tokenizer}
  * @this {TokenizeContext}
  */
-function tokenizeIndent$1(effects, ok, nok) {
+function tokenizeIndent(effects, ok, nok) {
   const self = this;
   return factorySpace(
     effects,
@@ -11484,7 +11346,7 @@ const resolver = {
   resolveAll: createResolver()
 };
 const string$1 = initializeFactory('string');
-const text$3 = initializeFactory('text');
+const text$2 = initializeFactory('text');
 
 /**
  * @param {'string' | 'text'} field
@@ -12283,7 +12145,7 @@ const string = {
 };
 
 /** @satisfies {Extension['text']} */
-const text$2 = {
+const text$1 = {
   [-5]: lineEnding,
   [-4]: lineEnding,
   [-3]: lineEnding,
@@ -12323,7 +12185,7 @@ var defaultConstructs = /*#__PURE__*/Object.freeze({
   flowInitial: flowInitial,
   insideSpan: insideSpan,
   string: string,
-  text: text$2
+  text: text$1
 });
 
 /**
@@ -12354,7 +12216,7 @@ function parse(options) {
     document: create(document$2),
     flow: create(flow$1),
     string: create(string$1),
-    text: create(text$3)
+    text: create(text$2)
   };
   return parser
 
@@ -14072,7 +13934,7 @@ function configure(base, extension) {
         }
 
         case 'handlers': {
-          map$3(base[key], extension[key]);
+          map$2(base[key], extension[key]);
           break
         }
 
@@ -14103,7 +13965,7 @@ function list$1(left, right) {
  * @param {Record<string, T>} left
  * @param {Record<string, T> | null | undefined} right
  */
-function map$3(left, right) {
+function map$2(left, right) {
   if (right) {
     Object.assign(left, right);
   }
@@ -14131,14 +13993,14 @@ function blockquote(node, _, state, info) {
   tracker.shift(2);
   const value = state.indentLines(
     state.containerFlow(node, tracker.current()),
-    map$2
+    map$1
   );
   exit();
   return value
 }
 
 /** @type {Map} */
-function map$2(line, _, blank) {
+function map$1(line, _, blank) {
   return '>' + (blank ? '' : ' ') + line
 }
 
@@ -14316,14 +14178,14 @@ function checkFence(state) {
  * @param {Info} info
  * @returns {string}
  */
-function code$2(node, _, state, info) {
+function code$1(node, _, state, info) {
   const marker = checkFence(state);
   const raw = node.value || '';
   const suffix = marker === '`' ? 'GraveAccent' : 'Tilde';
 
   if (formatCodeAsIndented(node, state)) {
     const exit = state.enter('codeIndented');
-    const value = state.indentLines(raw, map$1);
+    const value = state.indentLines(raw, map);
     exit();
     return value
   }
@@ -14372,7 +14234,7 @@ function code$2(node, _, state, info) {
 }
 
 /** @type {Map} */
-function map$1(line, _, blank) {
+function map(line, _, blank) {
   return (blank ? '' : '    ') + line
 }
 
@@ -14590,7 +14452,7 @@ const convert =
      */
     function (test) {
       if (test === null || test === undefined) {
-        return ok$1
+        return ok
       }
 
       if (typeof test === 'function') {
@@ -14713,7 +14575,7 @@ function castFactory(testFunction) {
   }
 }
 
-function ok$1() {
+function ok() {
   return true
 }
 
@@ -16054,7 +15916,7 @@ function strongPeek(_, _1, state) {
  * @param {Info} info
  * @returns {string}
  */
-function text$1(node, _, state, info) {
+function text(node, _, state, info) {
   return state.safe(node.value, info)
 }
 
@@ -16108,7 +15970,7 @@ function thematicBreak(_, _1, state) {
 const handle = {
   blockquote,
   break: hardBreak,
-  code: code$2,
+  code: code$1,
   definition,
   emphasis,
   hardBreak,
@@ -16124,7 +15986,7 @@ const handle = {
   paragraph,
   root,
   strong,
-  text: text$1,
+  text,
   thematicBreak
 };
 
@@ -17182,8 +17044,6 @@ var extend = function extend() {
 
 var extend$1 = /*@__PURE__*/getDefaultExportFromCjs(extend);
 
-function ok() {}
-
 function isPlainObject(value) {
 	if (typeof value !== 'object' || value === null) {
 		return false;
@@ -17752,7 +17612,7 @@ VFileMessage.prototype.source = undefined;
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-const path$1 = {basename, dirname, extname, join: join$1, sep: '/'};
+const path = {basename, dirname, extname, join: join$1, sep: '/'};
 
 /* eslint-disable max-depth, complexity */
 
@@ -18409,7 +18269,7 @@ class VFile {
    *   Basename.
    */
   get basename() {
-    return typeof this.path === 'string' ? path$1.basename(this.path) : undefined
+    return typeof this.path === 'string' ? path.basename(this.path) : undefined
   }
 
   /**
@@ -18427,7 +18287,7 @@ class VFile {
   set basename(basename) {
     assertNonEmpty(basename, 'basename');
     assertPart(basename, 'basename');
-    this.path = path$1.join(this.dirname || '', basename);
+    this.path = path.join(this.dirname || '', basename);
   }
 
   /**
@@ -18437,7 +18297,7 @@ class VFile {
    *   Dirname.
    */
   get dirname() {
-    return typeof this.path === 'string' ? path$1.dirname(this.path) : undefined
+    return typeof this.path === 'string' ? path.dirname(this.path) : undefined
   }
 
   /**
@@ -18452,7 +18312,7 @@ class VFile {
    */
   set dirname(dirname) {
     assertPath(this.basename, 'dirname');
-    this.path = path$1.join(dirname || '', this.basename);
+    this.path = path.join(dirname || '', this.basename);
   }
 
   /**
@@ -18462,7 +18322,7 @@ class VFile {
    *   Extname.
    */
   get extname() {
-    return typeof this.path === 'string' ? path$1.extname(this.path) : undefined
+    return typeof this.path === 'string' ? path.extname(this.path) : undefined
   }
 
   /**
@@ -18491,7 +18351,7 @@ class VFile {
       }
     }
 
-    this.path = path$1.join(this.dirname, this.stem + (extname || ''));
+    this.path = path.join(this.dirname, this.stem + (extname || ''));
   }
 
   /**
@@ -18536,7 +18396,7 @@ class VFile {
    */
   get stem() {
     return typeof this.path === 'string'
-      ? path$1.basename(this.path, this.extname)
+      ? path.basename(this.path, this.extname)
       : undefined
   }
 
@@ -18555,7 +18415,7 @@ class VFile {
   set stem(stem) {
     assertNonEmpty(stem, 'stem');
     assertPart(stem, 'stem');
-    this.path = path$1.join(this.dirname || '', stem + (this.extname || ''));
+    this.path = path.join(this.dirname || '', stem + (this.extname || ''));
   }
 
   // Normal prototypal methods.
@@ -18811,9 +18671,9 @@ class VFile {
  *   Nothing.
  */
 function assertPart(part, name) {
-  if (part && part.includes(path$1.sep)) {
+  if (part && part.includes(path.sep)) {
     throw new Error(
-      '`' + name + '` cannot be a path: did not expect `' + path$1.sep + '`'
+      '`' + name + '` cannot be a path: did not expect `' + path.sep + '`'
     )
   }
 }
@@ -19877,18 +19737,18 @@ function isUint8Array(value) {
   )
 }
 
-var G$2 = (p, h, n) => {
+var G = (p, h, n) => {
   if (!h.has(p))
     throw TypeError("Cannot " + n);
 };
-var r = (p, h, n) => (G$2(p, h, "read from private field"), n ? n.call(p) : h.get(p)), c$2 = (p, h, n) => {
+var r = (p, h, n) => (G(p, h, "read from private field"), n ? n.call(p) : h.get(p)), c$1 = (p, h, n) => {
   if (h.has(p))
     throw TypeError("Cannot add the same private member more than once");
   h instanceof WeakSet ? h.add(p) : h.set(p, n);
-}, o = (p, h, n, t) => (G$2(p, h, "write to private field"), t ? t.call(p, n) : h.set(p, n), n);
-let Q$3 = class Q {
-};
-let U$2 = class U {
+}, o = (p, h, n, t) => (G(p, h, "write to private field"), t ? t.call(p, n) : h.set(p, n), n);
+class Q {
+}
+let U$1 = class U {
   constructor() {
     this.elements = [], this.size = () => this.elements.length, this.top = () => this.elements.at(-1), this.push = (h) => {
       var n;
@@ -19903,7 +19763,7 @@ let U$2 = class U {
     };
   }
 };
-let B$1 = class B extends Q$3 {
+class B extends Q {
   constructor(h, n, t) {
     super(), this.type = h, this.content = n, this.attrs = t;
   }
@@ -19916,50 +19776,50 @@ let B$1 = class B extends Q$3 {
   static create(h, n, t) {
     return new B(h, n, t);
   }
-};
-var d$2, N$1, O$2, T$3, F$1, k$1, M$3;
-const S$3 = class S extends U$2 {
+}
+var d$1, N$1, O, T$1, F, k$1, M$1;
+const S = class S extends U$1 {
   /// @internal
   constructor(n) {
     super();
-    c$2(this, d$2, void 0);
-    c$2(this, N$1, void 0);
-    c$2(this, O$2, void 0);
-    c$2(this, T$3, void 0);
-    c$2(this, F$1, void 0);
-    c$2(this, k$1, void 0);
-    c$2(this, M$3, void 0);
-    o(this, d$2, Mark.none), o(this, N$1, (t) => t.isText), o(this, O$2, (t, s) => {
+    c$1(this, d$1, void 0);
+    c$1(this, N$1, void 0);
+    c$1(this, O, void 0);
+    c$1(this, T$1, void 0);
+    c$1(this, F, void 0);
+    c$1(this, k$1, void 0);
+    c$1(this, M$1, void 0);
+    o(this, d$1, Mark.none), o(this, N$1, (t) => t.isText), o(this, O, (t, s) => {
       if (r(this, N$1).call(this, t) && r(this, N$1).call(this, s) && Mark.sameSet(t.marks, s.marks))
         return this.schema.text(t.text + s.text, t.marks);
-    }), o(this, T$3, (t) => {
+    }), o(this, T$1, (t) => {
       const s = Object.values({ ...this.schema.nodes, ...this.schema.marks }).find((e) => e.spec.parseMarkdown.match(t));
       if (!s)
-        throw w$5(t);
+        throw w$1(t);
       return s;
-    }), o(this, F$1, (t) => {
-      const s = r(this, T$3).call(this, t);
+    }), o(this, F, (t) => {
+      const s = r(this, T$1).call(this, t);
       s.spec.parseMarkdown.runner(this, t, s);
-    }), this.injectRoot = (t, s, e) => (this.openNode(s, e), this.next(t.children), this), this.openNode = (t, s) => (this.open(B$1.create(t, [], s)), this), o(this, k$1, () => {
-      o(this, d$2, Mark.none);
+    }), this.injectRoot = (t, s, e) => (this.openNode(s, e), this.next(t.children), this), this.openNode = (t, s) => (this.open(B.create(t, [], s)), this), o(this, k$1, () => {
+      o(this, d$1, Mark.none);
       const t = this.close();
-      return r(this, M$3).call(this, t.type, t.attrs, t.content);
-    }), this.closeNode = () => (r(this, k$1).call(this), this), o(this, M$3, (t, s, e) => {
-      const i = t.createAndFill(s, e, r(this, d$2));
+      return r(this, M$1).call(this, t.type, t.attrs, t.content);
+    }), this.closeNode = () => (r(this, k$1).call(this), this), o(this, M$1, (t, s, e) => {
+      const i = t.createAndFill(s, e, r(this, d$1));
       if (!i)
         throw g$3(t, s, e);
       return this.push(i), i;
-    }), this.addNode = (t, s, e) => (r(this, M$3).call(this, t, s, e), this), this.openMark = (t, s) => {
+    }), this.addNode = (t, s, e) => (r(this, M$1).call(this, t, s, e), this), this.openMark = (t, s) => {
       const e = t.create(s);
-      return o(this, d$2, e.addToSet(r(this, d$2))), this;
-    }, this.closeMark = (t) => (o(this, d$2, t.removeFromSet(r(this, d$2))), this), this.addText = (t) => {
+      return o(this, d$1, e.addToSet(r(this, d$1))), this;
+    }, this.closeMark = (t) => (o(this, d$1, t.removeFromSet(r(this, d$1))), this), this.addText = (t) => {
       const s = this.top();
       if (!s)
         throw h$1();
-      const e = s.pop(), i = this.schema.text(t, r(this, d$2));
+      const e = s.pop(), i = this.schema.text(t, r(this, d$1));
       if (!e)
         return s.push(i), this;
-      const a = r(this, O$2).call(this, e, i);
+      const a = r(this, O).call(this, e, i);
       return a ? (s.push(a), this) : (s.push(e, i), this);
     }, this.build = () => {
       let t;
@@ -19967,18 +19827,18 @@ const S$3 = class S extends U$2 {
         t = r(this, k$1).call(this);
       while (this.size());
       return t;
-    }, this.next = (t = []) => ([t].flat().forEach((s) => r(this, F$1).call(this, s)), this), this.toDoc = () => this.build(), this.run = (t, s) => {
+    }, this.next = (t = []) => ([t].flat().forEach((s) => r(this, F).call(this, s)), this), this.toDoc = () => this.build(), this.run = (t, s) => {
       const e = t.runSync(t.parse(s), s);
       return this.next(e), this;
     }, this.schema = n;
   }
 };
-d$2 = new WeakMap(), N$1 = new WeakMap(), O$2 = new WeakMap(), T$3 = new WeakMap(), F$1 = new WeakMap(), k$1 = new WeakMap(), M$3 = new WeakMap(), S$3.create = (n, t) => {
-  const s = new S$3(n);
+d$1 = new WeakMap(), N$1 = new WeakMap(), O = new WeakMap(), T$1 = new WeakMap(), F = new WeakMap(), k$1 = new WeakMap(), M$1 = new WeakMap(), S.create = (n, t) => {
+  const s = new S(n);
   return (e) => (s.run(t, e), s.toDoc());
 };
-let H$3 = S$3;
-const q$3 = class q extends Q$3 {
+let H$1 = S;
+const q$1 = class q extends Q {
   constructor(h, n, t, s = {}) {
     super(), this.type = h, this.children = n, this.value = t, this.props = s, this.push = (e, ...i) => {
       this.children || (this.children = []), this.children.push(e, ...i);
@@ -19988,35 +19848,35 @@ const q$3 = class q extends Q$3 {
     };
   }
 };
-q$3.create = (h, n, t, s = {}) => new q$3(h, n, t, s);
-let J$2 = q$3;
-const Z$3 = (p) => Object.prototype.hasOwnProperty.call(p, "size");
-var l, v$2, A$3, E$2, w$3, j$3, x$2, R$3, m, g$1, C$2, P$1;
-const z$2 = class z extends U$2 {
+q$1.create = (h, n, t, s = {}) => new q$1(h, n, t, s);
+let J$1 = q$1;
+const Z$1 = (p) => Object.prototype.hasOwnProperty.call(p, "size");
+var l, v, A, E, w, j, x$1, R$1, m, g$1, C, P$1;
+const z = class z extends U$1 {
   /// @internal
   constructor(n) {
     super();
-    c$2(this, l, void 0);
-    c$2(this, v$2, void 0);
-    c$2(this, A$3, void 0);
-    c$2(this, E$2, void 0);
-    c$2(this, w$3, void 0);
-    c$2(this, j$3, void 0);
-    c$2(this, x$2, void 0);
-    c$2(this, R$3, void 0);
-    c$2(this, m, void 0);
-    c$2(this, g$1, void 0);
-    c$2(this, C$2, void 0);
-    c$2(this, P$1, void 0);
-    o(this, l, Mark.none), o(this, v$2, (t) => {
+    c$1(this, l, void 0);
+    c$1(this, v, void 0);
+    c$1(this, A, void 0);
+    c$1(this, E, void 0);
+    c$1(this, w, void 0);
+    c$1(this, j, void 0);
+    c$1(this, x$1, void 0);
+    c$1(this, R$1, void 0);
+    c$1(this, m, void 0);
+    c$1(this, g$1, void 0);
+    c$1(this, C, void 0);
+    c$1(this, P$1, void 0);
+    o(this, l, Mark.none), o(this, v, (t) => {
       const s = Object.values({ ...this.schema.nodes, ...this.schema.marks }).find((e) => e.spec.toMarkdown.match(t));
       if (!s)
-        throw F$2(t.type);
+        throw F$1(t.type);
       return s;
-    }), o(this, A$3, (t) => r(this, v$2).call(this, t).spec.toMarkdown.runner(this, t)), o(this, E$2, (t, s) => r(this, v$2).call(this, t).spec.toMarkdown.runner(this, t, s)), o(this, w$3, (t) => {
+    }), o(this, A, (t) => r(this, v).call(this, t).spec.toMarkdown.runner(this, t)), o(this, E, (t, s) => r(this, v).call(this, t).spec.toMarkdown.runner(this, t, s)), o(this, w, (t) => {
       const { marks: s } = t, e = (u) => u.type.spec.priority ?? 50;
-      [...s].sort((u, f) => e(u) - e(f)).every((u) => !r(this, E$2).call(this, u, t)) && r(this, A$3).call(this, t), s.forEach((u) => r(this, P$1).call(this, u));
-    }), o(this, j$3, (t, s) => {
+      [...s].sort((u, f) => e(u) - e(f)).every((u) => !r(this, E).call(this, u, t)) && r(this, A).call(this, t), s.forEach((u) => r(this, P$1).call(this, u));
+    }), o(this, j, (t, s) => {
       var f;
       if (t.type === s || ((f = t.children) == null ? void 0 : f.length) !== 1)
         return t;
@@ -20033,55 +19893,55 @@ const z$2 = class z extends U$2 {
         return t;
       const a = i.children ? [...i.children] : void 0, u = { ...t, children: a };
       return u.children = a, i.children = [u], i;
-    }), o(this, x$2, (t) => {
+    }), o(this, x$1, (t) => {
       const { children: s } = t;
       return s && (t.children = s.reduce((e, i, a) => {
         if (a === 0)
           return [i];
         const u = e.at(-1);
         if (u && u.isMark && i.isMark) {
-          i = r(this, j$3).call(this, i, u.type);
+          i = r(this, j).call(this, i, u.type);
           const { children: f, ...y } = i, { children: b, ...I } = u;
           if (i.type === u.type && f && b && JSON.stringify(y) === JSON.stringify(I)) {
             const V = {
               ...I,
               children: [...b, ...f]
             };
-            return e.slice(0, -1).concat(r(this, x$2).call(this, V));
+            return e.slice(0, -1).concat(r(this, x$1).call(this, V));
           }
         }
         return e.concat(i);
       }, [])), t;
-    }), o(this, R$3, (t) => {
+    }), o(this, R$1, (t) => {
       const s = {
         ...t.props,
         type: t.type
       };
       return t.children && (s.children = t.children), t.value && (s.value = t.value), s;
-    }), this.openNode = (t, s, e) => (this.open(J$2.create(t, void 0, s, e)), this), o(this, m, () => {
+    }), this.openNode = (t, s, e) => (this.open(J$1.create(t, void 0, s, e)), this), o(this, m, () => {
       const t = this.close();
       return r(this, g$1).call(this, t.type, t.children, t.value, t.props);
     }), this.closeNode = () => (r(this, m).call(this), this), o(this, g$1, (t, s, e, i) => {
-      const a = J$2.create(t, s, e, i), u = r(this, x$2).call(this, r(this, R$3).call(this, a));
+      const a = J$1.create(t, s, e, i), u = r(this, x$1).call(this, r(this, R$1).call(this, a));
       return this.push(u), u;
-    }), this.addNode = (t, s, e, i) => (r(this, g$1).call(this, t, s, e, i), this), o(this, C$2, (t, s, e, i) => t.isInSet(r(this, l)) ? this : (o(this, l, t.addToSet(r(this, l))), this.openNode(s, e, { ...i, isMark: !0 }))), o(this, P$1, (t) => {
+    }), this.addNode = (t, s, e, i) => (r(this, g$1).call(this, t, s, e, i), this), o(this, C, (t, s, e, i) => t.isInSet(r(this, l)) ? this : (o(this, l, t.addToSet(r(this, l))), this.openNode(s, e, { ...i, isMark: !0 }))), o(this, P$1, (t) => {
       t.isInSet(r(this, l)) && (o(this, l, t.type.removeFromSet(r(this, l))), r(this, m).call(this));
-    }), this.withMark = (t, s, e, i) => (r(this, C$2).call(this, t, s, e, i), this), this.closeMark = (t) => (r(this, P$1).call(this, t), this), this.build = () => {
+    }), this.withMark = (t, s, e, i) => (r(this, C).call(this, t, s, e, i), this), this.closeMark = (t) => (r(this, P$1).call(this, t), this), this.build = () => {
       let t = null;
       do
         t = r(this, m).call(this);
       while (this.size());
       return t;
-    }, this.next = (t) => Z$3(t) ? (t.forEach((s) => {
-      r(this, w$3).call(this, s);
-    }), this) : (r(this, w$3).call(this, t), this), this.toString = (t) => t.stringify(this.build()), this.run = (t) => (this.next(t), this), this.schema = n;
+    }, this.next = (t) => Z$1(t) ? (t.forEach((s) => {
+      r(this, w).call(this, s);
+    }), this) : (r(this, w).call(this, t), this), this.toString = (t) => t.stringify(this.build()), this.run = (t) => (this.next(t), this), this.schema = n;
   }
 };
-l = new WeakMap(), v$2 = new WeakMap(), A$3 = new WeakMap(), E$2 = new WeakMap(), w$3 = new WeakMap(), j$3 = new WeakMap(), x$2 = new WeakMap(), R$3 = new WeakMap(), m = new WeakMap(), g$1 = new WeakMap(), C$2 = new WeakMap(), P$1 = new WeakMap(), z$2.create = (n, t) => {
-  const s = new z$2(n);
+l = new WeakMap(), v = new WeakMap(), A = new WeakMap(), E = new WeakMap(), w = new WeakMap(), j = new WeakMap(), x$1 = new WeakMap(), R$1 = new WeakMap(), m = new WeakMap(), g$1 = new WeakMap(), C = new WeakMap(), P$1 = new WeakMap(), z.create = (n, t) => {
+  const s = new z(n);
   return (e) => (s.run(e), s.toString(t));
 };
-let K$2 = z$2;
+let K = z;
 
 // Recovery values encode a range index and an offset. They are
 // represented as numbers, because tons of them will be created when
@@ -21100,45 +20960,6 @@ function lift(tr, range, target) {
         }
     tr.step(new ReplaceAroundStep(start, end, gapStart, gapEnd, new Slice(before.append(after), openStart, openEnd), before.size - openStart, true));
 }
-/**
-Try to find a valid way to wrap the content in the given range in a
-node of the given type. May introduce extra nodes around and inside
-the wrapper node, if necessary. Returns null if no valid wrapping
-could be found. When `innerRange` is given, that range's content is
-used as the content to fit into the wrapping, instead of the
-content of `range`.
-*/
-function findWrapping(range, nodeType, attrs = null, innerRange = range) {
-    let around = findWrappingOutside(range, nodeType);
-    let inner = around && findWrappingInside(innerRange, nodeType);
-    if (!inner)
-        return null;
-    return around.map(withAttrs)
-        .concat({ type: nodeType, attrs }).concat(inner.map(withAttrs));
-}
-function withAttrs(type) { return { type, attrs: null }; }
-function findWrappingOutside(range, type) {
-    let { parent, startIndex, endIndex } = range;
-    let around = parent.contentMatchAt(startIndex).findWrapping(type);
-    if (!around)
-        return null;
-    let outer = around.length ? around[0] : type;
-    return parent.canReplaceWith(startIndex, endIndex, outer) ? around : null;
-}
-function findWrappingInside(range, type) {
-    let { parent, startIndex, endIndex } = range;
-    let inner = parent.child(startIndex);
-    let inside = type.contentMatch.findWrapping(inner.type);
-    if (!inside)
-        return null;
-    let lastType = inside.length ? inside[inside.length - 1] : type;
-    let innerMatch = lastType.contentMatch;
-    for (let i = startIndex; innerMatch && i < endIndex; i++)
-        innerMatch = innerMatch.matchType(parent.child(i).type);
-    if (!innerMatch || !innerMatch.validEnd)
-        return null;
-    return inside;
-}
 function wrap(tr, range, wrappers) {
     let content = Fragment.empty;
     for (let i = wrappers.length - 1; i >= 0; i--) {
@@ -21152,7 +20973,7 @@ function wrap(tr, range, wrappers) {
     let start = range.start, end = range.end;
     tr.step(new ReplaceAroundStep(start, end, start, end, new Slice(content, 0, 0), wrappers.length, true));
 }
-function setBlockType$1(tr, from, to, type, attrs) {
+function setBlockType(tr, from, to, type, attrs) {
     if (!type.isTextblock)
         throw new RangeError("Type given to setBlockType should be a textblock");
     let mapFrom = tr.steps.length;
@@ -22035,7 +21856,7 @@ class Transform {
     the given node type with the given attributes.
     */
     setBlockType(from, to = from, type, attrs = null) {
-        setBlockType$1(this, from, to, type, attrs);
+        setBlockType(this, from, to, type, attrs);
         return this;
     }
     /**
@@ -23279,21 +23100,21 @@ const agent$1 = (nav$1 && nav$1.userAgent) || "";
 const ie_edge$1 = /Edge\/(\d+)/.exec(agent$1);
 const ie_upto10$1 = /MSIE \d/.exec(agent$1);
 const ie_11up$1 = /Trident\/(?:[7-9]|\d{2,})\..*rv:(\d+)/.exec(agent$1);
-const ie$5 = !!(ie_upto10$1 || ie_11up$1 || ie_edge$1);
-const ie_version$1 = ie_upto10$1 ? document.documentMode : ie_11up$1 ? +ie_11up$1[1] : ie_edge$1 ? +ie_edge$1[1] : 0;
-const gecko$1 = !ie$5 && /gecko\/(\d+)/i.test(agent$1);
+const ie$3 = !!(ie_upto10$1 || ie_11up$1 || ie_edge$1);
+const ie_version = ie_upto10$1 ? document.documentMode : ie_11up$1 ? +ie_11up$1[1] : ie_edge$1 ? +ie_edge$1[1] : 0;
+const gecko$1 = !ie$3 && /gecko\/(\d+)/i.test(agent$1);
 gecko$1 && +(/Firefox\/(\d+)/.exec(agent$1) || [0, 0])[1];
-const _chrome$1 = !ie$5 && /Chrome\/(\d+)/.exec(agent$1);
-const chrome$1 = !!_chrome$1;
-const chrome_version$1 = _chrome$1 ? +_chrome$1[1] : 0;
-const safari$1 = !ie$5 && !!nav$1 && /Apple Computer/.test(nav$1.vendor);
+const _chrome$1 = !ie$3 && /Chrome\/(\d+)/.exec(agent$1);
+const chrome = !!_chrome$1;
+const chrome_version = _chrome$1 ? +_chrome$1[1] : 0;
+const safari$1 = !ie$3 && !!nav$1 && /Apple Computer/.test(nav$1.vendor);
 // Is true for both iOS and iPadOS for convenience
 const ios$1 = safari$1 && (/Mobile\/\w+/.test(agent$1) || !!nav$1 && nav$1.maxTouchPoints > 2);
-const mac$4 = ios$1 || (nav$1 ? /Mac/.test(nav$1.platform) : false);
+const mac$3 = ios$1 || (nav$1 ? /Mac/.test(nav$1.platform) : false);
 const windows = nav$1 ? /Win/.test(nav$1.platform) : false;
-const android$1 = /Android \d/.test(agent$1);
+const android = /Android \d/.test(agent$1);
 const webkit$1 = !!doc$1 && "webkitFontSmoothing" in doc$1.documentElement.style;
-const webkit_version$1 = webkit$1 ? +(/\bAppleWebKit\/(\d+)/.exec(navigator.userAgent) || [0, 0])[1] : 0;
+const webkit_version = webkit$1 ? +(/\bAppleWebKit\/(\d+)/.exec(navigator.userAgent) || [0, 0])[1] : 0;
 
 function windowRect(doc) {
     let vp = doc.defaultView && doc.defaultView.visualViewport;
@@ -25054,7 +24875,7 @@ class ViewTreeUpdater {
             /\n$/.test(lastChild.node.text) ||
             (this.view.requiresGeckoHackNode && /\s$/.test(lastChild.node.text))) {
             // Avoid bugs in Safari's cursor drawing (#1165) and Chrome's mouse selection (#1152)
-            if ((safari$1 || chrome$1) && lastChild && lastChild.dom.contentEditable == "false")
+            if ((safari$1 || chrome) && lastChild && lastChild.dom.contentEditable == "false")
                 this.addHackNode("IMG", parent);
             this.addHackNode("BR", this.top);
         }
@@ -25316,7 +25137,7 @@ function selectionToDOM(view, force = false) {
     // The delayed drag selection causes issues with Cell Selections
     // in Safari. And the drag selection delay is to workarond issues
     // which only present in Chrome.
-    if (!force && view.input.mouseDown && view.input.mouseDown.allowDefault && chrome$1) {
+    if (!force && view.input.mouseDown && view.input.mouseDown.allowDefault && chrome) {
         let domSel = view.domSelectionRange(), curSel = view.domObserver.currentSelection;
         if (domSel.anchorNode && curSel.anchorNode &&
             isEquivalentPosition(domSel.anchorNode, domSel.anchorOffset, curSel.anchorNode, curSel.anchorOffset)) {
@@ -25359,7 +25180,7 @@ function selectionToDOM(view, force = false) {
 // Kludge to work around Webkit not allowing a selection to start/end
 // between non-editable block nodes. We briefly make something
 // editable, set the selection, then set it uneditable again.
-const brokenSelectBetweenUneditable = safari$1 || chrome$1 && chrome_version$1 < 63;
+const brokenSelectBetweenUneditable = safari$1 || chrome && chrome_version < 63;
 function temporarilyEditableNear(view, pos) {
     let { node, offset } = view.docView.domFromPos(pos, 0);
     let after = offset < node.childNodes.length ? node.childNodes[offset] : null;
@@ -25419,7 +25240,7 @@ function selectCursorWrapper(view) {
     // resize handles and a selection that considers the absolutely
     // positioned wrapper, rather than the root editable node, the
     // focused element.
-    if (!img && !view.state.selection.visible && ie$5 && ie_version$1 <= 11) {
+    if (!img && !view.state.selection.visible && ie$3 && ie_version <= 11) {
         node.disabled = true;
         node.disabled = false;
     }
@@ -25505,7 +25326,7 @@ function selectHorizontally(view, dir, mods) {
                 return apply(view, next);
             return false;
         }
-        else if (!(mac$4 && mods.indexOf("m") > -1)) {
+        else if (!(mac$3 && mods.indexOf("m") > -1)) {
             let $head = sel.$head, node = $head.textOffset ? null : dir < 0 ? $head.nodeBefore : $head.nodeAfter, desc;
             if (!node || node.isText)
                 return false;
@@ -25719,7 +25540,7 @@ function setSelFocus(view, node, offset) {
 }
 function findDirection(view, pos) {
     let $pos = view.state.doc.resolve(pos);
-    if (!(chrome$1 || windows) && $pos.parent.inlineContent) {
+    if (!(chrome || windows) && $pos.parent.inlineContent) {
         let coords = view.coordsAtPos(pos);
         if (pos > $pos.start()) {
             let before = view.coordsAtPos(pos - 1);
@@ -25744,7 +25565,7 @@ function selectVertically(view, dir, mods) {
     let sel = view.state.selection;
     if (sel instanceof TextSelection && !sel.empty || mods.indexOf("s") > -1)
         return false;
-    if (mac$4 && mods.indexOf("m") > -1)
+    if (mac$3 && mods.indexOf("m") > -1)
         return false;
     let { $from, $to } = sel;
     if (!$from.parent.inlineContent || view.endOfTextblock(dir < 0 ? "up" : "down")) {
@@ -25823,30 +25644,30 @@ function getMods(event) {
 }
 function captureKeyDown(view, event) {
     let code = event.keyCode, mods = getMods(event);
-    if (code == 8 || (mac$4 && code == 72 && mods == "c")) { // Backspace, Ctrl-h on Mac
+    if (code == 8 || (mac$3 && code == 72 && mods == "c")) { // Backspace, Ctrl-h on Mac
         return stopNativeHorizontalDelete(view, -1) || skipIgnoredNodes(view, -1);
     }
-    else if ((code == 46 && !event.shiftKey) || (mac$4 && code == 68 && mods == "c")) { // Delete, Ctrl-d on Mac
+    else if ((code == 46 && !event.shiftKey) || (mac$3 && code == 68 && mods == "c")) { // Delete, Ctrl-d on Mac
         return stopNativeHorizontalDelete(view, 1) || skipIgnoredNodes(view, 1);
     }
     else if (code == 13 || code == 27) { // Enter, Esc
         return true;
     }
-    else if (code == 37 || (mac$4 && code == 66 && mods == "c")) { // Left arrow, Ctrl-b on Mac
+    else if (code == 37 || (mac$3 && code == 66 && mods == "c")) { // Left arrow, Ctrl-b on Mac
         let dir = code == 37 ? (findDirection(view, view.state.selection.from) == "ltr" ? -1 : 1) : -1;
         return selectHorizontally(view, dir, mods) || skipIgnoredNodes(view, dir);
     }
-    else if (code == 39 || (mac$4 && code == 70 && mods == "c")) { // Right arrow, Ctrl-f on Mac
+    else if (code == 39 || (mac$3 && code == 70 && mods == "c")) { // Right arrow, Ctrl-f on Mac
         let dir = code == 39 ? (findDirection(view, view.state.selection.from) == "ltr" ? 1 : -1) : 1;
         return selectHorizontally(view, dir, mods) || skipIgnoredNodes(view, dir);
     }
-    else if (code == 38 || (mac$4 && code == 80 && mods == "c")) { // Up arrow, Ctrl-p on Mac
+    else if (code == 38 || (mac$3 && code == 80 && mods == "c")) { // Up arrow, Ctrl-p on Mac
         return selectVertically(view, -1, mods) || skipIgnoredNodes(view, -1);
     }
-    else if (code == 40 || (mac$4 && code == 78 && mods == "c")) { // Down arrow, Ctrl-n on Mac
+    else if (code == 40 || (mac$3 && code == 78 && mods == "c")) { // Down arrow, Ctrl-n on Mac
         return safariDownArrowBug(view) || selectVertically(view, 1, mods) || skipIgnoredNodes(view, 1);
     }
-    else if (mods == (mac$4 ? "m" : "c") &&
+    else if (mods == (mac$3 ? "m" : "c") &&
         (code == 66 || code == 73 || code == 89 || code == 90)) { // Mod-[biyz]
         return true;
     }
@@ -26073,7 +25894,7 @@ function readHTML(html) {
 // will be wrapped in a plain span on Chrome, a span with class
 // Apple-converted-space on Safari) back to regular spaces.
 function restoreReplacedSpaces(dom) {
-    let nodes = dom.querySelectorAll(chrome$1 ? "span:not([class]):not([style])" : "span.Apple-converted-space");
+    let nodes = dom.querySelectorAll(chrome ? "span:not([class]):not([style])" : "span.Apple-converted-space");
     for (let i = 0; i < nodes.length; i++) {
         let node = nodes[i];
         if (node.childNodes.length == 1 && node.textContent == "\u00a0" && node.parentNode)
@@ -26199,7 +26020,7 @@ editHandlers.keydown = (view, _event) => {
     // Suppress enter key events on Chrome Android, because those tend
     // to be part of a confused sequence of composition events fired,
     // and handling them eagerly tends to corrupt the input.
-    if (android$1 && chrome$1 && event.keyCode == 13)
+    if (android && chrome && event.keyCode == 13)
         return;
     if (event.keyCode != 229)
         view.domObserver.forceFlush();
@@ -26231,7 +26052,7 @@ editHandlers.keyup = (view, event) => {
 editHandlers.keypress = (view, _event) => {
     let event = _event;
     if (inOrNearComposition(view, event) || !event.charCode ||
-        event.ctrlKey && !event.altKey || mac$4 && event.metaKey)
+        event.ctrlKey && !event.altKey || mac$3 && event.metaKey)
         return;
     if (view.someProp("handleKeyPress", f => f(view, event))) {
         event.preventDefault();
@@ -26314,7 +26135,7 @@ function handleDoubleClick(view, pos, inside, event) {
     return runHandlerOnContext(view, "handleDoubleClickOn", pos, inside, event) ||
         view.someProp("handleDoubleClick", f => f(view, pos, event));
 }
-function handleTripleClick$1(view, pos, inside, event) {
+function handleTripleClick(view, pos, inside, event) {
     return runHandlerOnContext(view, "handleTripleClickOn", pos, inside, event) ||
         view.someProp("handleTripleClick", f => f(view, pos, event)) ||
         defaultTripleClick(view, inside, event);
@@ -26346,7 +26167,7 @@ function defaultTripleClick(view, inside, event) {
 function forceDOMFlush(view) {
     return endComposition(view);
 }
-const selectNodeModifier = mac$4 ? "metaKey" : "ctrlKey";
+const selectNodeModifier = mac$3 ? "metaKey" : "ctrlKey";
 handlers.mousedown = (view, _event) => {
     let event = _event;
     view.input.shiftKey = event.shiftKey;
@@ -26367,7 +26188,7 @@ handlers.mousedown = (view, _event) => {
             view.input.mouseDown.done();
         view.input.mouseDown = new MouseDown(view, pos, event, !!flushed);
     }
-    else if ((type == "doubleClick" ? handleDoubleClick : handleTripleClick$1)(view, pos.pos, pos.inside, event)) {
+    else if ((type == "doubleClick" ? handleDoubleClick : handleTripleClick)(view, pos.pos, pos.inside, event)) {
         event.preventDefault();
     }
     else {
@@ -26463,7 +26284,7 @@ class MouseDown {
                 // (hidden) cursor is doesn't change the selection, and
                 // thus doesn't get a reaction from ProseMirror. This
                 // works around that.
-                (chrome$1 && !this.view.state.selection.visible &&
+                (chrome && !this.view.state.selection.visible &&
                     Math.min(Math.abs(pos.pos - this.view.state.selection.from), Math.abs(pos.pos - this.view.state.selection.to)) <= 2))) {
             updateSelection(this.view, Selection.near(this.view.state.doc.resolve(pos.pos)), "pointer");
             event.preventDefault();
@@ -26514,7 +26335,7 @@ function inOrNearComposition(view, event) {
     return false;
 }
 // Drop active composition after 5 seconds of inactivity on Android
-const timeoutComposition = android$1 ? 5000 : -1;
+const timeoutComposition = android ? 5000 : -1;
 editHandlers.compositionstart = editHandlers.compositionupdate = view => {
     if (!view.composing) {
         view.domObserver.flush();
@@ -26586,7 +26407,7 @@ function timestampFromCustomEvent() {
 @internal
 */
 function endComposition(view, forceUpdate = false) {
-    if (android$1 && view.domObserver.flushingSoon >= 0)
+    if (android && view.domObserver.flushingSoon >= 0)
         return;
     view.domObserver.forceFlush();
     clearComposition(view);
@@ -26625,8 +26446,8 @@ function captureCopy(view, dom) {
 // This is very crude, but unfortunately both these browsers _pretend_
 // that they have a clipboard API—all the objects and methods are
 // there, they just don't work, and they are hard to test.
-const brokenClipboardAPI = (ie$5 && ie_version$1 < 15) ||
-    (ios$1 && webkit_version$1 < 604);
+const brokenClipboardAPI = (ie$3 && ie_version < 15) ||
+    (ios$1 && webkit_version < 604);
 handlers.copy = editHandlers.cut = (view, _event) => {
     let event = _event;
     let sel = view.state.selection, cut = event.type == "cut";
@@ -26696,7 +26517,7 @@ editHandlers.paste = (view, _event) => {
     // handled by browsers, so as a dodgy but preferable kludge, we just
     // let the browser do its native thing there, except on Android,
     // where the editor is almost always composing.
-    if (view.composing && !android$1)
+    if (view.composing && !android)
         return;
     let data = brokenClipboardAPI ? null : event.clipboardData;
     let plain = view.input.shiftKey && view.input.lastKeyCode != 45;
@@ -26712,7 +26533,7 @@ class Dragging {
         this.node = node;
     }
 }
-const dragCopyModifier = mac$4 ? "altKey" : "ctrlKey";
+const dragCopyModifier = mac$3 ? "altKey" : "ctrlKey";
 handlers.dragstart = (view, _event) => {
     let event = _event;
     let mouseDown = view.input.mouseDown;
@@ -26837,7 +26658,7 @@ handlers.beforeinput = (view, _event) => {
     // is so spotty that I'm still waiting to see where they are going.
     // Very specific hack to deal with backspace sometimes failing on
     // Chrome Android when after an uneditable node.
-    if (chrome$1 && android$1 && event.inputType == "deleteContentBackward") {
+    if (chrome && android && event.inputType == "deleteContentBackward") {
         view.domObserver.flushSoon();
         let { domChangeCount } = view.input;
         setTimeout(() => {
@@ -27544,7 +27365,7 @@ const observeOptions = {
     subtree: true
 };
 // IE11 has very broken mutation observers, so we also listen to DOMCharacterDataModified
-const useCharData = ie$5 && ie_version$1 <= 11;
+const useCharData = ie$3 && ie_version <= 11;
 class SelectionState {
     constructor() {
         this.anchorNode = null;
@@ -27584,7 +27405,7 @@ class DOMObserver {
                 // text node after a BR node) call the observer callback
                 // before actually updating the DOM, which will cause
                 // ProseMirror to miss the change (see #930)
-                if (ie$5 && ie_version$1 <= 11 && mutations.some(m => m.type == "childList" && m.removedNodes.length ||
+                if (ie$3 && ie_version <= 11 && mutations.some(m => m.type == "childList" && m.removedNodes.length ||
                     m.type == "characterData" && m.oldValue.length > m.target.nodeValue.length))
                     this.flushSoon();
                 else
@@ -27650,7 +27471,7 @@ class DOMObserver {
         // Deletions on IE11 fire their events in the wrong order, giving
         // us a selection change event before the DOM changes are
         // reported.
-        if (ie$5 && ie_version$1 <= 11 && !this.view.state.selection.empty) {
+        if (ie$3 && ie_version <= 11 && !this.view.state.selection.empty) {
             let sel = this.view.domSelectionRange();
             // Selection.isCollapsed isn't reliable on IE
             if (sel.focusNode && isEquivalentPosition(sel.focusNode, sel.focusOffset, sel.anchorNode, sel.anchorOffset))
@@ -27762,7 +27583,7 @@ class DOMObserver {
             if (desc.contentDOM && desc.contentDOM != desc.dom && !desc.contentDOM.contains(mut.target))
                 return { from: desc.posBefore, to: desc.posAfter };
             let prev = mut.previousSibling, next = mut.nextSibling;
-            if (ie$5 && ie_version$1 <= 11 && mut.addedNodes.length) {
+            if (ie$3 && ie_version <= 11 && mut.addedNodes.length) {
                 // IE11 gives us incorrect next/prev siblings for some
                 // insertions, so if there are added nodes, recompute those
                 for (let i = 0; i < mut.addedNodes.length; i++) {
@@ -27856,7 +27677,7 @@ function parseBetween(view, from_, to_) {
     }
     // Work around issue in Chrome where backspacing sometimes replaces
     // the deleted content with a random BR node (issues #799, #831)
-    if (chrome$1 && view.input.lastKeyCode === 8) {
+    if (chrome && view.input.lastKeyCode === 8) {
         for (let off = toOffset; off > fromOffset; off--) {
             let node = parent.childNodes[off - 1], desc = node.pmViewDesc;
             if (node.nodeName == "BR" && !desc) {
@@ -27920,7 +27741,7 @@ function readDOMChange(view, from, to, typeOver, addedNodes) {
         let origin = view.input.lastSelectionTime > Date.now() - 50 ? view.input.lastSelectionOrigin : null;
         let newSel = selectionFromDOM(view, origin);
         if (newSel && !view.state.selection.eq(newSel)) {
-            if (chrome$1 && android$1 &&
+            if (chrome && android &&
                 view.input.lastKeyCode === 13 && Date.now() - 100 < view.input.lastKeyCodeTime &&
                 view.someProp("handleKeyDown", f => f(view, keyEvent(13, "Enter"))))
                 return;
@@ -27954,7 +27775,7 @@ function readDOMChange(view, from, to, typeOver, addedNodes) {
     }
     view.input.lastKeyCode = null;
     let change = findDiff(compare.content, parse.doc.content, parse.from, preferredPos, preferredSide);
-    if ((ios$1 && view.input.lastIOSEnter > Date.now() - 225 || android$1) &&
+    if ((ios$1 && view.input.lastIOSEnter > Date.now() - 225 || android) &&
         addedNodes.some(n => n.nodeType == 1 && !isInline.test(n.nodeName)) &&
         (!change || change.endA >= change.endB) &&
         view.someProp("handleKeyDown", f => f(view, keyEvent(13, "Enter")))) {
@@ -27999,7 +27820,7 @@ function readDOMChange(view, from, to, typeOver, addedNodes) {
     // IE11 will insert a non-breaking space _ahead_ of the space after
     // the cursor space when adding a space before another space. When
     // that happened, adjust the change to cover the space instead.
-    if (ie$5 && ie_version$1 <= 11 && change.endB == change.start + 1 &&
+    if (ie$3 && ie_version <= 11 && change.endB == change.start + 1 &&
         change.endA == change.start && change.start > parse.from &&
         parse.doc.textBetween(change.start - parse.from - 1, change.start - parse.from + 1) == " \u00a0") {
         change.start--;
@@ -28026,14 +27847,14 @@ function readDOMChange(view, from, to, typeOver, addedNodes) {
     if (view.state.selection.anchor > change.start &&
         looksLikeBackspace(doc, change.start, change.endA, $from, $to) &&
         view.someProp("handleKeyDown", f => f(view, keyEvent(8, "Backspace")))) {
-        if (android$1 && chrome$1)
+        if (android && chrome)
             view.domObserver.suppressSelectionUpdates(); // #820
         return;
     }
     // Chrome Android will occasionally, during composition, delete the
     // entire composition and then immediately insert it again. This is
     // used to detect that situation.
-    if (chrome$1 && android$1 && change.endB == change.start)
+    if (chrome && android && change.endB == change.start)
         view.input.lastAndroidDelete = Date.now();
     // This tries to detect Android virtual keyboard
     // enter-and-pick-suggestion action. That sometimes (see issue
@@ -28043,7 +27864,7 @@ function readDOMChange(view, from, to, typeOver, addedNodes) {
     // leaving the cursor in the wrong place. When that happens, we drop
     // the new paragraph from the initial change, and fire a simulated
     // enter key afterwards.
-    if (android$1 && !inlineChange && $from.start() != $to.start() && $to.parentOffset == 0 && $from.depth == $to.depth &&
+    if (android && !inlineChange && $from.start() != $to.start() && $to.parentOffset == 0 && $from.depth == $to.depth &&
         parse.sel && parse.sel.anchor == parse.sel.head && parse.sel.head == change.endA) {
         change.endB -= 2;
         $to = parse.doc.resolveNoCache(change.endB - parse.from);
@@ -28057,7 +27878,7 @@ function readDOMChange(view, from, to, typeOver, addedNodes) {
         if ($from.pos == $to.pos) { // Deletion
             // IE11 sometimes weirdly moves the DOM selection around after
             // backspacing out the first element in a textblock
-            if (ie$5 && ie_version$1 <= 11 && $from.parentOffset == 0) {
+            if (ie$3 && ie_version <= 11 && $from.parentOffset == 0) {
                 view.domObserver.suppressSelectionUpdates();
                 setTimeout(() => selectionToDOM(view), 20);
             }
@@ -28090,10 +27911,10 @@ function readDOMChange(view, from, to, typeOver, addedNodes) {
         // happening, don't update the selection.
         // Edge just doesn't move the cursor forward when you start typing
         // in an empty block or between br nodes.
-        if (sel && !(chrome$1 && android$1 && view.composing && sel.empty &&
+        if (sel && !(chrome && android && view.composing && sel.empty &&
             (change.start != change.endB || view.input.lastAndroidDelete < Date.now() - 100) &&
             (sel.head == chFrom || sel.head == tr.mapping.map(chTo) - 1) ||
-            ie$5 && sel.empty && sel.head == chFrom))
+            ie$3 && sel.empty && sel.head == chFrom))
             tr.setSelection(sel);
     }
     if (storedMarks)
@@ -28377,14 +28198,14 @@ class EditorView {
             // state where the thing the user sees differs from the
             // selection reported by the Selection object (#710, #973,
             // #1011, #1013, #1035).
-            let forceSelUpdate = updateDoc && (ie$5 || chrome$1) && !this.composing &&
+            let forceSelUpdate = updateDoc && (ie$3 || chrome) && !this.composing &&
                 !prev.selection.empty && !state.selection.empty && selectionContextChanged(prev.selection, state.selection);
             if (updateDoc) {
                 // If the node that the selection points into is written to,
                 // Chrome sometimes starts misreporting the selection, so this
                 // tracks that and forces a selection reset when our update
                 // did write to the node.
-                let chromeKludge = chrome$1 ? (this.trackWrites = this.domSelectionRange().focusNode) : null;
+                let chromeKludge = chrome ? (this.trackWrites = this.domSelectionRange().focusNode) : null;
                 if (redraw || !this.docView.update(state.doc, outerDeco, innerDeco, this)) {
                     this.docView.updateOuterDeco(outerDeco);
                     this.docView.destroy();
@@ -28502,7 +28323,7 @@ class EditorView {
         // Work around IE not handling focus correctly if resize handles are shown.
         // If the cursor is inside an element with resize handles, activeElement
         // will be that element instead of this.dom.
-        if (ie$5) {
+        if (ie$3) {
             // If activeElement is within this.dom, and there are no other elements
             // setting `contenteditable` to false in between, treat it as focused.
             let node = this.root.activeElement;
@@ -28881,93 +28702,23 @@ new InputRule(/(?:^|[\s\{\[\(\<'"\u2018\u201C])(')$/, "‘");
 */
 new InputRule(/'$/, "’");
 
-/**
-Build an input rule for automatically wrapping a textblock when a
-given string is typed. The `regexp` argument is
-directly passed through to the `InputRule` constructor. You'll
-probably want the regexp to start with `^`, so that the pattern can
-only occur at the start of a textblock.
-
-`nodeType` is the type of node to wrap in. If it needs attributes,
-you can either pass them directly, or pass a function that will
-compute them from the regular expression match.
-
-By default, if there's a node with the same type above the newly
-wrapped node, the rule will try to [join](https://prosemirror.net/docs/ref/#transform.Transform.join) those
-two nodes. You can pass a join predicate, which takes a regular
-expression match and the node before the wrapped node, and can
-return a boolean to indicate whether a join should happen.
-*/
-function wrappingInputRule(regexp, nodeType, getAttrs = null, joinPredicate) {
-    return new InputRule(regexp, (state, match, start, end) => {
-        let attrs = getAttrs instanceof Function ? getAttrs(match) : getAttrs;
-        let tr = state.tr.delete(start, end);
-        let $start = tr.doc.resolve(start), range = $start.blockRange(), wrapping = range && findWrapping(range, nodeType, attrs);
-        if (!wrapping)
-            return null;
-        tr.wrap(range, wrapping);
-        let before = tr.doc.resolve(start - 1).nodeBefore;
-        if (before && before.type == nodeType && canJoin(tr.doc, start - 1) &&
-            (!joinPredicate || joinPredicate(match, before)))
-            tr.join(start - 1);
-        return tr;
-    });
-}
-/**
-Build an input rule that changes the type of a textblock when the
-matched text is typed into it. You'll usually want to start your
-regexp with `^` to that it is only matched at the start of a
-textblock. The optional `getAttrs` parameter can be used to compute
-the new node's attributes, and works the same as in the
-`wrappingInputRule` function.
-*/
-function textblockTypeInputRule(regexp, nodeType, getAttrs = null) {
-    return new InputRule(regexp, (state, match, start, end) => {
-        let $start = state.doc.resolve(start);
-        let attrs = getAttrs instanceof Function ? getAttrs(match) : getAttrs;
-        if (!$start.node(-1).canReplaceWith($start.index(-1), $start.indexAfter(-1), nodeType))
-            return null;
-        return state.tr
-            .delete(start, end)
-            .setBlockType(start, start, nodeType, attrs);
-    });
-}
-
 const nav = typeof navigator != "undefined" ? navigator : null;
 const doc = typeof document != "undefined" ? document : null;
 const agent = nav && nav.userAgent || "";
 const ie_edge = /Edge\/(\d+)/.exec(agent);
 const ie_upto10 = /MSIE \d/.exec(agent);
 const ie_11up = /Trident\/(?:[7-9]|\d{2,})\..*rv:(\d+)/.exec(agent);
-const ie$4 = !!(ie_upto10 || ie_11up || ie_edge);
-const ie_version = ie_upto10 ? document.documentMode : ie_11up ? +ie_11up[1] : ie_edge ? +ie_edge[1] : 0;
-const gecko = !ie$4 && /gecko\/(\d+)/i.test(agent);
-const gecko_version = gecko && +(/Firefox\/(\d+)/.exec(agent) || [0, 0])[1];
-const _chrome = !ie$4 && /Chrome\/(\d+)/.exec(agent);
-const chrome = !!_chrome;
-const chrome_version = _chrome ? +_chrome[1] : 0;
-const safari = !ie$4 && !!nav && /Apple Computer/.test(nav.vendor);
+const ie$2 = !!(ie_upto10 || ie_11up || ie_edge);
+ie_upto10 ? document.documentMode : ie_11up ? +ie_11up[1] : ie_edge ? +ie_edge[1] : 0;
+const gecko = !ie$2 && /gecko\/(\d+)/i.test(agent);
+gecko && +(/Firefox\/(\d+)/.exec(agent) || [0, 0])[1];
+const _chrome = !ie$2 && /Chrome\/(\d+)/.exec(agent);
+_chrome ? +_chrome[1] : 0;
+const safari = !ie$2 && !!nav && /Apple Computer/.test(nav.vendor);
 const ios = safari && (/Mobile\/\w+/.test(agent) || !!nav && nav.maxTouchPoints > 2);
-const mac$3 = ios || (nav ? /Mac/.test(nav.platform) : false);
-const android = /Android \d/.test(agent);
+ios || (nav ? /Mac/.test(nav.platform) : false);
 const webkit = !!doc && "webkitFontSmoothing" in doc.documentElement.style;
-const webkit_version = webkit ? +(/\bAppleWebKit\/(\d+)/.exec(navigator.userAgent) || [0, 0])[1] : 0;
-
-var browser = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  android: android,
-  chrome: chrome,
-  chrome_version: chrome_version,
-  gecko: gecko,
-  gecko_version: gecko_version,
-  ie: ie$4,
-  ie_version: ie_version,
-  ios: ios,
-  mac: mac$3,
-  safari: safari,
-  webkit: webkit,
-  webkit_version: webkit_version
-});
+webkit ? +(/\bAppleWebKit\/(\d+)/.exec(navigator.userAgent) || [0, 0])[1] : 0;
 
 function run(view, from, to, text, rules, plugin) {
   if (view.composing)
@@ -29028,84 +28779,6 @@ function customInputRules({ rules }) {
     }
   });
   return plugin;
-}
-
-function markRule(regexp, markType, options = {}) {
-  return new InputRule(regexp, (state, match, start, end) => {
-    var _a, _b, _c, _d;
-    const { tr } = state;
-    const matchLength = match.length;
-    let group = match[matchLength - 1];
-    let fullMatch = match[0];
-    let initialStoredMarks = [];
-    let markEnd = end;
-    const captured = {
-      group,
-      fullMatch,
-      start,
-      end
-    };
-    const result = (_a = options.updateCaptured) == null ? void 0 : _a.call(options, captured);
-    Object.assign(captured, result);
-    ({ group, fullMatch, start, end } = captured);
-    if (fullMatch === null)
-      return null;
-    if ((group == null ? void 0 : group.trim()) === "")
-      return null;
-    if (group) {
-      const startSpaces = fullMatch.search(/\S/);
-      const textStart = start + fullMatch.indexOf(group);
-      const textEnd = textStart + group.length;
-      initialStoredMarks = (_b = tr.storedMarks) != null ? _b : [];
-      if (textEnd < end)
-        tr.delete(textEnd, end);
-      if (textStart > start)
-        tr.delete(start + startSpaces, textStart);
-      markEnd = start + startSpaces + group.length;
-      const attrs = (_c = options.getAttr) == null ? void 0 : _c.call(options, match);
-      tr.addMark(start, markEnd, markType.create(attrs));
-      tr.setStoredMarks(initialStoredMarks);
-      (_d = options.beforeDispatch) == null ? void 0 : _d.call(options, { match, start, end, tr });
-    }
-    return tr;
-  });
-}
-
-function cloneTr(tr) {
-  return Object.assign(Object.create(tr), tr).setTime(Date.now());
-}
-function equalNodeType(nodeType, node) {
-  return Array.isArray(nodeType) && nodeType.includes(node.type) || node.type === nodeType;
-}
-
-function findParentNodeClosestToPos(predicate) {
-  return ($pos) => {
-    for (let i = $pos.depth; i > 0; i--) {
-      const node = $pos.node(i);
-      if (predicate(node)) {
-        return {
-          pos: i > 0 ? $pos.before(i) : 0,
-          start: $pos.start(i),
-          depth: i,
-          node
-        };
-      }
-    }
-    return void 0;
-  };
-}
-function findParentNode(predicate) {
-  return (selection) => {
-    return findParentNodeClosestToPos(predicate)(selection.$from);
-  };
-}
-function findSelectedNodeOfType(selection, nodeType) {
-  if (!(selection instanceof NodeSelection))
-    return;
-  const { node, $from } = selection;
-  if (equalNodeType(nodeType, node))
-    return { node, pos: $from.pos, start: $from.start($from.depth), depth: $from.depth };
-  return void 0;
 }
 
 /**
@@ -29536,121 +29209,6 @@ const selectTextblockStart = selectTextblockSide(-1);
 Moves the cursor to the end of current text block.
 */
 const selectTextblockEnd = selectTextblockSide(1);
-// Parameterized commands
-/**
-Wrap the selection in a node of the given type with the given
-attributes.
-*/
-function wrapIn(nodeType, attrs = null) {
-    return function (state, dispatch) {
-        let { $from, $to } = state.selection;
-        let range = $from.blockRange($to), wrapping = range && findWrapping(range, nodeType, attrs);
-        if (!wrapping)
-            return false;
-        if (dispatch)
-            dispatch(state.tr.wrap(range, wrapping).scrollIntoView());
-        return true;
-    };
-}
-/**
-Returns a command that tries to set the selected textblocks to the
-given node type with the given attributes.
-*/
-function setBlockType(nodeType, attrs = null) {
-    return function (state, dispatch) {
-        let applicable = false;
-        for (let i = 0; i < state.selection.ranges.length && !applicable; i++) {
-            let { $from: { pos: from }, $to: { pos: to } } = state.selection.ranges[i];
-            state.doc.nodesBetween(from, to, (node, pos) => {
-                if (applicable)
-                    return false;
-                if (!node.isTextblock || node.hasMarkup(nodeType, attrs))
-                    return;
-                if (node.type == nodeType) {
-                    applicable = true;
-                }
-                else {
-                    let $pos = state.doc.resolve(pos), index = $pos.index();
-                    applicable = $pos.parent.canReplaceWith(index, index + 1, nodeType);
-                }
-            });
-        }
-        if (!applicable)
-            return false;
-        if (dispatch) {
-            let tr = state.tr;
-            for (let i = 0; i < state.selection.ranges.length; i++) {
-                let { $from: { pos: from }, $to: { pos: to } } = state.selection.ranges[i];
-                tr.setBlockType(from, to, nodeType, attrs);
-            }
-            dispatch(tr.scrollIntoView());
-        }
-        return true;
-    };
-}
-function markApplies(doc, ranges, type) {
-    for (let i = 0; i < ranges.length; i++) {
-        let { $from, $to } = ranges[i];
-        let can = $from.depth == 0 ? doc.inlineContent && doc.type.allowsMarkType(type) : false;
-        doc.nodesBetween($from.pos, $to.pos, node => {
-            if (can)
-                return false;
-            can = node.inlineContent && node.type.allowsMarkType(type);
-        });
-        if (can)
-            return true;
-    }
-    return false;
-}
-/**
-Create a command function that toggles the given mark with the
-given attributes. Will return `false` when the current selection
-doesn't support that mark. This will remove the mark if any marks
-of that type exist in the selection, or add it otherwise. If the
-selection is empty, this applies to the [stored
-marks](https://prosemirror.net/docs/ref/#state.EditorState.storedMarks) instead of a range of the
-document.
-*/
-function toggleMark(markType, attrs = null) {
-    return function (state, dispatch) {
-        let { empty, $cursor, ranges } = state.selection;
-        if ((empty && !$cursor) || !markApplies(state.doc, ranges, markType))
-            return false;
-        if (dispatch) {
-            if ($cursor) {
-                if (markType.isInSet(state.storedMarks || $cursor.marks()))
-                    dispatch(state.tr.removeStoredMark(markType));
-                else
-                    dispatch(state.tr.addStoredMark(markType.create(attrs)));
-            }
-            else {
-                let has = false, tr = state.tr;
-                for (let i = 0; !has && i < ranges.length; i++) {
-                    let { $from, $to } = ranges[i];
-                    has = state.doc.rangeHasMark($from.pos, $to.pos, markType);
-                }
-                for (let i = 0; i < ranges.length; i++) {
-                    let { $from, $to } = ranges[i];
-                    if (has) {
-                        tr.removeMark($from.pos, $to.pos, markType);
-                    }
-                    else {
-                        let from = $from.pos, to = $to.pos, start = $from.nodeAfter, end = $to.nodeBefore;
-                        let spaceStart = start && start.isText ? /^\s*/.exec(start.text)[0].length : 0;
-                        let spaceEnd = end && end.isText ? /\s*$/.exec(end.text)[0].length : 0;
-                        if (from + spaceStart < to) {
-                            from += spaceStart;
-                            to -= spaceEnd;
-                        }
-                        tr.addMark(from, to, markType.create(attrs));
-                    }
-                }
-                dispatch(tr.scrollIntoView());
-            }
-        }
-        return true;
-    };
-}
 /**
 Combine a number of command functions into a single function (which
 calls them one by one until one returns true).
@@ -29798,7 +29356,7 @@ var shift = {
 };
 
 var mac$1 = typeof navigator != "undefined" && /Mac/.test(navigator.platform);
-var ie$3 = typeof navigator != "undefined" && /MSIE \d|Trident\/(?:[7-9]|\d{2,})\..*rv:(\d+)/.exec(navigator.userAgent);
+var ie$1 = typeof navigator != "undefined" && /MSIE \d|Trident\/(?:[7-9]|\d{2,})\..*rv:(\d+)/.exec(navigator.userAgent);
 
 // Fill in the digit keys
 for (var i = 0; i < 10; i++) base[48 + i] = base[96 + i] = String(i);
@@ -29813,13 +29371,13 @@ for (var i = 65; i <= 90; i++) {
 }
 
 // For each code that doesn't have a shift-equivalent, copy the base name
-for (var code$1 in base) if (!shift.hasOwnProperty(code$1)) shift[code$1] = base[code$1];
+for (var code in base) if (!shift.hasOwnProperty(code)) shift[code] = base[code];
 
 function keyName(event) {
   // On macOS, keys held with Shift and Cmd don't reflect the effect of Shift in `.key`.
   // On IE, shift effect is never included in `.key`.
   var ignoreKey = mac$1 && event.metaKey && event.shiftKey && !event.ctrlKey && !event.altKey ||
-      ie$3 && event.shiftKey && event.key && event.key.length == 1 ||
+      ie$1 && event.shiftKey && event.key && event.key.length == 1 ||
       event.key == "Unidentified";
   var name = (!ignoreKey && event.key) ||
     (event.shiftKey ? shift : base)[event.keyCode] ||
@@ -29956,15 +29514,15 @@ function keydownHandler(bindings) {
     };
 }
 
-var ve$2 = (e, t, r) => {
+var ve = (e, t, r) => {
   if (!t.has(e))
     throw TypeError("Cannot " + r);
 };
-var s = (e, t, r) => (ve$2(e, t, "read from private field"), r ? r.call(e) : t.get(e)), d$1 = (e, t, r) => {
+var s = (e, t, r) => (ve(e, t, "read from private field"), r ? r.call(e) : t.get(e)), d = (e, t, r) => {
   if (t.has(e))
     throw TypeError("Cannot add the same private member more than once");
   t instanceof WeakSet ? t.add(e) : t.set(e, r);
-}, c$1 = (e, t, r, i) => (ve$2(e, t, "write to private field"), i ? i.call(e, r) : t.set(e, r), r);
+}, c = (e, t, r, i) => (ve(e, t, "write to private field"), i ? i.call(e, r) : t.set(e, r), r);
 function k(e, t) {
   return e.meta = {
     package: "@milkdown/core",
@@ -29972,111 +29530,64 @@ function k(e, t) {
     ...t
   }, e;
 }
-const De$1 = {
-  strong: (e, t, r, i) => {
-    const n = e.marker || r.options.strong || "*", a = r.enter("strong"), h = r.createTracker(i);
-    let m = h.move(n + n);
-    return m += h.move(
-      r.containerPhrasing(e, {
-        before: m,
-        after: n,
-        ...h.current()
-      })
-    ), m += h.move(n + n), a(), m;
-  },
-  emphasis: (e, t, r, i) => {
-    const n = e.marker || r.options.emphasis || "*", a = r.enter("emphasis"), h = r.createTracker(i);
-    let m = h.move(n);
-    return m += h.move(
-      r.containerPhrasing(e, {
-        before: m,
-        after: n,
-        ...h.current()
-      })
-    ), m += h.move(n), a(), m;
-  }
-}, L$2 = K$3("ConfigReady");
-function ot$2(e) {
-  const t = (r) => (r.record(L$2), async () => (await e(r), r.done(L$2), () => {
-    r.clearTimer(L$2);
-  }));
-  return k(t, {
-    displayName: "Config"
-  }), t;
-}
-const M$2 = K$3("InitReady"), G$1 = H$4([], "initTimer"), ke$3 = H$4({}, "editor"), ue$3 = H$4([], "inputRules"), N = H$4([], "prosePlugins"), pe$2 = H$4([], "remarkPlugins"), fe$3 = H$4([], "nodeView"), ye$3 = H$4([], "markView"), P = H$4(unified().use(remarkParse).use(remarkStringify), "remark"), Q$2 = H$4({
-  handlers: De$1
-}, "remarkStringifyOptions");
-function at$2(e) {
-  const t = (r) => (r.inject(ke$3, e).inject(N, []).inject(pe$2, []).inject(ue$3, []).inject(fe$3, []).inject(ye$3, []).inject(Q$2, {
-    handlers: De$1
-  }).inject(P, unified().use(remarkParse).use(remarkStringify)).inject(G$1, [L$2]).record(M$2), async () => {
-    await r.waitTimers(G$1);
-    const i = r.get(Q$2);
-    return r.set(P, unified().use(remarkParse).use(remarkStringify, i)), r.done(M$2), () => {
-      r.remove(ke$3).remove(N).remove(pe$2).remove(ue$3).remove(fe$3).remove(ye$3).remove(Q$2).remove(P).remove(G$1).clearTimer(M$2);
-    };
-  });
-  return k(t, {
-    displayName: "Init"
-  }), t;
-}
-const R$2 = K$3("SchemaReady"), U$1 = H$4([], "schemaTimer"), b$1 = H$4({}, "schema"), X$1 = H$4([], "nodes"), Z$2 = H$4([], "marks");
-function Te$2(e) {
+K$1("ConfigReady");
+const M = K$1("InitReady"), ue$1 = H$2([], "inputRules"), N = H$2([], "prosePlugins"), pe = H$2([], "remarkPlugins"), fe = H$2([], "nodeView"), ye = H$2([], "markView"), P = H$2(unified().use(remarkParse).use(remarkStringify), "remark");
+const R = K$1("SchemaReady"), U = H$2([], "schemaTimer"), b = H$2({}, "schema"), X = H$2([], "nodes"), Z = H$2([], "marks");
+function Te(e) {
   var t;
   return {
     ...e,
     parseDOM: (t = e.parseDOM) == null ? void 0 : t.map((r) => ({ priority: e.priority, ...r }))
   };
 }
-const Ee$1 = (e) => (e.inject(b$1, {}).inject(X$1, []).inject(Z$2, []).inject(U$1, [M$2]).record(R$2), async () => {
-  await e.waitTimers(U$1);
-  const t = e.get(P), i = e.get(pe$2).reduce((m, f) => m.use(f.plugin, f.options), t);
+const Ee = (e) => (e.inject(b, {}).inject(X, []).inject(Z, []).inject(U, [M]).record(R), async () => {
+  await e.waitTimers(U);
+  const t = e.get(P), i = e.get(pe).reduce((m, f) => m.use(f.plugin, f.options), t);
   e.set(P, i);
-  const n = Object.fromEntries(e.get(X$1).map(([m, f]) => [m, Te$2(f)])), a = Object.fromEntries(e.get(Z$2).map(([m, f]) => [m, Te$2(f)])), h = new Schema({ nodes: n, marks: a });
-  return e.set(b$1, h), e.done(R$2), () => {
-    e.remove(b$1).remove(X$1).remove(Z$2).remove(U$1).clearTimer(R$2);
+  const n = Object.fromEntries(e.get(X).map(([m, f]) => [m, Te(f)])), a = Object.fromEntries(e.get(Z).map(([m, f]) => [m, Te(f)])), h = new Schema({ nodes: n, marks: a });
+  return e.set(b, h), e.done(R), () => {
+    e.remove(b).remove(X).remove(Z).remove(U).clearTimer(R);
   };
 });
-k(Ee$1, {
+k(Ee, {
   displayName: "Schema"
 });
-const W$4 = K$3("ParserReady"), Ie$2 = () => {
-  throw p$2();
-}, Y$1 = H$4(Ie$2, "parser"), x$1 = H$4([], "parserTimer"), Ve$1 = (e) => (e.inject(Y$1, Ie$2).inject(x$1, [R$2]).record(W$4), async () => {
-  await e.waitTimers(x$1);
-  const t = e.get(P), r = e.get(b$1);
-  return e.set(Y$1, H$3.create(r, t)), e.done(W$4), () => {
-    e.remove(Y$1).remove(x$1).clearTimer(W$4);
+const W = K$1("ParserReady"), Ie = () => {
+  throw p$1();
+}, Y = H$2(Ie, "parser"), x = H$2([], "parserTimer"), Ve = (e) => (e.inject(Y, Ie).inject(x, [R]).record(W), async () => {
+  await e.waitTimers(x);
+  const t = e.get(P), r = e.get(b);
+  return e.set(Y, H$1.create(r, t)), e.done(W), () => {
+    e.remove(Y).remove(x).clearTimer(W);
   };
 });
-k(Ve$1, {
+k(Ve, {
   displayName: "Parser"
 });
-const $$1 = K$3("SerializerReady"), ee$1 = H$4([], "serializerTimer"), Me$2 = () => {
-  throw p$2();
-}, te$1 = H$4(Me$2, "serializer"), Ne$2 = (e) => (e.inject(te$1, Me$2).inject(ee$1, [R$2]).record($$1), async () => {
-  await e.waitTimers(ee$1);
-  const t = e.get(P), r = e.get(b$1);
-  return e.set(te$1, K$2.create(r, t)), e.done($$1), () => {
-    e.remove(te$1).remove(ee$1).clearTimer($$1);
+const $ = K$1("SerializerReady"), ee = H$2([], "serializerTimer"), Me = () => {
+  throw p$1();
+}, te = H$2(Me, "serializer"), Ne = (e) => (e.inject(te, Me).inject(ee, [R]).record($), async () => {
+  await e.waitTimers(ee);
+  const t = e.get(P), r = e.get(b);
+  return e.set(te, K.create(r, t)), e.done($), () => {
+    e.remove(te).remove(ee).clearTimer($);
   };
 });
-k(Ne$2, {
+k(Ne, {
   displayName: "Serializer"
 });
-const re$2 = H$4("", "defaultValue"), V$1 = H$4({}, "editorState"), se$2 = H$4((e) => e, "stateOptions"), ie$2 = H$4([], "editorStateTimer"), q$2 = K$3("EditorStateReady");
-function ct$2(e, t, r) {
+const re = H$2("", "defaultValue"), V = H$2({}, "editorState"), se = H$2((e) => e, "stateOptions"), ie = H$2([], "editorStateTimer"), q = K$1("EditorStateReady");
+function ct(e, t, r) {
   if (typeof e == "string")
     return t(e);
   if (e.type === "html")
     return DOMParser.fromSchema(r).parse(e.dom);
   if (e.type === "json")
     return Node.fromJSON(r, e.value);
-  throw l$2(e);
+  throw l$1(e);
 }
-const mt$1 = new PluginKey("MILKDOWN_STATE_TRACKER");
-function dt$2(e) {
+const mt = new PluginKey("MILKDOWN_STATE_TRACKER");
+function dt(e) {
   const t = chainCommands(
     undoInputRule,
     deleteSelection,
@@ -30085,22 +29596,22 @@ function dt$2(e) {
   );
   return e.Backspace = t, e;
 }
-const _e$1 = (e) => (e.inject(re$2, "").inject(V$1, {}).inject(se$2, (t) => t).inject(ie$2, [W$4, $$1, J$1]).record(q$2), async () => {
-  await e.waitTimers(ie$2);
-  const t = e.get(b$1), r = e.get(Y$1), i = e.get(ue$3), n = e.get(se$2), a = e.get(N), h = e.get(re$2), m = ct$2(h, r, t), f = [
+const _e = (e) => (e.inject(re, "").inject(V, {}).inject(se, (t) => t).inject(ie, [W, $, J]).record(q), async () => {
+  await e.waitTimers(ie);
+  const t = e.get(b), r = e.get(Y), i = e.get(ue$1), n = e.get(se), a = e.get(N), h = e.get(re), m = ct(h, r, t), f = [
     ...a,
     new Plugin({
-      key: mt$1,
+      key: mt,
       state: {
         init: () => {
         },
         apply: (Be, F, ft, Le) => {
-          e.set(V$1, Le);
+          e.set(V, Le);
         }
       }
     }),
     customInputRules({ rules: i }),
-    keymap(dt$2(baseKeymap))
+    keymap(dt(baseKeymap))
   ];
   e.set(N, f);
   const B = n({
@@ -30108,31 +29619,31 @@ const _e$1 = (e) => (e.inject(re$2, "").inject(V$1, {}).inject(se$2, (t) => t).i
     doc: m,
     plugins: f
   }), l = EditorState.create(B);
-  return e.set(V$1, l), e.done(q$2), () => {
-    e.remove(re$2).remove(V$1).remove(se$2).remove(ie$2).clearTimer(q$2);
+  return e.set(V, l), e.done(q), () => {
+    e.remove(re).remove(V).remove(se).remove(ie).clearTimer(q);
   };
 });
-k(_e$1, {
+k(_e, {
   displayName: "EditorState"
 });
-const ne$1 = K$3("EditorViewReady"), H$2 = H$4({}, "editorView"), oe$2 = H$4([], "editorViewTimer"), ae$2 = H$4({}, "editorViewOptions"), ce$2 = H$4(null, "root"), we$3 = H$4(null, "rootDOM"), ge$3 = H$4({}, "rootAttrs");
-function ht$1(e, t) {
+const ne = K$1("EditorViewReady"), H = H$2({}, "editorView"), oe = H$2([], "editorViewTimer"), ae = H$2({}, "editorViewOptions"), ce = H$2(null, "root"), we = H$2(null, "rootDOM"), ge = H$2({}, "rootAttrs");
+function ht(e, t) {
   const r = document.createElement("div");
-  r.className = "milkdown", e.appendChild(r), t.set(we$3, r);
-  const i = t.get(ge$3);
+  r.className = "milkdown", e.appendChild(r), t.set(we, r);
+  const i = t.get(ge);
   return Object.entries(i).forEach(([n, a]) => r.setAttribute(n, a)), r;
 }
-function lt$2(e) {
+function lt(e) {
   e.classList.add("editor"), e.setAttribute("role", "textbox");
 }
-const ut$1 = new PluginKey("MILKDOWN_VIEW_CLEAR"), ze = (e) => (e.inject(ce$2, document.body).inject(H$2, {}).inject(ae$2, {}).inject(we$3, null).inject(ge$3, {}).inject(oe$2, [q$2]).record(ne$1), async () => {
-  await e.wait(M$2);
-  const t = e.get(ce$2) || document.body, r = typeof t == "string" ? document.querySelector(t) : t;
+const ut = new PluginKey("MILKDOWN_VIEW_CLEAR"), ze = (e) => (e.inject(ce, document.body).inject(H, {}).inject(ae, {}).inject(we, null).inject(ge, {}).inject(oe, [q]).record(ne), async () => {
+  await e.wait(M);
+  const t = e.get(ce) || document.body, r = typeof t == "string" ? document.querySelector(t) : t;
   e.update(N, (f) => [
     new Plugin({
-      key: ut$1,
+      key: ut,
       view: (B) => {
-        const l = r ? ht$1(r, e) : void 0;
+        const l = r ? ht(r, e) : void 0;
         return (() => {
           if (l && r) {
             const F = B.dom;
@@ -30146,27 +29657,27 @@ const ut$1 = new PluginKey("MILKDOWN_VIEW_CLEAR"), ze = (e) => (e.inject(ce$2, d
       }
     }),
     ...f
-  ]), await e.waitTimers(oe$2);
-  const i = e.get(V$1), n = e.get(ae$2), a = Object.fromEntries(e.get(fe$3)), h = Object.fromEntries(e.get(ye$3)), m = new EditorView(r, {
+  ]), await e.waitTimers(oe);
+  const i = e.get(V), n = e.get(ae), a = Object.fromEntries(e.get(fe)), h = Object.fromEntries(e.get(ye)), m = new EditorView(r, {
     state: i,
     nodeViews: a,
     markViews: h,
     ...n
   });
-  return lt$2(m.dom), e.set(H$2, m), e.done(ne$1), () => {
-    m == null || m.destroy(), e.remove(ce$2).remove(H$2).remove(ae$2).remove(we$3).remove(ge$3).remove(oe$2).clearTimer(ne$1);
+  return lt(m.dom), e.set(H, m), e.done(ne), () => {
+    m == null || m.destroy(), e.remove(ce).remove(H).remove(ae).remove(we).remove(ge).remove(oe).clearTimer(ne);
   };
 });
 k(ze, {
   displayName: "EditorView"
 });
-var T$2, g;
-let Ke$1 = class Ke {
+var T, g;
+class Ke {
   constructor() {
-    d$1(this, T$2, void 0);
-    d$1(this, g, void 0);
-    c$1(this, T$2, new G$3()), c$1(this, g, null), this.setCtx = (t) => {
-      c$1(this, g, t);
+    d(this, T, void 0);
+    d(this, g, void 0);
+    c(this, T, new G$1()), c(this, g, null), this.setCtx = (t) => {
+      c(this, g, t);
     };
   }
   get ctx() {
@@ -30174,130 +29685,32 @@ let Ke$1 = class Ke {
   }
   /// Register a command into the manager.
   create(t, r) {
-    const i = t.create(s(this, T$2).sliceMap);
+    const i = t.create(s(this, T).sliceMap);
     return i.set(r), i;
   }
   get(t) {
-    return s(this, T$2).get(t).get();
+    return s(this, T).get(t).get();
   }
   remove(t) {
-    return s(this, T$2).remove(t);
+    return s(this, T).remove(t);
   }
   call(t, r) {
     if (s(this, g) == null)
-      throw y$2();
-    const n = this.get(t)(r), a = s(this, g).get(H$2);
+      throw y$1();
+    const n = this.get(t)(r), a = s(this, g).get(H);
     return n(a.state, a.dispatch, a);
   }
-};
-T$2 = new WeakMap(), g = new WeakMap();
-function Et$1(e = "cmdKey") {
-  return H$4(() => () => !1, e);
 }
-const je = H$4(new Ke$1(), "commands"), me$2 = H$4([R$2], "commandsTimer"), J$1 = K$3("CommandsReady"), Ae$2 = (e) => {
-  const t = new Ke$1();
-  return t.setCtx(e), e.inject(je, t).inject(me$2, [R$2]).record(J$1), async () => (await e.waitTimers(me$2), e.done(J$1), () => {
-    e.remove(je).remove(me$2).clearTimer(J$1);
+T = new WeakMap(), g = new WeakMap();
+const je = H$2(new Ke(), "commands"), me = H$2([R], "commandsTimer"), J = K$1("CommandsReady"), Ae = (e) => {
+  const t = new Ke();
+  return t.setCtx(e), e.inject(je, t).inject(me, [R]).record(J), async () => (await e.waitTimers(me), e.done(J), () => {
+    e.remove(je).remove(me).clearTimer(J);
   });
 };
-k(Ae$2, {
+k(Ae, {
   displayName: "Commands"
 });
-var j$2, p, y, D$1, _, z$1, u, w$2, O$1, K$1, S$2, E$1, A$2, C$1, I$1;
-const Ce$2 = class Ce {
-  constructor() {
-    d$1(this, j$2, void 0);
-    d$1(this, p, void 0);
-    d$1(this, y, void 0);
-    d$1(this, D$1, void 0);
-    d$1(this, _, void 0);
-    d$1(this, z$1, void 0);
-    d$1(this, u, void 0);
-    d$1(this, w$2, void 0);
-    d$1(this, O$1, void 0);
-    d$1(this, K$1, void 0);
-    d$1(this, S$2, void 0);
-    d$1(this, E$1, void 0);
-    d$1(this, A$2, void 0);
-    d$1(this, C$1, void 0);
-    d$1(this, I$1, void 0);
-    c$1(this, j$2, !1), c$1(this, p, "Idle"), c$1(this, y, []), c$1(this, D$1, () => {
-    }), c$1(this, _, new G$3()), c$1(this, z$1, new J$3()), c$1(this, u, /* @__PURE__ */ new Map()), c$1(this, w$2, /* @__PURE__ */ new Map()), c$1(this, O$1, new U$3(s(this, _), s(this, z$1))), c$1(this, K$1, () => {
-      const t = ot$2(async (i) => {
-        await Promise.all(s(this, y).map((n) => n(i)));
-      }), r = [
-        Ee$1,
-        Ve$1,
-        Ne$2,
-        Ae$2,
-        _e$1,
-        ze,
-        at$2(this),
-        t
-      ];
-      s(this, S$2).call(this, r, s(this, w$2));
-    }), c$1(this, S$2, (t, r) => {
-      t.forEach((i) => {
-        const n = s(this, O$1).produce(s(this, j$2) ? i.meta : void 0), a = i(n);
-        r.set(i, { ctx: n, handler: a, cleanup: void 0 });
-      });
-    }), c$1(this, E$1, (t, r = !1) => Promise.all(
-      [t].flat().map((i) => {
-        const n = s(this, u).get(i), a = n == null ? void 0 : n.cleanup;
-        return r ? s(this, u).delete(i) : s(this, u).set(i, { ctx: void 0, handler: void 0, cleanup: void 0 }), typeof a == "function" ? a() : a;
-      })
-    )), c$1(this, A$2, async () => {
-      await Promise.all([...s(this, w$2).entries()].map(([t, { cleanup: r }]) => typeof r == "function" ? r() : r)), s(this, w$2).clear();
-    }), c$1(this, C$1, (t) => {
-      c$1(this, p, t), s(this, D$1).call(this, t);
-    }), c$1(this, I$1, (t) => [...t.entries()].map(async ([r, i]) => {
-      const { ctx: n, handler: a } = i;
-      if (!a)
-        return;
-      const h = await a();
-      t.set(r, { ctx: n, handler: a, cleanup: h });
-    })), this.enableInspector = (t = !0) => (c$1(this, j$2, t), this), this.onStatusChange = (t) => (c$1(this, D$1, t), this), this.config = (t) => (s(this, y).push(t), this), this.removeConfig = (t) => (c$1(this, y, s(this, y).filter((r) => r !== t)), this), this.use = (t) => {
-      const r = [t].flat();
-      return r.flat().forEach((i) => {
-        s(this, u).set(i, {
-          ctx: void 0,
-          handler: void 0,
-          cleanup: void 0
-        });
-      }), s(this, p) === "Created" && s(this, S$2).call(this, r, s(this, u)), this;
-    }, this.remove = async (t) => s(this, p) === "OnCreate" ? (console.warn("[Milkdown]: You are trying to remove plugins when the editor is creating, this is not recommended, please check your code."), new Promise((r) => {
-      setTimeout(() => {
-        r(this.remove(t));
-      }, 50);
-    })) : (await s(this, E$1).call(this, [t].flat(), !0), this), this.create = async () => s(this, p) === "OnCreate" ? this : (s(this, p) === "Created" && await this.destroy(), s(this, C$1).call(this, "OnCreate"), s(this, K$1).call(this), s(this, S$2).call(this, [...s(this, u).keys()], s(this, u)), await Promise.all(
-      [
-        s(this, I$1).call(this, s(this, w$2)),
-        s(this, I$1).call(this, s(this, u))
-      ].flat()
-    ), s(this, C$1).call(this, "Created"), this), this.destroy = async (t = !1) => s(this, p) === "Destroyed" || s(this, p) === "OnDestroy" ? this : s(this, p) === "OnCreate" ? new Promise((r) => {
-      setTimeout(() => {
-        r(this.destroy(t));
-      }, 50);
-    }) : (t && c$1(this, y, []), s(this, C$1).call(this, "OnDestroy"), await s(this, E$1).call(this, [...s(this, u).keys()], t), await s(this, A$2).call(this), s(this, C$1).call(this, "Destroyed"), this), this.action = (t) => t(s(this, O$1)), this.inspect = () => s(this, j$2) ? [...s(this, w$2).values(), ...s(this, u).values()].map(({ ctx: t }) => {
-      var r;
-      return (r = t == null ? void 0 : t.inspector) == null ? void 0 : r.read();
-    }).filter((t) => !!t) : (console.warn("[Milkdown]: You are trying to collect inspection when inspector is disabled, please enable inspector by `editor.enableInspector()` first."), []);
-  }
-  /// Create a new editor instance.
-  static make() {
-    return new Ce();
-  }
-  /// Get the ctx of the editor.
-  get ctx() {
-    return s(this, O$1);
-  }
-  /// Get the status of the editor.
-  get status() {
-    return s(this, p);
-  }
-};
-j$2 = new WeakMap(), p = new WeakMap(), y = new WeakMap(), D$1 = new WeakMap(), _ = new WeakMap(), z$1 = new WeakMap(), u = new WeakMap(), w$2 = new WeakMap(), O$1 = new WeakMap(), K$1 = new WeakMap(), S$2 = new WeakMap(), E$1 = new WeakMap(), A$2 = new WeakMap(), C$1 = new WeakMap(), I$1 = new WeakMap();
-let Oe$1 = Ce$2;
 
 let random = bytes => crypto.getRandomValues(new Uint8Array(bytes));
 let customRandom = (alphabet, defaultSize, getRandom) => {
@@ -30319,12155 +29732,388 @@ let customAlphabet = (alphabet, size = 21) =>
   customRandom(alphabet, size, random);
 
 customAlphabet("abcedfghicklmn", 10);
-function re$1(n, o) {
-  const r = Et$1(n), t = (e) => async () => {
-    t.key = r, await e.wait(J$1);
-    const a = o(e);
-    return e.get(je).create(r, a), t.run = (s) => e.get(je).call(n, s), () => {
-      e.get(je).remove(r);
-    };
-  };
-  return t;
-}
-function oe$1(n) {
-  const o = (r) => async () => {
-    await r.wait(R$2);
-    const t = n(r);
-    return r.update(ue$3, (e) => [...e, t]), o.inputRule = t, () => {
-      r.update(ue$3, (e) => e.filter((a) => a !== t));
-    };
-  };
-  return o;
-}
-function Q$1(n, o) {
-  const r = (t) => async () => {
-    const e = o(t);
-    return t.update(Z$2, (a) => [...a.filter((s) => s[0] !== n), [n, e]]), r.id = n, r.schema = e, () => {
-      t.update(Z$2, (a) => a.filter(([s]) => s !== n));
-    };
-  };
-  return r.type = (t) => {
-    const e = t.get(b$1).marks[n];
-    if (!e)
-      throw x$4(n);
-    return e;
-  }, r;
-}
-function W$3(n, o) {
-  const r = (t) => async () => {
-    const e = o(t);
-    return t.update(X$1, (a) => [...a.filter((s) => s[0] !== n), [n, e]]), r.id = n, r.schema = e, () => {
-      t.update(X$1, (a) => a.filter(([s]) => s !== n));
-    };
-  };
-  return r.type = (t) => {
-    const e = t.get(b$1).nodes[n];
-    if (!e)
-      throw M$5(n);
-    return e;
-  }, r;
-}
-function ue$2(n) {
+function ue(n) {
   let o;
-  const r = (t) => async () => (await t.wait(R$2), o = n(t), t.update(N, (e) => [...e, o]), () => {
+  const r = (t) => async () => (await t.wait(R), o = n(t), t.update(N, (e) => [...e, o]), () => {
     t.update(N, (e) => e.filter((a) => a !== o));
   });
   return r.plugin = () => o, r.key = () => o.spec.key, r;
 }
-function X(n) {
-  const o = (r) => async () => {
-    await r.wait(R$2);
-    const t = n(r), e = keymap(t);
-    return r.update(N, (a) => [...a, e]), o.keymap = t, () => {
-      r.update(N, (a) => a.filter((s) => s !== e));
-    };
-  };
-  return o;
-}
 function h(n, o) {
-  const r = H$4(n, o), t = (e) => (e.inject(r), () => () => {
+  const r = H$2(n, o), t = (e) => (e.inject(r), () => () => {
     e.remove(r);
   });
   return t.key = r, t;
 }
-function fe$2(n, o) {
-  const r = h(o, n), t = W$3(n, (a) => a.get(r.key)(a)), e = [r, t];
-  return e.id = t.id, e.node = t, e.type = (a) => t.type(a), e.schema = t.schema, e.ctx = r, e.key = r.key, e.extendSchema = (a) => (s) => () => {
-    const i = s.get(r.key), c = a(i)(s);
-    s.update(X$1, (m) => [...m.filter((S) => S[0] !== n), [n, c]]), e.schema = c;
-  }, e;
-}
-function ye$2(n, o) {
-  const r = h(o, n), t = Q$1(n, (a) => a.get(r.key)(a)), e = [r, t];
-  return e.id = t.id, e.mark = t, e.type = t.type, e.schema = t.schema, e.ctx = r, e.key = r.key, e.extendSchema = (a) => (s) => () => {
-    const i = s.get(r.key), c = a(i)(s);
-    s.update(Z$2, (m) => [...m.filter((S) => S[0] !== n), [n, c]]), e.schema = c;
-  }, e;
-}
-function ge$2(n, o) {
-  const r = Object.fromEntries(Object.entries(o).map(([s, { shortcuts: i }]) => [s, i])), t = h(r, `${n}Keymap`), e = X((s) => {
-    const i = s.get(t.key), u = Object.entries(o).flatMap(([c, { command: m }]) => [i[c]].flat().map((V) => [V, m(s)]));
-    return Object.fromEntries(u);
-  }), a = [t, e];
-  return a.ctx = t, a.shortcuts = e, a.key = t.key, a.keymap = e.keymap, a;
-}
-const he$2 = (n, o = () => ({})) => h(o, `${n}Attr`), we$2 = (n, o = () => ({})) => h(o, `${n}Attr`);
-function ke$2(n, o, r) {
-  const t = h(r ?? {}, n), e = (s) => async () => {
-    await s.wait(M$2);
-    const u = {
-      plugin: o(s),
-      options: s.get(t.key)
-    };
-    return s.update(pe$2, (c) => [...c, u]), () => {
-      s.update(pe$2, (c) => c.filter((m) => m !== u));
-    };
-  }, a = [t, e];
-  return a.id = n, a.plugin = e, a.options = t, a;
-}
 
-function escapeStringRegexp$2(string) {
-	if (typeof string !== 'string') {
-		throw new TypeError('Expected a string');
-	}
-
-	// Escape characters with special meaning either inside or outside character sets.
-	// Use a simple backslash escape when it’s always valid, and a `\xnn` escape when the simpler form would be disallowed by Unicode patterns’ stricter grammar.
-	return string
-		.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
-		.replace(/-/g, '\\x2d');
-}
-
-function escapeStringRegexp$1(string) {
-	if (typeof string !== 'string') {
-		throw new TypeError('Expected a string');
-	}
-
-	// Escape characters with special meaning either inside or outside character sets.
-	// Use a simple backslash escape when it’s always valid, and a `\xnn` escape when the simpler form would be disallowed by Unicode patterns’ stricter grammar.
-	return string
-		.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
-		.replace(/-/g, '\\x2d');
-}
-
-const replacements = [
-	// German umlauts
-	['ß', 'ss'],
-	['ẞ', 'Ss'],
-	['ä', 'ae'],
-	['Ä', 'Ae'],
-	['ö', 'oe'],
-	['Ö', 'Oe'],
-	['ü', 'ue'],
-	['Ü', 'Ue'],
-
-	// Latin
-	['À', 'A'],
-	['Á', 'A'],
-	['Â', 'A'],
-	['Ã', 'A'],
-	['Ä', 'Ae'],
-	['Å', 'A'],
-	['Æ', 'AE'],
-	['Ç', 'C'],
-	['È', 'E'],
-	['É', 'E'],
-	['Ê', 'E'],
-	['Ë', 'E'],
-	['Ì', 'I'],
-	['Í', 'I'],
-	['Î', 'I'],
-	['Ï', 'I'],
-	['Ð', 'D'],
-	['Ñ', 'N'],
-	['Ò', 'O'],
-	['Ó', 'O'],
-	['Ô', 'O'],
-	['Õ', 'O'],
-	['Ö', 'Oe'],
-	['Ő', 'O'],
-	['Ø', 'O'],
-	['Ù', 'U'],
-	['Ú', 'U'],
-	['Û', 'U'],
-	['Ü', 'Ue'],
-	['Ű', 'U'],
-	['Ý', 'Y'],
-	['Þ', 'TH'],
-	['ß', 'ss'],
-	['à', 'a'],
-	['á', 'a'],
-	['â', 'a'],
-	['ã', 'a'],
-	['ä', 'ae'],
-	['å', 'a'],
-	['æ', 'ae'],
-	['ç', 'c'],
-	['è', 'e'],
-	['é', 'e'],
-	['ê', 'e'],
-	['ë', 'e'],
-	['ì', 'i'],
-	['í', 'i'],
-	['î', 'i'],
-	['ï', 'i'],
-	['ð', 'd'],
-	['ñ', 'n'],
-	['ò', 'o'],
-	['ó', 'o'],
-	['ô', 'o'],
-	['õ', 'o'],
-	['ö', 'oe'],
-	['ő', 'o'],
-	['ø', 'o'],
-	['ù', 'u'],
-	['ú', 'u'],
-	['û', 'u'],
-	['ü', 'ue'],
-	['ű', 'u'],
-	['ý', 'y'],
-	['þ', 'th'],
-	['ÿ', 'y'],
-	['ẞ', 'SS'],
-
-	// Vietnamese
-	['à', 'a'],
-	['À', 'A'],
-	['á', 'a'],
-	['Á', 'A'],
-	['â', 'a'],
-	['Â', 'A'],
-	['ã', 'a'],
-	['Ã', 'A'],
-	['è', 'e'],
-	['È', 'E'],
-	['é', 'e'],
-	['É', 'E'],
-	['ê', 'e'],
-	['Ê', 'E'],
-	['ì', 'i'],
-	['Ì', 'I'],
-	['í', 'i'],
-	['Í', 'I'],
-	['ò', 'o'],
-	['Ò', 'O'],
-	['ó', 'o'],
-	['Ó', 'O'],
-	['ô', 'o'],
-	['Ô', 'O'],
-	['õ', 'o'],
-	['Õ', 'O'],
-	['ù', 'u'],
-	['Ù', 'U'],
-	['ú', 'u'],
-	['Ú', 'U'],
-	['ý', 'y'],
-	['Ý', 'Y'],
-	['ă', 'a'],
-	['Ă', 'A'],
-	['Đ', 'D'],
-	['đ', 'd'],
-	['ĩ', 'i'],
-	['Ĩ', 'I'],
-	['ũ', 'u'],
-	['Ũ', 'U'],
-	['ơ', 'o'],
-	['Ơ', 'O'],
-	['ư', 'u'],
-	['Ư', 'U'],
-	['ạ', 'a'],
-	['Ạ', 'A'],
-	['ả', 'a'],
-	['Ả', 'A'],
-	['ấ', 'a'],
-	['Ấ', 'A'],
-	['ầ', 'a'],
-	['Ầ', 'A'],
-	['ẩ', 'a'],
-	['Ẩ', 'A'],
-	['ẫ', 'a'],
-	['Ẫ', 'A'],
-	['ậ', 'a'],
-	['Ậ', 'A'],
-	['ắ', 'a'],
-	['Ắ', 'A'],
-	['ằ', 'a'],
-	['Ằ', 'A'],
-	['ẳ', 'a'],
-	['Ẳ', 'A'],
-	['ẵ', 'a'],
-	['Ẵ', 'A'],
-	['ặ', 'a'],
-	['Ặ', 'A'],
-	['ẹ', 'e'],
-	['Ẹ', 'E'],
-	['ẻ', 'e'],
-	['Ẻ', 'E'],
-	['ẽ', 'e'],
-	['Ẽ', 'E'],
-	['ế', 'e'],
-	['Ế', 'E'],
-	['ề', 'e'],
-	['Ề', 'E'],
-	['ể', 'e'],
-	['Ể', 'E'],
-	['ễ', 'e'],
-	['Ễ', 'E'],
-	['ệ', 'e'],
-	['Ệ', 'E'],
-	['ỉ', 'i'],
-	['Ỉ', 'I'],
-	['ị', 'i'],
-	['Ị', 'I'],
-	['ọ', 'o'],
-	['Ọ', 'O'],
-	['ỏ', 'o'],
-	['Ỏ', 'O'],
-	['ố', 'o'],
-	['Ố', 'O'],
-	['ồ', 'o'],
-	['Ồ', 'O'],
-	['ổ', 'o'],
-	['Ổ', 'O'],
-	['ỗ', 'o'],
-	['Ỗ', 'O'],
-	['ộ', 'o'],
-	['Ộ', 'O'],
-	['ớ', 'o'],
-	['Ớ', 'O'],
-	['ờ', 'o'],
-	['Ờ', 'O'],
-	['ở', 'o'],
-	['Ở', 'O'],
-	['ỡ', 'o'],
-	['Ỡ', 'O'],
-	['ợ', 'o'],
-	['Ợ', 'O'],
-	['ụ', 'u'],
-	['Ụ', 'U'],
-	['ủ', 'u'],
-	['Ủ', 'U'],
-	['ứ', 'u'],
-	['Ứ', 'U'],
-	['ừ', 'u'],
-	['Ừ', 'U'],
-	['ử', 'u'],
-	['Ử', 'U'],
-	['ữ', 'u'],
-	['Ữ', 'U'],
-	['ự', 'u'],
-	['Ự', 'U'],
-	['ỳ', 'y'],
-	['Ỳ', 'Y'],
-	['ỵ', 'y'],
-	['Ỵ', 'Y'],
-	['ỷ', 'y'],
-	['Ỷ', 'Y'],
-	['ỹ', 'y'],
-	['Ỹ', 'Y'],
-
-	// Arabic
-	['ء', 'e'],
-	['آ', 'a'],
-	['أ', 'a'],
-	['ؤ', 'w'],
-	['إ', 'i'],
-	['ئ', 'y'],
-	['ا', 'a'],
-	['ب', 'b'],
-	['ة', 't'],
-	['ت', 't'],
-	['ث', 'th'],
-	['ج', 'j'],
-	['ح', 'h'],
-	['خ', 'kh'],
-	['د', 'd'],
-	['ذ', 'dh'],
-	['ر', 'r'],
-	['ز', 'z'],
-	['س', 's'],
-	['ش', 'sh'],
-	['ص', 's'],
-	['ض', 'd'],
-	['ط', 't'],
-	['ظ', 'z'],
-	['ع', 'e'],
-	['غ', 'gh'],
-	['ـ', '_'],
-	['ف', 'f'],
-	['ق', 'q'],
-	['ك', 'k'],
-	['ل', 'l'],
-	['م', 'm'],
-	['ن', 'n'],
-	['ه', 'h'],
-	['و', 'w'],
-	['ى', 'a'],
-	['ي', 'y'],
-	['َ‎', 'a'],
-	['ُ', 'u'],
-	['ِ‎', 'i'],
-	['٠', '0'],
-	['١', '1'],
-	['٢', '2'],
-	['٣', '3'],
-	['٤', '4'],
-	['٥', '5'],
-	['٦', '6'],
-	['٧', '7'],
-	['٨', '8'],
-	['٩', '9'],
-
-	// Persian / Farsi
-	['چ', 'ch'],
-	['ک', 'k'],
-	['گ', 'g'],
-	['پ', 'p'],
-	['ژ', 'zh'],
-	['ی', 'y'],
-	['۰', '0'],
-	['۱', '1'],
-	['۲', '2'],
-	['۳', '3'],
-	['۴', '4'],
-	['۵', '5'],
-	['۶', '6'],
-	['۷', '7'],
-	['۸', '8'],
-	['۹', '9'],
-
-	// Pashto
-	['ټ', 'p'],
-	['ځ', 'z'],
-	['څ', 'c'],
-	['ډ', 'd'],
-	['ﺫ', 'd'],
-	['ﺭ', 'r'],
-	['ړ', 'r'],
-	['ﺯ', 'z'],
-	['ږ', 'g'],
-	['ښ', 'x'],
-	['ګ', 'g'],
-	['ڼ', 'n'],
-	['ۀ', 'e'],
-	['ې', 'e'],
-	['ۍ', 'ai'],
-
-	// Urdu
-	['ٹ', 't'],
-	['ڈ', 'd'],
-	['ڑ', 'r'],
-	['ں', 'n'],
-	['ہ', 'h'],
-	['ھ', 'h'],
-	['ے', 'e'],
-
-	// Russian
-	['А', 'A'],
-	['а', 'a'],
-	['Б', 'B'],
-	['б', 'b'],
-	['В', 'V'],
-	['в', 'v'],
-	['Г', 'G'],
-	['г', 'g'],
-	['Д', 'D'],
-	['д', 'd'],
-	['ъе', 'ye'],
-	['Ъе', 'Ye'],
-	['ъЕ', 'yE'],
-	['ЪЕ', 'YE'],
-	['Е', 'E'],
-	['е', 'e'],
-	['Ё', 'Yo'],
-	['ё', 'yo'],
-	['Ж', 'Zh'],
-	['ж', 'zh'],
-	['З', 'Z'],
-	['з', 'z'],
-	['И', 'I'],
-	['и', 'i'],
-	['ый', 'iy'],
-	['Ый', 'Iy'],
-	['ЫЙ', 'IY'],
-	['ыЙ', 'iY'],
-	['Й', 'Y'],
-	['й', 'y'],
-	['К', 'K'],
-	['к', 'k'],
-	['Л', 'L'],
-	['л', 'l'],
-	['М', 'M'],
-	['м', 'm'],
-	['Н', 'N'],
-	['н', 'n'],
-	['О', 'O'],
-	['о', 'o'],
-	['П', 'P'],
-	['п', 'p'],
-	['Р', 'R'],
-	['р', 'r'],
-	['С', 'S'],
-	['с', 's'],
-	['Т', 'T'],
-	['т', 't'],
-	['У', 'U'],
-	['у', 'u'],
-	['Ф', 'F'],
-	['ф', 'f'],
-	['Х', 'Kh'],
-	['х', 'kh'],
-	['Ц', 'Ts'],
-	['ц', 'ts'],
-	['Ч', 'Ch'],
-	['ч', 'ch'],
-	['Ш', 'Sh'],
-	['ш', 'sh'],
-	['Щ', 'Sch'],
-	['щ', 'sch'],
-	['Ъ', ''],
-	['ъ', ''],
-	['Ы', 'Y'],
-	['ы', 'y'],
-	['Ь', ''],
-	['ь', ''],
-	['Э', 'E'],
-	['э', 'e'],
-	['Ю', 'Yu'],
-	['ю', 'yu'],
-	['Я', 'Ya'],
-	['я', 'ya'],
-
-	// Romanian
-	['ă', 'a'],
-	['Ă', 'A'],
-	['ș', 's'],
-	['Ș', 'S'],
-	['ț', 't'],
-	['Ț', 'T'],
-	['ţ', 't'],
-	['Ţ', 'T'],
-
-	// Turkish
-	['ş', 's'],
-	['Ş', 'S'],
-	['ç', 'c'],
-	['Ç', 'C'],
-	['ğ', 'g'],
-	['Ğ', 'G'],
-	['ı', 'i'],
-	['İ', 'I'],
-
-	// Armenian
-	['ա', 'a'],
-	['Ա', 'A'],
-	['բ', 'b'],
-	['Բ', 'B'],
-	['գ', 'g'],
-	['Գ', 'G'],
-	['դ', 'd'],
-	['Դ', 'D'],
-	['ե', 'ye'],
-	['Ե', 'Ye'],
-	['զ', 'z'],
-	['Զ', 'Z'],
-	['է', 'e'],
-	['Է', 'E'],
-	['ը', 'y'],
-	['Ը', 'Y'],
-	['թ', 't'],
-	['Թ', 'T'],
-	['ժ', 'zh'],
-	['Ժ', 'Zh'],
-	['ի', 'i'],
-	['Ի', 'I'],
-	['լ', 'l'],
-	['Լ', 'L'],
-	['խ', 'kh'],
-	['Խ', 'Kh'],
-	['ծ', 'ts'],
-	['Ծ', 'Ts'],
-	['կ', 'k'],
-	['Կ', 'K'],
-	['հ', 'h'],
-	['Հ', 'H'],
-	['ձ', 'dz'],
-	['Ձ', 'Dz'],
-	['ղ', 'gh'],
-	['Ղ', 'Gh'],
-	['ճ', 'tch'],
-	['Ճ', 'Tch'],
-	['մ', 'm'],
-	['Մ', 'M'],
-	['յ', 'y'],
-	['Յ', 'Y'],
-	['ն', 'n'],
-	['Ն', 'N'],
-	['շ', 'sh'],
-	['Շ', 'Sh'],
-	['ո', 'vo'],
-	['Ո', 'Vo'],
-	['չ', 'ch'],
-	['Չ', 'Ch'],
-	['պ', 'p'],
-	['Պ', 'P'],
-	['ջ', 'j'],
-	['Ջ', 'J'],
-	['ռ', 'r'],
-	['Ռ', 'R'],
-	['ս', 's'],
-	['Ս', 'S'],
-	['վ', 'v'],
-	['Վ', 'V'],
-	['տ', 't'],
-	['Տ', 'T'],
-	['ր', 'r'],
-	['Ր', 'R'],
-	['ց', 'c'],
-	['Ց', 'C'],
-	['ու', 'u'],
-	['ՈՒ', 'U'],
-	['Ու', 'U'],
-	['փ', 'p'],
-	['Փ', 'P'],
-	['ք', 'q'],
-	['Ք', 'Q'],
-	['օ', 'o'],
-	['Օ', 'O'],
-	['ֆ', 'f'],
-	['Ֆ', 'F'],
-	['և', 'yev'],
-
-	// Georgian
-	['ა', 'a'],
-	['ბ', 'b'],
-	['გ', 'g'],
-	['დ', 'd'],
-	['ე', 'e'],
-	['ვ', 'v'],
-	['ზ', 'z'],
-	['თ', 't'],
-	['ი', 'i'],
-	['კ', 'k'],
-	['ლ', 'l'],
-	['მ', 'm'],
-	['ნ', 'n'],
-	['ო', 'o'],
-	['პ', 'p'],
-	['ჟ', 'zh'],
-	['რ', 'r'],
-	['ს', 's'],
-	['ტ', 't'],
-	['უ', 'u'],
-	['ფ', 'ph'],
-	['ქ', 'q'],
-	['ღ', 'gh'],
-	['ყ', 'k'],
-	['შ', 'sh'],
-	['ჩ', 'ch'],
-	['ც', 'ts'],
-	['ძ', 'dz'],
-	['წ', 'ts'],
-	['ჭ', 'tch'],
-	['ხ', 'kh'],
-	['ჯ', 'j'],
-	['ჰ', 'h'],
-
-	// Czech
-	['č', 'c'],
-	['ď', 'd'],
-	['ě', 'e'],
-	['ň', 'n'],
-	['ř', 'r'],
-	['š', 's'],
-	['ť', 't'],
-	['ů', 'u'],
-	['ž', 'z'],
-	['Č', 'C'],
-	['Ď', 'D'],
-	['Ě', 'E'],
-	['Ň', 'N'],
-	['Ř', 'R'],
-	['Š', 'S'],
-	['Ť', 'T'],
-	['Ů', 'U'],
-	['Ž', 'Z'],
-
-	// Dhivehi
-	['ހ', 'h'],
-	['ށ', 'sh'],
-	['ނ', 'n'],
-	['ރ', 'r'],
-	['ބ', 'b'],
-	['ޅ', 'lh'],
-	['ކ', 'k'],
-	['އ', 'a'],
-	['ވ', 'v'],
-	['މ', 'm'],
-	['ފ', 'f'],
-	['ދ', 'dh'],
-	['ތ', 'th'],
-	['ލ', 'l'],
-	['ގ', 'g'],
-	['ޏ', 'gn'],
-	['ސ', 's'],
-	['ޑ', 'd'],
-	['ޒ', 'z'],
-	['ޓ', 't'],
-	['ޔ', 'y'],
-	['ޕ', 'p'],
-	['ޖ', 'j'],
-	['ޗ', 'ch'],
-	['ޘ', 'tt'],
-	['ޙ', 'hh'],
-	['ޚ', 'kh'],
-	['ޛ', 'th'],
-	['ޜ', 'z'],
-	['ޝ', 'sh'],
-	['ޞ', 's'],
-	['ޟ', 'd'],
-	['ޠ', 't'],
-	['ޡ', 'z'],
-	['ޢ', 'a'],
-	['ޣ', 'gh'],
-	['ޤ', 'q'],
-	['ޥ', 'w'],
-	['ަ', 'a'],
-	['ާ', 'aa'],
-	['ި', 'i'],
-	['ީ', 'ee'],
-	['ު', 'u'],
-	['ޫ', 'oo'],
-	['ެ', 'e'],
-	['ޭ', 'ey'],
-	['ޮ', 'o'],
-	['ޯ', 'oa'],
-	['ް', ''],
-
-	// Greek
-	['α', 'a'],
-	['β', 'v'],
-	['γ', 'g'],
-	['δ', 'd'],
-	['ε', 'e'],
-	['ζ', 'z'],
-	['η', 'i'],
-	['θ', 'th'],
-	['ι', 'i'],
-	['κ', 'k'],
-	['λ', 'l'],
-	['μ', 'm'],
-	['ν', 'n'],
-	['ξ', 'ks'],
-	['ο', 'o'],
-	['π', 'p'],
-	['ρ', 'r'],
-	['σ', 's'],
-	['τ', 't'],
-	['υ', 'y'],
-	['φ', 'f'],
-	['χ', 'x'],
-	['ψ', 'ps'],
-	['ω', 'o'],
-	['ά', 'a'],
-	['έ', 'e'],
-	['ί', 'i'],
-	['ό', 'o'],
-	['ύ', 'y'],
-	['ή', 'i'],
-	['ώ', 'o'],
-	['ς', 's'],
-	['ϊ', 'i'],
-	['ΰ', 'y'],
-	['ϋ', 'y'],
-	['ΐ', 'i'],
-	['Α', 'A'],
-	['Β', 'B'],
-	['Γ', 'G'],
-	['Δ', 'D'],
-	['Ε', 'E'],
-	['Ζ', 'Z'],
-	['Η', 'I'],
-	['Θ', 'TH'],
-	['Ι', 'I'],
-	['Κ', 'K'],
-	['Λ', 'L'],
-	['Μ', 'M'],
-	['Ν', 'N'],
-	['Ξ', 'KS'],
-	['Ο', 'O'],
-	['Π', 'P'],
-	['Ρ', 'R'],
-	['Σ', 'S'],
-	['Τ', 'T'],
-	['Υ', 'Y'],
-	['Φ', 'F'],
-	['Χ', 'X'],
-	['Ψ', 'PS'],
-	['Ω', 'O'],
-	['Ά', 'A'],
-	['Έ', 'E'],
-	['Ί', 'I'],
-	['Ό', 'O'],
-	['Ύ', 'Y'],
-	['Ή', 'I'],
-	['Ώ', 'O'],
-	['Ϊ', 'I'],
-	['Ϋ', 'Y'],
-
-	// Disabled as it conflicts with German and Latin.
-	// Hungarian
-	// ['ä', 'a'],
-	// ['Ä', 'A'],
-	// ['ö', 'o'],
-	// ['Ö', 'O'],
-	// ['ü', 'u'],
-	// ['Ü', 'U'],
-	// ['ű', 'u'],
-	// ['Ű', 'U'],
-
-	// Latvian
-	['ā', 'a'],
-	['ē', 'e'],
-	['ģ', 'g'],
-	['ī', 'i'],
-	['ķ', 'k'],
-	['ļ', 'l'],
-	['ņ', 'n'],
-	['ū', 'u'],
-	['Ā', 'A'],
-	['Ē', 'E'],
-	['Ģ', 'G'],
-	['Ī', 'I'],
-	['Ķ', 'K'],
-	['Ļ', 'L'],
-	['Ņ', 'N'],
-	['Ū', 'U'],
-	['č', 'c'],
-	['š', 's'],
-	['ž', 'z'],
-	['Č', 'C'],
-	['Š', 'S'],
-	['Ž', 'Z'],
-
-	// Lithuanian
-	['ą', 'a'],
-	['č', 'c'],
-	['ę', 'e'],
-	['ė', 'e'],
-	['į', 'i'],
-	['š', 's'],
-	['ų', 'u'],
-	['ū', 'u'],
-	['ž', 'z'],
-	['Ą', 'A'],
-	['Č', 'C'],
-	['Ę', 'E'],
-	['Ė', 'E'],
-	['Į', 'I'],
-	['Š', 'S'],
-	['Ų', 'U'],
-	['Ū', 'U'],
-
-	// Macedonian
-	['Ќ', 'Kj'],
-	['ќ', 'kj'],
-	['Љ', 'Lj'],
-	['љ', 'lj'],
-	['Њ', 'Nj'],
-	['њ', 'nj'],
-	['Тс', 'Ts'],
-	['тс', 'ts'],
-
-	// Polish
-	['ą', 'a'],
-	['ć', 'c'],
-	['ę', 'e'],
-	['ł', 'l'],
-	['ń', 'n'],
-	['ś', 's'],
-	['ź', 'z'],
-	['ż', 'z'],
-	['Ą', 'A'],
-	['Ć', 'C'],
-	['Ę', 'E'],
-	['Ł', 'L'],
-	['Ń', 'N'],
-	['Ś', 'S'],
-	['Ź', 'Z'],
-	['Ż', 'Z'],
-
-	// Disabled as it conflicts with Vietnamese.
-	// Serbian
-	// ['љ', 'lj'],
-	// ['њ', 'nj'],
-	// ['Љ', 'Lj'],
-	// ['Њ', 'Nj'],
-	// ['đ', 'dj'],
-	// ['Đ', 'Dj'],
-	// ['ђ', 'dj'],
-	// ['ј', 'j'],
-	// ['ћ', 'c'],
-	// ['џ', 'dz'],
-	// ['Ђ', 'Dj'],
-	// ['Ј', 'j'],
-	// ['Ћ', 'C'],
-	// ['Џ', 'Dz'],
-
-	// Disabled as it conflicts with German and Latin.
-	// Slovak
-	// ['ä', 'a'],
-	// ['Ä', 'A'],
-	// ['ľ', 'l'],
-	// ['ĺ', 'l'],
-	// ['ŕ', 'r'],
-	// ['Ľ', 'L'],
-	// ['Ĺ', 'L'],
-	// ['Ŕ', 'R'],
-
-	// Disabled as it conflicts with German and Latin.
-	// Swedish
-	// ['å', 'o'],
-	// ['Å', 'o'],
-	// ['ä', 'a'],
-	// ['Ä', 'A'],
-	// ['ë', 'e'],
-	// ['Ë', 'E'],
-	// ['ö', 'o'],
-	// ['Ö', 'O'],
-
-	// Ukrainian
-	['Є', 'Ye'],
-	['І', 'I'],
-	['Ї', 'Yi'],
-	['Ґ', 'G'],
-	['є', 'ye'],
-	['і', 'i'],
-	['ї', 'yi'],
-	['ґ', 'g'],
-
-	// Dutch
-	['Ĳ', 'IJ'],
-	['ĳ', 'ij'],
-
-	// Danish
-	// ['Æ', 'Ae'],
-	// ['Ø', 'Oe'],
-	// ['Å', 'Aa'],
-	// ['æ', 'ae'],
-	// ['ø', 'oe'],
-	// ['å', 'aa']
-
-	// Currencies
-	['¢', 'c'],
-	['¥', 'Y'],
-	['߿', 'b'],
-	['৳', 't'],
-	['૱', 'Bo'],
-	['฿', 'B'],
-	['₠', 'CE'],
-	['₡', 'C'],
-	['₢', 'Cr'],
-	['₣', 'F'],
-	['₥', 'm'],
-	['₦', 'N'],
-	['₧', 'Pt'],
-	['₨', 'Rs'],
-	['₩', 'W'],
-	['₫', 's'],
-	['€', 'E'],
-	['₭', 'K'],
-	['₮', 'T'],
-	['₯', 'Dp'],
-	['₰', 'S'],
-	['₱', 'P'],
-	['₲', 'G'],
-	['₳', 'A'],
-	['₴', 'S'],
-	['₵', 'C'],
-	['₶', 'tt'],
-	['₷', 'S'],
-	['₸', 'T'],
-	['₹', 'R'],
-	['₺', 'L'],
-	['₽', 'P'],
-	['₿', 'B'],
-	['﹩', '$'],
-	['￠', 'c'],
-	['￥', 'Y'],
-	['￦', 'W'],
-
-	// Latin
-	['𝐀', 'A'],
-	['𝐁', 'B'],
-	['𝐂', 'C'],
-	['𝐃', 'D'],
-	['𝐄', 'E'],
-	['𝐅', 'F'],
-	['𝐆', 'G'],
-	['𝐇', 'H'],
-	['𝐈', 'I'],
-	['𝐉', 'J'],
-	['𝐊', 'K'],
-	['𝐋', 'L'],
-	['𝐌', 'M'],
-	['𝐍', 'N'],
-	['𝐎', 'O'],
-	['𝐏', 'P'],
-	['𝐐', 'Q'],
-	['𝐑', 'R'],
-	['𝐒', 'S'],
-	['𝐓', 'T'],
-	['𝐔', 'U'],
-	['𝐕', 'V'],
-	['𝐖', 'W'],
-	['𝐗', 'X'],
-	['𝐘', 'Y'],
-	['𝐙', 'Z'],
-	['𝐚', 'a'],
-	['𝐛', 'b'],
-	['𝐜', 'c'],
-	['𝐝', 'd'],
-	['𝐞', 'e'],
-	['𝐟', 'f'],
-	['𝐠', 'g'],
-	['𝐡', 'h'],
-	['𝐢', 'i'],
-	['𝐣', 'j'],
-	['𝐤', 'k'],
-	['𝐥', 'l'],
-	['𝐦', 'm'],
-	['𝐧', 'n'],
-	['𝐨', 'o'],
-	['𝐩', 'p'],
-	['𝐪', 'q'],
-	['𝐫', 'r'],
-	['𝐬', 's'],
-	['𝐭', 't'],
-	['𝐮', 'u'],
-	['𝐯', 'v'],
-	['𝐰', 'w'],
-	['𝐱', 'x'],
-	['𝐲', 'y'],
-	['𝐳', 'z'],
-	['𝐴', 'A'],
-	['𝐵', 'B'],
-	['𝐶', 'C'],
-	['𝐷', 'D'],
-	['𝐸', 'E'],
-	['𝐹', 'F'],
-	['𝐺', 'G'],
-	['𝐻', 'H'],
-	['𝐼', 'I'],
-	['𝐽', 'J'],
-	['𝐾', 'K'],
-	['𝐿', 'L'],
-	['𝑀', 'M'],
-	['𝑁', 'N'],
-	['𝑂', 'O'],
-	['𝑃', 'P'],
-	['𝑄', 'Q'],
-	['𝑅', 'R'],
-	['𝑆', 'S'],
-	['𝑇', 'T'],
-	['𝑈', 'U'],
-	['𝑉', 'V'],
-	['𝑊', 'W'],
-	['𝑋', 'X'],
-	['𝑌', 'Y'],
-	['𝑍', 'Z'],
-	['𝑎', 'a'],
-	['𝑏', 'b'],
-	['𝑐', 'c'],
-	['𝑑', 'd'],
-	['𝑒', 'e'],
-	['𝑓', 'f'],
-	['𝑔', 'g'],
-	['𝑖', 'i'],
-	['𝑗', 'j'],
-	['𝑘', 'k'],
-	['𝑙', 'l'],
-	['𝑚', 'm'],
-	['𝑛', 'n'],
-	['𝑜', 'o'],
-	['𝑝', 'p'],
-	['𝑞', 'q'],
-	['𝑟', 'r'],
-	['𝑠', 's'],
-	['𝑡', 't'],
-	['𝑢', 'u'],
-	['𝑣', 'v'],
-	['𝑤', 'w'],
-	['𝑥', 'x'],
-	['𝑦', 'y'],
-	['𝑧', 'z'],
-	['𝑨', 'A'],
-	['𝑩', 'B'],
-	['𝑪', 'C'],
-	['𝑫', 'D'],
-	['𝑬', 'E'],
-	['𝑭', 'F'],
-	['𝑮', 'G'],
-	['𝑯', 'H'],
-	['𝑰', 'I'],
-	['𝑱', 'J'],
-	['𝑲', 'K'],
-	['𝑳', 'L'],
-	['𝑴', 'M'],
-	['𝑵', 'N'],
-	['𝑶', 'O'],
-	['𝑷', 'P'],
-	['𝑸', 'Q'],
-	['𝑹', 'R'],
-	['𝑺', 'S'],
-	['𝑻', 'T'],
-	['𝑼', 'U'],
-	['𝑽', 'V'],
-	['𝑾', 'W'],
-	['𝑿', 'X'],
-	['𝒀', 'Y'],
-	['𝒁', 'Z'],
-	['𝒂', 'a'],
-	['𝒃', 'b'],
-	['𝒄', 'c'],
-	['𝒅', 'd'],
-	['𝒆', 'e'],
-	['𝒇', 'f'],
-	['𝒈', 'g'],
-	['𝒉', 'h'],
-	['𝒊', 'i'],
-	['𝒋', 'j'],
-	['𝒌', 'k'],
-	['𝒍', 'l'],
-	['𝒎', 'm'],
-	['𝒏', 'n'],
-	['𝒐', 'o'],
-	['𝒑', 'p'],
-	['𝒒', 'q'],
-	['𝒓', 'r'],
-	['𝒔', 's'],
-	['𝒕', 't'],
-	['𝒖', 'u'],
-	['𝒗', 'v'],
-	['𝒘', 'w'],
-	['𝒙', 'x'],
-	['𝒚', 'y'],
-	['𝒛', 'z'],
-	['𝒜', 'A'],
-	['𝒞', 'C'],
-	['𝒟', 'D'],
-	['𝒢', 'g'],
-	['𝒥', 'J'],
-	['𝒦', 'K'],
-	['𝒩', 'N'],
-	['𝒪', 'O'],
-	['𝒫', 'P'],
-	['𝒬', 'Q'],
-	['𝒮', 'S'],
-	['𝒯', 'T'],
-	['𝒰', 'U'],
-	['𝒱', 'V'],
-	['𝒲', 'W'],
-	['𝒳', 'X'],
-	['𝒴', 'Y'],
-	['𝒵', 'Z'],
-	['𝒶', 'a'],
-	['𝒷', 'b'],
-	['𝒸', 'c'],
-	['𝒹', 'd'],
-	['𝒻', 'f'],
-	['𝒽', 'h'],
-	['𝒾', 'i'],
-	['𝒿', 'j'],
-	['𝓀', 'h'],
-	['𝓁', 'l'],
-	['𝓂', 'm'],
-	['𝓃', 'n'],
-	['𝓅', 'p'],
-	['𝓆', 'q'],
-	['𝓇', 'r'],
-	['𝓈', 's'],
-	['𝓉', 't'],
-	['𝓊', 'u'],
-	['𝓋', 'v'],
-	['𝓌', 'w'],
-	['𝓍', 'x'],
-	['𝓎', 'y'],
-	['𝓏', 'z'],
-	['𝓐', 'A'],
-	['𝓑', 'B'],
-	['𝓒', 'C'],
-	['𝓓', 'D'],
-	['𝓔', 'E'],
-	['𝓕', 'F'],
-	['𝓖', 'G'],
-	['𝓗', 'H'],
-	['𝓘', 'I'],
-	['𝓙', 'J'],
-	['𝓚', 'K'],
-	['𝓛', 'L'],
-	['𝓜', 'M'],
-	['𝓝', 'N'],
-	['𝓞', 'O'],
-	['𝓟', 'P'],
-	['𝓠', 'Q'],
-	['𝓡', 'R'],
-	['𝓢', 'S'],
-	['𝓣', 'T'],
-	['𝓤', 'U'],
-	['𝓥', 'V'],
-	['𝓦', 'W'],
-	['𝓧', 'X'],
-	['𝓨', 'Y'],
-	['𝓩', 'Z'],
-	['𝓪', 'a'],
-	['𝓫', 'b'],
-	['𝓬', 'c'],
-	['𝓭', 'd'],
-	['𝓮', 'e'],
-	['𝓯', 'f'],
-	['𝓰', 'g'],
-	['𝓱', 'h'],
-	['𝓲', 'i'],
-	['𝓳', 'j'],
-	['𝓴', 'k'],
-	['𝓵', 'l'],
-	['𝓶', 'm'],
-	['𝓷', 'n'],
-	['𝓸', 'o'],
-	['𝓹', 'p'],
-	['𝓺', 'q'],
-	['𝓻', 'r'],
-	['𝓼', 's'],
-	['𝓽', 't'],
-	['𝓾', 'u'],
-	['𝓿', 'v'],
-	['𝔀', 'w'],
-	['𝔁', 'x'],
-	['𝔂', 'y'],
-	['𝔃', 'z'],
-	['𝔄', 'A'],
-	['𝔅', 'B'],
-	['𝔇', 'D'],
-	['𝔈', 'E'],
-	['𝔉', 'F'],
-	['𝔊', 'G'],
-	['𝔍', 'J'],
-	['𝔎', 'K'],
-	['𝔏', 'L'],
-	['𝔐', 'M'],
-	['𝔑', 'N'],
-	['𝔒', 'O'],
-	['𝔓', 'P'],
-	['𝔔', 'Q'],
-	['𝔖', 'S'],
-	['𝔗', 'T'],
-	['𝔘', 'U'],
-	['𝔙', 'V'],
-	['𝔚', 'W'],
-	['𝔛', 'X'],
-	['𝔜', 'Y'],
-	['𝔞', 'a'],
-	['𝔟', 'b'],
-	['𝔠', 'c'],
-	['𝔡', 'd'],
-	['𝔢', 'e'],
-	['𝔣', 'f'],
-	['𝔤', 'g'],
-	['𝔥', 'h'],
-	['𝔦', 'i'],
-	['𝔧', 'j'],
-	['𝔨', 'k'],
-	['𝔩', 'l'],
-	['𝔪', 'm'],
-	['𝔫', 'n'],
-	['𝔬', 'o'],
-	['𝔭', 'p'],
-	['𝔮', 'q'],
-	['𝔯', 'r'],
-	['𝔰', 's'],
-	['𝔱', 't'],
-	['𝔲', 'u'],
-	['𝔳', 'v'],
-	['𝔴', 'w'],
-	['𝔵', 'x'],
-	['𝔶', 'y'],
-	['𝔷', 'z'],
-	['𝔸', 'A'],
-	['𝔹', 'B'],
-	['𝔻', 'D'],
-	['𝔼', 'E'],
-	['𝔽', 'F'],
-	['𝔾', 'G'],
-	['𝕀', 'I'],
-	['𝕁', 'J'],
-	['𝕂', 'K'],
-	['𝕃', 'L'],
-	['𝕄', 'M'],
-	['𝕆', 'N'],
-	['𝕊', 'S'],
-	['𝕋', 'T'],
-	['𝕌', 'U'],
-	['𝕍', 'V'],
-	['𝕎', 'W'],
-	['𝕏', 'X'],
-	['𝕐', 'Y'],
-	['𝕒', 'a'],
-	['𝕓', 'b'],
-	['𝕔', 'c'],
-	['𝕕', 'd'],
-	['𝕖', 'e'],
-	['𝕗', 'f'],
-	['𝕘', 'g'],
-	['𝕙', 'h'],
-	['𝕚', 'i'],
-	['𝕛', 'j'],
-	['𝕜', 'k'],
-	['𝕝', 'l'],
-	['𝕞', 'm'],
-	['𝕟', 'n'],
-	['𝕠', 'o'],
-	['𝕡', 'p'],
-	['𝕢', 'q'],
-	['𝕣', 'r'],
-	['𝕤', 's'],
-	['𝕥', 't'],
-	['𝕦', 'u'],
-	['𝕧', 'v'],
-	['𝕨', 'w'],
-	['𝕩', 'x'],
-	['𝕪', 'y'],
-	['𝕫', 'z'],
-	['𝕬', 'A'],
-	['𝕭', 'B'],
-	['𝕮', 'C'],
-	['𝕯', 'D'],
-	['𝕰', 'E'],
-	['𝕱', 'F'],
-	['𝕲', 'G'],
-	['𝕳', 'H'],
-	['𝕴', 'I'],
-	['𝕵', 'J'],
-	['𝕶', 'K'],
-	['𝕷', 'L'],
-	['𝕸', 'M'],
-	['𝕹', 'N'],
-	['𝕺', 'O'],
-	['𝕻', 'P'],
-	['𝕼', 'Q'],
-	['𝕽', 'R'],
-	['𝕾', 'S'],
-	['𝕿', 'T'],
-	['𝖀', 'U'],
-	['𝖁', 'V'],
-	['𝖂', 'W'],
-	['𝖃', 'X'],
-	['𝖄', 'Y'],
-	['𝖅', 'Z'],
-	['𝖆', 'a'],
-	['𝖇', 'b'],
-	['𝖈', 'c'],
-	['𝖉', 'd'],
-	['𝖊', 'e'],
-	['𝖋', 'f'],
-	['𝖌', 'g'],
-	['𝖍', 'h'],
-	['𝖎', 'i'],
-	['𝖏', 'j'],
-	['𝖐', 'k'],
-	['𝖑', 'l'],
-	['𝖒', 'm'],
-	['𝖓', 'n'],
-	['𝖔', 'o'],
-	['𝖕', 'p'],
-	['𝖖', 'q'],
-	['𝖗', 'r'],
-	['𝖘', 's'],
-	['𝖙', 't'],
-	['𝖚', 'u'],
-	['𝖛', 'v'],
-	['𝖜', 'w'],
-	['𝖝', 'x'],
-	['𝖞', 'y'],
-	['𝖟', 'z'],
-	['𝖠', 'A'],
-	['𝖡', 'B'],
-	['𝖢', 'C'],
-	['𝖣', 'D'],
-	['𝖤', 'E'],
-	['𝖥', 'F'],
-	['𝖦', 'G'],
-	['𝖧', 'H'],
-	['𝖨', 'I'],
-	['𝖩', 'J'],
-	['𝖪', 'K'],
-	['𝖫', 'L'],
-	['𝖬', 'M'],
-	['𝖭', 'N'],
-	['𝖮', 'O'],
-	['𝖯', 'P'],
-	['𝖰', 'Q'],
-	['𝖱', 'R'],
-	['𝖲', 'S'],
-	['𝖳', 'T'],
-	['𝖴', 'U'],
-	['𝖵', 'V'],
-	['𝖶', 'W'],
-	['𝖷', 'X'],
-	['𝖸', 'Y'],
-	['𝖹', 'Z'],
-	['𝖺', 'a'],
-	['𝖻', 'b'],
-	['𝖼', 'c'],
-	['𝖽', 'd'],
-	['𝖾', 'e'],
-	['𝖿', 'f'],
-	['𝗀', 'g'],
-	['𝗁', 'h'],
-	['𝗂', 'i'],
-	['𝗃', 'j'],
-	['𝗄', 'k'],
-	['𝗅', 'l'],
-	['𝗆', 'm'],
-	['𝗇', 'n'],
-	['𝗈', 'o'],
-	['𝗉', 'p'],
-	['𝗊', 'q'],
-	['𝗋', 'r'],
-	['𝗌', 's'],
-	['𝗍', 't'],
-	['𝗎', 'u'],
-	['𝗏', 'v'],
-	['𝗐', 'w'],
-	['𝗑', 'x'],
-	['𝗒', 'y'],
-	['𝗓', 'z'],
-	['𝗔', 'A'],
-	['𝗕', 'B'],
-	['𝗖', 'C'],
-	['𝗗', 'D'],
-	['𝗘', 'E'],
-	['𝗙', 'F'],
-	['𝗚', 'G'],
-	['𝗛', 'H'],
-	['𝗜', 'I'],
-	['𝗝', 'J'],
-	['𝗞', 'K'],
-	['𝗟', 'L'],
-	['𝗠', 'M'],
-	['𝗡', 'N'],
-	['𝗢', 'O'],
-	['𝗣', 'P'],
-	['𝗤', 'Q'],
-	['𝗥', 'R'],
-	['𝗦', 'S'],
-	['𝗧', 'T'],
-	['𝗨', 'U'],
-	['𝗩', 'V'],
-	['𝗪', 'W'],
-	['𝗫', 'X'],
-	['𝗬', 'Y'],
-	['𝗭', 'Z'],
-	['𝗮', 'a'],
-	['𝗯', 'b'],
-	['𝗰', 'c'],
-	['𝗱', 'd'],
-	['𝗲', 'e'],
-	['𝗳', 'f'],
-	['𝗴', 'g'],
-	['𝗵', 'h'],
-	['𝗶', 'i'],
-	['𝗷', 'j'],
-	['𝗸', 'k'],
-	['𝗹', 'l'],
-	['𝗺', 'm'],
-	['𝗻', 'n'],
-	['𝗼', 'o'],
-	['𝗽', 'p'],
-	['𝗾', 'q'],
-	['𝗿', 'r'],
-	['𝘀', 's'],
-	['𝘁', 't'],
-	['𝘂', 'u'],
-	['𝘃', 'v'],
-	['𝘄', 'w'],
-	['𝘅', 'x'],
-	['𝘆', 'y'],
-	['𝘇', 'z'],
-	['𝘈', 'A'],
-	['𝘉', 'B'],
-	['𝘊', 'C'],
-	['𝘋', 'D'],
-	['𝘌', 'E'],
-	['𝘍', 'F'],
-	['𝘎', 'G'],
-	['𝘏', 'H'],
-	['𝘐', 'I'],
-	['𝘑', 'J'],
-	['𝘒', 'K'],
-	['𝘓', 'L'],
-	['𝘔', 'M'],
-	['𝘕', 'N'],
-	['𝘖', 'O'],
-	['𝘗', 'P'],
-	['𝘘', 'Q'],
-	['𝘙', 'R'],
-	['𝘚', 'S'],
-	['𝘛', 'T'],
-	['𝘜', 'U'],
-	['𝘝', 'V'],
-	['𝘞', 'W'],
-	['𝘟', 'X'],
-	['𝘠', 'Y'],
-	['𝘡', 'Z'],
-	['𝘢', 'a'],
-	['𝘣', 'b'],
-	['𝘤', 'c'],
-	['𝘥', 'd'],
-	['𝘦', 'e'],
-	['𝘧', 'f'],
-	['𝘨', 'g'],
-	['𝘩', 'h'],
-	['𝘪', 'i'],
-	['𝘫', 'j'],
-	['𝘬', 'k'],
-	['𝘭', 'l'],
-	['𝘮', 'm'],
-	['𝘯', 'n'],
-	['𝘰', 'o'],
-	['𝘱', 'p'],
-	['𝘲', 'q'],
-	['𝘳', 'r'],
-	['𝘴', 's'],
-	['𝘵', 't'],
-	['𝘶', 'u'],
-	['𝘷', 'v'],
-	['𝘸', 'w'],
-	['𝘹', 'x'],
-	['𝘺', 'y'],
-	['𝘻', 'z'],
-	['𝘼', 'A'],
-	['𝘽', 'B'],
-	['𝘾', 'C'],
-	['𝘿', 'D'],
-	['𝙀', 'E'],
-	['𝙁', 'F'],
-	['𝙂', 'G'],
-	['𝙃', 'H'],
-	['𝙄', 'I'],
-	['𝙅', 'J'],
-	['𝙆', 'K'],
-	['𝙇', 'L'],
-	['𝙈', 'M'],
-	['𝙉', 'N'],
-	['𝙊', 'O'],
-	['𝙋', 'P'],
-	['𝙌', 'Q'],
-	['𝙍', 'R'],
-	['𝙎', 'S'],
-	['𝙏', 'T'],
-	['𝙐', 'U'],
-	['𝙑', 'V'],
-	['𝙒', 'W'],
-	['𝙓', 'X'],
-	['𝙔', 'Y'],
-	['𝙕', 'Z'],
-	['𝙖', 'a'],
-	['𝙗', 'b'],
-	['𝙘', 'c'],
-	['𝙙', 'd'],
-	['𝙚', 'e'],
-	['𝙛', 'f'],
-	['𝙜', 'g'],
-	['𝙝', 'h'],
-	['𝙞', 'i'],
-	['𝙟', 'j'],
-	['𝙠', 'k'],
-	['𝙡', 'l'],
-	['𝙢', 'm'],
-	['𝙣', 'n'],
-	['𝙤', 'o'],
-	['𝙥', 'p'],
-	['𝙦', 'q'],
-	['𝙧', 'r'],
-	['𝙨', 's'],
-	['𝙩', 't'],
-	['𝙪', 'u'],
-	['𝙫', 'v'],
-	['𝙬', 'w'],
-	['𝙭', 'x'],
-	['𝙮', 'y'],
-	['𝙯', 'z'],
-	['𝙰', 'A'],
-	['𝙱', 'B'],
-	['𝙲', 'C'],
-	['𝙳', 'D'],
-	['𝙴', 'E'],
-	['𝙵', 'F'],
-	['𝙶', 'G'],
-	['𝙷', 'H'],
-	['𝙸', 'I'],
-	['𝙹', 'J'],
-	['𝙺', 'K'],
-	['𝙻', 'L'],
-	['𝙼', 'M'],
-	['𝙽', 'N'],
-	['𝙾', 'O'],
-	['𝙿', 'P'],
-	['𝚀', 'Q'],
-	['𝚁', 'R'],
-	['𝚂', 'S'],
-	['𝚃', 'T'],
-	['𝚄', 'U'],
-	['𝚅', 'V'],
-	['𝚆', 'W'],
-	['𝚇', 'X'],
-	['𝚈', 'Y'],
-	['𝚉', 'Z'],
-	['𝚊', 'a'],
-	['𝚋', 'b'],
-	['𝚌', 'c'],
-	['𝚍', 'd'],
-	['𝚎', 'e'],
-	['𝚏', 'f'],
-	['𝚐', 'g'],
-	['𝚑', 'h'],
-	['𝚒', 'i'],
-	['𝚓', 'j'],
-	['𝚔', 'k'],
-	['𝚕', 'l'],
-	['𝚖', 'm'],
-	['𝚗', 'n'],
-	['𝚘', 'o'],
-	['𝚙', 'p'],
-	['𝚚', 'q'],
-	['𝚛', 'r'],
-	['𝚜', 's'],
-	['𝚝', 't'],
-	['𝚞', 'u'],
-	['𝚟', 'v'],
-	['𝚠', 'w'],
-	['𝚡', 'x'],
-	['𝚢', 'y'],
-	['𝚣', 'z'],
-
-	// Dotless letters
-	['𝚤', 'l'],
-	['𝚥', 'j'],
-
-	// Greek
-	['𝛢', 'A'],
-	['𝛣', 'B'],
-	['𝛤', 'G'],
-	['𝛥', 'D'],
-	['𝛦', 'E'],
-	['𝛧', 'Z'],
-	['𝛨', 'I'],
-	['𝛩', 'TH'],
-	['𝛪', 'I'],
-	['𝛫', 'K'],
-	['𝛬', 'L'],
-	['𝛭', 'M'],
-	['𝛮', 'N'],
-	['𝛯', 'KS'],
-	['𝛰', 'O'],
-	['𝛱', 'P'],
-	['𝛲', 'R'],
-	['𝛳', 'TH'],
-	['𝛴', 'S'],
-	['𝛵', 'T'],
-	['𝛶', 'Y'],
-	['𝛷', 'F'],
-	['𝛸', 'x'],
-	['𝛹', 'PS'],
-	['𝛺', 'O'],
-	['𝛻', 'D'],
-	['𝛼', 'a'],
-	['𝛽', 'b'],
-	['𝛾', 'g'],
-	['𝛿', 'd'],
-	['𝜀', 'e'],
-	['𝜁', 'z'],
-	['𝜂', 'i'],
-	['𝜃', 'th'],
-	['𝜄', 'i'],
-	['𝜅', 'k'],
-	['𝜆', 'l'],
-	['𝜇', 'm'],
-	['𝜈', 'n'],
-	['𝜉', 'ks'],
-	['𝜊', 'o'],
-	['𝜋', 'p'],
-	['𝜌', 'r'],
-	['𝜍', 's'],
-	['𝜎', 's'],
-	['𝜏', 't'],
-	['𝜐', 'y'],
-	['𝜑', 'f'],
-	['𝜒', 'x'],
-	['𝜓', 'ps'],
-	['𝜔', 'o'],
-	['𝜕', 'd'],
-	['𝜖', 'E'],
-	['𝜗', 'TH'],
-	['𝜘', 'K'],
-	['𝜙', 'f'],
-	['𝜚', 'r'],
-	['𝜛', 'p'],
-	['𝜜', 'A'],
-	['𝜝', 'V'],
-	['𝜞', 'G'],
-	['𝜟', 'D'],
-	['𝜠', 'E'],
-	['𝜡', 'Z'],
-	['𝜢', 'I'],
-	['𝜣', 'TH'],
-	['𝜤', 'I'],
-	['𝜥', 'K'],
-	['𝜦', 'L'],
-	['𝜧', 'M'],
-	['𝜨', 'N'],
-	['𝜩', 'KS'],
-	['𝜪', 'O'],
-	['𝜫', 'P'],
-	['𝜬', 'S'],
-	['𝜭', 'TH'],
-	['𝜮', 'S'],
-	['𝜯', 'T'],
-	['𝜰', 'Y'],
-	['𝜱', 'F'],
-	['𝜲', 'X'],
-	['𝜳', 'PS'],
-	['𝜴', 'O'],
-	['𝜵', 'D'],
-	['𝜶', 'a'],
-	['𝜷', 'v'],
-	['𝜸', 'g'],
-	['𝜹', 'd'],
-	['𝜺', 'e'],
-	['𝜻', 'z'],
-	['𝜼', 'i'],
-	['𝜽', 'th'],
-	['𝜾', 'i'],
-	['𝜿', 'k'],
-	['𝝀', 'l'],
-	['𝝁', 'm'],
-	['𝝂', 'n'],
-	['𝝃', 'ks'],
-	['𝝄', 'o'],
-	['𝝅', 'p'],
-	['𝝆', 'r'],
-	['𝝇', 's'],
-	['𝝈', 's'],
-	['𝝉', 't'],
-	['𝝊', 'y'],
-	['𝝋', 'f'],
-	['𝝌', 'x'],
-	['𝝍', 'ps'],
-	['𝝎', 'o'],
-	['𝝏', 'a'],
-	['𝝐', 'e'],
-	['𝝑', 'i'],
-	['𝝒', 'k'],
-	['𝝓', 'f'],
-	['𝝔', 'r'],
-	['𝝕', 'p'],
-	['𝝖', 'A'],
-	['𝝗', 'B'],
-	['𝝘', 'G'],
-	['𝝙', 'D'],
-	['𝝚', 'E'],
-	['𝝛', 'Z'],
-	['𝝜', 'I'],
-	['𝝝', 'TH'],
-	['𝝞', 'I'],
-	['𝝟', 'K'],
-	['𝝠', 'L'],
-	['𝝡', 'M'],
-	['𝝢', 'N'],
-	['𝝣', 'KS'],
-	['𝝤', 'O'],
-	['𝝥', 'P'],
-	['𝝦', 'R'],
-	['𝝧', 'TH'],
-	['𝝨', 'S'],
-	['𝝩', 'T'],
-	['𝝪', 'Y'],
-	['𝝫', 'F'],
-	['𝝬', 'X'],
-	['𝝭', 'PS'],
-	['𝝮', 'O'],
-	['𝝯', 'D'],
-	['𝝰', 'a'],
-	['𝝱', 'v'],
-	['𝝲', 'g'],
-	['𝝳', 'd'],
-	['𝝴', 'e'],
-	['𝝵', 'z'],
-	['𝝶', 'i'],
-	['𝝷', 'th'],
-	['𝝸', 'i'],
-	['𝝹', 'k'],
-	['𝝺', 'l'],
-	['𝝻', 'm'],
-	['𝝼', 'n'],
-	['𝝽', 'ks'],
-	['𝝾', 'o'],
-	['𝝿', 'p'],
-	['𝞀', 'r'],
-	['𝞁', 's'],
-	['𝞂', 's'],
-	['𝞃', 't'],
-	['𝞄', 'y'],
-	['𝞅', 'f'],
-	['𝞆', 'x'],
-	['𝞇', 'ps'],
-	['𝞈', 'o'],
-	['𝞉', 'a'],
-	['𝞊', 'e'],
-	['𝞋', 'i'],
-	['𝞌', 'k'],
-	['𝞍', 'f'],
-	['𝞎', 'r'],
-	['𝞏', 'p'],
-	['𝞐', 'A'],
-	['𝞑', 'V'],
-	['𝞒', 'G'],
-	['𝞓', 'D'],
-	['𝞔', 'E'],
-	['𝞕', 'Z'],
-	['𝞖', 'I'],
-	['𝞗', 'TH'],
-	['𝞘', 'I'],
-	['𝞙', 'K'],
-	['𝞚', 'L'],
-	['𝞛', 'M'],
-	['𝞜', 'N'],
-	['𝞝', 'KS'],
-	['𝞞', 'O'],
-	['𝞟', 'P'],
-	['𝞠', 'S'],
-	['𝞡', 'TH'],
-	['𝞢', 'S'],
-	['𝞣', 'T'],
-	['𝞤', 'Y'],
-	['𝞥', 'F'],
-	['𝞦', 'X'],
-	['𝞧', 'PS'],
-	['𝞨', 'O'],
-	['𝞩', 'D'],
-	['𝞪', 'av'],
-	['𝞫', 'g'],
-	['𝞬', 'd'],
-	['𝞭', 'e'],
-	['𝞮', 'z'],
-	['𝞯', 'i'],
-	['𝞰', 'i'],
-	['𝞱', 'th'],
-	['𝞲', 'i'],
-	['𝞳', 'k'],
-	['𝞴', 'l'],
-	['𝞵', 'm'],
-	['𝞶', 'n'],
-	['𝞷', 'ks'],
-	['𝞸', 'o'],
-	['𝞹', 'p'],
-	['𝞺', 'r'],
-	['𝞻', 's'],
-	['𝞼', 's'],
-	['𝞽', 't'],
-	['𝞾', 'y'],
-	['𝞿', 'f'],
-	['𝟀', 'x'],
-	['𝟁', 'ps'],
-	['𝟂', 'o'],
-	['𝟃', 'a'],
-	['𝟄', 'e'],
-	['𝟅', 'i'],
-	['𝟆', 'k'],
-	['𝟇', 'f'],
-	['𝟈', 'r'],
-	['𝟉', 'p'],
-	['𝟊', 'F'],
-	['𝟋', 'f'],
-	['⒜', '(a)'],
-	['⒝', '(b)'],
-	['⒞', '(c)'],
-	['⒟', '(d)'],
-	['⒠', '(e)'],
-	['⒡', '(f)'],
-	['⒢', '(g)'],
-	['⒣', '(h)'],
-	['⒤', '(i)'],
-	['⒥', '(j)'],
-	['⒦', '(k)'],
-	['⒧', '(l)'],
-	['⒨', '(m)'],
-	['⒩', '(n)'],
-	['⒪', '(o)'],
-	['⒫', '(p)'],
-	['⒬', '(q)'],
-	['⒭', '(r)'],
-	['⒮', '(s)'],
-	['⒯', '(t)'],
-	['⒰', '(u)'],
-	['⒱', '(v)'],
-	['⒲', '(w)'],
-	['⒳', '(x)'],
-	['⒴', '(y)'],
-	['⒵', '(z)'],
-	['Ⓐ', '(A)'],
-	['Ⓑ', '(B)'],
-	['Ⓒ', '(C)'],
-	['Ⓓ', '(D)'],
-	['Ⓔ', '(E)'],
-	['Ⓕ', '(F)'],
-	['Ⓖ', '(G)'],
-	['Ⓗ', '(H)'],
-	['Ⓘ', '(I)'],
-	['Ⓙ', '(J)'],
-	['Ⓚ', '(K)'],
-	['Ⓛ', '(L)'],
-	['Ⓝ', '(N)'],
-	['Ⓞ', '(O)'],
-	['Ⓟ', '(P)'],
-	['Ⓠ', '(Q)'],
-	['Ⓡ', '(R)'],
-	['Ⓢ', '(S)'],
-	['Ⓣ', '(T)'],
-	['Ⓤ', '(U)'],
-	['Ⓥ', '(V)'],
-	['Ⓦ', '(W)'],
-	['Ⓧ', '(X)'],
-	['Ⓨ', '(Y)'],
-	['Ⓩ', '(Z)'],
-	['ⓐ', '(a)'],
-	['ⓑ', '(b)'],
-	['ⓒ', '(b)'],
-	['ⓓ', '(c)'],
-	['ⓔ', '(e)'],
-	['ⓕ', '(f)'],
-	['ⓖ', '(g)'],
-	['ⓗ', '(h)'],
-	['ⓘ', '(i)'],
-	['ⓙ', '(j)'],
-	['ⓚ', '(k)'],
-	['ⓛ', '(l)'],
-	['ⓜ', '(m)'],
-	['ⓝ', '(n)'],
-	['ⓞ', '(o)'],
-	['ⓟ', '(p)'],
-	['ⓠ', '(q)'],
-	['ⓡ', '(r)'],
-	['ⓢ', '(s)'],
-	['ⓣ', '(t)'],
-	['ⓤ', '(u)'],
-	['ⓥ', '(v)'],
-	['ⓦ', '(w)'],
-	['ⓧ', '(x)'],
-	['ⓨ', '(y)'],
-	['ⓩ', '(z)'],
-
-	// Maltese
-	['Ċ', 'C'],
-	['ċ', 'c'],
-	['Ġ', 'G'],
-	['ġ', 'g'],
-	['Ħ', 'H'],
-	['ħ', 'h'],
-	['Ż', 'Z'],
-	['ż', 'z'],
-
-	// Numbers
-	['𝟎', '0'],
-	['𝟏', '1'],
-	['𝟐', '2'],
-	['𝟑', '3'],
-	['𝟒', '4'],
-	['𝟓', '5'],
-	['𝟔', '6'],
-	['𝟕', '7'],
-	['𝟖', '8'],
-	['𝟗', '9'],
-	['𝟘', '0'],
-	['𝟙', '1'],
-	['𝟚', '2'],
-	['𝟛', '3'],
-	['𝟜', '4'],
-	['𝟝', '5'],
-	['𝟞', '6'],
-	['𝟟', '7'],
-	['𝟠', '8'],
-	['𝟡', '9'],
-	['𝟢', '0'],
-	['𝟣', '1'],
-	['𝟤', '2'],
-	['𝟥', '3'],
-	['𝟦', '4'],
-	['𝟧', '5'],
-	['𝟨', '6'],
-	['𝟩', '7'],
-	['𝟪', '8'],
-	['𝟫', '9'],
-	['𝟬', '0'],
-	['𝟭', '1'],
-	['𝟮', '2'],
-	['𝟯', '3'],
-	['𝟰', '4'],
-	['𝟱', '5'],
-	['𝟲', '6'],
-	['𝟳', '7'],
-	['𝟴', '8'],
-	['𝟵', '9'],
-	['𝟶', '0'],
-	['𝟷', '1'],
-	['𝟸', '2'],
-	['𝟹', '3'],
-	['𝟺', '4'],
-	['𝟻', '5'],
-	['𝟼', '6'],
-	['𝟽', '7'],
-	['𝟾', '8'],
-	['𝟿', '9'],
-	['①', '1'],
-	['②', '2'],
-	['③', '3'],
-	['④', '4'],
-	['⑤', '5'],
-	['⑥', '6'],
-	['⑦', '7'],
-	['⑧', '8'],
-	['⑨', '9'],
-	['⑩', '10'],
-	['⑪', '11'],
-	['⑫', '12'],
-	['⑬', '13'],
-	['⑭', '14'],
-	['⑮', '15'],
-	['⑯', '16'],
-	['⑰', '17'],
-	['⑱', '18'],
-	['⑲', '19'],
-	['⑳', '20'],
-	['⑴', '1'],
-	['⑵', '2'],
-	['⑶', '3'],
-	['⑷', '4'],
-	['⑸', '5'],
-	['⑹', '6'],
-	['⑺', '7'],
-	['⑻', '8'],
-	['⑼', '9'],
-	['⑽', '10'],
-	['⑾', '11'],
-	['⑿', '12'],
-	['⒀', '13'],
-	['⒁', '14'],
-	['⒂', '15'],
-	['⒃', '16'],
-	['⒄', '17'],
-	['⒅', '18'],
-	['⒆', '19'],
-	['⒇', '20'],
-	['⒈', '1.'],
-	['⒉', '2.'],
-	['⒊', '3.'],
-	['⒋', '4.'],
-	['⒌', '5.'],
-	['⒍', '6.'],
-	['⒎', '7.'],
-	['⒏', '8.'],
-	['⒐', '9.'],
-	['⒑', '10.'],
-	['⒒', '11.'],
-	['⒓', '12.'],
-	['⒔', '13.'],
-	['⒕', '14.'],
-	['⒖', '15.'],
-	['⒗', '16.'],
-	['⒘', '17.'],
-	['⒙', '18.'],
-	['⒚', '19.'],
-	['⒛', '20.'],
-	['⓪', '0'],
-	['⓫', '11'],
-	['⓬', '12'],
-	['⓭', '13'],
-	['⓮', '14'],
-	['⓯', '15'],
-	['⓰', '16'],
-	['⓱', '17'],
-	['⓲', '18'],
-	['⓳', '19'],
-	['⓴', '20'],
-	['⓵', '1'],
-	['⓶', '2'],
-	['⓷', '3'],
-	['⓸', '4'],
-	['⓹', '5'],
-	['⓺', '6'],
-	['⓻', '7'],
-	['⓼', '8'],
-	['⓽', '9'],
-	['⓾', '10'],
-	['⓿', '0'],
-
-	// Punctuation
-	['🙰', '&'],
-	['🙱', '&'],
-	['🙲', '&'],
-	['🙳', '&'],
-	['🙴', '&'],
-	['🙵', '&'],
-	['🙶', '"'],
-	['🙷', '"'],
-	['🙸', '"'],
-	['‽', '?!'],
-	['🙹', '?!'],
-	['🙺', '?!'],
-	['🙻', '?!'],
-	['🙼', '/'],
-	['🙽', '\\'],
-
-	// Alchemy
-	['🜇', 'AR'],
-	['🜈', 'V'],
-	['🜉', 'V'],
-	['🜆', 'VR'],
-	['🜅', 'VF'],
-	['🜩', '2'],
-	['🜪', '5'],
-	['🝡', 'f'],
-	['🝢', 'W'],
-	['🝣', 'U'],
-	['🝧', 'V'],
-	['🝨', 'T'],
-	['🝪', 'V'],
-	['🝫', 'MB'],
-	['🝬', 'VB'],
-	['🝲', '3B'],
-	['🝳', '3B'],
-
-	// Emojis
-	['💯', '100'],
-	['🔙', 'BACK'],
-	['🔚', 'END'],
-	['🔛', 'ON!'],
-	['🔜', 'SOON'],
-	['🔝', 'TOP'],
-	['🔞', '18'],
-	['🔤', 'abc'],
-	['🔠', 'ABCD'],
-	['🔡', 'abcd'],
-	['🔢', '1234'],
-	['🔣', 'T&@%'],
-	['#️⃣', '#'],
-	['*️⃣', '*'],
-	['0️⃣', '0'],
-	['1️⃣', '1'],
-	['2️⃣', '2'],
-	['3️⃣', '3'],
-	['4️⃣', '4'],
-	['5️⃣', '5'],
-	['6️⃣', '6'],
-	['7️⃣', '7'],
-	['8️⃣', '8'],
-	['9️⃣', '9'],
-	['🔟', '10'],
-	['🅰️', 'A'],
-	['🅱️', 'B'],
-	['🆎', 'AB'],
-	['🆑', 'CL'],
-	['🅾️', 'O'],
-	['🅿', 'P'],
-	['🆘', 'SOS'],
-	['🅲', 'C'],
-	['🅳', 'D'],
-	['🅴', 'E'],
-	['🅵', 'F'],
-	['🅶', 'G'],
-	['🅷', 'H'],
-	['🅸', 'I'],
-	['🅹', 'J'],
-	['🅺', 'K'],
-	['🅻', 'L'],
-	['🅼', 'M'],
-	['🅽', 'N'],
-	['🆀', 'Q'],
-	['🆁', 'R'],
-	['🆂', 'S'],
-	['🆃', 'T'],
-	['🆄', 'U'],
-	['🆅', 'V'],
-	['🆆', 'W'],
-	['🆇', 'X'],
-	['🆈', 'Y'],
-	['🆉', 'Z']
-];
-
-const doCustomReplacements = (string, replacements) => {
-	for (const [key, value] of replacements) {
-		// TODO: Use `String#replaceAll()` when targeting Node.js 16.
-		string = string.replace(new RegExp(escapeStringRegexp$1(key), 'g'), value);
-	}
-
-	return string;
-};
-
-function transliterate(string, options) {
-	if (typeof string !== 'string') {
-		throw new TypeError(`Expected a string, got \`${typeof string}\``);
-	}
-
-	options = {
-		customReplacements: [],
-		...options
-	};
-
-	const customReplacements = new Map([
-		...replacements,
-		...options.customReplacements
-	]);
-
-	string = string.normalize();
-	string = doCustomReplacements(string, customReplacements);
-	string = string.normalize('NFD').replace(/\p{Diacritic}/gu, '').normalize();
-
-	return string;
-}
-
-const overridableReplacements = [
-	['&', ' and '],
-	['🦄', ' unicorn '],
-	['♥', ' love ']
-];
-
-const decamelize = string => {
-	return string
-		// Separate capitalized words.
-		.replace(/([A-Z]{2,})(\d+)/g, '$1 $2')
-		.replace(/([a-z\d]+)([A-Z]{2,})/g, '$1 $2')
-
-		.replace(/([a-z\d])([A-Z])/g, '$1 $2')
-		// `[a-rt-z]` matches all lowercase characters except `s`.
-		// This avoids matching plural acronyms like `APIs`.
-		.replace(/([A-Z]+)([A-Z][a-rt-z\d]+)/g, '$1 $2');
-};
-
-const removeMootSeparators = (string, separator) => {
-	const escapedSeparator = escapeStringRegexp$2(separator);
-
-	return string
-		.replace(new RegExp(`${escapedSeparator}{2,}`, 'g'), separator)
-		.replace(new RegExp(`^${escapedSeparator}|${escapedSeparator}$`, 'g'), '');
-};
-
-const buildPatternSlug = options => {
-	let negationSetPattern = 'a-z\\d';
-	negationSetPattern += options.lowercase ? '' : 'A-Z';
-
-	if (options.preserveCharacters.length > 0) {
-		for (const character of options.preserveCharacters) {
-			if (character === options.separator) {
-				throw new Error(`The separator character \`${options.separator}\` cannot be included in preserved characters: ${options.preserveCharacters}`);
-			}
-
-			negationSetPattern += escapeStringRegexp$2(character);
-		}
-	}
-
-	return new RegExp(`[^${negationSetPattern}]+`, 'g');
-};
-
-function slugify(string, options) {
-	if (typeof string !== 'string') {
-		throw new TypeError(`Expected a string, got \`${typeof string}\``);
-	}
-
-	options = {
-		separator: '-',
-		lowercase: true,
-		decamelize: true,
-		customReplacements: [],
-		preserveLeadingUnderscore: false,
-		preserveTrailingDash: false,
-		preserveCharacters: [],
-		...options
-	};
-
-	const shouldPrependUnderscore = options.preserveLeadingUnderscore && string.startsWith('_');
-	const shouldAppendDash = options.preserveTrailingDash && string.endsWith('-');
-
-	const customReplacements = new Map([
-		...overridableReplacements,
-		...options.customReplacements
-	]);
-
-	string = transliterate(string, {customReplacements});
-
-	if (options.decamelize) {
-		string = decamelize(string);
-	}
-
-	const patternSlug = buildPatternSlug(options);
-
-	if (options.lowercase) {
-		string = string.toLowerCase();
-	}
-
-	// Detect contractions/possessives by looking for any word followed by a `'t`
-	// or `'s` in isolation and then remove it.
-	string = string.replace(/([a-zA-Z\d]+)'([ts])(\s|$)/g, '$1$2$3');
-
-	string = string.replace(patternSlug, options.separator);
-	string = string.replace(/\\/g, '');
-
-	if (options.separator) {
-		string = removeMootSeparators(string, options.separator);
-	}
-
-	if (shouldPrependUnderscore) {
-		string = `_${string}`;
-	}
-
-	if (shouldAppendDash) {
-		string = `${string}-`;
-	}
-
-	return string;
-}
-
-/**
-Build a command that splits a non-empty textblock at the top level
-of a list item by also splitting that list item.
-*/
-function splitListItem(itemType, itemAttrs) {
-    return function (state, dispatch) {
-        let { $from, $to, node } = state.selection;
-        if ((node && node.isBlock) || $from.depth < 2 || !$from.sameParent($to))
-            return false;
-        let grandParent = $from.node(-1);
-        if (grandParent.type != itemType)
-            return false;
-        if ($from.parent.content.size == 0 && $from.node(-1).childCount == $from.indexAfter(-1)) {
-            // In an empty block. If this is a nested list, the wrapping
-            // list item should be split. Otherwise, bail out and let next
-            // command handle lifting.
-            if ($from.depth == 3 || $from.node(-3).type != itemType ||
-                $from.index(-2) != $from.node(-2).childCount - 1)
-                return false;
-            if (dispatch) {
-                let wrap = Fragment.empty;
-                let depthBefore = $from.index(-1) ? 1 : $from.index(-2) ? 2 : 3;
-                // Build a fragment containing empty versions of the structure
-                // from the outer list item to the parent node of the cursor
-                for (let d = $from.depth - depthBefore; d >= $from.depth - 3; d--)
-                    wrap = Fragment.from($from.node(d).copy(wrap));
-                let depthAfter = $from.indexAfter(-1) < $from.node(-2).childCount ? 1
-                    : $from.indexAfter(-2) < $from.node(-3).childCount ? 2 : 3;
-                // Add a second list item with an empty default start node
-                wrap = wrap.append(Fragment.from(itemType.createAndFill()));
-                let start = $from.before($from.depth - (depthBefore - 1));
-                let tr = state.tr.replace(start, $from.after(-depthAfter), new Slice(wrap, 4 - depthBefore, 0));
-                let sel = -1;
-                tr.doc.nodesBetween(start, tr.doc.content.size, (node, pos) => {
-                    if (sel > -1)
-                        return false;
-                    if (node.isTextblock && node.content.size == 0)
-                        sel = pos + 1;
-                });
-                if (sel > -1)
-                    tr.setSelection(Selection.near(tr.doc.resolve(sel)));
-                dispatch(tr.scrollIntoView());
-            }
-            return true;
-        }
-        let nextType = $to.pos == $from.end() ? grandParent.contentMatchAt(0).defaultType : null;
-        let tr = state.tr.delete($from.pos, $to.pos);
-        let types = nextType ? [itemAttrs ? { type: itemType, attrs: itemAttrs } : null, { type: nextType }] : undefined;
-        if (!canSplit(tr.doc, $from.pos, 2, types))
-            return false;
-        if (dispatch)
-            dispatch(tr.split($from.pos, 2, types).scrollIntoView());
-        return true;
-    };
-}
-/**
-Create a command to lift the list item around the selection up into
-a wrapping list.
-*/
-function liftListItem(itemType) {
-    return function (state, dispatch) {
-        let { $from, $to } = state.selection;
-        let range = $from.blockRange($to, node => node.childCount > 0 && node.firstChild.type == itemType);
-        if (!range)
-            return false;
-        if (!dispatch)
-            return true;
-        if ($from.node(range.depth - 1).type == itemType) // Inside a parent list
-            return liftToOuterList(state, dispatch, itemType, range);
-        else // Outer list node
-            return liftOutOfList(state, dispatch, range);
-    };
-}
-function liftToOuterList(state, dispatch, itemType, range) {
-    let tr = state.tr, end = range.end, endOfList = range.$to.end(range.depth);
-    if (end < endOfList) {
-        // There are siblings after the lifted items, which must become
-        // children of the last item
-        tr.step(new ReplaceAroundStep(end - 1, endOfList, end, endOfList, new Slice(Fragment.from(itemType.create(null, range.parent.copy())), 1, 0), 1, true));
-        range = new NodeRange(tr.doc.resolve(range.$from.pos), tr.doc.resolve(endOfList), range.depth);
-    }
-    const target = liftTarget(range);
-    if (target == null)
-        return false;
-    tr.lift(range, target);
-    let after = tr.mapping.map(end, -1) - 1;
-    if (canJoin(tr.doc, after))
-        tr.join(after);
-    dispatch(tr.scrollIntoView());
-    return true;
-}
-function liftOutOfList(state, dispatch, range) {
-    let tr = state.tr, list = range.parent;
-    // Merge the list items into a single big item
-    for (let pos = range.end, i = range.endIndex - 1, e = range.startIndex; i > e; i--) {
-        pos -= list.child(i).nodeSize;
-        tr.delete(pos - 1, pos + 1);
-    }
-    let $start = tr.doc.resolve(range.start), item = $start.nodeAfter;
-    if (tr.mapping.map(range.end) != range.start + $start.nodeAfter.nodeSize)
-        return false;
-    let atStart = range.startIndex == 0, atEnd = range.endIndex == list.childCount;
-    let parent = $start.node(-1), indexBefore = $start.index(-1);
-    if (!parent.canReplace(indexBefore + (atStart ? 0 : 1), indexBefore + 1, item.content.append(atEnd ? Fragment.empty : Fragment.from(list))))
-        return false;
-    let start = $start.pos, end = start + item.nodeSize;
-    // Strip off the surrounding list. At the sides where we're not at
-    // the end of the list, the existing list is closed. At sides where
-    // this is the end, it is overwritten to its end.
-    tr.step(new ReplaceAroundStep(start - (atStart ? 1 : 0), end + (atEnd ? 1 : 0), start + 1, end - 1, new Slice((atStart ? Fragment.empty : Fragment.from(list.copy(Fragment.empty)))
-        .append(atEnd ? Fragment.empty : Fragment.from(list.copy(Fragment.empty))), atStart ? 0 : 1, atEnd ? 0 : 1), atStart ? 0 : 1));
-    dispatch(tr.scrollIntoView());
-    return true;
-}
-/**
-Create a command to sink the list item around the selection down
-into an inner list.
-*/
-function sinkListItem(itemType) {
-    return function (state, dispatch) {
-        let { $from, $to } = state.selection;
-        let range = $from.blockRange($to, node => node.childCount > 0 && node.firstChild.type == itemType);
-        if (!range)
-            return false;
-        let startIndex = range.startIndex;
-        if (startIndex == 0)
-            return false;
-        let parent = range.parent, nodeBefore = parent.child(startIndex - 1);
-        if (nodeBefore.type != itemType)
-            return false;
-        if (dispatch) {
-            let nestedBefore = nodeBefore.lastChild && nodeBefore.lastChild.type == parent.type;
-            let inner = Fragment.from(nestedBefore ? itemType.create() : null);
-            let slice = new Slice(Fragment.from(itemType.create(null, Fragment.from(parent.type.create(null, inner)))), nestedBefore ? 3 : 1, 0);
-            let before = range.start, after = range.end;
-            dispatch(state.tr.step(new ReplaceAroundStep(before - (nestedBefore ? 3 : 1), after, before, after, slice, 1, true))
-                .scrollIntoView());
-        }
-        return true;
-    };
-}
-
-/**
- * @typedef {import('mdast').Definition} Definition
- * @typedef {import('mdast').Nodes} Nodes
- */
-
-
-/**
- * Find definitions in `tree`.
- *
- * Uses CommonMark precedence, which means that earlier definitions are
- * preferred over duplicate later definitions.
- *
- * @param {Nodes} tree
- *   Tree to check.
- * @returns {GetDefinition}
- *   Getter.
- */
-function definitions(tree) {
-  /** @type {Map<string, Definition>} */
-  const cache = new Map();
-
-  if (!tree || !tree.type) {
-    throw new Error('mdast-util-definitions expected node')
-  }
-
-  visit(tree, 'definition', function (definition) {
-    const id = clean(definition.identifier);
-    if (id && !cache.get(id)) {
-      cache.set(id, definition);
-    }
-  });
-
-  return definition
-
-  /** @type {GetDefinition} */
-  function definition(identifier) {
-    const id = clean(identifier);
-    return cache.get(id)
-  }
-}
-
-/**
- * @param {string | null | undefined} [value]
- * @returns {string}
- */
-function clean(value) {
-  return String(value || '').toUpperCase()
-}
-
-/**
- * @typedef {import('mdast').Root} Root
- */
-
-
-/**
- * Turn references and definitions into normal links and images.
- *
- * @returns
- *   Transform.
- */
-function remarkInlineLinks() {
-  /**
-   * Transform.
-   *
-   * @param {Root} tree
-   *   Tree.
-   * @returns {undefined}
-   *   Nothing.
-   */
-  return function (tree) {
-    const definition = definitions(tree);
-
-    visit(tree, function (node, index, parent) {
-      if (
-        node.type === 'definition' &&
-        parent !== undefined &&
-        typeof index === 'number'
-      ) {
-        parent.children.splice(index, 1);
-        return [SKIP, index]
-      }
-
-      if (node.type === 'imageReference' || node.type === 'linkReference') {
-        const def = definition(node.identifier);
-
-        if (def && parent && typeof index === 'number') {
-          parent.children[index] =
-            node.type === 'imageReference'
-              ? {type: 'image', url: def.url, title: def.title, alt: node.alt}
-              : {
-                  type: 'link',
-                  url: def.url,
-                  title: def.title,
-                  children: node.children
-                };
-          return [SKIP, index]
-        }
-      }
-    });
-  }
-}
-
-function at$1(t, e) {
-  var o;
-  if (!(e.childCount >= 1 && ((o = e.lastChild) == null ? void 0 : o.type.name) === "hardbreak")) {
-    t.next(e.content);
-    return;
-  }
-  const a = [];
-  e.content.forEach((s, l, i) => {
-    i !== e.childCount - 1 && a.push(s);
-  }), t.next(Fragment.fromArray(a));
-}
-function n(t, e) {
-  return Object.assign(t, {
-    meta: {
-      package: "@milkdown/preset-commonmark",
-      ...e
-    }
-  }), t;
-}
-const Z$1 = we$2("emphasis");
-n(Z$1, {
-  displayName: "Attr<emphasis>",
-  group: "Emphasis"
-});
-const R$1 = ye$2("emphasis", (t) => ({
-  attrs: {
-    marker: {
-      default: t.get(Q$2).emphasis || "*"
-    }
-  },
-  parseDOM: [
-    { tag: "i" },
-    { tag: "em" },
-    { style: "font-style", getAttrs: (e) => e === "italic" }
-  ],
-  toDOM: (e) => ["em", t.get(Z$1.key)(e)],
-  parseMarkdown: {
-    match: (e) => e.type === "emphasis",
-    runner: (e, r, a) => {
-      e.openMark(a, { marker: r.marker }), e.next(r.children), e.closeMark(a);
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === "emphasis",
-    runner: (e, r) => {
-      e.withMark(r, "emphasis", void 0, {
-        marker: r.attrs.marker
-      });
-    }
-  }
-}));
-n(R$1.mark, {
-  displayName: "MarkSchema<emphasis>",
-  group: "Emphasis"
-});
-n(R$1.ctx, {
-  displayName: "MarkSchemaCtx<emphasis>",
-  group: "Emphasis"
-});
-const ee = re$1("ToggleEmphasis", (t) => () => toggleMark(R$1.type(t)));
-n(ee, {
-  displayName: "Command<toggleEmphasisCommand>",
-  group: "Emphasis"
-});
-const nt$1 = oe$1((t) => markRule(/(?:^|[^*])\*([^*]+)\*$/, R$1.type(t), {
-  updateCaptured: ({ fullMatch: e, start: r }) => e.startsWith("*") ? {} : { fullMatch: e.slice(1), start: r + 1 }
-}));
-n(nt$1, {
-  displayName: "InputRule<emphasis>|Star",
-  group: "Emphasis"
-});
-const ot$1 = oe$1((t) => markRule(/(?:^|[^_])_([^_]+)_$/, R$1.type(t), {
-  updateCaptured: ({ fullMatch: e, start: r }) => e.startsWith("_") ? {} : { fullMatch: e.slice(1), start: r + 1 }
-}));
-n(ot$1, {
-  displayName: "InputRule<emphasis>|Underscore",
-  group: "Emphasis"
-});
-const te = ge$2("emphasisKeymap", {
-  ToggleEmphasis: {
-    shortcuts: "Mod-i",
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(ee.key);
-    }
-  }
-});
-n(te.ctx, {
-  displayName: "KeymapCtx<emphasis>",
-  group: "Emphasis"
-});
-n(te.shortcuts, {
-  displayName: "Keymap<emphasis>",
-  group: "Emphasis"
-});
-const re = we$2("strong");
-n(re, {
-  displayName: "Attr<strong>",
-  group: "Strong"
-});
-const $ = ye$2("strong", (t) => ({
-  attrs: {
-    marker: {
-      default: t.get(Q$2).strong || "*"
-    }
-  },
-  parseDOM: [
-    { tag: "b" },
-    { tag: "strong" },
-    { style: "font-style", getAttrs: (e) => e === "bold" }
-  ],
-  toDOM: (e) => ["strong", t.get(re.key)(e)],
-  parseMarkdown: {
-    match: (e) => e.type === "strong",
-    runner: (e, r, a) => {
-      e.openMark(a, { marker: r.marker }), e.next(r.children), e.closeMark(a);
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === "strong",
-    runner: (e, r) => {
-      e.withMark(r, "strong", void 0, {
-        marker: r.attrs.marker
-      });
-    }
-  }
-}));
-n($.mark, {
-  displayName: "MarkSchema<strong>",
-  group: "Strong"
-});
-n($.ctx, {
-  displayName: "MarkSchemaCtx<strong>",
-  group: "Strong"
-});
-const ae$1 = re$1("ToggleStrong", (t) => () => toggleMark($.type(t)));
-n(ae$1, {
-  displayName: "Command<toggleStrongCommand>",
-  group: "Strong"
-});
-const st$1 = oe$1((t) => markRule(/(?:\*\*|__)([^*_]+)(?:\*\*|__)$/, $.type(t)));
-n(st$1, {
-  displayName: "InputRule<strong>",
-  group: "Strong"
-});
-const ne = ge$2("strongKeymap", {
-  ToggleBold: {
-    shortcuts: ["Mod-b"],
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(ae$1.key);
-    }
-  }
-});
-n(ne.ctx, {
-  displayName: "KeymapCtx<strong>",
-  group: "Strong"
-});
-n(ne.shortcuts, {
-  displayName: "Keymap<strong>",
-  group: "Strong"
-});
-const oe = we$2("inlineCode");
-n(oe, {
-  displayName: "Attr<inlineCode>",
-  group: "InlineCode"
-});
-const x = ye$2("inlineCode", (t) => ({
-  priority: 100,
-  code: !0,
-  inclusive: !1,
-  parseDOM: [{ tag: "code" }],
-  toDOM: (e) => ["code", t.get(oe.key)(e)],
-  parseMarkdown: {
-    match: (e) => e.type === "inlineCode",
-    runner: (e, r, a) => {
-      e.openMark(a), e.addText(r.value), e.closeMark(a);
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === "inlineCode",
-    runner: (e, r, a) => {
-      e.withMark(r, "inlineCode", a.text || "");
-    }
-  }
-}));
-n(x.mark, {
-  displayName: "MarkSchema<inlineCode>",
-  group: "InlineCode"
-});
-n(x.ctx, {
-  displayName: "MarkSchemaCtx<inlineCode>",
-  group: "InlineCode"
-});
-const se$1 = re$1("ToggleInlineCode", (t) => () => (e, r) => {
-  const { selection: a, tr: o } = e;
-  if (a.empty)
-    return !1;
-  const { from: s, to: l } = a;
-  return e.doc.rangeHasMark(s, l, x.type(t)) ? (r == null || r(o.removeMark(s, l, x.type(t))), !0) : (Object.keys(e.schema.marks).filter((m) => m !== x.type.name).map((m) => e.schema.marks[m]).forEach((m) => {
-    o.removeMark(s, l, m);
-  }), r == null || r(o.addMark(s, l, x.type(t).create())), !0);
-});
-n(se$1, {
-  displayName: "Command<toggleInlineCodeCommand>",
-  group: "InlineCode"
-});
-const lt$1 = oe$1((t) => markRule(/(?:\`)([^\`]+)(?:\`)$/, x.type(t)));
-n(lt$1, {
-  displayName: "InputRule<inlineCodeInputRule>",
-  group: "InlineCode"
-});
-const le = ge$2("inlineCodeKeymap", {
-  ToggleInlineCode: {
-    shortcuts: "Mod-e",
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(se$1.key);
-    }
-  }
-});
-n(le.ctx, {
-  displayName: "KeymapCtx<inlineCode>",
-  group: "InlineCode"
-});
-n(le.shortcuts, {
-  displayName: "Keymap<inlineCode>",
-  group: "InlineCode"
-});
-const ie$1 = we$2("link");
-n(ie$1, {
-  displayName: "Attr<link>",
-  group: "Link"
-});
-const B = ye$2("link", (t) => ({
-  attrs: {
-    href: {},
-    title: { default: null }
-  },
-  parseDOM: [
-    {
-      tag: "a[href]",
-      getAttrs: (e) => {
-        if (!(e instanceof HTMLElement))
-          throw S$5(e);
-        return { href: e.getAttribute("href"), title: e.getAttribute("title") };
-      }
-    }
-  ],
-  toDOM: (e) => ["a", { ...t.get(ie$1.key)(e), ...e.attrs }],
-  parseMarkdown: {
-    match: (e) => e.type === "link",
-    runner: (e, r, a) => {
-      const o = r.url, s = r.title;
-      e.openMark(a, { href: o, title: s }), e.next(r.children), e.closeMark(a);
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === "link",
-    runner: (e, r) => {
-      e.withMark(r, "link", void 0, {
-        title: r.attrs.title,
-        url: r.attrs.href
-      });
-    }
-  }
-}));
-n(B.mark, {
-  displayName: "MarkSchema<link>",
-  group: "Link"
-});
-const it$1 = re$1("ToggleLink", (t) => (e = {}) => toggleMark(B.type(t), e));
-n(it$1, {
-  displayName: "Command<toggleLinkCommand>",
-  group: "Link"
-});
-const dt$1 = re$1("UpdateLink", (t) => (e = {}) => (r, a) => {
-  if (!a)
-    return !1;
-  let o, s = -1;
-  const { selection: l } = r, { from: i, to: d } = l;
-  if (r.doc.nodesBetween(i, i === d ? d + 1 : d, (y, b) => {
-    if (B.type(t).isInSet(y.marks))
-      return o = y, s = b, !1;
-  }), !o)
-    return !1;
-  const m = o.marks.find(({ type: y }) => y === B.type(t));
-  if (!m)
-    return !1;
-  const p = s, k = s + o.nodeSize, { tr: g } = r, C = B.type(t).create({ ...m.attrs, ...e });
-  return C ? (a(
-    g.removeMark(p, k, m).addMark(p, k, C).setSelection(new TextSelection(g.selection.$anchor)).scrollIntoView()
-  ), !0) : !1;
-});
-n(dt$1, {
-  displayName: "Command<updateLinkCommand>",
-  group: "Link"
-});
-const mt = W$3("doc", () => ({
-  content: "block+",
-  parseMarkdown: {
-    match: ({ type: t }) => t === "root",
-    runner: (t, e, r) => {
-      t.injectRoot(e, r);
-    }
-  },
-  toMarkdown: {
-    match: (t) => t.type.name === "doc",
-    runner: (t, e) => {
-      t.openNode("root"), t.next(e.content);
-    }
-  }
-}));
-n(mt, {
-  displayName: "NodeSchema<doc>",
-  group: "Doc"
-});
-const de$1 = he$2("paragraph");
-n(de$1, {
-  displayName: "Attr<paragraph>",
-  group: "Paragraph"
-});
-const A$1 = fe$2("paragraph", (t) => ({
-  content: "inline*",
-  group: "block",
-  parseDOM: [{ tag: "p" }],
-  toDOM: (e) => ["p", t.get(de$1.key)(e), 0],
-  parseMarkdown: {
-    match: (e) => e.type === "paragraph",
-    runner: (e, r, a) => {
-      e.openNode(a), r.children ? e.next(r.children) : e.addText(r.value || ""), e.closeNode();
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === "paragraph",
-    runner: (e, r) => {
-      e.openNode("paragraph"), at$1(e, r), e.closeNode();
-    }
-  }
-}));
-n(A$1.node, {
-  displayName: "NodeSchema<paragraph>",
-  group: "Paragraph"
-});
-n(A$1.ctx, {
-  displayName: "NodeSchemaCtx<paragraph>",
-  group: "Paragraph"
-});
-const me$1 = re$1("TurnIntoText", (t) => () => setBlockType(A$1.type(t)));
-n(me$1, {
-  displayName: "Command<turnIntoTextCommand>",
-  group: "Paragraph"
-});
-const pe$1 = ge$2("paragraphKeymap", {
-  TurnIntoText: {
-    shortcuts: "Mod-Alt-0",
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(me$1.key);
-    }
-  }
-});
-n(pe$1.ctx, {
-  displayName: "KeymapCtx<paragraph>",
-  group: "Paragraph"
-});
-n(pe$1.shortcuts, {
-  displayName: "Keymap<paragraph>",
-  group: "Paragraph"
-});
-const Dt = Array(6).fill(0).map((t, e) => e + 1);
-function _t(t) {
-  return slugify(t.textContent);
-}
-const j$1 = h(_t, "headingIdGenerator");
-n(j$1, {
-  displayName: "Ctx<HeadingIdGenerator>",
-  group: "Heading"
-});
-const ce$1 = he$2("heading");
-n(ce$1, {
-  displayName: "Attr<heading>",
-  group: "Heading"
-});
-const H$1 = fe$2("heading", (t) => {
-  const e = t.get(j$1.key);
-  return {
-    content: "inline*",
-    group: "block",
-    defining: !0,
-    attrs: {
-      id: {
-        default: ""
-      },
-      level: {
-        default: 1
-      }
-    },
-    parseDOM: Dt.map((r) => ({
-      tag: `h${r}`,
-      getAttrs: (a) => {
-        if (!(a instanceof HTMLElement))
-          throw S$5(a);
-        return { level: r, id: a.id };
-      }
-    })),
-    toDOM: (r) => [
-      `h${r.attrs.level}`,
-      {
-        ...t.get(ce$1.key)(r),
-        id: r.attrs.id || e(r)
-      },
-      0
-    ],
-    parseMarkdown: {
-      match: ({ type: r }) => r === "heading",
-      runner: (r, a, o) => {
-        const s = a.depth;
-        r.openNode(o, { level: s }), r.next(a.children), r.closeNode();
-      }
-    },
-    toMarkdown: {
-      match: (r) => r.type.name === "heading",
-      runner: (r, a) => {
-        r.openNode("heading", void 0, { depth: a.attrs.level }), at$1(r, a), r.closeNode();
-      }
-    }
-  };
-});
-n(H$1.node, {
-  displayName: "NodeSchema<heading>",
-  group: "Heading"
-});
-n(H$1.ctx, {
-  displayName: "NodeSchemaCtx<heading>",
-  group: "Heading"
-});
-const pt = oe$1((t) => textblockTypeInputRule(/^(?<hashes>#+)\s$/, H$1.type(t), (e) => {
-  var l, i;
-  const r = ((i = (l = e.groups) == null ? void 0 : l.hashes) == null ? void 0 : i.length) || 0, a = t.get(H$2), { $from: o } = a.state.selection, s = o.node();
-  if (s.type.name === "heading") {
-    let d = Number(s.attrs.level) + Number(r);
-    return d > 6 && (d = 6), { level: d };
-  }
-  return { level: r };
-}));
-n(pt, {
-  displayName: "InputRule<wrapInHeadingInputRule>",
-  group: "Heading"
-});
-const L$1 = re$1("WrapInHeading", (t) => (e) => (e ?? (e = 1), e < 1 ? setBlockType(A$1.type(t)) : setBlockType(H$1.type(t), { level: e })));
-n(L$1, {
-  displayName: "Command<wrapInHeadingCommand>",
-  group: "Heading"
-});
-const ue$1 = re$1("DowngradeHeading", (t) => () => (e, r, a) => {
-  const { $from: o } = e.selection, s = o.node();
-  if (s.type !== H$1.type(t) || !e.selection.empty || o.parentOffset !== 0)
-    return !1;
-  const l = s.attrs.level - 1;
-  return l ? (r == null || r(
-    e.tr.setNodeMarkup(e.selection.$from.before(), void 0, {
-      ...s.attrs,
-      level: l
-    })
-  ), !0) : setBlockType(A$1.type(t))(e, r, a);
-});
-n(ue$1, {
-  displayName: "Command<downgradeHeadingCommand>",
-  group: "Heading"
-});
-const ge$1 = ge$2("headingKeymap", {
-  TurnIntoH1: {
-    shortcuts: "Mod-Alt-1",
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(L$1.key, 1);
-    }
-  },
-  TurnIntoH2: {
-    shortcuts: "Mod-Alt-2",
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(L$1.key, 2);
-    }
-  },
-  TurnIntoH3: {
-    shortcuts: "Mod-Alt-3",
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(L$1.key, 3);
-    }
-  },
-  TurnIntoH4: {
-    shortcuts: "Mod-Alt-4",
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(L$1.key, 4);
-    }
-  },
-  TurnIntoH5: {
-    shortcuts: "Mod-Alt-5",
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(L$1.key, 5);
-    }
-  },
-  TurnIntoH6: {
-    shortcuts: "Mod-Alt-6",
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(L$1.key, 6);
-    }
-  },
-  DowngradeHeading: {
-    shortcuts: ["Delete", "Backspace"],
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(ue$1.key);
-    }
-  }
-});
-n(ge$1.ctx, {
-  displayName: "KeymapCtx<heading>",
-  group: "Heading"
-});
-n(ge$1.shortcuts, {
-  displayName: "Keymap<heading>",
-  group: "Heading"
-});
-const ye$1 = he$2("blockquote");
-n(ye$1, {
-  displayName: "Attr<blockquote>",
-  group: "Blockquote"
-});
-const q$1 = fe$2("blockquote", (t) => ({
-  content: "block+",
-  group: "block",
-  defining: !0,
-  parseDOM: [{ tag: "blockquote" }],
-  toDOM: (e) => ["blockquote", t.get(ye$1.key)(e), 0],
-  parseMarkdown: {
-    match: ({ type: e }) => e === "blockquote",
-    runner: (e, r, a) => {
-      e.openNode(a).next(r.children).closeNode();
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === "blockquote",
-    runner: (e, r) => {
-      e.openNode("blockquote").next(r.content).closeNode();
-    }
-  }
-}));
-n(q$1.node, {
-  displayName: "NodeSchema<blockquote>",
-  group: "Blockquote"
-});
-n(q$1.ctx, {
-  displayName: "NodeSchemaCtx<blockquote>",
-  group: "Blockquote"
-});
-const ct$1 = oe$1((t) => wrappingInputRule(/^\s*>\s$/, q$1.type(t)));
-n(ct$1, {
-  displayName: "InputRule<wrapInBlockquoteInputRule>",
-  group: "Blockquote"
-});
-const ke$1 = re$1("WrapInBlockquote", (t) => () => wrapIn(q$1.type(t)));
-n(ke$1, {
-  displayName: "Command<wrapInBlockquoteCommand>",
-  group: "Blockquote"
-});
-const he$1 = ge$2("blockquoteKeymap", {
-  WrapInBlockquote: {
-    shortcuts: "Mod-Shift-b",
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(ke$1.key);
-    }
-  }
-});
-n(he$1.ctx, {
-  displayName: "KeymapCtx<blockquote>",
-  group: "Blockquote"
-});
-n(he$1.shortcuts, {
-  displayName: "Keymap<blockquote>",
-  group: "Blockquote"
-});
-const fe$1 = he$2("codeBlock", () => ({
-  pre: {},
-  code: {}
-}));
-n(fe$1, {
-  displayName: "Attr<codeBlock>",
-  group: "CodeBlock"
-});
-const W$2 = fe$2("code_block", (t) => ({
-  content: "text*",
-  group: "block",
-  marks: "",
-  defining: !0,
-  code: !0,
-  attrs: {
-    language: {
-      default: ""
-    }
-  },
-  parseDOM: [
-    {
-      tag: "pre",
-      preserveWhitespace: "full",
-      getAttrs: (e) => {
-        if (!(e instanceof HTMLElement))
-          throw S$5(e);
-        return { language: e.dataset.language };
-      }
-    }
-  ],
-  toDOM: (e) => {
-    const r = t.get(fe$1.key)(e);
-    return [
-      "pre",
-      {
-        ...r.pre,
-        "data-language": e.attrs.language
-      },
-      ["code", r.code, 0]
-    ];
-  },
-  parseMarkdown: {
-    match: ({ type: e }) => e === "code",
-    runner: (e, r, a) => {
-      const o = r.lang, s = r.value;
-      e.openNode(a, { language: o }), s && e.addText(s), e.closeNode();
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === "code_block",
-    runner: (e, r) => {
-      var a;
-      e.addNode("code", void 0, ((a = r.content.firstChild) == null ? void 0 : a.text) || "", {
-        lang: r.attrs.language
-      });
-    }
-  }
-}));
-n(W$2.node, {
-  displayName: "NodeSchema<codeBlock>",
-  group: "CodeBlock"
-});
-n(W$2.ctx, {
-  displayName: "NodeSchemaCtx<codeBlock>",
-  group: "CodeBlock"
-});
-const ut = oe$1((t) => textblockTypeInputRule(/^```(?<language>[a-z]*)?[\s\n]$/, W$2.type(t), (e) => {
-  var r;
-  return {
-    language: ((r = e.groups) == null ? void 0 : r.language) ?? ""
-  };
-}));
-n(ut, {
-  displayName: "InputRule<createCodeBlockInputRule>",
-  group: "CodeBlock"
-});
-const Ne$1 = re$1("CreateCodeBlock", (t) => (e = "") => setBlockType(W$2.type(t), { language: e }));
-n(Ne$1, {
-  displayName: "Command<createCodeBlockCommand>",
-  group: "CodeBlock"
-});
-const Et = re$1("UpdateCodeBlockLanguage", () => ({ pos: t, language: e } = { pos: -1, language: "" }) => (r, a) => t >= 0 ? (a == null || a(r.tr.setNodeAttribute(t, "language", e)), !0) : !1);
-n(Et, {
-  displayName: "Command<updateCodeBlockLanguageCommand>",
-  group: "CodeBlock"
-});
-const Ie$1 = ge$2("codeBlockKeymap", {
-  CreateCodeBlock: {
-    shortcuts: "Mod-Alt-c",
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(Ne$1.key);
-    }
-  }
-});
-n(Ie$1.ctx, {
-  displayName: "KeymapCtx<codeBlock>",
-  group: "CodeBlock"
-});
-n(Ie$1.shortcuts, {
-  displayName: "Keymap<codeBlock>",
-  group: "CodeBlock"
-});
-const Ce$1 = he$2("image");
-n(Ce$1, {
-  displayName: "Attr<image>",
-  group: "Image"
-});
-const v$1 = fe$2("image", (t) => ({
-  inline: !0,
-  group: "inline",
-  selectable: !0,
-  draggable: !0,
-  marks: "",
-  atom: !0,
-  defining: !0,
-  isolating: !0,
-  attrs: {
-    src: { default: "" },
-    alt: { default: "" },
-    title: { default: "" }
-  },
-  parseDOM: [
-    {
-      tag: "img[src]",
-      getAttrs: (e) => {
-        if (!(e instanceof HTMLElement))
-          throw S$5(e);
-        return {
-          src: e.getAttribute("src") || "",
-          alt: e.getAttribute("alt") || "",
-          title: e.getAttribute("title") || e.getAttribute("alt") || ""
-        };
-      }
-    }
-  ],
-  toDOM: (e) => ["img", { ...t.get(Ce$1.key)(e), ...e.attrs }],
-  parseMarkdown: {
-    match: ({ type: e }) => e === "image",
-    runner: (e, r, a) => {
-      const o = r.url, s = r.alt, l = r.title;
-      e.addNode(a, {
-        src: o,
-        alt: s,
-        title: l
-      });
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === "image",
-    runner: (e, r) => {
-      e.addNode("image", void 0, void 0, {
-        title: r.attrs.title,
-        url: r.attrs.src,
-        alt: r.attrs.alt
-      });
-    }
-  }
-}));
-n(v$1.node, {
-  displayName: "NodeSchema<image>",
-  group: "Image"
-});
-n(v$1.ctx, {
-  displayName: "NodeSchemaCtx<image>",
-  group: "Image"
-});
-const gt = re$1("InsertImage", (t) => (e = {}) => (r, a) => {
-  if (!a)
-    return !0;
-  const { src: o = "", alt: s = "", title: l = "" } = e, i = v$1.type(t).create({ src: o, alt: s, title: l });
-  return i && a(r.tr.replaceSelectionWith(i).scrollIntoView()), !0;
-});
-n(gt, {
-  displayName: "Command<insertImageCommand>",
-  group: "Image"
-});
-const yt = re$1("UpdateImage", (t) => (e = {}) => (r, a) => {
-  const o = findSelectedNodeOfType(r.selection, v$1.type(t));
-  if (!o)
-    return !1;
-  const { node: s, pos: l } = o, i = { ...s.attrs }, { src: d, alt: m, title: p } = e;
-  return d !== void 0 && (i.src = d), m !== void 0 && (i.alt = m), p !== void 0 && (i.title = p), a == null || a(r.tr.setNodeMarkup(l, void 0, i).scrollIntoView()), !0;
-});
-n(yt, {
-  displayName: "Command<updateImageCommand>",
-  group: "Image"
-});
-const Pt = oe$1((t) => new InputRule(
-  /!\[(?<alt>.*?)]\((?<filename>.*?)\s*(?="|\))"?(?<title>[^"]+)?"?\)/,
-  (e, r, a, o) => {
-    const [s, l, i = "", d] = r;
-    return s ? e.tr.replaceWith(a, o, v$1.type(t).create({ src: i, alt: l, title: d })) : null;
-  }
-));
-n(Pt, {
-  displayName: "InputRule<insertImageInputRule>",
-  group: "Image"
-});
-const Me$1 = he$2("hardbreak", (t) => ({
-  "data-is-inline": t.attrs.isInline
-}));
-n(Me$1, {
-  displayName: "Attr<hardbreak>",
-  group: "Hardbreak"
-});
-const S$1 = fe$2("hardbreak", (t) => ({
-  inline: !0,
-  group: "inline",
-  attrs: {
-    isInline: {
-      default: !1
-    }
-  },
-  selectable: !1,
-  parseDOM: [{ tag: "br" }],
-  toDOM: (e) => ["br", t.get(Me$1.key)(e)],
-  parseMarkdown: {
-    match: ({ type: e }) => e === "break",
-    runner: (e, r, a) => {
-      var o;
-      e.addNode(a, { isInline: !!((o = r.data) != null && o.isInline) });
-    }
-  },
-  leafText: () => `
-`,
-  toMarkdown: {
-    match: (e) => e.type.name === "hardbreak",
-    runner: (e, r) => {
-      r.attrs.isInline ? e.addNode("text", void 0, `
-`) : e.addNode("break");
-    }
-  }
-}));
-n(S$1.node, {
-  displayName: "NodeSchema<hardbreak>",
-  group: "Hardbreak"
-});
-n(S$1.ctx, {
-  displayName: "NodeSchemaCtx<hardbreak>",
-  group: "Hardbreak"
-});
-const be$1 = re$1("InsertHardbreak", (t) => () => (e, r) => {
-  var s;
-  const { selection: a, tr: o } = e;
-  if (!(a instanceof TextSelection))
-    return !1;
-  if (a.empty) {
-    const l = a.$from.node();
-    if (l.childCount > 0 && ((s = l.lastChild) == null ? void 0 : s.type.name) === "hardbreak")
-      return r == null || r(
-        o.replaceRangeWith(a.to - 1, a.to, e.schema.node("paragraph")).setSelection(Selection.near(o.doc.resolve(a.to))).scrollIntoView()
-      ), !0;
-  }
-  return r == null || r(o.setMeta("hardbreak", !0).replaceSelectionWith(S$1.type(t).create()).scrollIntoView()), !0;
-});
-n(be$1, {
-  displayName: "Command<insertHardbreakCommand>",
-  group: "Hardbreak"
-});
-const Le = ge$2("hardbreakKeymap", {
-  InsertHardbreak: {
-    shortcuts: "Shift-Enter",
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(be$1.key);
-    }
-  }
-});
-n(Le.ctx, {
-  displayName: "KeymapCtx<hardbreak>",
-  group: "Hardbreak"
-});
-n(Le.shortcuts, {
-  displayName: "Keymap<hardbreak>",
-  group: "Hardbreak"
-});
-const xe$1 = he$2("hr");
-n(xe$1, {
-  displayName: "Attr<hr>",
-  group: "Hr"
-});
-const F = fe$2("hr", (t) => ({
-  group: "block",
-  parseDOM: [{ tag: "hr" }],
-  toDOM: (e) => ["hr", t.get(xe$1.key)(e)],
-  parseMarkdown: {
-    match: ({ type: e }) => e === "thematicBreak",
-    runner: (e, r, a) => {
-      e.addNode(a);
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === "hr",
-    runner: (e) => {
-      e.addNode("thematicBreak");
-    }
-  }
-}));
-n(F.node, {
-  displayName: "NodeSchema<hr>",
-  group: "Hr"
-});
-n(F.ctx, {
-  displayName: "NodeSchemaCtx<hr>",
-  group: "Hr"
-});
-const kt = oe$1((t) => new InputRule(
-  /^(?:---|___\s|\*\*\*\s)$/,
-  (e, r, a, o) => {
-    const { tr: s } = e;
-    return r[0] && s.replaceWith(a - 1, o, F.type(t).create()), s;
-  }
-));
-n(kt, {
-  displayName: "InputRule<insertHrInputRule>",
-  group: "Hr"
-});
-const ht = re$1("InsertHr", (t) => () => (e, r) => {
-  if (!r)
-    return !0;
-  const a = A$1.node.type(t).create(), { tr: o, selection: s } = e, { from: l } = s, i = F.type(t).create();
-  if (!i)
-    return !0;
-  const d = o.replaceSelectionWith(i).insert(l, a), m = Selection.findFrom(d.doc.resolve(l), 1, !0);
-  return m && r(d.setSelection(m).scrollIntoView()), !0;
-});
-n(ht, {
-  displayName: "Command<insertHrCommand>",
-  group: "Hr"
-});
-const Se$1 = he$2("bulletList");
-n(Se$1, {
-  displayName: "Attr<bulletList>",
-  group: "BulletList"
-});
-const O = fe$2("bullet_list", (t) => ({
-  content: "listItem+",
-  group: "block",
-  attrs: {
-    spread: {
-      default: !1
-    }
-  },
-  parseDOM: [
-    {
-      tag: "ul",
-      getAttrs: (e) => {
-        if (!(e instanceof HTMLElement))
-          throw S$5(e);
-        return {
-          spread: e.dataset.spread
-        };
-      }
-    }
-  ],
-  toDOM: (e) => [
-    "ul",
-    {
-      ...t.get(Se$1.key)(e),
-      "data-spread": e.attrs.spread
-    },
-    0
-  ],
-  parseMarkdown: {
-    match: ({ type: e, ordered: r }) => e === "list" && !r,
-    runner: (e, r, a) => {
-      const o = r.spread != null ? `${r.spread}` : "false";
-      e.openNode(a, { spread: o }).next(r.children).closeNode();
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === "bullet_list",
-    runner: (e, r) => {
-      e.openNode("list", void 0, { ordered: !1, spread: r.attrs.spread === "true" }).next(r.content).closeNode();
-    }
-  }
-}));
-n(O.node, {
-  displayName: "NodeSchema<bulletList>",
-  group: "BulletList"
-});
-n(O.ctx, {
-  displayName: "NodeSchemaCtx<bulletList>",
-  group: "BulletList"
-});
-const ft = oe$1((t) => wrappingInputRule(/^\s*([-+*])\s$/, O.type(t)));
-n(ft, {
-  displayName: "InputRule<wrapInBulletListInputRule>",
-  group: "BulletList"
-});
-const we$1 = re$1("WrapInBulletList", (t) => () => wrapIn(O.type(t)));
-n(we$1, {
-  displayName: "Command<wrapInBulletListCommand>",
-  group: "BulletList"
-});
-const Ae$1 = ge$2("bulletListKeymap", {
-  WrapInBulletList: {
-    shortcuts: "Mod-Alt-8",
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(we$1.key);
-    }
-  }
-});
-n(Ae$1.ctx, {
-  displayName: "KeymapCtx<bulletListKeymap>",
-  group: "BulletList"
-});
-n(Ae$1.shortcuts, {
-  displayName: "Keymap<bulletListKeymap>",
-  group: "BulletList"
-});
-const He = he$2("orderedList");
-n(He, {
-  displayName: "Attr<orderedList>",
-  group: "OrderedList"
-});
-const T$1 = fe$2("ordered_list", (t) => ({
-  content: "listItem+",
-  group: "block",
-  attrs: {
-    order: {
-      default: 1
-    },
-    spread: {
-      default: !1
-    }
-  },
-  parseDOM: [
-    {
-      tag: "ol",
-      getAttrs: (e) => {
-        if (!(e instanceof HTMLElement))
-          throw S$5(e);
-        return {
-          spread: e.dataset.spread,
-          order: e.hasAttribute("start") ? Number(e.getAttribute("start")) : 1
-        };
-      }
-    }
-  ],
-  toDOM: (e) => [
-    "ol",
-    {
-      ...t.get(He.key)(e),
-      ...e.attrs.order === 1 ? {} : e.attrs.order,
-      "data-spread": e.attrs.spread
-    },
-    0
-  ],
-  parseMarkdown: {
-    match: ({ type: e, ordered: r }) => e === "list" && !!r,
-    runner: (e, r, a) => {
-      const o = r.spread != null ? `${r.spread}` : "true";
-      e.openNode(a, { spread: o }).next(r.children).closeNode();
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === "ordered_list",
-    runner: (e, r) => {
-      e.openNode("list", void 0, { ordered: !0, start: 1, spread: r.attrs.spread === "true" }), e.next(r.content), e.closeNode();
-    }
-  }
-}));
-n(T$1.node, {
-  displayName: "NodeSchema<orderedList>",
-  group: "OrderedList"
-});
-n(T$1.ctx, {
-  displayName: "NodeSchemaCtx<orderedList>",
-  group: "OrderedList"
-});
-const Nt = oe$1((t) => wrappingInputRule(
-  /^\s*(\d+)\.\s$/,
-  T$1.type(t),
-  (e) => ({ order: Number(e[1]) }),
-  (e, r) => r.childCount + r.attrs.order === Number(e[1])
-));
-n(Nt, {
-  displayName: "InputRule<wrapInOrderedListInputRule>",
-  group: "OrderedList"
-});
-const Be = re$1("WrapInOrderedList", (t) => () => wrapIn(T$1.type(t)));
-n(Be, {
-  displayName: "Command<wrapInOrderedListCommand>",
-  group: "OrderedList"
-});
-const Re$1 = ge$2("orderedListKeymap", {
-  WrapInOrderedList: {
-    shortcuts: "Mod-Alt-7",
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(Be.key);
-    }
-  }
-});
-n(Re$1.ctx, {
-  displayName: "KeymapCtx<orderedList>",
-  group: "OrderedList"
-});
-n(Re$1.shortcuts, {
-  displayName: "Keymap<orderedList>",
-  group: "OrderedList"
-});
-const ve$1 = he$2("listItem");
-n(ve$1, {
-  displayName: "Attr<listItem>",
-  group: "ListItem"
-});
-const M$1 = fe$2("list_item", (t) => ({
-  group: "listItem",
-  content: "paragraph block*",
-  attrs: {
-    label: {
-      default: "•"
-    },
-    listType: {
-      default: "bullet"
-    },
-    spread: {
-      default: "true"
-    }
-  },
-  defining: !0,
-  parseDOM: [
-    {
-      tag: "li",
-      getAttrs: (e) => {
-        if (!(e instanceof HTMLElement))
-          throw S$5(e);
-        return {
-          label: e.dataset.label,
-          listType: e.dataset["list-type"],
-          spread: e.dataset.spread
-        };
-      }
-    }
-  ],
-  toDOM: (e) => [
-    "li",
-    {
-      ...t.get(ve$1.key)(e),
-      "data-label": e.attrs.label,
-      "data-list-type": e.attrs.listType,
-      "data-spread": e.attrs.spread
-    },
-    0
-  ],
-  parseMarkdown: {
-    match: ({ type: e }) => e === "listItem",
-    runner: (e, r, a) => {
-      const o = r.label != null ? `${r.label}.` : "•", s = r.label != null ? "ordered" : "bullet", l = r.spread != null ? `${r.spread}` : "true";
-      e.openNode(a, { label: o, listType: s, spread: l }), e.next(r.children), e.closeNode();
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === "list_item",
-    runner: (e, r) => {
-      e.openNode("listItem", void 0, { spread: r.attrs.spread === "true" }), e.next(r.content), e.closeNode();
-    }
-  }
-}));
-n(M$1.node, {
-  displayName: "NodeSchema<listItem>",
-  group: "ListItem"
-});
-n(M$1.ctx, {
-  displayName: "NodeSchemaCtx<listItem>",
-  group: "ListItem"
-});
-const Oe = re$1("SinkListItem", (t) => () => sinkListItem(M$1.type(t)));
-n(Oe, {
-  displayName: "Command<sinkListItemCommand>",
-  group: "ListItem"
-});
-const Te$1 = re$1("SplitListItem", (t) => () => liftListItem(M$1.type(t)));
-n(Te$1, {
-  displayName: "Command<liftListItemCommand>",
-  group: "ListItem"
-});
-const Ke = re$1("SplitListItem", (t) => () => splitListItem(M$1.type(t)));
-n(Ke, {
-  displayName: "Command<splitListItemCommand>",
-  group: "ListItem"
-});
-function $t(t) {
-  return (e, r, a) => {
-    const { selection: o } = e;
-    if (!(o instanceof TextSelection))
-      return !1;
-    const { empty: s, $from: l } = o;
-    if (!s || l.parentOffset !== 0)
-      return !1;
-    const i = l.node(-1);
-    return i.type !== M$1.type(t) || i.firstChild !== l.node() || l.node(-2).childCount > 1 ? !1 : liftListItem(M$1.type(t))(e, r, a);
-  };
-}
-const De = re$1("LiftFirstListItem", (t) => () => $t(t));
-n(De, {
-  displayName: "Command<liftFirstListItemCommand>",
-  group: "ListItem"
-});
-const _e = ge$2("listItemKeymap", {
-  NextListItem: {
-    shortcuts: "Enter",
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(Ke.key);
-    }
-  },
-  SinkListItem: {
-    shortcuts: ["Tab", "Mod-]"],
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(Oe.key);
-    }
-  },
-  LiftListItem: {
-    shortcuts: ["Shift-Tab", "Mod-["],
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(Te$1.key);
-    }
-  },
-  LiftFirstListItem: {
-    shortcuts: ["Backspace", "Delete"],
-    command: (t) => {
-      const e = t.get(je);
-      return () => e.call(De.key);
-    }
-  }
-});
-n(_e.ctx, {
-  displayName: "KeymapCtx<listItem>",
-  group: "ListItem"
-});
-n(_e.shortcuts, {
-  displayName: "Keymap<listItem>",
-  group: "ListItem"
-});
-const It = W$3("text", () => ({
-  group: "inline",
-  parseMarkdown: {
-    match: ({ type: t }) => t === "text",
-    runner: (t, e) => {
-      t.addText(e.value);
-    }
-  },
-  toMarkdown: {
-    match: (t) => t.type.name === "text",
-    runner: (t, e) => {
-      t.addNode("text", void 0, e.text);
-    }
-  }
-}));
-n(It, {
-  displayName: "NodeSchema<text>",
-  group: "Text"
-});
-const Ee = he$2("html");
-n(Ee, {
-  displayName: "Attr<html>",
-  group: "Html"
-});
-const Pe = fe$2("html", (t) => ({
-  atom: !0,
-  group: "inline",
-  inline: !0,
-  attrs: {
-    value: {
-      default: ""
-    }
-  },
-  toDOM: (e) => {
-    const r = document.createElement("span"), a = {
-      ...t.get(Ee.key)(e),
-      "data-value": e.attrs.value,
-      "data-type": "html"
-    };
-    return r.textContent = e.attrs.value, ["span", a, e.attrs.value];
-  },
-  parseDOM: [{
-    tag: 'span[data-type="html"]',
-    getAttrs: (e) => ({
-      value: e.dataset.value ?? ""
-    })
-  }],
-  parseMarkdown: {
-    match: ({ type: e }) => e === "html",
-    runner: (e, r, a) => {
-      e.addNode(a, { value: r.value });
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === "html",
-    runner: (e, r) => {
-      e.addNode("html", void 0, r.attrs.value);
-    }
-  }
-}));
-n(Pe.node, {
-  displayName: "NodeSchema<html>",
-  group: "Html"
-});
-n(Pe.ctx, {
-  displayName: "NodeSchemaCtx<html>",
-  group: "Html"
-});
-const qt = [
-  mt,
-  de$1,
-  A$1,
-  j$1,
-  ce$1,
-  H$1,
-  Me$1,
-  S$1,
-  ye$1,
-  q$1,
-  fe$1,
-  W$2,
-  xe$1,
-  F,
-  Ce$1,
-  v$1,
-  Se$1,
-  O,
-  He,
-  T$1,
-  ve$1,
-  M$1,
-  Z$1,
-  R$1,
-  re,
-  $,
-  oe,
-  x,
-  ie$1,
-  B,
-  Ee,
-  Pe,
-  It
-].flat(), Wt = [
-  ct$1,
-  ft,
-  Nt,
-  ut,
-  kt,
-  pt
-].flat(), Ft = [
-  nt$1,
-  ot$1,
-  lt$1,
-  st$1
-], Vt = [
-  me$1,
-  ke$1,
-  L$1,
-  ue$1,
-  Ne$1,
-  be$1,
-  ht,
-  gt,
-  yt,
-  Be,
-  we$1,
-  Oe,
-  Ke,
-  Te$1,
-  De,
-  ee,
-  se$1,
-  ae$1,
-  it$1,
-  dt$1
-], Ut = [
-  he$1,
-  Ie$1,
-  Le,
-  ge$1,
-  _e,
-  Re$1,
-  Ae$1,
-  pe$1,
-  te,
-  le,
-  ne
-].flat(), $e = ke$2("remarkAddOrderInList", () => () => (t) => {
-  visit(t, "list", (e) => {
-    if (e.ordered) {
-      const r = e.start ?? 1;
-      e.children.forEach((a, o) => {
-        a.label = o + r;
-      });
-    }
-  });
-});
-n($e.plugin, {
-  displayName: "Remark<remarkAddOrderInListPlugin>",
-  group: "Remark"
-});
-n($e.options, {
-  displayName: "RemarkConfig<remarkAddOrderInListPlugin>",
-  group: "Remark"
-});
-const qe = ke$2("remarkLineBreak", () => () => (t) => {
-  const e = /[\t ]*(?:\r?\n|\r)/g;
-  visit(t, "text", (r, a, o) => {
-    if (!r.value || typeof r.value != "string")
-      return;
-    const s = [];
-    let l = 0;
-    e.lastIndex = 0;
-    let i = e.exec(r.value);
-    for (; i; ) {
-      const m = i.index;
-      l !== m && s.push({ type: "text", value: r.value.slice(l, m) }), s.push({ type: "break", data: { isInline: !0 } }), l = m + i[0].length, i = e.exec(r.value);
-    }
-    if (s.length > 0 && o && typeof a == "number")
-      return l < r.value.length && s.push({ type: "text", value: r.value.slice(l) }), o.children.splice(a, 1, ...s), a + s.length;
-  });
-});
-n(qe.plugin, {
-  displayName: "Remark<remarkLineBreak>",
-  group: "Remark"
-});
-n(qe.options, {
-  displayName: "RemarkConfig<remarkLineBreak>",
-  group: "Remark"
-});
-const We = ke$2("remarkInlineLink", () => remarkInlineLinks);
-n(We.plugin, {
-  displayName: "Remark<remarkInlineLinkPlugin>",
-  group: "Remark"
-});
-n(We.options, {
-  displayName: "RemarkConfig<remarkInlineLinkPlugin>",
-  group: "Remark"
-});
-const Gt = (t) => !!t.children, jt = (t) => t.type === "html";
-function zt(t, e) {
-  return r(t, 0, null)[0];
-  function r(a, o, s) {
-    if (Gt(a)) {
-      const l = [];
-      for (let i = 0, d = a.children.length; i < d; i++) {
-        const m = a.children[i];
-        if (m) {
-          const p = r(m, i, a);
-          if (p)
-            for (let k = 0, g = p.length; k < g; k++) {
-              const C = p[k];
-              C && l.push(C);
-            }
-        }
-      }
-      a.children = l;
-    }
-    return e(a, o, s);
-  }
-}
-const Fe = ke$2("remarkHTMLTransformer", () => () => (t) => {
-  zt(t, (e, r, a) => jt(e) ? ((a == null ? void 0 : a.type) === "root" && (e.children = [{ ...e }], delete e.value, e.type = "paragraph"), [e]) : [e]);
-});
-n(Fe.plugin, {
-  displayName: "Remark<remarkHtmlTransformer>",
-  group: "Remark"
-});
-n(Fe.options, {
-  displayName: "RemarkConfig<remarkHtmlTransformer>",
-  group: "Remark"
-});
-const Ve = ke$2("remarkMarker", () => () => (t, e) => {
-  const r = (a) => e.value.charAt(a.position.start.offset);
-  visit(t, (a) => ["strong", "emphasis"].includes(a.type), (a) => {
-    a.marker = r(a);
-  });
-});
-n(Ve.plugin, {
-  displayName: "Remark<remarkMarker>",
-  group: "Remark"
-});
-n(Ve.options, {
-  displayName: "RemarkConfig<remarkMarker>",
-  group: "Remark"
-});
-const Ct = ue$2(() => {
-  let t = !1;
-  const e = new PluginKey("MILKDOWN_INLINE_NODES_CURSOR"), r = new Plugin({
-    key: e,
-    state: {
-      init() {
-        return !1;
-      },
-      apply(a) {
-        if (!a.selection.empty)
-          return !1;
-        const o = a.selection.$from, s = o.nodeBefore, l = o.nodeAfter;
-        return !!(s && l && s.isInline && !s.isText && l.isInline && !l.isText);
-      }
-    },
-    props: {
-      handleDOMEvents: {
-        compositionend: (a, o) => t ? (t = !1, requestAnimationFrame(() => {
-          if (r.getState(a.state)) {
-            const l = a.state.selection.from;
-            o.preventDefault(), a.dispatch(a.state.tr.insertText(o.data || "", l));
-          }
-        }), !0) : !1,
-        compositionstart: (a) => (r.getState(a.state) && (t = !0), !1),
-        beforeinput: (a, o) => {
-          if (r.getState(a.state) && o instanceof InputEvent && o.data && !t) {
-            const l = a.state.selection.from;
-            return o.preventDefault(), a.dispatch(a.state.tr.insertText(o.data || "", l)), !0;
-          }
-          return !1;
-        }
-      },
-      decorations(a) {
-        if (r.getState(a)) {
-          const l = a.selection.$from.pos, i = document.createElement("span"), d = Decoration.widget(l, i, {
-            side: -1
-          }), m = document.createElement("span"), p = Decoration.widget(l, m);
-          return setTimeout(() => {
-            i.contentEditable = "true", m.contentEditable = "true";
-          }), DecorationSet.create(a.doc, [d, p]);
-        }
-        return DecorationSet.empty;
-      }
-    }
-  });
-  return r;
-});
-n(Ct, {
-  displayName: "Prose<inlineNodesCursorPlugin>",
-  group: "Prose"
-});
-const Mt = ue$2((t) => new Plugin({
-  key: new PluginKey("MILKDOWN_HARDBREAK_MARKS"),
-  appendTransaction: (e, r, a) => {
-    if (!e.length)
-      return;
-    const [o] = e;
-    if (!o)
-      return;
-    const [s] = o.steps;
-    if (o.getMeta("hardbreak")) {
-      if (!(s instanceof ReplaceStep))
-        return;
-      const { from: d } = s;
-      return a.tr.setNodeMarkup(d, S$1.type(t), void 0, []);
-    }
-    if (s instanceof AddMarkStep) {
-      let d = a.tr;
-      const { from: m, to: p } = s;
-      return a.doc.nodesBetween(m, p, (k, g) => {
-        k.type === S$1.type(t) && (d = d.setNodeMarkup(g, S$1.type(t), void 0, []));
-      }), d;
-    }
-  }
-}));
-n(Mt, {
-  displayName: "Prose<hardbreakClearMarkPlugin>",
-  group: "Prose"
-});
-const Ue = h(["table", "code_block"], "hardbreakFilterNodes");
-n(Ue, {
-  displayName: "Ctx<hardbreakFilterNodes>",
-  group: "Prose"
-});
-const bt = ue$2((t) => {
-  const e = t.get(Ue.key);
-  return new Plugin({
-    key: new PluginKey("MILKDOWN_HARDBREAK_FILTER"),
-    filterTransaction: (r, a) => {
-      const o = r.getMeta("hardbreak"), [s] = r.steps;
-      if (o && s) {
-        const { from: l } = s, i = a.doc.resolve(l);
-        let d = i.depth, m = !0;
-        for (; d > 0; )
-          e.includes(i.node(d).type.name) && (m = !1), d--;
-        return m;
-      }
-      return !0;
-    }
-  });
-});
-n(bt, {
-  displayName: "Prose<hardbreakFilterPlugin>",
-  group: "Prose"
-});
-const Lt = ue$2((t) => {
-  const e = new PluginKey("MILKDOWN_HEADING_ID"), r = (a) => {
-    if (a.composing || !a.editable)
-      return;
-    const o = t.get(j$1.key), s = a.state.tr.setMeta("addToHistory", !1);
-    let l = !1;
-    a.state.doc.descendants((i, d) => {
-      if (i.type === H$1.type(t)) {
-        if (i.textContent.trim().length === 0)
-          return;
-        const m = i.attrs, p = o(i);
-        m.id !== p && (l = !0, s.setMeta(e, !0).setNodeMarkup(d, void 0, {
-          ...m,
-          id: p
-        }));
-      }
-    }), l && a.dispatch(s);
-  };
-  return new Plugin({
-    key: e,
-    view: (a) => (r(a), {
-      update: (o) => {
-        r(o);
-      }
-    })
-  });
-});
-n(Lt, {
-  displayName: "Prose<syncHeadingIdPlugin>",
-  group: "Prose"
-});
-const xt = ue$2((t) => {
-  const e = (r) => {
-    if (r.composing || !r.editable)
-      return;
-    const a = T$1.type(t), o = O.type(t), s = M$1.type(t), l = r.state, i = (p, k) => {
-      let g = !1;
-      const C = `${k + 1}.`;
-      return p.label !== C && (p.label = C, g = !0), g;
-    };
-    let d = l.tr, m = !1;
-    l.doc.descendants((p, k, g, C) => {
-      if (p.type === o) {
-        const y = p.maybeChild(0);
-        (y == null ? void 0 : y.type) === s && y.attrs.listType === "ordered" && (m = !0, d.setNodeMarkup(k, a, { spread: "true" }), p.descendants((b, Ge, Qt, St) => {
-          if (b.type === s) {
-            const je = { ...b.attrs };
-            i(je, St) && (d = d.setNodeMarkup(Ge, void 0, je));
-          }
-          return !1;
-        }));
-      } else if (p.type === s && (g == null ? void 0 : g.type) === a) {
-        const y = { ...p.attrs };
-        let b = !1;
-        y.listType !== "ordered" && (y.listType = "ordered", b = !0), (g == null ? void 0 : g.maybeChild(0)) && (b = i(y, C)), b && (d = d.setNodeMarkup(k, void 0, y), m = !0);
-      }
-    }), m && r.dispatch(d.setMeta("addToHistory", !1));
-  };
-  return new Plugin({
-    key: new PluginKey("MILKDOWN_KEEP_LIST_ORDER"),
-    view: (r) => (e(r), {
-      update: (a) => {
-        e(a);
-      }
-    })
-  });
-});
-n(xt, {
-  displayName: "Prose<syncListOrderPlugin>",
-  group: "Prose"
-});
-const Jt = [
-  Mt,
-  Ue,
-  bt,
-  Ct,
-  $e,
-  We,
-  qe,
-  Fe,
-  Ve,
-  Lt,
-  xt
-].flat(), cr = [qt, Wt, Ft, Vt, Ut, Jt].flat();
-
-// src/index.ts
-
-// src/tablemap.ts
-var readFromCache;
-var addToCache;
-if (typeof WeakMap != "undefined") {
-  let cache = /* @__PURE__ */ new WeakMap();
-  readFromCache = (key) => cache.get(key);
-  addToCache = (key, value) => {
-    cache.set(key, value);
-    return value;
-  };
-} else {
-  const cache = [];
-  const cacheSize = 10;
-  let cachePos = 0;
-  readFromCache = (key) => {
-    for (let i = 0; i < cache.length; i += 2)
-      if (cache[i] == key)
-        return cache[i + 1];
-  };
-  addToCache = (key, value) => {
-    if (cachePos == cacheSize)
-      cachePos = 0;
-    cache[cachePos++] = key;
-    return cache[cachePos++] = value;
-  };
-}
-var TableMap = class {
-  constructor(width, height, map, problems) {
-    this.width = width;
-    this.height = height;
-    this.map = map;
-    this.problems = problems;
-  }
-  // Find the dimensions of the cell at the given position.
-  findCell(pos) {
-    for (let i = 0; i < this.map.length; i++) {
-      const curPos = this.map[i];
-      if (curPos != pos)
-        continue;
-      const left = i % this.width;
-      const top = i / this.width | 0;
-      let right = left + 1;
-      let bottom = top + 1;
-      for (let j = 1; right < this.width && this.map[i + j] == curPos; j++) {
-        right++;
-      }
-      for (let j = 1; bottom < this.height && this.map[i + this.width * j] == curPos; j++) {
-        bottom++;
-      }
-      return { left, top, right, bottom };
-    }
-    throw new RangeError(`No cell with offset ${pos} found`);
-  }
-  // Find the left side of the cell at the given position.
-  colCount(pos) {
-    for (let i = 0; i < this.map.length; i++) {
-      if (this.map[i] == pos) {
-        return i % this.width;
-      }
-    }
-    throw new RangeError(`No cell with offset ${pos} found`);
-  }
-  // Find the next cell in the given direction, starting from the cell
-  // at `pos`, if any.
-  nextCell(pos, axis, dir) {
-    const { left, right, top, bottom } = this.findCell(pos);
-    if (axis == "horiz") {
-      if (dir < 0 ? left == 0 : right == this.width)
-        return null;
-      return this.map[top * this.width + (dir < 0 ? left - 1 : right)];
-    } else {
-      if (dir < 0 ? top == 0 : bottom == this.height)
-        return null;
-      return this.map[left + this.width * (dir < 0 ? top - 1 : bottom)];
-    }
-  }
-  // Get the rectangle spanning the two given cells.
-  rectBetween(a, b) {
-    const {
-      left: leftA,
-      right: rightA,
-      top: topA,
-      bottom: bottomA
-    } = this.findCell(a);
-    const {
-      left: leftB,
-      right: rightB,
-      top: topB,
-      bottom: bottomB
-    } = this.findCell(b);
-    return {
-      left: Math.min(leftA, leftB),
-      top: Math.min(topA, topB),
-      right: Math.max(rightA, rightB),
-      bottom: Math.max(bottomA, bottomB)
-    };
-  }
-  // Return the position of all cells that have the top left corner in
-  // the given rectangle.
-  cellsInRect(rect) {
-    const result = [];
-    const seen = {};
-    for (let row = rect.top; row < rect.bottom; row++) {
-      for (let col = rect.left; col < rect.right; col++) {
-        const index = row * this.width + col;
-        const pos = this.map[index];
-        if (seen[pos])
-          continue;
-        seen[pos] = true;
-        if (col == rect.left && col && this.map[index - 1] == pos || row == rect.top && row && this.map[index - this.width] == pos) {
-          continue;
-        }
-        result.push(pos);
-      }
-    }
-    return result;
-  }
-  // Return the position at which the cell at the given row and column
-  // starts, or would start, if a cell started there.
-  positionAt(row, col, table) {
-    for (let i = 0, rowStart = 0; ; i++) {
-      const rowEnd = rowStart + table.child(i).nodeSize;
-      if (i == row) {
-        let index = col + row * this.width;
-        const rowEndIndex = (row + 1) * this.width;
-        while (index < rowEndIndex && this.map[index] < rowStart)
-          index++;
-        return index == rowEndIndex ? rowEnd - 1 : this.map[index];
-      }
-      rowStart = rowEnd;
-    }
-  }
-  // Find the table map for the given table node.
-  static get(table) {
-    return readFromCache(table) || addToCache(table, computeMap(table));
-  }
-};
-function computeMap(table) {
-  if (table.type.spec.tableRole != "table")
-    throw new RangeError("Not a table node: " + table.type.name);
-  const width = findWidth(table), height = table.childCount;
-  const map = [];
-  let mapPos = 0;
-  let problems = null;
-  const colWidths = [];
-  for (let i = 0, e = width * height; i < e; i++)
-    map[i] = 0;
-  for (let row = 0, pos = 0; row < height; row++) {
-    const rowNode = table.child(row);
-    pos++;
-    for (let i = 0; ; i++) {
-      while (mapPos < map.length && map[mapPos] != 0)
-        mapPos++;
-      if (i == rowNode.childCount)
-        break;
-      const cellNode = rowNode.child(i);
-      const { colspan, rowspan, colwidth } = cellNode.attrs;
-      for (let h = 0; h < rowspan; h++) {
-        if (h + row >= height) {
-          (problems || (problems = [])).push({
-            type: "overlong_rowspan",
-            pos,
-            n: rowspan - h
-          });
-          break;
-        }
-        const start = mapPos + h * width;
-        for (let w = 0; w < colspan; w++) {
-          if (map[start + w] == 0)
-            map[start + w] = pos;
-          else
-            (problems || (problems = [])).push({
-              type: "collision",
-              row,
-              pos,
-              n: colspan - w
-            });
-          const colW = colwidth && colwidth[w];
-          if (colW) {
-            const widthIndex = (start + w) % width * 2, prev = colWidths[widthIndex];
-            if (prev == null || prev != colW && colWidths[widthIndex + 1] == 1) {
-              colWidths[widthIndex] = colW;
-              colWidths[widthIndex + 1] = 1;
-            } else if (prev == colW) {
-              colWidths[widthIndex + 1]++;
-            }
-          }
-        }
-      }
-      mapPos += colspan;
-      pos += cellNode.nodeSize;
-    }
-    const expectedPos = (row + 1) * width;
-    let missing = 0;
-    while (mapPos < expectedPos)
-      if (map[mapPos++] == 0)
-        missing++;
-    if (missing)
-      (problems || (problems = [])).push({ type: "missing", row, n: missing });
-    pos++;
-  }
-  const tableMap = new TableMap(width, height, map, problems);
-  let badWidths = false;
-  for (let i = 0; !badWidths && i < colWidths.length; i += 2)
-    if (colWidths[i] != null && colWidths[i + 1] < height)
-      badWidths = true;
-  if (badWidths)
-    findBadColWidths(tableMap, colWidths, table);
-  return tableMap;
-}
-function findWidth(table) {
-  let width = -1;
-  let hasRowSpan = false;
-  for (let row = 0; row < table.childCount; row++) {
-    const rowNode = table.child(row);
-    let rowWidth = 0;
-    if (hasRowSpan)
-      for (let j = 0; j < row; j++) {
-        const prevRow = table.child(j);
-        for (let i = 0; i < prevRow.childCount; i++) {
-          const cell = prevRow.child(i);
-          if (j + cell.attrs.rowspan > row)
-            rowWidth += cell.attrs.colspan;
-        }
-      }
-    for (let i = 0; i < rowNode.childCount; i++) {
-      const cell = rowNode.child(i);
-      rowWidth += cell.attrs.colspan;
-      if (cell.attrs.rowspan > 1)
-        hasRowSpan = true;
-    }
-    if (width == -1)
-      width = rowWidth;
-    else if (width != rowWidth)
-      width = Math.max(width, rowWidth);
-  }
-  return width;
-}
-function findBadColWidths(map, colWidths, table) {
-  if (!map.problems)
-    map.problems = [];
-  const seen = {};
-  for (let i = 0; i < map.map.length; i++) {
-    const pos = map.map[i];
-    if (seen[pos])
-      continue;
-    seen[pos] = true;
-    const node = table.nodeAt(pos);
-    if (!node) {
-      throw new RangeError(`No cell with offset ${pos} found`);
-    }
-    let updated = null;
-    const attrs = node.attrs;
-    for (let j = 0; j < attrs.colspan; j++) {
-      const col = (i + j) % map.width;
-      const colWidth = colWidths[col * 2];
-      if (colWidth != null && (!attrs.colwidth || attrs.colwidth[j] != colWidth))
-        (updated || (updated = freshColWidth(attrs)))[j] = colWidth;
-    }
-    if (updated)
-      map.problems.unshift({
-        type: "colwidth mismatch",
-        pos,
-        colwidth: updated
-      });
-  }
-}
-function freshColWidth(attrs) {
-  if (attrs.colwidth)
-    return attrs.colwidth.slice();
-  const result = [];
-  for (let i = 0; i < attrs.colspan; i++)
-    result.push(0);
-  return result;
-}
-
-// src/schema.ts
-function getCellAttrs(dom, extraAttrs) {
-  if (typeof dom === "string") {
-    return {};
-  }
-  const widthAttr = dom.getAttribute("data-colwidth");
-  const widths = widthAttr && /^\d+(,\d+)*$/.test(widthAttr) ? widthAttr.split(",").map((s) => Number(s)) : null;
-  const colspan = Number(dom.getAttribute("colspan") || 1);
-  const result = {
-    colspan,
-    rowspan: Number(dom.getAttribute("rowspan") || 1),
-    colwidth: widths && widths.length == colspan ? widths : null
-  };
-  for (const prop in extraAttrs) {
-    const getter = extraAttrs[prop].getFromDOM;
-    const value = getter && getter(dom);
-    if (value != null) {
-      result[prop] = value;
-    }
-  }
-  return result;
-}
-function setCellAttrs(node, extraAttrs) {
-  const attrs = {};
-  if (node.attrs.colspan != 1)
-    attrs.colspan = node.attrs.colspan;
-  if (node.attrs.rowspan != 1)
-    attrs.rowspan = node.attrs.rowspan;
-  if (node.attrs.colwidth)
-    attrs["data-colwidth"] = node.attrs.colwidth.join(",");
-  for (const prop in extraAttrs) {
-    const setter = extraAttrs[prop].setDOMAttr;
-    if (setter)
-      setter(node.attrs[prop], attrs);
-  }
-  return attrs;
-}
-function tableNodes(options) {
-  const extraAttrs = options.cellAttributes || {};
-  const cellAttrs = {
-    colspan: { default: 1 },
-    rowspan: { default: 1 },
-    colwidth: { default: null }
-  };
-  for (const prop in extraAttrs)
-    cellAttrs[prop] = { default: extraAttrs[prop].default };
-  return {
-    table: {
-      content: "table_row+",
-      tableRole: "table",
-      isolating: true,
-      group: options.tableGroup,
-      parseDOM: [{ tag: "table" }],
-      toDOM() {
-        return ["table", ["tbody", 0]];
-      }
-    },
-    table_row: {
-      content: "(table_cell | table_header)*",
-      tableRole: "row",
-      parseDOM: [{ tag: "tr" }],
-      toDOM() {
-        return ["tr", 0];
-      }
-    },
-    table_cell: {
-      content: options.cellContent,
-      attrs: cellAttrs,
-      tableRole: "cell",
-      isolating: true,
-      parseDOM: [
-        { tag: "td", getAttrs: (dom) => getCellAttrs(dom, extraAttrs) }
-      ],
-      toDOM(node) {
-        return ["td", setCellAttrs(node, extraAttrs), 0];
-      }
-    },
-    table_header: {
-      content: options.cellContent,
-      attrs: cellAttrs,
-      tableRole: "header_cell",
-      isolating: true,
-      parseDOM: [
-        { tag: "th", getAttrs: (dom) => getCellAttrs(dom, extraAttrs) }
-      ],
-      toDOM(node) {
-        return ["th", setCellAttrs(node, extraAttrs), 0];
-      }
-    }
-  };
-}
-function tableNodeTypes(schema) {
-  let result = schema.cached.tableNodeTypes;
-  if (!result) {
-    result = schema.cached.tableNodeTypes = {};
-    for (const name in schema.nodes) {
-      const type = schema.nodes[name], role = type.spec.tableRole;
-      if (role)
-        result[role] = type;
-    }
-  }
-  return result;
-}
-
-// src/util.ts
-var tableEditingKey = new PluginKey("selectingCells");
-function cellAround($pos) {
-  for (let d = $pos.depth - 1; d > 0; d--)
-    if ($pos.node(d).type.spec.tableRole == "row")
-      return $pos.node(0).resolve($pos.before(d + 1));
-  return null;
-}
-function isInTable(state) {
-  const $head = state.selection.$head;
-  for (let d = $head.depth; d > 0; d--)
-    if ($head.node(d).type.spec.tableRole == "row")
-      return true;
-  return false;
-}
-function selectionCell(state) {
-  const sel = state.selection;
-  if ("$anchorCell" in sel && sel.$anchorCell) {
-    return sel.$anchorCell.pos > sel.$headCell.pos ? sel.$anchorCell : sel.$headCell;
-  } else if ("node" in sel && sel.node && sel.node.type.spec.tableRole == "cell") {
-    return sel.$anchor;
-  }
-  const $cell = cellAround(sel.$head) || cellNear(sel.$head);
-  if ($cell) {
-    return $cell;
-  }
-  throw new RangeError(`No cell found around position ${sel.head}`);
-}
-function cellNear($pos) {
-  for (let after = $pos.nodeAfter, pos = $pos.pos; after; after = after.firstChild, pos++) {
-    const role = after.type.spec.tableRole;
-    if (role == "cell" || role == "header_cell")
-      return $pos.doc.resolve(pos);
-  }
-  for (let before = $pos.nodeBefore, pos = $pos.pos; before; before = before.lastChild, pos--) {
-    const role = before.type.spec.tableRole;
-    if (role == "cell" || role == "header_cell")
-      return $pos.doc.resolve(pos - before.nodeSize);
-  }
-}
-function pointsAtCell($pos) {
-  return $pos.parent.type.spec.tableRole == "row" && !!$pos.nodeAfter;
-}
-function moveCellForward($pos) {
-  return $pos.node(0).resolve($pos.pos + $pos.nodeAfter.nodeSize);
-}
-function inSameTable($cellA, $cellB) {
-  return $cellA.depth == $cellB.depth && $cellA.pos >= $cellB.start(-1) && $cellA.pos <= $cellB.end(-1);
-}
-function nextCell($pos, axis, dir) {
-  const table = $pos.node(-1);
-  const map = TableMap.get(table);
-  const tableStart = $pos.start(-1);
-  const moved = map.nextCell($pos.pos - tableStart, axis, dir);
-  return moved == null ? null : $pos.node(0).resolve(tableStart + moved);
-}
-function removeColSpan(attrs, pos, n = 1) {
-  const result = { ...attrs, colspan: attrs.colspan - n };
-  if (result.colwidth) {
-    result.colwidth = result.colwidth.slice();
-    result.colwidth.splice(pos, n);
-    if (!result.colwidth.some((w) => w > 0))
-      result.colwidth = null;
-  }
-  return result;
-}
-function addColSpan(attrs, pos, n = 1) {
-  const result = { ...attrs, colspan: attrs.colspan + n };
-  if (result.colwidth) {
-    result.colwidth = result.colwidth.slice();
-    for (let i = 0; i < n; i++)
-      result.colwidth.splice(pos, 0, 0);
-  }
-  return result;
-}
-function columnIsHeader(map, table, col) {
-  const headerCell = tableNodeTypes(table.type.schema).header_cell;
-  for (let row = 0; row < map.height; row++)
-    if (table.nodeAt(map.map[col + row * map.width]).type != headerCell)
-      return false;
-  return true;
-}
-
-// src/cellselection.ts
-var CellSelection = class _CellSelection extends Selection {
-  // A table selection is identified by its anchor and head cells. The
-  // positions given to this constructor should point _before_ two
-  // cells in the same table. They may be the same, to select a single
-  // cell.
-  constructor($anchorCell, $headCell = $anchorCell) {
-    const table = $anchorCell.node(-1);
-    const map = TableMap.get(table);
-    const tableStart = $anchorCell.start(-1);
-    const rect = map.rectBetween(
-      $anchorCell.pos - tableStart,
-      $headCell.pos - tableStart
-    );
-    const doc = $anchorCell.node(0);
-    const cells = map.cellsInRect(rect).filter((p) => p != $headCell.pos - tableStart);
-    cells.unshift($headCell.pos - tableStart);
-    const ranges = cells.map((pos) => {
-      const cell = table.nodeAt(pos);
-      if (!cell) {
-        throw RangeError(`No cell with offset ${pos} found`);
-      }
-      const from = tableStart + pos + 1;
-      return new SelectionRange(
-        doc.resolve(from),
-        doc.resolve(from + cell.content.size)
-      );
-    });
-    super(ranges[0].$from, ranges[0].$to, ranges);
-    this.$anchorCell = $anchorCell;
-    this.$headCell = $headCell;
-  }
-  map(doc, mapping) {
-    const $anchorCell = doc.resolve(mapping.map(this.$anchorCell.pos));
-    const $headCell = doc.resolve(mapping.map(this.$headCell.pos));
-    if (pointsAtCell($anchorCell) && pointsAtCell($headCell) && inSameTable($anchorCell, $headCell)) {
-      const tableChanged = this.$anchorCell.node(-1) != $anchorCell.node(-1);
-      if (tableChanged && this.isRowSelection())
-        return _CellSelection.rowSelection($anchorCell, $headCell);
-      else if (tableChanged && this.isColSelection())
-        return _CellSelection.colSelection($anchorCell, $headCell);
-      else
-        return new _CellSelection($anchorCell, $headCell);
-    }
-    return TextSelection.between($anchorCell, $headCell);
-  }
-  // Returns a rectangular slice of table rows containing the selected
-  // cells.
-  content() {
-    const table = this.$anchorCell.node(-1);
-    const map = TableMap.get(table);
-    const tableStart = this.$anchorCell.start(-1);
-    const rect = map.rectBetween(
-      this.$anchorCell.pos - tableStart,
-      this.$headCell.pos - tableStart
-    );
-    const seen = {};
-    const rows = [];
-    for (let row = rect.top; row < rect.bottom; row++) {
-      const rowContent = [];
-      for (let index = row * map.width + rect.left, col = rect.left; col < rect.right; col++, index++) {
-        const pos = map.map[index];
-        if (seen[pos])
-          continue;
-        seen[pos] = true;
-        const cellRect = map.findCell(pos);
-        let cell = table.nodeAt(pos);
-        if (!cell) {
-          throw RangeError(`No cell with offset ${pos} found`);
-        }
-        const extraLeft = rect.left - cellRect.left;
-        const extraRight = cellRect.right - rect.right;
-        if (extraLeft > 0 || extraRight > 0) {
-          let attrs = cell.attrs;
-          if (extraLeft > 0) {
-            attrs = removeColSpan(attrs, 0, extraLeft);
-          }
-          if (extraRight > 0) {
-            attrs = removeColSpan(
-              attrs,
-              attrs.colspan - extraRight,
-              extraRight
-            );
-          }
-          if (cellRect.left < rect.left) {
-            cell = cell.type.createAndFill(attrs);
-            if (!cell) {
-              throw RangeError(
-                `Could not create cell with attrs ${JSON.stringify(attrs)}`
-              );
-            }
-          } else {
-            cell = cell.type.create(attrs, cell.content);
-          }
-        }
-        if (cellRect.top < rect.top || cellRect.bottom > rect.bottom) {
-          const attrs = {
-            ...cell.attrs,
-            rowspan: Math.min(cellRect.bottom, rect.bottom) - Math.max(cellRect.top, rect.top)
-          };
-          if (cellRect.top < rect.top) {
-            cell = cell.type.createAndFill(attrs);
-          } else {
-            cell = cell.type.create(attrs, cell.content);
-          }
-        }
-        rowContent.push(cell);
-      }
-      rows.push(table.child(row).copy(Fragment.from(rowContent)));
-    }
-    const fragment = this.isColSelection() && this.isRowSelection() ? table : rows;
-    return new Slice(Fragment.from(fragment), 1, 1);
-  }
-  replace(tr, content = Slice.empty) {
-    const mapFrom = tr.steps.length, ranges = this.ranges;
-    for (let i = 0; i < ranges.length; i++) {
-      const { $from, $to } = ranges[i], mapping = tr.mapping.slice(mapFrom);
-      tr.replace(
-        mapping.map($from.pos),
-        mapping.map($to.pos),
-        i ? Slice.empty : content
-      );
-    }
-    const sel = Selection.findFrom(
-      tr.doc.resolve(tr.mapping.slice(mapFrom).map(this.to)),
-      -1
-    );
-    if (sel)
-      tr.setSelection(sel);
-  }
-  replaceWith(tr, node) {
-    this.replace(tr, new Slice(Fragment.from(node), 0, 0));
-  }
-  forEachCell(f) {
-    const table = this.$anchorCell.node(-1);
-    const map = TableMap.get(table);
-    const tableStart = this.$anchorCell.start(-1);
-    const cells = map.cellsInRect(
-      map.rectBetween(
-        this.$anchorCell.pos - tableStart,
-        this.$headCell.pos - tableStart
-      )
-    );
-    for (let i = 0; i < cells.length; i++) {
-      f(table.nodeAt(cells[i]), tableStart + cells[i]);
-    }
-  }
-  // True if this selection goes all the way from the top to the
-  // bottom of the table.
-  isColSelection() {
-    const anchorTop = this.$anchorCell.index(-1);
-    const headTop = this.$headCell.index(-1);
-    if (Math.min(anchorTop, headTop) > 0)
-      return false;
-    const anchorBottom = anchorTop + this.$anchorCell.nodeAfter.attrs.rowspan;
-    const headBottom = headTop + this.$headCell.nodeAfter.attrs.rowspan;
-    return Math.max(anchorBottom, headBottom) == this.$headCell.node(-1).childCount;
-  }
-  // Returns the smallest column selection that covers the given anchor
-  // and head cell.
-  static colSelection($anchorCell, $headCell = $anchorCell) {
-    const table = $anchorCell.node(-1);
-    const map = TableMap.get(table);
-    const tableStart = $anchorCell.start(-1);
-    const anchorRect = map.findCell($anchorCell.pos - tableStart);
-    const headRect = map.findCell($headCell.pos - tableStart);
-    const doc = $anchorCell.node(0);
-    if (anchorRect.top <= headRect.top) {
-      if (anchorRect.top > 0)
-        $anchorCell = doc.resolve(tableStart + map.map[anchorRect.left]);
-      if (headRect.bottom < map.height)
-        $headCell = doc.resolve(
-          tableStart + map.map[map.width * (map.height - 1) + headRect.right - 1]
-        );
-    } else {
-      if (headRect.top > 0)
-        $headCell = doc.resolve(tableStart + map.map[headRect.left]);
-      if (anchorRect.bottom < map.height)
-        $anchorCell = doc.resolve(
-          tableStart + map.map[map.width * (map.height - 1) + anchorRect.right - 1]
-        );
-    }
-    return new _CellSelection($anchorCell, $headCell);
-  }
-  // True if this selection goes all the way from the left to the
-  // right of the table.
-  isRowSelection() {
-    const table = this.$anchorCell.node(-1);
-    const map = TableMap.get(table);
-    const tableStart = this.$anchorCell.start(-1);
-    const anchorLeft = map.colCount(this.$anchorCell.pos - tableStart);
-    const headLeft = map.colCount(this.$headCell.pos - tableStart);
-    if (Math.min(anchorLeft, headLeft) > 0)
-      return false;
-    const anchorRight = anchorLeft + this.$anchorCell.nodeAfter.attrs.colspan;
-    const headRight = headLeft + this.$headCell.nodeAfter.attrs.colspan;
-    return Math.max(anchorRight, headRight) == map.width;
-  }
-  eq(other) {
-    return other instanceof _CellSelection && other.$anchorCell.pos == this.$anchorCell.pos && other.$headCell.pos == this.$headCell.pos;
-  }
-  // Returns the smallest row selection that covers the given anchor
-  // and head cell.
-  static rowSelection($anchorCell, $headCell = $anchorCell) {
-    const table = $anchorCell.node(-1);
-    const map = TableMap.get(table);
-    const tableStart = $anchorCell.start(-1);
-    const anchorRect = map.findCell($anchorCell.pos - tableStart);
-    const headRect = map.findCell($headCell.pos - tableStart);
-    const doc = $anchorCell.node(0);
-    if (anchorRect.left <= headRect.left) {
-      if (anchorRect.left > 0)
-        $anchorCell = doc.resolve(
-          tableStart + map.map[anchorRect.top * map.width]
-        );
-      if (headRect.right < map.width)
-        $headCell = doc.resolve(
-          tableStart + map.map[map.width * (headRect.top + 1) - 1]
-        );
-    } else {
-      if (headRect.left > 0)
-        $headCell = doc.resolve(tableStart + map.map[headRect.top * map.width]);
-      if (anchorRect.right < map.width)
-        $anchorCell = doc.resolve(
-          tableStart + map.map[map.width * (anchorRect.top + 1) - 1]
-        );
-    }
-    return new _CellSelection($anchorCell, $headCell);
-  }
-  toJSON() {
-    return {
-      type: "cell",
-      anchor: this.$anchorCell.pos,
-      head: this.$headCell.pos
-    };
-  }
-  static fromJSON(doc, json) {
-    return new _CellSelection(doc.resolve(json.anchor), doc.resolve(json.head));
-  }
-  static create(doc, anchorCell, headCell = anchorCell) {
-    return new _CellSelection(doc.resolve(anchorCell), doc.resolve(headCell));
-  }
-  getBookmark() {
-    return new CellBookmark(this.$anchorCell.pos, this.$headCell.pos);
-  }
-};
-CellSelection.prototype.visible = false;
-Selection.jsonID("cell", CellSelection);
-var CellBookmark = class _CellBookmark {
-  constructor(anchor, head) {
-    this.anchor = anchor;
-    this.head = head;
-  }
-  map(mapping) {
-    return new _CellBookmark(mapping.map(this.anchor), mapping.map(this.head));
-  }
-  resolve(doc) {
-    const $anchorCell = doc.resolve(this.anchor), $headCell = doc.resolve(this.head);
-    if ($anchorCell.parent.type.spec.tableRole == "row" && $headCell.parent.type.spec.tableRole == "row" && $anchorCell.index() < $anchorCell.parent.childCount && $headCell.index() < $headCell.parent.childCount && inSameTable($anchorCell, $headCell))
-      return new CellSelection($anchorCell, $headCell);
+// src/menu-plugin.ts
+var button = (config, ctx) => {
+  const $button = document.createElement("button");
+  $button.role = "menuitem";
+  $button.setAttribute("type", "button");
+  if (config.content instanceof HTMLElement) {
+    $button.appendChild(config.content);
+  } else {
+    $button.innerText = config.content;
+  }
+  $button.addEventListener("click", () => {
+    if (typeof config.key === "string")
+      ctx.get(je).call(config.key);
     else
-      return Selection.near($headCell, 1);
-  }
-};
-function drawCellSelection(state) {
-  if (!(state.selection instanceof CellSelection))
-    return null;
-  const cells = [];
-  state.selection.forEachCell((node, pos) => {
-    cells.push(
-      Decoration.node(pos, pos + node.nodeSize, { class: "selectedCell" })
-    );
+      ctx.get(je).call(config.key[0], config.key[1]);
   });
-  return DecorationSet.create(state.doc, cells);
-}
-function isCellBoundarySelection({ $from, $to }) {
-  if ($from.pos == $to.pos || $from.pos < $from.pos - 6)
-    return false;
-  let afterFrom = $from.pos;
-  let beforeTo = $to.pos;
-  let depth = $from.depth;
-  for (; depth >= 0; depth--, afterFrom++)
-    if ($from.after(depth + 1) < $from.end(depth))
-      break;
-  for (let d = $to.depth; d >= 0; d--, beforeTo--)
-    if ($to.before(d + 1) > $to.start(d))
-      break;
-  return afterFrom == beforeTo && /row|table/.test($from.node(depth).type.spec.tableRole);
-}
-function isTextSelectionAcrossCells({ $from, $to }) {
-  let fromCellBoundaryNode;
-  let toCellBoundaryNode;
-  for (let i = $from.depth; i > 0; i--) {
-    const node = $from.node(i);
-    if (node.type.spec.tableRole === "cell" || node.type.spec.tableRole === "header_cell") {
-      fromCellBoundaryNode = node;
-      break;
-    }
-  }
-  for (let i = $to.depth; i > 0; i--) {
-    const node = $to.node(i);
-    if (node.type.spec.tableRole === "cell" || node.type.spec.tableRole === "header_cell") {
-      toCellBoundaryNode = node;
-      break;
-    }
-  }
-  return fromCellBoundaryNode !== toCellBoundaryNode && $to.parentOffset === 0;
-}
-function normalizeSelection(state, tr, allowTableNodeSelection) {
-  const sel = (tr || state).selection;
-  const doc = (tr || state).doc;
-  let normalize;
-  let role;
-  if (sel instanceof NodeSelection && (role = sel.node.type.spec.tableRole)) {
-    if (role == "cell" || role == "header_cell") {
-      normalize = CellSelection.create(doc, sel.from);
-    } else if (role == "row") {
-      const $cell = doc.resolve(sel.from + 1);
-      normalize = CellSelection.rowSelection($cell, $cell);
-    } else if (!allowTableNodeSelection) {
-      const map = TableMap.get(sel.node);
-      const start = sel.from + 1;
-      const lastCell = start + map.map[map.width * map.height - 1];
-      normalize = CellSelection.create(doc, start + 1, lastCell);
-    }
-  } else if (sel instanceof TextSelection && isCellBoundarySelection(sel)) {
-    normalize = TextSelection.create(doc, sel.from);
-  } else if (sel instanceof TextSelection && isTextSelectionAcrossCells(sel)) {
-    normalize = TextSelection.create(doc, sel.$from.start(), sel.$from.end());
-  }
-  if (normalize)
-    (tr || (tr = state.tr)).setSelection(normalize);
-  return tr;
-}
-var fixTablesKey = new PluginKey("fix-tables");
-function changedDescendants(old, cur, offset, f) {
-  const oldSize = old.childCount, curSize = cur.childCount;
-  outer:
-    for (let i = 0, j = 0; i < curSize; i++) {
-      const child = cur.child(i);
-      for (let scan = j, e = Math.min(oldSize, i + 3); scan < e; scan++) {
-        if (old.child(scan) == child) {
-          j = scan + 1;
-          offset += child.nodeSize;
-          continue outer;
-        }
-      }
-      f(child, offset);
-      if (j < oldSize && old.child(j).sameMarkup(child))
-        changedDescendants(old.child(j), child, offset + 1, f);
-      else
-        child.nodesBetween(0, child.content.size, f, offset + 1);
-      offset += child.nodeSize;
-    }
-}
-function fixTables(state, oldState) {
-  let tr;
-  const check = (node, pos) => {
-    if (node.type.spec.tableRole == "table")
-      tr = fixTable(state, node, pos, tr);
-  };
-  if (!oldState)
-    state.doc.descendants(check);
-  else if (oldState.doc != state.doc)
-    changedDescendants(oldState.doc, state.doc, 0, check);
-  return tr;
-}
-function fixTable(state, table, tablePos, tr) {
-  const map = TableMap.get(table);
-  if (!map.problems)
-    return tr;
-  if (!tr)
-    tr = state.tr;
-  const mustAdd = [];
-  for (let i = 0; i < map.height; i++)
-    mustAdd.push(0);
-  for (let i = 0; i < map.problems.length; i++) {
-    const prob = map.problems[i];
-    if (prob.type == "collision") {
-      const cell = table.nodeAt(prob.pos);
-      if (!cell)
-        continue;
-      const attrs = cell.attrs;
-      for (let j = 0; j < attrs.rowspan; j++)
-        mustAdd[prob.row + j] += prob.n;
-      tr.setNodeMarkup(
-        tr.mapping.map(tablePos + 1 + prob.pos),
-        null,
-        removeColSpan(attrs, attrs.colspan - prob.n, prob.n)
-      );
-    } else if (prob.type == "missing") {
-      mustAdd[prob.row] += prob.n;
-    } else if (prob.type == "overlong_rowspan") {
-      const cell = table.nodeAt(prob.pos);
-      if (!cell)
-        continue;
-      tr.setNodeMarkup(tr.mapping.map(tablePos + 1 + prob.pos), null, {
-        ...cell.attrs,
-        rowspan: cell.attrs.rowspan - prob.n
-      });
-    } else if (prob.type == "colwidth mismatch") {
-      const cell = table.nodeAt(prob.pos);
-      if (!cell)
-        continue;
-      tr.setNodeMarkup(tr.mapping.map(tablePos + 1 + prob.pos), null, {
-        ...cell.attrs,
-        colwidth: prob.colwidth
-      });
-    }
-  }
-  let first, last;
-  for (let i = 0; i < mustAdd.length; i++)
-    if (mustAdd[i]) {
-      if (first == null)
-        first = i;
-      last = i;
-    }
-  for (let i = 0, pos = tablePos + 1; i < map.height; i++) {
-    const row = table.child(i);
-    const end = pos + row.nodeSize;
-    const add = mustAdd[i];
-    if (add > 0) {
-      let role = "cell";
-      if (row.firstChild) {
-        role = row.firstChild.type.spec.tableRole;
-      }
-      const nodes = [];
-      for (let j = 0; j < add; j++) {
-        const node = tableNodeTypes(state.schema)[role].createAndFill();
-        if (node)
-          nodes.push(node);
-      }
-      const side = (i == 0 || first == i - 1) && last == i ? pos + 1 : end - 1;
-      tr.insert(tr.mapping.map(side), nodes);
-    }
-    pos = end;
-  }
-  return tr.setMeta(fixTablesKey, { fixTables: true });
-}
-function pastedCells(slice) {
-  if (!slice.size)
-    return null;
-  let { content, openStart, openEnd } = slice;
-  while (content.childCount == 1 && (openStart > 0 && openEnd > 0 || content.child(0).type.spec.tableRole == "table")) {
-    openStart--;
-    openEnd--;
-    content = content.child(0).content;
-  }
-  const first = content.child(0);
-  const role = first.type.spec.tableRole;
-  const schema = first.type.schema, rows = [];
-  if (role == "row") {
-    for (let i = 0; i < content.childCount; i++) {
-      let cells = content.child(i).content;
-      const left = i ? 0 : Math.max(0, openStart - 1);
-      const right = i < content.childCount - 1 ? 0 : Math.max(0, openEnd - 1);
-      if (left || right)
-        cells = fitSlice(
-          tableNodeTypes(schema).row,
-          new Slice(cells, left, right)
-        ).content;
-      rows.push(cells);
-    }
-  } else if (role == "cell" || role == "header_cell") {
-    rows.push(
-      openStart || openEnd ? fitSlice(
-        tableNodeTypes(schema).row,
-        new Slice(content, openStart, openEnd)
-      ).content : content
-    );
-  } else {
-    return null;
-  }
-  return ensureRectangular(schema, rows);
-}
-function ensureRectangular(schema, rows) {
-  const widths = [];
-  for (let i = 0; i < rows.length; i++) {
-    const row = rows[i];
-    for (let j = row.childCount - 1; j >= 0; j--) {
-      const { rowspan, colspan } = row.child(j).attrs;
-      for (let r = i; r < i + rowspan; r++)
-        widths[r] = (widths[r] || 0) + colspan;
-    }
-  }
-  let width = 0;
-  for (let r = 0; r < widths.length; r++)
-    width = Math.max(width, widths[r]);
-  for (let r = 0; r < widths.length; r++) {
-    if (r >= rows.length)
-      rows.push(Fragment.empty);
-    if (widths[r] < width) {
-      const empty = tableNodeTypes(schema).cell.createAndFill();
-      const cells = [];
-      for (let i = widths[r]; i < width; i++) {
-        cells.push(empty);
-      }
-      rows[r] = rows[r].append(Fragment.from(cells));
-    }
-  }
-  return { height: rows.length, width, rows };
-}
-function fitSlice(nodeType, slice) {
-  const node = nodeType.createAndFill();
-  const tr = new Transform(node).replace(0, node.content.size, slice);
-  return tr.doc;
-}
-function clipCells({ width, height, rows }, newWidth, newHeight) {
-  if (width != newWidth) {
-    const added = [];
-    const newRows = [];
-    for (let row = 0; row < rows.length; row++) {
-      const frag = rows[row], cells = [];
-      for (let col = added[row] || 0, i = 0; col < newWidth; i++) {
-        let cell = frag.child(i % frag.childCount);
-        if (col + cell.attrs.colspan > newWidth)
-          cell = cell.type.createChecked(
-            removeColSpan(
-              cell.attrs,
-              cell.attrs.colspan,
-              col + cell.attrs.colspan - newWidth
-            ),
-            cell.content
-          );
-        cells.push(cell);
-        col += cell.attrs.colspan;
-        for (let j = 1; j < cell.attrs.rowspan; j++)
-          added[row + j] = (added[row + j] || 0) + cell.attrs.colspan;
-      }
-      newRows.push(Fragment.from(cells));
-    }
-    rows = newRows;
-    width = newWidth;
-  }
-  if (height != newHeight) {
-    const newRows = [];
-    for (let row = 0, i = 0; row < newHeight; row++, i++) {
-      const cells = [], source = rows[i % height];
-      for (let j = 0; j < source.childCount; j++) {
-        let cell = source.child(j);
-        if (row + cell.attrs.rowspan > newHeight)
-          cell = cell.type.create(
-            {
-              ...cell.attrs,
-              rowspan: Math.max(1, newHeight - cell.attrs.rowspan)
-            },
-            cell.content
-          );
-        cells.push(cell);
-      }
-      newRows.push(Fragment.from(cells));
-    }
-    rows = newRows;
-    height = newHeight;
-  }
-  return { width, height, rows };
-}
-function growTable(tr, map, table, start, width, height, mapFrom) {
-  const schema = tr.doc.type.schema;
-  const types = tableNodeTypes(schema);
-  let empty;
-  let emptyHead;
-  if (width > map.width) {
-    for (let row = 0, rowEnd = 0; row < map.height; row++) {
-      const rowNode = table.child(row);
-      rowEnd += rowNode.nodeSize;
-      const cells = [];
-      let add;
-      if (rowNode.lastChild == null || rowNode.lastChild.type == types.cell)
-        add = empty || (empty = types.cell.createAndFill());
-      else
-        add = emptyHead || (emptyHead = types.header_cell.createAndFill());
-      for (let i = map.width; i < width; i++)
-        cells.push(add);
-      tr.insert(tr.mapping.slice(mapFrom).map(rowEnd - 1 + start), cells);
-    }
-  }
-  if (height > map.height) {
-    const cells = [];
-    for (let i = 0, start2 = (map.height - 1) * map.width; i < Math.max(map.width, width); i++) {
-      const header = i >= map.width ? false : table.nodeAt(map.map[start2 + i]).type == types.header_cell;
-      cells.push(
-        header ? emptyHead || (emptyHead = types.header_cell.createAndFill()) : empty || (empty = types.cell.createAndFill())
-      );
-    }
-    const emptyRow = types.row.create(null, Fragment.from(cells)), rows = [];
-    for (let i = map.height; i < height; i++)
-      rows.push(emptyRow);
-    tr.insert(tr.mapping.slice(mapFrom).map(start + table.nodeSize - 2), rows);
-  }
-  return !!(empty || emptyHead);
-}
-function isolateHorizontal(tr, map, table, start, left, right, top, mapFrom) {
-  if (top == 0 || top == map.height)
-    return false;
-  let found = false;
-  for (let col = left; col < right; col++) {
-    const index = top * map.width + col, pos = map.map[index];
-    if (map.map[index - map.width] == pos) {
-      found = true;
-      const cell = table.nodeAt(pos);
-      const { top: cellTop, left: cellLeft } = map.findCell(pos);
-      tr.setNodeMarkup(tr.mapping.slice(mapFrom).map(pos + start), null, {
-        ...cell.attrs,
-        rowspan: top - cellTop
-      });
-      tr.insert(
-        tr.mapping.slice(mapFrom).map(map.positionAt(top, cellLeft, table)),
-        cell.type.createAndFill({
-          ...cell.attrs,
-          rowspan: cellTop + cell.attrs.rowspan - top
-        })
-      );
-      col += cell.attrs.colspan - 1;
-    }
-  }
-  return found;
-}
-function isolateVertical(tr, map, table, start, top, bottom, left, mapFrom) {
-  if (left == 0 || left == map.width)
-    return false;
-  let found = false;
-  for (let row = top; row < bottom; row++) {
-    const index = row * map.width + left, pos = map.map[index];
-    if (map.map[index - 1] == pos) {
-      found = true;
-      const cell = table.nodeAt(pos);
-      const cellLeft = map.colCount(pos);
-      const updatePos = tr.mapping.slice(mapFrom).map(pos + start);
-      tr.setNodeMarkup(
-        updatePos,
-        null,
-        removeColSpan(
-          cell.attrs,
-          left - cellLeft,
-          cell.attrs.colspan - (left - cellLeft)
-        )
-      );
-      tr.insert(
-        updatePos + cell.nodeSize,
-        cell.type.createAndFill(
-          removeColSpan(cell.attrs, 0, left - cellLeft)
-        )
-      );
-      row += cell.attrs.rowspan - 1;
-    }
-  }
-  return found;
-}
-function insertCells(state, dispatch, tableStart, rect, cells) {
-  let table = tableStart ? state.doc.nodeAt(tableStart - 1) : state.doc;
-  if (!table) {
-    throw new Error("No table found");
-  }
-  let map = TableMap.get(table);
-  const { top, left } = rect;
-  const right = left + cells.width, bottom = top + cells.height;
-  const tr = state.tr;
-  let mapFrom = 0;
-  function recomp() {
-    table = tableStart ? tr.doc.nodeAt(tableStart - 1) : tr.doc;
-    if (!table) {
-      throw new Error("No table found");
-    }
-    map = TableMap.get(table);
-    mapFrom = tr.mapping.maps.length;
-  }
-  if (growTable(tr, map, table, tableStart, right, bottom, mapFrom))
-    recomp();
-  if (isolateHorizontal(tr, map, table, tableStart, left, right, top, mapFrom))
-    recomp();
-  if (isolateHorizontal(tr, map, table, tableStart, left, right, bottom, mapFrom))
-    recomp();
-  if (isolateVertical(tr, map, table, tableStart, top, bottom, left, mapFrom))
-    recomp();
-  if (isolateVertical(tr, map, table, tableStart, top, bottom, right, mapFrom))
-    recomp();
-  for (let row = top; row < bottom; row++) {
-    const from = map.positionAt(row, left, table), to = map.positionAt(row, right, table);
-    tr.replace(
-      tr.mapping.slice(mapFrom).map(from + tableStart),
-      tr.mapping.slice(mapFrom).map(to + tableStart),
-      new Slice(cells.rows[row - top], 0, 0)
-    );
-  }
-  recomp();
-  tr.setSelection(
-    new CellSelection(
-      tr.doc.resolve(tableStart + map.positionAt(top, left, table)),
-      tr.doc.resolve(tableStart + map.positionAt(bottom - 1, right - 1, table))
-    )
-  );
-  dispatch(tr);
-}
-
-// src/input.ts
-var handleKeyDown = keydownHandler({
-  ArrowLeft: arrow("horiz", -1),
-  ArrowRight: arrow("horiz", 1),
-  ArrowUp: arrow("vert", -1),
-  ArrowDown: arrow("vert", 1),
-  "Shift-ArrowLeft": shiftArrow("horiz", -1),
-  "Shift-ArrowRight": shiftArrow("horiz", 1),
-  "Shift-ArrowUp": shiftArrow("vert", -1),
-  "Shift-ArrowDown": shiftArrow("vert", 1),
-  Backspace: deleteCellSelection,
-  "Mod-Backspace": deleteCellSelection,
-  Delete: deleteCellSelection,
-  "Mod-Delete": deleteCellSelection
-});
-function maybeSetSelection(state, dispatch, selection) {
-  if (selection.eq(state.selection))
-    return false;
-  if (dispatch)
-    dispatch(state.tr.setSelection(selection).scrollIntoView());
-  return true;
-}
-function arrow(axis, dir) {
-  return (state, dispatch, view) => {
-    if (!view)
-      return false;
-    const sel = state.selection;
-    if (sel instanceof CellSelection) {
-      return maybeSetSelection(
-        state,
-        dispatch,
-        Selection.near(sel.$headCell, dir)
-      );
-    }
-    if (axis != "horiz" && !sel.empty)
-      return false;
-    const end = atEndOfCell(view, axis, dir);
-    if (end == null)
-      return false;
-    if (axis == "horiz") {
-      return maybeSetSelection(
-        state,
-        dispatch,
-        Selection.near(state.doc.resolve(sel.head + dir), dir)
-      );
-    } else {
-      const $cell = state.doc.resolve(end);
-      const $next = nextCell($cell, axis, dir);
-      let newSel;
-      if ($next)
-        newSel = Selection.near($next, 1);
-      else if (dir < 0)
-        newSel = Selection.near(state.doc.resolve($cell.before(-1)), -1);
-      else
-        newSel = Selection.near(state.doc.resolve($cell.after(-1)), 1);
-      return maybeSetSelection(state, dispatch, newSel);
-    }
-  };
-}
-function shiftArrow(axis, dir) {
-  return (state, dispatch, view) => {
-    if (!view)
-      return false;
-    const sel = state.selection;
-    let cellSel;
-    if (sel instanceof CellSelection) {
-      cellSel = sel;
-    } else {
-      const end = atEndOfCell(view, axis, dir);
-      if (end == null)
-        return false;
-      cellSel = new CellSelection(state.doc.resolve(end));
-    }
-    const $head = nextCell(cellSel.$headCell, axis, dir);
-    if (!$head)
-      return false;
-    return maybeSetSelection(
-      state,
-      dispatch,
-      new CellSelection(cellSel.$anchorCell, $head)
-    );
-  };
-}
-function deleteCellSelection(state, dispatch) {
-  const sel = state.selection;
-  if (!(sel instanceof CellSelection))
-    return false;
-  if (dispatch) {
-    const tr = state.tr;
-    const baseContent = tableNodeTypes(state.schema).cell.createAndFill().content;
-    sel.forEachCell((cell, pos) => {
-      if (!cell.content.eq(baseContent))
-        tr.replace(
-          tr.mapping.map(pos + 1),
-          tr.mapping.map(pos + cell.nodeSize - 1),
-          new Slice(baseContent, 0, 0)
-        );
-    });
-    if (tr.docChanged)
-      dispatch(tr);
-  }
-  return true;
-}
-function handleTripleClick(view, pos) {
-  const doc = view.state.doc, $cell = cellAround(doc.resolve(pos));
-  if (!$cell)
-    return false;
-  view.dispatch(view.state.tr.setSelection(new CellSelection($cell)));
-  return true;
-}
-function handlePaste(view, _, slice) {
-  if (!isInTable(view.state))
-    return false;
-  let cells = pastedCells(slice);
-  const sel = view.state.selection;
-  if (sel instanceof CellSelection) {
-    if (!cells)
-      cells = {
-        width: 1,
-        height: 1,
-        rows: [
-          Fragment.from(
-            fitSlice(tableNodeTypes(view.state.schema).cell, slice)
-          )
-        ]
-      };
-    const table = sel.$anchorCell.node(-1);
-    const start = sel.$anchorCell.start(-1);
-    const rect = TableMap.get(table).rectBetween(
-      sel.$anchorCell.pos - start,
-      sel.$headCell.pos - start
-    );
-    cells = clipCells(cells, rect.right - rect.left, rect.bottom - rect.top);
-    insertCells(view.state, view.dispatch, start, rect, cells);
-    return true;
-  } else if (cells) {
-    const $cell = selectionCell(view.state);
-    const start = $cell.start(-1);
-    insertCells(
-      view.state,
-      view.dispatch,
-      start,
-      TableMap.get($cell.node(-1)).findCell($cell.pos - start),
-      cells
-    );
-    return true;
-  } else {
-    return false;
-  }
-}
-function handleMouseDown(view, startEvent) {
-  var _a;
-  if (startEvent.ctrlKey || startEvent.metaKey)
-    return;
-  const startDOMCell = domInCell(view, startEvent.target);
-  let $anchor;
-  if (startEvent.shiftKey && view.state.selection instanceof CellSelection) {
-    setCellSelection(view.state.selection.$anchorCell, startEvent);
-    startEvent.preventDefault();
-  } else if (startEvent.shiftKey && startDOMCell && ($anchor = cellAround(view.state.selection.$anchor)) != null && ((_a = cellUnderMouse(view, startEvent)) == null ? void 0 : _a.pos) != $anchor.pos) {
-    setCellSelection($anchor, startEvent);
-    startEvent.preventDefault();
-  } else if (!startDOMCell) {
-    return;
-  }
-  function setCellSelection($anchor2, event) {
-    let $head = cellUnderMouse(view, event);
-    const starting = tableEditingKey.getState(view.state) == null;
-    if (!$head || !inSameTable($anchor2, $head)) {
-      if (starting)
-        $head = $anchor2;
-      else
-        return;
-    }
-    const selection = new CellSelection($anchor2, $head);
-    if (starting || !view.state.selection.eq(selection)) {
-      const tr = view.state.tr.setSelection(selection);
-      if (starting)
-        tr.setMeta(tableEditingKey, $anchor2.pos);
-      view.dispatch(tr);
-    }
-  }
-  function stop() {
-    view.root.removeEventListener("mouseup", stop);
-    view.root.removeEventListener("dragstart", stop);
-    view.root.removeEventListener("mousemove", move);
-    if (tableEditingKey.getState(view.state) != null)
-      view.dispatch(view.state.tr.setMeta(tableEditingKey, -1));
-  }
-  function move(_event) {
-    const event = _event;
-    const anchor = tableEditingKey.getState(view.state);
-    let $anchor2;
-    if (anchor != null) {
-      $anchor2 = view.state.doc.resolve(anchor);
-    } else if (domInCell(view, event.target) != startDOMCell) {
-      $anchor2 = cellUnderMouse(view, startEvent);
-      if (!$anchor2)
-        return stop();
-    }
-    if ($anchor2)
-      setCellSelection($anchor2, event);
-  }
-  view.root.addEventListener("mouseup", stop);
-  view.root.addEventListener("dragstart", stop);
-  view.root.addEventListener("mousemove", move);
-}
-function atEndOfCell(view, axis, dir) {
-  if (!(view.state.selection instanceof TextSelection))
-    return null;
-  const { $head } = view.state.selection;
-  for (let d = $head.depth - 1; d >= 0; d--) {
-    const parent = $head.node(d), index = dir < 0 ? $head.index(d) : $head.indexAfter(d);
-    if (index != (dir < 0 ? 0 : parent.childCount))
-      return null;
-    if (parent.type.spec.tableRole == "cell" || parent.type.spec.tableRole == "header_cell") {
-      const cellPos = $head.before(d);
-      const dirStr = axis == "vert" ? dir > 0 ? "down" : "up" : dir > 0 ? "right" : "left";
-      return view.endOfTextblock(dirStr) ? cellPos : null;
-    }
-  }
-  return null;
-}
-function domInCell(view, dom) {
-  for (; dom && dom != view.dom; dom = dom.parentNode) {
-    if (dom.nodeName == "TD" || dom.nodeName == "TH") {
-      return dom;
-    }
-  }
-  return null;
-}
-function cellUnderMouse(view, event) {
-  const mousePos = view.posAtCoords({
-    left: event.clientX,
-    top: event.clientY
-  });
-  if (!mousePos)
-    return null;
-  return mousePos ? cellAround(view.state.doc.resolve(mousePos.pos)) : null;
-}
-
-// src/tableview.ts
-var TableView = class {
-  constructor(node, cellMinWidth) {
-    this.node = node;
-    this.cellMinWidth = cellMinWidth;
-    this.dom = document.createElement("div");
-    this.dom.className = "tableWrapper";
-    this.table = this.dom.appendChild(document.createElement("table"));
-    this.colgroup = this.table.appendChild(document.createElement("colgroup"));
-    updateColumnsOnResize(node, this.colgroup, this.table, cellMinWidth);
-    this.contentDOM = this.table.appendChild(document.createElement("tbody"));
-  }
-  update(node) {
-    if (node.type != this.node.type)
-      return false;
-    this.node = node;
-    updateColumnsOnResize(node, this.colgroup, this.table, this.cellMinWidth);
-    return true;
-  }
-  ignoreMutation(record) {
-    return record.type == "attributes" && (record.target == this.table || this.colgroup.contains(record.target));
-  }
+  return [$button];
 };
-function updateColumnsOnResize(node, colgroup, table, cellMinWidth, overrideCol, overrideValue) {
-  var _a;
-  let totalWidth = 0;
-  let fixedWidth = true;
-  let nextDOM = colgroup.firstChild;
-  const row = node.firstChild;
-  if (!row)
-    return;
-  for (let i = 0, col = 0; i < row.childCount; i++) {
-    const { colspan, colwidth } = row.child(i).attrs;
-    for (let j = 0; j < colspan; j++, col++) {
-      const hasWidth = overrideCol == col ? overrideValue : colwidth && colwidth[j];
-      const cssWidth = hasWidth ? hasWidth + "px" : "";
-      totalWidth += hasWidth || cellMinWidth;
-      if (!hasWidth)
-        fixedWidth = false;
-      if (!nextDOM) {
-        colgroup.appendChild(document.createElement("col")).style.width = cssWidth;
+var divider = () => {
+  const $divider = document.createElement("div");
+  $divider.role = "separator";
+  return [$divider];
+};
+var select = (config, ctx) => {
+  const $button = document.createElement("button");
+  $button.role = "menuitem";
+  $button.setAttribute("type", "button");
+  $button.setAttribute("aria-haspopup", "true");
+  $button.setAttribute("aria-expanded", "false");
+  $button.setAttribute("tab-index", "0");
+  $button.textContent = config.text;
+  const $buttonExpand = document.createElement("span");
+  $buttonExpand.innerHTML = `<svg style="vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 15.375l-6-6l1.4-1.4l4.6 4.6l4.6-4.6l1.4 1.4l-6 6Z"/></svg>`;
+  $button.append($buttonExpand);
+  const $select = document.createElement("ul");
+  $select.role = "menu";
+  $select.setAttribute("aria-label", config.text);
+  $select.setAttribute("tabindex", "-1");
+  $select.append(
+    ...config.options.map((item) => {
+      const listItem = document.createElement("li");
+      listItem.role = "menuitem";
+      listItem.setAttribute("tabindex", "-1");
+      if (item.content instanceof HTMLElement) {
+        listItem.append(item.content);
       } else {
-        if (nextDOM.style.width != cssWidth)
-          nextDOM.style.width = cssWidth;
-        nextDOM = nextDOM.nextSibling;
+        listItem.textContent = item.content;
       }
-    }
-  }
-  while (nextDOM) {
-    const after = nextDOM.nextSibling;
-    (_a = nextDOM.parentNode) == null ? void 0 : _a.removeChild(nextDOM);
-    nextDOM = after;
-  }
-  if (fixedWidth) {
-    table.style.width = totalWidth + "px";
-    table.style.minWidth = "";
-  } else {
-    table.style.width = "";
-    table.style.minWidth = totalWidth + "px";
-  }
-}
-
-// src/columnresizing.ts
-var columnResizingPluginKey = new PluginKey(
-  "tableColumnResizing"
-);
-function columnResizing({
-  handleWidth = 5,
-  cellMinWidth = 25,
-  View = TableView,
-  lastColumnResizable = true
-} = {}) {
-  const plugin = new Plugin({
-    key: columnResizingPluginKey,
-    state: {
-      init(_, state) {
-        plugin.spec.props.nodeViews[tableNodeTypes(state.schema).table.name] = (node, view) => new View(node, cellMinWidth, view);
-        return new ResizeState(-1, false);
-      },
-      apply(tr, prev) {
-        return prev.apply(tr);
-      }
-    },
-    props: {
-      attributes: (state) => {
-        const pluginState = columnResizingPluginKey.getState(state);
-        return pluginState && pluginState.activeHandle > -1 ? { class: "resize-cursor" } : {};
-      },
-      handleDOMEvents: {
-        mousemove: (view, event) => {
-          handleMouseMove(
-            view,
-            event,
-            handleWidth,
-            cellMinWidth,
-            lastColumnResizable
-          );
-        },
-        mouseleave: (view) => {
-          handleMouseLeave(view);
-        },
-        mousedown: (view, event) => {
-          handleMouseDown2(view, event, cellMinWidth);
+      listItem.addEventListener("click", () => {
+        const command = config.onSelect(item.id);
+        if (typeof command === "string") {
+          ctx.get(je).call(command);
+        } else {
+          ctx.get(je).call(command[0], command[1]);
         }
-      },
-      decorations: (state) => {
-        const pluginState = columnResizingPluginKey.getState(state);
-        if (pluginState && pluginState.activeHandle > -1) {
-          return handleDecorations(state, pluginState.activeHandle);
-        }
-      },
-      nodeViews: {}
-    }
-  });
-  return plugin;
-}
-var ResizeState = class _ResizeState {
-  constructor(activeHandle, dragging) {
-    this.activeHandle = activeHandle;
-    this.dragging = dragging;
-  }
-  apply(tr) {
-    const state = this;
-    const action = tr.getMeta(columnResizingPluginKey);
-    if (action && action.setHandle != null)
-      return new _ResizeState(action.setHandle, false);
-    if (action && action.setDragging !== void 0)
-      return new _ResizeState(state.activeHandle, action.setDragging);
-    if (state.activeHandle > -1 && tr.docChanged) {
-      let handle = tr.mapping.map(state.activeHandle, -1);
-      if (!pointsAtCell(tr.doc.resolve(handle))) {
-        handle = -1;
-      }
-      return new _ResizeState(handle, state.dragging);
-    }
-    return state;
-  }
-};
-function handleMouseMove(view, event, handleWidth, cellMinWidth, lastColumnResizable) {
-  const pluginState = columnResizingPluginKey.getState(view.state);
-  if (!pluginState)
-    return;
-  if (!pluginState.dragging) {
-    const target = domCellAround(event.target);
-    let cell = -1;
-    if (target) {
-      const { left, right } = target.getBoundingClientRect();
-      if (event.clientX - left <= handleWidth)
-        cell = edgeCell(view, event, "left", handleWidth);
-      else if (right - event.clientX <= handleWidth)
-        cell = edgeCell(view, event, "right", handleWidth);
-    }
-    if (cell != pluginState.activeHandle) {
-      if (!lastColumnResizable && cell !== -1) {
-        const $cell = view.state.doc.resolve(cell);
-        const table = $cell.node(-1);
-        const map = TableMap.get(table);
-        const tableStart = $cell.start(-1);
-        const col = map.colCount($cell.pos - tableStart) + $cell.nodeAfter.attrs.colspan - 1;
-        if (col == map.width - 1) {
-          return;
-        }
-      }
-      updateHandle(view, cell);
-    }
-  }
-}
-function handleMouseLeave(view) {
-  const pluginState = columnResizingPluginKey.getState(view.state);
-  if (pluginState && pluginState.activeHandle > -1 && !pluginState.dragging)
-    updateHandle(view, -1);
-}
-function handleMouseDown2(view, event, cellMinWidth) {
-  var _a;
-  const win = (_a = view.dom.ownerDocument.defaultView) != null ? _a : window;
-  const pluginState = columnResizingPluginKey.getState(view.state);
-  if (!pluginState || pluginState.activeHandle == -1 || pluginState.dragging)
-    return false;
-  const cell = view.state.doc.nodeAt(pluginState.activeHandle);
-  const width = currentColWidth(view, pluginState.activeHandle, cell.attrs);
-  view.dispatch(
-    view.state.tr.setMeta(columnResizingPluginKey, {
-      setDragging: { startX: event.clientX, startWidth: width }
+        $button.setAttribute("aria-expanded", "false");
+        $select.classList.remove("show");
+        $select.blur();
+      });
+      return listItem;
     })
   );
-  function finish(event2) {
-    win.removeEventListener("mouseup", finish);
-    win.removeEventListener("mousemove", move);
-    const pluginState2 = columnResizingPluginKey.getState(view.state);
-    if (pluginState2 == null ? void 0 : pluginState2.dragging) {
-      updateColumnWidth(
-        view,
-        pluginState2.activeHandle,
-        draggedWidth(pluginState2.dragging, event2, cellMinWidth)
-      );
-      view.dispatch(
-        view.state.tr.setMeta(columnResizingPluginKey, { setDragging: null })
-      );
+  $button.addEventListener("click", () => {
+    const expanded = ($button.getAttribute("aria-expanded") ?? "false") === "false" ? false : true;
+    $button.setAttribute("aria-expanded", !expanded ? "true" : "false");
+    if (!expanded) {
+      $select.classList.add("show");
+      ctx.get(H).dom.addEventListener("click", onClickOutside);
+    } else {
+      $select.classList.remove("show");
+      $select.blur();
+      ctx.get(H).dom.removeEventListener("click", onClickOutside);
     }
-  }
-  function move(event2) {
-    if (!event2.which)
-      return finish(event2);
-    const pluginState2 = columnResizingPluginKey.getState(view.state);
-    if (!pluginState2)
-      return;
-    if (pluginState2.dragging) {
-      const dragged = draggedWidth(pluginState2.dragging, event2, cellMinWidth);
-      displayColumnWidth(view, pluginState2.activeHandle, dragged, cellMinWidth);
+    function onClickOutside() {
+      $button.setAttribute("aria-expanded", "false");
+      $select.classList.remove("show");
+      $select.blur();
     }
-  }
-  win.addEventListener("mouseup", finish);
-  win.addEventListener("mousemove", move);
-  event.preventDefault();
-  return true;
-}
-function currentColWidth(view, cellPos, { colspan, colwidth }) {
-  const width = colwidth && colwidth[colwidth.length - 1];
-  if (width)
-    return width;
-  const dom = view.domAtPos(cellPos);
-  const node = dom.node.childNodes[dom.offset];
-  let domWidth = node.offsetWidth, parts = colspan;
-  if (colwidth) {
-    for (let i = 0; i < colspan; i++)
-      if (colwidth[i]) {
-        domWidth -= colwidth[i];
-        parts--;
-      }
-  }
-  return domWidth / parts;
-}
-function domCellAround(target) {
-  while (target && target.nodeName != "TD" && target.nodeName != "TH")
-    target = target.classList && target.classList.contains("ProseMirror") ? null : target.parentNode;
-  return target;
-}
-function edgeCell(view, event, side, handleWidth) {
-  const offset = side == "right" ? -handleWidth : handleWidth;
-  const found = view.posAtCoords({
-    left: event.clientX + offset,
-    top: event.clientY
   });
-  if (!found)
-    return -1;
-  const { pos } = found;
-  const $cell = cellAround(view.state.doc.resolve(pos));
-  if (!$cell)
-    return -1;
-  if (side == "right")
-    return $cell.pos;
-  const map = TableMap.get($cell.node(-1)), start = $cell.start(-1);
-  const index = map.map.indexOf($cell.pos - start);
-  return index % map.width == 0 ? -1 : start + map.map[index - 1];
-}
-function draggedWidth(dragging, event, cellMinWidth) {
-  const offset = event.clientX - dragging.startX;
-  return Math.max(cellMinWidth, dragging.startWidth + offset);
-}
-function updateHandle(view, value) {
-  view.dispatch(
-    view.state.tr.setMeta(columnResizingPluginKey, { setHandle: value })
+  return [$button, $select];
+};
+
+// src/menu-plugin.ts
+var menuDomCtx = h({}, "menuDom");
+var menuConfigCtx = h(
+  { items: [], attributes: { class: "milkdown-menu" } },
+  "menuConfig"
+);
+var key = new PluginKey("MILKDOWN_PLUGIN_MENU");
+var createContainer = (ctx) => {
+  const config = ctx.get(menuConfigCtx.key);
+  const container = document.createElement("div");
+  Object.entries(config.attributes).forEach(([key2, val]) => {
+    if (key2 === "class")
+      container.classList.add(val);
+    else
+      container.setAttribute(key2, val);
+  });
+  return container;
+};
+var createMenuBar = (ctx) => {
+  const menubar = document.createElement("ul");
+  menubar.role = "menubar";
+  menubar.setAttribute("aria-label", "Editor menubar");
+  const config = ctx.get(menuConfigCtx.key);
+  const itemsWithDivider = config.items.reduce(
+    (acc, curr, index) => {
+      if (index === config.items.length - 1)
+        return acc.concat(...curr);
+      return acc.concat(...curr).concat("divider");
+    },
+    []
   );
-}
-function updateColumnWidth(view, cell, width) {
-  const $cell = view.state.doc.resolve(cell);
-  const table = $cell.node(-1), map = TableMap.get(table), start = $cell.start(-1);
-  const col = map.colCount($cell.pos - start) + $cell.nodeAfter.attrs.colspan - 1;
-  const tr = view.state.tr;
-  for (let row = 0; row < map.height; row++) {
-    const mapIndex = row * map.width + col;
-    if (row && map.map[mapIndex] == map.map[mapIndex - map.width])
-      continue;
-    const pos = map.map[mapIndex];
-    const attrs = table.nodeAt(pos).attrs;
-    const index = attrs.colspan == 1 ? 0 : col - map.colCount(pos);
-    if (attrs.colwidth && attrs.colwidth[index] == width)
-      continue;
-    const colwidth = attrs.colwidth ? attrs.colwidth.slice() : zeroes(attrs.colspan);
-    colwidth[index] = width;
-    tr.setNodeMarkup(start + pos, null, { ...attrs, colwidth });
-  }
-  if (tr.docChanged)
-    view.dispatch(tr);
-}
-function displayColumnWidth(view, cell, width, cellMinWidth) {
-  const $cell = view.state.doc.resolve(cell);
-  const table = $cell.node(-1), start = $cell.start(-1);
-  const col = TableMap.get(table).colCount($cell.pos - start) + $cell.nodeAfter.attrs.colspan - 1;
-  let dom = view.domAtPos($cell.start(-1)).node;
-  while (dom && dom.nodeName != "TABLE") {
-    dom = dom.parentNode;
-  }
-  if (!dom)
-    return;
-  updateColumnsOnResize(
-    table,
-    dom.firstChild,
-    dom,
-    cellMinWidth,
-    col,
-    width
-  );
-}
-function zeroes(n) {
-  return Array(n).fill(0);
-}
-function handleDecorations(state, cell) {
-  const decorations = [];
-  const $cell = state.doc.resolve(cell);
-  const table = $cell.node(-1);
-  if (!table) {
-    return DecorationSet.empty;
-  }
-  const map = TableMap.get(table);
-  const start = $cell.start(-1);
-  const col = map.colCount($cell.pos - start) + $cell.nodeAfter.attrs.colspan;
-  for (let row = 0; row < map.height; row++) {
-    const index = col + row * map.width - 1;
-    if ((col == map.width || map.map[index] != map.map[index + 1]) && (row == 0 || map.map[index] != map.map[index - map.width])) {
-      const cellPos = map.map[index];
-      const pos = start + cellPos + table.nodeAt(cellPos).nodeSize - 1;
-      const dom = document.createElement("div");
-      dom.className = "column-resize-handle";
-      decorations.push(Decoration.widget(pos, dom));
-    }
-  }
-  return DecorationSet.create(state.doc, decorations);
-}
-function selectedRect(state) {
-  const sel = state.selection;
-  const $pos = selectionCell(state);
-  const table = $pos.node(-1);
-  const tableStart = $pos.start(-1);
-  const map = TableMap.get(table);
-  const rect = sel instanceof CellSelection ? map.rectBetween(
-    sel.$anchorCell.pos - tableStart,
-    sel.$headCell.pos - tableStart
-  ) : map.findCell($pos.pos - tableStart);
-  return { ...rect, tableStart, map, table };
-}
-function addColumn(tr, { map, tableStart, table }, col) {
-  let refColumn = col > 0 ? -1 : 0;
-  if (columnIsHeader(map, table, col + refColumn)) {
-    refColumn = col == 0 || col == map.width ? null : 0;
-  }
-  for (let row = 0; row < map.height; row++) {
-    const index = row * map.width + col;
-    if (col > 0 && col < map.width && map.map[index - 1] == map.map[index]) {
-      const pos = map.map[index];
-      const cell = table.nodeAt(pos);
-      tr.setNodeMarkup(
-        tr.mapping.map(tableStart + pos),
-        null,
-        addColSpan(cell.attrs, col - map.colCount(pos))
-      );
-      row += cell.attrs.rowspan - 1;
-    } else {
-      const type = refColumn == null ? tableNodeTypes(table.type.schema).cell : table.nodeAt(map.map[index + refColumn]).type;
-      const pos = map.positionAt(row, col, table);
-      tr.insert(tr.mapping.map(tableStart + pos), type.createAndFill());
-    }
-  }
-  return tr;
-}
-function addColumnBefore(state, dispatch) {
-  if (!isInTable(state))
-    return false;
-  if (dispatch) {
-    const rect = selectedRect(state);
-    dispatch(addColumn(state.tr, rect, rect.left));
-  }
-  return true;
-}
-function addColumnAfter(state, dispatch) {
-  if (!isInTable(state))
-    return false;
-  if (dispatch) {
-    const rect = selectedRect(state);
-    dispatch(addColumn(state.tr, rect, rect.right));
-  }
-  return true;
-}
-function removeColumn(tr, { map, table, tableStart }, col) {
-  const mapStart = tr.mapping.maps.length;
-  for (let row = 0; row < map.height; ) {
-    const index = row * map.width + col;
-    const pos = map.map[index];
-    const cell = table.nodeAt(pos);
-    const attrs = cell.attrs;
-    if (col > 0 && map.map[index - 1] == pos || col < map.width - 1 && map.map[index + 1] == pos) {
-      tr.setNodeMarkup(
-        tr.mapping.slice(mapStart).map(tableStart + pos),
-        null,
-        removeColSpan(attrs, col - map.colCount(pos))
-      );
-    } else {
-      const start = tr.mapping.slice(mapStart).map(tableStart + pos);
-      tr.delete(start, start + cell.nodeSize);
-    }
-    row += attrs.rowspan;
-  }
-}
-function deleteColumn(state, dispatch) {
-  if (!isInTable(state))
-    return false;
-  if (dispatch) {
-    const rect = selectedRect(state);
-    const tr = state.tr;
-    if (rect.left == 0 && rect.right == rect.map.width)
-      return false;
-    for (let i = rect.right - 1; ; i--) {
-      removeColumn(tr, rect, i);
-      if (i == rect.left)
-        break;
-      const table = rect.tableStart ? tr.doc.nodeAt(rect.tableStart - 1) : tr.doc;
-      if (!table) {
-        throw RangeError("No table found");
-      }
-      rect.table = table;
-      rect.map = TableMap.get(table);
-    }
-    dispatch(tr);
-  }
-  return true;
-}
-function removeRow(tr, { map, table, tableStart }, row) {
-  let rowPos = 0;
-  for (let i = 0; i < row; i++)
-    rowPos += table.child(i).nodeSize;
-  const nextRow = rowPos + table.child(row).nodeSize;
-  const mapFrom = tr.mapping.maps.length;
-  tr.delete(rowPos + tableStart, nextRow + tableStart);
-  const seen = /* @__PURE__ */ new Set();
-  for (let col = 0, index = row * map.width; col < map.width; col++, index++) {
-    const pos = map.map[index];
-    if (seen.has(pos))
-      continue;
-    seen.add(pos);
-    if (row > 0 && pos == map.map[index - map.width]) {
-      const attrs = table.nodeAt(pos).attrs;
-      tr.setNodeMarkup(tr.mapping.slice(mapFrom).map(pos + tableStart), null, {
-        ...attrs,
-        rowspan: attrs.rowspan - 1
-      });
-      col += attrs.colspan - 1;
-    } else if (row < map.height && pos == map.map[index + map.width]) {
-      const cell = table.nodeAt(pos);
-      const attrs = cell.attrs;
-      const copy = cell.type.create(
-        { ...attrs, rowspan: cell.attrs.rowspan - 1 },
-        cell.content
-      );
-      const newPos = map.positionAt(row + 1, col, table);
-      tr.insert(tr.mapping.slice(mapFrom).map(tableStart + newPos), copy);
-      col += attrs.colspan - 1;
-    }
-  }
-}
-function deleteRow(state, dispatch) {
-  if (!isInTable(state))
-    return false;
-  if (dispatch) {
-    const rect = selectedRect(state), tr = state.tr;
-    if (rect.top == 0 && rect.bottom == rect.map.height)
-      return false;
-    for (let i = rect.bottom - 1; ; i--) {
-      removeRow(tr, rect, i);
-      if (i == rect.top)
-        break;
-      const table = rect.tableStart ? tr.doc.nodeAt(rect.tableStart - 1) : tr.doc;
-      if (!table) {
-        throw RangeError("No table found");
-      }
-      rect.table = table;
-      rect.map = TableMap.get(rect.table);
-    }
-    dispatch(tr);
-  }
-  return true;
-}
-function setCellAttr(name, value) {
-  return function(state, dispatch) {
-    if (!isInTable(state))
-      return false;
-    const $cell = selectionCell(state);
-    if ($cell.nodeAfter.attrs[name] === value)
-      return false;
-    if (dispatch) {
-      const tr = state.tr;
-      if (state.selection instanceof CellSelection)
-        state.selection.forEachCell((node, pos) => {
-          if (node.attrs[name] !== value)
-            tr.setNodeMarkup(pos, null, {
-              ...node.attrs,
-              [name]: value
-            });
-        });
+  const menuBarItems = itemsWithDivider.map((item) => {
+    const listItem = document.createElement("li");
+    listItem.role = "none";
+    const createItem = () => {
+      if (typeof item === "string")
+        return divider();
+      else if (item.type === "button")
+        return button(item, ctx);
       else
-        tr.setNodeMarkup($cell.pos, null, {
-          ...$cell.nodeAfter.attrs,
-          [name]: value
-        });
-      dispatch(tr);
-    }
-    return true;
-  };
-}
-function deprecated_toggleHeader(type) {
-  return function(state, dispatch) {
-    if (!isInTable(state))
-      return false;
-    if (dispatch) {
-      const types = tableNodeTypes(state.schema);
-      const rect = selectedRect(state), tr = state.tr;
-      const cells = rect.map.cellsInRect(
-        type == "column" ? {
-          left: rect.left,
-          top: 0,
-          right: rect.right,
-          bottom: rect.map.height
-        } : type == "row" ? {
-          left: 0,
-          top: rect.top,
-          right: rect.map.width,
-          bottom: rect.bottom
-        } : rect
-      );
-      const nodes = cells.map((pos) => rect.table.nodeAt(pos));
-      for (let i = 0; i < cells.length; i++)
-        if (nodes[i].type == types.header_cell)
-          tr.setNodeMarkup(
-            rect.tableStart + cells[i],
-            types.cell,
-            nodes[i].attrs
-          );
-      if (tr.steps.length == 0)
-        for (let i = 0; i < cells.length; i++)
-          tr.setNodeMarkup(
-            rect.tableStart + cells[i],
-            types.header_cell,
-            nodes[i].attrs
-          );
-      dispatch(tr);
-    }
-    return true;
-  };
-}
-function isHeaderEnabledByType(type, rect, types) {
-  const cellPositions = rect.map.cellsInRect({
-    left: 0,
-    top: 0,
-    right: type == "row" ? rect.map.width : 1,
-    bottom: type == "column" ? rect.map.height : 1
+        return select(item, ctx);
+    };
+    listItem.append(...createItem());
+    return { $: listItem, config: item };
   });
-  for (let i = 0; i < cellPositions.length; i++) {
-    const cell = rect.table.nodeAt(cellPositions[i]);
-    if (cell && cell.type !== types.header_cell) {
-      return false;
-    }
-  }
-  return true;
-}
-function toggleHeader(type, options) {
-  options = options || { useDeprecatedLogic: false };
-  if (options.useDeprecatedLogic)
-    return deprecated_toggleHeader(type);
-  return function(state, dispatch) {
-    if (!isInTable(state))
-      return false;
-    if (dispatch) {
-      const types = tableNodeTypes(state.schema);
-      const rect = selectedRect(state), tr = state.tr;
-      const isHeaderRowEnabled = isHeaderEnabledByType("row", rect, types);
-      const isHeaderColumnEnabled = isHeaderEnabledByType(
-        "column",
-        rect,
-        types
-      );
-      const isHeaderEnabled = type === "column" ? isHeaderRowEnabled : type === "row" ? isHeaderColumnEnabled : false;
-      const selectionStartsAt = isHeaderEnabled ? 1 : 0;
-      const cellsRect = type == "column" ? {
-        left: 0,
-        top: selectionStartsAt,
-        right: 1,
-        bottom: rect.map.height
-      } : type == "row" ? {
-        left: selectionStartsAt,
-        top: 0,
-        right: rect.map.width,
-        bottom: 1
-      } : rect;
-      const newType = type == "column" ? isHeaderColumnEnabled ? types.cell : types.header_cell : type == "row" ? isHeaderRowEnabled ? types.cell : types.header_cell : types.cell;
-      rect.map.cellsInRect(cellsRect).forEach((relativeCellPos) => {
-        const cellPos = relativeCellPos + rect.tableStart;
-        const cell = tr.doc.nodeAt(cellPos);
-        if (cell) {
-          tr.setNodeMarkup(cellPos, newType, cell.attrs);
-        }
-      });
-      dispatch(tr);
-    }
-    return true;
-  };
-}
-toggleHeader("row", {
-  useDeprecatedLogic: true
-});
-toggleHeader("column", {
-  useDeprecatedLogic: true
-});
-toggleHeader("cell", {
-  useDeprecatedLogic: true
-});
-function findNextCell($cell, dir) {
-  if (dir < 0) {
-    const before = $cell.nodeBefore;
-    if (before)
-      return $cell.pos - before.nodeSize;
-    for (let row = $cell.index(-1) - 1, rowEnd = $cell.before(); row >= 0; row--) {
-      const rowNode = $cell.node(-1).child(row);
-      const lastChild = rowNode.lastChild;
-      if (lastChild) {
-        return rowEnd - 1 - lastChild.nodeSize;
+  menubar.append(...menuBarItems.map((item) => item.$));
+  return { dom: menubar, items: menuBarItems };
+};
+var menuView = ue((ctx) => {
+  const prosePlugin = new Plugin({
+    key,
+    view: (editorView) => {
+      const root = ctx.get(we);
+      const container = createContainer(ctx);
+      ctx.set(menuDomCtx.key, container);
+      const editor = editorView.dom;
+      root.insertBefore(container, editor);
+      const menubar = createMenuBar(ctx);
+      if (menubar.dom.children.length !== 0) {
+        container.append(menubar.dom);
       }
-      rowEnd -= rowNode.nodeSize;
+      return {
+        update: () => {
+          menubar.items.forEach((item) => {
+            if (typeof item.config !== "string") {
+              if (item.config.type === "button" && item.config.active) {
+                const isActive = item.config.active(ctx);
+                if (isActive) {
+                  item.$.querySelector("button")?.classList.add("active");
+                } else {
+                  item.$.querySelector("button")?.classList.remove("active");
+                }
+              }
+              if (typeof item.config.disabled != "undefined") {
+                const isDisabled = item.config.disabled(ctx);
+                if (isDisabled) {
+                  item.$.style.display = "none";
+                } else {
+                  item.$.style.display = "unset";
+                }
+              }
+            }
+          });
+        },
+        destroy: () => {
+          container?.remove();
+        }
+      };
     }
-  } else {
-    if ($cell.index() < $cell.parent.childCount - 1) {
-      return $cell.pos + $cell.nodeAfter.nodeSize;
+  });
+  return prosePlugin;
+});
+var createIconContent = (icon) => {
+  const span = document.createElement("span");
+  span.className = "material-icons material-icons-outlined";
+  span.textContent = icon;
+  return span;
+};
+var hasMark = (state, type) => {
+  if (!type)
+    return false;
+  const { from, $from, to, empty } = state.selection;
+  if (empty)
+    return !!type.isInSet(state.storedMarks || $from.marks());
+  return state.doc.rangeHasMark(from, to, type);
+};
+var getUndoDepth = (ctx) => {
+  const historyKey = ctx.get(N).find(
+    //@ts-expect-error: inner property
+    (i) => i.key === "history$"
+  );
+  const state = ctx.get(V);
+  const hist = historyKey?.getState(state);
+  return hist ? hist.done.eventCount : 0;
+};
+var getRedoDepth = (ctx) => {
+  const historyKey = ctx.get(N).find(
+    //@ts-expect-error: inner property
+    (i) => i.key === "history$"
+  );
+  const state = ctx.get(V);
+  const hist = historyKey?.getState(state);
+  return hist ? hist.undone.eventCount : 0;
+};
+var defaultConfigItems = [
+  [
+    {
+      type: "button",
+      content: createIconContent("turn_left"),
+      key: "Undo",
+      disabled: (ctx) => {
+        try {
+          if (!!ctx.get("historyProviderConfig")) {
+            const undoDepth = getUndoDepth(ctx);
+            return undoDepth <= 0;
+          }
+        } catch (error) {
+          return true;
+        }
+        return true;
+      }
+    },
+    {
+      type: "button",
+      content: createIconContent("turn_right"),
+      key: "Redo",
+      disabled: (ctx) => {
+        try {
+          if (!!ctx.get("historyProviderConfig")) {
+            const redoDepth = getRedoDepth(ctx);
+            return redoDepth <= 0;
+          }
+        } catch (error) {
+          return true;
+        }
+        return true;
+      }
     }
-    const table = $cell.node(-1);
-    for (let row = $cell.indexAfter(-1), rowStart = $cell.after(); row < table.childCount; row++) {
-      const rowNode = table.child(row);
-      if (rowNode.childCount)
-        return rowStart + 1;
-      rowStart += rowNode.nodeSize;
+  ],
+  [
+    {
+      type: "select",
+      text: "Heading",
+      options: [
+        { id: 1, content: "Large Heading" },
+        { id: 2, content: "Medium Heading" },
+        { id: 3, content: "Small Heading" },
+        { id: 0, content: "Plain Text" }
+      ],
+      onSelect: (id) => !!id ? ["WrapInHeading", id] : "TurnIntoText"
     }
-  }
-  return null;
-}
-function goToNextCell(direction) {
-  return function(state, dispatch) {
-    if (!isInTable(state))
-      return false;
-    const cell = findNextCell(selectionCell(state), direction);
-    if (cell == null)
-      return false;
-    if (dispatch) {
-      const $cell = state.doc.resolve(cell);
-      dispatch(
-        state.tr.setSelection(TextSelection.between($cell, moveCellForward($cell))).scrollIntoView()
-      );
+  ],
+  [
+    {
+      type: "button",
+      content: createIconContent("format_bold"),
+      key: "ToggleStrong",
+      active: (ctx) => {
+        const state = ctx.get(V);
+        const schema = ctx.get(b);
+        return hasMark(state, schema.marks.strong);
+      }
+    },
+    {
+      type: "button",
+      content: createIconContent("format_italic"),
+      key: "ToggleEmphasis",
+      active: (ctx) => {
+        const state = ctx.get(V);
+        const schema = ctx.get(b);
+        return hasMark(state, schema.marks.emphasis);
+      }
+    },
+    {
+      type: "button",
+      content: createIconContent("strikethrough_s"),
+      key: "ToggleStrikeThrough",
+      active: (ctx) => {
+        const state = ctx.get(V);
+        const schema = ctx.get(b);
+        return hasMark(state, schema.marks.strike_through);
+      }
     }
-    return true;
-  };
-}
-function deleteTable(state, dispatch) {
-  const $pos = state.selection.$anchor;
-  for (let d = $pos.depth; d > 0; d--) {
-    const node = $pos.node(d);
-    if (node.type.spec.tableRole == "table") {
-      if (dispatch)
-        dispatch(
-          state.tr.delete($pos.before(d), $pos.after(d)).scrollIntoView()
-        );
-      return true;
+  ],
+  [
+    {
+      type: "button",
+      content: createIconContent("format_list_bulleted"),
+      key: "WrapInBulletList"
+    },
+    {
+      type: "button",
+      content: createIconContent("format_list_numbered"),
+      key: "WrapInOrderedList"
+    },
+    // Notice: didn't provider any more in preset-gfm after v7
+    // {
+    //   type: 'button',
+    //   content: createIconContent('checklist'),
+    //   key: 'TurnIntoTaskList',
+    // },
+    {
+      type: "button",
+      content: createIconContent("format_indent_decrease"),
+      key: "SplitListItem"
+    },
+    {
+      type: "button",
+      content: createIconContent("format_indent_increase"),
+      key: "SinkListItem"
     }
-  }
-  return false;
-}
+  ],
+  [
+    // Notice: this two command work properly, but maybe need improve UX
+    // {
+    //   type: 'button',
+    //   content: createIconContent('link'),
+    //   key: ['ToggleLink', { href: '' }],
+    // },
+    //
+    // {
+    //   type: 'button',
+    //   content: createIconContent('image'),
+    //   key: 'InsertImage',
+    // },
+    {
+      type: "button",
+      content: createIconContent("table_chart"),
+      key: "InsertTable"
+    },
+    {
+      type: "button",
+      content: createIconContent("code"),
+      key: "CreateCodeBlock"
+    }
+  ],
+  [
+    {
+      type: "button",
+      content: createIconContent("format_quote"),
+      key: "WrapInBlockquote"
+    },
+    {
+      type: "button",
+      content: createIconContent("horizontal_rule"),
+      key: "InsertHr"
+    }
+    // TODO:provide command by this package?
+    // {
+    //   type: 'button',
+    //   content: createIconContent('select_all'),
+    //   key: 'SelectParent',
+    // },
+  ]
+];
+var defaultConfig = {
+  items: defaultConfigItems,
+  attributes: { class: "milkdown-menu" }
+};
+var menuDefaultConfig = (ctx) => {
+  ctx.set(menuConfigCtx.key, defaultConfig);
+};
 
 // src/index.ts
-function tableEditing({
-  allowTableNodeSelection = false
-} = {}) {
-  return new Plugin({
-    key: tableEditingKey,
-    // This piece of state is used to remember when a mouse-drag
-    // cell-selection is happening, so that it can continue even as
-    // transactions (which might move its anchor cell) come in.
-    state: {
-      init() {
-        return null;
-      },
-      apply(tr, cur) {
-        const set = tr.getMeta(tableEditingKey);
-        if (set != null)
-          return set == -1 ? null : set;
-        if (cur == null || !tr.docChanged)
-          return cur;
-        const { deleted, pos } = tr.mapping.mapResult(cur);
-        return deleted ? null : pos;
-      }
-    },
-    props: {
-      decorations: drawCellSelection,
-      handleDOMEvents: {
-        mousedown: handleMouseDown
-      },
-      createSelectionBetween(view) {
-        return tableEditingKey.getState(view.state) != null ? view.state.selection : null;
-      },
-      handleTripleClick,
-      handleKeyDown,
-      handlePaste
-    },
-    appendTransaction(_, oldState, state) {
-      return normalizeSelection(
-        state,
-        fixTables(state, oldState),
-        allowTableNodeSelection
-      );
-    }
-  });
-}
-
-/**
- * Count how often a character (or substring) is used in a string.
- *
- * @param {string} value
- *   Value to search in.
- * @param {string} character
- *   Character (or substring) to look for.
- * @return {number}
- *   Number of times `character` occurred in `value`.
- */
-function ccount(value, character) {
-  const source = String(value);
-
-  if (typeof character !== 'string') {
-    throw new TypeError('Expected character')
-  }
-
-  let count = 0;
-  let index = source.indexOf(character);
-
-  while (index !== -1) {
-    count++;
-    index = source.indexOf(character, index + character.length);
-  }
-
-  return count
-}
-
-function escapeStringRegexp(string) {
-	if (typeof string !== 'string') {
-		throw new TypeError('Expected a string');
-	}
-
-	// Escape characters with special meaning either inside or outside character sets.
-	// Use a simple backslash escape when it’s always valid, and a `\xnn` escape when the simpler form would be disallowed by Unicode patterns’ stricter grammar.
-	return string
-		.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
-		.replace(/-/g, '\\x2d');
-}
-
-/**
- * @typedef {import('mdast').Nodes} Nodes
- * @typedef {import('mdast').Parents} Parents
- * @typedef {import('mdast').PhrasingContent} PhrasingContent
- * @typedef {import('mdast').Root} Root
- * @typedef {import('mdast').Text} Text
- * @typedef {import('unist-util-visit-parents').Test} Test
- * @typedef {import('unist-util-visit-parents').VisitorResult} VisitorResult
- */
-
-
-/**
- * Find patterns in a tree and replace them.
- *
- * The algorithm searches the tree in *preorder* for complete values in `Text`
- * nodes.
- * Partial matches are not supported.
- *
- * @param {Nodes} tree
- *   Tree to change.
- * @param {FindAndReplaceList | FindAndReplaceTuple} list
- *   Patterns to find.
- * @param {Options | null | undefined} [options]
- *   Configuration (when `find` is not `Find`).
- * @returns {undefined}
- *   Nothing.
- */
-function findAndReplace(tree, list, options) {
-  const settings = options || {};
-  const ignored = convert(settings.ignore || []);
-  const pairs = toPairs(list);
-  let pairIndex = -1;
-
-  while (++pairIndex < pairs.length) {
-    visitParents(tree, 'text', visitor);
-  }
-
-  /** @type {import('unist-util-visit-parents').BuildVisitor<Root, 'text'>} */
-  function visitor(node, parents) {
-    let index = -1;
-    /** @type {Parents | undefined} */
-    let grandparent;
-
-    while (++index < parents.length) {
-      const parent = parents[index];
-      /** @type {Array<Nodes> | undefined} */
-      const siblings = grandparent ? grandparent.children : undefined;
-
-      if (
-        ignored(
-          parent,
-          siblings ? siblings.indexOf(parent) : undefined,
-          grandparent
-        )
-      ) {
-        return
-      }
-
-      grandparent = parent;
-    }
-
-    if (grandparent) {
-      return handler(node, parents)
-    }
-  }
-
-  /**
-   * Handle a text node which is not in an ignored parent.
-   *
-   * @param {Text} node
-   *   Text node.
-   * @param {Array<Parents>} parents
-   *   Parents.
-   * @returns {VisitorResult}
-   *   Result.
-   */
-  function handler(node, parents) {
-    const parent = parents[parents.length - 1];
-    const find = pairs[pairIndex][0];
-    const replace = pairs[pairIndex][1];
-    let start = 0;
-    /** @type {Array<Nodes>} */
-    const siblings = parent.children;
-    const index = siblings.indexOf(node);
-    let change = false;
-    /** @type {Array<PhrasingContent>} */
-    let nodes = [];
-
-    find.lastIndex = 0;
-
-    let match = find.exec(node.value);
-
-    while (match) {
-      const position = match.index;
-      /** @type {RegExpMatchObject} */
-      const matchObject = {
-        index: match.index,
-        input: match.input,
-        stack: [...parents, node]
-      };
-      let value = replace(...match, matchObject);
-
-      if (typeof value === 'string') {
-        value = value.length > 0 ? {type: 'text', value} : undefined;
-      }
-
-      // It wasn’t a match after all.
-      if (value === false) {
-        // False acts as if there was no match.
-        // So we need to reset `lastIndex`, which currently being at the end of
-        // the current match, to the beginning.
-        find.lastIndex = position + 1;
-      } else {
-        if (start !== position) {
-          nodes.push({
-            type: 'text',
-            value: node.value.slice(start, position)
-          });
-        }
-
-        if (Array.isArray(value)) {
-          nodes.push(...value);
-        } else if (value) {
-          nodes.push(value);
-        }
-
-        start = position + match[0].length;
-        change = true;
-      }
-
-      if (!find.global) {
-        break
-      }
-
-      match = find.exec(node.value);
-    }
-
-    if (change) {
-      if (start < node.value.length) {
-        nodes.push({type: 'text', value: node.value.slice(start)});
-      }
-
-      parent.children.splice(index, 1, ...nodes);
-    } else {
-      nodes = [node];
-    }
-
-    return index + nodes.length
-  }
-}
-
-/**
- * Turn a tuple or a list of tuples into pairs.
- *
- * @param {FindAndReplaceList | FindAndReplaceTuple} tupleOrList
- *   Schema.
- * @returns {Pairs}
- *   Clean pairs.
- */
-function toPairs(tupleOrList) {
-  /** @type {Pairs} */
-  const result = [];
-
-  if (!Array.isArray(tupleOrList)) {
-    throw new TypeError('Expected find and replace tuple or list of tuples')
-  }
-
-  /** @type {FindAndReplaceList} */
-  // @ts-expect-error: correct.
-  const list =
-    !tupleOrList[0] || Array.isArray(tupleOrList[0])
-      ? tupleOrList
-      : [tupleOrList];
-
-  let index = -1;
-
-  while (++index < list.length) {
-    const tuple = list[index];
-    result.push([toExpression(tuple[0]), toFunction(tuple[1])]);
-  }
-
-  return result
-}
-
-/**
- * Turn a find into an expression.
- *
- * @param {Find} find
- *   Find.
- * @returns {RegExp}
- *   Expression.
- */
-function toExpression(find) {
-  return typeof find === 'string' ? new RegExp(escapeStringRegexp(find), 'g') : find
-}
-
-/**
- * Turn a replace into a function.
- *
- * @param {Replace} replace
- *   Replace.
- * @returns {ReplaceFunction}
- *   Function.
- */
-function toFunction(replace) {
-  return typeof replace === 'function'
-    ? replace
-    : function () {
-        return replace
-      }
-}
-
-/**
- * @typedef {import('mdast').Link} Link
- * @typedef {import('mdast').PhrasingContent} PhrasingContent
- *
- * @typedef {import('mdast-util-from-markdown').CompileContext} CompileContext
- * @typedef {import('mdast-util-from-markdown').Extension} FromMarkdownExtension
- * @typedef {import('mdast-util-from-markdown').Handle} FromMarkdownHandle
- * @typedef {import('mdast-util-from-markdown').Transform} FromMarkdownTransform
- *
- * @typedef {import('mdast-util-to-markdown').ConstructName} ConstructName
- * @typedef {import('mdast-util-to-markdown').Options} ToMarkdownExtension
- *
- * @typedef {import('mdast-util-find-and-replace').RegExpMatchObject} RegExpMatchObject
- * @typedef {import('mdast-util-find-and-replace').ReplaceFunction} ReplaceFunction
- */
-
-
-/** @type {ConstructName} */
-const inConstruct = 'phrasing';
-/** @type {Array<ConstructName>} */
-const notInConstruct = ['autolink', 'link', 'image', 'label'];
-
-/**
- * Create an extension for `mdast-util-from-markdown` to enable GFM autolink
- * literals in markdown.
- *
- * @returns {FromMarkdownExtension}
- *   Extension for `mdast-util-to-markdown` to enable GFM autolink literals.
- */
-function gfmAutolinkLiteralFromMarkdown() {
-  return {
-    transforms: [transformGfmAutolinkLiterals],
-    enter: {
-      literalAutolink: enterLiteralAutolink,
-      literalAutolinkEmail: enterLiteralAutolinkValue,
-      literalAutolinkHttp: enterLiteralAutolinkValue,
-      literalAutolinkWww: enterLiteralAutolinkValue
-    },
-    exit: {
-      literalAutolink: exitLiteralAutolink,
-      literalAutolinkEmail: exitLiteralAutolinkEmail,
-      literalAutolinkHttp: exitLiteralAutolinkHttp,
-      literalAutolinkWww: exitLiteralAutolinkWww
-    }
-  }
-}
-
-/**
- * Create an extension for `mdast-util-to-markdown` to enable GFM autolink
- * literals in markdown.
- *
- * @returns {ToMarkdownExtension}
- *   Extension for `mdast-util-to-markdown` to enable GFM autolink literals.
- */
-function gfmAutolinkLiteralToMarkdown() {
-  return {
-    unsafe: [
-      {
-        character: '@',
-        before: '[+\\-.\\w]',
-        after: '[\\-.\\w]',
-        inConstruct,
-        notInConstruct
-      },
-      {
-        character: '.',
-        before: '[Ww]',
-        after: '[\\-.\\w]',
-        inConstruct,
-        notInConstruct
-      },
-      {
-        character: ':',
-        before: '[ps]',
-        after: '\\/',
-        inConstruct,
-        notInConstruct
-      }
-    ]
-  }
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function enterLiteralAutolink(token) {
-  this.enter({type: 'link', title: null, url: '', children: []}, token);
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function enterLiteralAutolinkValue(token) {
-  this.config.enter.autolinkProtocol.call(this, token);
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function exitLiteralAutolinkHttp(token) {
-  this.config.exit.autolinkProtocol.call(this, token);
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function exitLiteralAutolinkWww(token) {
-  this.config.exit.data.call(this, token);
-  const node = this.stack[this.stack.length - 1];
-  ok(node.type === 'link');
-  node.url = 'http://' + this.sliceSerialize(token);
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function exitLiteralAutolinkEmail(token) {
-  this.config.exit.autolinkEmail.call(this, token);
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function exitLiteralAutolink(token) {
-  this.exit(token);
-}
-
-/** @type {FromMarkdownTransform} */
-function transformGfmAutolinkLiterals(tree) {
-  findAndReplace(
-    tree,
-    [
-      [/(https?:\/\/|www(?=\.))([-.\w]+)([^ \t\r\n]*)/gi, findUrl],
-      [/([-.\w+]+)@([-\w]+(?:\.[-\w]+)+)/g, findEmail]
-    ],
-    {ignore: ['link', 'linkReference']}
-  );
-}
-
-/**
- * @type {ReplaceFunction}
- * @param {string} _
- * @param {string} protocol
- * @param {string} domain
- * @param {string} path
- * @param {RegExpMatchObject} match
- * @returns {Array<PhrasingContent> | Link | false}
- */
-// eslint-disable-next-line max-params
-function findUrl(_, protocol, domain, path, match) {
-  let prefix = '';
-
-  // Not an expected previous character.
-  if (!previous(match)) {
-    return false
-  }
-
-  // Treat `www` as part of the domain.
-  if (/^w/i.test(protocol)) {
-    domain = protocol + domain;
-    protocol = '';
-    prefix = 'http://';
-  }
-
-  if (!isCorrectDomain(domain)) {
-    return false
-  }
-
-  const parts = splitUrl(domain + path);
-
-  if (!parts[0]) return false
-
-  /** @type {Link} */
-  const result = {
-    type: 'link',
-    title: null,
-    url: prefix + protocol + parts[0],
-    children: [{type: 'text', value: protocol + parts[0]}]
-  };
-
-  if (parts[1]) {
-    return [result, {type: 'text', value: parts[1]}]
-  }
-
-  return result
-}
-
-/**
- * @type {ReplaceFunction}
- * @param {string} _
- * @param {string} atext
- * @param {string} label
- * @param {RegExpMatchObject} match
- * @returns {Link | false}
- */
-function findEmail(_, atext, label, match) {
-  if (
-    // Not an expected previous character.
-    !previous(match, true) ||
-    // Label ends in not allowed character.
-    /[-\d_]$/.test(label)
-  ) {
-    return false
-  }
-
-  return {
-    type: 'link',
-    title: null,
-    url: 'mailto:' + atext + '@' + label,
-    children: [{type: 'text', value: atext + '@' + label}]
-  }
-}
-
-/**
- * @param {string} domain
- * @returns {boolean}
- */
-function isCorrectDomain(domain) {
-  const parts = domain.split('.');
-
-  if (
-    parts.length < 2 ||
-    (parts[parts.length - 1] &&
-      (/_/.test(parts[parts.length - 1]) ||
-        !/[a-zA-Z\d]/.test(parts[parts.length - 1]))) ||
-    (parts[parts.length - 2] &&
-      (/_/.test(parts[parts.length - 2]) ||
-        !/[a-zA-Z\d]/.test(parts[parts.length - 2])))
-  ) {
-    return false
-  }
-
-  return true
-}
-
-/**
- * @param {string} url
- * @returns {[string, string | undefined]}
- */
-function splitUrl(url) {
-  const trailExec = /[!"&'),.:;<>?\]}]+$/.exec(url);
-
-  if (!trailExec) {
-    return [url, undefined]
-  }
-
-  url = url.slice(0, trailExec.index);
-
-  let trail = trailExec[0];
-  let closingParenIndex = trail.indexOf(')');
-  const openingParens = ccount(url, '(');
-  let closingParens = ccount(url, ')');
-
-  while (closingParenIndex !== -1 && openingParens > closingParens) {
-    url += trail.slice(0, closingParenIndex + 1);
-    trail = trail.slice(closingParenIndex + 1);
-    closingParenIndex = trail.indexOf(')');
-    closingParens++;
-  }
-
-  return [url, trail]
-}
-
-/**
- * @param {RegExpMatchObject} match
- * @param {boolean | null | undefined} [email=false]
- * @returns {boolean}
- */
-function previous(match, email) {
-  const code = match.input.charCodeAt(match.index - 1);
-
-  return (
-    (match.index === 0 ||
-      unicodeWhitespace(code) ||
-      unicodePunctuation(code)) &&
-    (!email || code !== 47)
-  )
-}
-
-/**
- * @typedef {import('mdast').FootnoteDefinition} FootnoteDefinition
- * @typedef {import('mdast').FootnoteReference} FootnoteReference
- * @typedef {import('mdast-util-from-markdown').CompileContext} CompileContext
- * @typedef {import('mdast-util-from-markdown').Extension} FromMarkdownExtension
- * @typedef {import('mdast-util-from-markdown').Handle} FromMarkdownHandle
- * @typedef {import('mdast-util-to-markdown').Handle} ToMarkdownHandle
- * @typedef {import('mdast-util-to-markdown').Map} Map
- * @typedef {import('mdast-util-to-markdown').Options} ToMarkdownExtension
- */
-
-
-footnoteReference.peek = footnoteReferencePeek;
-
-/**
- * Create an extension for `mdast-util-from-markdown` to enable GFM footnotes
- * in markdown.
- *
- * @returns {FromMarkdownExtension}
- *   Extension for `mdast-util-from-markdown`.
- */
-function gfmFootnoteFromMarkdown() {
-  return {
-    enter: {
-      gfmFootnoteDefinition: enterFootnoteDefinition,
-      gfmFootnoteDefinitionLabelString: enterFootnoteDefinitionLabelString,
-      gfmFootnoteCall: enterFootnoteCall,
-      gfmFootnoteCallString: enterFootnoteCallString
-    },
-    exit: {
-      gfmFootnoteDefinition: exitFootnoteDefinition,
-      gfmFootnoteDefinitionLabelString: exitFootnoteDefinitionLabelString,
-      gfmFootnoteCall: exitFootnoteCall,
-      gfmFootnoteCallString: exitFootnoteCallString
-    }
-  }
-}
-
-/**
- * Create an extension for `mdast-util-to-markdown` to enable GFM footnotes
- * in markdown.
- *
- * @returns {ToMarkdownExtension}
- *   Extension for `mdast-util-to-markdown`.
- */
-function gfmFootnoteToMarkdown() {
-  return {
-    // This is on by default already.
-    unsafe: [{character: '[', inConstruct: ['phrasing', 'label', 'reference']}],
-    handlers: {footnoteDefinition, footnoteReference}
-  }
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function enterFootnoteDefinition(token) {
-  this.enter(
-    {type: 'footnoteDefinition', identifier: '', label: '', children: []},
-    token
-  );
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function enterFootnoteDefinitionLabelString() {
-  this.buffer();
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function exitFootnoteDefinitionLabelString(token) {
-  const label = this.resume();
-  const node = this.stack[this.stack.length - 1];
-  ok(node.type === 'footnoteDefinition');
-  node.label = label;
-  node.identifier = normalizeIdentifier(
-    this.sliceSerialize(token)
-  ).toLowerCase();
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function exitFootnoteDefinition(token) {
-  this.exit(token);
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function enterFootnoteCall(token) {
-  this.enter({type: 'footnoteReference', identifier: '', label: ''}, token);
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function enterFootnoteCallString() {
-  this.buffer();
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function exitFootnoteCallString(token) {
-  const label = this.resume();
-  const node = this.stack[this.stack.length - 1];
-  ok(node.type === 'footnoteReference');
-  node.label = label;
-  node.identifier = normalizeIdentifier(
-    this.sliceSerialize(token)
-  ).toLowerCase();
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function exitFootnoteCall(token) {
-  this.exit(token);
-}
-
-/**
- * @type {ToMarkdownHandle}
- * @param {FootnoteReference} node
- */
-function footnoteReference(node, _, state, info) {
-  const tracker = state.createTracker(info);
-  let value = tracker.move('[^');
-  const exit = state.enter('footnoteReference');
-  const subexit = state.enter('reference');
-  value += tracker.move(
-    state.safe(state.associationId(node), {
-      ...tracker.current(),
-      before: value,
-      after: ']'
-    })
-  );
-  subexit();
-  exit();
-  value += tracker.move(']');
-  return value
-}
-
-/** @type {ToMarkdownHandle} */
-function footnoteReferencePeek() {
-  return '['
-}
-
-/**
- * @type {ToMarkdownHandle}
- * @param {FootnoteDefinition} node
- */
-function footnoteDefinition(node, _, state, info) {
-  const tracker = state.createTracker(info);
-  let value = tracker.move('[^');
-  const exit = state.enter('footnoteDefinition');
-  const subexit = state.enter('label');
-  value += tracker.move(
-    state.safe(state.associationId(node), {
-      ...tracker.current(),
-      before: value,
-      after: ']'
-    })
-  );
-  subexit();
-  value += tracker.move(
-    ']:' + (node.children && node.children.length > 0 ? ' ' : '')
-  );
-  tracker.shift(4);
-  value += tracker.move(
-    state.indentLines(state.containerFlow(node, tracker.current()), map)
-  );
-  exit();
-
-  return value
-}
-
-/** @type {Map} */
-function map(line, index, blank) {
-  if (index === 0) {
-    return line
-  }
-
-  return (blank ? '' : '    ') + line
-}
-
-/**
- * @typedef {import('mdast').Delete} Delete
- *
- * @typedef {import('mdast-util-from-markdown').CompileContext} CompileContext
- * @typedef {import('mdast-util-from-markdown').Extension} FromMarkdownExtension
- * @typedef {import('mdast-util-from-markdown').Handle} FromMarkdownHandle
- *
- * @typedef {import('mdast-util-to-markdown').ConstructName} ConstructName
- * @typedef {import('mdast-util-to-markdown').Handle} ToMarkdownHandle
- * @typedef {import('mdast-util-to-markdown').Options} ToMarkdownExtension
- */
-
-/**
- * List of constructs that occur in phrasing (paragraphs, headings), but cannot
- * contain strikethrough.
- * So they sort of cancel each other out.
- * Note: could use a better name.
- *
- * Note: keep in sync with: <https://github.com/syntax-tree/mdast-util-to-markdown/blob/8ce8dbf/lib/unsafe.js#L14>
- *
- * @type {Array<ConstructName>}
- */
-const constructsWithoutStrikethrough = [
-  'autolink',
-  'destinationLiteral',
-  'destinationRaw',
-  'reference',
-  'titleQuote',
-  'titleApostrophe'
-];
-
-handleDelete.peek = peekDelete;
-
-/**
- * Create an extension for `mdast-util-from-markdown` to enable GFM
- * strikethrough in markdown.
- *
- * @returns {FromMarkdownExtension}
- *   Extension for `mdast-util-from-markdown` to enable GFM strikethrough.
- */
-function gfmStrikethroughFromMarkdown() {
-  return {
-    canContainEols: ['delete'],
-    enter: {strikethrough: enterStrikethrough},
-    exit: {strikethrough: exitStrikethrough}
-  }
-}
-
-/**
- * Create an extension for `mdast-util-to-markdown` to enable GFM
- * strikethrough in markdown.
- *
- * @returns {ToMarkdownExtension}
- *   Extension for `mdast-util-to-markdown` to enable GFM strikethrough.
- */
-function gfmStrikethroughToMarkdown() {
-  return {
-    unsafe: [
-      {
-        character: '~',
-        inConstruct: 'phrasing',
-        notInConstruct: constructsWithoutStrikethrough
-      }
-    ],
-    handlers: {delete: handleDelete}
-  }
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function enterStrikethrough(token) {
-  this.enter({type: 'delete', children: []}, token);
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function exitStrikethrough(token) {
-  this.exit(token);
-}
-
-/**
- * @type {ToMarkdownHandle}
- * @param {Delete} node
- */
-function handleDelete(node, _, state, info) {
-  const tracker = state.createTracker(info);
-  const exit = state.enter('strikethrough');
-  let value = tracker.move('~~');
-  value += state.containerPhrasing(node, {
-    ...tracker.current(),
-    before: value,
-    after: '~'
-  });
-  value += tracker.move('~~');
-  exit();
-  return value
-}
-
-/** @type {ToMarkdownHandle} */
-function peekDelete() {
-  return '~'
-}
-
-/**
- * @typedef Options
- *   Configuration (optional).
- * @property {string|null|ReadonlyArray<string|null|undefined>} [align]
- *   One style for all columns, or styles for their respective columns.
- *   Each style is either `'l'` (left), `'r'` (right), or `'c'` (center).
- *   Other values are treated as `''`, which doesn’t place the colon in the
- *   alignment row but does align left.
- *   *Only the lowercased first character is used, so `Right` is fine.*
- * @property {boolean} [padding=true]
- *   Whether to add a space of padding between delimiters and cells.
- *
- *   When `true`, there is padding:
- *
- *   ```markdown
- *   | Alpha | B     |
- *   | ----- | ----- |
- *   | C     | Delta |
- *   ```
- *
- *   When `false`, there is no padding:
- *
- *   ```markdown
- *   |Alpha|B    |
- *   |-----|-----|
- *   |C    |Delta|
- *   ```
- * @property {boolean} [delimiterStart=true]
- *   Whether to begin each row with the delimiter.
- *
- *   > 👉 **Note**: please don’t use this: it could create fragile structures
- *   > that aren’t understandable to some markdown parsers.
- *
- *   When `true`, there are starting delimiters:
- *
- *   ```markdown
- *   | Alpha | B     |
- *   | ----- | ----- |
- *   | C     | Delta |
- *   ```
- *
- *   When `false`, there are no starting delimiters:
- *
- *   ```markdown
- *   Alpha | B     |
- *   ----- | ----- |
- *   C     | Delta |
- *   ```
- * @property {boolean} [delimiterEnd=true]
- *   Whether to end each row with the delimiter.
- *
- *   > 👉 **Note**: please don’t use this: it could create fragile structures
- *   > that aren’t understandable to some markdown parsers.
- *
- *   When `true`, there are ending delimiters:
- *
- *   ```markdown
- *   | Alpha | B     |
- *   | ----- | ----- |
- *   | C     | Delta |
- *   ```
- *
- *   When `false`, there are no ending delimiters:
- *
- *   ```markdown
- *   | Alpha | B
- *   | ----- | -----
- *   | C     | Delta
- *   ```
- * @property {boolean} [alignDelimiters=true]
- *   Whether to align the delimiters.
- *   By default, they are aligned:
- *
- *   ```markdown
- *   | Alpha | B     |
- *   | ----- | ----- |
- *   | C     | Delta |
- *   ```
- *
- *   Pass `false` to make them staggered:
- *
- *   ```markdown
- *   | Alpha | B |
- *   | - | - |
- *   | C | Delta |
- *   ```
- * @property {(value: string) => number} [stringLength]
- *   Function to detect the length of table cell content.
- *   This is used when aligning the delimiters (`|`) between table cells.
- *   Full-width characters and emoji mess up delimiter alignment when viewing
- *   the markdown source.
- *   To fix this, you can pass this function, which receives the cell content
- *   and returns its “visible” size.
- *   Note that what is and isn’t visible depends on where the text is displayed.
- *
- *   Without such a function, the following:
- *
- *   ```js
- *   markdownTable([
- *     ['Alpha', 'Bravo'],
- *     ['中文', 'Charlie'],
- *     ['👩‍❤️‍👩', 'Delta']
- *   ])
- *   ```
- *
- *   Yields:
- *
- *   ```markdown
- *   | Alpha | Bravo |
- *   | - | - |
- *   | 中文 | Charlie |
- *   | 👩‍❤️‍👩 | Delta |
- *   ```
- *
- *   With [`string-width`](https://github.com/sindresorhus/string-width):
- *
- *   ```js
- *   import stringWidth from 'string-width'
- *
- *   markdownTable(
- *     [
- *       ['Alpha', 'Bravo'],
- *       ['中文', 'Charlie'],
- *       ['👩‍❤️‍👩', 'Delta']
- *     ],
- *     {stringLength: stringWidth}
- *   )
- *   ```
- *
- *   Yields:
- *
- *   ```markdown
- *   | Alpha | Bravo   |
- *   | ----- | ------- |
- *   | 中文  | Charlie |
- *   | 👩‍❤️‍👩    | Delta   |
- *   ```
- */
-
-/**
- * @typedef {Options} MarkdownTableOptions
- * @todo
- *   Remove next major.
- */
-
-/**
- * Generate a markdown ([GFM](https://docs.github.com/en/github/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)) table..
- *
- * @param {ReadonlyArray<ReadonlyArray<string|null|undefined>>} table
- *   Table data (matrix of strings).
- * @param {Options} [options]
- *   Configuration (optional).
- * @returns {string}
- */
-function markdownTable(table, options = {}) {
-  const align = (options.align || []).concat();
-  const stringLength = options.stringLength || defaultStringLength;
-  /** @type {Array<number>} Character codes as symbols for alignment per column. */
-  const alignments = [];
-  /** @type {Array<Array<string>>} Cells per row. */
-  const cellMatrix = [];
-  /** @type {Array<Array<number>>} Sizes of each cell per row. */
-  const sizeMatrix = [];
-  /** @type {Array<number>} */
-  const longestCellByColumn = [];
-  let mostCellsPerRow = 0;
-  let rowIndex = -1;
-
-  // This is a superfluous loop if we don’t align delimiters, but otherwise we’d
-  // do superfluous work when aligning, so optimize for aligning.
-  while (++rowIndex < table.length) {
-    /** @type {Array<string>} */
-    const row = [];
-    /** @type {Array<number>} */
-    const sizes = [];
-    let columnIndex = -1;
-
-    if (table[rowIndex].length > mostCellsPerRow) {
-      mostCellsPerRow = table[rowIndex].length;
-    }
-
-    while (++columnIndex < table[rowIndex].length) {
-      const cell = serialize(table[rowIndex][columnIndex]);
-
-      if (options.alignDelimiters !== false) {
-        const size = stringLength(cell);
-        sizes[columnIndex] = size;
-
-        if (
-          longestCellByColumn[columnIndex] === undefined ||
-          size > longestCellByColumn[columnIndex]
-        ) {
-          longestCellByColumn[columnIndex] = size;
-        }
-      }
-
-      row.push(cell);
-    }
-
-    cellMatrix[rowIndex] = row;
-    sizeMatrix[rowIndex] = sizes;
-  }
-
-  // Figure out which alignments to use.
-  let columnIndex = -1;
-
-  if (typeof align === 'object' && 'length' in align) {
-    while (++columnIndex < mostCellsPerRow) {
-      alignments[columnIndex] = toAlignment(align[columnIndex]);
-    }
-  } else {
-    const code = toAlignment(align);
-
-    while (++columnIndex < mostCellsPerRow) {
-      alignments[columnIndex] = code;
-    }
-  }
-
-  // Inject the alignment row.
-  columnIndex = -1;
-  /** @type {Array<string>} */
-  const row = [];
-  /** @type {Array<number>} */
-  const sizes = [];
-
-  while (++columnIndex < mostCellsPerRow) {
-    const code = alignments[columnIndex];
-    let before = '';
-    let after = '';
-
-    if (code === 99 /* `c` */) {
-      before = ':';
-      after = ':';
-    } else if (code === 108 /* `l` */) {
-      before = ':';
-    } else if (code === 114 /* `r` */) {
-      after = ':';
-    }
-
-    // There *must* be at least one hyphen-minus in each alignment cell.
-    let size =
-      options.alignDelimiters === false
-        ? 1
-        : Math.max(
-            1,
-            longestCellByColumn[columnIndex] - before.length - after.length
-          );
-
-    const cell = before + '-'.repeat(size) + after;
-
-    if (options.alignDelimiters !== false) {
-      size = before.length + size + after.length;
-
-      if (size > longestCellByColumn[columnIndex]) {
-        longestCellByColumn[columnIndex] = size;
-      }
-
-      sizes[columnIndex] = size;
-    }
-
-    row[columnIndex] = cell;
-  }
-
-  // Inject the alignment row.
-  cellMatrix.splice(1, 0, row);
-  sizeMatrix.splice(1, 0, sizes);
-
-  rowIndex = -1;
-  /** @type {Array<string>} */
-  const lines = [];
-
-  while (++rowIndex < cellMatrix.length) {
-    const row = cellMatrix[rowIndex];
-    const sizes = sizeMatrix[rowIndex];
-    columnIndex = -1;
-    /** @type {Array<string>} */
-    const line = [];
-
-    while (++columnIndex < mostCellsPerRow) {
-      const cell = row[columnIndex] || '';
-      let before = '';
-      let after = '';
-
-      if (options.alignDelimiters !== false) {
-        const size =
-          longestCellByColumn[columnIndex] - (sizes[columnIndex] || 0);
-        const code = alignments[columnIndex];
-
-        if (code === 114 /* `r` */) {
-          before = ' '.repeat(size);
-        } else if (code === 99 /* `c` */) {
-          if (size % 2) {
-            before = ' '.repeat(size / 2 + 0.5);
-            after = ' '.repeat(size / 2 - 0.5);
-          } else {
-            before = ' '.repeat(size / 2);
-            after = before;
-          }
-        } else {
-          after = ' '.repeat(size);
-        }
-      }
-
-      if (options.delimiterStart !== false && !columnIndex) {
-        line.push('|');
-      }
-
-      if (
-        options.padding !== false &&
-        // Don’t add the opening space if we’re not aligning and the cell is
-        // empty: there will be a closing space.
-        !(options.alignDelimiters === false && cell === '') &&
-        (options.delimiterStart !== false || columnIndex)
-      ) {
-        line.push(' ');
-      }
-
-      if (options.alignDelimiters !== false) {
-        line.push(before);
-      }
-
-      line.push(cell);
-
-      if (options.alignDelimiters !== false) {
-        line.push(after);
-      }
-
-      if (options.padding !== false) {
-        line.push(' ');
-      }
-
-      if (
-        options.delimiterEnd !== false ||
-        columnIndex !== mostCellsPerRow - 1
-      ) {
-        line.push('|');
-      }
-    }
-
-    lines.push(
-      options.delimiterEnd === false
-        ? line.join('').replace(/ +$/, '')
-        : line.join('')
-    );
-  }
-
-  return lines.join('\n')
-}
-
-/**
- * @param {string|null|undefined} [value]
- * @returns {string}
- */
-function serialize(value) {
-  return value === null || value === undefined ? '' : String(value)
-}
-
-/**
- * @param {string} value
- * @returns {number}
- */
-function defaultStringLength(value) {
-  return value.length
-}
-
-/**
- * @param {string|null|undefined} value
- * @returns {number}
- */
-function toAlignment(value) {
-  const code = typeof value === 'string' ? value.codePointAt(0) : 0;
-
-  return code === 67 /* `C` */ || code === 99 /* `c` */
-    ? 99 /* `c` */
-    : code === 76 /* `L` */ || code === 108 /* `l` */
-    ? 108 /* `l` */
-    : code === 82 /* `R` */ || code === 114 /* `r` */
-    ? 114 /* `r` */
-    : 0
-}
-
-/**
- * @typedef {import('mdast').InlineCode} InlineCode
- * @typedef {import('mdast').Table} Table
- * @typedef {import('mdast').TableCell} TableCell
- * @typedef {import('mdast').TableRow} TableRow
- *
- * @typedef {import('markdown-table').Options} MarkdownTableOptions
- *
- * @typedef {import('mdast-util-from-markdown').CompileContext} CompileContext
- * @typedef {import('mdast-util-from-markdown').Extension} FromMarkdownExtension
- * @typedef {import('mdast-util-from-markdown').Handle} FromMarkdownHandle
- *
- * @typedef {import('mdast-util-to-markdown').Options} ToMarkdownExtension
- * @typedef {import('mdast-util-to-markdown').Handle} ToMarkdownHandle
- * @typedef {import('mdast-util-to-markdown').State} State
- * @typedef {import('mdast-util-to-markdown').Info} Info
- */
-
-
-/**
- * Create an extension for `mdast-util-from-markdown` to enable GFM tables in
- * markdown.
- *
- * @returns {FromMarkdownExtension}
- *   Extension for `mdast-util-from-markdown` to enable GFM tables.
- */
-function gfmTableFromMarkdown() {
-  return {
-    enter: {
-      table: enterTable,
-      tableData: enterCell,
-      tableHeader: enterCell,
-      tableRow: enterRow
-    },
-    exit: {
-      codeText: exitCodeText,
-      table: exitTable,
-      tableData: exit,
-      tableHeader: exit,
-      tableRow: exit
-    }
-  }
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function enterTable(token) {
-  const align = token._align;
-  this.enter(
-    {
-      type: 'table',
-      align: align.map(function (d) {
-        return d === 'none' ? null : d
-      }),
-      children: []
-    },
-    token
-  );
-  this.data.inTable = true;
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function exitTable(token) {
-  this.exit(token);
-  this.data.inTable = undefined;
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function enterRow(token) {
-  this.enter({type: 'tableRow', children: []}, token);
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function exit(token) {
-  this.exit(token);
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function enterCell(token) {
-  this.enter({type: 'tableCell', children: []}, token);
-}
-
-// Overwrite the default code text data handler to unescape escaped pipes when
-// they are in tables.
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function exitCodeText(token) {
-  let value = this.resume();
-
-  if (this.data.inTable) {
-    value = value.replace(/\\([\\|])/g, replace);
-  }
-
-  const node = this.stack[this.stack.length - 1];
-  ok(node.type === 'inlineCode');
-  node.value = value;
-  this.exit(token);
-}
-
-/**
- * @param {string} $0
- * @param {string} $1
- * @returns {string}
- */
-function replace($0, $1) {
-  // Pipes work, backslashes don’t (but can’t escape pipes).
-  return $1 === '|' ? $1 : $0
-}
-
-/**
- * Create an extension for `mdast-util-to-markdown` to enable GFM tables in
- * markdown.
- *
- * @param {Options | null | undefined} [options]
- *   Configuration.
- * @returns {ToMarkdownExtension}
- *   Extension for `mdast-util-to-markdown` to enable GFM tables.
- */
-function gfmTableToMarkdown(options) {
-  const settings = options || {};
-  const padding = settings.tableCellPadding;
-  const alignDelimiters = settings.tablePipeAlign;
-  const stringLength = settings.stringLength;
-  const around = padding ? ' ' : '|';
-
-  return {
-    unsafe: [
-      {character: '\r', inConstruct: 'tableCell'},
-      {character: '\n', inConstruct: 'tableCell'},
-      // A pipe, when followed by a tab or space (padding), or a dash or colon
-      // (unpadded delimiter row), could result in a table.
-      {atBreak: true, character: '|', after: '[\t :-]'},
-      // A pipe in a cell must be encoded.
-      {character: '|', inConstruct: 'tableCell'},
-      // A colon must be followed by a dash, in which case it could start a
-      // delimiter row.
-      {atBreak: true, character: ':', after: '-'},
-      // A delimiter row can also start with a dash, when followed by more
-      // dashes, a colon, or a pipe.
-      // This is a stricter version than the built in check for lists, thematic
-      // breaks, and setex heading underlines though:
-      // <https://github.com/syntax-tree/mdast-util-to-markdown/blob/51a2038/lib/unsafe.js#L57>
-      {atBreak: true, character: '-', after: '[:|-]'}
-    ],
-    handlers: {
-      inlineCode: inlineCodeWithTable,
-      table: handleTable,
-      tableCell: handleTableCell,
-      tableRow: handleTableRow
-    }
-  }
-
-  /**
-   * @type {ToMarkdownHandle}
-   * @param {Table} node
-   */
-  function handleTable(node, _, state, info) {
-    return serializeData(handleTableAsData(node, state, info), node.align)
-  }
-
-  /**
-   * This function isn’t really used normally, because we handle rows at the
-   * table level.
-   * But, if someone passes in a table row, this ensures we make somewhat sense.
-   *
-   * @type {ToMarkdownHandle}
-   * @param {TableRow} node
-   */
-  function handleTableRow(node, _, state, info) {
-    const row = handleTableRowAsData(node, state, info);
-    const value = serializeData([row]);
-    // `markdown-table` will always add an align row
-    return value.slice(0, value.indexOf('\n'))
-  }
-
-  /**
-   * @type {ToMarkdownHandle}
-   * @param {TableCell} node
-   */
-  function handleTableCell(node, _, state, info) {
-    const exit = state.enter('tableCell');
-    const subexit = state.enter('phrasing');
-    const value = state.containerPhrasing(node, {
-      ...info,
-      before: around,
-      after: around
-    });
-    subexit();
-    exit();
-    return value
-  }
-
-  /**
-   * @param {Array<Array<string>>} matrix
-   * @param {Array<string | null | undefined> | null | undefined} [align]
-   */
-  function serializeData(matrix, align) {
-    return markdownTable(matrix, {
-      align,
-      // @ts-expect-error: `markdown-table` types should support `null`.
-      alignDelimiters,
-      // @ts-expect-error: `markdown-table` types should support `null`.
-      padding,
-      // @ts-expect-error: `markdown-table` types should support `null`.
-      stringLength
-    })
-  }
-
-  /**
-   * @param {Table} node
-   * @param {State} state
-   * @param {Info} info
-   */
-  function handleTableAsData(node, state, info) {
-    const children = node.children;
-    let index = -1;
-    /** @type {Array<Array<string>>} */
-    const result = [];
-    const subexit = state.enter('table');
-
-    while (++index < children.length) {
-      result[index] = handleTableRowAsData(children[index], state, info);
-    }
-
-    subexit();
-
-    return result
-  }
-
-  /**
-   * @param {TableRow} node
-   * @param {State} state
-   * @param {Info} info
-   */
-  function handleTableRowAsData(node, state, info) {
-    const children = node.children;
-    let index = -1;
-    /** @type {Array<string>} */
-    const result = [];
-    const subexit = state.enter('tableRow');
-
-    while (++index < children.length) {
-      // Note: the positional info as used here is incorrect.
-      // Making it correct would be impossible due to aligning cells?
-      // And it would need copy/pasting `markdown-table` into this project.
-      result[index] = handleTableCell(children[index], node, state, info);
-    }
-
-    subexit();
-
-    return result
-  }
-
-  /**
-   * @type {ToMarkdownHandle}
-   * @param {InlineCode} node
-   */
-  function inlineCodeWithTable(node, parent, state) {
-    let value = handle.inlineCode(node, parent, state);
-
-    if (state.stack.includes('tableCell')) {
-      value = value.replace(/\|/g, '\\$&');
-    }
-
-    return value
-  }
-}
-
-/**
- * @typedef {import('mdast').ListItem} ListItem
- * @typedef {import('mdast').Paragraph} Paragraph
- * @typedef {import('mdast-util-from-markdown').CompileContext} CompileContext
- * @typedef {import('mdast-util-from-markdown').Extension} FromMarkdownExtension
- * @typedef {import('mdast-util-from-markdown').Handle} FromMarkdownHandle
- * @typedef {import('mdast-util-to-markdown').Options} ToMarkdownExtension
- * @typedef {import('mdast-util-to-markdown').Handle} ToMarkdownHandle
- */
-
-
-/**
- * Create an extension for `mdast-util-from-markdown` to enable GFM task
- * list items in markdown.
- *
- * @returns {FromMarkdownExtension}
- *   Extension for `mdast-util-from-markdown` to enable GFM task list items.
- */
-function gfmTaskListItemFromMarkdown() {
-  return {
-    exit: {
-      taskListCheckValueChecked: exitCheck,
-      taskListCheckValueUnchecked: exitCheck,
-      paragraph: exitParagraphWithTaskListItem
-    }
-  }
-}
-
-/**
- * Create an extension for `mdast-util-to-markdown` to enable GFM task list
- * items in markdown.
- *
- * @returns {ToMarkdownExtension}
- *   Extension for `mdast-util-to-markdown` to enable GFM task list items.
- */
-function gfmTaskListItemToMarkdown() {
-  return {
-    unsafe: [{atBreak: true, character: '-', after: '[:|-]'}],
-    handlers: {listItem: listItemWithTaskListItem}
-  }
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function exitCheck(token) {
-  // We’re always in a paragraph, in a list item.
-  const node = this.stack[this.stack.length - 2];
-  ok(node.type === 'listItem');
-  node.checked = token.type === 'taskListCheckValueChecked';
-}
-
-/**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
- */
-function exitParagraphWithTaskListItem(token) {
-  const parent = this.stack[this.stack.length - 2];
-
-  if (
-    parent &&
-    parent.type === 'listItem' &&
-    typeof parent.checked === 'boolean'
-  ) {
-    const node = this.stack[this.stack.length - 1];
-    ok(node.type === 'paragraph');
-    const head = node.children[0];
-
-    if (head && head.type === 'text') {
-      const siblings = parent.children;
-      let index = -1;
-      /** @type {Paragraph | undefined} */
-      let firstParaghraph;
-
-      while (++index < siblings.length) {
-        const sibling = siblings[index];
-        if (sibling.type === 'paragraph') {
-          firstParaghraph = sibling;
-          break
-        }
-      }
-
-      if (firstParaghraph === node) {
-        // Must start with a space or a tab.
-        head.value = head.value.slice(1);
-
-        if (head.value.length === 0) {
-          node.children.shift();
-        } else if (
-          node.position &&
-          head.position &&
-          typeof head.position.start.offset === 'number'
-        ) {
-          head.position.start.column++;
-          head.position.start.offset++;
-          node.position.start = Object.assign({}, head.position.start);
-        }
-      }
-    }
-  }
-
-  this.exit(token);
-}
-
-/**
- * @type {ToMarkdownHandle}
- * @param {ListItem} node
- */
-function listItemWithTaskListItem(node, parent, state, info) {
-  const head = node.children[0];
-  const checkable =
-    typeof node.checked === 'boolean' && head && head.type === 'paragraph';
-  const checkbox = '[' + (node.checked ? 'x' : ' ') + '] ';
-  const tracker = state.createTracker(info);
-
-  if (checkable) {
-    tracker.move(checkbox);
-  }
-
-  let value = handle.listItem(node, parent, state, {
-    ...info,
-    ...tracker.current()
-  });
-
-  if (checkable) {
-    value = value.replace(/^(?:[*+-]|\d+\.)([\r\n]| {1,3})/, check);
-  }
-
-  return value
-
-  /**
-   * @param {string} $0
-   * @returns {string}
-   */
-  function check($0) {
-    return $0 + checkbox
-  }
-}
-
-/**
- * @typedef {import('mdast-util-from-markdown').Extension} FromMarkdownExtension
- * @typedef {import('mdast-util-to-markdown').Options} ToMarkdownExtension
- */
-
-
-/**
- * Create an extension for `mdast-util-from-markdown` to enable GFM (autolink
- * literals, footnotes, strikethrough, tables, tasklists).
- *
- * @returns {Array<FromMarkdownExtension>}
- *   Extension for `mdast-util-from-markdown` to enable GFM (autolink literals,
- *   footnotes, strikethrough, tables, tasklists).
- */
-function gfmFromMarkdown() {
-  return [
-    gfmAutolinkLiteralFromMarkdown(),
-    gfmFootnoteFromMarkdown(),
-    gfmStrikethroughFromMarkdown(),
-    gfmTableFromMarkdown(),
-    gfmTaskListItemFromMarkdown()
-  ]
-}
-
-/**
- * Create an extension for `mdast-util-to-markdown` to enable GFM (autolink
- * literals, footnotes, strikethrough, tables, tasklists).
- *
- * @param {Options | null | undefined} [options]
- *   Configuration.
- * @returns {ToMarkdownExtension}
- *   Extension for `mdast-util-to-markdown` to enable GFM (autolink literals,
- *   footnotes, strikethrough, tables, tasklists).
- */
-function gfmToMarkdown(options) {
-  return {
-    extensions: [
-      gfmAutolinkLiteralToMarkdown(),
-      gfmFootnoteToMarkdown(),
-      gfmStrikethroughToMarkdown(),
-      gfmTableToMarkdown(options),
-      gfmTaskListItemToMarkdown()
-    ]
-  }
-}
-
-/**
- * @typedef {import('micromark-util-types').Code} Code
- * @typedef {import('micromark-util-types').ConstructRecord} ConstructRecord
- * @typedef {import('micromark-util-types').Event} Event
- * @typedef {import('micromark-util-types').Extension} Extension
- * @typedef {import('micromark-util-types').Previous} Previous
- * @typedef {import('micromark-util-types').State} State
- * @typedef {import('micromark-util-types').TokenizeContext} TokenizeContext
- * @typedef {import('micromark-util-types').Tokenizer} Tokenizer
- */
-
-const wwwPrefix = {
-  tokenize: tokenizeWwwPrefix,
-  partial: true
-};
-const domain = {
-  tokenize: tokenizeDomain,
-  partial: true
-};
-const path = {
-  tokenize: tokenizePath,
-  partial: true
-};
-const trail = {
-  tokenize: tokenizeTrail,
-  partial: true
-};
-const emailDomainDotTrail = {
-  tokenize: tokenizeEmailDomainDotTrail,
-  partial: true
-};
-const wwwAutolink = {
-  tokenize: tokenizeWwwAutolink,
-  previous: previousWww
-};
-const protocolAutolink = {
-  tokenize: tokenizeProtocolAutolink,
-  previous: previousProtocol
-};
-const emailAutolink = {
-  tokenize: tokenizeEmailAutolink,
-  previous: previousEmail
-};
-
-/** @type {ConstructRecord} */
-const text = {};
-
-/**
- * Create an extension for `micromark` to support GitHub autolink literal
- * syntax.
- *
- * @returns {Extension}
- *   Extension for `micromark` that can be passed in `extensions` to enable GFM
- *   autolink literal syntax.
- */
-function gfmAutolinkLiteral() {
-  return {
-    text
-  }
-}
-
-/** @type {Code} */
-let code = 48;
-
-// Add alphanumerics.
-while (code < 123) {
-  text[code] = emailAutolink;
-  code++;
-  if (code === 58) code = 65;
-  else if (code === 91) code = 97;
-}
-text[43] = emailAutolink;
-text[45] = emailAutolink;
-text[46] = emailAutolink;
-text[95] = emailAutolink;
-text[72] = [emailAutolink, protocolAutolink];
-text[104] = [emailAutolink, protocolAutolink];
-text[87] = [emailAutolink, wwwAutolink];
-text[119] = [emailAutolink, wwwAutolink];
-
-// To do: perform email autolink literals on events, afterwards.
-// That’s where `markdown-rs` and `cmark-gfm` perform it.
-// It should look for `@`, then for atext backwards, and then for a label
-// forwards.
-// To do: `mailto:`, `xmpp:` protocol as prefix.
-
-/**
- * Email autolink literal.
- *
- * ```markdown
- * > | a contact@example.org b
- *       ^^^^^^^^^^^^^^^^^^^
- * ```
- *
- * @this {TokenizeContext}
- * @type {Tokenizer}
- */
-function tokenizeEmailAutolink(effects, ok, nok) {
-  const self = this;
-  /** @type {boolean | undefined} */
-  let dot;
-  /** @type {boolean} */
-  let data;
-  return start
-
-  /**
-   * Start of email autolink literal.
-   *
-   * ```markdown
-   * > | a contact@example.org b
-   *       ^
-   * ```
-   *
-   * @type {State}
-   */
-  function start(code) {
-    if (
-      !gfmAtext(code) ||
-      !previousEmail.call(self, self.previous) ||
-      previousUnbalanced(self.events)
-    ) {
-      return nok(code)
-    }
-    effects.enter('literalAutolink');
-    effects.enter('literalAutolinkEmail');
-    return atext(code)
-  }
-
-  /**
-   * In email atext.
-   *
-   * ```markdown
-   * > | a contact@example.org b
-   *       ^
-   * ```
-   *
-   * @type {State}
-   */
-  function atext(code) {
-    if (gfmAtext(code)) {
-      effects.consume(code);
-      return atext
-    }
-    if (code === 64) {
-      effects.consume(code);
-      return emailDomain
-    }
-    return nok(code)
-  }
-
-  /**
-   * In email domain.
-   *
-   * The reference code is a bit overly complex as it handles the `@`, of which
-   * there may be just one.
-   * Source: <https://github.com/github/cmark-gfm/blob/ef1cfcb/extensions/autolink.c#L318>
-   *
-   * ```markdown
-   * > | a contact@example.org b
-   *               ^
-   * ```
-   *
-   * @type {State}
-   */
-  function emailDomain(code) {
-    // Dot followed by alphanumerical (not `-` or `_`).
-    if (code === 46) {
-      return effects.check(
-        emailDomainDotTrail,
-        emailDomainAfter,
-        emailDomainDot
-      )(code)
-    }
-
-    // Alphanumerical, `-`, and `_`.
-    if (code === 45 || code === 95 || asciiAlphanumeric(code)) {
-      data = true;
-      effects.consume(code);
-      return emailDomain
-    }
-
-    // To do: `/` if xmpp.
-
-    // Note: normally we’d truncate trailing punctuation from the link.
-    // However, email autolink literals cannot contain any of those markers,
-    // except for `.`, but that can only occur if it isn’t trailing.
-    // So we can ignore truncating!
-    return emailDomainAfter(code)
-  }
-
-  /**
-   * In email domain, on dot that is not a trail.
-   *
-   * ```markdown
-   * > | a contact@example.org b
-   *                      ^
-   * ```
-   *
-   * @type {State}
-   */
-  function emailDomainDot(code) {
-    effects.consume(code);
-    dot = true;
-    return emailDomain
-  }
-
-  /**
-   * After email domain.
-   *
-   * ```markdown
-   * > | a contact@example.org b
-   *                          ^
-   * ```
-   *
-   * @type {State}
-   */
-  function emailDomainAfter(code) {
-    // Domain must not be empty, must include a dot, and must end in alphabetical.
-    // Source: <https://github.com/github/cmark-gfm/blob/ef1cfcb/extensions/autolink.c#L332>.
-    if (data && dot && asciiAlpha(self.previous)) {
-      effects.exit('literalAutolinkEmail');
-      effects.exit('literalAutolink');
-      return ok(code)
-    }
-    return nok(code)
-  }
-}
-
-/**
- * `www` autolink literal.
- *
- * ```markdown
- * > | a www.example.org b
- *       ^^^^^^^^^^^^^^^
- * ```
- *
- * @this {TokenizeContext}
- * @type {Tokenizer}
- */
-function tokenizeWwwAutolink(effects, ok, nok) {
-  const self = this;
-  return wwwStart
-
-  /**
-   * Start of www autolink literal.
-   *
-   * ```markdown
-   * > | www.example.com/a?b#c
-   *     ^
-   * ```
-   *
-   * @type {State}
-   */
-  function wwwStart(code) {
-    if (
-      (code !== 87 && code !== 119) ||
-      !previousWww.call(self, self.previous) ||
-      previousUnbalanced(self.events)
-    ) {
-      return nok(code)
-    }
-    effects.enter('literalAutolink');
-    effects.enter('literalAutolinkWww');
-    // Note: we *check*, so we can discard the `www.` we parsed.
-    // If it worked, we consider it as a part of the domain.
-    return effects.check(
-      wwwPrefix,
-      effects.attempt(domain, effects.attempt(path, wwwAfter), nok),
-      nok
-    )(code)
-  }
-
-  /**
-   * After a www autolink literal.
-   *
-   * ```markdown
-   * > | www.example.com/a?b#c
-   *                          ^
-   * ```
-   *
-   * @type {State}
-   */
-  function wwwAfter(code) {
-    effects.exit('literalAutolinkWww');
-    effects.exit('literalAutolink');
-    return ok(code)
-  }
-}
-
-/**
- * Protocol autolink literal.
- *
- * ```markdown
- * > | a https://example.org b
- *       ^^^^^^^^^^^^^^^^^^^
- * ```
- *
- * @this {TokenizeContext}
- * @type {Tokenizer}
- */
-function tokenizeProtocolAutolink(effects, ok, nok) {
-  const self = this;
-  let buffer = '';
-  let seen = false;
-  return protocolStart
-
-  /**
-   * Start of protocol autolink literal.
-   *
-   * ```markdown
-   * > | https://example.com/a?b#c
-   *     ^
-   * ```
-   *
-   * @type {State}
-   */
-  function protocolStart(code) {
-    if (
-      (code === 72 || code === 104) &&
-      previousProtocol.call(self, self.previous) &&
-      !previousUnbalanced(self.events)
-    ) {
-      effects.enter('literalAutolink');
-      effects.enter('literalAutolinkHttp');
-      buffer += String.fromCodePoint(code);
-      effects.consume(code);
-      return protocolPrefixInside
-    }
-    return nok(code)
-  }
-
-  /**
-   * In protocol.
-   *
-   * ```markdown
-   * > | https://example.com/a?b#c
-   *     ^^^^^
-   * ```
-   *
-   * @type {State}
-   */
-  function protocolPrefixInside(code) {
-    // `5` is size of `https`
-    if (asciiAlpha(code) && buffer.length < 5) {
-      // @ts-expect-error: definitely number.
-      buffer += String.fromCodePoint(code);
-      effects.consume(code);
-      return protocolPrefixInside
-    }
-    if (code === 58) {
-      const protocol = buffer.toLowerCase();
-      if (protocol === 'http' || protocol === 'https') {
-        effects.consume(code);
-        return protocolSlashesInside
-      }
-    }
-    return nok(code)
-  }
-
-  /**
-   * In slashes.
-   *
-   * ```markdown
-   * > | https://example.com/a?b#c
-   *           ^^
-   * ```
-   *
-   * @type {State}
-   */
-  function protocolSlashesInside(code) {
-    if (code === 47) {
-      effects.consume(code);
-      if (seen) {
-        return afterProtocol
-      }
-      seen = true;
-      return protocolSlashesInside
-    }
-    return nok(code)
-  }
-
-  /**
-   * After protocol, before domain.
-   *
-   * ```markdown
-   * > | https://example.com/a?b#c
-   *             ^
-   * ```
-   *
-   * @type {State}
-   */
-  function afterProtocol(code) {
-    // To do: this is different from `markdown-rs`:
-    // https://github.com/wooorm/markdown-rs/blob/b3a921c761309ae00a51fe348d8a43adbc54b518/src/construct/gfm_autolink_literal.rs#L172-L182
-    return code === null ||
-      asciiControl(code) ||
-      markdownLineEndingOrSpace(code) ||
-      unicodeWhitespace(code) ||
-      unicodePunctuation(code)
-      ? nok(code)
-      : effects.attempt(domain, effects.attempt(path, protocolAfter), nok)(code)
-  }
-
-  /**
-   * After a protocol autolink literal.
-   *
-   * ```markdown
-   * > | https://example.com/a?b#c
-   *                              ^
-   * ```
-   *
-   * @type {State}
-   */
-  function protocolAfter(code) {
-    effects.exit('literalAutolinkHttp');
-    effects.exit('literalAutolink');
-    return ok(code)
-  }
-}
-
-/**
- * `www` prefix.
- *
- * ```markdown
- * > | a www.example.org b
- *       ^^^^
- * ```
- *
- * @this {TokenizeContext}
- * @type {Tokenizer}
- */
-function tokenizeWwwPrefix(effects, ok, nok) {
-  let size = 0;
-  return wwwPrefixInside
-
-  /**
-   * In www prefix.
-   *
-   * ```markdown
-   * > | www.example.com
-   *     ^^^^
-   * ```
-   *
-   * @type {State}
-   */
-  function wwwPrefixInside(code) {
-    if ((code === 87 || code === 119) && size < 3) {
-      size++;
-      effects.consume(code);
-      return wwwPrefixInside
-    }
-    if (code === 46 && size === 3) {
-      effects.consume(code);
-      return wwwPrefixAfter
-    }
-    return nok(code)
-  }
-
-  /**
-   * After www prefix.
-   *
-   * ```markdown
-   * > | www.example.com
-   *         ^
-   * ```
-   *
-   * @type {State}
-   */
-  function wwwPrefixAfter(code) {
-    // If there is *anything*, we can link.
-    return code === null ? nok(code) : ok(code)
-  }
-}
-
-/**
- * Domain.
- *
- * ```markdown
- * > | a https://example.org b
- *               ^^^^^^^^^^^
- * ```
- *
- * @this {TokenizeContext}
- * @type {Tokenizer}
- */
-function tokenizeDomain(effects, ok, nok) {
-  /** @type {boolean | undefined} */
-  let underscoreInLastSegment;
-  /** @type {boolean | undefined} */
-  let underscoreInLastLastSegment;
-  /** @type {boolean | undefined} */
-  let seen;
-  return domainInside
-
-  /**
-   * In domain.
-   *
-   * ```markdown
-   * > | https://example.com/a
-   *             ^^^^^^^^^^^
-   * ```
-   *
-   * @type {State}
-   */
-  function domainInside(code) {
-    // Check whether this marker, which is a trailing punctuation
-    // marker, optionally followed by more trailing markers, and then
-    // followed by an end.
-    if (code === 46 || code === 95) {
-      return effects.check(trail, domainAfter, domainAtPunctuation)(code)
-    }
-
-    // GH documents that only alphanumerics (other than `-`, `.`, and `_`) can
-    // occur, which sounds like ASCII only, but they also support `www.點看.com`,
-    // so that’s Unicode.
-    // Instead of some new production for Unicode alphanumerics, markdown
-    // already has that for Unicode punctuation and whitespace, so use those.
-    // Source: <https://github.com/github/cmark-gfm/blob/ef1cfcb/extensions/autolink.c#L12>.
-    if (
-      code === null ||
-      markdownLineEndingOrSpace(code) ||
-      unicodeWhitespace(code) ||
-      (code !== 45 && unicodePunctuation(code))
-    ) {
-      return domainAfter(code)
-    }
-    seen = true;
-    effects.consume(code);
-    return domainInside
-  }
-
-  /**
-   * In domain, at potential trailing punctuation, that was not trailing.
-   *
-   * ```markdown
-   * > | https://example.com
-   *                    ^
-   * ```
-   *
-   * @type {State}
-   */
-  function domainAtPunctuation(code) {
-    // There is an underscore in the last segment of the domain
-    if (code === 95) {
-      underscoreInLastSegment = true;
-    }
-    // Otherwise, it’s a `.`: save the last segment underscore in the
-    // penultimate segment slot.
-    else {
-      underscoreInLastLastSegment = underscoreInLastSegment;
-      underscoreInLastSegment = undefined;
-    }
-    effects.consume(code);
-    return domainInside
-  }
-
-  /**
-   * After domain.
-   *
-   * ```markdown
-   * > | https://example.com/a
-   *                        ^
-   * ```
-   *
-   * @type {State} */
-  function domainAfter(code) {
-    // Note: that’s GH says a dot is needed, but it’s not true:
-    // <https://github.com/github/cmark-gfm/issues/279>
-    if (underscoreInLastLastSegment || underscoreInLastSegment || !seen) {
-      return nok(code)
-    }
-    return ok(code)
-  }
-}
-
-/**
- * Path.
- *
- * ```markdown
- * > | a https://example.org/stuff b
- *                          ^^^^^^
- * ```
- *
- * @this {TokenizeContext}
- * @type {Tokenizer}
- */
-function tokenizePath(effects, ok) {
-  let sizeOpen = 0;
-  let sizeClose = 0;
-  return pathInside
-
-  /**
-   * In path.
-   *
-   * ```markdown
-   * > | https://example.com/a
-   *                        ^^
-   * ```
-   *
-   * @type {State}
-   */
-  function pathInside(code) {
-    if (code === 40) {
-      sizeOpen++;
-      effects.consume(code);
-      return pathInside
-    }
-
-    // To do: `markdown-rs` also needs this.
-    // If this is a paren, and there are less closings than openings,
-    // we don’t check for a trail.
-    if (code === 41 && sizeClose < sizeOpen) {
-      return pathAtPunctuation(code)
-    }
-
-    // Check whether this trailing punctuation marker is optionally
-    // followed by more trailing markers, and then followed
-    // by an end.
-    if (
-      code === 33 ||
-      code === 34 ||
-      code === 38 ||
-      code === 39 ||
-      code === 41 ||
-      code === 42 ||
-      code === 44 ||
-      code === 46 ||
-      code === 58 ||
-      code === 59 ||
-      code === 60 ||
-      code === 63 ||
-      code === 93 ||
-      code === 95 ||
-      code === 126
-    ) {
-      return effects.check(trail, ok, pathAtPunctuation)(code)
-    }
-    if (
-      code === null ||
-      markdownLineEndingOrSpace(code) ||
-      unicodeWhitespace(code)
-    ) {
-      return ok(code)
-    }
-    effects.consume(code);
-    return pathInside
-  }
-
-  /**
-   * In path, at potential trailing punctuation, that was not trailing.
-   *
-   * ```markdown
-   * > | https://example.com/a"b
-   *                          ^
-   * ```
-   *
-   * @type {State}
-   */
-  function pathAtPunctuation(code) {
-    // Count closing parens.
-    if (code === 41) {
-      sizeClose++;
-    }
-    effects.consume(code);
-    return pathInside
-  }
-}
-
-/**
- * Trail.
- *
- * This calls `ok` if this *is* the trail, followed by an end, which means
- * the entire trail is not part of the link.
- * It calls `nok` if this *is* part of the link.
- *
- * ```markdown
- * > | https://example.com").
- *                        ^^^
- * ```
- *
- * @this {TokenizeContext}
- * @type {Tokenizer}
- */
-function tokenizeTrail(effects, ok, nok) {
-  return trail
-
-  /**
-   * In trail of domain or path.
-   *
-   * ```markdown
-   * > | https://example.com").
-   *                        ^
-   * ```
-   *
-   * @type {State}
-   */
-  function trail(code) {
-    // Regular trailing punctuation.
-    if (
-      code === 33 ||
-      code === 34 ||
-      code === 39 ||
-      code === 41 ||
-      code === 42 ||
-      code === 44 ||
-      code === 46 ||
-      code === 58 ||
-      code === 59 ||
-      code === 63 ||
-      code === 95 ||
-      code === 126
-    ) {
-      effects.consume(code);
-      return trail
-    }
-
-    // `&` followed by one or more alphabeticals and then a `;`, is
-    // as a whole considered as trailing punctuation.
-    // In all other cases, it is considered as continuation of the URL.
-    if (code === 38) {
-      effects.consume(code);
-      return trailCharRefStart
-    }
-
-    // Needed because we allow literals after `[`, as we fix:
-    // <https://github.com/github/cmark-gfm/issues/278>.
-    // Check that it is not followed by `(` or `[`.
-    if (code === 93) {
-      effects.consume(code);
-      return trailBracketAfter
-    }
-    if (
-      // `<` is an end.
-      code === 60 ||
-      // So is whitespace.
-      code === null ||
-      markdownLineEndingOrSpace(code) ||
-      unicodeWhitespace(code)
-    ) {
-      return ok(code)
-    }
-    return nok(code)
-  }
-
-  /**
-   * In trail, after `]`.
-   *
-   * > 👉 **Note**: this deviates from `cmark-gfm` to fix a bug.
-   * > See end of <https://github.com/github/cmark-gfm/issues/278> for more.
-   *
-   * ```markdown
-   * > | https://example.com](
-   *                         ^
-   * ```
-   *
-   * @type {State}
-   */
-  function trailBracketAfter(code) {
-    // Whitespace or something that could start a resource or reference is the end.
-    // Switch back to trail otherwise.
-    if (
-      code === null ||
-      code === 40 ||
-      code === 91 ||
-      markdownLineEndingOrSpace(code) ||
-      unicodeWhitespace(code)
-    ) {
-      return ok(code)
-    }
-    return trail(code)
-  }
-
-  /**
-   * In character-reference like trail, after `&`.
-   *
-   * ```markdown
-   * > | https://example.com&amp;).
-   *                         ^
-   * ```
-   *
-   * @type {State}
-   */
-  function trailCharRefStart(code) {
-    // When non-alpha, it’s not a trail.
-    return asciiAlpha(code) ? trailCharRefInside(code) : nok(code)
-  }
-
-  /**
-   * In character-reference like trail.
-   *
-   * ```markdown
-   * > | https://example.com&amp;).
-   *                         ^
-   * ```
-   *
-   * @type {State}
-   */
-  function trailCharRefInside(code) {
-    // Switch back to trail if this is well-formed.
-    if (code === 59) {
-      effects.consume(code);
-      return trail
-    }
-    if (asciiAlpha(code)) {
-      effects.consume(code);
-      return trailCharRefInside
-    }
-
-    // It’s not a trail.
-    return nok(code)
-  }
-}
-
-/**
- * Dot in email domain trail.
- *
- * This calls `ok` if this *is* the trail, followed by an end, which means
- * the trail is not part of the link.
- * It calls `nok` if this *is* part of the link.
- *
- * ```markdown
- * > | contact@example.org.
- *                        ^
- * ```
- *
- * @this {TokenizeContext}
- * @type {Tokenizer}
- */
-function tokenizeEmailDomainDotTrail(effects, ok, nok) {
-  return start
-
-  /**
-   * Dot.
-   *
-   * ```markdown
-   * > | contact@example.org.
-   *                    ^   ^
-   * ```
-   *
-   * @type {State}
-   */
-  function start(code) {
-    // Must be dot.
-    effects.consume(code);
-    return after
-  }
-
-  /**
-   * After dot.
-   *
-   * ```markdown
-   * > | contact@example.org.
-   *                     ^   ^
-   * ```
-   *
-   * @type {State}
-   */
-  function after(code) {
-    // Not a trail if alphanumeric.
-    return asciiAlphanumeric(code) ? nok(code) : ok(code)
-  }
-}
-
-/**
- * See:
- * <https://github.com/github/cmark-gfm/blob/ef1cfcb/extensions/autolink.c#L156>.
- *
- * @type {Previous}
- */
-function previousWww(code) {
-  return (
-    code === null ||
-    code === 40 ||
-    code === 42 ||
-    code === 95 ||
-    code === 91 ||
-    code === 93 ||
-    code === 126 ||
-    markdownLineEndingOrSpace(code)
-  )
-}
-
-/**
- * See:
- * <https://github.com/github/cmark-gfm/blob/ef1cfcb/extensions/autolink.c#L214>.
- *
- * @type {Previous}
- */
-function previousProtocol(code) {
-  return !asciiAlpha(code)
-}
-
-/**
- * @this {TokenizeContext}
- * @type {Previous}
- */
-function previousEmail(code) {
-  // Do not allow a slash “inside” atext.
-  // The reference code is a bit weird, but that’s what it results in.
-  // Source: <https://github.com/github/cmark-gfm/blob/ef1cfcb/extensions/autolink.c#L307>.
-  // Other than slash, every preceding character is allowed.
-  return !(code === 47 || gfmAtext(code))
-}
-
-/**
- * @param {Code} code
- * @returns {boolean}
- */
-function gfmAtext(code) {
-  return (
-    code === 43 ||
-    code === 45 ||
-    code === 46 ||
-    code === 95 ||
-    asciiAlphanumeric(code)
-  )
-}
-
-/**
- * @param {Array<Event>} events
- * @returns {boolean}
- */
-function previousUnbalanced(events) {
-  let index = events.length;
-  let result = false;
-  while (index--) {
-    const token = events[index][1];
-    if (
-      (token.type === 'labelLink' || token.type === 'labelImage') &&
-      !token._balanced
-    ) {
-      result = true;
-      break
-    }
-
-    // If we’ve seen this token, and it was marked as not having any unbalanced
-    // bracket before it, we can exit.
-    if (token._gfmAutolinkLiteralWalkedInto) {
-      result = false;
-      break
-    }
-  }
-  if (events.length > 0 && !result) {
-    // Mark the last token as “walked into” w/o finding
-    // anything.
-    events[events.length - 1][1]._gfmAutolinkLiteralWalkedInto = true;
-  }
-  return result
-}
-
-/**
- * @typedef {import('micromark-util-types').Event} Event
- * @typedef {import('micromark-util-types').Exiter} Exiter
- * @typedef {import('micromark-util-types').Extension} Extension
- * @typedef {import('micromark-util-types').Resolver} Resolver
- * @typedef {import('micromark-util-types').State} State
- * @typedef {import('micromark-util-types').Token} Token
- * @typedef {import('micromark-util-types').TokenizeContext} TokenizeContext
- * @typedef {import('micromark-util-types').Tokenizer} Tokenizer
- */
-
-const indent = {
-  tokenize: tokenizeIndent,
-  partial: true
-};
-
-// To do: micromark should support a `_hiddenGfmFootnoteSupport`, which only
-// affects label start (image).
-// That will let us drop `tokenizePotentialGfmFootnote*`.
-// It currently has a `_hiddenFootnoteSupport`, which affects that and more.
-// That can be removed when `micromark-extension-footnote` is archived.
-
-/**
- * Create an extension for `micromark` to enable GFM footnote syntax.
- *
- * @returns {Extension}
- *   Extension for `micromark` that can be passed in `extensions` to
- *   enable GFM footnote syntax.
- */
-function gfmFootnote() {
-  /** @type {Extension} */
-  return {
-    document: {
-      [91]: {
-        tokenize: tokenizeDefinitionStart,
-        continuation: {
-          tokenize: tokenizeDefinitionContinuation
-        },
-        exit: gfmFootnoteDefinitionEnd
-      }
-    },
-    text: {
-      [91]: {
-        tokenize: tokenizeGfmFootnoteCall
-      },
-      [93]: {
-        add: 'after',
-        tokenize: tokenizePotentialGfmFootnoteCall,
-        resolveTo: resolveToPotentialGfmFootnoteCall
-      }
-    }
-  }
-}
-
-// To do: remove after micromark update.
-/**
- * @this {TokenizeContext}
- * @type {Tokenizer}
- */
-function tokenizePotentialGfmFootnoteCall(effects, ok, nok) {
-  const self = this;
-  let index = self.events.length;
-  const defined = self.parser.gfmFootnotes || (self.parser.gfmFootnotes = []);
-  /** @type {Token} */
-  let labelStart;
-
-  // Find an opening.
-  while (index--) {
-    const token = self.events[index][1];
-    if (token.type === 'labelImage') {
-      labelStart = token;
-      break
-    }
-
-    // Exit if we’ve walked far enough.
-    if (
-      token.type === 'gfmFootnoteCall' ||
-      token.type === 'labelLink' ||
-      token.type === 'label' ||
-      token.type === 'image' ||
-      token.type === 'link'
-    ) {
-      break
-    }
-  }
-  return start
-
-  /**
-   * @type {State}
-   */
-  function start(code) {
-    if (!labelStart || !labelStart._balanced) {
-      return nok(code)
-    }
-    const id = normalizeIdentifier(
-      self.sliceSerialize({
-        start: labelStart.end,
-        end: self.now()
-      })
-    );
-    if (id.codePointAt(0) !== 94 || !defined.includes(id.slice(1))) {
-      return nok(code)
-    }
-    effects.enter('gfmFootnoteCallLabelMarker');
-    effects.consume(code);
-    effects.exit('gfmFootnoteCallLabelMarker');
-    return ok(code)
-  }
-}
-
-// To do: remove after micromark update.
-/** @type {Resolver} */
-function resolveToPotentialGfmFootnoteCall(events, context) {
-  let index = events.length;
-
-  // Find an opening.
-  while (index--) {
-    if (
-      events[index][1].type === 'labelImage' &&
-      events[index][0] === 'enter'
-    ) {
-      events[index][1];
-      break
-    }
-  }
-  // Change the `labelImageMarker` to a `data`.
-  events[index + 1][1].type = 'data';
-  events[index + 3][1].type = 'gfmFootnoteCallLabelMarker';
-
-  // The whole (without `!`):
-  /** @type {Token} */
-  const call = {
-    type: 'gfmFootnoteCall',
-    start: Object.assign({}, events[index + 3][1].start),
-    end: Object.assign({}, events[events.length - 1][1].end)
-  };
-  // The `^` marker
-  /** @type {Token} */
-  const marker = {
-    type: 'gfmFootnoteCallMarker',
-    start: Object.assign({}, events[index + 3][1].end),
-    end: Object.assign({}, events[index + 3][1].end)
-  };
-  // Increment the end 1 character.
-  marker.end.column++;
-  marker.end.offset++;
-  marker.end._bufferIndex++;
-  /** @type {Token} */
-  const string = {
-    type: 'gfmFootnoteCallString',
-    start: Object.assign({}, marker.end),
-    end: Object.assign({}, events[events.length - 1][1].start)
-  };
-  /** @type {Token} */
-  const chunk = {
-    type: 'chunkString',
-    contentType: 'string',
-    start: Object.assign({}, string.start),
-    end: Object.assign({}, string.end)
-  };
-
-  /** @type {Array<Event>} */
-  const replacement = [
-    // Take the `labelImageMarker` (now `data`, the `!`)
-    events[index + 1],
-    events[index + 2],
-    ['enter', call, context],
-    // The `[`
-    events[index + 3],
-    events[index + 4],
-    // The `^`.
-    ['enter', marker, context],
-    ['exit', marker, context],
-    // Everything in between.
-    ['enter', string, context],
-    ['enter', chunk, context],
-    ['exit', chunk, context],
-    ['exit', string, context],
-    // The ending (`]`, properly parsed and labelled).
-    events[events.length - 2],
-    events[events.length - 1],
-    ['exit', call, context]
-  ];
-  events.splice(index, events.length - index + 1, ...replacement);
-  return events
-}
-
-/**
- * @this {TokenizeContext}
- * @type {Tokenizer}
- */
-function tokenizeGfmFootnoteCall(effects, ok, nok) {
-  const self = this;
-  const defined = self.parser.gfmFootnotes || (self.parser.gfmFootnotes = []);
-  let size = 0;
-  /** @type {boolean} */
-  let data;
-
-  // Note: the implementation of `markdown-rs` is different, because it houses
-  // core *and* extensions in one project.
-  // Therefore, it can include footnote logic inside `label-end`.
-  // We can’t do that, but luckily, we can parse footnotes in a simpler way than
-  // needed for labels.
-  return start
-
-  /**
-   * Start of footnote label.
-   *
-   * ```markdown
-   * > | a [^b] c
-   *       ^
-   * ```
-   *
-   * @type {State}
-   */
-  function start(code) {
-    effects.enter('gfmFootnoteCall');
-    effects.enter('gfmFootnoteCallLabelMarker');
-    effects.consume(code);
-    effects.exit('gfmFootnoteCallLabelMarker');
-    return callStart
-  }
-
-  /**
-   * After `[`, at `^`.
-   *
-   * ```markdown
-   * > | a [^b] c
-   *        ^
-   * ```
-   *
-   * @type {State}
-   */
-  function callStart(code) {
-    if (code !== 94) return nok(code)
-    effects.enter('gfmFootnoteCallMarker');
-    effects.consume(code);
-    effects.exit('gfmFootnoteCallMarker');
-    effects.enter('gfmFootnoteCallString');
-    effects.enter('chunkString').contentType = 'string';
-    return callData
-  }
-
-  /**
-   * In label.
-   *
-   * ```markdown
-   * > | a [^b] c
-   *         ^
-   * ```
-   *
-   * @type {State}
-   */
-  function callData(code) {
-    if (
-      // Too long.
-      size > 999 ||
-      // Closing brace with nothing.
-      (code === 93 && !data) ||
-      // Space or tab is not supported by GFM for some reason.
-      // `\n` and `[` not being supported makes sense.
-      code === null ||
-      code === 91 ||
-      markdownLineEndingOrSpace(code)
-    ) {
-      return nok(code)
-    }
-    if (code === 93) {
-      effects.exit('chunkString');
-      const token = effects.exit('gfmFootnoteCallString');
-      if (!defined.includes(normalizeIdentifier(self.sliceSerialize(token)))) {
-        return nok(code)
-      }
-      effects.enter('gfmFootnoteCallLabelMarker');
-      effects.consume(code);
-      effects.exit('gfmFootnoteCallLabelMarker');
-      effects.exit('gfmFootnoteCall');
-      return ok
-    }
-    if (!markdownLineEndingOrSpace(code)) {
-      data = true;
-    }
-    size++;
-    effects.consume(code);
-    return code === 92 ? callEscape : callData
-  }
-
-  /**
-   * On character after escape.
-   *
-   * ```markdown
-   * > | a [^b\c] d
-   *           ^
-   * ```
-   *
-   * @type {State}
-   */
-  function callEscape(code) {
-    if (code === 91 || code === 92 || code === 93) {
-      effects.consume(code);
-      size++;
-      return callData
-    }
-    return callData(code)
-  }
-}
-
-/**
- * @this {TokenizeContext}
- * @type {Tokenizer}
- */
-function tokenizeDefinitionStart(effects, ok, nok) {
-  const self = this;
-  const defined = self.parser.gfmFootnotes || (self.parser.gfmFootnotes = []);
-  /** @type {string} */
-  let identifier;
-  let size = 0;
-  /** @type {boolean | undefined} */
-  let data;
-  return start
-
-  /**
-   * Start of GFM footnote definition.
-   *
-   * ```markdown
-   * > | [^a]: b
-   *     ^
-   * ```
-   *
-   * @type {State}
-   */
-  function start(code) {
-    effects.enter('gfmFootnoteDefinition')._container = true;
-    effects.enter('gfmFootnoteDefinitionLabel');
-    effects.enter('gfmFootnoteDefinitionLabelMarker');
-    effects.consume(code);
-    effects.exit('gfmFootnoteDefinitionLabelMarker');
-    return labelAtMarker
-  }
-
-  /**
-   * In label, at caret.
-   *
-   * ```markdown
-   * > | [^a]: b
-   *      ^
-   * ```
-   *
-   * @type {State}
-   */
-  function labelAtMarker(code) {
-    if (code === 94) {
-      effects.enter('gfmFootnoteDefinitionMarker');
-      effects.consume(code);
-      effects.exit('gfmFootnoteDefinitionMarker');
-      effects.enter('gfmFootnoteDefinitionLabelString');
-      effects.enter('chunkString').contentType = 'string';
-      return labelInside
-    }
-    return nok(code)
-  }
-
-  /**
-   * In label.
-   *
-   * > 👉 **Note**: `cmark-gfm` prevents whitespace from occurring in footnote
-   * > definition labels.
-   *
-   * ```markdown
-   * > | [^a]: b
-   *       ^
-   * ```
-   *
-   * @type {State}
-   */
-  function labelInside(code) {
-    if (
-      // Too long.
-      size > 999 ||
-      // Closing brace with nothing.
-      (code === 93 && !data) ||
-      // Space or tab is not supported by GFM for some reason.
-      // `\n` and `[` not being supported makes sense.
-      code === null ||
-      code === 91 ||
-      markdownLineEndingOrSpace(code)
-    ) {
-      return nok(code)
-    }
-    if (code === 93) {
-      effects.exit('chunkString');
-      const token = effects.exit('gfmFootnoteDefinitionLabelString');
-      identifier = normalizeIdentifier(self.sliceSerialize(token));
-      effects.enter('gfmFootnoteDefinitionLabelMarker');
-      effects.consume(code);
-      effects.exit('gfmFootnoteDefinitionLabelMarker');
-      effects.exit('gfmFootnoteDefinitionLabel');
-      return labelAfter
-    }
-    if (!markdownLineEndingOrSpace(code)) {
-      data = true;
-    }
-    size++;
-    effects.consume(code);
-    return code === 92 ? labelEscape : labelInside
-  }
-
-  /**
-   * After `\`, at a special character.
-   *
-   * > 👉 **Note**: `cmark-gfm` currently does not support escaped brackets:
-   * > <https://github.com/github/cmark-gfm/issues/240>
-   *
-   * ```markdown
-   * > | [^a\*b]: c
-   *         ^
-   * ```
-   *
-   * @type {State}
-   */
-  function labelEscape(code) {
-    if (code === 91 || code === 92 || code === 93) {
-      effects.consume(code);
-      size++;
-      return labelInside
-    }
-    return labelInside(code)
-  }
-
-  /**
-   * After definition label.
-   *
-   * ```markdown
-   * > | [^a]: b
-   *         ^
-   * ```
-   *
-   * @type {State}
-   */
-  function labelAfter(code) {
-    if (code === 58) {
-      effects.enter('definitionMarker');
-      effects.consume(code);
-      effects.exit('definitionMarker');
-      if (!defined.includes(identifier)) {
-        defined.push(identifier);
-      }
-
-      // Any whitespace after the marker is eaten, forming indented code
-      // is not possible.
-      // No space is also fine, just like a block quote marker.
-      return factorySpace(
-        effects,
-        whitespaceAfter,
-        'gfmFootnoteDefinitionWhitespace'
-      )
-    }
-    return nok(code)
-  }
-
-  /**
-   * After definition prefix.
-   *
-   * ```markdown
-   * > | [^a]: b
-   *           ^
-   * ```
-   *
-   * @type {State}
-   */
-  function whitespaceAfter(code) {
-    // `markdown-rs` has a wrapping token for the prefix that is closed here.
-    return ok(code)
-  }
-}
-
-/**
- * @this {TokenizeContext}
- * @type {Tokenizer}
- */
-function tokenizeDefinitionContinuation(effects, ok, nok) {
-  /// Start of footnote definition continuation.
-  ///
-  /// ```markdown
-  ///   | [^a]: b
-  /// > |     c
-  ///     ^
-  /// ```
-  //
-  // Either a blank line, which is okay, or an indented thing.
-  return effects.check(blankLine, ok, effects.attempt(indent, ok, nok))
-}
-
-/** @type {Exiter} */
-function gfmFootnoteDefinitionEnd(effects) {
-  effects.exit('gfmFootnoteDefinition');
-}
-
-/**
- * @this {TokenizeContext}
- * @type {Tokenizer}
- */
-function tokenizeIndent(effects, ok, nok) {
-  const self = this;
-  return factorySpace(
-    effects,
-    afterPrefix,
-    'gfmFootnoteDefinitionIndent',
-    4 + 1
-  )
-
-  /**
-   * @type {State}
-   */
-  function afterPrefix(code) {
-    const tail = self.events[self.events.length - 1];
-    return tail &&
-      tail[1].type === 'gfmFootnoteDefinitionIndent' &&
-      tail[2].sliceSerialize(tail[1], true).length === 4
-      ? ok(code)
-      : nok(code)
-  }
-}
-
-/**
- * @typedef {import('micromark-util-types').Event} Event
- * @typedef {import('micromark-util-types').Extension} Extension
- * @typedef {import('micromark-util-types').Resolver} Resolver
- * @typedef {import('micromark-util-types').State} State
- * @typedef {import('micromark-util-types').Token} Token
- * @typedef {import('micromark-util-types').TokenizeContext} TokenizeContext
- * @typedef {import('micromark-util-types').Tokenizer} Tokenizer
- *
- * @typedef Options
- *   Configuration (optional).
- * @property {boolean | null | undefined} [singleTilde=true]
- *   Whether to support strikethrough with a single tilde (default: `true`).
- *
- *   Single tildes work on github.com, but are technically prohibited by the
- *   GFM spec.
- */
-
-/**
- * Create an extension for `micromark` to enable GFM strikethrough syntax.
- *
- * @param {Options | null | undefined} [options={}]
- *   Configuration.
- * @returns {Extension}
- *   Extension for `micromark` that can be passed in `extensions`, to
- *   enable GFM strikethrough syntax.
- */
-function gfmStrikethrough(options) {
-  const options_ = options || {};
-  let single = options_.singleTilde;
-  const tokenizer = {
-    tokenize: tokenizeStrikethrough,
-    resolveAll: resolveAllStrikethrough
-  };
-  if (single === null || single === undefined) {
-    single = true;
-  }
-  return {
-    text: {
-      [126]: tokenizer
-    },
-    insideSpan: {
-      null: [tokenizer]
-    },
-    attentionMarkers: {
-      null: [126]
-    }
-  }
-
-  /**
-   * Take events and resolve strikethrough.
-   *
-   * @type {Resolver}
-   */
-  function resolveAllStrikethrough(events, context) {
-    let index = -1;
-
-    // Walk through all events.
-    while (++index < events.length) {
-      // Find a token that can close.
-      if (
-        events[index][0] === 'enter' &&
-        events[index][1].type === 'strikethroughSequenceTemporary' &&
-        events[index][1]._close
-      ) {
-        let open = index;
-
-        // Now walk back to find an opener.
-        while (open--) {
-          // Find a token that can open the closer.
-          if (
-            events[open][0] === 'exit' &&
-            events[open][1].type === 'strikethroughSequenceTemporary' &&
-            events[open][1]._open &&
-            // If the sizes are the same:
-            events[index][1].end.offset - events[index][1].start.offset ===
-              events[open][1].end.offset - events[open][1].start.offset
-          ) {
-            events[index][1].type = 'strikethroughSequence';
-            events[open][1].type = 'strikethroughSequence';
-
-            /** @type {Token} */
-            const strikethrough = {
-              type: 'strikethrough',
-              start: Object.assign({}, events[open][1].start),
-              end: Object.assign({}, events[index][1].end)
-            };
-
-            /** @type {Token} */
-            const text = {
-              type: 'strikethroughText',
-              start: Object.assign({}, events[open][1].end),
-              end: Object.assign({}, events[index][1].start)
-            };
-
-            // Opening.
-            /** @type {Array<Event>} */
-            const nextEvents = [
-              ['enter', strikethrough, context],
-              ['enter', events[open][1], context],
-              ['exit', events[open][1], context],
-              ['enter', text, context]
-            ];
-            const insideSpan = context.parser.constructs.insideSpan.null;
-            if (insideSpan) {
-              // Between.
-              splice(
-                nextEvents,
-                nextEvents.length,
-                0,
-                resolveAll(insideSpan, events.slice(open + 1, index), context)
-              );
-            }
-
-            // Closing.
-            splice(nextEvents, nextEvents.length, 0, [
-              ['exit', text, context],
-              ['enter', events[index][1], context],
-              ['exit', events[index][1], context],
-              ['exit', strikethrough, context]
-            ]);
-            splice(events, open - 1, index - open + 3, nextEvents);
-            index = open + nextEvents.length - 2;
-            break
-          }
-        }
-      }
-    }
-    index = -1;
-    while (++index < events.length) {
-      if (events[index][1].type === 'strikethroughSequenceTemporary') {
-        events[index][1].type = 'data';
-      }
-    }
-    return events
-  }
-
-  /**
-   * @this {TokenizeContext}
-   * @type {Tokenizer}
-   */
-  function tokenizeStrikethrough(effects, ok, nok) {
-    const previous = this.previous;
-    const events = this.events;
-    let size = 0;
-    return start
-
-    /** @type {State} */
-    function start(code) {
-      if (
-        previous === 126 &&
-        events[events.length - 1][1].type !== 'characterEscape'
-      ) {
-        return nok(code)
-      }
-      effects.enter('strikethroughSequenceTemporary');
-      return more(code)
-    }
-
-    /** @type {State} */
-    function more(code) {
-      const before = classifyCharacter(previous);
-      if (code === 126) {
-        // If this is the third marker, exit.
-        if (size > 1) return nok(code)
-        effects.consume(code);
-        size++;
-        return more
-      }
-      if (size < 2 && !single) return nok(code)
-      const token = effects.exit('strikethroughSequenceTemporary');
-      const after = classifyCharacter(code);
-      token._open = !after || (after === 2 && Boolean(before));
-      token._close = !before || (before === 2 && Boolean(after));
-      return ok(code)
-    }
-  }
-}
-
-/**
- * @typedef {import('micromark-util-types').Event} Event
- */
-
-// Port of `edit_map.rs` from `markdown-rs`.
-// This should move to `markdown-js` later.
-
-// Deal with several changes in events, batching them together.
-//
-// Preferably, changes should be kept to a minimum.
-// Sometimes, it’s needed to change the list of events, because parsing can be
-// messy, and it helps to expose a cleaner interface of events to the compiler
-// and other users.
-// It can also help to merge many adjacent similar events.
-// And, in other cases, it’s needed to parse subcontent: pass some events
-// through another tokenizer and inject the result.
-
-/**
- * @typedef {[number, number, Array<Event>]} Change
- * @typedef {[number, number, number]} Jump
- */
-
-/**
- * Tracks a bunch of edits.
- */
-class EditMap {
-  /**
-   * Create a new edit map.
-   */
-  constructor() {
-    /**
-     * Record of changes.
-     *
-     * @type {Array<Change>}
-     */
-    this.map = [];
-  }
-
-  /**
-   * Create an edit: a remove and/or add at a certain place.
-   *
-   * @param {number} index
-   * @param {number} remove
-   * @param {Array<Event>} add
-   * @returns {undefined}
-   */
-  add(index, remove, add) {
-    addImpl(this, index, remove, add);
-  }
-
-  // To do: add this when moving to `micromark`.
-  // /**
-  //  * Create an edit: but insert `add` before existing additions.
-  //  *
-  //  * @param {number} index
-  //  * @param {number} remove
-  //  * @param {Array<Event>} add
-  //  * @returns {undefined}
-  //  */
-  // addBefore(index, remove, add) {
-  //   addImpl(this, index, remove, add, true)
-  // }
-
-  /**
-   * Done, change the events.
-   *
-   * @param {Array<Event>} events
-   * @returns {undefined}
-   */
-  consume(events) {
-    this.map.sort(function (a, b) {
-      return a[0] - b[0]
-    });
-
-    /* c8 ignore next 3 -- `resolve` is never called without tables, so without edits. */
-    if (this.map.length === 0) {
-      return
-    }
-
-    // To do: if links are added in events, like they are in `markdown-rs`,
-    // this is needed.
-    // // Calculate jumps: where items in the current list move to.
-    // /** @type {Array<Jump>} */
-    // const jumps = []
-    // let index = 0
-    // let addAcc = 0
-    // let removeAcc = 0
-    // while (index < this.map.length) {
-    //   const [at, remove, add] = this.map[index]
-    //   removeAcc += remove
-    //   addAcc += add.length
-    //   jumps.push([at, removeAcc, addAcc])
-    //   index += 1
-    // }
-    //
-    // . shiftLinks(events, jumps)
-
-    let index = this.map.length;
-    /** @type {Array<Array<Event>>} */
-    const vecs = [];
-    while (index > 0) {
-      index -= 1;
-      vecs.push(
-        events.slice(this.map[index][0] + this.map[index][1]),
-        this.map[index][2]
-      );
-
-      // Truncate rest.
-      events.length = this.map[index][0];
-    }
-    vecs.push([...events]);
-    events.length = 0;
-    let slice = vecs.pop();
-    while (slice) {
-      events.push(...slice);
-      slice = vecs.pop();
-    }
-
-    // Truncate everything.
-    this.map.length = 0;
-  }
-}
-
-/**
- * Create an edit.
- *
- * @param {EditMap} editMap
- * @param {number} at
- * @param {number} remove
- * @param {Array<Event>} add
- * @returns {undefined}
- */
-function addImpl(editMap, at, remove, add) {
-  let index = 0;
-
-  /* c8 ignore next 3 -- `resolve` is never called without tables, so without edits. */
-  if (remove === 0 && add.length === 0) {
-    return
-  }
-  while (index < editMap.map.length) {
-    if (editMap.map[index][0] === at) {
-      editMap.map[index][1] += remove;
-
-      // To do: before not used by tables, use when moving to micromark.
-      // if (before) {
-      //   add.push(...editMap.map[index][2])
-      //   editMap.map[index][2] = add
-      // } else {
-      editMap.map[index][2].push(...add);
-      // }
-
-      return
-    }
-    index += 1;
-  }
-  editMap.map.push([at, remove, add]);
-}
-
-// /**
-//  * Shift `previous` and `next` links according to `jumps`.
-//  *
-//  * This fixes links in case there are events removed or added between them.
-//  *
-//  * @param {Array<Event>} events
-//  * @param {Array<Jump>} jumps
-//  */
-// function shiftLinks(events, jumps) {
-//   let jumpIndex = 0
-//   let index = 0
-//   let add = 0
-//   let rm = 0
-
-//   while (index < events.length) {
-//     const rmCurr = rm
-
-//     while (jumpIndex < jumps.length && jumps[jumpIndex][0] <= index) {
-//       add = jumps[jumpIndex][2]
-//       rm = jumps[jumpIndex][1]
-//       jumpIndex += 1
-//     }
-
-//     // Ignore items that will be removed.
-//     if (rm > rmCurr) {
-//       index += rm - rmCurr
-//     } else {
-//       // ?
-//       // if let Some(link) = &events[index].link {
-//       //     if let Some(next) = link.next {
-//       //         events[next].link.as_mut().unwrap().previous = Some(index + add - rm);
-//       //         while jumpIndex < jumps.len() && jumps[jumpIndex].0 <= next {
-//       //             add = jumps[jumpIndex].2;
-//       //             rm = jumps[jumpIndex].1;
-//       //             jumpIndex += 1;
-//       //         }
-//       //         events[index].link.as_mut().unwrap().next = Some(next + add - rm);
-//       //         index = next;
-//       //         continue;
-//       //     }
-//       // }
-//       index += 1
-//     }
-//   }
-// }
-
-/**
- * @typedef {import('micromark-util-types').Event} Event
- */
-
-/**
- * @typedef {'center' | 'left' | 'none' | 'right'} Align
- */
-
-/**
- * Figure out the alignment of a GFM table.
- *
- * @param {Readonly<Array<Event>>} events
- *   List of events.
- * @param {number} index
- *   Table enter event.
- * @returns {Array<Align>}
- *   List of aligns.
- */
-function gfmTableAlign(events, index) {
-  let inDelimiterRow = false;
-  /** @type {Array<Align>} */
-  const align = [];
-  while (index < events.length) {
-    const event = events[index];
-    if (inDelimiterRow) {
-      if (event[0] === 'enter') {
-        // Start of alignment value: set a new column.
-        // To do: `markdown-rs` uses `tableDelimiterCellValue`.
-        if (event[1].type === 'tableContent') {
-          align.push(
-            events[index + 1][1].type === 'tableDelimiterMarker'
-              ? 'left'
-              : 'none'
-          );
-        }
-      }
-      // Exits:
-      // End of alignment value: change the column.
-      // To do: `markdown-rs` uses `tableDelimiterCellValue`.
-      else if (event[1].type === 'tableContent') {
-        if (events[index - 1][1].type === 'tableDelimiterMarker') {
-          const alignIndex = align.length - 1;
-          align[alignIndex] = align[alignIndex] === 'left' ? 'center' : 'right';
-        }
-      }
-      // Done!
-      else if (event[1].type === 'tableDelimiterRow') {
-        break
-      }
-    } else if (event[0] === 'enter' && event[1].type === 'tableDelimiterRow') {
-      inDelimiterRow = true;
-    }
-    index += 1;
-  }
-  return align
-}
-
-/**
- * @typedef {import('micromark-util-types').Event} Event
- * @typedef {import('micromark-util-types').Extension} Extension
- * @typedef {import('micromark-util-types').Point} Point
- * @typedef {import('micromark-util-types').Resolver} Resolver
- * @typedef {import('micromark-util-types').State} State
- * @typedef {import('micromark-util-types').Token} Token
- * @typedef {import('micromark-util-types').TokenizeContext} TokenizeContext
- * @typedef {import('micromark-util-types').Tokenizer} Tokenizer
- */
-
-
-/**
- * Create an HTML extension for `micromark` to support GitHub tables syntax.
- *
- * @returns {Extension}
- *   Extension for `micromark` that can be passed in `extensions` to enable GFM
- *   table syntax.
- */
-function gfmTable() {
-  return {
-    flow: {
-      null: {
-        tokenize: tokenizeTable,
-        resolveAll: resolveTable
-      }
-    }
-  }
-}
-
-/**
- * @this {TokenizeContext}
- * @type {Tokenizer}
- */
-function tokenizeTable(effects, ok, nok) {
-  const self = this;
-  let size = 0;
-  let sizeB = 0;
-  /** @type {boolean | undefined} */
-  let seen;
-  return start
-
-  /**
-   * Start of a GFM table.
-   *
-   * If there is a valid table row or table head before, then we try to parse
-   * another row.
-   * Otherwise, we try to parse a head.
-   *
-   * ```markdown
-   * > | | a |
-   *     ^
-   *   | | - |
-   * > | | b |
-   *     ^
-   * ```
-   * @type {State}
-   */
-  function start(code) {
-    let index = self.events.length - 1;
-    while (index > -1) {
-      const type = self.events[index][1].type;
-      if (
-        type === 'lineEnding' ||
-        // Note: markdown-rs uses `whitespace` instead of `linePrefix`
-        type === 'linePrefix'
-      )
-        index--;
-      else break
-    }
-    const tail = index > -1 ? self.events[index][1].type : null;
-    const next =
-      tail === 'tableHead' || tail === 'tableRow' ? bodyRowStart : headRowBefore;
-
-    // Don’t allow lazy body rows.
-    if (next === bodyRowStart && self.parser.lazy[self.now().line]) {
-      return nok(code)
-    }
-    return next(code)
-  }
-
-  /**
-   * Before table head row.
-   *
-   * ```markdown
-   * > | | a |
-   *     ^
-   *   | | - |
-   *   | | b |
-   * ```
-   *
-   * @type {State}
-   */
-  function headRowBefore(code) {
-    effects.enter('tableHead');
-    effects.enter('tableRow');
-    return headRowStart(code)
-  }
-
-  /**
-   * Before table head row, after whitespace.
-   *
-   * ```markdown
-   * > | | a |
-   *     ^
-   *   | | - |
-   *   | | b |
-   * ```
-   *
-   * @type {State}
-   */
-  function headRowStart(code) {
-    if (code === 124) {
-      return headRowBreak(code)
-    }
-
-    // To do: micromark-js should let us parse our own whitespace in extensions,
-    // like `markdown-rs`:
-    //
-    // ```js
-    // // 4+ spaces.
-    // if (markdownSpace(code)) {
-    //   return nok(code)
-    // }
-    // ```
-
-    seen = true;
-    // Count the first character, that isn’t a pipe, double.
-    sizeB += 1;
-    return headRowBreak(code)
-  }
-
-  /**
-   * At break in table head row.
-   *
-   * ```markdown
-   * > | | a |
-   *     ^
-   *       ^
-   *         ^
-   *   | | - |
-   *   | | b |
-   * ```
-   *
-   * @type {State}
-   */
-  function headRowBreak(code) {
-    if (code === null) {
-      // Note: in `markdown-rs`, we need to reset, in `micromark-js` we don‘t.
-      return nok(code)
-    }
-    if (markdownLineEnding(code)) {
-      // If anything other than one pipe (ignoring whitespace) was used, it’s fine.
-      if (sizeB > 1) {
-        sizeB = 0;
-        // To do: check if this works.
-        // Feel free to interrupt:
-        self.interrupt = true;
-        effects.exit('tableRow');
-        effects.enter('lineEnding');
-        effects.consume(code);
-        effects.exit('lineEnding');
-        return headDelimiterStart
-      }
-
-      // Note: in `markdown-rs`, we need to reset, in `micromark-js` we don‘t.
-      return nok(code)
-    }
-    if (markdownSpace(code)) {
-      // To do: check if this is fine.
-      // effects.attempt(State::Next(StateName::GfmTableHeadRowBreak), State::Nok)
-      // State::Retry(space_or_tab(tokenizer))
-      return factorySpace(effects, headRowBreak, 'whitespace')(code)
-    }
-    sizeB += 1;
-    if (seen) {
-      seen = false;
-      // Header cell count.
-      size += 1;
-    }
-    if (code === 124) {
-      effects.enter('tableCellDivider');
-      effects.consume(code);
-      effects.exit('tableCellDivider');
-      // Whether a delimiter was seen.
-      seen = true;
-      return headRowBreak
-    }
-
-    // Anything else is cell data.
-    effects.enter('data');
-    return headRowData(code)
-  }
-
-  /**
-   * In table head row data.
-   *
-   * ```markdown
-   * > | | a |
-   *       ^
-   *   | | - |
-   *   | | b |
-   * ```
-   *
-   * @type {State}
-   */
-  function headRowData(code) {
-    if (code === null || code === 124 || markdownLineEndingOrSpace(code)) {
-      effects.exit('data');
-      return headRowBreak(code)
-    }
-    effects.consume(code);
-    return code === 92 ? headRowEscape : headRowData
-  }
-
-  /**
-   * In table head row escape.
-   *
-   * ```markdown
-   * > | | a\-b |
-   *         ^
-   *   | | ---- |
-   *   | | c    |
-   * ```
-   *
-   * @type {State}
-   */
-  function headRowEscape(code) {
-    if (code === 92 || code === 124) {
-      effects.consume(code);
-      return headRowData
-    }
-    return headRowData(code)
-  }
-
-  /**
-   * Before delimiter row.
-   *
-   * ```markdown
-   *   | | a |
-   * > | | - |
-   *     ^
-   *   | | b |
-   * ```
-   *
-   * @type {State}
-   */
-  function headDelimiterStart(code) {
-    // Reset `interrupt`.
-    self.interrupt = false;
-
-    // Note: in `markdown-rs`, we need to handle piercing here too.
-    if (self.parser.lazy[self.now().line]) {
-      return nok(code)
-    }
-    effects.enter('tableDelimiterRow');
-    // Track if we’ve seen a `:` or `|`.
-    seen = false;
-    if (markdownSpace(code)) {
-      return factorySpace(
-        effects,
-        headDelimiterBefore,
-        'linePrefix',
-        self.parser.constructs.disable.null.includes('codeIndented')
-          ? undefined
-          : 4
-      )(code)
-    }
-    return headDelimiterBefore(code)
-  }
-
-  /**
-   * Before delimiter row, after optional whitespace.
-   *
-   * Reused when a `|` is found later, to parse another cell.
-   *
-   * ```markdown
-   *   | | a |
-   * > | | - |
-   *     ^
-   *   | | b |
-   * ```
-   *
-   * @type {State}
-   */
-  function headDelimiterBefore(code) {
-    if (code === 45 || code === 58) {
-      return headDelimiterValueBefore(code)
-    }
-    if (code === 124) {
-      seen = true;
-      // If we start with a pipe, we open a cell marker.
-      effects.enter('tableCellDivider');
-      effects.consume(code);
-      effects.exit('tableCellDivider');
-      return headDelimiterCellBefore
-    }
-
-    // More whitespace / empty row not allowed at start.
-    return headDelimiterNok(code)
-  }
-
-  /**
-   * After `|`, before delimiter cell.
-   *
-   * ```markdown
-   *   | | a |
-   * > | | - |
-   *      ^
-   * ```
-   *
-   * @type {State}
-   */
-  function headDelimiterCellBefore(code) {
-    if (markdownSpace(code)) {
-      return factorySpace(effects, headDelimiterValueBefore, 'whitespace')(code)
-    }
-    return headDelimiterValueBefore(code)
-  }
-
-  /**
-   * Before delimiter cell value.
-   *
-   * ```markdown
-   *   | | a |
-   * > | | - |
-   *       ^
-   * ```
-   *
-   * @type {State}
-   */
-  function headDelimiterValueBefore(code) {
-    // Align: left.
-    if (code === 58) {
-      sizeB += 1;
-      seen = true;
-      effects.enter('tableDelimiterMarker');
-      effects.consume(code);
-      effects.exit('tableDelimiterMarker');
-      return headDelimiterLeftAlignmentAfter
-    }
-
-    // Align: none.
-    if (code === 45) {
-      sizeB += 1;
-      // To do: seems weird that this *isn’t* left aligned, but that state is used?
-      return headDelimiterLeftAlignmentAfter(code)
-    }
-    if (code === null || markdownLineEnding(code)) {
-      return headDelimiterCellAfter(code)
-    }
-    return headDelimiterNok(code)
-  }
-
-  /**
-   * After delimiter cell left alignment marker.
-   *
-   * ```markdown
-   *   | | a  |
-   * > | | :- |
-   *        ^
-   * ```
-   *
-   * @type {State}
-   */
-  function headDelimiterLeftAlignmentAfter(code) {
-    if (code === 45) {
-      effects.enter('tableDelimiterFiller');
-      return headDelimiterFiller(code)
-    }
-
-    // Anything else is not ok after the left-align colon.
-    return headDelimiterNok(code)
-  }
-
-  /**
-   * In delimiter cell filler.
-   *
-   * ```markdown
-   *   | | a |
-   * > | | - |
-   *       ^
-   * ```
-   *
-   * @type {State}
-   */
-  function headDelimiterFiller(code) {
-    if (code === 45) {
-      effects.consume(code);
-      return headDelimiterFiller
-    }
-
-    // Align is `center` if it was `left`, `right` otherwise.
-    if (code === 58) {
-      seen = true;
-      effects.exit('tableDelimiterFiller');
-      effects.enter('tableDelimiterMarker');
-      effects.consume(code);
-      effects.exit('tableDelimiterMarker');
-      return headDelimiterRightAlignmentAfter
-    }
-    effects.exit('tableDelimiterFiller');
-    return headDelimiterRightAlignmentAfter(code)
-  }
-
-  /**
-   * After delimiter cell right alignment marker.
-   *
-   * ```markdown
-   *   | |  a |
-   * > | | -: |
-   *         ^
-   * ```
-   *
-   * @type {State}
-   */
-  function headDelimiterRightAlignmentAfter(code) {
-    if (markdownSpace(code)) {
-      return factorySpace(effects, headDelimiterCellAfter, 'whitespace')(code)
-    }
-    return headDelimiterCellAfter(code)
-  }
-
-  /**
-   * After delimiter cell.
-   *
-   * ```markdown
-   *   | |  a |
-   * > | | -: |
-   *          ^
-   * ```
-   *
-   * @type {State}
-   */
-  function headDelimiterCellAfter(code) {
-    if (code === 124) {
-      return headDelimiterBefore(code)
-    }
-    if (code === null || markdownLineEnding(code)) {
-      // Exit when:
-      // * there was no `:` or `|` at all (it’s a thematic break or setext
-      //   underline instead)
-      // * the header cell count is not the delimiter cell count
-      if (!seen || size !== sizeB) {
-        return headDelimiterNok(code)
-      }
-
-      // Note: in markdown-rs`, a reset is needed here.
-      effects.exit('tableDelimiterRow');
-      effects.exit('tableHead');
-      // To do: in `markdown-rs`, resolvers need to be registered manually.
-      // effects.register_resolver(ResolveName::GfmTable)
-      return ok(code)
-    }
-    return headDelimiterNok(code)
-  }
-
-  /**
-   * In delimiter row, at a disallowed byte.
-   *
-   * ```markdown
-   *   | | a |
-   * > | | x |
-   *       ^
-   * ```
-   *
-   * @type {State}
-   */
-  function headDelimiterNok(code) {
-    // Note: in `markdown-rs`, we need to reset, in `micromark-js` we don‘t.
-    return nok(code)
-  }
-
-  /**
-   * Before table body row.
-   *
-   * ```markdown
-   *   | | a |
-   *   | | - |
-   * > | | b |
-   *     ^
-   * ```
-   *
-   * @type {State}
-   */
-  function bodyRowStart(code) {
-    // Note: in `markdown-rs` we need to manually take care of a prefix,
-    // but in `micromark-js` that is done for us, so if we’re here, we’re
-    // never at whitespace.
-    effects.enter('tableRow');
-    return bodyRowBreak(code)
-  }
-
-  /**
-   * At break in table body row.
-   *
-   * ```markdown
-   *   | | a |
-   *   | | - |
-   * > | | b |
-   *     ^
-   *       ^
-   *         ^
-   * ```
-   *
-   * @type {State}
-   */
-  function bodyRowBreak(code) {
-    if (code === 124) {
-      effects.enter('tableCellDivider');
-      effects.consume(code);
-      effects.exit('tableCellDivider');
-      return bodyRowBreak
-    }
-    if (code === null || markdownLineEnding(code)) {
-      effects.exit('tableRow');
-      return ok(code)
-    }
-    if (markdownSpace(code)) {
-      return factorySpace(effects, bodyRowBreak, 'whitespace')(code)
-    }
-
-    // Anything else is cell content.
-    effects.enter('data');
-    return bodyRowData(code)
-  }
-
-  /**
-   * In table body row data.
-   *
-   * ```markdown
-   *   | | a |
-   *   | | - |
-   * > | | b |
-   *       ^
-   * ```
-   *
-   * @type {State}
-   */
-  function bodyRowData(code) {
-    if (code === null || code === 124 || markdownLineEndingOrSpace(code)) {
-      effects.exit('data');
-      return bodyRowBreak(code)
-    }
-    effects.consume(code);
-    return code === 92 ? bodyRowEscape : bodyRowData
-  }
-
-  /**
-   * In table body row escape.
-   *
-   * ```markdown
-   *   | | a    |
-   *   | | ---- |
-   * > | | b\-c |
-   *         ^
-   * ```
-   *
-   * @type {State}
-   */
-  function bodyRowEscape(code) {
-    if (code === 92 || code === 124) {
-      effects.consume(code);
-      return bodyRowData
-    }
-    return bodyRowData(code)
-  }
-}
-
-/** @type {Resolver} */
-
-function resolveTable(events, context) {
-  let index = -1;
-  let inFirstCellAwaitingPipe = true;
-  /** @type {RowKind} */
-  let rowKind = 0;
-  /** @type {Range} */
-  let lastCell = [0, 0, 0, 0];
-  /** @type {Range} */
-  let cell = [0, 0, 0, 0];
-  let afterHeadAwaitingFirstBodyRow = false;
-  let lastTableEnd = 0;
-  /** @type {Token | undefined} */
-  let currentTable;
-  /** @type {Token | undefined} */
-  let currentBody;
-  /** @type {Token | undefined} */
-  let currentCell;
-  const map = new EditMap();
-  while (++index < events.length) {
-    const event = events[index];
-    const token = event[1];
-    if (event[0] === 'enter') {
-      // Start of head.
-      if (token.type === 'tableHead') {
-        afterHeadAwaitingFirstBodyRow = false;
-
-        // Inject previous (body end and) table end.
-        if (lastTableEnd !== 0) {
-          flushTableEnd(map, context, lastTableEnd, currentTable, currentBody);
-          currentBody = undefined;
-          lastTableEnd = 0;
-        }
-
-        // Inject table start.
-        currentTable = {
-          type: 'table',
-          start: Object.assign({}, token.start),
-          // Note: correct end is set later.
-          end: Object.assign({}, token.end)
-        };
-        map.add(index, 0, [['enter', currentTable, context]]);
-      } else if (
-        token.type === 'tableRow' ||
-        token.type === 'tableDelimiterRow'
-      ) {
-        inFirstCellAwaitingPipe = true;
-        currentCell = undefined;
-        lastCell = [0, 0, 0, 0];
-        cell = [0, index + 1, 0, 0];
-
-        // Inject table body start.
-        if (afterHeadAwaitingFirstBodyRow) {
-          afterHeadAwaitingFirstBodyRow = false;
-          currentBody = {
-            type: 'tableBody',
-            start: Object.assign({}, token.start),
-            // Note: correct end is set later.
-            end: Object.assign({}, token.end)
-          };
-          map.add(index, 0, [['enter', currentBody, context]]);
-        }
-        rowKind = token.type === 'tableDelimiterRow' ? 2 : currentBody ? 3 : 1;
-      }
-      // Cell data.
-      else if (
-        rowKind &&
-        (token.type === 'data' ||
-          token.type === 'tableDelimiterMarker' ||
-          token.type === 'tableDelimiterFiller')
-      ) {
-        inFirstCellAwaitingPipe = false;
-
-        // First value in cell.
-        if (cell[2] === 0) {
-          if (lastCell[1] !== 0) {
-            cell[0] = cell[1];
-            currentCell = flushCell(
-              map,
-              context,
-              lastCell,
-              rowKind,
-              undefined,
-              currentCell
-            );
-            lastCell = [0, 0, 0, 0];
-          }
-          cell[2] = index;
-        }
-      } else if (token.type === 'tableCellDivider') {
-        if (inFirstCellAwaitingPipe) {
-          inFirstCellAwaitingPipe = false;
-        } else {
-          if (lastCell[1] !== 0) {
-            cell[0] = cell[1];
-            currentCell = flushCell(
-              map,
-              context,
-              lastCell,
-              rowKind,
-              undefined,
-              currentCell
-            );
-          }
-          lastCell = cell;
-          cell = [lastCell[1], index, 0, 0];
-        }
-      }
-    }
-    // Exit events.
-    else if (token.type === 'tableHead') {
-      afterHeadAwaitingFirstBodyRow = true;
-      lastTableEnd = index;
-    } else if (
-      token.type === 'tableRow' ||
-      token.type === 'tableDelimiterRow'
-    ) {
-      lastTableEnd = index;
-      if (lastCell[1] !== 0) {
-        cell[0] = cell[1];
-        currentCell = flushCell(
-          map,
-          context,
-          lastCell,
-          rowKind,
-          index,
-          currentCell
-        );
-      } else if (cell[1] !== 0) {
-        currentCell = flushCell(map, context, cell, rowKind, index, currentCell);
-      }
-      rowKind = 0;
-    } else if (
-      rowKind &&
-      (token.type === 'data' ||
-        token.type === 'tableDelimiterMarker' ||
-        token.type === 'tableDelimiterFiller')
-    ) {
-      cell[3] = index;
-    }
-  }
-  if (lastTableEnd !== 0) {
-    flushTableEnd(map, context, lastTableEnd, currentTable, currentBody);
-  }
-  map.consume(context.events);
-
-  // To do: move this into `html`, when events are exposed there.
-  // That’s what `markdown-rs` does.
-  // That needs updates to `mdast-util-gfm-table`.
-  index = -1;
-  while (++index < context.events.length) {
-    const event = context.events[index];
-    if (event[0] === 'enter' && event[1].type === 'table') {
-      event[1]._align = gfmTableAlign(context.events, index);
-    }
-  }
-  return events
-}
-
-/**
- * Generate a cell.
- *
- * @param {EditMap} map
- * @param {Readonly<TokenizeContext>} context
- * @param {Readonly<Range>} range
- * @param {RowKind} rowKind
- * @param {number | undefined} rowEnd
- * @param {Token | undefined} previousCell
- * @returns {Token | undefined}
- */
-// eslint-disable-next-line max-params
-function flushCell(map, context, range, rowKind, rowEnd, previousCell) {
-  // `markdown-rs` uses:
-  // rowKind === 2 ? 'tableDelimiterCell' : 'tableCell'
-  const groupName =
-    rowKind === 1
-      ? 'tableHeader'
-      : rowKind === 2
-      ? 'tableDelimiter'
-      : 'tableData';
-  // `markdown-rs` uses:
-  // rowKind === 2 ? 'tableDelimiterCellValue' : 'tableCellText'
-  const valueName = 'tableContent';
-
-  // Insert an exit for the previous cell, if there is one.
-  //
-  // ```markdown
-  // > | | aa | bb | cc |
-  //          ^-- exit
-  //           ^^^^-- this cell
-  // ```
-  if (range[0] !== 0) {
-    previousCell.end = Object.assign({}, getPoint(context.events, range[0]));
-    map.add(range[0], 0, [['exit', previousCell, context]]);
-  }
-
-  // Insert enter of this cell.
-  //
-  // ```markdown
-  // > | | aa | bb | cc |
-  //           ^-- enter
-  //           ^^^^-- this cell
-  // ```
-  const now = getPoint(context.events, range[1]);
-  previousCell = {
-    type: groupName,
-    start: Object.assign({}, now),
-    // Note: correct end is set later.
-    end: Object.assign({}, now)
-  };
-  map.add(range[1], 0, [['enter', previousCell, context]]);
-
-  // Insert text start at first data start and end at last data end, and
-  // remove events between.
-  //
-  // ```markdown
-  // > | | aa | bb | cc |
-  //            ^-- enter
-  //             ^-- exit
-  //           ^^^^-- this cell
-  // ```
-  if (range[2] !== 0) {
-    const relatedStart = getPoint(context.events, range[2]);
-    const relatedEnd = getPoint(context.events, range[3]);
-    /** @type {Token} */
-    const valueToken = {
-      type: valueName,
-      start: Object.assign({}, relatedStart),
-      end: Object.assign({}, relatedEnd)
-    };
-    map.add(range[2], 0, [['enter', valueToken, context]]);
-    if (rowKind !== 2) {
-      // Fix positional info on remaining events
-      const start = context.events[range[2]];
-      const end = context.events[range[3]];
-      start[1].end = Object.assign({}, end[1].end);
-      start[1].type = 'chunkText';
-      start[1].contentType = 'text';
-
-      // Remove if needed.
-      if (range[3] > range[2] + 1) {
-        const a = range[2] + 1;
-        const b = range[3] - range[2] - 1;
-        map.add(a, b, []);
-      }
-    }
-    map.add(range[3] + 1, 0, [['exit', valueToken, context]]);
-  }
-
-  // Insert an exit for the last cell, if at the row end.
-  //
-  // ```markdown
-  // > | | aa | bb | cc |
-  //                    ^-- exit
-  //               ^^^^^^-- this cell (the last one contains two “between” parts)
-  // ```
-  if (rowEnd !== undefined) {
-    previousCell.end = Object.assign({}, getPoint(context.events, rowEnd));
-    map.add(rowEnd, 0, [['exit', previousCell, context]]);
-    previousCell = undefined;
-  }
-  return previousCell
-}
-
-/**
- * Generate table end (and table body end).
- *
- * @param {Readonly<EditMap>} map
- * @param {Readonly<TokenizeContext>} context
- * @param {number} index
- * @param {Token} table
- * @param {Token | undefined} tableBody
- */
-// eslint-disable-next-line max-params
-function flushTableEnd(map, context, index, table, tableBody) {
-  /** @type {Array<Event>} */
-  const exits = [];
-  const related = getPoint(context.events, index);
-  if (tableBody) {
-    tableBody.end = Object.assign({}, related);
-    exits.push(['exit', tableBody, context]);
-  }
-  table.end = Object.assign({}, related);
-  exits.push(['exit', table, context]);
-  map.add(index + 1, 0, exits);
-}
-
-/**
- * @param {Readonly<Array<Event>>} events
- * @param {number} index
- * @returns {Readonly<Point>}
- */
-function getPoint(events, index) {
-  const event = events[index];
-  const side = event[0] === 'enter' ? 'start' : 'end';
-  return event[1][side]
-}
-
-/**
- * @typedef {import('micromark-util-types').Extension} Extension
- * @typedef {import('micromark-util-types').State} State
- * @typedef {import('micromark-util-types').TokenizeContext} TokenizeContext
- * @typedef {import('micromark-util-types').Tokenizer} Tokenizer
- */
-
-const tasklistCheck = {
-  tokenize: tokenizeTasklistCheck
-};
-
-/**
- * Create an HTML extension for `micromark` to support GFM task list items
- * syntax.
- *
- * @returns {Extension}
- *   Extension for `micromark` that can be passed in `htmlExtensions` to
- *   support GFM task list items when serializing to HTML.
- */
-function gfmTaskListItem() {
-  return {
-    text: {
-      [91]: tasklistCheck
-    }
-  }
-}
-
-/**
- * @this {TokenizeContext}
- * @type {Tokenizer}
- */
-function tokenizeTasklistCheck(effects, ok, nok) {
-  const self = this;
-  return open
-
-  /**
-   * At start of task list item check.
-   *
-   * ```markdown
-   * > | * [x] y.
-   *       ^
-   * ```
-   *
-   * @type {State}
-   */
-  function open(code) {
-    if (
-      // Exit if there’s stuff before.
-      self.previous !== null ||
-      // Exit if not in the first content that is the first child of a list
-      // item.
-      !self._gfmTasklistFirstContentOfListItem
-    ) {
-      return nok(code)
-    }
-    effects.enter('taskListCheck');
-    effects.enter('taskListCheckMarker');
-    effects.consume(code);
-    effects.exit('taskListCheckMarker');
-    return inside
-  }
-
-  /**
-   * In task list item check.
-   *
-   * ```markdown
-   * > | * [x] y.
-   *        ^
-   * ```
-   *
-   * @type {State}
-   */
-  function inside(code) {
-    // Currently we match how GH works in files.
-    // To match how GH works in comments, use `markdownSpace` (`[\t ]`) instead
-    // of `markdownLineEndingOrSpace` (`[\t\n\r ]`).
-    if (markdownLineEndingOrSpace(code)) {
-      effects.enter('taskListCheckValueUnchecked');
-      effects.consume(code);
-      effects.exit('taskListCheckValueUnchecked');
-      return close
-    }
-    if (code === 88 || code === 120) {
-      effects.enter('taskListCheckValueChecked');
-      effects.consume(code);
-      effects.exit('taskListCheckValueChecked');
-      return close
-    }
-    return nok(code)
-  }
-
-  /**
-   * At close of task list item check.
-   *
-   * ```markdown
-   * > | * [x] y.
-   *         ^
-   * ```
-   *
-   * @type {State}
-   */
-  function close(code) {
-    if (code === 93) {
-      effects.enter('taskListCheckMarker');
-      effects.consume(code);
-      effects.exit('taskListCheckMarker');
-      effects.exit('taskListCheck');
-      return after
-    }
-    return nok(code)
-  }
-
-  /**
-   * @type {State}
-   */
-  function after(code) {
-    // EOL in paragraph means there must be something else after it.
-    if (markdownLineEnding(code)) {
-      return ok(code)
-    }
-
-    // Space or tab?
-    // Check what comes after.
-    if (markdownSpace(code)) {
-      return effects.check(
-        {
-          tokenize: spaceThenNonSpace
-        },
-        ok,
-        nok
-      )(code)
-    }
-
-    // EOF, or non-whitespace, both wrong.
-    return nok(code)
-  }
-}
-
-/**
- * @this {TokenizeContext}
- * @type {Tokenizer}
- */
-function spaceThenNonSpace(effects, ok, nok) {
-  return factorySpace(effects, after, 'whitespace')
-
-  /**
-   * After whitespace, after task list item check.
-   *
-   * ```markdown
-   * > | * [x] y.
-   *           ^
-   * ```
-   *
-   * @type {State}
-   */
-  function after(code) {
-    // EOF means there was nothing, so bad.
-    // EOL means there’s content after it, so good.
-    // Impossible to have more spaces.
-    // Anything else is good.
-    return code === null ? nok(code) : ok(code)
-  }
-}
-
-/**
- * @typedef {import('micromark-extension-gfm-footnote').HtmlOptions} HtmlOptions
- * @typedef {import('micromark-extension-gfm-strikethrough').Options} Options
- * @typedef {import('micromark-util-types').Extension} Extension
- * @typedef {import('micromark-util-types').HtmlExtension} HtmlExtension
- */
-
-
-/**
- * Create an extension for `micromark` to enable GFM syntax.
- *
- * @param {Options | null | undefined} [options]
- *   Configuration (optional).
- *
- *   Passed to `micromark-extens-gfm-strikethrough`.
- * @returns {Extension}
- *   Extension for `micromark` that can be passed in `extensions` to enable GFM
- *   syntax.
- */
-function gfm(options) {
-  return combineExtensions([
-    gfmAutolinkLiteral(),
-    gfmFootnote(),
-    gfmStrikethrough(options),
-    gfmTable(),
-    gfmTaskListItem()
-  ])
-}
-
-/// <reference types="remark-parse" />
-/// <reference types="remark-stringify" />
-
-
-/** @type {Options} */
-const emptyOptions = {};
-
-/**
- * Add support GFM (autolink literals, footnotes, strikethrough, tables,
- * tasklists).
- *
- * @param {Options | null | undefined} [options]
- *   Configuration (optional).
- * @returns {undefined}
- *   Nothing.
- */
-function remarkGfm(options) {
-  // @ts-expect-error: TS is wrong about `this`.
-  // eslint-disable-next-line unicorn/no-this-assignment
-  const self = /** @type {Processor} */ (this);
-  const settings = options || emptyOptions;
-  const data = self.data();
-
-  const micromarkExtensions =
-    data.micromarkExtensions || (data.micromarkExtensions = []);
-  const fromMarkdownExtensions =
-    data.fromMarkdownExtensions || (data.fromMarkdownExtensions = []);
-  const toMarkdownExtensions =
-    data.toMarkdownExtensions || (data.toMarkdownExtensions = []);
-
-  micromarkExtensions.push(gfm(settings));
-  fromMarkdownExtensions.push(gfmFromMarkdown());
-  toMarkdownExtensions.push(gfmToMarkdown(settings));
-}
-
-function d(e, t) {
-  return Object.assign(e, {
-    meta: {
-      package: "@milkdown/preset-gfm",
-      ...t
-    }
-  }), e;
-}
-const K = we$2("strike_through");
-d(K, {
-  displayName: "Attr<strikethrough>",
-  group: "Strikethrough"
-});
-const T = ye$2("strike_through", (e) => ({
-  parseDOM: [
-    { tag: "del" },
-    { style: "text-decoration", getAttrs: (t) => t === "line-through" }
-  ],
-  toDOM: (t) => ["del", e.get(K.key)(t)],
-  parseMarkdown: {
-    match: (t) => t.type === "delete",
-    runner: (t, n, o) => {
-      t.openMark(o), t.next(n.children), t.closeMark(o);
-    }
-  },
-  toMarkdown: {
-    match: (t) => t.type.name === "strike_through",
-    runner: (t, n) => {
-      t.withMark(n, "delete");
-    }
-  }
-}));
-d(T.mark, {
-  displayName: "MarkSchema<strikethrough>",
-  group: "Strikethrough"
-});
-d(T.ctx, {
-  displayName: "MarkSchemaCtx<strikethrough>",
-  group: "Strikethrough"
-});
-const H = re$1("ToggleStrikeThrough", (e) => () => toggleMark(T.type(e)));
-d(H, {
-  displayName: "Command<ToggleStrikethrough>",
-  group: "Strikethrough"
-});
-const ae = oe$1((e) => markRule(/~([^~]+)~$/, T.type(e)));
-d(ae, {
-  displayName: "InputRule<strikethrough>",
-  group: "Strikethrough"
-});
-const L = ge$2("strikeThroughKeymap", {
-  ToggleStrikethrough: {
-    shortcuts: "Mod-Alt-x",
-    command: (e) => {
-      const t = e.get(je);
-      return () => t.call(H.key);
-    }
-  }
-});
-d(L.ctx, {
-  displayName: "KeymapCtx<strikethrough>",
-  group: "Strikethrough"
-});
-d(L.shortcuts, {
-  displayName: "Keymap<strikethrough>",
-  group: "Strikethrough"
-});
-function se(e, t = 3, n = 3) {
-  const o = Array(n).fill(0).map(() => M.type(e).createAndFill()), l = Array(n).fill(0).map(() => I.type(e).createAndFill()), r = Array(t).fill(0).map((s, c) => R.type(e).create(null, c === 0 ? l : o));
-  return S.type(e).create(null, r);
-}
-function w$1(e) {
-  return findParentNode((t) => t.type.spec.tableRole === "table")(e);
-}
-function b(e, t) {
-  const n = w$1(t);
-  if (!n)
-    return;
-  const o = TableMap.get(n.node);
-  if (!(e < 0 || e >= o.width))
-    return o.cellsInRect({ left: e, right: e + 1, top: 0, bottom: o.height }).map((l) => {
-      const r = n.node.nodeAt(l);
-      if (!r)
-        return;
-      const s = l + n.start;
-      return {
-        pos: s,
-        start: s + 1,
-        node: r
-      };
-    }).filter((l) => l != null);
-}
-function C(e, t) {
-  const n = w$1(t);
-  if (!n)
-    return;
-  const o = TableMap.get(n.node);
-  if (!(e < 0 || e >= o.height))
-    return o.cellsInRect({ left: 0, right: o.width, top: e, bottom: e + 1 }).map((l) => {
-      const r = n.node.nodeAt(l);
-      if (!r)
-        return;
-      const s = l + n.start;
-      return {
-        pos: s,
-        start: s + 1,
-        node: r
-      };
-    }).filter((l) => l != null);
-}
-function Je(e) {
-  const t = w$1(e);
-  if (!t)
-    return;
-  const n = TableMap.get(t.node);
-  return n.cellsInRect({
-    left: 0,
-    right: n.width,
-    top: 0,
-    bottom: n.height
-  }).map((l) => {
-    const r = t.node.nodeAt(l), s = l + t.start;
-    return { pos: s, start: s + 1, node: r };
-  });
-}
-function Qe(e) {
-  const t = Je(e.selection);
-  if (t && t[0]) {
-    const n = e.doc.resolve(t[0].pos), o = t[t.length - 1];
-    if (o) {
-      const l = e.doc.resolve(o.pos);
-      return cloneTr(e.setSelection(new CellSelection(l, n)));
-    }
-  }
-  return e;
-}
-function ce(e, t, { map: n, tableStart: o, table: l }, r) {
-  const s = Array(r).fill(0).reduce((i, m, a) => i + l.child(a).nodeSize, o), c = Array(n.width).fill(0).map((i, m) => {
-    const a = l.nodeAt(n.map[m]);
-    return M.type(e).createAndFill({ alignment: a == null ? void 0 : a.attrs.alignment });
-  });
-  return t.insert(s, R.type(e).create(null, c)), t;
-}
-function ie(e) {
-  return (t) => (n) => {
-    const o = w$1(n.selection), l = e === "row";
-    if (o) {
-      const r = TableMap.get(o.node);
-      if (t >= 0 && t < (l ? r.height : r.width)) {
-        const s = r.positionAt(
-          l ? t : r.height - 1,
-          l ? r.width - 1 : t,
-          o.node
-        ), c = n.doc.resolve(o.start + s), i = l ? CellSelection.rowSelection : CellSelection.colSelection, m = r.positionAt(l ? t : 0, l ? 0 : t, o.node), a = n.doc.resolve(o.start + m);
-        return cloneTr(n.setSelection(i(c, a)));
-      }
-    }
-    return n;
-  };
-}
-const Ye = ie("row"), et = ie("col");
-function q(e) {
-  return e[0].map((t, n) => e.map((o) => o[n]));
-}
-function de(e, t) {
-  const n = [], o = TableMap.get(e);
-  for (let r = 0; r < o.height; r++) {
-    const s = e.child(r), c = [];
-    for (let i = 0; i < o.width; i++) {
-      if (!t[r][i])
-        continue;
-      const m = o.map[r * o.width + i], a = t[r][i], p = e.nodeAt(m).type.createChecked(
-        Object.assign({}, a.attrs),
-        a.content,
-        a.marks
-      );
-      c.push(p);
-    }
-    n.push(s.type.createChecked(s.attrs, c, s.marks));
-  }
-  return e.type.createChecked(
-    e.attrs,
-    n,
-    e.marks
-  );
-}
-function me(e) {
-  const t = TableMap.get(e), n = [];
-  for (let o = 0; o < t.height; o++) {
-    const l = [], r = {};
-    for (let s = 0; s < t.width; s++) {
-      const c = t.map[o * t.width + s], i = e.nodeAt(c), m = t.findCell(c);
-      if (r[c] || m.top !== o) {
-        l.push(null);
-        continue;
-      }
-      r[c] = !0, l.push(i);
-    }
-    n.push(l);
-  }
-  return n;
-}
-function ue(e, t, n, o) {
-  const l = t[0] > n[0] ? -1 : 1, r = e.splice(t[0], t.length), s = r.length % 2 === 0 ? 1 : 0;
-  let c;
-  return o === -1 && l === 1 ? c = n[0] - 1 : o === 1 && l === -1 ? c = n[n.length - 1] - s + 1 : c = l === -1 ? n[0] : n[n.length - 1] - s, e.splice(c, 0, ...r), e;
-}
-function tt(e, t, n, o) {
-  let l = q(me(e.node));
-  return l = ue(l, t, n, o), l = q(l), de(e.node, l);
-}
-function ot(e, t, n, o) {
-  let l = me(e.node);
-  return l = ue(l, t, n, o), de(e.node, l);
-}
-function J(e, t) {
-  let n = e, o = e;
-  for (let a = e; a >= 0; a--) {
-    const u = b(a, t.selection);
-    u && u.forEach((p) => {
-      const f = p.node.attrs.colspan + a - 1;
-      f >= n && (n = a), f > o && (o = f);
-    });
-  }
-  for (let a = e; a <= o; a++) {
-    const u = b(a, t.selection);
-    u && u.forEach((p) => {
-      const f = p.node.attrs.colspan + a - 1;
-      p.node.attrs.colspan > 1 && f > o && (o = f);
-    });
-  }
-  const l = [];
-  for (let a = n; a <= o; a++) {
-    const u = b(a, t.selection);
-    u && u.length && l.push(a);
-  }
-  n = l[0], o = l[l.length - 1];
-  const r = b(n, t.selection), s = C(0, t.selection), c = t.doc.resolve(
-    r[r.length - 1].pos
-  );
-  let i;
-  for (let a = o; a >= n; a--) {
-    const u = b(a, t.selection);
-    if (u && u.length) {
-      for (let p = s.length - 1; p >= 0; p--)
-        if (s[p].pos === u[0].pos) {
-          i = u[0];
-          break;
-        }
-      if (i)
-        break;
-    }
-  }
-  const m = t.doc.resolve(i.pos);
-  return { $anchor: c, $head: m, indexes: l };
-}
-function Q(e, t) {
-  let n = e, o = e;
-  for (let a = e; a >= 0; a--)
-    C(a, t.selection).forEach((p) => {
-      const f = p.node.attrs.rowspan + a - 1;
-      f >= n && (n = a), f > o && (o = f);
-    });
-  for (let a = e; a <= o; a++)
-    C(a, t.selection).forEach((p) => {
-      const f = p.node.attrs.rowspan + a - 1;
-      p.node.attrs.rowspan > 1 && f > o && (o = f);
-    });
-  const l = [];
-  for (let a = n; a <= o; a++) {
-    const u = C(a, t.selection);
-    u && u.length && l.push(a);
-  }
-  n = l[0], o = l[l.length - 1];
-  const r = C(n, t.selection), s = b(0, t.selection), c = t.doc.resolve(r[r.length - 1].pos);
-  let i;
-  for (let a = o; a >= n; a--) {
-    const u = C(a, t.selection);
-    if (u && u.length) {
-      for (let p = s.length - 1; p >= 0; p--)
-        if (s[p].pos === u[0].pos) {
-          i = u[0];
-          break;
-        }
-      if (i)
-        break;
-    }
-  }
-  const m = t.doc.resolve(i.pos);
-  return { $anchor: c, $head: m, indexes: l };
-}
-function nt(e, t, n, o = !0) {
-  const l = w$1(e.selection);
-  if (!l)
-    return e;
-  const { indexes: r } = J(t, e), { indexes: s } = J(n, e);
-  if (r.includes(n))
-    return e;
-  const c = tt(
-    l,
-    r,
-    s,
-    0
-  ), i = cloneTr(e).replaceWith(
-    l.pos,
-    l.pos + l.node.nodeSize,
-    c
-  );
-  if (!o)
-    return i;
-  const m = TableMap.get(c), a = l.start, u = n, p = m.positionAt(m.height - 1, u, c), f = i.doc.resolve(a + p), $ = CellSelection.colSelection, P = m.positionAt(0, u, c), _ = i.doc.resolve(a + P);
-  return i.setSelection($(f, _));
-}
-function lt(e, t, n, o = !0) {
-  const l = w$1(e.selection);
-  if (!l)
-    return e;
-  const { indexes: r } = Q(t, e), { indexes: s } = Q(n, e);
-  if (r.includes(n))
-    return e;
-  const c = ot(
-    l,
-    r,
-    s,
-    0
-  ), i = cloneTr(e).replaceWith(
-    l.pos,
-    l.pos + l.node.nodeSize,
-    c
-  );
-  if (!o)
-    return i;
-  const m = TableMap.get(c), a = l.start, u = n, p = m.positionAt(u, m.width - 1, c), f = i.doc.resolve(a + p), $ = CellSelection.rowSelection, P = m.positionAt(u, 0, c), _ = i.doc.resolve(a + P);
-  return i.setSelection($(f, _));
-}
-const v = tableNodes({
-  tableGroup: "block",
-  cellContent: "paragraph",
-  cellAttributes: {
-    alignment: {
-      default: "left",
-      getFromDOM: (e) => e.style.textAlign || "left",
-      setDOMAttr: (e, t) => {
-        t.style = `text-align: ${e || "left"}`;
-      }
-    }
-  }
-}), S = fe$2("table", () => ({
-  ...v.table,
-  parseMarkdown: {
-    match: (e) => e.type === "table",
-    runner: (e, t, n) => {
-      const o = t.align, l = t.children.map((r, s) => ({
-        ...r,
-        align: o,
-        isHeader: s === 0
-      }));
-      e.openNode(n), e.next(l), e.closeNode();
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === "table",
-    runner: (e, t) => {
-      var l;
-      const n = (l = t.content.firstChild) == null ? void 0 : l.content;
-      if (!n)
-        return;
-      const o = [];
-      n.forEach((r) => {
-        o.push(r.attrs.alignment);
-      }), e.openNode("table", void 0, { align: o }), e.next(t.content), e.closeNode();
-    }
-  }
-}));
-d(S.node, {
-  displayName: "NodeSchema<table>",
-  group: "Table"
-});
-d(S.ctx, {
-  displayName: "NodeSchemaCtx<table>",
-  group: "Table"
-});
-const R = fe$2("table_row", () => ({
-  ...v.table_row,
-  parseMarkdown: {
-    match: (e) => e.type === "tableRow",
-    runner: (e, t, n) => {
-      const o = t.align, l = t.children.map((r, s) => ({
-        ...r,
-        align: o[s],
-        isHeader: t.isHeader
-      }));
-      e.openNode(n), e.next(l), e.closeNode();
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === "table_row",
-    runner: (e, t) => {
-      e.openNode("tableRow"), e.next(t.content), e.closeNode();
-    }
-  }
-}));
-d(R.node, {
-  displayName: "NodeSchema<tableRow>",
-  group: "Table"
-});
-d(R.ctx, {
-  displayName: "NodeSchemaCtx<tableRow>",
-  group: "Table"
-});
-const M = fe$2("table_cell", () => ({
-  ...v.table_cell,
-  parseMarkdown: {
-    match: (e) => e.type === "tableCell" && !e.isHeader,
-    runner: (e, t, n) => {
-      const o = t.align;
-      e.openNode(n, { alignment: o }).openNode(e.schema.nodes.paragraph).next(t.children).closeNode().closeNode();
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === "table_cell",
-    runner: (e, t) => {
-      e.openNode("tableCell").next(t.content).closeNode();
-    }
-  }
-}));
-d(M.node, {
-  displayName: "NodeSchema<tableCell>",
-  group: "Table"
-});
-d(M.ctx, {
-  displayName: "NodeSchemaCtx<tableCell>",
-  group: "Table"
-});
-const I = fe$2("table_header", () => ({
-  ...v.table_header,
-  parseMarkdown: {
-    match: (e) => e.type === "tableCell" && !!e.isHeader,
-    runner: (e, t, n) => {
-      const o = t.align;
-      e.openNode(n, { alignment: o }), e.openNode(e.schema.nodes.paragraph), e.next(t.children), e.closeNode(), e.closeNode();
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === "table_header",
-    runner: (e, t) => {
-      e.openNode("tableCell"), e.next(t.content), e.closeNode();
-    }
-  }
-}));
-d(I.node, {
-  displayName: "NodeSchema<tableHeader>",
-  group: "Table"
-});
-d(I.ctx, {
-  displayName: "NodeSchemaCtx<tableHeader>",
-  group: "Table"
-});
-const pe = oe$1((e) => new InputRule(
-  /^\|(?<col>\d+)[xX](?<row>\d+)\|\s$/,
-  (t, n, o, l) => {
-    var i, m;
-    const r = t.doc.resolve(o);
-    if (!r.node(-1).canReplaceWith(r.index(-1), r.indexAfter(-1), S.type(e)))
-      return null;
-    const s = se(
-      e,
-      Number((i = n.groups) == null ? void 0 : i.row),
-      Number((m = n.groups) == null ? void 0 : m.col)
-    ), c = t.tr.replaceRangeWith(o, l, s);
-    return c.setSelection(TextSelection.create(c.doc, o + 3)).scrollIntoView();
-  }
-));
-d(pe, {
-  displayName: "InputRule<insertTableInputRule>",
-  group: "Table"
-});
-const W$1 = re$1("GoToPrevTableCell", () => () => goToNextCell(-1));
-d(W$1, {
-  displayName: "Command<goToPrevTableCellCommand>",
-  group: "Table"
-});
-const G = re$1("GoToNextTableCell", () => () => goToNextCell(1));
-d(G, {
-  displayName: "Command<goToNextTableCellCommand>",
-  group: "Table"
-});
-const z = re$1("BreakTable", (e) => () => (t, n) => {
-  if (!isInTable(t))
-    return !1;
-  const { $head: o } = t.selection, l = o.after(), r = t.tr.replaceWith(l, l, A$1.type(e).createAndFill());
-  return r.setSelection(Selection.near(r.doc.resolve(l), 1)).scrollIntoView(), n == null || n(r), !0;
-});
-d(z, {
-  displayName: "Command<breakTableCommand>",
-  group: "Table"
-});
-const fe = re$1("InsertTable", (e) => ({ row: t, col: n } = {}) => (o, l) => {
-  const { selection: r, tr: s } = o, { from: c } = r, i = se(e, t, n), m = s.replaceSelectionWith(i), a = Selection.findFrom(m.doc.resolve(c), 1, !0);
-  return a && m.setSelection(a), l == null || l(m), !0;
-});
-d(fe, {
-  displayName: "Command<insertTableCommand>",
-  group: "Table"
-});
-const he = re$1("MoveRow", () => ({ from: e, to: t } = {}) => (n, o) => {
-  const { tr: l } = n;
-  return !!(o == null ? void 0 : o(lt(l, e ?? 0, t ?? 0, !0)));
-});
-d(he, {
-  displayName: "Command<moveRowCommand>",
-  group: "Table"
-});
-const ge = re$1("MoveCol", () => ({ from: e, to: t } = {}) => (n, o) => {
-  const { tr: l } = n;
-  return !!(o == null ? void 0 : o(nt(l, e ?? 0, t ?? 0, !0)));
-});
-d(ge, {
-  displayName: "Command<moveColCommand>",
-  group: "Table"
-});
-const be = re$1("SelectRow", () => (e = 0) => (t, n) => {
-  const { tr: o } = t;
-  return !!(n == null ? void 0 : n(Ye(e)(o)));
-});
-d(be, {
-  displayName: "Command<selectRowCommand>",
-  group: "Table"
-});
-const Ce = re$1("SelectCol", () => (e = 0) => (t, n) => {
-  const { tr: o } = t;
-  return !!(n == null ? void 0 : n(et(e)(o)));
-});
-d(Ce, {
-  displayName: "Command<selectColCommand>",
-  group: "Table"
-});
-const ye = re$1("SelectTable", () => () => (e, t) => {
-  const { tr: n } = e;
-  return !!(t == null ? void 0 : t(Qe(n)));
-});
-d(ye, {
-  displayName: "Command<selectTableCommand>",
-  group: "Table"
-});
-const ke = re$1("DeleteSelectedCells", () => () => (e, t) => {
-  const { selection: n } = e;
-  if (!(n instanceof CellSelection))
-    return !1;
-  const o = n.isRowSelection(), l = n.isColSelection();
-  return o && l ? deleteTable(e, t) : l ? deleteColumn(e, t) : deleteRow(e, t);
-});
-d(ke, {
-  displayName: "Command<deleteSelectedCellsCommand>",
-  group: "Table"
-});
-const we = re$1("AddColBefore", () => () => addColumnBefore);
-d(we, {
-  displayName: "Command<addColBeforeCommand>",
-  group: "Table"
-});
-const Ne = re$1("AddColAfter", () => () => addColumnAfter);
-d(Ne, {
-  displayName: "Command<addColAfterCommand>",
-  group: "Table"
-});
-const Te = re$1("AddRowBefore", (e) => () => (t, n) => {
-  if (!isInTable(t))
-    return !1;
-  if (n) {
-    const o = selectedRect(t);
-    n(ce(e, t.tr, o, o.top));
-  }
-  return !0;
-});
-d(Te, {
-  displayName: "Command<addRowBeforeCommand>",
-  group: "Table"
-});
-const Se = re$1("AddRowAfter", (e) => () => (t, n) => {
-  if (!isInTable(t))
-    return !1;
-  if (n) {
-    const o = selectedRect(t);
-    n(ce(e, t.tr, o, o.bottom));
-  }
-  return !0;
-});
-d(Se, {
-  displayName: "Command<addRowAfterCommand>",
-  group: "Table"
-});
-const Re = re$1("SetAlign", () => (e = "left") => setCellAttr("alignment", e));
-d(Re, {
-  displayName: "Command<setAlignCommand>",
-  group: "Table"
-});
-const j = ge$2("tableKeymap", {
-  NextCell: {
-    shortcuts: ["Mod-]", "Tab"],
-    command: (e) => {
-      const t = e.get(je);
-      return () => t.call(G.key);
-    }
-  },
-  PrevCell: {
-    shortcuts: ["Mod-[", "Shift-Tab"],
-    command: (e) => {
-      const t = e.get(je);
-      return () => t.call(W$1.key);
-    }
-  },
-  ExitTable: {
-    shortcuts: ["Mod-Enter"],
-    command: (e) => {
-      const t = e.get(je);
-      return () => t.call(z.key);
-    }
-  }
-});
-d(j.ctx, {
-  displayName: "KeymapCtx<table>",
-  group: "Table"
-});
-d(j.shortcuts, {
-  displayName: "Keymap<table>",
-  group: "Table"
-});
-const E = "footnote_definition", Y = "footnoteDefinition", Z = fe$2("footnote_definition", () => ({
-  group: "block",
-  content: "block+",
-  defining: !0,
-  attrs: {
-    label: {
-      default: ""
-    }
-  },
-  parseDOM: [
-    {
-      tag: `dl[data-type="${E}"]`,
-      getAttrs: (e) => {
-        if (!(e instanceof HTMLElement))
-          throw S$5(e);
-        return {
-          label: e.dataset.label
-        };
-      },
-      contentElement: "dd"
-    }
-  ],
-  toDOM: (e) => {
-    const t = e.attrs.label;
-    return [
-      "dl",
-      {
-        // TODO: add a prosemirror plugin to sync label on change
-        "data-label": t,
-        "data-type": E
-      },
-      ["dt", t],
-      ["dd", 0]
-    ];
-  },
-  parseMarkdown: {
-    match: ({ type: e }) => e === Y,
-    runner: (e, t, n) => {
-      e.openNode(n, {
-        label: t.label
-      }).next(t.children).closeNode();
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === E,
-    runner: (e, t) => {
-      e.openNode(Y, void 0, {
-        label: t.attrs.label,
-        identifier: t.attrs.label
-      }).next(t.content).closeNode();
-    }
-  }
-}));
-d(Z.ctx, {
-  displayName: "NodeSchemaCtx<footnodeDef>",
-  group: "footnote"
-});
-d(Z.node, {
-  displayName: "NodeSchema<footnodeDef>",
-  group: "footnote"
-});
-const D = "footnote_reference", V = fe$2("footnote_reference", () => ({
-  group: "inline",
-  inline: !0,
-  atom: !0,
-  attrs: {
-    label: {
-      default: ""
-    }
-  },
-  parseDOM: [
-    {
-      tag: `sup[data-type="${D}"]`,
-      getAttrs: (e) => {
-        if (!(e instanceof HTMLElement))
-          throw S$5(e);
-        return {
-          label: e.dataset.label
-        };
-      }
-    }
-  ],
-  toDOM: (e) => {
-    const t = e.attrs.label;
-    return [
-      "sup",
-      {
-        // TODO: add a prosemirror plugin to sync label on change
-        "data-label": t,
-        "data-type": D
-      },
-      t
-    ];
-  },
-  parseMarkdown: {
-    match: ({ type: e }) => e === "footnoteReference",
-    runner: (e, t, n) => {
-      e.addNode(n, {
-        label: t.label
-      });
-    }
-  },
-  toMarkdown: {
-    match: (e) => e.type.name === D,
-    runner: (e, t) => {
-      e.addNode("footnoteReference", void 0, void 0, {
-        label: t.attrs.label,
-        identifier: t.attrs.label
-      });
-    }
-  }
-}));
-d(V.ctx, {
-  displayName: "NodeSchemaCtx<footnodeRef>",
-  group: "footnote"
-});
-d(V.node, {
-  displayName: "NodeSchema<footnodeRef>",
-  group: "footnote"
-});
-const Me = M$1.extendSchema((e) => (t) => {
-  const n = e(t);
-  return {
-    ...n,
-    attrs: {
-      ...n.attrs,
-      checked: {
-        default: null
-      }
-    },
-    parseDOM: [
-      {
-        tag: 'li[data-item-type="task"]',
-        getAttrs: (o) => {
-          if (!(o instanceof HTMLElement))
-            throw S$5(o);
-          return {
-            label: o.dataset.label,
-            listType: o.dataset["list-type"],
-            spread: o.dataset.spread,
-            checked: o.dataset.checked ? o.dataset.checked === "true" : null
-          };
-        }
-      },
-      ...(n == null ? void 0 : n.parseDOM) || []
-    ],
-    toDOM: (o) => n.toDOM && o.attrs.checked == null ? n.toDOM(o) : [
-      "li",
-      {
-        "data-item-type": "task",
-        "data-label": o.attrs.label,
-        "data-list-type": o.attrs.listType,
-        "data-spread": o.attrs.spread,
-        "data-checked": o.attrs.checked
-      },
-      0
-    ],
-    parseMarkdown: {
-      match: ({ type: o }) => o === "listItem",
-      runner: (o, l, r) => {
-        if (l.checked == null) {
-          n.parseMarkdown.runner(o, l, r);
-          return;
-        }
-        const s = l.label != null ? `${l.label}.` : "•", c = l.checked != null ? !!l.checked : null, i = l.label != null ? "ordered" : "bullet", m = l.spread != null ? `${l.spread}` : "true";
-        o.openNode(r, { label: s, listType: i, spread: m, checked: c }), o.next(l.children), o.closeNode();
-      }
-    },
-    toMarkdown: {
-      match: (o) => o.type.name === "list_item",
-      runner: (o, l) => {
-        if (l.attrs.checked == null) {
-          n.toMarkdown.runner(o, l);
-          return;
-        }
-        const r = l.attrs.label, s = l.attrs.listType, c = l.attrs.spread === "true", i = l.attrs.checked;
-        o.openNode("listItem", void 0, { label: r, listType: s, spread: c, checked: i }), o.next(l.content), o.closeNode();
-      }
-    }
-  };
-});
-d(Me, {
-  displayName: "NodeSchema<listItem>",
-  group: "ListItem"
-});
-const Ae = oe$1(() => new InputRule(/^\[(?<checked>\s|x)\]\s$/, (e, t, n, o) => {
-  var a;
-  const l = e.doc.resolve(n);
-  let r = 0, s = l.node(r);
-  for (; s && s.type.name !== "list_item"; )
-    r--, s = l.node(r);
-  if (!s || s.attrs.checked != null)
-    return null;
-  const c = ((a = t.groups) == null ? void 0 : a.checked) === "x", i = l.before(r), m = e.tr;
-  return m.deleteRange(n, o).setNodeMarkup(i, void 0, { ...s.attrs, checked: c }), m;
-}));
-d(Ae, {
-  displayName: "InputRule<wrapInTaskListInputRule>",
-  group: "ListItem"
-});
-const rt = [
-  L,
-  j
-].flat(), at = [
-  pe,
-  Ae
-], st = [
-  ae
-], xe = ue$2((e) => {
-  const t = new PluginKey("MILKDOWN_AUTO_INSERT_ZERO_SPACE"), n = (l) => l.type === A$1.type(e), o = (l) => n(l) && l.nodeSize === 2;
-  return new Plugin({
-    key: t,
-    props: {
-      handleDOMEvents: {
-        compositionstart(l) {
-          const { state: r, dispatch: s } = l, { tr: c, selection: i } = r, { $from: m } = i;
-          return browser.safari && isInTable(r) && i.empty && o(m.parent) && s(c.insertText("⁠", m.start())), !1;
-        },
-        compositionend(l) {
-          const { state: r, dispatch: s } = l, { tr: c, selection: i } = r, { $from: m } = i;
-          return browser.safari && isInTable(r) && i.empty && n(m.parent) && m.parent.textContent.startsWith("⁠") && s(c.delete(m.start(), m.start() + 1)), !1;
-        }
-      }
-    }
-  });
-});
-d(xe, {
-  displayName: "Prose<autoInsertZeroSpaceInTablePlugin>",
-  group: "Prose"
-});
-const ve = ue$2(() => columnResizing({}));
-d(ve, {
-  displayName: "Prose<columnResizingPlugin>",
-  group: "Prose"
-});
-const Ie = ue$2(() => tableEditing());
-d(Ie, {
-  displayName: "Prose<tableEditingPlugin>",
-  group: "Prose"
-});
-const U = ke$2("remarkGFM", () => remarkGfm);
-d(U.plugin, {
-  displayName: "Remark<remarkGFMPlugin>",
-  group: "Remark"
-});
-d(U.options, {
-  displayName: "RemarkConfig<remarkGFMPlugin>",
-  group: "Remark"
-});
-const ct = [
-  xe,
-  ve,
-  Ie,
-  U
-].flat(), it = [
-  Me,
-  S,
-  R,
-  I,
-  M,
-  Z,
-  V,
-  K,
-  T
-].flat(), dt = [
-  G,
-  W$1,
-  z,
-  fe,
-  he,
-  ge,
-  be,
-  Ce,
-  ye,
-  ke,
-  Te,
-  Se,
-  we,
-  Ne,
-  Re,
-  H
-], wt = [it, at, st, rt, ct, dt].flat();
-
-function w(n) {
-  return new Promise((s) => {
-    const r = new FileReader();
-    r.addEventListener(
-      "load",
-      () => {
-        s({
-          alt: n.name,
-          src: r.result
-        });
-      },
-      !1
-    ), r.readAsDataURL(n);
-  });
-}
-const A = async (n, s) => {
-  const r = [];
-  for (let t = 0; t < n.length; t++) {
-    const e = n.item(t);
-    e && e.type.includes("image") && r.push(e);
-  }
-  const { image: l } = s.nodes;
-  if (!l)
-    throw M$5("image");
-  return (await Promise.all(r.map((t) => w(t)))).map(({ alt: t, src: e }) => l.createAndFill({ src: e, alt: t }));
-}, c = h({
-  uploader: A,
-  enableHtmlFileUploader: !1,
-  uploadWidgetFactory: (n, s) => {
-    const r = document.createElement("span");
-    return r.textContent = "Upload in progress...", Decoration.widget(n, r, s);
-  }
-}, "uploadConfig");
-c.meta = {
-  package: "@milkdown/plugin-upload",
-  displayName: "Ctx<uploadConfig>"
-};
-const f = ue$2((n) => {
-  const s = new PluginKey("MILKDOWN_UPLOAD"), r = (o, t) => {
-    var i;
-    const e = s.getState(o);
-    if (!e)
-      return -1;
-    const a = e.find(void 0, void 0, (d) => d.id === t);
-    return a.length ? ((i = a[0]) == null ? void 0 : i.from) ?? -1 : -1;
-  }, l = (o, t, e) => {
-    var m;
-    if (!e || e.length <= 0)
-      return !1;
-    const a = Symbol("upload symbol"), i = n.get(b$1), { tr: d } = o.state, g = t instanceof DragEvent ? ((m = o.posAtCoords({ left: t.clientX, top: t.clientY })) == null ? void 0 : m.pos) ?? d.selection.from : d.selection.from;
-    o.dispatch(d.setMeta(s, { add: { id: a, pos: g } }));
-    const { uploader: h } = n.get(c.key);
-    return h(e, i).then((p) => {
-      const u = r(o.state, a);
-      u < 0 || o.dispatch(
-        o.state.tr.replaceWith(u, u, p).setMeta(s, { remove: { id: a } })
-      );
-    }).catch((p) => {
-      console.error(p);
-    }), !0;
-  };
-  return new Plugin({
-    key: s,
-    state: {
-      init() {
-        return DecorationSet.empty;
-      },
-      apply(o, t) {
-        const e = t.map(o.mapping, o.doc), a = o.getMeta(this);
-        if (!a)
-          return e;
-        if (a.add) {
-          const { uploadWidgetFactory: i } = n.get(c.key), d = i(a.add.pos, { id: a.add.id });
-          return e.add(o.doc, [d]);
-        }
-        if (a.remove) {
-          const i = e.find(void 0, void 0, (d) => d.id === a.remove.id);
-          return e.remove(i);
-        }
-        return e;
-      }
-    },
-    props: {
-      decorations(o) {
-        return this.getState(o);
-      },
-      handlePaste: (o, t) => {
-        var a, i;
-        const { enableHtmlFileUploader: e } = n.get(c.key);
-        return !(t instanceof ClipboardEvent) || !e && ((a = t.clipboardData) != null && a.getData("text/html")) ? !1 : l(o, t, (i = t.clipboardData) == null ? void 0 : i.files);
-      },
-      handleDrop: (o, t) => {
-        var e;
-        return t instanceof DragEvent ? l(o, t, (e = t.dataTransfer) == null ? void 0 : e.files) : !1;
-      }
-    }
-  });
-});
-f.meta = {
-  package: "@milkdown/plugin-upload",
-  displayName: "Prose<upload>"
-};
-const W = [c, f];
-
-let beforePluginMenu = 'Before Plugin Menu';
-console.log(beforePluginMenu);
-
-let afterPluginMenu = 'After Plugin Menu';
-
-console.log(afterPluginMenu);
-
-// import './milkdown-menu';
-
-// IIFE (Immediately Invoked Function Expression)
-// (() => {
-
-  function getConfig(textarea){
-    let hasFeatures = textarea.hasAttribute('data-markdown-editor-features');
-    let features = ['gfm', 'upload'];
-    if (hasFeatures) features = textarea.getAttribute('data-markdown-editor-features').split(" ");
-    let config = {
-      gfm: features.includes('gfm'),
-      upload: features.includes('upload'),
-      block: features.includes('block'),
-      defaultValue: textarea.value
-    };
-    return config;
-  }
-
-  // Milkdown won't work directly on a textarea, for progressive enhancement using a
-  // textarea is the ideal. So we use a textarea, hide it, and place the content from
-  // our text editor into the textarea on form submit. The following method creates
-  // the div the editor will live in .
-  function addElement(textarea, config) {
-    // create a new div element
-    let div = document.createElement("div");
-    // copy over CSS classes
-    let cssClasses = textarea.getAttribute('class').split(" ");
-    cssClasses.forEach((cssClass) => {
-      div.classList.add(cssClass);
-    });
-
-        // Set overflow behavior
-    // div.style.overflow = "auto";
-    // set the height, if there is a rows attribute
-    // div.style.height = 'auto'; // reset the height
-    if (textarea.hasAttribute('rows')) {
-      let rows = textarea.getAttribute('rows');
-      let pixels = rows * 24; // 24 pixels per row
-      div.style.minHeight = pixels + 'px';
-    }
-
-    // Place the new div right after the textarea
-    textarea.insertAdjacentElement('afterend', div);
-    textarea.style.display = "none";
-    return div;
-  }
-
-  // function registerToolbar(editor){
-  //   document.getElementById('editor-toolbar-strong').addEventListener('click', () => {
-  //     editor.chain().focus().toggleBold().run();
-  //   });
-  // }
-
-  // Data Attribute DSL
-  let editors = document.querySelectorAll("[data-markdown-editor]");
-
-  editors.forEach((textarea) => {
-    let config = getConfig(textarea);
-    let div = addElement(textarea);
-    let editor = Oe$1.make().config(ctx => {
-      ctx.set(ce$2, div);
-      ctx.set(re$2, config.defaultValue);
-    }).use(cr);//.config(menuDefaultConfig).use(menu);
-    if (config.gfm)    editor = editor.use(wt);
-    if (config.upload) editor = editor.use(W);
-    // if (config.block)  editor = editor.use(block);
-    editor.create();
-    //registerToolbar(editor);
-  });
-
-// })();
-
-
-// ...
-// const editor = await Editor.make()
-//   .config(menuDefaultConfig)
-//   .config(() => {
-//     ctx.set(rootCtx, document.querySelector('#app'))
-//   })
-//   .use(menu)
-//   .create()
-//# sourceMappingURL=milkdown.js.map
+var menu = [menuDomCtx, menuConfigCtx, menuView];
+
+console.log(menu);
+console.log(menuDefaultConfig);
+//# sourceMappingURL=milkdown-try-m.js.map

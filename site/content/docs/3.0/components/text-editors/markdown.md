@@ -44,7 +44,7 @@ The base `data-locate` attribute defines the locate button.
     <button type="button" id="editor-toolbar-h6" class="btn btn-outline-secondary"><i class="fa-sharp fa-solid fa-h6"></i></button>
   </div>
   <div class="btn-group mx-3 mb-3" role="group">
-    <button type="button" id="editor-toolbar-strong"   class="btn btn-outline-secondary"><i class="fa-sharp fa-solid fa-bold"></i></button>
+    <button type="button" id="editor-toolbar-strong"   class="btn btn-outline-secondary"><i class="fa-sharp fa-solid fa-bold"></i><span class="d-none">format_bold</span></span></button>
     <button type="button" id="editor-toolbar-emphasis" class="btn btn-outline-secondary"><i class="fa-sharp fa-solid fa-italic"></i></button>
     <button type="button" id="editor-toolbar-strike" class="btn btn-outline-secondary"><i class="fa-sharp fa-solid fa-strikethrough"></i></button>
   </div>
@@ -64,6 +64,7 @@ The base `data-locate` attribute defines the locate button.
   </div>
 
 </div>
+
 
 
 {{< example >}}
@@ -96,6 +97,11 @@ Links: [Webstop](https://webstop.com)
 
 
 <script src="/js/milkdown.js" type="module"></script>
+
+<script>
+
+
+</script>
 
 
 #### Attributes
