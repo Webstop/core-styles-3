@@ -29,7 +29,7 @@ function g$3(...e) {
 function h$1() {
   return new t(n$2.stackOverFlow, "Stack over flow, cannot pop on an empty stack.");
 }
-function w$5(e) {
+function w$6(e) {
   return new t(n$2.parserMatchError, `Cannot match target parser for node: ${i$1(e)}.`);
 }
 function F$2(e) {
@@ -138,7 +138,7 @@ let W$5 = class W {
   }
 };
 const H$4 = (o, s) => new W$5(o, s);
-var D$2, x$3, R$4, w$4, S$4, f$1, M$4, T$4, j$4;
+var D$2, x$3, R$4, w$5, S$4, f$1, M$4, T$4, j$4;
 let _$1 = class _ {
   /// Create an inspector with container, clock and metadata.
   constructor(s, i, r) {
@@ -148,15 +148,15 @@ let _$1 = class _ {
     a(this, x$3, void 0);
     /// @internal
     a(this, R$4, void 0);
-    a(this, w$4, void 0);
+    a(this, w$5, void 0);
     a(this, S$4, void 0);
     a(this, f$1, void 0);
     a(this, M$4, void 0);
     a(this, T$4, void 0);
     a(this, j$4, void 0);
-    n$1(this, w$4, /* @__PURE__ */ new Set()), n$1(this, S$4, /* @__PURE__ */ new Set()), n$1(this, f$1, /* @__PURE__ */ new Map()), n$1(this, M$4, /* @__PURE__ */ new Map()), this.read = () => ({
+    n$1(this, w$5, /* @__PURE__ */ new Set()), n$1(this, S$4, /* @__PURE__ */ new Set()), n$1(this, f$1, /* @__PURE__ */ new Map()), n$1(this, M$4, /* @__PURE__ */ new Map()), this.read = () => ({
       metadata: e(this, D$2),
-      injectedSlices: [...e(this, w$4)].map((t) => ({
+      injectedSlices: [...e(this, w$5)].map((t) => ({
         name: typeof t == "string" ? t : t.name,
         value: e(this, T$4).call(this, t)
       })),
@@ -187,16 +187,16 @@ let _$1 = class _ {
         e(this, M$4).set(t, { duration: Date.now() - v });
       });
     }, this.onInject = (t) => {
-      e(this, w$4).add(t);
+      e(this, w$5).add(t);
     }, this.onRemove = (t) => {
-      e(this, w$4).delete(t);
+      e(this, w$5).delete(t);
     }, this.onUse = (t) => {
       e(this, S$4).add(t);
     }, n$1(this, T$4, (t) => e(this, x$3).get(t).get()), n$1(this, j$4, (t) => e(this, R$4).get(t).status), n$1(this, x$3, s), n$1(this, R$4, i), n$1(this, D$2, r);
   }
 };
-D$2 = new WeakMap(), x$3 = new WeakMap(), R$4 = new WeakMap(), w$4 = new WeakMap(), S$4 = new WeakMap(), f$1 = new WeakMap(), M$4 = new WeakMap(), T$4 = new WeakMap(), j$4 = new WeakMap();
-var d$3, l$1, b$2, c$3;
+D$2 = new WeakMap(), x$3 = new WeakMap(), R$4 = new WeakMap(), w$5 = new WeakMap(), S$4 = new WeakMap(), f$1 = new WeakMap(), M$4 = new WeakMap(), T$4 = new WeakMap(), j$4 = new WeakMap();
+var d$3, l$1, b$2, c$4;
 const L$3 = class L {
   /// Create a ctx object with container and clock.
   constructor(s, i, r) {
@@ -207,33 +207,33 @@ const L$3 = class L {
     /// @internal
     a(this, b$2, void 0);
     /// @internal
-    a(this, c$3, void 0);
+    a(this, c$4, void 0);
     this.produce = (t) => t && Object.keys(t).length ? new L(e(this, d$3), e(this, l$1), { ...t }) : this, this.inject = (t, h) => {
       var O;
       const v = t.create(e(this, d$3).sliceMap);
-      return h != null && v.set(h), (O = e(this, c$3)) == null || O.onInject(t), this;
+      return h != null && v.set(h), (O = e(this, c$4)) == null || O.onInject(t), this;
     }, this.remove = (t) => {
       var h;
-      return e(this, d$3).remove(t), (h = e(this, c$3)) == null || h.onRemove(t), this;
+      return e(this, d$3).remove(t), (h = e(this, c$4)) == null || h.onRemove(t), this;
     }, this.record = (t) => {
       var h;
-      return t.create(e(this, l$1).store), (h = e(this, c$3)) == null || h.onRecord(t), this;
+      return t.create(e(this, l$1).store), (h = e(this, c$4)) == null || h.onRecord(t), this;
     }, this.clearTimer = (t) => {
       var h;
-      return e(this, l$1).remove(t), (h = e(this, c$3)) == null || h.onClear(t), this;
+      return e(this, l$1).remove(t), (h = e(this, c$4)) == null || h.onClear(t), this;
     }, this.isInjected = (t) => e(this, d$3).has(t), this.isRecorded = (t) => e(this, l$1).has(t), this.use = (t) => {
       var h;
-      return (h = e(this, c$3)) == null || h.onUse(t), e(this, d$3).get(t);
+      return (h = e(this, c$4)) == null || h.onUse(t), e(this, d$3).get(t);
     }, this.get = (t) => this.use(t).get(), this.set = (t, h) => this.use(t).set(h), this.update = (t, h) => this.use(t).update(h), this.timer = (t) => e(this, l$1).get(t), this.done = (t) => {
       var h;
-      this.timer(t).done(), (h = e(this, c$3)) == null || h.onDone(t);
+      this.timer(t).done(), (h = e(this, c$4)) == null || h.onDone(t);
     }, this.wait = (t) => {
       var v;
       const h = this.timer(t).start();
-      return (v = e(this, c$3)) == null || v.onWait(t, h), h;
+      return (v = e(this, c$4)) == null || v.onWait(t, h), h;
     }, this.waitTimers = async (t) => {
       await Promise.all(this.get(t).map((h) => this.wait(h)));
-    }, n$1(this, d$3, s), n$1(this, l$1, i), n$1(this, b$2, r), r && n$1(this, c$3, new _$1(s, i, r));
+    }, n$1(this, d$3, s), n$1(this, l$1, i), n$1(this, b$2, r), r && n$1(this, c$4, new _$1(s, i, r));
   }
   /// Get metadata of the ctx.
   get meta() {
@@ -241,10 +241,10 @@ const L$3 = class L {
   }
   /// Get the inspector of the ctx.
   get inspector() {
-    return e(this, c$3);
+    return e(this, c$4);
   }
 };
-d$3 = new WeakMap(), l$1 = new WeakMap(), b$2 = new WeakMap(), c$3 = new WeakMap();
+d$3 = new WeakMap(), l$1 = new WeakMap(), b$2 = new WeakMap(), c$4 = new WeakMap();
 let U$3 = L$3;
 let J$3 = class J {
   constructor() {
@@ -293,14 +293,14 @@ let q$4 = class q {
   }
 };
 C$3 = new WeakMap(), g$2 = new WeakMap(), E$3 = new WeakMap(), p$1 = new WeakMap(), I$2 = new WeakMap(), k$2 = new WeakMap();
-let A$4 = class A {
+let A$3 = class A {
   /// Create a timer type with a name and a timeout.
   /// The name should be unique in the clock.
   constructor(s, i = 3e3) {
     this.create = (r) => new q$4(r, this), this.id = Symbol(`Timer-${s}`), this.name = s, this.timeout = i;
   }
 };
-const K$3 = (o, s = 3e3) => new A$4(o, s);
+const K$3 = (o, s = 3e3) => new A$3(o, s);
 
 // ::- Persistent data structure representing an ordered mapping from
 // strings to values, with some convenient update methods.
@@ -19881,7 +19881,7 @@ var G$2 = (p, h, n) => {
   if (!h.has(p))
     throw TypeError("Cannot " + n);
 };
-var r = (p, h, n) => (G$2(p, h, "read from private field"), n ? n.call(p) : h.get(p)), c$2 = (p, h, n) => {
+var r$1 = (p, h, n) => (G$2(p, h, "read from private field"), n ? n.call(p) : h.get(p)), c$3 = (p, h, n) => {
   if (h.has(p))
     throw TypeError("Cannot add the same private member more than once");
   h instanceof WeakSet ? h.add(p) : h.set(p, n);
@@ -19922,52 +19922,52 @@ const S$3 = class S extends U$2 {
   /// @internal
   constructor(n) {
     super();
-    c$2(this, d$2, void 0);
-    c$2(this, N$1, void 0);
-    c$2(this, O$2, void 0);
-    c$2(this, T$3, void 0);
-    c$2(this, F$1, void 0);
-    c$2(this, k$1, void 0);
-    c$2(this, M$3, void 0);
+    c$3(this, d$2, void 0);
+    c$3(this, N$1, void 0);
+    c$3(this, O$2, void 0);
+    c$3(this, T$3, void 0);
+    c$3(this, F$1, void 0);
+    c$3(this, k$1, void 0);
+    c$3(this, M$3, void 0);
     o(this, d$2, Mark.none), o(this, N$1, (t) => t.isText), o(this, O$2, (t, s) => {
-      if (r(this, N$1).call(this, t) && r(this, N$1).call(this, s) && Mark.sameSet(t.marks, s.marks))
+      if (r$1(this, N$1).call(this, t) && r$1(this, N$1).call(this, s) && Mark.sameSet(t.marks, s.marks))
         return this.schema.text(t.text + s.text, t.marks);
     }), o(this, T$3, (t) => {
       const s = Object.values({ ...this.schema.nodes, ...this.schema.marks }).find((e) => e.spec.parseMarkdown.match(t));
       if (!s)
-        throw w$5(t);
+        throw w$6(t);
       return s;
     }), o(this, F$1, (t) => {
-      const s = r(this, T$3).call(this, t);
+      const s = r$1(this, T$3).call(this, t);
       s.spec.parseMarkdown.runner(this, t, s);
     }), this.injectRoot = (t, s, e) => (this.openNode(s, e), this.next(t.children), this), this.openNode = (t, s) => (this.open(B$1.create(t, [], s)), this), o(this, k$1, () => {
       o(this, d$2, Mark.none);
       const t = this.close();
-      return r(this, M$3).call(this, t.type, t.attrs, t.content);
-    }), this.closeNode = () => (r(this, k$1).call(this), this), o(this, M$3, (t, s, e) => {
-      const i = t.createAndFill(s, e, r(this, d$2));
+      return r$1(this, M$3).call(this, t.type, t.attrs, t.content);
+    }), this.closeNode = () => (r$1(this, k$1).call(this), this), o(this, M$3, (t, s, e) => {
+      const i = t.createAndFill(s, e, r$1(this, d$2));
       if (!i)
         throw g$3(t, s, e);
       return this.push(i), i;
-    }), this.addNode = (t, s, e) => (r(this, M$3).call(this, t, s, e), this), this.openMark = (t, s) => {
+    }), this.addNode = (t, s, e) => (r$1(this, M$3).call(this, t, s, e), this), this.openMark = (t, s) => {
       const e = t.create(s);
-      return o(this, d$2, e.addToSet(r(this, d$2))), this;
-    }, this.closeMark = (t) => (o(this, d$2, t.removeFromSet(r(this, d$2))), this), this.addText = (t) => {
+      return o(this, d$2, e.addToSet(r$1(this, d$2))), this;
+    }, this.closeMark = (t) => (o(this, d$2, t.removeFromSet(r$1(this, d$2))), this), this.addText = (t) => {
       const s = this.top();
       if (!s)
         throw h$1();
-      const e = s.pop(), i = this.schema.text(t, r(this, d$2));
+      const e = s.pop(), i = this.schema.text(t, r$1(this, d$2));
       if (!e)
         return s.push(i), this;
-      const a = r(this, O$2).call(this, e, i);
+      const a = r$1(this, O$2).call(this, e, i);
       return a ? (s.push(a), this) : (s.push(e, i), this);
     }, this.build = () => {
       let t;
       do
-        t = r(this, k$1).call(this);
+        t = r$1(this, k$1).call(this);
       while (this.size());
       return t;
-    }, this.next = (t = []) => ([t].flat().forEach((s) => r(this, F$1).call(this, s)), this), this.toDoc = () => this.build(), this.run = (t, s) => {
+    }, this.next = (t = []) => ([t].flat().forEach((s) => r$1(this, F$1).call(this, s)), this), this.toDoc = () => this.build(), this.run = (t, s) => {
       const e = t.runSync(t.parse(s), s);
       return this.next(e), this;
     }, this.schema = n;
@@ -19991,31 +19991,31 @@ const q$3 = class q extends Q$3 {
 q$3.create = (h, n, t, s = {}) => new q$3(h, n, t, s);
 let J$2 = q$3;
 const Z$3 = (p) => Object.prototype.hasOwnProperty.call(p, "size");
-var l, v$2, A$3, E$2, w$3, j$3, x$2, R$3, m, g$1, C$2, P$1;
+var l, v$2, A$2, E$2, w$4, j$3, x$2, R$3, m, g$1, C$2, P$1;
 const z$2 = class z extends U$2 {
   /// @internal
   constructor(n) {
     super();
-    c$2(this, l, void 0);
-    c$2(this, v$2, void 0);
-    c$2(this, A$3, void 0);
-    c$2(this, E$2, void 0);
-    c$2(this, w$3, void 0);
-    c$2(this, j$3, void 0);
-    c$2(this, x$2, void 0);
-    c$2(this, R$3, void 0);
-    c$2(this, m, void 0);
-    c$2(this, g$1, void 0);
-    c$2(this, C$2, void 0);
-    c$2(this, P$1, void 0);
+    c$3(this, l, void 0);
+    c$3(this, v$2, void 0);
+    c$3(this, A$2, void 0);
+    c$3(this, E$2, void 0);
+    c$3(this, w$4, void 0);
+    c$3(this, j$3, void 0);
+    c$3(this, x$2, void 0);
+    c$3(this, R$3, void 0);
+    c$3(this, m, void 0);
+    c$3(this, g$1, void 0);
+    c$3(this, C$2, void 0);
+    c$3(this, P$1, void 0);
     o(this, l, Mark.none), o(this, v$2, (t) => {
       const s = Object.values({ ...this.schema.nodes, ...this.schema.marks }).find((e) => e.spec.toMarkdown.match(t));
       if (!s)
         throw F$2(t.type);
       return s;
-    }), o(this, A$3, (t) => r(this, v$2).call(this, t).spec.toMarkdown.runner(this, t)), o(this, E$2, (t, s) => r(this, v$2).call(this, t).spec.toMarkdown.runner(this, t, s)), o(this, w$3, (t) => {
+    }), o(this, A$2, (t) => r$1(this, v$2).call(this, t).spec.toMarkdown.runner(this, t)), o(this, E$2, (t, s) => r$1(this, v$2).call(this, t).spec.toMarkdown.runner(this, t, s)), o(this, w$4, (t) => {
       const { marks: s } = t, e = (u) => u.type.spec.priority ?? 50;
-      [...s].sort((u, f) => e(u) - e(f)).every((u) => !r(this, E$2).call(this, u, t)) && r(this, A$3).call(this, t), s.forEach((u) => r(this, P$1).call(this, u));
+      [...s].sort((u, f) => e(u) - e(f)).every((u) => !r$1(this, E$2).call(this, u, t)) && r$1(this, A$2).call(this, t), s.forEach((u) => r$1(this, P$1).call(this, u));
     }), o(this, j$3, (t, s) => {
       var f;
       if (t.type === s || ((f = t.children) == null ? void 0 : f.length) !== 1)
@@ -20040,14 +20040,14 @@ const z$2 = class z extends U$2 {
           return [i];
         const u = e.at(-1);
         if (u && u.isMark && i.isMark) {
-          i = r(this, j$3).call(this, i, u.type);
+          i = r$1(this, j$3).call(this, i, u.type);
           const { children: f, ...y } = i, { children: b, ...I } = u;
           if (i.type === u.type && f && b && JSON.stringify(y) === JSON.stringify(I)) {
             const V = {
               ...I,
               children: [...b, ...f]
             };
-            return e.slice(0, -1).concat(r(this, x$2).call(this, V));
+            return e.slice(0, -1).concat(r$1(this, x$2).call(this, V));
           }
         }
         return e.concat(i);
@@ -20060,24 +20060,24 @@ const z$2 = class z extends U$2 {
       return t.children && (s.children = t.children), t.value && (s.value = t.value), s;
     }), this.openNode = (t, s, e) => (this.open(J$2.create(t, void 0, s, e)), this), o(this, m, () => {
       const t = this.close();
-      return r(this, g$1).call(this, t.type, t.children, t.value, t.props);
-    }), this.closeNode = () => (r(this, m).call(this), this), o(this, g$1, (t, s, e, i) => {
-      const a = J$2.create(t, s, e, i), u = r(this, x$2).call(this, r(this, R$3).call(this, a));
+      return r$1(this, g$1).call(this, t.type, t.children, t.value, t.props);
+    }), this.closeNode = () => (r$1(this, m).call(this), this), o(this, g$1, (t, s, e, i) => {
+      const a = J$2.create(t, s, e, i), u = r$1(this, x$2).call(this, r$1(this, R$3).call(this, a));
       return this.push(u), u;
-    }), this.addNode = (t, s, e, i) => (r(this, g$1).call(this, t, s, e, i), this), o(this, C$2, (t, s, e, i) => t.isInSet(r(this, l)) ? this : (o(this, l, t.addToSet(r(this, l))), this.openNode(s, e, { ...i, isMark: !0 }))), o(this, P$1, (t) => {
-      t.isInSet(r(this, l)) && (o(this, l, t.type.removeFromSet(r(this, l))), r(this, m).call(this));
-    }), this.withMark = (t, s, e, i) => (r(this, C$2).call(this, t, s, e, i), this), this.closeMark = (t) => (r(this, P$1).call(this, t), this), this.build = () => {
+    }), this.addNode = (t, s, e, i) => (r$1(this, g$1).call(this, t, s, e, i), this), o(this, C$2, (t, s, e, i) => t.isInSet(r$1(this, l)) ? this : (o(this, l, t.addToSet(r$1(this, l))), this.openNode(s, e, { ...i, isMark: !0 }))), o(this, P$1, (t) => {
+      t.isInSet(r$1(this, l)) && (o(this, l, t.type.removeFromSet(r$1(this, l))), r$1(this, m).call(this));
+    }), this.withMark = (t, s, e, i) => (r$1(this, C$2).call(this, t, s, e, i), this), this.closeMark = (t) => (r$1(this, P$1).call(this, t), this), this.build = () => {
       let t = null;
       do
-        t = r(this, m).call(this);
+        t = r$1(this, m).call(this);
       while (this.size());
       return t;
     }, this.next = (t) => Z$3(t) ? (t.forEach((s) => {
-      r(this, w$3).call(this, s);
-    }), this) : (r(this, w$3).call(this, t), this), this.toString = (t) => t.stringify(this.build()), this.run = (t) => (this.next(t), this), this.schema = n;
+      r$1(this, w$4).call(this, s);
+    }), this) : (r$1(this, w$4).call(this, t), this), this.toString = (t) => t.stringify(this.build()), this.run = (t) => (this.next(t), this), this.schema = n;
   }
 };
-l = new WeakMap(), v$2 = new WeakMap(), A$3 = new WeakMap(), E$2 = new WeakMap(), w$3 = new WeakMap(), j$3 = new WeakMap(), x$2 = new WeakMap(), R$3 = new WeakMap(), m = new WeakMap(), g$1 = new WeakMap(), C$2 = new WeakMap(), P$1 = new WeakMap(), z$2.create = (n, t) => {
+l = new WeakMap(), v$2 = new WeakMap(), A$2 = new WeakMap(), E$2 = new WeakMap(), w$4 = new WeakMap(), j$3 = new WeakMap(), x$2 = new WeakMap(), R$3 = new WeakMap(), m = new WeakMap(), g$1 = new WeakMap(), C$2 = new WeakMap(), P$1 = new WeakMap(), z$2.create = (n, t) => {
   const s = new z$2(n);
   return (e) => (s.run(e), s.toString(t));
 };
@@ -29964,7 +29964,7 @@ var s = (e, t, r) => (ve$2(e, t, "read from private field"), r ? r.call(e) : t.g
   if (t.has(e))
     throw TypeError("Cannot add the same private member more than once");
   t instanceof WeakSet ? t.add(e) : t.set(e, r);
-}, c$1 = (e, t, r, i) => (ve$2(e, t, "write to private field"), i ? i.call(e, r) : t.set(e, r), r);
+}, c$2 = (e, t, r, i) => (ve$2(e, t, "write to private field"), i ? i.call(e, r) : t.set(e, r), r);
 function k(e, t) {
   return e.meta = {
     package: "@milkdown/core",
@@ -30165,8 +30165,8 @@ let Ke$1 = class Ke {
   constructor() {
     d$1(this, T$2, void 0);
     d$1(this, g, void 0);
-    c$1(this, T$2, new G$3()), c$1(this, g, null), this.setCtx = (t) => {
-      c$1(this, g, t);
+    c$2(this, T$2, new G$3()), c$2(this, g, null), this.setCtx = (t) => {
+      c$2(this, g, t);
     };
   }
   get ctx() {
@@ -30203,7 +30203,7 @@ const je = H$4(new Ke$1(), "commands"), me$2 = H$4([R$2], "commandsTimer"), J$1 
 k(Ae$2, {
   displayName: "Commands"
 });
-var j$2, p, y, D$1, _, z$1, u, w$2, O$1, K$1, S$2, E$1, A$2, C$1, I$1;
+var j$2, p, y, D$1, _, z$1, u, w$3, O$1, K$1, S$2, E$1, A$1, C$1, I$1;
 const Ce$2 = class Ce {
   constructor() {
     d$1(this, j$2, void 0);
@@ -30213,16 +30213,16 @@ const Ce$2 = class Ce {
     d$1(this, _, void 0);
     d$1(this, z$1, void 0);
     d$1(this, u, void 0);
-    d$1(this, w$2, void 0);
+    d$1(this, w$3, void 0);
     d$1(this, O$1, void 0);
     d$1(this, K$1, void 0);
     d$1(this, S$2, void 0);
     d$1(this, E$1, void 0);
-    d$1(this, A$2, void 0);
+    d$1(this, A$1, void 0);
     d$1(this, C$1, void 0);
     d$1(this, I$1, void 0);
-    c$1(this, j$2, !1), c$1(this, p, "Idle"), c$1(this, y, []), c$1(this, D$1, () => {
-    }), c$1(this, _, new G$3()), c$1(this, z$1, new J$3()), c$1(this, u, /* @__PURE__ */ new Map()), c$1(this, w$2, /* @__PURE__ */ new Map()), c$1(this, O$1, new U$3(s(this, _), s(this, z$1))), c$1(this, K$1, () => {
+    c$2(this, j$2, !1), c$2(this, p, "Idle"), c$2(this, y, []), c$2(this, D$1, () => {
+    }), c$2(this, _, new G$3()), c$2(this, z$1, new J$3()), c$2(this, u, /* @__PURE__ */ new Map()), c$2(this, w$3, /* @__PURE__ */ new Map()), c$2(this, O$1, new U$3(s(this, _), s(this, z$1))), c$2(this, K$1, () => {
       const t = ot$2(async (i) => {
         await Promise.all(s(this, y).map((n) => n(i)));
       }), r = [
@@ -30235,28 +30235,28 @@ const Ce$2 = class Ce {
         at$2(this),
         t
       ];
-      s(this, S$2).call(this, r, s(this, w$2));
-    }), c$1(this, S$2, (t, r) => {
+      s(this, S$2).call(this, r, s(this, w$3));
+    }), c$2(this, S$2, (t, r) => {
       t.forEach((i) => {
         const n = s(this, O$1).produce(s(this, j$2) ? i.meta : void 0), a = i(n);
         r.set(i, { ctx: n, handler: a, cleanup: void 0 });
       });
-    }), c$1(this, E$1, (t, r = !1) => Promise.all(
+    }), c$2(this, E$1, (t, r = !1) => Promise.all(
       [t].flat().map((i) => {
         const n = s(this, u).get(i), a = n == null ? void 0 : n.cleanup;
         return r ? s(this, u).delete(i) : s(this, u).set(i, { ctx: void 0, handler: void 0, cleanup: void 0 }), typeof a == "function" ? a() : a;
       })
-    )), c$1(this, A$2, async () => {
-      await Promise.all([...s(this, w$2).entries()].map(([t, { cleanup: r }]) => typeof r == "function" ? r() : r)), s(this, w$2).clear();
-    }), c$1(this, C$1, (t) => {
-      c$1(this, p, t), s(this, D$1).call(this, t);
-    }), c$1(this, I$1, (t) => [...t.entries()].map(async ([r, i]) => {
+    )), c$2(this, A$1, async () => {
+      await Promise.all([...s(this, w$3).entries()].map(([t, { cleanup: r }]) => typeof r == "function" ? r() : r)), s(this, w$3).clear();
+    }), c$2(this, C$1, (t) => {
+      c$2(this, p, t), s(this, D$1).call(this, t);
+    }), c$2(this, I$1, (t) => [...t.entries()].map(async ([r, i]) => {
       const { ctx: n, handler: a } = i;
       if (!a)
         return;
       const h = await a();
       t.set(r, { ctx: n, handler: a, cleanup: h });
-    })), this.enableInspector = (t = !0) => (c$1(this, j$2, t), this), this.onStatusChange = (t) => (c$1(this, D$1, t), this), this.config = (t) => (s(this, y).push(t), this), this.removeConfig = (t) => (c$1(this, y, s(this, y).filter((r) => r !== t)), this), this.use = (t) => {
+    })), this.enableInspector = (t = !0) => (c$2(this, j$2, t), this), this.onStatusChange = (t) => (c$2(this, D$1, t), this), this.config = (t) => (s(this, y).push(t), this), this.removeConfig = (t) => (c$2(this, y, s(this, y).filter((r) => r !== t)), this), this.use = (t) => {
       const r = [t].flat();
       return r.flat().forEach((i) => {
         s(this, u).set(i, {
@@ -30271,14 +30271,14 @@ const Ce$2 = class Ce {
       }, 50);
     })) : (await s(this, E$1).call(this, [t].flat(), !0), this), this.create = async () => s(this, p) === "OnCreate" ? this : (s(this, p) === "Created" && await this.destroy(), s(this, C$1).call(this, "OnCreate"), s(this, K$1).call(this), s(this, S$2).call(this, [...s(this, u).keys()], s(this, u)), await Promise.all(
       [
-        s(this, I$1).call(this, s(this, w$2)),
+        s(this, I$1).call(this, s(this, w$3)),
         s(this, I$1).call(this, s(this, u))
       ].flat()
     ), s(this, C$1).call(this, "Created"), this), this.destroy = async (t = !1) => s(this, p) === "Destroyed" || s(this, p) === "OnDestroy" ? this : s(this, p) === "OnCreate" ? new Promise((r) => {
       setTimeout(() => {
         r(this.destroy(t));
       }, 50);
-    }) : (t && c$1(this, y, []), s(this, C$1).call(this, "OnDestroy"), await s(this, E$1).call(this, [...s(this, u).keys()], t), await s(this, A$2).call(this), s(this, C$1).call(this, "Destroyed"), this), this.action = (t) => t(s(this, O$1)), this.inspect = () => s(this, j$2) ? [...s(this, w$2).values(), ...s(this, u).values()].map(({ ctx: t }) => {
+    }) : (t && c$2(this, y, []), s(this, C$1).call(this, "OnDestroy"), await s(this, E$1).call(this, [...s(this, u).keys()], t), await s(this, A$1).call(this), s(this, C$1).call(this, "Destroyed"), this), this.action = (t) => t(s(this, O$1)), this.inspect = () => s(this, j$2) ? [...s(this, w$3).values(), ...s(this, u).values()].map(({ ctx: t }) => {
       var r;
       return (r = t == null ? void 0 : t.inspector) == null ? void 0 : r.read();
     }).filter((t) => !!t) : (console.warn("[Milkdown]: You are trying to collect inspection when inspector is disabled, please enable inspector by `editor.enableInspector()` first."), []);
@@ -30296,7 +30296,7 @@ const Ce$2 = class Ce {
     return s(this, p);
   }
 };
-j$2 = new WeakMap(), p = new WeakMap(), y = new WeakMap(), D$1 = new WeakMap(), _ = new WeakMap(), z$1 = new WeakMap(), u = new WeakMap(), w$2 = new WeakMap(), O$1 = new WeakMap(), K$1 = new WeakMap(), S$2 = new WeakMap(), E$1 = new WeakMap(), A$2 = new WeakMap(), C$1 = new WeakMap(), I$1 = new WeakMap();
+j$2 = new WeakMap(), p = new WeakMap(), y = new WeakMap(), D$1 = new WeakMap(), _ = new WeakMap(), z$1 = new WeakMap(), u = new WeakMap(), w$3 = new WeakMap(), O$1 = new WeakMap(), K$1 = new WeakMap(), S$2 = new WeakMap(), E$1 = new WeakMap(), A$1 = new WeakMap(), C$1 = new WeakMap(), I$1 = new WeakMap();
 let Oe$1 = Ce$2;
 
 let random = bytes => crypto.getRandomValues(new Uint8Array(bytes));
@@ -32946,6 +32946,9 @@ n(ee, {
   group: "Emphasis"
 });
 const nt$1 = oe$1((t) => markRule(/(?:^|[^*])\*([^*]+)\*$/, R$1.type(t), {
+  getAttr: () => ({
+    marker: "*"
+  }),
   updateCaptured: ({ fullMatch: e, start: r }) => e.startsWith("*") ? {} : { fullMatch: e.slice(1), start: r + 1 }
 }));
 n(nt$1, {
@@ -32953,6 +32956,9 @@ n(nt$1, {
   group: "Emphasis"
 });
 const ot$1 = oe$1((t) => markRule(/(?:^|[^_])_([^_]+)_$/, R$1.type(t), {
+  getAttr: () => ({
+    marker: "_"
+  }),
   updateCaptured: ({ fullMatch: e, start: r }) => e.startsWith("_") ? {} : { fullMatch: e.slice(1), start: r + 1 }
 }));
 n(ot$1, {
@@ -33021,7 +33027,11 @@ n(ae$1, {
   displayName: "Command<toggleStrongCommand>",
   group: "Strong"
 });
-const st$1 = oe$1((t) => markRule(/(?:\*\*|__)([^*_]+)(?:\*\*|__)$/, $.type(t)));
+const st$1 = oe$1((t) => markRule(/(?:\*\*|__)([^*_]+)(?:\*\*|__)$/, $.type(t), {
+  getAttr: (e) => ({
+    marker: e[0].startsWith("*") ? "*" : "_"
+  })
+}));
 n(st$1, {
   displayName: "InputRule<strong>",
   group: "Strong"
@@ -33203,7 +33213,7 @@ n(de$1, {
   displayName: "Attr<paragraph>",
   group: "Paragraph"
 });
-const A$1 = fe$2("paragraph", (t) => ({
+const w$2 = fe$2("paragraph", (t) => ({
   content: "inline*",
   group: "block",
   parseDOM: [{ tag: "p" }],
@@ -33221,15 +33231,15 @@ const A$1 = fe$2("paragraph", (t) => ({
     }
   }
 }));
-n(A$1.node, {
+n(w$2.node, {
   displayName: "NodeSchema<paragraph>",
   group: "Paragraph"
 });
-n(A$1.ctx, {
+n(w$2.ctx, {
   displayName: "NodeSchemaCtx<paragraph>",
   group: "Paragraph"
 });
-const me$1 = re$1("TurnIntoText", (t) => () => setBlockType(A$1.type(t)));
+const me$1 = re$1("TurnIntoText", (t) => () => setBlockType(w$2.type(t)));
 n(me$1, {
   displayName: "Command<turnIntoTextCommand>",
   group: "Paragraph"
@@ -33331,7 +33341,7 @@ n(pt, {
   displayName: "InputRule<wrapInHeadingInputRule>",
   group: "Heading"
 });
-const L$1 = re$1("WrapInHeading", (t) => (e) => (e ?? (e = 1), e < 1 ? setBlockType(A$1.type(t)) : setBlockType(H$1.type(t), { level: e })));
+const L$1 = re$1("WrapInHeading", (t) => (e) => (e ?? (e = 1), e < 1 ? setBlockType(w$2.type(t)) : setBlockType(H$1.type(t), { level: e })));
 n(L$1, {
   displayName: "Command<wrapInHeadingCommand>",
   group: "Heading"
@@ -33346,7 +33356,7 @@ const ue$1 = re$1("DowngradeHeading", (t) => () => (e, r, a) => {
       ...s.attrs,
       level: l
     })
-  ), !0) : setBlockType(A$1.type(t))(e, r, a);
+  ), !0) : setBlockType(w$2.type(t))(e, r, a);
 });
 n(ue$1, {
   displayName: "Command<downgradeHeadingCommand>",
@@ -33791,7 +33801,7 @@ n(kt, {
 const ht = re$1("InsertHr", (t) => () => (e, r) => {
   if (!r)
     return !0;
-  const a = A$1.node.type(t).create(), { tr: o, selection: s } = e, { from: l } = s, i = F.type(t).create();
+  const a = w$2.node.type(t).create(), { tr: o, selection: s } = e, { from: l } = s, i = F.type(t).create();
   if (!i)
     return !0;
   const d = o.replaceSelectionWith(i).insert(l, a), m = Selection.findFrom(d.doc.resolve(l), 1, !0);
@@ -33861,25 +33871,25 @@ n(ft, {
   displayName: "InputRule<wrapInBulletListInputRule>",
   group: "BulletList"
 });
-const we$1 = re$1("WrapInBulletList", (t) => () => wrapIn(O.type(t)));
-n(we$1, {
+const Ae$1 = re$1("WrapInBulletList", (t) => () => wrapIn(O.type(t)));
+n(Ae$1, {
   displayName: "Command<wrapInBulletListCommand>",
   group: "BulletList"
 });
-const Ae$1 = ge$2("bulletListKeymap", {
+const we$1 = ge$2("bulletListKeymap", {
   WrapInBulletList: {
     shortcuts: "Mod-Alt-8",
     command: (t) => {
       const e = t.get(je);
-      return () => e.call(we$1.key);
+      return () => e.call(Ae$1.key);
     }
   }
 });
-n(Ae$1.ctx, {
+n(we$1.ctx, {
   displayName: "KeymapCtx<bulletListKeymap>",
   group: "BulletList"
 });
-n(Ae$1.shortcuts, {
+n(we$1.shortcuts, {
   displayName: "Keymap<bulletListKeymap>",
   group: "BulletList"
 });
@@ -33982,7 +33992,7 @@ n(ve$1, {
 });
 const M$1 = fe$2("list_item", (t) => ({
   group: "listItem",
-  content: "paragraph block*",
+  content: "block+",
   attrs: {
     label: {
       default: "•"
@@ -34046,7 +34056,7 @@ n(Oe, {
   displayName: "Command<sinkListItemCommand>",
   group: "ListItem"
 });
-const Te$1 = re$1("SplitListItem", (t) => () => liftListItem(M$1.type(t)));
+const Te$1 = re$1("LiftListItem", (t) => () => liftListItem(M$1.type(t)));
 n(Te$1, {
   displayName: "Command<liftListItemCommand>",
   group: "ListItem"
@@ -34182,7 +34192,7 @@ n(Pe.ctx, {
 const qt = [
   mt,
   de$1,
-  A$1,
+  w$2,
   j$1,
   ce$1,
   H$1,
@@ -34236,7 +34246,7 @@ const qt = [
   gt,
   yt,
   Be,
-  we$1,
+  Ae$1,
   Oe,
   Ke,
   Te$1,
@@ -34253,7 +34263,7 @@ const qt = [
   ge$1,
   _e,
   Re$1,
-  Ae$1,
+  we$1,
   pe$1,
   te,
   le,
@@ -34464,7 +34474,7 @@ n(bt, {
 });
 const Lt = ue$2((t) => {
   const e = new PluginKey("MILKDOWN_HEADING_ID"), r = (a) => {
-    if (a.composing || !a.editable)
+    if (a.composing)
       return;
     const o = t.get(j$1.key), s = a.state.tr.setMeta("addToHistory", !1);
     let l = !1;
@@ -41857,7 +41867,7 @@ d(G, {
 const z = re$1("BreakTable", (e) => () => (t, n) => {
   if (!isInTable(t))
     return !1;
-  const { $head: o } = t.selection, l = o.after(), r = t.tr.replaceWith(l, l, A$1.type(e).createAndFill());
+  const { $head: o } = t.selection, l = o.after(), r = t.tr.replaceWith(l, l, w$2.type(e).createAndFill());
   return r.setSelection(Selection.near(r.doc.resolve(l), 1)).scrollIntoView(), n == null || n(r), !0;
 });
 d(z, {
@@ -42204,7 +42214,7 @@ const rt = [
 ], st = [
   ae
 ], xe = ue$2((e) => {
-  const t = new PluginKey("MILKDOWN_AUTO_INSERT_ZERO_SPACE"), n = (l) => l.type === A$1.type(e), o = (l) => n(l) && l.nodeSize === 2;
+  const t = new PluginKey("MILKDOWN_AUTO_INSERT_ZERO_SPACE"), n = (l) => l.type === w$2.type(e), o = (l) => n(l) && l.nodeSize === 2;
   return new Plugin({
     key: t,
     props: {
@@ -42303,7 +42313,7 @@ const A = async (n, s) => {
   if (!l)
     throw M$5("image");
   return (await Promise.all(r.map((t) => w(t)))).map(({ alt: t, src: e }) => l.createAndFill({ src: e, alt: t }));
-}, c = h({
+}, c$1 = h({
   uploader: A,
   enableHtmlFileUploader: !1,
   uploadWidgetFactory: (n, s) => {
@@ -42311,7 +42321,7 @@ const A = async (n, s) => {
     return r.textContent = "Upload in progress...", Decoration.widget(n, r, s);
   }
 }, "uploadConfig");
-c.meta = {
+c$1.meta = {
   package: "@milkdown/plugin-upload",
   displayName: "Ctx<uploadConfig>"
 };
@@ -42329,7 +42339,7 @@ const f = ue$2((n) => {
       return !1;
     const a = Symbol("upload symbol"), i = n.get(b$1), { tr: d } = o.state, g = t instanceof DragEvent ? ((m = o.posAtCoords({ left: t.clientX, top: t.clientY })) == null ? void 0 : m.pos) ?? d.selection.from : d.selection.from;
     o.dispatch(d.setMeta(s, { add: { id: a, pos: g } }));
-    const { uploader: h } = n.get(c.key);
+    const { uploader: h } = n.get(c$1.key);
     return h(e, i).then((p) => {
       const u = r(o.state, a);
       u < 0 || o.dispatch(
@@ -42350,7 +42360,7 @@ const f = ue$2((n) => {
         if (!a)
           return e;
         if (a.add) {
-          const { uploadWidgetFactory: i } = n.get(c.key), d = i(a.add.pos, { id: a.add.id });
+          const { uploadWidgetFactory: i } = n.get(c$1.key), d = i(a.add.pos, { id: a.add.id });
           return e.add(o.doc, [d]);
         }
         if (a.remove) {
@@ -42366,7 +42376,7 @@ const f = ue$2((n) => {
       },
       handlePaste: (o, t) => {
         var a, i;
-        const { enableHtmlFileUploader: e } = n.get(c.key);
+        const { enableHtmlFileUploader: e } = n.get(c$1.key);
         return !(t instanceof ClipboardEvent) || !e && ((a = t.clipboardData) != null && a.getData("text/html")) ? !1 : l(o, t, (i = t.clipboardData) == null ? void 0 : i.files);
       },
       handleDrop: (o, t) => {
@@ -42380,10 +42390,400 @@ f.meta = {
   package: "@milkdown/plugin-upload",
   displayName: "Prose<upload>"
 };
-const W = [c, f];
+const W = [c$1, f];
+
+function r(e){var t,f,n="";if("string"==typeof e||"number"==typeof e)n+=e;else if("object"==typeof e)if(Array.isArray(e)){var o=e.length;for(t=0;t<o;t++)e[t]&&(f=r(e[t]))&&(n&&(n+=" "),n+=f);}else for(f in e)e[f]&&(n&&(n+=" "),n+=f);return n}function clsx(){for(var e,t,f=0,n="",o=arguments.length;f<o;f++)(e=arguments[f])&&(t=r(e))&&(n&&(n+=" "),n+=t);return n}
+
+function c(e) {
+  e.update(ae$2, (r) => {
+    const o = r.attributes;
+    return {
+      ...r,
+      attributes: (n) => {
+        const t = typeof o == "function" ? o(n) : o;
+        return {
+          ...t,
+          class: clsx("prose dark:prose-invert outline-none", (t == null ? void 0 : t.class) || "", "milkdown-theme-nord")
+        };
+      }
+    };
+  });
+}
+
+// src/menu-plugin.ts
+var button = (config, ctx) => {
+  const $button = document.createElement("button");
+  $button.role = "menuitem";
+  $button.setAttribute("type", "button");
+  if (config.content instanceof HTMLElement) {
+    $button.appendChild(config.content);
+  } else {
+    $button.innerText = config.content;
+  }
+  $button.addEventListener("click", () => {
+    if (typeof config.key === "string")
+      ctx.get(je).call(config.key);
+    else
+      ctx.get(je).call(config.key[0], config.key[1]);
+  });
+  return [$button];
+};
+var divider = () => {
+  const $divider = document.createElement("div");
+  $divider.role = "separator";
+  return [$divider];
+};
+var select = (config, ctx) => {
+  const $button = document.createElement("button");
+  $button.role = "menuitem";
+  $button.setAttribute("type", "button");
+  $button.setAttribute("aria-haspopup", "true");
+  $button.setAttribute("aria-expanded", "false");
+  $button.setAttribute("tab-index", "0");
+  $button.textContent = config.text;
+  const $buttonExpand = document.createElement("span");
+  $buttonExpand.innerHTML = `<svg style="vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 15.375l-6-6l1.4-1.4l4.6 4.6l4.6-4.6l1.4 1.4l-6 6Z"/></svg>`;
+  $button.append($buttonExpand);
+  const $select = document.createElement("ul");
+  $select.role = "menu";
+  $select.setAttribute("aria-label", config.text);
+  $select.setAttribute("tabindex", "-1");
+  $select.append(
+    ...config.options.map((item) => {
+      const listItem = document.createElement("li");
+      listItem.role = "menuitem";
+      listItem.setAttribute("tabindex", "-1");
+      if (item.content instanceof HTMLElement) {
+        listItem.append(item.content);
+      } else {
+        listItem.textContent = item.content;
+      }
+      listItem.addEventListener("click", () => {
+        const command = config.onSelect(item.id);
+        if (typeof command === "string") {
+          ctx.get(je).call(command);
+        } else {
+          ctx.get(je).call(command[0], command[1]);
+        }
+        $button.setAttribute("aria-expanded", "false");
+        $select.classList.remove("show");
+        $select.blur();
+      });
+      return listItem;
+    })
+  );
+  $button.addEventListener("click", () => {
+    const expanded = ($button.getAttribute("aria-expanded") ?? "false") === "false" ? false : true;
+    $button.setAttribute("aria-expanded", !expanded ? "true" : "false");
+    if (!expanded) {
+      $select.classList.add("show");
+      ctx.get(H$2).dom.addEventListener("click", onClickOutside);
+    } else {
+      $select.classList.remove("show");
+      $select.blur();
+      ctx.get(H$2).dom.removeEventListener("click", onClickOutside);
+    }
+    function onClickOutside() {
+      $button.setAttribute("aria-expanded", "false");
+      $select.classList.remove("show");
+      $select.blur();
+    }
+  });
+  return [$button, $select];
+};
+
+// src/menu-plugin.ts
+var menuDomCtx = h({}, "menuDom");
+var menuConfigCtx = h(
+  { items: [], attributes: { class: "milkdown-menu" } },
+  "menuConfig"
+);
+var key = new PluginKey("MILKDOWN_PLUGIN_MENU");
+var createContainer = (ctx) => {
+  const config = ctx.get(menuConfigCtx.key);
+  const container = document.createElement("div");
+  Object.entries(config.attributes).forEach(([key2, val]) => {
+    if (key2 === "class")
+      container.classList.add(val);
+    else
+      container.setAttribute(key2, val);
+  });
+  return container;
+};
+var createMenuBar = (ctx) => {
+  const menubar = document.createElement("ul");
+  menubar.role = "menubar";
+  menubar.setAttribute("aria-label", "Editor menubar");
+  const config = ctx.get(menuConfigCtx.key);
+  const itemsWithDivider = config.items.reduce(
+    (acc, curr, index) => {
+      if (index === config.items.length - 1)
+        return acc.concat(...curr);
+      return acc.concat(...curr).concat("divider");
+    },
+    []
+  );
+  const menuBarItems = itemsWithDivider.map((item) => {
+    const listItem = document.createElement("li");
+    listItem.role = "none";
+    const createItem = () => {
+      if (typeof item === "string")
+        return divider();
+      else if (item.type === "button")
+        return button(item, ctx);
+      else
+        return select(item, ctx);
+    };
+    listItem.append(...createItem());
+    return { $: listItem, config: item };
+  });
+  menubar.append(...menuBarItems.map((item) => item.$));
+  return { dom: menubar, items: menuBarItems };
+};
+var menuView = ue$2((ctx) => {
+  const prosePlugin = new Plugin({
+    key,
+    view: (editorView) => {
+      const root = ctx.get(we$3);
+      const container = createContainer(ctx);
+      ctx.set(menuDomCtx.key, container);
+      const editor = editorView.dom;
+      root.insertBefore(container, editor);
+      const menubar = createMenuBar(ctx);
+      if (menubar.dom.children.length !== 0) {
+        container.append(menubar.dom);
+      }
+      return {
+        update: () => {
+          menubar.items.forEach((item) => {
+            if (typeof item.config !== "string") {
+              if (item.config.type === "button" && item.config.active) {
+                const isActive = item.config.active(ctx);
+                if (isActive) {
+                  item.$.querySelector("button")?.classList.add("active");
+                } else {
+                  item.$.querySelector("button")?.classList.remove("active");
+                }
+              }
+              if (typeof item.config.disabled != "undefined") {
+                const isDisabled = item.config.disabled(ctx);
+                if (isDisabled) {
+                  item.$.style.display = "none";
+                } else {
+                  item.$.style.display = "unset";
+                }
+              }
+            }
+          });
+        },
+        destroy: () => {
+          container?.remove();
+        }
+      };
+    }
+  });
+  return prosePlugin;
+});
+var createIconContent = (icon) => {
+  const span = document.createElement("span");
+  span.className = "material-icons material-icons-outlined";
+  span.textContent = icon;
+  return span;
+};
+var hasMark = (state, type) => {
+  if (!type)
+    return false;
+  const { from, $from, to, empty } = state.selection;
+  if (empty)
+    return !!type.isInSet(state.storedMarks || $from.marks());
+  return state.doc.rangeHasMark(from, to, type);
+};
+var getUndoDepth = (ctx) => {
+  const historyKey = ctx.get(N).find(
+    //@ts-expect-error: inner property
+    (i) => i.key === "history$"
+  );
+  const state = ctx.get(V$1);
+  const hist = historyKey?.getState(state);
+  return hist ? hist.done.eventCount : 0;
+};
+var getRedoDepth = (ctx) => {
+  const historyKey = ctx.get(N).find(
+    //@ts-expect-error: inner property
+    (i) => i.key === "history$"
+  );
+  const state = ctx.get(V$1);
+  const hist = historyKey?.getState(state);
+  return hist ? hist.undone.eventCount : 0;
+};
+var defaultConfigItems = [
+  [
+    {
+      type: "button",
+      content: createIconContent("turn_left"),
+      key: "Undo",
+      disabled: (ctx) => {
+        try {
+          if (!!ctx.get("historyProviderConfig")) {
+            const undoDepth = getUndoDepth(ctx);
+            return undoDepth <= 0;
+          }
+        } catch (error) {
+          return true;
+        }
+        return true;
+      }
+    },
+    {
+      type: "button",
+      content: createIconContent("turn_right"),
+      key: "Redo",
+      disabled: (ctx) => {
+        try {
+          if (!!ctx.get("historyProviderConfig")) {
+            const redoDepth = getRedoDepth(ctx);
+            return redoDepth <= 0;
+          }
+        } catch (error) {
+          return true;
+        }
+        return true;
+      }
+    }
+  ],
+  [
+    {
+      type: "select",
+      text: "Heading",
+      options: [
+        { id: 1, content: "Large Heading" },
+        { id: 2, content: "Medium Heading" },
+        { id: 3, content: "Small Heading" },
+        { id: 0, content: "Plain Text" }
+      ],
+      onSelect: (id) => !!id ? ["WrapInHeading", id] : "TurnIntoText"
+    }
+  ],
+  [
+    {
+      type: "button",
+      content: createIconContent("format_bold"),
+      key: "ToggleStrong",
+      active: (ctx) => {
+        const state = ctx.get(V$1);
+        const schema = ctx.get(b$1);
+        return hasMark(state, schema.marks.strong);
+      }
+    },
+    {
+      type: "button",
+      content: createIconContent("format_italic"),
+      key: "ToggleEmphasis",
+      active: (ctx) => {
+        const state = ctx.get(V$1);
+        const schema = ctx.get(b$1);
+        return hasMark(state, schema.marks.emphasis);
+      }
+    },
+    {
+      type: "button",
+      content: createIconContent("strikethrough_s"),
+      key: "ToggleStrikeThrough",
+      active: (ctx) => {
+        const state = ctx.get(V$1);
+        const schema = ctx.get(b$1);
+        return hasMark(state, schema.marks.strike_through);
+      }
+    }
+  ],
+  [
+    {
+      type: "button",
+      content: createIconContent("format_list_bulleted"),
+      key: "WrapInBulletList"
+    },
+    {
+      type: "button",
+      content: createIconContent("format_list_numbered"),
+      key: "WrapInOrderedList"
+    },
+    // Notice: didn't provider any more in preset-gfm after v7
+    // {
+    //   type: 'button',
+    //   content: createIconContent('checklist'),
+    //   key: 'TurnIntoTaskList',
+    // },
+    {
+      type: "button",
+      content: createIconContent("format_indent_decrease"),
+      key: "SplitListItem"
+    },
+    {
+      type: "button",
+      content: createIconContent("format_indent_increase"),
+      key: "SinkListItem"
+    }
+  ],
+  [
+    // Notice: this two command work properly, but maybe need improve UX
+    // {
+    //   type: 'button',
+    //   content: createIconContent('link'),
+    //   key: ['ToggleLink', { href: '' }],
+    // },
+    //
+    // {
+    //   type: 'button',
+    //   content: createIconContent('image'),
+    //   key: 'InsertImage',
+    // },
+    {
+      type: "button",
+      content: createIconContent("table_chart"),
+      key: "InsertTable"
+    },
+    {
+      type: "button",
+      content: createIconContent("code"),
+      key: "CreateCodeBlock"
+    }
+  ],
+  [
+    {
+      type: "button",
+      content: createIconContent("format_quote"),
+      key: "WrapInBlockquote"
+    },
+    {
+      type: "button",
+      content: createIconContent("horizontal_rule"),
+      key: "InsertHr"
+    }
+    // TODO:provide command by this package?
+    // {
+    //   type: 'button',
+    //   content: createIconContent('select_all'),
+    //   key: 'SelectParent',
+    // },
+  ]
+];
+var defaultConfig = {
+  items: defaultConfigItems,
+  attributes: { class: "milkdown-menu" }
+};
+var menuDefaultConfig = (ctx) => {
+  ctx.set(menuConfigCtx.key, defaultConfig);
+};
+
+// src/index.ts
+var menu = [menuDomCtx, menuConfigCtx, menuView];
 
 let beforePluginMenu = 'Before Plugin Menu';
 console.log(beforePluginMenu);
+
+// import { menu, menuDefaultConfig } from '@milkdown-lab/plugin-menu'
+
+//milkdownMenu();
 
 let afterPluginMenu = 'After Plugin Menu';
 
@@ -42448,10 +42848,10 @@ console.log(afterPluginMenu);
   editors.forEach((textarea) => {
     let config = getConfig(textarea);
     let div = addElement(textarea);
-    let editor = Oe$1.make().config(ctx => {
+    let editor = Oe$1.make().config(menuDefaultConfig).config(c).config(ctx => {
       ctx.set(ce$2, div);
       ctx.set(re$2, config.defaultValue);
-    }).use(cr);//.config(menuDefaultConfig).use(menu);
+    }).use(cr).use(menu);//.config(menuDefaultConfig).use(menu);
     if (config.gfm)    editor = editor.use(wt);
     if (config.upload) editor = editor.use(W);
     // if (config.block)  editor = editor.use(block);

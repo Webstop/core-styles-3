@@ -2,7 +2,9 @@ import { defaultValueCtx, Editor, rootCtx } from '@milkdown/core';
 import { commonmark } from '@milkdown/preset-commonmark';
 import { gfm } from '@milkdown/preset-gfm';
 import { upload } from '@milkdown/plugin-upload';
+import { nord } from '@milkdown/theme-nord'
 //import { milkdownMenu } from "./milkdown-menu";
+import { menu, menuDefaultConfig } from '@milkdown-lab/plugin-menu'
 
 let beforePluginMenu = 'Before Plugin Menu';
 console.log(beforePluginMenu);
@@ -74,10 +76,10 @@ console.log(afterPluginMenu);
   editors.forEach((textarea) => {
     let config = getConfig(textarea);
     let div = addElement(textarea, config);
-    let editor = Editor.make().config(ctx => {
+    let editor = Editor.make().config(menuDefaultConfig).config(nord).config(ctx => {
       ctx.set(rootCtx, div)
       ctx.set(defaultValueCtx, config.defaultValue)
-    }).use(commonmark);//.config(menuDefaultConfig).use(menu);
+    }).use(commonmark).use(menu);//.config(menuDefaultConfig).use(menu);
     if (config.gfm)    editor = editor.use(gfm);
     if (config.upload) editor = editor.use(upload);
     // if (config.block)  editor = editor.use(block);
