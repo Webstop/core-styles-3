@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: editor
 title: Markdown Editor
 description: Interface for the Milkdown text editor, producing clean usable Markdown.
 group: components
@@ -96,12 +96,8 @@ Links: [Webstop](https://webstop.com)
 
 
 
-<script src="/js/milkdown.js" type="module"></script>
 
-<script>
-
-
-</script>
+   
 
 
 #### Attributes

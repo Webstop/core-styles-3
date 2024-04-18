@@ -1,0 +1,10 @@
+@charset "utf-8";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import
+  '../../../node_modules/@milkdown/theme-nord/lib/style',
+  '../../../node_modules/@milkdown-lab/plugin-menu/style'
+;
+
