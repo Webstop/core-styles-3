@@ -13072,6 +13072,10 @@ textarea.form-control-lg {
   font-family: "Libre Baskerville", Baskerville, "Baskerville Old Face", Georgia, serif;
 }
 
+[class^=btn-outline-], [class*=" btn-outline-"] {
+  background-color: #f8f9fa;
+}
+
 .btn.btn-plain {
   background: transparent;
   padding: 0;
