@@ -804,4 +804,8 @@ select{
 
 /* next is theme nord */
 
+/*@import '../node_modules/@milkdown/theme-nord/lib/style.css';*/
+
 /* next is plugin menu */
+
+/*@import '../node_modules/@milkdown-lab/plugin-menu/style.css';*/

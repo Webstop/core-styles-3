@@ -1,6 +1,6 @@
 ---
-layout: docs
-title: Markdown Editor
+layout: editor
+title: Markdown Editor Demo
 description: Interface for the Milkdown text editor, producing clean usable Markdown.
 group: components
 toc: true
@@ -17,11 +17,7 @@ to find nearby stores.
 
 ## Examples
 
-The base `data-locate` attribute defines the locate button. 
-
-
-
-
+Some examples. That will blow your mind
 
 ### Basic Example
 
@@ -66,8 +62,6 @@ The base `data-locate` attribute defines the locate button.
 </div>
 
 
-
-{{< example >}}
 <label for="markdown-example" class="form-label">Text Editor Example</label>
 <textarea data-markdown-editor class="form-control" name="some-name" id="some-id" rows="15">
 
@@ -92,12 +86,6 @@ Links: [Webstop](https://webstop.com)
 1. Numbered List
 2. Using Numbers
 </textarea>
-{{< /example >}}
-
-
-
-
-   
 
 
 #### Attributes

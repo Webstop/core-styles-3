@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" data-editor-example="markdown" />
+    <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
+    <!--  <link rel="stylesheet" href="/docs/3.0/dist/css/core-styles-defaults.css">-->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/markdown-editor.css" />
+  </head>
+  <body>
+
+
+    {{ block "main" . }}
+    <!-- The part of the page that begins to differ between templates -->
+    {{ end }}
+
+
+    <script src="https://kit.fontawesome.com/42f15b97e3.js" crossorigin="anonymous"></script>
+    <script src="/js/markdown-editor.js"></script>
+
+  </body>
+</html>

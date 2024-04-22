@@ -1,14 +1,15 @@
 
-// Include 3rd Party Libraries
-// import 'jquery/dist/jquery';
-// import 'bootstrap/dist/js/bootstrap';
-// import 'js-cookie';
+// Include 3rd Party Libraries Before This File, Including:
+// - jquery
+// - @popperjs/core
+// - bootstrap
 
 // Core-Styles JS Files
 // These three need to go first, in this order, and with the same attributes.
 import './config';
 import 'ahoy.js/dist/ahoy';
 import './aye';
+import './cookies';
 
 // The rest of the file are simply listed in alphabetical order.
 import './ajax-form';
@@ -21,7 +22,7 @@ import './circular-cookies';
 import './filter-search';
 import './form-toggles';
 import './locate';
-import './public';
+import './public-layout';
 import './search';
-import './shopping-list-power-bar';
+import './shopping-list-aside';
 import './tags';
