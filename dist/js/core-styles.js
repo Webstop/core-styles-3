@@ -19,64 +19,50 @@
 
   })( window.webstop = window.webstop || {},  window.ahoy = window.ahoy || {} );
 
-  // Aye
+  (function(webstop){
 
-  $(function() {
-    // Here we set the thee possible events types data-aye-view, data-aye-click, & data-aye-submit
-
-    // Sends an ahoy track when the element is served to the browser.
-    // TODO: enhance to track items brought onto the page via Ajax. It currently only works on items in the initial page render.
-    $('[data-aye-view]').each(function(){
-      let $element = $(this);
-      let cargo = ayeCargo(this);
-      ahoy.track('view ' + $element.attr('data-aye-view'), cargo);
-    });
-
-    // Sends an ahoy track when the user clicks on the element.
-    $(document.body).on('click', '[data-aye-click]',  function(){
-      let $element = $(this);
-      let cargo = ayeCargo(this);
-      ahoy.track('click ' + $element.attr('data-aye-click'), cargo);
-    });
-
-    // Sends an ahoy track when a form is submitted. Place on the form tag.
-    $(document.body).on('submit', '[data-aye-submit]', function(){
-      let $element = $(this);
-      let cargo = ayeCargo(this);
-      cargo = ayeFormidable($element, cargo);
-      ahoy.track('submit ' + $element.attr('data-aye-submit'), cargo);
-    });
-
-
-    // The next two functions (ayeCargo & ayeFormidable) gather data and format it for submitting to ahoy.track
-
-    // ayeCargo gathers Aye data attributes from an HTML element and formats them for API usage.
-    function ayeCargo(element){
-      let properties = {};
-      $.each(element.attributes, function( index, attr ) {
-        if(attr.name.indexOf('data-aye-property-')===0) {
-          properties[attr.name.slice(18).split("-").join("_").toLowerCase()] = attr.value;
-        } else if(attr.name == 'data-aye-click' || attr.name == 'data-aye-view' || attr.name =='data-aye-submit' ); else if(attr.name.indexOf('data-aye-')===0) {
-          properties[attr.name.slice(9).split("-").join("_").toLowerCase()] = attr.value;
-        }
-      });
-      return properties;
+    function setCookie(name, value, expireDays) {
+      const d = new Date();
+      let expires = '';
+      if(expireDays) {
+        d.setTime(d.getTime() + (expireDays*24*60*60*1000));
+        expires = "expires=" + d.toUTCString() + ';';
+      }
+      document.cookie = name + "=" + value + ";" + expires + "path=/";
     }
 
-    // ayeFormidable gathers Aye data attributes from HTML form elements and formats them for API usage.
-    function ayeFormidable($element, cargo = {}){
-      $element.find('input,select,textarea,output').each(function(index){
-        let value = this.value;
-        $.each(this.attributes, function( index, attr ) {
-          if(attr.name.indexOf('data-aye-property-')===0) {
-            cargo[attr.name.slice(18).split("-").join("_").toLowerCase()] = value;
-          }
-        });
-      });
-      return cargo;
+    let setCookieA = function(name, value, expireDays) {
+      const d = new Date();
+      let expires = '';
+      if(expireDays) {
+        d.setTime(d.getTime() + (expireDays*24*60*60*1000));
+        expires = "expires=" + d.toUTCString() + ';';
+      }
+      document.cookie = name + "=" + value + ";" + expires + "path=/";
+    };
+
+    function getCookie(name) {
+      let nameEquals = name + "=";
+      let ca = document.cookie.split(';');
+      for(let i=0;i < ca.length;i++) {
+        let c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEquals) == 0) return c.substring(nameEquals.length,c.length);
+      }
+      return null;
     }
 
-  });
+    function checkCookie(name) {
+      let cookie = getCookie(name);
+      return !!cookie;
+    }
+
+    webstop.setCookie   = setCookie;
+    webstop.setCookieA  = setCookieA;
+    webstop.getCookie   = getCookie;
+    webstop.checkCookie = checkCookie;
+
+  })( window.webstop = window.webstop || {} );
 
   // Ajax Form Component
 
@@ -685,9 +671,9 @@
         event.preventDefault();
         publicLayout.classList.toggle('public-hide-sidenav');
         if(publicLayout.classList.contains('public-hide-sidenav')) {
-          setCookie('public_sidenav', 'hide', 1);
+          webstop.setCookie('public_sidenav', 'hide', 1);
         } else {
-          setCookie('public_sidenav', 'show', 1);
+          webstop.setCookie('public_sidenav', 'show', 1);
         }
       });
     });
@@ -696,9 +682,9 @@
         event.preventDefault();
         publicLayout.classList.toggle('public-hide-sidebar');
         if(publicLayout.classList.contains('public-hide-sidebar')) {
-          setCookie('public_sidebar', 'hide', 1);
+          webstop.setCookie('public_sidebar', 'hide', 1);
         } else {
-          setCookie('public_sidebar', 'show', 1);
+          webstop.setCookie('public_sidebar', 'show', 1);
         }
       });
     });

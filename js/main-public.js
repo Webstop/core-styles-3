@@ -7,8 +7,6 @@
 // Core-Styles JS Files
 // These three need to go first, in this order, and with the same attributes.
 import './config';
-import 'ahoy.js/dist/ahoy';
-import './aye';
 import './cookies';
 
 // The rest of the file are simply listed in alphabetical order.
@@ -24,5 +22,5 @@ import './form-toggles';
 import './locate';
 import './public-layout';
 import './search';
-import './shopping-list-aside';
+import './shopping-list';
 import './tags';

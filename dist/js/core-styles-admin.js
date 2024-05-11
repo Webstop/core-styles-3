@@ -19,64 +19,50 @@
 
   })( window.webstop = window.webstop || {},  window.ahoy = window.ahoy || {} );
 
-  // Aye
+  (function(webstop){
 
-  $(function() {
-    // Here we set the thee possible events types data-aye-view, data-aye-click, & data-aye-submit
-
-    // Sends an ahoy track when the element is served to the browser.
-    // TODO: enhance to track items brought onto the page via Ajax. It currently only works on items in the initial page render.
-    $('[data-aye-view]').each(function(){
-      let $element = $(this);
-      let cargo = ayeCargo(this);
-      ahoy.track('view ' + $element.attr('data-aye-view'), cargo);
-    });
-
-    // Sends an ahoy track when the user clicks on the element.
-    $(document.body).on('click', '[data-aye-click]',  function(){
-      let $element = $(this);
-      let cargo = ayeCargo(this);
-      ahoy.track('click ' + $element.attr('data-aye-click'), cargo);
-    });
-
-    // Sends an ahoy track when a form is submitted. Place on the form tag.
-    $(document.body).on('submit', '[data-aye-submit]', function(){
-      let $element = $(this);
-      let cargo = ayeCargo(this);
-      cargo = ayeFormidable($element, cargo);
-      ahoy.track('submit ' + $element.attr('data-aye-submit'), cargo);
-    });
-
-
-    // The next two functions (ayeCargo & ayeFormidable) gather data and format it for submitting to ahoy.track
-
-    // ayeCargo gathers Aye data attributes from an HTML element and formats them for API usage.
-    function ayeCargo(element){
-      let properties = {};
-      $.each(element.attributes, function( index, attr ) {
-        if(attr.name.indexOf('data-aye-property-')===0) {
-          properties[attr.name.slice(18).split("-").join("_").toLowerCase()] = attr.value;
-        } else if(attr.name == 'data-aye-click' || attr.name == 'data-aye-view' || attr.name =='data-aye-submit' ); else if(attr.name.indexOf('data-aye-')===0) {
-          properties[attr.name.slice(9).split("-").join("_").toLowerCase()] = attr.value;
-        }
-      });
-      return properties;
+    function setCookie(name, value, expireDays) {
+      const d = new Date();
+      let expires = '';
+      if(expireDays) {
+        d.setTime(d.getTime() + (expireDays*24*60*60*1000));
+        expires = "expires=" + d.toUTCString() + ';';
+      }
+      document.cookie = name + "=" + value + ";" + expires + "path=/";
     }
 
-    // ayeFormidable gathers Aye data attributes from HTML form elements and formats them for API usage.
-    function ayeFormidable($element, cargo = {}){
-      $element.find('input,select,textarea,output').each(function(index){
-        let value = this.value;
-        $.each(this.attributes, function( index, attr ) {
-          if(attr.name.indexOf('data-aye-property-')===0) {
-            cargo[attr.name.slice(18).split("-").join("_").toLowerCase()] = value;
-          }
-        });
-      });
-      return cargo;
+    let setCookieA = function(name, value, expireDays) {
+      const d = new Date();
+      let expires = '';
+      if(expireDays) {
+        d.setTime(d.getTime() + (expireDays*24*60*60*1000));
+        expires = "expires=" + d.toUTCString() + ';';
+      }
+      document.cookie = name + "=" + value + ";" + expires + "path=/";
+    };
+
+    function getCookie(name) {
+      let nameEquals = name + "=";
+      let ca = document.cookie.split(';');
+      for(let i=0;i < ca.length;i++) {
+        let c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEquals) == 0) return c.substring(nameEquals.length,c.length);
+      }
+      return null;
     }
 
-  });
+    function checkCookie(name) {
+      let cookie = getCookie(name);
+      return !!cookie;
+    }
+
+    webstop.setCookie   = setCookie;
+    webstop.setCookieA  = setCookieA;
+    webstop.getCookie   = getCookie;
+    webstop.checkCookie = checkCookie;
+
+  })( window.webstop = window.webstop || {} );
 
   // Ajax Form Component
 
@@ -212,7 +198,7 @@
 
 
   // Vanilla JS Version
-  function load$1(target, url, infinite) {
+  function load(target, url, infinite) {
     // TODO: Add callback support, success and failure callbacks
     fetch(url, {
       method: 'GET',
@@ -238,7 +224,7 @@
         if(!entries[0].target.classList.contains('is-loaded')) {
           // Element has not been loaded yet
           entries[0].target.classList.add('is-loaded');
-          load$1(target, url, infinite);
+          load(target, url, infinite);
           let skipHistory = entries[0].target.hasAttribute('data-skip-history');
           if(!skipHistory) { history.pushState(null, "", url); }
         }
@@ -587,123 +573,6 @@
 
   });
 
-  // Using the following design pattern
-  // https://web.archive.org/web/20181005005954/https://appendto.com/2010/10/how-good-c-habits-can-encourage-bad-javascript-habits-part-1/
-
-
-  // Geolocation
-  (function( webstop ) {
-
-    // Private Properties
-    let message; // element (where to display error messages)
-    let trigger; // element
-    let target; // element
-    let hide_trigger = true;
-    let locate_on_load = false;
-    let action_url = '';
-    let has_action_url = false;
-    let has_filter = false;
-    let redirect_url = '';
-    let has_redirect_url = false;
-
-    // Public Properties
-    // Public Properties would take the form webstop.locator.someProperty = '';
-
-    // Public Sub-Class
-    webstop.locator = {};
-
-    // Private Method locate();
-    webstop.locator.locate = function(display_messages) {
-      display_messages = !!(display_messages && message);
-
-      function success(position) {
-        const latitude = position.coords.latitude;
-        const longitude = position.coords.longitude;
-        const default_action_url = `${window.webstop.webHost}/retailers/${window.webstop.retailerID}/stores?display=results-only&latitude=${latitude}&longitude=${longitude}`;
-        action_url = action_url || default_action_url;
-        if(action_url == ''){ action_url = default_action_url; }
-        if(redirect_url != ''){ action_url += `&url=${redirect_url}`; }
-        load(target, action_url);
-        if(display_messages){ message.textContent = ''; }
-        if(hide_trigger){ trigger.classList.add('d-none'); }
-      }
-
-      function error(error) {
-        if(display_messages){ message.textContent = `Unable to retrieve your location.`; }
-        console.error(`Geolocation Error. Code: ${error.code}. Message: ${error.message}`);
-      }
-
-      if(!navigator.geolocation) {
-        if(display_messages){ message.textContent = "Geolocation is not supported by your browser."; }
-      } else {
-        if(display_messages){ message.textContent = 'Locating…'; }
-        navigator.geolocation.getCurrentPosition(success, error);
-      }
-    };
-
-    // Public Method webstop.locator.watcher
-    webstop.locator.watcher = function() {
-      trigger = document.querySelector("[data-locate]");
-      if (trigger) {
-        target = document.querySelector(trigger.getAttribute('data-locate-target'));
-        message = document.querySelector(trigger.getAttribute('data-locate-message'));
-        hide_trigger = trigger.hasAttribute('data-locate-hide-me');
-        locate_on_load = trigger.hasAttribute('data-locate-on-load');
-        has_action_url = trigger.hasAttribute('data-locate-action-url');
-        if (has_action_url) {
-          action_url = trigger.getAttribute('data-locate-action-url');
-        }
-        has_filter = trigger.hasAttribute('data-locate-filter');
-        if (has_filter) {
-          trigger.getAttribute('data-locate-filter');
-        }
-        has_redirect_url = trigger.hasAttribute('data-locate-redirect-url');
-        if (has_redirect_url) {
-          redirect_url = trigger.getAttribute('data-locate-redirect-url');
-        }
-        trigger.addEventListener("click", function (event) {
-          webstop.locator.locate(true);
-        });
-        // the following runs locate on page load, but without hiding the Use My Location button.
-        if(locate_on_load){
-          webstop.locator.locate(false);
-        }
-      }
-    };
-  })( window.webstop = window.webstop || {} );
-
-  // Requires cookies.js to be loaded first
-
-  (function(){
-    const publicLayout = document.querySelector('.public');
-
-    const sidenavToggles = document.querySelectorAll('[data-sidenav-toggle]');
-    const sidebarToggles = document.querySelectorAll('[data-sidebar-toggle]');
-
-    sidenavToggles.forEach((sidenavToggle) => {
-      sidenavToggle.addEventListener("click", (event) => {
-        event.preventDefault();
-        publicLayout.classList.toggle('public-hide-sidenav');
-        if(publicLayout.classList.contains('public-hide-sidenav')) {
-          setCookie('public_sidenav', 'hide', 1);
-        } else {
-          setCookie('public_sidenav', 'show', 1);
-        }
-      });
-    });
-    sidebarToggles.forEach((sidebarToggle) => {
-      sidebarToggle.addEventListener("click", (event) => {
-        event.preventDefault();
-        publicLayout.classList.toggle('public-hide-sidebar');
-        if(publicLayout.classList.contains('public-hide-sidebar')) {
-          setCookie('public_sidebar', 'hide', 1);
-        } else {
-          setCookie('public_sidebar', 'show', 1);
-        }
-      });
-    });
-  })();
-
   // Search Component
 
   $(function() {
@@ -758,131 +627,6 @@
     }
 
     liveSearch();
-  });
-
-  // TODO: For now this is global. It really should be loaded as an es6 module instead.
-  function loadShoppingListPowerBar$1(){
-    console.log('loadShoppingListPowerBar triggered');
-    let url = '/shopping_list/power_bar?url=' + window.location.href ;
-    $('#site-aside-slider').load(url);
-  }
-
-  $(function() {
-
-    loadShoppingListPowerBar$1();
-
-    $(document.body).on('click', '.site-aside-slider-toggle', function(event){
-      event.preventDefault();
-      let $aside = $('#site-aside-slider');
-      if( $aside.hasClass('site-aside-slider-open') ){
-        $aside.removeClass('site-aside-slider-open');
-        setCookie('site_aside', 'close', 1);
-      } else {
-        $aside.addClass('site-aside-slider-open');
-        setCookie('site_aside', 'open', 1);
-      }
-    });
-
-    // Everything below here should probably go, as more generic methods are appropriate
-    // ajax-form and site-modal should be used instead. Keeping it for now as reference
-    // until we get the shopping list features.
-
-    let $modal = $('#shopping-list-modal');
-
-    $(document.body).on('show.bs.modal', '#shopping-list-modal', function(event) {
-      // jQuery Objects
-      let $form        = $modal.find('.shopping-list-form');
-      let $errors      = $form.find('.shopping-list-form-errors');
-      let $button      = $(event.relatedTarget); // Button or link that triggered the modal
-      let $title       = $modal.find('.modal-title');
-      let $nameGroup   = $modal.find('.modal-body .shopping-list-form-name-group');
-      let $name        = $modal.find('.modal-body .shopping-list-form-name');
-      let $submit      = $form.find('.shopping-list-form-submit');
-      let $description = $form.find('.shopping-list-form-description');
-
-      // strings
-      //let currentList = $('#shopping-list-power-bar-list').text()
-      let verb = $button.data('verb'); //  verbs: Create (new), Update (rename/edit), Delete (delete)
-      let url =  $button.data('url');
-      let response = {status: '', message: ''};
-
-      //console.log('current list: ' + currentList)
-
-
-      $title.text(verb + ' Shopping List');
-      $submit.text(verb);
-      $errors.html('');
-      $form.attr('action', url);
-
-      if(verb == 'Create'){
-        let today = new Date();
-        today = today.toLocaleDateString('en-US', {year: 'numeric', month: 'numeric', day: 'numeric' });
-        $nameGroup.removeClass('is-hidden');
-        $name.val('My ' + today + ' List');
-        $description.text('');
-        $description.addClass('is-hidden');
-      }else if(verb == 'Rename'){
-        $nameGroup.removeClass('is-hidden');
-        $name.val($('#shopping-list-power-bar-list').text());
-        $description.text('');
-        $description.addClass('is-hidden');
-      }else if(verb == 'Delete'){
-        $nameGroup.addClass('is-hidden');
-        $description.removeClass('is-hidden');
-        $description.text('Once deleted your most recent shopping list will become your current list. If you have no shopping lists a new one will be created. Are you sure you want to delete your current shopping list?');
-      }
-
-
-      // Form response expects the following JSON:
-      // {
-      //   status: 'success' or 'failure',
-      //   message: 'text message here'
-      // }
-      $form.on('submit', function(e) {
-        e.preventDefault();
-        // Do ajax calling url
-        let request = $.ajax({
-          url: url,
-          method: 'POST',
-          //data: { id : menuId },
-          contentType: "application/json",
-          dataType: 'json'
-        });
-
-        request.done(function(jqXHR, data){
-          console.log('ajax response status: ' + data.status);
-          console.log('message: ' + data.message);
-          if(data.status == 'success'){
-            response = data;
-            $modal.modal('hide');
-            console.log('hide modal triggered');
-          } else if(data.status == 'failure') {
-            response = data;
-          } else {
-            response = {status: 'failure', message: 'Unable to process request. Please try again.'};
-          }
-
-          if(response.status == 'failure') {
-            $errors.html('<p class="shopping-list-form-errors-message alert alert-danger">' + response.message + '</p>');
-          }
-
-        });
-
-        request.fail(function(response){
-          $errors.html('<p class="shopping-list-form-errors-message alert alert-danger">' + response.message + '</p>');
-        });
-
-
-      });
-
-    });
-
-    $(document.body).on('hidden.bs.modal', '#shopping-list-modal', function(event) {
-      console.log('modal fully hidden');
-      loadShoppingListPowerBar$1();
-    });
-
-
   });
 
   // Tag Search
@@ -1046,4 +790,4 @@
   })();
 
 })();
-//# sourceMappingURL=core-styles.js.map
+//# sourceMappingURL=core-styles-admin.js.map

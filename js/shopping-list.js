@@ -16,10 +16,10 @@ $(function() {
     let $aside = $('#site-aside-slider');
     if( $aside.hasClass('site-aside-slider-open') ){
       $aside.removeClass('site-aside-slider-open');
-      setCookie('site_aside', 'close', 1);
+      cs3.setCookie('site_aside', 'close', 1);
     } else {
       $aside.addClass('site-aside-slider-open');
-      setCookie('site_aside', 'open', 1);
+      cs3.setCookie('site_aside', 'open', 1);
     }
   });
 

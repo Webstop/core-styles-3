@@ -1,6 +1,6 @@
 "use strict";
 
-// Requires js-cookie
+// Requires cookies.js to be loaded first
 
 (function(){
   const publicLayout = document.querySelector('.public');
@@ -13,9 +13,9 @@
       event.preventDefault();
       publicLayout.classList.toggle('public-hide-sidenav');
       if(publicLayout.classList.contains('public-hide-sidenav')) {
-        setCookie('public_sidenav', 'hide', 1);
+        cs3.setCookie('public_sidenav', 'hide', 1);
       } else {
-        setCookie('public_sidenav', 'show', 1);
+        cs3.setCookie('public_sidenav', 'show', 1);
       }
     });
   });
@@ -24,9 +24,9 @@
       event.preventDefault();
       publicLayout.classList.toggle('public-hide-sidebar');
       if(publicLayout.classList.contains('public-hide-sidebar')) {
-        setCookie('public_sidebar', 'hide', 1);
+        cs3.setCookie('public_sidebar', 'hide', 1);
       } else {
-        setCookie('public_sidebar', 'show', 1);
+        cs3.setCookie('public_sidebar', 'show', 1);
       }
     });
   });

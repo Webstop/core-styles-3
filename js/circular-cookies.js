@@ -11,7 +11,7 @@
     if(document.body.clientWidth < 770 ){
       console.log('Setting circular cookie...');
       let name = window.webstop.retailerID + '_circular_format';
-      setCookie(name, 'online', 7); // Note: many browsers cap JS set cookies to 7 days max.
+      cs3.setCookie(name, 'online', 7); // Note: many browsers cap JS set cookies to 7 days max.
     }
   }
 
