@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title> Store List Item at Core-Styles 3 </title>
+    <title> Form Store Picker at Core-Styles 3 </title>
     
     
       <script src="https://kit.fontawesome.com/8bda546f76.js" crossorigin="anonymous"></script>
@@ -302,14 +302,6 @@
                 
                   
                     <li class="py-2 ps-4 ">
-                      <a href="/docs/3.0/components/text-editors/markdown/" class="d-inline-flex rounded">Markdown Editor</a>
-                    </li>
-                  
-                
-                  
-                
-                  
-                    <li class="py-2 ps-4 ">
                       <a href="/docs/3.0/components/navigation/paging/" class="d-inline-flex rounded">Paging</a>
                     </li>
                   
@@ -566,19 +558,108 @@
   <main class="admin-page" role="main">
     <section class="docs-heading inner-shadow">
       <h1 class="docs-heading-title shadow">
-        Store List Item
+        Form Store Picker
       </h1>
       
-        <p class="docs-heading-tagline">An individual store listing in a list of store locations.</p>
+        <p class="docs-heading-tagline">Interface for selecting a store and using it in a web form.</p>
       
     </section>
-    <h2 id="example">Example</h2>
-<p>Pretty straight forward. The <code>store-list-item</code> class namespaces the item, which includes address information for the
-store. This example wraps the contents of the element in a link, but you could alternatively make it a form element.</p>
-<p>{% capture example %}
-{% include examples/stores/_store-list-item-example.html store_number=221 address=&lsquo;221B Baker Street&rsquo; city=&lsquo;London&rsquo; location_name=&lsquo;Mystery Marketplace&rsquo; %}
-{% endcapture %}
-{% include example.html content=example %}</p>
+    <p>Prior to this element we used a standard <code>select</code> element to select a store in web forms.
+This is a cumbersome interface for retailers with a large number of stores.
+The Form Store Picker allows us to use the standard store selection interface used in the
+store locator in web forms.</p>
+<h2 id="examples">Examples</h2>
+<p>The base <code>data-store-picker</code> attribute defines the store picker.</p>
+<h3 id="basic-example">Basic Example</h3>
+<p>The consumer selects a store in a modal and the selection updates a
+hidden form input element in the form.</p>
+<div class="my-3 p-3 example">
+<input type="hidden" name="foo[store_id]" id="foo_store_id" >
+<div class="input-group mb-3">
+  <div class="form-control" id="foo_store_address" aria-label="Selected Store Address" aria-describedby="store-button">
+  <strong>Eastlake Woodlands Plaza</strong><br>
+  3488 East Lake Rd.<br>
+  Palm Harbor, FL 34685
+  </div>
+  <button class="btn btn-outline-primary" type="button" id="store-button"
+    data-store-picker 
+    data-store-picker-input-id="foo_store_id"
+    data-store-picker-address-id="foo_store_address"
+  >Select a Store</button>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;hidden&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;foo[store_id]&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;foo_store_id&#34;</span> <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group mb-3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;foo_store_address&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Selected Store Address&#34;</span> <span class="na">aria-describedby</span><span class="o">=</span><span class="s">&#34;store-button&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Eastlake Woodlands Plaza<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  3488 East Lake Rd.<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  Palm Harbor, FL 34685
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-outline-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;store-button&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">data-store-picker</span> 
+</span></span><span class="line"><span class="cl">    <span class="na">data-store-picker-input-id</span><span class="o">=</span><span class="s">&#34;foo_store_id&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">data-store-picker-address-id</span><span class="o">=</span><span class="s">&#34;foo_store_address&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&gt;</span>Select a Store<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+<h3 id="selection-states-example">Selection States Example</h3>
+<p>The following shows how the</p>
+<h4 id="before-store-selection">Before Store Selection</h4>
+<div class="input-group mb-3">
+  <div class="form-control" id="foo_store_address" aria-label="Selected Store Address" aria-describedby="store-button">
+    Please select a store.
+  </div>
+  <button class="btn btn-outline-primary" type="button" id="store-button"
+    data-store-picker 
+    data-store-picker-input-id="foo_store_id"
+    data-store-picker-address-id="foo_store_address"
+  >Select a Store</button>
+<h4 id="after-store-selection">After Store Selection</h4>
+<div class="input-group mb-3">
+  <div class="form-control" id="foo_store_address" aria-label="Selected Store Address" aria-describedby="store-button">
+  <strong>Eastlake Woodlands Plaza</strong><br>
+  3488 East Lake Rd.<br>
+  Palm Harbor, FL 34685
+  </div>
+  <button class="btn btn-outline-primary" type="button" id="store-button"
+    data-store-picker 
+    data-store-picker-input-id="foo_store_id"
+    data-store-picker-address-id="foo_store_address"
+  >Select a Store</button>
+<h4 id="attributes">Attributes</h4>
+<p>The following attributes are used by locate to enable rich functionality. These are placed on the button containing the <code>data-locate</code> attribute.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data-locate</code></td>
+<td>The attribute <code>data-locate</code> being present on the element makes it a clickable button.</td>
+</tr>
+<tr>
+<td><code>data-locate-target</code></td>
+<td>The attribute <code>data-locate-target</code> identifies the HTML element to place the search results inside.</td>
+</tr>
+<tr>
+<td><code>data-locate-message</code></td>
+<td>The attribute <code>data-locate-message</code> identifies the HTML element to place the status messages inside.</td>
+</tr>
+<tr>
+<td><code>data-locate-on-load</code></td>
+<td>The attribute <code>data-locate-on-load</code> tells the code to try geolocation on page load without waiting for a button click.</td>
+</tr>
+<tr>
+<td><code>data-locate-hide-me</code></td>
+<td>The attribute <code>data-locate-hide-me</code> identifies the HTML elements to hide while the search results are being displayed, and reveal when the search is cancelled.</td>
+</tr>
+<tr>
+<td><code>data-locate-redirect-url</code></td>
+<td>The <code>data-locate-redirect-url</code> attribute identifies the URL to use for the final destination. For example, return to the circular after using a store locator.</td>
+</tr>
+</tbody>
+</table>
 
   </main>
   
@@ -769,7 +850,7 @@ store. This example wraps the contents of the element in a link, but you could a
             
         
         
-            <li class="breadcrumb-item"><a href="/docs/3.0/grocery/stores/">Stores</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0/grocery/store-locator/">Store locator</a></li>
         
     
         
@@ -818,7 +899,7 @@ store. This example wraps the contents of the element in a link, but you could a
             
         
         
-            <li class="breadcrumb-item"><a href="/docs/3.0/grocery/stores/store-list-item/">Store list item</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0/grocery/store-locator/form-store-picker/">Form store picker</a></li>
         
     
         

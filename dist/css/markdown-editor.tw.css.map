@@ -1,1 +1,0 @@
-{"version":3,"sourceRoot":"","sources":["../../scss/markdown-editor.tw.css"],"names":[],"mappings":"AACA;AACA;AACA","file":"markdown-editor.tw.css","sourcesContent":["@charset \"utf-8\";\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n"]}
