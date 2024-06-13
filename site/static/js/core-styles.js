@@ -330,11 +330,13 @@
     });
 
     $(document.body).on('show.bs.modal', '#site-modal', function (event) {
+      let trigger = event.relatedTarget;
       let $trigger = $(event.relatedTarget);
       let title = $trigger.attr('data-title');
       let url = $trigger.attr('data-load');
       let content = $trigger.attr('data-content');
       let footer = $trigger.attr('data-footer');
+      let storeFormPicker = $trigger.is('[data-store-form-picker]');
       if(footer == 'hide'){
         $('#site-modal-footer').addClass('d-none');
       }
@@ -343,7 +345,12 @@
         $('#site-modal-body').html(content);
       }
       if(url){
-        $('#site-modal-body').load(url);
+        $('#site-modal-body').load(url, function(){
+          // special features
+          if(storeFormPicker){
+            webstop.stores.formPicker(trigger);
+          }
+        });
       }
     });
 
@@ -859,6 +866,62 @@
 
 
   });
+
+  // IIFE (Immediately Invoked Function Expression)
+  (function(webstop){
+
+    // Public Sub-Class
+    webstop.stores = {};
+
+    // Public Method formPicker();
+    // Called from the ajax-modal method as a callback that occurs after the store locator content loads.
+    // It registers all the Choose Store buttons in the store locator and attaches the functionality which
+    // populates the form and the UI.
+    webstop.stores.formPicker = function(trigger) {
+      // Setup data from Trigger
+      let inputSelector   = trigger.getAttribute('data-store-picker-input');
+      let addressSelector = trigger.getAttribute('data-store-picker-address');
+      let inputTarget   = document.querySelector(inputSelector);
+      let addressTarget = document.querySelector(addressSelector);
+      // Register all Choose Store buttons
+      let buttons = document.querySelectorAll('[data-store-selection]');
+      if(buttons.length !== 0) {
+        buttons.forEach((button) => {
+          let id      = button.getAttribute('data-store-id');
+          let name  = button.getAttribute('data-store-name');
+          let address  = button.getAttribute('data-store-address');
+          let city  = button.getAttribute('data-store-city');
+          let state  = button.getAttribute('data-store-state');
+          let zip  = button.getAttribute('data-store-zip');
+          let hasAddress = false;
+          if(name || address || city || state || zip){
+            hasAddress = true;
+          }
+          let addressHTML = '';
+          if(hasAddress) {
+            if (name) {
+              addressHTML += `<strong>${name}</strong><br>`;
+            }
+            addressHTML += `${address}<br>${city}, ${state} ${zip}`;
+          }
+          button.addEventListener("click", function (event) {
+            // Display the address in the UI
+            if(hasAddress){
+              addressTarget.innerHTML = addressHTML;
+            }
+            // Set the value in the form
+            inputTarget.value = id;
+            // Close the Store Picker modal
+            // let siteModal = new bootstrap.Modal('#site-modal');
+            // siteModal.hide;
+
+          });
+        });
+      }
+    };
+
+
+  })( window.webstop = window.webstop || {} );
 
   // Tag Search
 

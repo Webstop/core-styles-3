@@ -1,6 +1,6 @@
 {
   "name": "core-styles-3",
-  "version": "3.0.0-beta-15",
+  "version": "3.0.0-beta-16",
   "description": "Design System for Webstop's grocery websites.",
   "author": "Greg Hemphill",
   "license": "private",
@@ -34,7 +34,8 @@
     "watch-css-docs": "nodemon -L --watch site/assets/scss/ --ext scss --exec \"npm run css-compile-docs\"",
     "watch-js": "nodemon -L --watch js/ --ext scss --exec \"npm-run-all js js-docs\"",
     "clear": "rm -rf dist/",
-    "dist": "npm-run-all --parallel clear js css",
+    "dist": "npm-run-all clear dist-runner",
+    "dist-runner": "npm-run-all --parallel js css",
     "docs": "npm-run-all --parallel js-docs css-docs",
     "pushable": "npm-run-all --parallel dist docs"
   },

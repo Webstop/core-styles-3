@@ -23,4 +23,5 @@ import './locate';
 import './public-layout';
 import './search';
 import './shopping-list';
+import './store-locator';
 import './tags';

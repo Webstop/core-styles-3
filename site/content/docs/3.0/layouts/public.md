@@ -13,7 +13,17 @@ menu:
 we wanted access to all the things in core-styles from public pages, and that the thing we found most valuable from 
 Public-Styles was the page layout features. Now the page layout features of Public-Styles are included as part of Core-Styles.
 
-## Base Public Example
+## Examples
+
+The following examples show the various layout features of our public facing focused layout system.
+
+> <h4 class="mt-0">Site Modal</h4>
+>
+> To help keep the concepts easier to understand, we've left out the Site Modal code from the following HTML examples.
+> See the [Site Modal](#site-modal) section at the end of the page for more information.
+
+
+### Base Public Example
 
 This example contains a header, footer, and main content sections.
 
@@ -53,7 +63,7 @@ This example contains a header, footer, and main content sections.
 </div>
 ```
 
-## Sidecar Example
+### Sidecar Example
 
 <div class="row">
   <div class="col-auto">
@@ -94,7 +104,7 @@ This example contains a header, footer, and main content sections.
 </div>
 ```
 
-## Sidenav Example
+### Sidenav Example
 
 <div class="row">
   <div class="col-auto">
@@ -135,7 +145,7 @@ This example contains a header, footer, and main content sections.
 </div>
 ```
 
-## Sidecar and Sidenav Example
+### Sidecar and Sidenav Example
 
 <div class="row">
   <div class="col-auto">
@@ -180,7 +190,7 @@ This example contains a header, footer, and main content sections.
 </div>
 ```
 
-## Sidebar Example
+### Sidebar Example
 
 
 <div class="row">
@@ -223,7 +233,7 @@ This example contains a header, footer, and main content sections.
 ```
 
 
-## Sidecar and Sidebar Example
+### Sidecar and Sidebar Example
 
 <div class="row">
   <div class="col-auto">
@@ -268,7 +278,7 @@ This example contains a header, footer, and main content sections.
 </div>
 ```
 
-## Sidenav and Sidebar Example
+### Sidenav and Sidebar Example
 
 <div class="row">
   <div class="col-auto">
@@ -321,7 +331,7 @@ This example contains a header, footer, and main content sections.
 </div>
 ```
 
-## Sidecar, Sidenav, and Sidebar Example
+### Sidecar, Sidenav, and Sidebar Example
 
 <div class="row">
   <div class="col-auto">
@@ -554,3 +564,46 @@ The `data-ajax-form` & `action` attributes are required. The rest are optional.
     </tr>
   </tbody>
 </table>
+
+
+## Site Modal
+
+The Site Modal is an empty hidden modal available for use by features such as [AJAX Modal](/docs/3.0/components/ajax/ajax-modal/),
+and other features that rely on having a modal available. The modal is identified by the id attribute with a value of `site-modal`.
+The Site Modal is also available in the [Admin Layout](/docs/3.0/layouts/admin/).
+
+```html
+<div class="public">
+  <header class="public-header" role="banner">
+    Public Header...
+  </header>
+  <main class="public-page" role="main">
+    Public Page Main Content...
+  </main>
+  <footer class="public-footer" role="contentinfo">
+    Public Footer...
+  </footer>
+  <div class="site-modal modal fade" id="site-modal" tabindex="-1" role="dialog" aria-labelledby="site-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="site-modal-content modal-content">
+        <div class="modal-header">
+          <div class="row mx-0 w-100">
+            <div class="col ps-0">
+              <h4 class="site-modal-title modal-title" id="site-modal-title"></h4>
+            </div>
+            <div class="col-auto pe-0">
+              <button type="button" class="btn btn-light" data-bs-dismiss="modal" aria-label="Close">
+                <i class="fak fa-cancel"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="site-modal-body modal-body" id="site-modal-body"></div>
+        <div class="site-modal-footer modal-footer" id="site-modal-footer">
+          <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```

@@ -176,7 +176,7 @@
               <ul class="list-unstyled fw-normal pb-1 small">
 
                 <li class="py-2 ps-4 {{if or ($currentPage.IsMenuCurrent "grocery" .) ($currentPage.HasMenuCurrent "grocery" .) }} left-nav-active {{end}}">
-                  <a href="{{ .URL }}" class="d-inline-flex rounded">{{ .Name }}</a>
+                  <a href="{{ .URL }}" class="d-inline-flex rounded">{{ .Name }} X</a>
                 </li>
 
               </ul>
@@ -184,9 +184,38 @@
             </div>
           </li>
         {{ else }}
-
         {{ end }}
       {{ end }}
+
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.products }}
+    <li class="mb-1">
+      <button class="btn" data-bs-toggle="collapse" data-bs-target="#products-menu-collapse" aria-expanded="false">
+        <strong>Outside: {{ .Name }}</strong>
+      </button>
+    </li>
+      {{ if .HasChildren }}
+        <li class="mb-1">
+          <button class="btn" data-bs-toggle="collapse" data-bs-target="#products-menu-collapse" aria-expanded="false">
+            <strong> {{ .Name }}</strong>
+          </button>
+
+          <div class="collapse {{if or ($currentPage.IsMenuCurrent "products" .) ($currentPage.HasMenuCurrent "products" .) }} show {{end}}" id="products-menu-collapse">
+            {{ range .Children }}
+              <ul class="list-unstyled fw-normal pb-1 small">
+                <li class="py-2 ps-4 {{if or ($currentPage.IsMenuCurrent "products" .) ($currentPage.HasMenuCurrent "products" .) }} left-nav-active {{end}}">
+                  <a href="{{ .URL }}" class="d-inline-flex rounded">{{ .Name }} {{ .Parent }} </a>
+                {{ if .Page.Params.Product }}
+                <p class="docs-heading-tagline">{{ .Page.Params.Product | markdownify }}</p>
+                {{ end }}
+                </li>
+              </ul>
+            {{ end }}
+          </div>
+        </li>
+      {{ else }}
+      {{ end }}
+    {{ end }}
 
       {{ $currentPage := . }}
       {{ range .Site.Menus.utilities }}

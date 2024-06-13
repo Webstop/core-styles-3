@@ -10,11 +10,13 @@ $(function() {
   });
 
   $(document.body).on('show.bs.modal', '#site-modal', function (event) {
+    let trigger = event.relatedTarget
     let $trigger = $(event.relatedTarget)
     let title = $trigger.attr('data-title');
     let url = $trigger.attr('data-load');
     let content = $trigger.attr('data-content');
     let footer = $trigger.attr('data-footer');
+    let storeFormPicker = $trigger.is('[data-store-form-picker]');
     if(footer == 'hide'){
       $('#site-modal-footer').addClass('d-none');
     }
@@ -23,7 +25,12 @@ $(function() {
       $('#site-modal-body').html(content);
     }
     if(url){
-      $('#site-modal-body').load(url);
+      $('#site-modal-body').load(url, function(){
+        // special features
+        if(storeFormPicker){
+          webstop.stores.formPicker(trigger);
+        }
+      });
     }
   });
 
