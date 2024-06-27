@@ -325,7 +325,7 @@
     // Resets modal once closed
     $(document.body).on('hidden.bs.modal', '#site-modal', function () {
       $('#site-modal-title').text('');
-      $('#site-modal-body').html('');
+      $('#site-modal-body').html('<div class="text-center"><div class="spinner-grow" style="width: 5rem; height: 5rem;" role="status"></div><H4>Loading...</H4></div>');
       $('#site-modal-footer').removeClass('d-none');
     });
 
