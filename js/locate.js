@@ -17,6 +17,8 @@
   let has_action_url = false;
   let filter = '';
   let has_filter = false;
+  let main_action = '';
+  let has_main_action = false;
   let redirect_url = '';
   let has_redirect_url = false;
 
@@ -36,7 +38,8 @@
       const default_action_url = `${window.webstop.webHost}/retailers/${window.webstop.retailerID}/stores?display=results-only&latitude=${latitude}&longitude=${longitude}`;
       action_url = action_url || default_action_url;
       if(action_url == ''){ action_url = default_action_url; }
-      if(filter != ''){ filter += `&filter=${filter}`; }
+      if(filter != ''){ action_url += `&filter=${filter}`; }
+      if(main_action != ''){ action_url += `&main_action=${main_action}`; }
       if(redirect_url != ''){ action_url += `&url=${redirect_url}`; }
       load(target, action_url);
       if(display_messages){ message.textContent = ''; }
@@ -71,6 +74,10 @@
       has_filter = trigger.hasAttribute('data-locate-filter');
       if (has_filter) {
         filter = trigger.getAttribute('data-locate-filter');
+      }
+      has_main_action = trigger.hasAttribute('data-locate-main-action');
+      if (has_main_action) {
+        main_action = trigger.getAttribute('data-locate-main-action');
       }
       has_redirect_url = trigger.hasAttribute('data-locate-redirect-url');
       if (has_redirect_url) {

@@ -5,7 +5,7 @@ $(function() {
   // Resets modal once closed
   $(document.body).on('hidden.bs.modal', '#site-modal', function () {
     $('#site-modal-title').text('');
-    $('#site-modal-body').html('');
+    $('#site-modal-body').html('<div class="text-center"><div class="spinner-grow" style="width: 5rem; height: 5rem;" role="status"></div><H4>Loading...</H4></div>');
     $('#site-modal-footer').removeClass('d-none');
   });
 
@@ -28,13 +28,16 @@ $(function() {
       $('#site-modal-body').load(url, function(){
         // special features
         if(storeFormPicker){
+          // Sets store form picker when initial store locator list loads
           webstop.stores.formPicker(trigger);
+          // Resets store form picker when new content loads into the store locator results list
+          let storesListing = document.querySelector('#stores-search-results');
+          let storesListingObserver = new MutationObserver(function(){webstop.stores.formPicker(trigger);});
+          storesListingObserver.observe(storesListing, { attributes: false, childList: true, subtree: false });
         }
       });
     }
   });
 
 });
-
-
 

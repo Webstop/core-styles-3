@@ -348,7 +348,12 @@
         $('#site-modal-body').load(url, function(){
           // special features
           if(storeFormPicker){
+            // Sets store form picker when initial store locator list loads
             webstop.stores.formPicker(trigger);
+            // Resets store form picker when new content loads into the store locator results list
+            let storesListing = document.querySelector('#stores-search-results');
+            let storesListingObserver = new MutationObserver(function(){webstop.stores.formPicker(trigger);});
+            storesListingObserver.observe(storesListing, { attributes: false, childList: true, subtree: false });
           }
         });
       }

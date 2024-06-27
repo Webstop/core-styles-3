@@ -44,9 +44,8 @@
           }
           // Set the value in the form
           inputTarget.value = id;
-          // Close the Store Picker modal
-          // let siteModal = new bootstrap.Modal('#site-modal');
-          // siteModal.hide;
+          // Update the Select a Store button text
+          trigger.textContent = 'Change Store'
 
         });
       })

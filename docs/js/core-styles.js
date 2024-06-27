@@ -348,7 +348,12 @@
         $('#site-modal-body').load(url, function(){
           // special features
           if(storeFormPicker){
+            // Sets store form picker when initial store locator list loads
             webstop.stores.formPicker(trigger);
+            // Resets store form picker when new content loads into the store locator results list
+            let storesListing = document.querySelector('#stores-search-results');
+            let storesListingObserver = new MutationObserver(function(){webstop.stores.formPicker(trigger);});
+            storesListingObserver.observe(storesListing, { attributes: false, childList: true, subtree: false });
           }
         });
       }
@@ -584,7 +589,10 @@
     let locate_on_load = false;
     let action_url = '';
     let has_action_url = false;
+    let filter = '';
     let has_filter = false;
+    let main_action = '';
+    let has_main_action = false;
     let redirect_url = '';
     let has_redirect_url = false;
 
@@ -604,6 +612,8 @@
         const default_action_url = `${window.webstop.webHost}/retailers/${window.webstop.retailerID}/stores?display=results-only&latitude=${latitude}&longitude=${longitude}`;
         action_url = action_url || default_action_url;
         if(action_url == ''){ action_url = default_action_url; }
+        if(filter != ''){ action_url += `&filter=${filter}`; }
+        if(main_action != ''){ action_url += `&main_action=${main_action}`; }
         if(redirect_url != ''){ action_url += `&url=${redirect_url}`; }
         load(target, action_url);
         if(display_messages){ message.textContent = ''; }
@@ -637,7 +647,11 @@
         }
         has_filter = trigger.hasAttribute('data-locate-filter');
         if (has_filter) {
-          trigger.getAttribute('data-locate-filter');
+          filter = trigger.getAttribute('data-locate-filter');
+        }
+        has_main_action = trigger.hasAttribute('data-locate-main-action');
+        if (has_main_action) {
+          main_action = trigger.getAttribute('data-locate-main-action');
         }
         has_redirect_url = trigger.hasAttribute('data-locate-redirect-url');
         if (has_redirect_url) {
@@ -911,9 +925,8 @@
             }
             // Set the value in the form
             inputTarget.value = id;
-            // Close the Store Picker modal
-            // let siteModal = new bootstrap.Modal('#site-modal');
-            // siteModal.hide;
+            // Update the Select a Store button text
+            trigger.textContent = 'Change Store';
 
           });
         });

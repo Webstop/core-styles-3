@@ -609,7 +609,7 @@ store locator in web forms.</p>
   <div class="form-control" id="store-address" aria-label="Selected Store Address" aria-describedby="store-button">
   Select a Preferred Store...
   </div>
-  <a href="#" class="btn btn-outline-primary input-group-addon" id="store-button"
+  <button class="btn btn-outline-primary input-group-addon" id="store-button" type="button"
     data-store-form-picker
     data-store-picker-input="#store-id"
     data-store-picker-address="#store-address"
@@ -617,14 +617,14 @@ store locator in web forms.</p>
     data-bs-target="#site-modal" 
     data-load="/ajax/store_locator" 
     data-title="Select a Preferred Store"
-  >Select a Store</a>
+  >Select a Store</button>
 </div>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;hidden&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;store-id&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;store-id&#34;</span> <span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group mb-3&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;store-address&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Selected Store Address&#34;</span> <span class="na">aria-describedby</span><span class="o">=</span><span class="s">&#34;store-button&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  Select a Preferred Store...
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-outline-primary input-group-addon&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;store-button&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-outline-primary input-group-addon&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;store-button&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">data-store-form-picker</span>
 </span></span><span class="line"><span class="cl">    <span class="na">data-store-picker-input</span><span class="o">=</span><span class="s">&#34;#store-id&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">data-store-picker-address</span><span class="o">=</span><span class="s">&#34;#store-address&#34;</span>
@@ -632,13 +632,8 @@ store locator in web forms.</p>
 </span></span><span class="line"><span class="cl">    <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#site-modal&#34;</span> 
 </span></span><span class="line"><span class="cl">    <span class="na">data-load</span><span class="o">=</span><span class="s">&#34;/ajax/store_locator&#34;</span> 
 </span></span><span class="line"><span class="cl">    <span class="na">data-title</span><span class="o">=</span><span class="s">&#34;Select a Preferred Store&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&gt;</span>Select a Store<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&gt;</span>Select a Store<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
-<blockquote>
-<h5 id="bootstrap-3--4-compatability-note">Bootstrap 3 &amp; 4 Compatability Note</h5>
-<p>This component works well in Bootstrap 3, 4, &amp; 5 as designed above. If you only care about version 5 support you can
-change the link to a <code>button</code> tag and you can remove the <code>input-group-addon</code> class from the link.</p>
-</blockquote>
 <h3 id="selection-states-example">Selection States Example</h3>
 <p>The following shows how the component looks before and after a store selection has been made. The example above is
 fully functional and you can use it to try this effect.</p>
@@ -648,11 +643,11 @@ fully functional and you can use it to try this effect.</p>
   <div class="form-control" id="store-address-2" aria-label="Selected Store Address" aria-describedby="store-button-2">
     Please select a store.
   </div>
-  <a href="#" class="btn btn-outline-primary input-group-addon" id="store-button-2"
+  <button class="btn btn-outline-primary input-group-addon" id="store-button-2" type="button"
     data-store-picker 
     data-store-picker-input="#store-id-2"
     data-store-picker-address="#store-address-2"
-  >Select a Store</a>
+  >Select a Store</button>
 </div>
 <h4 id="after-store-selection">After Store Selection</h4>
 <p>After a store is collected we see the location name and store address.</p>
@@ -662,11 +657,11 @@ fully functional and you can use it to try this effect.</p>
   3488 East Lake Rd.<br>
   Palm Harbor, FL 34685
   </div>
-  <a href="#" class="btn btn-outline-primary input-group-addon" id="store-button-3"
+  <button class="btn btn-outline-primary input-group-addon" id="store-button-3" type="button"
     data-store-picker 
     data-store-picker-input="#store-id-3"
     data-store-picker-address="#store-address-3"
-  >Select a Store</a>
+  >Select a Store</button>
 </div>
 <h2 id="attributes">Attributes</h2>
 <p>The following attributes are used by the Form Store Picker to enable rich functionality. These are placed on the button containing the <code>data-store-picker</code> attribute.</p>

@@ -31,7 +31,7 @@ The consumer selects a store in a modal and the selection updates a hidden form 
   <div class="form-control" id="store-address" aria-label="Selected Store Address" aria-describedby="store-button">
   Select a Preferred Store...
   </div>
-  <a href="#" class="btn btn-outline-primary input-group-addon" id="store-button"
+  <button class="btn btn-outline-primary input-group-addon" id="store-button" type="button"
     data-store-form-picker
     data-store-picker-input="#store-id"
     data-store-picker-address="#store-address"
@@ -39,14 +39,9 @@ The consumer selects a store in a modal and the selection updates a hidden form 
     data-bs-target="#site-modal" 
     data-load="/ajax/store_locator" 
     data-title="Select a Preferred Store"
-  >Select a Store</a>
+  >Select a Store</button>
 </div>
 {{< /example >}}
-
-> ##### Bootstrap 3 & 4 Compatability Note
-> 
-> This component works well in Bootstrap 3, 4, & 5 as designed above. If you only care about version 5 support you can 
-> change the link to a `button` tag and you can remove the `input-group-addon` class from the link.
 
 ### Selection States Example
 
@@ -61,11 +56,11 @@ Before the store is selected we see a prompt to select a store.
   <div class="form-control" id="store-address-2" aria-label="Selected Store Address" aria-describedby="store-button-2">
     Please select a store.
   </div>
-  <a href="#" class="btn btn-outline-primary input-group-addon" id="store-button-2"
+  <button class="btn btn-outline-primary input-group-addon" id="store-button-2" type="button"
     data-store-picker 
     data-store-picker-input="#store-id-2"
     data-store-picker-address="#store-address-2"
-  >Select a Store</a>
+  >Select a Store</button>
 </div>
 
 #### After Store Selection
@@ -78,11 +73,11 @@ After a store is collected we see the location name and store address.
   3488 East Lake Rd.<br>
   Palm Harbor, FL 34685
   </div>
-  <a href="#" class="btn btn-outline-primary input-group-addon" id="store-button-3"
+  <button class="btn btn-outline-primary input-group-addon" id="store-button-3" type="button"
     data-store-picker 
     data-store-picker-input="#store-id-3"
     data-store-picker-address="#store-address-3"
-  >Select a Store</a>
+  >Select a Store</button>
 </div>
 
 ## Attributes
