@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="admin admin-with-sidenav {{ if (eq .Page.Params.toc true) }}admin-with-sidebar{{ end }}">
+<div layout-source="_default/docs"  class="admin admin-with-sidenav {{ if (eq .Page.Params.toc true) }}admin-with-sidebar{{ end }}">
   <header class="admin-header" role="banner">
     {{ partial "docs-navbar" . }}
   </header>

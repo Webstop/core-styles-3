@@ -5,8 +5,9 @@
 // - bootstrap
 
 // Core-Styles JS Files
-// These three need to go first, in this order, and with the same attributes.
+// These three need to go first, in this order.
 import './config';
+import './live';
 import './cookies';
 
 // The rest of the file are simply listed in alphabetical order.

@@ -14489,4 +14489,50 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
   }
 }
 
+.wsg-header {
+  background-color: #01000b !important;
+}
+
+.wsg-title-bg {
+  background-color: #0194d3;
+}
+
+.wsg-title-bg-gradient {
+  background: rgb(0, 179, 255);
+  background: linear-gradient(90deg, rgb(0, 179, 255) 0%, rgb(19, 185, 255) 50%, rgb(0, 179, 255) 100%);
+}
+
+.wsg-inner-shadow {
+  -moz-box-shadow: inset 0 -7px 7px -7px #777;
+  -webkit-box-shadow: inset 0 -7px 7px -7px #777;
+  box-shadow: inset 0 -7px 7px -7px #777;
+}
+
+.wsg-page-title {
+  font-weight: 900;
+  font-size: 50px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #777777, -5px -5px 5px #ffffff;
+}
+
+.docs-heading {
+  margin: -1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #5fb8ff;
+}
+.docs-heading .docs-heading-title {
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 700px;
+  text-align: center;
+  background: #fff;
+  border-radius: 1rem;
+}
+.docs-heading .docs-heading-tagline {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
 /*# sourceMappingURL=dev.css.map */

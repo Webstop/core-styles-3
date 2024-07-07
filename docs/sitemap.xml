@@ -94,9 +94,13 @@
   </url><url>
     <loc>http://localhost:1313/articles/</loc>
   </url><url>
+    <loc>http://localhost:1313/dev/aye/aye-tester/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/3.0/components/analytics/tracking/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/3.0/grocery/tracking/</loc>
+  </url><url>
+    <loc>http://localhost:1313/dev/aye/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/3.0/grocery/circulars/banner-item/</loc>
   </url><url>
@@ -171,6 +175,8 @@
     <loc>http://localhost:1313/docs/3.0/grocery/shopping-lists/recipes/</loc>
   </url><url>
     <loc>http://localhost:1313/dev/ad-builder/item-entry/</loc>
+  </url><url>
+    <loc>http://localhost:1313/dev/aye/item-entry/</loc>
   </url><url>
     <loc>http://localhost:1313/dev/layouts/</loc>
   </url><url>

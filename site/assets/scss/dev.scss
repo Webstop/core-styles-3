@@ -1,6 +1,10 @@
 @charset "utf-8";
 
 @import
+  //'variables_bootstrap',
   '../../../node_modules/bootstrap/scss/bootstrap',
-  '../../../scss/core-styles'
+  '../../../scss/core-styles',
+
+  'variables',
+  'heading'
 ;
