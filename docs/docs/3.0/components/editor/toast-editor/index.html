@@ -2,7 +2,7 @@
 <html>
   <head layout-source="_default/baseof">
     <meta charset="utf-8" />
-    <title> Working with AJAX at Core-Styles 3 </title>
+    <title> Toast Markdown Editor at Core-Styles 3 </title>
     
     
       <script src="https://kit.fontawesome.com/8bda546f76.js" crossorigin="anonymous"></script>
@@ -19,7 +19,7 @@
   <body data-retailer-id="1" data-api-host="http://localhost:3000">
     <section class="wsg-content">
       
-<div layout-source="_default/docs"  class="admin admin-with-sidenav ">
+<div layout-source="_default/docs"  class="admin admin-with-sidenav admin-with-sidebar">
   <header class="admin-header" role="banner">
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark wsg-header shadow">
   <div class="container-fluid">
@@ -120,7 +120,7 @@
             </button>
 
             <div
-              class="collapse  show "
+              class="collapse "
               id="guides-menu-collapse">
               
               <ul class="list-unstyled fw-normal pb-1 small">
@@ -162,7 +162,7 @@
               <ul class="list-unstyled fw-normal pb-1 small">
 
                 <li
-                  class="py-2 ps-4  left-nav-active ">
+                  class="py-2 ps-4 ">
                   <a href="/guides/3.0/working-with-ajax/" class="d-inline-flex rounded">Working with AJAX</a>
                 </li>
 
@@ -322,11 +322,11 @@
               <strong> editor</strong>
             </button class="btn">
 
-            <div class="collapse " id="components-menu-collapse">
+            <div class="collapse  show " id="components-menu-collapse">
               <ul class="list-unstyled fw-normal pb-1 small">
                 
                   
-                    <li class="py-2 ps-4 ">
+                    <li class="py-2 ps-4  left-nav-active ">
                       <a href="/docs/3.0/components/editor/toast-editor/" class="d-inline-flex rounded">Toast Markdown Editor</a>
                     </li>
                   
@@ -609,16 +609,157 @@
   <main class="admin-page" role="main">
     <section class="docs-heading inner-shadow">
       <h1 class="docs-heading-title shadow">
-        Working with AJAX
+        Toast Markdown Editor
       </h1>
       
-        <p class="docs-heading-tagline">Guide for working with components that utilize AJAX .</p>
+        <p class="docs-heading-tagline">Use the browser&rsquo;s built in geolocation features.</p>
       
     </section>
-    <p>This has completely changed. We don&rsquo;t attempt to do much of anything fancy, just link to static documents.</p>
-<p>Someone really should take the initiative to re-write this page, just sayin'.</p>
+    <p>Built for features like a store locator,
+the locate functionality uses the web browser&rsquo;s geolocation capabilities to get your latitude and longitude, and use it
+to find nearby stores.</p>
+<h2 id="examples">Examples</h2>
+<p>The base <code>data-locate</code> attribute defines the locate button.</p>
+<h3 id="basic-example">Basic Example</h3>
+<div class="my-3 p-3 example">
+<form action="/ajax/alert_success" method="get">
+<textarea data-markdown-editor name="content" rows="10">
+# Greg Hemphill
+
+- Talented Developer
+- Stunning Good Looks
+
+A paragraph with **bold** text inside.
+
+</textarea>
+<button type="submit" class="btn btn-primary">Submit Form</button>
+</form>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">data-markdown-editor</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;content&#34;</span> <span class="na">rows</span><span class="o">=</span><span class="s">&#34;10&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"># Greg Hemphill
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- Talented Developer
+</span></span><span class="line"><span class="cl">- Stunning Good Looks
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">A paragraph with **bold** text inside.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span><span class="p">&gt;</span>Submit Form<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
+<h4 id="attributes">Attributes</h4>
+<p>The following attributes are used by locate to enable rich functionality. These are placed on the button containing the <code>data-locate</code> attribute.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data-locate</code></td>
+<td>The attribute <code>data-locate</code> being present on the element makes it a clickable button.</td>
+</tr>
+<tr>
+<td><code>data-locate-target</code></td>
+<td>The attribute <code>data-locate-target</code> identifies the HTML element to place the search results inside.</td>
+</tr>
+<tr>
+<td><code>data-locate-message</code></td>
+<td>The attribute <code>data-locate-message</code> identifies the HTML element to place the status messages inside.</td>
+</tr>
+<tr>
+<td><code>data-locate-on-load</code></td>
+<td>The attribute <code>data-locate-on-load</code> tells the code to try geolocation on page load without waiting for a button click.</td>
+</tr>
+<tr>
+<td><code>data-locate-hide-me</code></td>
+<td>The attribute <code>data-locate-hide-me</code> identifies the HTML elements to hide while the search results are being displayed, and reveal when the search is cancelled.</td>
+</tr>
+<tr>
+<td><code>data-locate-redirect-url</code></td>
+<td>The <code>data-locate-redirect-url</code> attribute identifies the URL to use for the final destination. For example, return to the circular after using a store locator.</td>
+</tr>
+</tbody>
+</table>
+<p>toast.js = 539 kb
+toast.css = 165 kb</p>
+<h1 id="editor-example">Editor Example:</h1>
+<div id="editor"></div>
+<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+<script>
+// let content = '# Awesome Heading';
+// window.onload = function() {
+//   const Editor = toastui.Editor;
+//   const editor = new Editor({
+//     el: document.querySelector('#editor'),
+//     height: '500px',
+//     initialValue: content,
+//     initialEditType: 'wysiwyg',
+//     toolbarItems: [
+//               ['heading', 'bold', 'italic'],
+//               ['ul', 'ol', 'indent', 'outdent'],
+//               ['hr', 'table', 'image', 'link']
+//     ]
+//   });
+//
+//   editor.getMarkdown();
+// };
+//
+// const matches = container.querySelectorAll("[data-editor]");
+</script>
+<h3 id="example-editor-from-script">Example Editor from Script:</h3>
+<textarea rows="10">
+# Greg Hemphill
+
+- Talented Developer
+- Stunning Good Looks
+
+</textarea>
+<form action="/ajax/alert_success">
+<textarea data-markdown-editorX rows="10">
+# Greg Hemphill
+<ul>
+<li>Talented Developer</li>
+<li>Stunning Good Looks</li>
+</ul>
+<p>A paragraph with <strong>bold</strong> text inside.</p>
+</textarea>
+<button type="submit" class="btn btn-primary">Submit Form</button>
+</form>
+<textarea rows="10">
+# Greg Hemphill
+
+- Talented Developer
+- Stunning Good Looks
+
+</textarea>
 
   </main>
+  
+    <aside class="admin-sidebar">
+      <h4 class="border-bottom">On this page</h4>
+      <div class="wsg-table-of-contents">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#examples">Examples</a>
+      <ul>
+        <li><a href="#basic-example">Basic Example</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#example-editor-from-script">Example Editor from Script:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </aside>
   
   <footer class="admin-footer docs-footer" role="contentinfo">
     
@@ -684,7 +825,7 @@
             
         
         
-            <li class="breadcrumb-item"><a href="/guides/">Guides</a></li>
+            <li class="breadcrumb-item"><a href="/docs/">Docs</a></li>
         
     
         
@@ -721,7 +862,7 @@
             
         
         
-            <li class="breadcrumb-item"><a href="/guides/3.0/">3.0</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0/">3.0</a></li>
         
     
         
@@ -762,7 +903,7 @@
             
         
         
-            <li class="breadcrumb-item"><a href="/guides/3.0/working-with-ajax/">Working with ajax</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/">Components</a></li>
         
     
         
@@ -798,6 +939,108 @@
         
             
         
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/editor/">Editor</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/editor/toast-editor/">Toast editor</a></li>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
             
         
             

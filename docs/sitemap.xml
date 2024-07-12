@@ -176,8 +176,6 @@
   </url><url>
     <loc>http://localhost:1313/dev/ad-builder/item-entry/</loc>
   </url><url>
-    <loc>http://localhost:1313/dev/aye/item-entry/</loc>
-  </url><url>
     <loc>http://localhost:1313/dev/layouts/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/3.0/components/forms/search/</loc>
@@ -244,9 +242,13 @@
   </url><url>
     <loc>http://localhost:1313/docs/3.0/components/tagging/tags/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/3.0/components/editor/</loc>
+  </url><url>
     <loc>http://localhost:1313/resources/df_2020_iphone_se/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/3.0/grocery/circulars/thumbnail-circular-item/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/3.0/components/editor/toast-editor/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/3.0/layouts/toolbar/</loc>
   </url><url>

@@ -55,6 +55,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-replace": "^5.0.5",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@toast-ui/editor": "^3.2.2",
     "ahoy.js": "^0.4.3",
     "bootstrap": "^5.3.3",
     "bootstrap-5-docs": "github:hemphill/bootstrap-5-docs#main",

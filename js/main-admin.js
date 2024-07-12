@@ -19,5 +19,7 @@ import './checkbox-selector';
 import './circular-cookies';
 import './filter-search';
 import './form-toggles';
+import './live';
+import './markdown-editor';
 import './search';
 import './tags';
