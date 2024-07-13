@@ -9,10 +9,13 @@
     let pixels = 0;
     let content = textarea.value;
     let height = '300px';
+    let mode = 'wysiwyg'; // Accepts `wysiwyg`, `markdown`, or `split-pane`.
+    let previewStyle = 'tab'; // Accepts 'tab' or 'vertical'.
+    let initialEditType = 'wysiwyg';
     let toolbarAttr = textarea.getAttribute('data-editor-toolbar');
     let toolbarItems = [
       ['heading', 'bold', 'italic'],
-      ['ul', 'ol', 'indent', 'outdent'],
+      ['ul', 'ol'],
       ['hr', 'table', 'image', 'link']
     ]
 
@@ -25,7 +28,7 @@
       toolbarItems = [
         ['heading', 'bold', 'italic', 'strike'],
         ['hr', 'quote'],
-        ['ul', 'ol', 'task', 'indent', 'outdent'],
+        ['ul', 'ol'],
         ['table', 'image', 'link'],
         ['code', 'codeblock']
       ]
@@ -47,11 +50,28 @@
       height = pixels+ 'px';
     }
 
+    if (textarea.hasAttribute('data-editor-mode')) {
+      mode = textarea.getAttribute('data-editor-mode')
+      if (mode === 'wysiwyg') {
+        // Same as default behavior
+        initialEditType = 'wysiwyg';
+        previewStyle = 'tab';
+      } else if (mode === 'markdown') {
+        initialEditType = 'markdown';
+        previewStyle = 'tab';
+      } else if (mode === 'split-pane') {
+        initialEditType = 'markdown';
+        previewStyle = 'vertical';
+      }
+
+    }
+
     return {
       height: height,
       content: content,
       toolbarItems: toolbarItems,
-      initialEditType: 'wysiwyg'
+      previewStyle: previewStyle,
+      initialEditType: initialEditType
     }
   }
 
@@ -110,7 +130,7 @@
       textarea.value = editor.getMarkdown();
       console.log('Submit Textarea:');
       console.log(textarea.value);
-      //form.submit();
+      form.submit();
 
 
       // Log a message to the console when the form is submitted

@@ -615,12 +615,30 @@
         <p class="docs-heading-tagline">Use the browser&rsquo;s built in geolocation features.</p>
       
     </section>
-    <p>Built for features like a store locator,
-the locate functionality uses the web browser&rsquo;s geolocation capabilities to get your latitude and longitude, and use it
-to find nearby stores.</p>
+    <p>Our markdown editor uses the <a href="https://ui.toast.com/tui-editor">Toast UI Editor</a> to provide
+WYSIWYG style text editing.  The text editor can be applied to any textarea within a web form.</p>
 <h2 id="examples">Examples</h2>
-<p>The base <code>data-locate</code> attribute defines the locate button.</p>
-<h3 id="basic-example">Basic Example</h3>
+<p>The base <code>data-markdown-editor</code> attribute defines the markdown editor. It is expected to be
+placed on a <code>textarea</code> element, which is nested inside a <code>form</code> element.</p>
+<p>The script will find the parent <code>form</code> element and place the editor contents inside the <code>textarea</code>
+when the form is submitted.</p>
+<p>All attributes other than the <code>data-markdown-editor</code> attribute are optional.</p>
+<blockquote>
+<h4 class="mt-0">Developer's Note</h4>
+<p>These feature uses the <a href="https://ui.toast.com/tui-editor">Toast UI Editor</a>. Unfortunately the
+files for this editor are quite large, with the javascript file coming in at 539kb and the
+css file coming in at 165kb. Because of this core-styles will dynamically load the editor files
+if a data-markdown-editor attribute is found on the current web page.</p>
+</blockquote>
+<h3 id="simple-example">Simple Example</h3>
+<p>This is a simple editor using all the defaults. We default to a WYSIWYG style editor, with the standard to.</p>
+<p>Defaults Include:</p>
+<ul>
+<li>WYSIWYG mode</li>
+<li>300px height</li>
+<li>Standard toolbar</li>
+</ul>
+<p><strong>This simple example uses a default set of options that should work best for mose use cases.</strong></p>
 <div class="my-3 p-3 example">
 <form action="/ajax/alert_success" method="get">
 <textarea data-markdown-editor name="content">
@@ -632,7 +650,6 @@ to find nearby stores.</p>
 A paragraph with **bold** text inside.
 
 </textarea>
-<button type="submit" class="btn btn-primary">Submit Form</button>
 </form>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">data-markdown-editor</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;content&#34;</span><span class="p">&gt;</span>
@@ -644,10 +661,177 @@ A paragraph with **bold** text inside.
 </span></span><span class="line"><span class="cl">A paragraph with **bold** text inside.
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span><span class="p">&gt;</span>Submit Form<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
-<h4 id="attributes">Attributes</h4>
-<p>The following attributes are used by locate to enable rich functionality. These are placed on the button containing the <code>data-locate</code> attribute.</p>
+<h3 id="display-mode-examples">Display Mode Examples</h3>
+<p>There are three display modes available <code>wysiwyg</code>, <code>markdown</code>, or <code>split-pane</code>. The
+<code>data-editor-mode</code> attribute determines the display mode. Omit the <code>data-editor-mode</code>
+attribute to use the standard mode.</p>
+<h3 id="markdown-display-mode">Markdown Display Mode</h3>
+<p>Markdown display modes defaults the editor to using raw markdown in the editor, with a
+preview tab. Markdown mode is achieved by using the <code>data-editor-mode=&quot;markdown&quot;</code> attribute.</p>
+<div class="my-3 p-3 example">
+<form action="/ajax/alert_success" method="get">
+<textarea data-markdown-editor name="content" data-editor-mode="markdown">
+# Greg Hemphill
+
+- Talented Developer
+- Stunning Good Looks
+
+A paragraph with **bold** text inside.
+
+</textarea>
+</form>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">data-markdown-editor</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;content&#34;</span> <span class="na">data-editor-mode</span><span class="o">=</span><span class="s">&#34;markdown&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"># Greg Hemphill
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- Talented Developer
+</span></span><span class="line"><span class="cl">- Stunning Good Looks
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">A paragraph with **bold** text inside.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
+<h3 id="markdown-display-mode-1">Markdown Display Mode</h3>
+<p>Split-Pane display modes defaults the editor to using raw markdown in a right column editor, with a
+preview in a left column. Split-Pane mode is achieved by using the <code>data-editor-mode=&quot;split-pane&quot;</code> attribute.</p>
+<div class="my-3 p-3 example">
+<form action="/ajax/alert_success" method="get">
+<textarea data-markdown-editor name="content" data-editor-mode="split-pane">
+# Greg Hemphill
+
+- Talented Developer
+- Stunning Good Looks
+
+A paragraph with **bold** text inside.
+
+</textarea>
+</form>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">data-markdown-editor</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;content&#34;</span> <span class="na">data-editor-mode</span><span class="o">=</span><span class="s">&#34;split-pane&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"># Greg Hemphill
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- Talented Developer
+</span></span><span class="line"><span class="cl">- Stunning Good Looks
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">A paragraph with **bold** text inside.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
+<h3 id="wysiwyg-display-mode">WYSIWYG Display Mode</h3>
+<blockquote>
+<h4 class="mt-0">What is a WYSIWYG?</h4>
+<p>WYSIWYG stands for What You See Is What You Get. Microsoft Word is an example of a
+WYSIWYG editor.</p>
+</blockquote>
+<p>The WYSIWYG display mode is achieved by not including a <code>data-editor-mode</code> attribute,
+or by setting the attribute to <code>data-editor-mode=&quot;wysiwyg&quot;</code>.</p>
+<div class="my-3 p-3 example">
+<form action="/ajax/alert_success" method="get">
+<textarea data-markdown-editor name="content">
+# Greg Hemphill
+
+- Talented Developer
+- Stunning Good Looks
+
+A paragraph with **bold** text inside.
+
+</textarea>
+</form>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">data-markdown-editor</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;content&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"># Greg Hemphill
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- Talented Developer
+</span></span><span class="line"><span class="cl">- Stunning Good Looks
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">A paragraph with **bold** text inside.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
+<h2 id="toolbar-examples">Toolbar Examples</h2>
+<p>There are three toolbar settings available <code>standard</code>, <code>basic</code> or <code>full</code>. Omitting the attribute defaults to the <code>standard</code> style.</p>
+<h2 id="basic-toolbar-example">Basic Toolbar Example</h2>
+<p>This toolbar uses only inline style features. It&rsquo;s useful when you want to limit the size
+and complexity of the text content.</p>
+<p>Use <code>data-editor-toolbar=&quot;basic&quot;</code> on the <code>textarea</code> to use a basic toolbar.</p>
+<div class="my-3 p-3 example">
+<form action="/ajax/alert_success" method="get">
+<textarea data-markdown-editor name="content" data-editor-toolbar="basic">
+# Greg Hemphill
+
+- Talented Developer
+- Stunning Good Looks
+
+A paragraph with **bold** text inside.
+
+</textarea>
+</form>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">data-markdown-editor</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;content&#34;</span> <span class="na">data-editor-toolbar</span><span class="o">=</span><span class="s">&#34;basic&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"># Greg Hemphill
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- Talented Developer
+</span></span><span class="line"><span class="cl">- Stunning Good Looks
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">A paragraph with **bold** text inside.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
+<h2 id="standard-toolbar-example">Standard Toolbar Example</h2>
+<p>Omitting the <code>data-editor-toolbar</code> attribute defaults to the <code>standard</code> style.</p>
+<div class="my-3 p-3 example">
+<form action="/ajax/alert_success" method="get">
+<textarea data-markdown-editor name="content">
+# Greg Hemphill
+
+- Talented Developer
+- Stunning Good Looks
+
+A paragraph with **bold** text inside.
+
+</textarea>
+</form>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">data-markdown-editor</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;content&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"># Greg Hemphill
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- Talented Developer
+</span></span><span class="line"><span class="cl">- Stunning Good Looks
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">A paragraph with **bold** text inside.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
+<h2 id="full-toolbar-example">Full Toolbar Example</h2>
+<p>This toolbar uses developer features, like syntax highlighting. It&rsquo;s useful when you want to use the editor for
+developer focused features.</p>
+<p>Use <code>data-editor-toolbar=&quot;full&quot;</code> on the <code>textarea</code> to use a full toolbar.</p>
+<div class="my-3 p-3 example">
+<form action="/ajax/alert_success" method="get">
+<textarea data-markdown-editor name="content" data-editor-toolbar="full">
+# Greg Hemphill
+
+- Talented Developer
+- Stunning Good Looks
+
+A paragraph with **bold** text inside.
+
+</textarea>
+</form>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">data-markdown-editor</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;content&#34;</span> <span class="na">data-editor-toolbar</span><span class="o">=</span><span class="s">&#34;full&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"># Greg Hemphill
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- Talented Developer
+</span></span><span class="line"><span class="cl">- Stunning Good Looks
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">A paragraph with **bold** text inside.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
+<h2 id="attributes">Attributes</h2>
+<p>The following attributes are used to enable rich functionality. These are placed on the textarea containing the <code>data-markdown-editor</code> attribute.</p>
 <table>
 <thead>
 <tr>
@@ -658,28 +842,26 @@ A paragraph with **bold** text inside.
 <tbody>
 <tr>
 <td><code>data-markdown-editor</code></td>
-<td>The attribute <code>data-locate</code> being present on the element makes it a clickable button.</td>
+<td>The attribute <code>data-markdown-editor</code> being present on the element makes it into an WYSIWYG text editor.</td>
 </tr>
 <tr>
 <td><code>data-editor-toolbar</code></td>
-<td>The attribute <code>data-locate-target</code> identifies the HTML element to place the search results inside.</td>
+<td>Optional attribute that specifies the type of tool bar to use. Accepts the values <code>standard</code>, <code>basic</code> or <code>full</code>. Omitting the attribute defaults to the <code>standard</code> style.</td>
 </tr>
 <tr>
 <td><code>rows</code></td>
-<td>The attribute <code>data-locate-message</code> identifies the HTML element to place the status messages inside.</td>
+<td>Optional attribute sets the height of the editor. Indicates the number of rows of text to have visible without scrolling. The <code>data-editor-height</code> attribute will override the <code>rows</code> attribute if both are present.</td>
 </tr>
 <tr>
 <td><code>data-editor-height</code></td>
-<td>The attribute <code>data-locate-on-load</code> tells the code to try geolocation on page load without waiting for a button click.</td>
+<td>Optional attribute sets the height of the editor. The <code>data-editor-height</code> attribute will override the <code>rows</code> attribute if both are present.</td>
 </tr>
 <tr>
-<td><code>data-locate-hide-me</code></td>
-<td>The attribute <code>data-locate-hide-me</code> identifies the HTML elements to hide while the search results are being displayed, and reveal when the search is cancelled.</td>
+<td><code>data-editor-mode</code></td>
+<td>Optional attribute sets the default behavior of the editor. Accepts the values <code>wysiwyg</code>, <code>markdown</code>, or <code>split-pane</code>. Omitting the attribute defaults to the <code>wysiwyg</code> mode.</td>
 </tr>
 </tbody>
 </table>
-<p>toast.js = 539 kb
-toast.css = 165 kb</p>
 
   </main>
   
@@ -690,9 +872,18 @@ toast.css = 165 kb</p>
   <ul>
     <li><a href="#examples">Examples</a>
       <ul>
-        <li><a href="#basic-example">Basic Example</a></li>
+        <li><a href="#simple-example">Simple Example</a></li>
+        <li><a href="#display-mode-examples">Display Mode Examples</a></li>
+        <li><a href="#markdown-display-mode">Markdown Display Mode</a></li>
+        <li><a href="#markdown-display-mode-1">Markdown Display Mode</a></li>
+        <li><a href="#wysiwyg-display-mode">WYSIWYG Display Mode</a></li>
       </ul>
     </li>
+    <li><a href="#toolbar-examples">Toolbar Examples</a></li>
+    <li><a href="#basic-toolbar-example">Basic Toolbar Example</a></li>
+    <li><a href="#standard-toolbar-example">Standard Toolbar Example</a></li>
+    <li><a href="#full-toolbar-example">Full Toolbar Example</a></li>
+    <li><a href="#attributes">Attributes</a></li>
   </ul>
 </nav>
       </div>
