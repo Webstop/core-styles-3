@@ -623,7 +623,7 @@ to find nearby stores.</p>
 <h3 id="basic-example">Basic Example</h3>
 <div class="my-3 p-3 example">
 <form action="/ajax/alert_success" method="get">
-<textarea data-markdown-editor name="content" rows="10">
+<textarea data-markdown-editor name="content">
 # Greg Hemphill
 
 - Talented Developer
@@ -635,7 +635,7 @@ A paragraph with **bold** text inside.
 <button type="submit" class="btn btn-primary">Submit Form</button>
 </form>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">data-markdown-editor</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;content&#34;</span> <span class="na">rows</span><span class="o">=</span><span class="s">&#34;10&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">data-markdown-editor</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;content&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"># Greg Hemphill
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">- Talented Developer
@@ -657,84 +657,29 @@ A paragraph with **bold** text inside.
 </thead>
 <tbody>
 <tr>
-<td><code>data-locate</code></td>
+<td><code>data-markdown-editor</code></td>
 <td>The attribute <code>data-locate</code> being present on the element makes it a clickable button.</td>
 </tr>
 <tr>
-<td><code>data-locate-target</code></td>
+<td><code>data-editor-toolbar</code></td>
 <td>The attribute <code>data-locate-target</code> identifies the HTML element to place the search results inside.</td>
 </tr>
 <tr>
-<td><code>data-locate-message</code></td>
+<td><code>rows</code></td>
 <td>The attribute <code>data-locate-message</code> identifies the HTML element to place the status messages inside.</td>
 </tr>
 <tr>
-<td><code>data-locate-on-load</code></td>
+<td><code>data-editor-height</code></td>
 <td>The attribute <code>data-locate-on-load</code> tells the code to try geolocation on page load without waiting for a button click.</td>
 </tr>
 <tr>
 <td><code>data-locate-hide-me</code></td>
 <td>The attribute <code>data-locate-hide-me</code> identifies the HTML elements to hide while the search results are being displayed, and reveal when the search is cancelled.</td>
 </tr>
-<tr>
-<td><code>data-locate-redirect-url</code></td>
-<td>The <code>data-locate-redirect-url</code> attribute identifies the URL to use for the final destination. For example, return to the circular after using a store locator.</td>
-</tr>
 </tbody>
 </table>
 <p>toast.js = 539 kb
 toast.css = 165 kb</p>
-<h1 id="editor-example">Editor Example:</h1>
-<div id="editor"></div>
-<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
-<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
-<script>
-// let content = '# Awesome Heading';
-// window.onload = function() {
-//   const Editor = toastui.Editor;
-//   const editor = new Editor({
-//     el: document.querySelector('#editor'),
-//     height: '500px',
-//     initialValue: content,
-//     initialEditType: 'wysiwyg',
-//     toolbarItems: [
-//               ['heading', 'bold', 'italic'],
-//               ['ul', 'ol', 'indent', 'outdent'],
-//               ['hr', 'table', 'image', 'link']
-//     ]
-//   });
-//
-//   editor.getMarkdown();
-// };
-//
-// const matches = container.querySelectorAll("[data-editor]");
-</script>
-<h3 id="example-editor-from-script">Example Editor from Script:</h3>
-<textarea rows="10">
-# Greg Hemphill
-
-- Talented Developer
-- Stunning Good Looks
-
-</textarea>
-<form action="/ajax/alert_success">
-<textarea data-markdown-editorX rows="10">
-# Greg Hemphill
-<ul>
-<li>Talented Developer</li>
-<li>Stunning Good Looks</li>
-</ul>
-<p>A paragraph with <strong>bold</strong> text inside.</p>
-</textarea>
-<button type="submit" class="btn btn-primary">Submit Form</button>
-</form>
-<textarea rows="10">
-# Greg Hemphill
-
-- Talented Developer
-- Stunning Good Looks
-
-</textarea>
 
   </main>
   
@@ -746,14 +691,6 @@ toast.css = 165 kb</p>
     <li><a href="#examples">Examples</a>
       <ul>
         <li><a href="#basic-example">Basic Example</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#example-editor-from-script">Example Editor from Script:</a></li>
       </ul>
     </li>
   </ul>

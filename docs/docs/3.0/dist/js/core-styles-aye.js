@@ -3,62 +3,110 @@
 
   // Aye
 
-  $(function() {
-    // Here we set the thee possible events types data-aye-view, data-aye-click, & data-aye-submit
+  // Please Note: this file is divided into 2 sections (I & II).
+  // Section I is the newer code that has been refactored into Vanilla JS.
+  // Section II is the older jQuery based code that still needs to be converted to Vanilla JS.
 
-    // Sends an ahoy track when the element is served to the browser.
-    // TODO: enhance to track items brought onto the page via Ajax. It currently only works on items in the initial page render.
-    $('[data-aye-view]').each(function(){
-      let $element = $(this);
-      let cargo = ayeCargo(this);
-      ahoy.track('view ' + $element.attr('data-aye-view'), cargo);
-    });
+  // Section I: Newer Vanilla JS version. Namespaced into window.webstop.aye
+  (function( webstop ) {
 
-    // Sends an ahoy track when the user clicks on the element.
-    $(document.body).on('click', '[data-aye-click]',  function(){
-      let $element = $(this);
-      let cargo = ayeCargo(this);
-      ahoy.track('click ' + $element.attr('data-aye-click'), cargo);
-    });
-
-    // Sends an ahoy track when a form is submitted. Place on the form tag.
-    $(document.body).on('submit', '[data-aye-submit]', function(){
-      let $element = $(this);
-      let cargo = ayeCargo(this);
-      cargo = ayeFormidable($element, cargo);
-      ahoy.track('submit ' + $element.attr('data-aye-submit'), cargo);
-    });
+    // Public Sub-Class
+    webstop.aye = {};
+    // Aye data attributes
+    let attrView     = 'data-aye-view';
+    let attrClick    = 'data-aye-click';
+    let attrSubmit   = 'data-aye-submit';
+    let attrWatching = 'data-aye-watching';
 
 
-    // The next two functions (ayeCargo & ayeFormidable) gather data and format it for submitting to ahoy.track
-
-    // ayeCargo gathers Aye data attributes from an HTML element and formats them for API usage.
-    function ayeCargo(element){
+    webstop.aye.cargo = function(element){
       let properties = {};
-      $.each(element.attributes, function( index, attr ) {
-        if(attr.name.indexOf('data-aye-property-')===0) {
-          properties[attr.name.slice(18).split("-").join("_").toLowerCase()] = attr.value;
-        } else if(attr.name == 'data-aye-click' || attr.name == 'data-aye-view' || attr.name =='data-aye-submit' ); else if(attr.name.indexOf('data-aye-')===0) {
-          properties[attr.name.slice(9).split("-").join("_").toLowerCase()] = attr.value;
+      for(let attribute of element.attributes) {
+        if(attribute.name.indexOf('data-aye-property-')===0) {
+          properties[attribute.name.slice(18).split("-").join("_").toLowerCase()] = attribute.value;
+        } else if(attribute.name == attrClick || attribute.name == attrView || attribute.name == attrSubmit || attribute.name == attrWatching ); else if(attribute.name.indexOf('data-aye-')===0) {
+          properties[attribute.name.slice(9).split("-").join("_").toLowerCase()] = attribute.value;
         }
-      });
+      }
       return properties;
-    }
+    };
 
-    // ayeFormidable gathers Aye data attributes from HTML form elements and formats them for API usage.
-    function ayeFormidable($element, cargo = {}){
-      $element.find('input,select,textarea,output').each(function(index){
-        let value = this.value;
-        $.each(this.attributes, function( index, attr ) {
-          if(attr.name.indexOf('data-aye-property-')===0) {
-            cargo[attr.name.slice(18).split("-").join("_").toLowerCase()] = value;
+    webstop.aye.formidable = function(element, cargo = {}) {
+      let fields = element.querySelectorAll('input,select,textarea,output');
+      fields.forEach((field) => {
+        let value = field.value;
+        field.getAttributeNames().forEach((attr) => {
+          if (attr.indexOf('data-aye-property-') === 0) {
+            cargo[attr.slice(18).split('-').join('_').toLowerCase()] = value;
           }
         });
       });
+
       return cargo;
+    };
+
+    webstop.aye.track = function(name, element){
+      let cargo = webstop.aye.cargo(element);
+      let ahoyName = name + ' ';
+      if(name === 'submit') {
+        cargo = webstop.aye.formidable(element, cargo);
+        ahoyName += element.getAttribute(attrSubmit);
+      } else if(name === 'click') {
+        ahoyName += element.getAttribute(attrClick);
+      } else if(name === 'view') {
+        ahoyName += element.getAttribute(attrView);
+      }
+      ahoy.track(ahoyName, cargo);
+    };
+
+    webstop.aye.watch = function(){
+      let clickables = document.querySelectorAll('[data-aye-click]:not([data-aye-watching])');
+      let submitables = document.querySelectorAll('[data-aye-submit]:not([data-aye-watching])');
+      let viewables = document.querySelectorAll('[data-aye-view]:not([data-aye-watching])');
+
+      clickables.forEach(function(element) {
+        webstop.aye.listen('click', element);
+      });
+
+      submitables.forEach(function(element) {
+        webstop.aye.listen('submit', element);
+      });
+
+      viewables.forEach(function(element) {
+        if(element.hasAttribute(attrWatching) === false){
+          element.setAttribute(attrWatching, '');
+          webstop.aye.track('view', element);
+        }
+      });
+
+    };
+
+    // Name can be 'click', 'submit', or 'view'
+    webstop.aye.listen = function(name, element){
+      if(element.hasAttribute(attrWatching) === false){
+        element.setAttribute(attrWatching, '');
+        element.addEventListener(name, function() {
+          webstop.aye.track(name, this);
+        });
+      }
+    };
+
+    webstop.aye.start = function(){
+
+      // Live executes the watch script once at init, so we don't have to run it again in here.
+      // webstop.aye.watch();
+      webstop.live(webstop.aye.watch);
+    };
+
+
+    // Starts Aye tracking only when the DOM is ready.
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", webstop.aye.start);
+    } else {
+      webstop.aye.start();
     }
 
-  });
+  })( window.webstop = window.webstop || {} );
 
 })();
 //# sourceMappingURL=core-styles-aye.js.map
