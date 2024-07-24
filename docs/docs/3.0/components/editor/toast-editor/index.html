@@ -641,25 +641,23 @@ if a data-markdown-editor attribute is found on the current web page.</p>
 <p><strong>This simple example uses a default set of options that should work best for mose use cases.</strong></p>
 <div class="my-3 p-3 example">
 <form action="/ajax/alert_success" method="get">
-<textarea data-markdown-editor name="content">
+<textarea data-markdown-editor name="content" rows="20">
 # Greg Hemphill
 
 - Talented Developer
 - Stunning Good Looks
-
+- 
 A paragraph with **bold** text inside.
-
 </textarea>
 </form>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">data-markdown-editor</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;content&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">data-markdown-editor</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;content&#34;</span> <span class="na">rows</span><span class="o">=</span><span class="s">&#34;20&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"># Greg Hemphill
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">- Talented Developer
 </span></span><span class="line"><span class="cl">- Stunning Good Looks
-</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- 
 </span></span><span class="line"><span class="cl">A paragraph with **bold** text inside.
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
 <h3 id="display-mode-examples">Display Mode Examples</h3>
@@ -678,7 +676,6 @@ preview tab. Markdown mode is achieved by using the <code>data-editor-mode=&quot
 - Stunning Good Looks
 
 A paragraph with **bold** text inside.
-
 </textarea>
 </form>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
@@ -689,7 +686,6 @@ A paragraph with **bold** text inside.
 </span></span><span class="line"><span class="cl">- Stunning Good Looks
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">A paragraph with **bold** text inside.
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
 <h3 id="markdown-display-mode-1">Markdown Display Mode</h3>
@@ -704,7 +700,6 @@ preview in a left column. Split-Pane mode is achieved by using the <code>data-ed
 - Stunning Good Looks
 
 A paragraph with **bold** text inside.
-
 </textarea>
 </form>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
@@ -715,7 +710,6 @@ A paragraph with **bold** text inside.
 </span></span><span class="line"><span class="cl">- Stunning Good Looks
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">A paragraph with **bold** text inside.
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
 <h3 id="wysiwyg-display-mode">WYSIWYG Display Mode</h3>
@@ -735,7 +729,6 @@ or by setting the attribute to <code>data-editor-mode=&quot;wysiwyg&quot;</code>
 - Stunning Good Looks
 
 A paragraph with **bold** text inside.
-
 </textarea>
 </form>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
@@ -746,7 +739,6 @@ A paragraph with **bold** text inside.
 </span></span><span class="line"><span class="cl">- Stunning Good Looks
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">A paragraph with **bold** text inside.
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
 <h2 id="toolbar-examples">Toolbar Examples</h2>
@@ -764,7 +756,6 @@ and complexity of the text content.</p>
 - Stunning Good Looks
 
 A paragraph with **bold** text inside.
-
 </textarea>
 </form>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
@@ -775,7 +766,6 @@ A paragraph with **bold** text inside.
 </span></span><span class="line"><span class="cl">- Stunning Good Looks
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">A paragraph with **bold** text inside.
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
 <h2 id="standard-toolbar-example">Standard Toolbar Example</h2>
@@ -789,7 +779,6 @@ A paragraph with **bold** text inside.
 - Stunning Good Looks
 
 A paragraph with **bold** text inside.
-
 </textarea>
 </form>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
@@ -800,7 +789,6 @@ A paragraph with **bold** text inside.
 </span></span><span class="line"><span class="cl">- Stunning Good Looks
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">A paragraph with **bold** text inside.
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
 <h2 id="full-toolbar-example">Full Toolbar Example</h2>
@@ -816,7 +804,6 @@ developer focused features.</p>
 - Stunning Good Looks
 
 A paragraph with **bold** text inside.
-
 </textarea>
 </form>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
@@ -827,7 +814,6 @@ A paragraph with **bold** text inside.
 </span></span><span class="line"><span class="cl">- Stunning Good Looks
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">A paragraph with **bold** text inside.
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
 <h2 id="attributes">Attributes</h2>

@@ -46,14 +46,13 @@ Defaults Include:
 
 {{< example >}}
 <form action="/ajax/alert_success" method="get">
-<textarea data-markdown-editor name="content">
+<textarea data-markdown-editor name="content" rows="20">
 # Greg Hemphill
 
 - Talented Developer
 - Stunning Good Looks
-
+- 
 A paragraph with **bold** text inside.
-
 </textarea>
 </form>
 {{< /example >}}
@@ -78,7 +77,6 @@ preview tab. Markdown mode is achieved by using the `data-editor-mode="markdown"
 - Stunning Good Looks
 
 A paragraph with **bold** text inside.
-
 </textarea>
 </form>
 {{< /example >}}
@@ -97,7 +95,6 @@ preview in a left column. Split-Pane mode is achieved by using the `data-editor-
 - Stunning Good Looks
 
 A paragraph with **bold** text inside.
-
 </textarea>
 </form>
 {{< /example >}}
@@ -121,7 +118,6 @@ or by setting the attribute to `data-editor-mode="wysiwyg"`.
 - Stunning Good Looks
 
 A paragraph with **bold** text inside.
-
 </textarea>
 </form>
 {{< /example >}}
@@ -146,7 +142,6 @@ Use `data-editor-toolbar="basic"` on the `textarea` to use a basic toolbar.
 - Stunning Good Looks
 
 A paragraph with **bold** text inside.
-
 </textarea>
 </form>
 {{< /example >}}
@@ -164,7 +159,6 @@ Omitting the `data-editor-toolbar` attribute defaults to the `standard` style.
 - Stunning Good Looks
 
 A paragraph with **bold** text inside.
-
 </textarea>
 </form>
 {{< /example >}}
@@ -185,7 +179,6 @@ Use `data-editor-toolbar="full"` on the `textarea` to use a full toolbar.
 - Stunning Good Looks
 
 A paragraph with **bold** text inside.
-
 </textarea>
 </form>
 {{< /example >}}

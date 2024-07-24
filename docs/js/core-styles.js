@@ -816,17 +816,11 @@
         });
       }
 
-      // Set overflow behavior
-      // div.style.overflow = "auto";
-      // set the height, if there is a rows attribute
-      // div.style.height = 'auto'; // reset the height
       if (textarea.hasAttribute('rows')) {
         let rows = textarea.getAttribute('rows');
         let pixels = rows * pxPerRow; // 24 pixels per row
         div.style.minHeight = pixels + 'px';
       }
-      div.textContent = textarea.value;
-      // Place the new div right after the textarea
       textarea.insertAdjacentElement('afterend', div);
       textarea.style.display = "none";
 
@@ -843,9 +837,9 @@
 
       let editor = new Editor({
         el: div,
-        //content: '# foobar',//config.content,
         height: config.height,
         toolbarItems: config.toolbarItems,
+        initialValue: textarea.value,
         initialEditType: config.initialEditType
       });
 
