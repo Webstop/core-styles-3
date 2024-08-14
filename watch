@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # The following stopped working
-# docker-compose run --rm bash --version ; npm run watch
+# docker compose run --rm bash --version ; npm run watch
 
 echo 'Once the shell prompt becomes available enter `npm run watch` (without the quotes) to start the watch script.'
 

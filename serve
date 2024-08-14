@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-docker-compose run --rm rebuild > /dev/null &
+docker compose run --rm rebuild > /dev/null &
 sleep 4
-docker-compose up server
+docker compose up server
 

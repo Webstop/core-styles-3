@@ -101,7 +101,7 @@ When you want to add a new javascript file, the following must be done in order 
 ## Docker Notes
 
 The base hugo image runs the `hugo` command everytime you start a container. 
-You can't do things like `docker-compose run build bash $@`.  Therefore our 
+You can't do things like `docker compose run build bash $@`.  Therefore our 
 you can only use bash through the special `bash` container. The bash container 
 is based on the same Hugo image as the other containers but it starts with the 
 bash command instead of the hugo command, and it installs Sass in a global 
