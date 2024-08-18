@@ -7,8 +7,6 @@ $body-bg:  $theme-bg !default;
 // Layout
 // ------
 
-$header-height: 55px !default;
-
 // Admin Layout
 // Admin Layout Sizes
 $admin-sidecar-width:        90px !default;
@@ -36,10 +34,10 @@ $admin-footer-border-size:   1px !default;
 
 // Public Layout
 // Public Layout Sizes
+$public-header-height:        60px !default;
 $public-sidecar-width:        90px !default;
 $public-sidenav-width:        320px !default;
 $public-sidebar-width:        320px !default;
-$public-header-height:        60px !default;
 $public-spacer-y:             $spacer !default;
 $public-spacer-x:             $spacer !default;
 $public-header-spacer-y:      0 !default;

@@ -3,6 +3,10 @@
   <head layout-source="_default/baseof">
     <meta charset="utf-8" />
     <title>{{ block "title" . }} {{ .Title }} at {{ .Site.Title }} {{ end }}</title>
+    <meta charset="utf-8" >
+    <meta content="width=device-width, initial-scale=1" name="viewport" >
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" >
     <!--  <link rel="stylesheet" href="/docs/3.0/dist/css/core-styles-defaults.css">-->
     {{ range .Site.Data.font_awesome_config }}
       {{ if .kit_key }}<script src="https://kit.fontawesome.com/{{ .kit_key }}.js" crossorigin="anonymous"></script>{{ end }}

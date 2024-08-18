@@ -13519,7 +13519,7 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
   padding: 0 0;
 }
 .public .public-content {
-  padding: 1rem 1rem;
+  padding: 0 1rem 1rem 1rem;
 }
 .public .public-sidebar {
   padding: 0 0;

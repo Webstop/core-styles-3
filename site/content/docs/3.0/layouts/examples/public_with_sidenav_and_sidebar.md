@@ -2,6 +2,18 @@
 layout: public-sidenav-sidebar
 ---
 
+<nav class="toolbar justify-content-between mt-0">
+  <div class="toolbar-group btn-group" role="group" aria-label="Basic example">
+    <button class="btn btn-light">L<span class="d-none d-sm-inline">eft</span> 1</button>
+    <button class="btn btn-light">L<span class="d-none d-sm-inline">eft</span> 2</button>
+  </div>
+  <div class="toolbar-group btn-group" role="group" aria-label="Basic example">
+    <button class="btn btn-light">R<span class="d-none d-sm-inline">ight</span> 1</button>
+    <button class="btn btn-light">R<span class="d-none d-sm-inline">ight</span> 2</button>
+  </div>
+</nav>
+
+
 # Public Layout Example
 
 Contains: `sidenav`, `sidebar`
@@ -10,8 +22,7 @@ _There should be enough lorem ipsum in here for you to see scroll bars, and be a
 
 ---
 
-#### Main Content,
- defined by `public-content`
+#### Main Content, defined by `public-content`
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 

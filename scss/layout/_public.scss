@@ -226,7 +226,7 @@
     padding: $public-sidenav-spacer-y $public-sidenav-spacer-x;
   }
   .public-content {
-    padding: $public-content-spacer-y $public-content-spacer-x;
+    padding: 0 $public-content-spacer-x $public-content-spacer-y $public-content-spacer-x;
   }
   .public-sidebar {
     padding: $public-sidebar-spacer-y $public-sidebar-spacer-x;
