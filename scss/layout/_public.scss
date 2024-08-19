@@ -8,7 +8,6 @@
   grid-auto-columns: 0;
   grid-auto-rows: 0;
   grid-template-columns: auto;
-  grid-template-rows: $public-header-height auto;
   display: grid;
   grid-template-areas:
     "public-header"
@@ -17,6 +16,14 @@
   max-height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+
+  // Header Height Control
+  grid-template-rows: $public-header-height auto; // XS/Mobile
+  @include media-breakpoint-up(sm)  { grid-template-rows: $public-header-sm-height  auto; }
+  @include media-breakpoint-up(md)  { grid-template-rows: $public-header-md-height  auto; }
+  @include media-breakpoint-up(lg)  { grid-template-rows: $public-header-lg-height  auto; }
+  @include media-breakpoint-up(xl)  { grid-template-rows: $public-header-xl-height  auto; }
+  @include media-breakpoint-up(xxl) { grid-template-rows: $public-header-xxl-height auto; }
 
   .public-header  { grid-area: public-header;  overflow: visible; }
   .public-sidecar { grid-area: public-sidecar; overflow-x: auto; display: none; }

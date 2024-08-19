@@ -2,258 +2,258 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://guides.webstop.com/ajax/ajax_basic_infinite_scroll/</loc>
+    <loc>http://localhost:1313/ajax/ajax_basic_infinite_scroll/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/ajax/ajax_form/</loc>
+    <loc>http://localhost:1313/ajax/ajax_form/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/ajax/ajax_form_2/</loc>
+    <loc>http://localhost:1313/ajax/ajax_form_2/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/ajax/ajax_form_3/</loc>
+    <loc>http://localhost:1313/ajax/ajax_form_3/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/ajax/ajax_load_on_view/</loc>
+    <loc>http://localhost:1313/ajax/ajax_load_on_view/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/ajax/ajax_page_1/</loc>
+    <loc>http://localhost:1313/ajax/ajax_page_1/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/ajax/ajax_page_2/</loc>
+    <loc>http://localhost:1313/ajax/ajax_page_2/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/ajax/ajax_page_3/</loc>
+    <loc>http://localhost:1313/ajax/ajax_page_3/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/ajax/alert_error/</loc>
+    <loc>http://localhost:1313/ajax/alert_error/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/ajax/alert_success/</loc>
+    <loc>http://localhost:1313/ajax/alert_success/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/ajax/search_results/</loc>
+    <loc>http://localhost:1313/ajax/search_results/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/ajax/store_locator/</loc>
+    <loc>http://localhost:1313/ajax/store_locator/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/admin_base/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/admin_base/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/admin_with_sidebar/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/admin_with_sidebar/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/admin_with_sidecar/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/admin_with_sidecar/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/admin_with_sidecar_and_sidebar/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/admin_with_sidecar_and_sidebar/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/admin_with_sidecar_and_sidenav/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/admin_with_sidecar_and_sidenav/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/admin_with_sidecar_and_sidenav_and_sidebar/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/admin_with_sidecar_and_sidenav_and_sidebar/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/admin_with_sidenav/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/admin_with_sidenav/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/admin_with_sidenav_and_sidebar/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/admin_with_sidenav_and_sidebar/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/public/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/public/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/public_base/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/public_base/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/public_with_sidebar/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/public_with_sidebar/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/public_with_sidecar/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/public_with_sidecar/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/public_with_sidecar_and_sidebar/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/public_with_sidecar_and_sidebar/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/public_with_sidecar_and_sidenav/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/public_with_sidecar_and_sidenav/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/public_with_sidecar_and_sidenav_and_sidebar/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/public_with_sidecar_and_sidenav_and_sidebar/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/public_with_sidenav/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/public_with_sidenav/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/public_with_sidenav_and_sidebar/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/public_with_sidenav_and_sidebar/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/examples/site/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/examples/site/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/icons/overview/</loc>
+    <loc>http://localhost:1313/docs/3.0/icons/overview/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/404.html</loc>
+    <loc>http://localhost:1313/404.html</loc>
   </url><url>
-    <loc>https://guides.webstop.com/dev/ad-builder/</loc>
+    <loc>http://localhost:1313/dev/ad-builder/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/icons/admin-icons/</loc>
+    <loc>http://localhost:1313/docs/3.0/icons/admin-icons/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/dev/layouts/admin/</loc>
+    <loc>http://localhost:1313/dev/layouts/admin/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/admin/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/admin/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/ajax/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/ajax/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/ajax/infinite-scroll-demos/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/ajax/infinite-scroll-demos/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/ajax/ajax-form/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/ajax/ajax-form/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/ajax/ajax-load/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/ajax/ajax-load/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/ajax/ajax-modal/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/ajax/ajax-modal/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/ajax/</loc>
+    <loc>http://localhost:1313/ajax/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/icons/all-icons/</loc>
+    <loc>http://localhost:1313/docs/3.0/icons/all-icons/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/analytics/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/analytics/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/resources/article_typography_design_resource/</loc>
+    <loc>http://localhost:1313/resources/article_typography_design_resource/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/articles/</loc>
+    <loc>http://localhost:1313/articles/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/dev/aye/aye-tester/</loc>
+    <loc>http://localhost:1313/dev/aye/aye-tester/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/analytics/tracking/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/analytics/tracking/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/tracking/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/tracking/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/dev/aye/</loc>
+    <loc>http://localhost:1313/dev/aye/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/banner-item/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/circulars/banner-item/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/ajax/infinite-scroll-demos/basic-infinite-scroll-demo/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/ajax/infinite-scroll-demos/basic-infinite-scroll-demo/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/utilities/box/</loc>
+    <loc>http://localhost:1313/docs/3.0/utilities/box/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/bootstrap-extentions/card-decks/</loc>
+    <loc>http://localhost:1313/docs/3.0/bootstrap-extentions/card-decks/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/forms/checkbox-selector/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/forms/checkbox-selector/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/circular-items/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/circulars/circular-items/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/navigation/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/circulars/navigation/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/circulars/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/getting-started/conventions/</loc>
+    <loc>http://localhost:1313/docs/3.0/getting-started/conventions/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/icons/core-icons/</loc>
+    <loc>http://localhost:1313/docs/3.0/icons/core-icons/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/icons/</loc>
+    <loc>http://localhost:1313/docs/3.0/icons/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/</loc>
+    <loc>http://localhost:1313/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/</loc>
+    <loc>http://localhost:1313/docs/3.0/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/icons/crud-icons/</loc>
+    <loc>http://localhost:1313/docs/3.0/icons/crud-icons/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/bootstrap-extentions/</loc>
+    <loc>http://localhost:1313/docs/3.0/bootstrap-extentions/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/getting-started/</loc>
+    <loc>http://localhost:1313/docs/3.0/getting-started/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/utilities/</loc>
+    <loc>http://localhost:1313/docs/3.0/utilities/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/guides/3.0/development-approach/</loc>
+    <loc>http://localhost:1313/guides/3.0/development-approach/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/dev/</loc>
+    <loc>http://localhost:1313/dev/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/guides/3.0/development-process/</loc>
+    <loc>http://localhost:1313/guides/3.0/development-process/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/coupon-item/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/circulars/coupon-item/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/</loc>
+    <loc>http://localhost:1313/docs/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/forms/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/forms/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/store-locator/form-store-picker/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/store-locator/form-store-picker/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/forms/form-toggles/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/forms/form-toggles/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/guides/3.0/components/</loc>
+    <loc>http://localhost:1313/guides/3.0/components/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/guides/3.0/overview/</loc>
+    <loc>http://localhost:1313/guides/3.0/overview/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/guides/</loc>
+    <loc>http://localhost:1313/guides/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/navigation/html-test/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/navigation/html-test/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/ajax/infinite-scroll/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/ajax/infinite-scroll/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/ajax/infinite-scroll-demos/infinite-scroll-with-paging-demo/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/ajax/infinite-scroll-demos/infinite-scroll-with-paging-demo/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/getting-started/introduction/</loc>
+    <loc>http://localhost:1313/docs/3.0/getting-started/introduction/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/shopping-lists/recipes/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/shopping-lists/recipes/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/dev/ad-builder/item-entry/</loc>
+    <loc>http://localhost:1313/dev/ad-builder/item-entry/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/dev/layouts/</loc>
+    <loc>http://localhost:1313/dev/layouts/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/forms/search/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/forms/search/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/ajax/infinite-scroll-demos/load-on-view-demo/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/ajax/infinite-scroll-demos/load-on-view-demo/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/locations/locate/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/locations/locate/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/locations/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/locations/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/resources/lorem_ipsum/</loc>
+    <loc>http://localhost:1313/resources/lorem_ipsum/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/utilities/max-width/</loc>
+    <loc>http://localhost:1313/docs/3.0/utilities/max-width/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/utilities/min-width/</loc>
+    <loc>http://localhost:1313/docs/3.0/utilities/min-width/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/recipes/my-cook-book/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/recipes/my-cook-book/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/navigation/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/navigation/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/newsprints/newsprint/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/circulars/newsprints/newsprint/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/newsprints/newsprint-compartment/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/circulars/newsprints/newsprint-compartment/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/newsprints/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/circulars/newsprints/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/utilities/page-break/</loc>
+    <loc>http://localhost:1313/docs/3.0/utilities/page-break/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/navigation/paging/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/navigation/paging/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/icons/popular-icons/</loc>
+    <loc>http://localhost:1313/docs/3.0/icons/popular-icons/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/price/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/circulars/price/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/dev/layouts/public/</loc>
+    <loc>http://localhost:1313/dev/layouts/public/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/public/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/public/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/recipes/recipe/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/recipes/recipe/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/recipe-item/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/circulars/recipe-item/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/recipes/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/recipes/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/recipes/recipes/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/recipes/recipes/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/resources/</loc>
+    <loc>http://localhost:1313/resources/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/shopping-lists/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/shopping-lists/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/shopping-lists/shopping-list-power-bar/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/shopping-lists/shopping-list-power-bar/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/standard-circular-item/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/circulars/standard-circular-item/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/standard-coupon-item/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/circulars/standard-coupon-item/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/standard-promotion-item/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/circulars/standard-promotion-item/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/store-locator/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/store-locator/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/tagging/tag-search/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/tagging/tag-search/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/tagging/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/tagging/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/tagging/tags/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/tagging/tags/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/editor/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/editor/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/resources/df_2020_iphone_se/</loc>
+    <loc>http://localhost:1313/resources/df_2020_iphone_se/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/grocery/circulars/thumbnail-circular-item/</loc>
+    <loc>http://localhost:1313/docs/3.0/grocery/circulars/thumbnail-circular-item/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/editor/toast-editor/</loc>
+    <loc>http://localhost:1313/docs/3.0/components/editor/toast-editor/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/layouts/toolbar/</loc>
+    <loc>http://localhost:1313/docs/3.0/layouts/toolbar/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/icons/ui-icons/</loc>
+    <loc>http://localhost:1313/docs/3.0/icons/ui-icons/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/guides/3.0/working-with-ajax/</loc>
+    <loc>http://localhost:1313/guides/3.0/working-with-ajax/</loc>
   </url>
 </urlset>

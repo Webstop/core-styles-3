@@ -13284,13 +13284,38 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
   grid-auto-columns: 0;
   grid-auto-rows: 0;
   grid-template-columns: auto;
-  grid-template-rows: 60px auto;
   display: grid;
   grid-template-areas: "public-header" "public-page";
   height: 100vh;
   max-height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+  grid-template-rows: 60px auto;
+}
+@media (min-width: 576px) {
+  .public {
+    grid-template-rows: 60px auto;
+  }
+}
+@media (min-width: 768px) {
+  .public {
+    grid-template-rows: 60px auto;
+  }
+}
+@media (min-width: 992px) {
+  .public {
+    grid-template-rows: 60px auto;
+  }
+}
+@media (min-width: 1200px) {
+  .public {
+    grid-template-rows: 60px auto;
+  }
+}
+@media (min-width: 1400px) {
+  .public {
+    grid-template-rows: 60px auto;
+  }
 }
 .public .public-header {
   grid-area: public-header;
