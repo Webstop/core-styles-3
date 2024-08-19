@@ -674,6 +674,253 @@
 <p>To help keep the concepts easier to understand, we&rsquo;ve left out the Site Modal code from the following HTML examples.
 See the <a href="#site-modal">Site Modal</a> section at the end of the page for more information.</p>
 </blockquote>
+<h2 id="sass-variables">Sass Variables</h2>
+<p>The following Sass variables are used to control the behavior of the Public Layout.</p>
+<h4 id="header-height">Header Height</h4>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$public-header-height</td>
+<td>60px;</td>
+<td>Mobile</td>
+</tr>
+<tr>
+<td>$public-header-sm-height</td>
+<td>$public-header-height</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-header-md-height</td>
+<td>$public-header-sm-height</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-header-lg-height</td>
+<td>$public-header-md-height</td>
+<td>Desktop</td>
+</tr>
+<tr>
+<td>$public-header-xl-height</td>
+<td>$public-header-lg-height</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-header-xxl-height</td>
+<td>$public-header-xl-height</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="common-example">Common Example</h5>
+<p>In the following example uses the default <code>60px</code> header for mobile and <code>120px</code> for desktop sizes. Notice only the
+<code>$public-header-lg-height</code> variable is uncommented and modified. The larger sizes inherit from the smaller sizes so you
+can usually adjust just one variable to affect all larger sizes.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// $public-header-height:     60px;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// $public-header-sm-height:  $public-header-height;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// $public-header-md-height:  $public-header-sm-height;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$public-header-lg-height</span><span class="o">:</span>     <span class="mi">120</span><span class="kt">px</span><span class="p">;</span> <span class="c1">// Desktop
+</span></span></span><span class="line"><span class="cl"><span class="c1">// $public-header-xl-height:  $public-header-lg-height;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// $public-header-xxl-height: $public-header-xl-height;
+</span></span></span></code></pre></div><h3 id="colors--basics">Colors &amp; Basics</h3>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$public-header-bg-color</td>
+<td>transparent;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-header-border-color</td>
+<td>#ccc;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-header-border-size</td>
+<td>1px;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidecar-color</td>
+<td>$white;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidecar-bg-color</td>
+<td>$primary;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidecar-border-color</td>
+<td>$primary;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidecar-border-size</td>
+<td>0;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidenav-bg-color</td>
+<td>transparent;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidenav-border-color</td>
+<td>#ccc;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidenav-border-size</td>
+<td>1px;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidebar-bg-color</td>
+<td>transparent;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidebar-border-color</td>
+<td>#ccc;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidebar-border-size</td>
+<td>1px;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-footer-bg-color:</td>
+<td>transparent;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-footer-border-color</td>
+<td>#ccc;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-footer-border-size</td>
+<td>1px;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sizing--spacers">Sizing &amp; Spacers</h3>
+<div class="alert alert-danger">
+  Caution, changing the following variables can have adverse affects on the layout.
+</div>
+<p>Use caution when modifying the following. Great care was given to make these properties play nicely on all responsive sizes.</p>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$public-sidecar-width</td>
+<td>90px;</td>
+<td>Caution! Tread Lightly!</td>
+</tr>
+<tr>
+<td>$public-sidenav-width</td>
+<td>320px;</td>
+<td>Caution! Tread Lightly!</td>
+</tr>
+<tr>
+<td>$public-sidebar-width</td>
+<td>320px;</td>
+<td>Caution! Tread Lightly!</td>
+</tr>
+<tr>
+<td>$public-spacer-y</td>
+<td>$spacer;</td>
+<td>$spacer is the Bootstrap default.</td>
+</tr>
+<tr>
+<td>$public-spacer-x</td>
+<td>$spacer;</td>
+<td>$spacer is the Bootstrap default.</td>
+</tr>
+<tr>
+<td>$public-header-spacer-y</td>
+<td>0;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-header-spacer-x</td>
+<td>0;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidecar-spacer-y</td>
+<td>$public-spacer-y;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidecar-spacer-x</td>
+<td>0;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidenav-spacer-y</td>
+<td>0;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidenav-spacer-x</td>
+<td>0;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-content-spacer-y</td>
+<td>$public-spacer-y;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-content-spacer-x</td>
+<td>$public-spacer-x;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidebar-spacer-y</td>
+<td>0;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidebar-spacer-x</td>
+<td>0;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-footer-spacer-y</td>
+<td>$public-spacer-y;</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-footer-spacer-x</td>
+<td>$public-spacer-x;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="ruby-on-rails-support">Ruby On Rails Support</h2>
 <p>Most of the time we don&rsquo;t talk about any back-end technology in our front-end framework. With the public layout
 system we have built out a unique system to control page layout, so we are going to explain it here.</p>
@@ -738,51 +985,6 @@ page layout. These settings are explained in the chart below.</p>
       <td><code class="text-nowrap">tables</code></td>
       <td><code class="text-nowrap">false</code></td>
       <td>Primes the system to expect the main content section to be filled with a scrollable table.</td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">data_tables</code></td>
-      <td><code class="text-nowrap">false</code></td>
-      <td>
-        Enables special tweaks to support the use of DataTables.js in the main content area. Especially makes 
-        scrolling work properly.
-      </td>
-    </tr>
-  </tbody>
-</table>
-<h2 id="attributes">Attributes</h2>
-<p>The <code>data-ajax-form</code> &amp; <code>action</code> attributes are required. The rest are optional.</p>
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>Options</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="text-nowrap">data-ajax-form</code></td>
-      <td>The presence of this attribute indicates submitting on this form should trigger an AJAX load.</td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">action</code></td>
-      <td>
-        Attribute specifies the URL of the content you want AJAX'd. The AJAX request should return 
-        HTML content to display inside the target element. 
-      </td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">data-target</code></td>
-      <td>
-        The DOM node to load the content into. Uses standard jQuery selectors, usually targets an id attribute 
-        (e.g. <code class="text-nowrap">#some-target</code>). Optional, if the <code class="text-nowrap">data-target</code> attribute isn't 
-        present the content will replace the ajax form.
-      </td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">data-power-bar</code></td>
-      <td>
-        When present, completing the ajax call triggers a reload of the Shopping List Power Bar.
-      </td>
     </tr>
   </tbody>
 </table>
@@ -1152,13 +1354,19 @@ The Site Modal is also available in the <a href="/docs/3.0/layouts/admin/">Admin
         <li><a href="#sidenav-and-sidebar-example">Sidenav and Sidebar Example</a></li>
       </ul>
     </li>
+    <li><a href="#sass-variables">Sass Variables</a>
+      <ul>
+        <li></li>
+        <li><a href="#colors--basics">Colors &amp; Basics</a></li>
+        <li><a href="#sizing--spacers">Sizing &amp; Spacers</a></li>
+      </ul>
+    </li>
     <li><a href="#ruby-on-rails-support">Ruby On Rails Support</a>
       <ul>
         <li><a href="#public-layout-template">Public Layout Template</a></li>
         <li><a href="#the-page-map">The <code>@page</code> Map</a></li>
       </ul>
     </li>
-    <li><a href="#attributes">Attributes</a></li>
     <li><a href="#site-modal">Site Modal</a></li>
     <li><a href="#alternate-examples">Alternate Examples</a>
       <ul>

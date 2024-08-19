@@ -73,6 +73,87 @@ This example shows the default set of options used by Webstop's products and is 
 > To help keep the concepts easier to understand, we've left out the Site Modal code from the following HTML examples.
 > See the [Site Modal](#site-modal) section at the end of the page for more information.
 
+## Sass Variables
+
+The following Sass variables are used to control the behavior of the Public Layout.
+
+#### Header Height
+
+| Variable Name             | Default Value            | Note    |
+|---------------------------|--------------------------|---------|
+| $public-header-height     | 60px;                    | Mobile  |
+| $public-header-sm-height  | $public-header-height    |         |
+| $public-header-md-height  | $public-header-sm-height |         |
+| $public-header-lg-height  | $public-header-md-height | Desktop |
+| $public-header-xl-height  | $public-header-lg-height |         |
+| $public-header-xxl-height | $public-header-xl-height |         |
+
+##### Common Example
+
+In the following example uses the default `60px` header for mobile and `120px` for desktop sizes. Notice only the 
+`$public-header-lg-height` variable is uncommented and modified. The larger sizes inherit from the smaller sizes so you 
+can usually adjust just one variable to affect all larger sizes.
+
+```scss
+// $public-header-height:     60px;
+// $public-header-sm-height:  $public-header-height;
+// $public-header-md-height:  $public-header-sm-height;
+$public-header-lg-height:     120px; // Desktop
+// $public-header-xl-height:  $public-header-lg-height;
+// $public-header-xxl-height: $public-header-xl-height;
+```
+
+### Colors & Basics
+
+| Variable Name                | Default Value | Note |
+|------------------------------|---------------|------|
+| $public-header-bg-color      | transparent;  |      |
+| $public-header-border-color  | #ccc;         |      |
+| $public-header-border-size   | 1px;          |      |
+| $public-sidecar-color        | $white;       |      |
+| $public-sidecar-bg-color     | $primary;     |      |
+| $public-sidecar-border-color | $primary;     |      |
+| $public-sidecar-border-size  | 0;            |      |
+| $public-sidenav-bg-color     | transparent;  |      |
+| $public-sidenav-border-color | #ccc;         |      |
+| $public-sidenav-border-size  | 1px;          |      |
+| $public-sidebar-bg-color     | transparent;  |      |
+| $public-sidebar-border-color | #ccc;         |      |
+| $public-sidebar-border-size  | 1px;          |      |
+| $public-footer-bg-color:     | transparent;  |      |
+| $public-footer-border-color  | #ccc;         |      |
+| $public-footer-border-size   | 1px;          |      |
+
+### Sizing & Spacers
+
+<div class="alert alert-danger">
+  Caution, changing the following variables can have adverse affects on the layout.
+</div>
+
+Use caution when modifying the following. Great care was given to make these properties play nicely on all responsive sizes.
+
+
+| Variable Name            | Default Value     | Note                              |
+|--------------------------|-------------------|-----------------------------------|
+| $public-sidecar-width    | 90px;             | Caution! Tread Lightly!           |
+| $public-sidenav-width    | 320px;            | Caution! Tread Lightly!           |
+| $public-sidebar-width    | 320px;            | Caution! Tread Lightly!           |
+| $public-spacer-y         | $spacer;          | $spacer is the Bootstrap default. |
+| $public-spacer-x         | $spacer;          | $spacer is the Bootstrap default. |
+| $public-header-spacer-y  | 0;                |                                   |
+| $public-header-spacer-x  | 0;                |                                   |
+| $public-sidecar-spacer-y | $public-spacer-y; |                                   |
+| $public-sidecar-spacer-x | 0;                |                                   |
+| $public-sidenav-spacer-y | 0;                |                                   |
+| $public-sidenav-spacer-x | 0;                |                                   |
+| $public-content-spacer-y | $public-spacer-y; |                                   |
+| $public-content-spacer-x | $public-spacer-x; |                                   |
+| $public-sidebar-spacer-y | 0;                |                                   |
+| $public-sidebar-spacer-x | 0;                |                                   |
+| $public-footer-spacer-y  | $public-spacer-y; |                                   |
+| $public-footer-spacer-x  | $public-spacer-x; |                                   |
+
+
 
 ## Ruby On Rails Support
 
@@ -147,55 +228,7 @@ The `@page` hash is set at the top of a view file to control how that view will 
       <td><code class="text-nowrap">false</code></td>
       <td>Primes the system to expect the main content section to be filled with a scrollable table.</td>
     </tr>
-    <tr>
-      <td><code class="text-nowrap">data_tables</code></td>
-      <td><code class="text-nowrap">false</code></td>
-      <td>
-        Enables special tweaks to support the use of DataTables.js in the main content area. Especially makes 
-        scrolling work properly.
-      </td>
-    </tr>
 
-  </tbody>
-</table>
-
-## Attributes
-
-The `data-ajax-form` & `action` attributes are required. The rest are optional.
-
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>Options</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="text-nowrap">data-ajax-form</code></td>
-      <td>The presence of this attribute indicates submitting on this form should trigger an AJAX load.</td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">action</code></td>
-      <td>
-        Attribute specifies the URL of the content you want AJAX'd. The AJAX request should return 
-        HTML content to display inside the target element. 
-      </td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">data-target</code></td>
-      <td>
-        The DOM node to load the content into. Uses standard jQuery selectors, usually targets an id attribute 
-        (e.g. <code class="text-nowrap">#some-target</code>). Optional, if the <code class="text-nowrap">data-target</code> attribute isn't 
-        present the content will replace the ajax form.
-      </td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">data-power-bar</code></td>
-      <td>
-        When present, completing the ajax call triggers a reload of the Shopping List Power Bar.
-      </td>
-    </tr>
   </tbody>
 </table>
 

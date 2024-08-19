@@ -624,13 +624,227 @@
 we wanted access to all the things in core-styles from admin pages, and that the thing we found most valuable from
 Admin-Styles was the page layout features. Now the page layout features of Admin-Styles are included as part of Core-Styles.</p>
 </blockquote>
-<h2 id="examples">Examples</h2>
-<p>The following examples show the various layout features of our administration focused layout system.</p>
+<h2 id="default-example">Default Example</h2>
+<p>This example shows the default set of options used by Webstop’s products and is installed via the Styler gem.</p>
 <blockquote>
 <h4 class="mt-0">Site Modal</h4>
 <p>To help keep the concepts easier to understand, we&rsquo;ve left out the Site Modal code from the following HTML examples.
 See the <a href="#site-modal">Site Modal</a> section at the end of the page for more information.</p>
 </blockquote>
+<h3 id="sidebar-example">Sidebar Example</h3>
+<div class="row">
+  <div class="col-auto">
+    <table style="width: 250px;"> 
+      <tr>
+        <td colspan="2" style="background-color: #369; height: 15px;"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ccc; height: 120px;"></td>
+        <td style="background-color: #eee; width: 60px;" rowspan="2"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ddd; height: 5px;"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="col">
+    <a href="/docs/3.0/layouts/examples/admin_with_sidebar" class="btn btn-outline-primary wsg-btn-outline-primary">
+      View Sidebar Example Page <i class="fas fa-angle-right"></i>
+    </a>
+  </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin admin-with-sidebar&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-header&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;banner&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    Admin Header...
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">main</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-page&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;main&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    Admin Page Main Content...
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">aside</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-sidebar&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    Admin Sidebar...
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-footer&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;contentinfo&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    Admin Footer...
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h2 id="ruby-on-rails-support">Ruby On Rails Support</h2>
+<p>Most of the time we don&rsquo;t talk about any back-end technology in our front-end framework. With the admin layout
+system we have built out a unique system to control page layout, so we are going to explain it here.</p>
+<h3 id="admin-layout-template">Admin Layout Template</h3>
+<p>At the heart of the layout system is the <code>admin_v3</code> layout template. To use it place <code>layout 'admin_v3'</code>
+near the top of your controller. This is typically done right after any actions are called, like the <code>before_action</code>.
+This one template handles all admin page layouts.</p>
+<h3 id="the-page-map">The <code>@page</code> Map</h3>
+<p>In the application controller we define a map called <code>@page</code>. The <code>@page</code> variable contains boolean settings which control the
+page layout. These settings are explained in the chart below.</p>
+<p>The <code>@page</code> hash is set at the top of a view file to control how that view will be presented in the admin layout template.</p>
+<!-- DEFAULTS
+      sidecar: false,
+      sidebar: true,
+      header: true,
+      footer: true,
+      flush: false,
+      tables: false,
+      data_tables: false
+-->
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Key Name</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="text-nowrap">sidecar</code></td>
+      <td><code class="text-nowrap">false</code></td>
+      <td>Controls display the sidecar left side navigation. <em>This feature isn't fully implemented yet.</em></td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">sidebar</code></td>
+      <td><code class="text-nowrap">true</code></td>
+      <td>
+        Controls display the sidebar right side navigation. Expects content to be placed into the <code>sidebar</code> 
+        yield. e.g. <code>content_for :sidebar, raw(render 'sidebar')</code>
+      </td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">header</code></td>
+      <td><code class="text-nowrap">true</code></td>
+      <td>Page header, which sits right below the header navbar. <em>This feature is deprecated.</em></td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">footer</code></td>
+      <td><code class="text-nowrap">true</code></td>
+      <td>
+        Controls display the footer. Expects content to be placed into the <code>footer</code> 
+        yield, and will typically contain breadcrumb navigation.
+      </td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">flush</code></td>
+      <td><code class="text-nowrap">false</code></td>
+      <td>Removes padding from the main content area. Usually used for tables to allow them to fill the content area.</td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">tables</code></td>
+      <td><code class="text-nowrap">false</code></td>
+      <td>Primes the system to expect the main content section to be filled with a scrollable table.</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="edit-page-example">Edit Page Example</h3>
+<img src="/assets/images/layout/layout_edit_tracker.png" class="img-fluid" alt="Edit Page">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="err">&lt;</span>%
+</span></span><span class="line"><span class="cl">  @page[:header]  = false
+</span></span><span class="line"><span class="cl">  @page[:sidebar] = true
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  content_for :sidebar, raw(render &#39;sidebar&#39;)
+</span></span><span class="line"><span class="cl">  content_for :footer, breadcrumbs(
+</span></span><span class="line"><span class="cl">    [
+</span></span><span class="line"><span class="cl">      {title: Tracker.model_name.human.pluralize.titleize, path: retailer_trackers_path(@retailer)},
+</span></span><span class="line"><span class="cl">      {title: :edit, path: edit_retailer_tracker_path(@retailer, @tracker)}
+</span></span><span class="line"><span class="cl">    ]
+</span></span><span class="line"><span class="cl">  )
+</span></span><span class="line"><span class="cl">%&gt;
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card card-readable card-centered card-shadowed&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-title&#34;</span><span class="p">&gt;</span>Editing Tracker<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="err">&lt;</span>%= render &#39;form&#39;, tracker: @tracker %&gt;
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h2 id="design-patterns">Design Patterns</h2>
+<p>The admin system is designed to accommodate the following common layout types.</p>
+<h3 id="data-tables-index-page">Data Tables Index Page</h3>
+<img src="/assets/images/layout/layout_data_tables_index_page.png" class="img-fluid" alt="Index Page Using Data Tables">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="vi">@page</span><span class="o">[</span><span class="ss">:tables</span><span class="o">]</span>  <span class="o">=</span> <span class="kp">true</span>
+</span></span><span class="line"><span class="cl"><span class="vi">@page</span><span class="o">[</span><span class="ss">:flush</span><span class="o">]</span>   <span class="o">=</span> <span class="kp">true</span>
+</span></span><span class="line"><span class="cl"><span class="vi">@page</span><span class="o">[</span><span class="ss">:sidebar</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span>
+</span></span></code></pre></div><h3 id="new-resource-form-page">New Resource Form Page</h3>
+<img src="/assets/images/layout/layout_new_from_page.png" class="img-fluid" alt="New Resource Form Page">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="vi">@page</span><span class="o">[</span><span class="ss">:header</span><span class="o">]</span>  <span class="o">=</span> <span class="kp">false</span>
+</span></span><span class="line"><span class="cl"><span class="vi">@page</span><span class="o">[</span><span class="ss">:sidebar</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span>
+</span></span></code></pre></div><h3 id="show-resource-page">Show Resource Page</h3>
+<img src="/assets/images/layout/layout_show_page.png" class="img-fluid" alt="Show Resource Page">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="vi">@page</span><span class="o">[</span><span class="ss">:header</span><span class="o">]</span>  <span class="o">=</span> <span class="kp">false</span>
+</span></span><span class="line"><span class="cl"><span class="vi">@page</span><span class="o">[</span><span class="ss">:sidebar</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span>
+</span></span></code></pre></div><h2 id="attributes">Attributes</h2>
+<p>The <code>data-ajax-form</code> &amp; <code>action</code> attributes are required. The rest are optional.</p>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Options</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="text-nowrap">data-ajax-form</code></td>
+      <td>The presence of this attribute indicates submitting on this form should trigger an AJAX load.</td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">action</code></td>
+      <td>
+        Attribute specifies the URL of the content you want AJAX'd. The AJAX request should return 
+        HTML content to display inside the target element. 
+      </td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">data-target</code></td>
+      <td>
+        The DOM node to load the content into. Uses standard jQuery selectors, usually targets an id attribute 
+        (e.g. <code class="text-nowrap">#some-target</code>). Optional, if the <code class="text-nowrap">data-target</code> attribute isn't 
+        present the content will replace the ajax form.
+      </td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">data-power-bar</code></td>
+      <td>
+        When present, completing the ajax call triggers a reload of the Shopping List Power Bar.
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="site-modal">Site Modal</h2>
+<p>The Site Modal is an empty hidden modal available for use by features such as <a href="/docs/3.0/components/ajax/ajax-modal/">AJAX Modal</a>,
+and other features that rely on having a modal available. The modal is identified by the id attribute with a value of <code>site-modal</code>.
+The Site Modal is also available in the <a href="/docs/3.0/layouts/public/">Public Layout</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-header&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;banner&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    Admin Header...
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">main</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-page&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;main&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    Admin Page Main Content...
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-footer&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;contentinfo&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    Admin Footer...
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-modal modal fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;site-modal&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;dialog&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;site-modal-title&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-dialog modal-lg&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;document&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-modal-content modal-content&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-header&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row mx-0 w-100&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col ps-0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-modal-title modal-title&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;site-modal-title&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto pe-0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;modal&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fak fa-cancel&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-modal-body modal-body&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;site-modal-body&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-modal-footer modal-footer&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;site-modal-footer&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-outline-secondary&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;modal&#34;</span><span class="p">&gt;</span>Close<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h2 id="alternate-examples">Alternate Examples</h2>
+<p>The following examples are part of the public layout system, but not used by Webstop’s standard products.</p>
 <h3 id="base-admin-example">Base Admin Example</h3>
 <p>This example contains a header, footer, and main content sections.</p>
 <div class="row">
@@ -776,42 +990,6 @@ See the <a href="#site-modal">Site Modal</a> section at the end of the page for 
 </span></span><span class="line"><span class="cl">    Admin Footer...
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h3 id="sidebar-example">Sidebar Example</h3>
-<div class="row">
-  <div class="col-auto">
-    <table style="width: 250px;"> 
-      <tr>
-        <td colspan="2" style="background-color: #369; height: 15px;"></td>
-      </tr>
-      <tr>
-        <td style="background-color: #ccc; height: 120px;"></td>
-        <td style="background-color: #eee; width: 60px;" rowspan="2"></td>
-      </tr>
-      <tr>
-        <td style="background-color: #ddd; height: 5px;"></td>
-      </tr>
-    </table>
-  </div>
-  <div class="col">
-    <a href="/docs/3.0/layouts/examples/admin_with_sidebar" class="btn btn-outline-primary wsg-btn-outline-primary">
-      View Sidebar Example Page <i class="fas fa-angle-right"></i>
-    </a>
-  </div>
-</div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin admin-with-sidebar&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-header&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;banner&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    Admin Header...
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">main</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-page&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;main&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    Admin Page Main Content...
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">aside</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-sidebar&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    Admin Sidebar...
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-footer&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;contentinfo&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    Admin Footer...
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h3 id="sidecar-and-sidebar-example">Sidecar and Sidebar Example</h3>
 <div class="row">
   <div class="col-auto">
@@ -936,190 +1114,6 @@ See the <a href="#site-modal">Site Modal</a> section at the end of the page for 
 </span></span><span class="line"><span class="cl">    Admin Footer...
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h2 id="ruby-on-rails-support">Ruby On Rails Support</h2>
-<p>Most of the time we don&rsquo;t talk about any back-end technology in our front-end framework. With the admin layout
-system we have built out a unique system to control page layout, so we are going to explain it here.</p>
-<h3 id="admin-layout-template">Admin Layout Template</h3>
-<p>At the heart of the layout system is the <code>admin_v3</code> layout template. To use it place <code>layout 'admin_v3'</code>
-near the top of your controller. This is typically done right after any actions are called, like the <code>before_action</code>.
-This one template handles all admin page layouts.</p>
-<h3 id="the-page-map">The <code>@page</code> Map</h3>
-<p>In the application controller we define a map called <code>@page</code>. The <code>@page</code> variable contains boolean settings which control the
-page layout. These settings are explained in the chart below.</p>
-<p>The <code>@page</code> hash is set at the top of a view file to control how that view will be presented in the admin layout template.</p>
-<!-- DEFAULTS
-      sidecar: false,
-      sidebar: true,
-      header: true,
-      footer: true,
-      flush: false,
-      tables: false,
-      data_tables: false
--->
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>Key Name</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="text-nowrap">sidecar</code></td>
-      <td><code class="text-nowrap">false</code></td>
-      <td>Controls display the sidecar left side navigation. <em>This feature isn't fully implemented yet.</em></td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">sidebar</code></td>
-      <td><code class="text-nowrap">true</code></td>
-      <td>
-        Controls display the sidebar right side navigation. Expects content to be placed into the <code>sidebar</code> 
-        yield. e.g. <code>content_for :sidebar, raw(render 'sidebar')</code>
-      </td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">header</code></td>
-      <td><code class="text-nowrap">true</code></td>
-      <td>Page header, which sits right below the header navbar. <em>This feature is deprecated.</em></td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">footer</code></td>
-      <td><code class="text-nowrap">true</code></td>
-      <td>
-        Controls display the footer. Expects content to be placed into the <code>footer</code> 
-        yield, and will typically contain breadcrumb navigation.
-      </td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">flush</code></td>
-      <td><code class="text-nowrap">false</code></td>
-      <td>Removes padding from the main content area. Usually used for tables to allow them to fill the content area.</td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">tables</code></td>
-      <td><code class="text-nowrap">false</code></td>
-      <td>Primes the system to expect the main content section to be filled with a scrollable table.</td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">data_tables</code></td>
-      <td><code class="text-nowrap">false</code></td>
-      <td>
-        Enables special tweaks to support the use of DataTables.js in the main content area. Especially makes 
-        scrolling work properly.
-      </td>
-    </tr>
-  </tbody>
-</table>
-<h3 id="edit-page-example">Edit Page Example</h3>
-<img src="/assets/images/layout/layout_edit_tracker.png" class="img-fluid" alt="Edit Page">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="err">&lt;</span>%
-</span></span><span class="line"><span class="cl">  @page[:header]  = false
-</span></span><span class="line"><span class="cl">  @page[:sidebar] = true
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">  content_for :sidebar, raw(render &#39;sidebar&#39;)
-</span></span><span class="line"><span class="cl">  content_for :footer, breadcrumbs(
-</span></span><span class="line"><span class="cl">    [
-</span></span><span class="line"><span class="cl">      {title: Tracker.model_name.human.pluralize.titleize, path: retailer_trackers_path(@retailer)},
-</span></span><span class="line"><span class="cl">      {title: :edit, path: edit_retailer_tracker_path(@retailer, @tracker)}
-</span></span><span class="line"><span class="cl">    ]
-</span></span><span class="line"><span class="cl">  )
-</span></span><span class="line"><span class="cl">%&gt;
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card card-readable card-centered card-shadowed&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-title&#34;</span><span class="p">&gt;</span>Editing Tracker<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="err">&lt;</span>%= render &#39;form&#39;, tracker: @tracker %&gt;
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h2 id="design-patterns">Design Patterns</h2>
-<p>The admin system is designed to accommodate the following common layout types.</p>
-<h3 id="data-tables-index-page">Data Tables Index Page</h3>
-<img src="/assets/images/layout/layout_data_tables_index_page.png" class="img-fluid" alt="Index Page Using Data Tables">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="vi">@page</span><span class="o">[</span><span class="ss">:tables</span><span class="o">]</span>  <span class="o">=</span> <span class="kp">true</span>
-</span></span><span class="line"><span class="cl"><span class="vi">@page</span><span class="o">[</span><span class="ss">:flush</span><span class="o">]</span>   <span class="o">=</span> <span class="kp">true</span>
-</span></span><span class="line"><span class="cl"><span class="vi">@page</span><span class="o">[</span><span class="ss">:sidebar</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span>
-</span></span></code></pre></div><h3 id="new-resource-form-page">New Resource Form Page</h3>
-<img src="/assets/images/layout/layout_new_from_page.png" class="img-fluid" alt="New Resource Form Page">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="vi">@page</span><span class="o">[</span><span class="ss">:header</span><span class="o">]</span>  <span class="o">=</span> <span class="kp">false</span>
-</span></span><span class="line"><span class="cl"><span class="vi">@page</span><span class="o">[</span><span class="ss">:sidebar</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span>
-</span></span></code></pre></div><h3 id="show-resource-page">Show Resource Page</h3>
-<img src="/assets/images/layout/layout_show_page.png" class="img-fluid" alt="Show Resource Page">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="vi">@page</span><span class="o">[</span><span class="ss">:header</span><span class="o">]</span>  <span class="o">=</span> <span class="kp">false</span>
-</span></span><span class="line"><span class="cl"><span class="vi">@page</span><span class="o">[</span><span class="ss">:sidebar</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span>
-</span></span></code></pre></div><h2 id="attributes">Attributes</h2>
-<p>The <code>data-ajax-form</code> &amp; <code>action</code> attributes are required. The rest are optional.</p>
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>Options</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="text-nowrap">data-ajax-form</code></td>
-      <td>The presence of this attribute indicates submitting on this form should trigger an AJAX load.</td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">action</code></td>
-      <td>
-        Attribute specifies the URL of the content you want AJAX'd. The AJAX request should return 
-        HTML content to display inside the target element. 
-      </td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">data-target</code></td>
-      <td>
-        The DOM node to load the content into. Uses standard jQuery selectors, usually targets an id attribute 
-        (e.g. <code class="text-nowrap">#some-target</code>). Optional, if the <code class="text-nowrap">data-target</code> attribute isn't 
-        present the content will replace the ajax form.
-      </td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">data-power-bar</code></td>
-      <td>
-        When present, completing the ajax call triggers a reload of the Shopping List Power Bar.
-      </td>
-    </tr>
-  </tbody>
-</table>
-<h2 id="site-modal">Site Modal</h2>
-<p>The Site Modal is an empty hidden modal available for use by features such as <a href="/docs/3.0/components/ajax/ajax-modal/">AJAX Modal</a>,
-and other features that rely on having a modal available. The modal is identified by the id attribute with a value of <code>site-modal</code>.
-The Site Modal is also available in the <a href="/docs/3.0/layouts/public/">Public Layout</a>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-header&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;banner&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    Admin Header...
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">main</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-page&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;main&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    Admin Page Main Content...
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;admin-footer&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;contentinfo&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    Admin Footer...
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-modal modal fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;site-modal&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;dialog&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;site-modal-title&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-dialog modal-lg&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;document&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-modal-content modal-content&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;modal-header&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row mx-0 w-100&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col ps-0&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">              <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-modal-title modal-title&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;site-modal-title&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-auto pe-0&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">              <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-light&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;modal&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fak fa-cancel&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">              <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-modal-body modal-body&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;site-modal-body&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-modal-footer modal-footer&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;site-modal-footer&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-outline-secondary&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;modal&#34;</span><span class="p">&gt;</span>Close<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span></code></pre></div>
   </main>
   
@@ -1128,16 +1122,9 @@ The Site Modal is also available in the <a href="/docs/3.0/layouts/public/">Publ
       <div class="wsg-table-of-contents">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#examples">Examples</a>
+    <li><a href="#default-example">Default Example</a>
       <ul>
-        <li><a href="#base-admin-example">Base Admin Example</a></li>
-        <li><a href="#sidecar-example">Sidecar Example</a></li>
-        <li><a href="#sidenav-example">Sidenav Example</a></li>
-        <li><a href="#sidecar-and-sidenav-example">Sidecar and Sidenav Example</a></li>
         <li><a href="#sidebar-example">Sidebar Example</a></li>
-        <li><a href="#sidecar-and-sidebar-example">Sidecar and Sidebar Example</a></li>
-        <li><a href="#sidenav-and-sidebar-example">Sidenav and Sidebar Example</a></li>
-        <li><a href="#sidecar-sidenav-and-sidebar-example">Sidecar, Sidenav, and Sidebar Example</a></li>
       </ul>
     </li>
     <li><a href="#ruby-on-rails-support">Ruby On Rails Support</a>
@@ -1156,6 +1143,17 @@ The Site Modal is also available in the <a href="/docs/3.0/layouts/public/">Publ
     </li>
     <li><a href="#attributes">Attributes</a></li>
     <li><a href="#site-modal">Site Modal</a></li>
+    <li><a href="#alternate-examples">Alternate Examples</a>
+      <ul>
+        <li><a href="#base-admin-example">Base Admin Example</a></li>
+        <li><a href="#sidecar-example">Sidecar Example</a></li>
+        <li><a href="#sidenav-example">Sidenav Example</a></li>
+        <li><a href="#sidecar-and-sidenav-example">Sidecar and Sidenav Example</a></li>
+        <li><a href="#sidecar-and-sidebar-example">Sidecar and Sidebar Example</a></li>
+        <li><a href="#sidenav-and-sidebar-example">Sidenav and Sidebar Example</a></li>
+        <li><a href="#sidecar-sidenav-and-sidebar-example">Sidecar, Sidenav, and Sidebar Example</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>

@@ -17,7 +17,8 @@
   width: 100vw;
   overflow-x: hidden;
 
-  // Header Height Control
+  // Grid Height Control
+  // Note, the Heights section lower in the document also affects heights.
   grid-template-rows: $public-header-height auto; // XS/Mobile
   @include media-breakpoint-up(sm)  { grid-template-rows: $public-header-sm-height  auto; }
   @include media-breakpoint-up(md)  { grid-template-rows: $public-header-md-height  auto; }
@@ -227,6 +228,31 @@
     }
   }
 
+  // Heights
+  // Note, the Grid Height Control section near the top of the document also affects heights.
+  .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - $public-header-height);}
+  .public-header { height: $public-header-height; }
+  @include media-breakpoint-up(sm)  {
+    .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - $public-header-sm-height);}
+    .public-header { height: $public-header-sm-height; }
+  }
+  @include media-breakpoint-up(md)  {
+    .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - $public-header-md-height);}
+    .public-header { height: $public-header-md-height; }
+  }
+  @include media-breakpoint-up(lg)  {
+    .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - $public-header-lg-height);}
+    .public-header { height: $public-header-lg-height; }
+  }
+  @include media-breakpoint-up(xl)  {
+    .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - $public-header-xl-height);}
+    .public-header { height: $public-header-xl-height; }
+  }
+  @include media-breakpoint-up(xxl) {
+    .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - $public-header-xxl-height);}
+    .public-header { height: $public-header-xxl-height; }
+  }
+
 
   // Padding
   .public-sidenav {
@@ -258,14 +284,7 @@
 
 
 
-  // Height
-  .public-sidecar, .public-sidenav, .public-page, .public-sidebar {
-    height: calc(100vh - $public-header-height);
-  }
 
-  .public-header {
-    height: $public-header-height;
-  }
 
   // Special Page Views
   .public-table-view,
@@ -302,9 +321,9 @@
 //}
 
 
-@include media-breakpoint-down(sm) {
-
-}
+//@include media-breakpoint-down(sm) {
+//
+//}
 
 //$grid-breakpoints: (
 //  xs: 0,
