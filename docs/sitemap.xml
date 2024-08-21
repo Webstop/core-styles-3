@@ -82,6 +82,10 @@
   </url><url>
     <loc>http://localhost:1313/docs/3.0/components/ajax/ajax-load/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/3.0/components/ajax/ajax-load-now/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/3.0/components/ajax/ajax-load-on-view/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/3.0/components/ajax/ajax-modal/</loc>
   </url><url>
     <loc>http://localhost:1313/ajax/</loc>

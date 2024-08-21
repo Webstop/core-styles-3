@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Ajax Load
-description: An easy way to load HTML content into a section of the page.
+description: An easy way to interactively load HTML content into a section of a page.
 toc: true
 source: Webstop
 menu: 
@@ -18,7 +18,7 @@ Here are a couple of common uses of the AJAX Load feature.
 
 ### Basic Example
 
-To use the Ajax Load feature place a `data-ajax` attribute on an HTML element (e.g. link or button). The `data-load` 
+To use the Ajax Load feature place a `data-ajax-load` attribute on an HTML element (e.g. link or button). The `data-load` 
 attribute specifies the URL to pull the content from, it is expected to be in HTML format. You specify where to place 
 the AJAX content with the `data-target` attribute, it accepts standard jQuery selectors.
 

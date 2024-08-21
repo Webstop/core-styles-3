@@ -2,7 +2,7 @@
 <html>
   <head layout-source="_default/baseof">
     <meta charset="utf-8" />
-    <title> Price at Core-Styles 3 </title>
+    <title> Ajax Load on View at Core-Styles 3 </title>
     <meta charset="utf-8" >
     <meta content="width=device-width, initial-scale=1" name="viewport" >
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
@@ -228,7 +228,7 @@
               <strong> Components</strong>
             </button class="btn">
 
-            <div class="collapse " id="components-menu-collapse">
+            <div class="collapse  show " id="components-menu-collapse">
               <ul class="list-unstyled fw-normal pb-1 small">
                 
                   
@@ -250,7 +250,7 @@
                   
                 
                   
-                    <li class="py-2 ps-4 ">
+                    <li class="py-2 ps-4  left-nav-active ">
                       <a href="/docs/3.0/components/ajax/ajax-load-on-view/" class="d-inline-flex rounded">Ajax Load on View</a>
                     </li>
                   
@@ -435,7 +435,7 @@
               <strong> Grocery</strong>
             </button>
 
-            <div class="collapse  show " id="grocery-menu-collapse">
+            <div class="collapse " id="grocery-menu-collapse">
               
               <ul class="list-unstyled fw-normal pb-1 small">
 
@@ -479,7 +479,7 @@
               
               <ul class="list-unstyled fw-normal pb-1 small">
 
-                <li class="py-2 ps-4  left-nav-active ">
+                <li class="py-2 ps-4 ">
                   <a href="/docs/3.0/grocery/circulars/price/" class="d-inline-flex rounded">Price X</a>
                 </li>
 
@@ -625,114 +625,76 @@
   <main class="admin-page" role="main">
     <section class="docs-heading inner-shadow">
       <h1 class="docs-heading-title shadow">
-        Price
+        Ajax Load on View
       </h1>
       
-        <p class="docs-heading-tagline">A unit for laying out prices and associated data.</p>
+        <p class="docs-heading-tagline">Ajax content automatically loads on page view.</p>
       
     </section>
-    <h2 id="examples">Examples</h2>
-<div class="my-3 p-3 example">
-    <p class="price price-big-dollars">
-      <span class="price-prefix">12 for</span>
-      <span class="price-dollar-sign">$</span>
-      <span class="price-dollars">4</span>
-      <span class="price-cents">99</span>
-      <span class="price-suffix">lb.</span>
-      <img  class="price-suffix-icon" src="/assets/images/Card_45x29.gif" alt="with Card">
-    </p>
-
-    <hr>
-    <p class="price price-big-cents">
-      <span class="price-prefix">12 for</span>
-      <span class="price-cents">99</span>
-      <span class="price-cent-sign">&cent;</span>
-      <span class="price-suffix">lb.</span>
-      <img  class="price-suffix-icon" src="/assets/images/Card_45x29.gif" alt="with Card">
-    </p>
-
-    <hr>   
-    <p class="price">
-      <span class="price-overlay">Buy One, Get One, FREE!</span>
-      <img src="/assets/images/Card_45x29.gif" class="price-suffix-icon" alt="with Card">
-    </p>
-
-
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price price-big-dollars&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-prefix&#34;</span><span class="p">&gt;</span>12 for<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-dollar-sign&#34;</span><span class="p">&gt;</span>$<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-dollars&#34;</span><span class="p">&gt;</span>4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-cents&#34;</span><span class="p">&gt;</span>99<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix&#34;</span><span class="p">&gt;</span>lb.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span>  <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix-icon&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/images/Card_45x29.gif&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;with Card&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price price-big-cents&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-prefix&#34;</span><span class="p">&gt;</span>12 for<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-cents&#34;</span><span class="p">&gt;</span>99<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-cent-sign&#34;</span><span class="p">&gt;</span><span class="ni">&amp;cent;</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix&#34;</span><span class="p">&gt;</span>lb.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span>  <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix-icon&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/images/Card_45x29.gif&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;with Card&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>   
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-overlay&#34;</span><span class="p">&gt;</span>Buy One, Get One, FREE!<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/images/Card_45x29.gif&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix-icon&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;with Card&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></span></span></code></pre></div>
-<h3 id="price-in-dollars-example">Price in Dollars Example</h3>
-<p>This example shows a price in dollars. Use the <code>price-big-dollars</code> sub-class to
-give a larger emphasis to the dollar portion of the price.</p>
-<div class="my-3 p-3 example">
-    <p class="price price-big-dollars">
-      <span class="price-prefix">12 for</span>
-      <span class="price-dollar-sign">$</span>
-      <span class="price-dollars">4</span>
-      <span class="price-cents">99</span>
-      <span class="price-suffix">lb.</span>
-      <img  class="price-suffix-icon" src="/assets/images/Card_45x29.gif" alt="with Card">
-    </p>
-
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price price-big-dollars&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-prefix&#34;</span><span class="p">&gt;</span>12 for<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-dollar-sign&#34;</span><span class="p">&gt;</span>$<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-dollars&#34;</span><span class="p">&gt;</span>4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-cents&#34;</span><span class="p">&gt;</span>99<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix&#34;</span><span class="p">&gt;</span>lb.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span>  <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix-icon&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/images/Card_45x29.gif&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;with Card&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></span></span></code></pre></div>
-<h3 id="price-in-cents-example">Price in Cents Example</h3>
-<p>This example shows a price in cents. Use the <code>price-big-cents</code> sub-class to
-give a larger emphasis to the cents portion of the price.</p>
-<div class="my-3 p-3 example">
-    <p class="price price-big-cents">
-      <span class="price-prefix">12 for</span>
-      <span class="price-cents">99</span>
-      <span class="price-cent-sign">&cent;</span>
-      <span class="price-suffix">lb.</span>
-      <img  class="price-suffix-icon" src="/assets/images/Card_45x29.gif" alt="with Card">
-    </p>
-
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price price-big-cents&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-prefix&#34;</span><span class="p">&gt;</span>12 for<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-cents&#34;</span><span class="p">&gt;</span>99<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-cent-sign&#34;</span><span class="p">&gt;</span><span class="ni">&amp;cent;</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix&#34;</span><span class="p">&gt;</span>lb.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span>  <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix-icon&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/images/Card_45x29.gif&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;with Card&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></span></span></code></pre></div>
-<h3 id="price-overlay-example">Price Overlay Example</h3>
-<p>In this example we want to overlay the price with text, but still give it special treatment.</p>
-<div class="my-3 p-3 example">
-    <p class="price">
-      <span class="price-overlay">Buy One, Get One, FREE!</span>
-      <img src="/assets/images/Card_45x29.gif" class="price-suffix-icon" alt="with Card">
-    </p>
-
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-overlay&#34;</span><span class="p">&gt;</span>Buy One, Get One, FREE!<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/images/Card_45x29.gif&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix-icon&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;with Card&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></span></span></code></pre></div>
+    <h2 id="example">Example</h2>
+<p>In the most basic form of lazy loading content we have the Load on View feature. This feature allows you to load in
+HTML content via AJAX only when the HTML element enters the web browser&rsquo;s viewport.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-load-on-view</span><span class="o">=</span><span class="s">&#34;/ajax/ajax_page_1&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...loading spinner...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><a href="/docs/3.0/components/ajax/infinite-scroll-demos/load-on-view-demo/" class="btn btn-outline-primary mb-3" target="_blank">
+  Load on View Demo
+  <i class="fa-duotone fa-up-right-from-square ms-2"></i>
+</a>
+<p>Here our JavaScript will set an observer on any HTML elements with a <code>data-load-on-view</code> attribute. The value of the
+<code>data-load-on-view</code> attribute represents the URL to fetch content from.</p>
+<p>When the observed element enters the browser&rsquo;s viewport, a fetch request will be made to retrieve the contents of the
+element with the HTML response from the supplied URL.</p>
+<h2 id="attributes">Attributes</h2>
+<h3 id="base-attributes">Base Attributes</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data-load-on-view</code></td>
+<td>String, Required</td>
+<td>Place on the HTML element to load content into. Value is the URL path to fetch content from. Must return valid HTML.</td>
+</tr>
+<tr>
+<td><code>data-skip-history</code></td>
+<td>Optional</td>
+<td>Without this attribute the fetch will be treated as a new page view in the browser history (and in Google Analytics).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="infinite-scroll-attributes">Infinite Scroll Attributes</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data-infinite-scroll</code></td>
+<td>Optional</td>
+<td>Required for Infinite Scroll support. If present infinite scroll will be enabled.</td>
+</tr>
+<tr>
+<td><code>data-page-number</code></td>
+<td>Integer, Optional</td>
+<td>Required for Paging support. The page number this content represents.</td>
+</tr>
+<tr>
+<td><code>data-max-page-number</code></td>
+<td>Integer, Optional</td>
+<td>Required for Paging support. The maximum number of pages of content available.</td>
+</tr>
+</tbody>
+</table>
 
   </main>
   
@@ -741,11 +703,11 @@ give a larger emphasis to the cents portion of the price.</p>
       <div class="wsg-table-of-contents">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#examples">Examples</a>
+    <li><a href="#example">Example</a></li>
+    <li><a href="#attributes">Attributes</a>
       <ul>
-        <li><a href="#price-in-dollars-example">Price in Dollars Example</a></li>
-        <li><a href="#price-in-cents-example">Price in Cents Example</a></li>
-        <li><a href="#price-overlay-example">Price Overlay Example</a></li>
+        <li><a href="#base-attributes">Base Attributes</a></li>
+        <li><a href="#infinite-scroll-attributes">Infinite Scroll Attributes</a></li>
       </ul>
     </li>
   </ul>
@@ -895,7 +857,7 @@ give a larger emphasis to the cents portion of the price.</p>
             
         
         
-            <li class="breadcrumb-item"><a href="/docs/3.0/grocery/">Grocery</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/">Components</a></li>
         
     
         
@@ -940,7 +902,7 @@ give a larger emphasis to the cents portion of the price.</p>
             
         
         
-            <li class="breadcrumb-item"><a href="/docs/3.0/grocery/circulars/">Circulars</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/ajax/">Ajax</a></li>
         
     
         
@@ -989,7 +951,7 @@ give a larger emphasis to the cents portion of the price.</p>
             
         
         
-            <li class="breadcrumb-item"><a href="/docs/3.0/grocery/circulars/price/">Price</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0/components/ajax/ajax-load-on-view/">Ajax load on view</a></li>
         
     
         

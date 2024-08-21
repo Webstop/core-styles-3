@@ -360,10 +360,11 @@
         let url      = target.getAttribute('data-load-on-view');
         let infinite = target.hasAttribute('data-infinite-scroll');
         let display  = target.getAttribute('data-display-as');
+        let show  = target.hasAttribute('data-show');
         let loaded   = target.classList.contains('is-loaded');
         display = display || 'block';
         // count == 0 || loaded ? display = display : display = 'none';
-        if(count != 0 && !loaded){display = 'none';}
+        if(count != 0 && !loaded && !show){display = 'none';}
         target.style.display = display;
         loadOnView(target, url, infinite);
         count++;
@@ -372,7 +373,17 @@
       let pagingTrigger = document.querySelector('.paging-trigger');
       if(pagingTrigger) { pagingObserver.observe(pagingTrigger); }
     }
+  })();
 
+  (() => {
+    // Vanilla JS version of Data Attribute DSL
+    let targets = document.querySelectorAll('[data-load-now]');
+    if(targets.length !== 0) {
+      targets.forEach((target) => {
+        let url      = target.getAttribute('data-load-now');
+        load$1(target, url, false);
+      });
+    }
 
   })();
 

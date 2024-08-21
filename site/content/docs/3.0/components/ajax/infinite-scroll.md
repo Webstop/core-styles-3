@@ -110,10 +110,10 @@ HTML content via AJAX only when the HTML element enters the web browser's viewpo
 ## Attributes
 
 
-| Name                   | Validation | Description                                                                                                          |
-|------------------------|----------|----------------------------------------------------------------------------------------------------------------------|
-| `data-load-on-view`    | String, Required | Place on the HTML element to load content into. Value is the URL path to fetch content from. Must return valid HTML. |
-| `data-infinite-scroll` | Optional | Required for Infinite Scroll support. The maximum number of pages of content available.                              |
+| Name                   | Validation        | Description                                                                                                          |
+|------------------------|-------------------|----------------------------------------------------------------------------------------------------------------------|
+| `data-load-on-view`    | String, Required  | Place on the HTML element to load content into. Value is the URL path to fetch content from. Must return valid HTML. |
+| `data-infinite-scroll` | Optional          | Required for Infinite Scroll support. If present infinite scroll will be enabled.                                    |
 | `data-page-number`     | Integer, Optional | Required for Paging support. The page number this content represents.                                                |
 | `data-max-page-number` | Integer, Optional | Required for Paging support. The maximum number of pages of content available.                                       |
 
