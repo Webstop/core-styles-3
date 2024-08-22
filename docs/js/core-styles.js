@@ -269,10 +269,10 @@
         // Element enters the viewport
         if(!entries[0].target.classList.contains('is-loaded')) {
           // Element has not been loaded yet
-          entries[0].target.classList.add('is-loaded');
           load$1(target, url, infinite);
           let skipHistory = entries[0].target.hasAttribute('data-skip-history');
           if(!skipHistory) { history.pushState(null, "", url); }
+          entries[0].target.classList.add('is-loaded');
         }
 
       }

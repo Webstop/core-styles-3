@@ -92,7 +92,7 @@ $card-deck-margin: $card-group-margin !default;
 // Toolbar
 $toolbar-spacer:       $spacer !default;
 $toolbar-padding-x:    $toolbar-spacer !default;
-$toolbar-padding-y:    calc($toolbar-spacer/2) !default;
+$toolbar-padding-y:    calc(#{$toolbar-spacer}/2) !default;
 $toolbar-bg:           $theme-primary !default;
 $toolbar-border-color: darken($toolbar-bg, 15%) !default;
 //$toolbar-min-height: 58px !default;

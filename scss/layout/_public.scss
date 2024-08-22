@@ -230,26 +230,26 @@
 
   // Heights
   // Note, the Grid Height Control section near the top of the document also affects heights.
-  .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - $public-header-height);}
+  .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - #{$public-header-height});}
   .public-header { height: $public-header-height; }
   @include media-breakpoint-up(sm)  {
-    .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - $public-header-sm-height);}
+    .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - #{$public-header-sm-height});}
     .public-header { height: $public-header-sm-height; }
   }
   @include media-breakpoint-up(md)  {
-    .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - $public-header-md-height);}
+    .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - #{$public-header-md-height});}
     .public-header { height: $public-header-md-height; }
   }
   @include media-breakpoint-up(lg)  {
-    .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - $public-header-lg-height);}
+    .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - #{$public-header-lg-height});}
     .public-header { height: $public-header-lg-height; }
   }
   @include media-breakpoint-up(xl)  {
-    .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - $public-header-xl-height);}
+    .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - #{$public-header-xl-height});}
     .public-header { height: $public-header-xl-height; }
   }
   @include media-breakpoint-up(xxl) {
-    .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - $public-header-xxl-height);}
+    .public-sidecar, .public-sidenav, .public-page, .public-sidebar { height: calc(100vh - #{$public-header-xxl-height});}
     .public-header { height: $public-header-xxl-height; }
   }
 

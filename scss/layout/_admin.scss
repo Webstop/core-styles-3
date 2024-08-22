@@ -88,7 +88,7 @@
     padding: $admin-spacer-y 0;
   }
   .admin-footer {
-    padding: calc($admin-spacer-y/2) 0 0 $admin-spacer-x ;
+    padding: calc(#{$admin-spacer-y}/2) 0 0 #{$admin-spacer-x} ;
   }
 
   // Colors
