@@ -1,0 +1,36 @@
+// Readable
+
+// the `col` variants should have a spacer at the beginning, one at the end, and one inbetween each column
+
+.readable {
+  max-width: $readable;
+}
+
+.readable-col {
+  max-width: calc(#{$readable} + (#{$spacer} * 2));
+}
+
+.readable-x2 {
+  max-width: calc(#{$readable} * 2);
+}
+
+.readable-col-x2 {
+  max-width: calc((#{$readable} * 2) + (#{$spacer} * 3));
+}
+
+.readable-x3 {
+  max-width: calc(#{$readable} * 3);
+}
+
+.readable-col-x3 {
+  max-width: calc((#{$readable} * 3) + (#{$spacer} * 4));
+}
+
+
+
+//.readable-x2 {
+//  max-width: 1176px; /* should use readable var * 2 */
+//}
+//.readable-col-x2 {
+//  max-width: 1224px; /* should use (readable var + (spacer? *2)) * 2 */
+//}

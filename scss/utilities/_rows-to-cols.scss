@@ -1,0 +1,30 @@
+// Rows to Columns
+
+.rows-container {
+  container-type: inline-size;
+  container-name: rows-container;
+}
+
+@container rows-container (max-width: 320px) {
+  .col-at-320 {
+    flex-direction: column;
+  }
+}
+
+@container rows-container (max-width: 640px) {
+  .col-at-640 {
+    flex-direction: column;
+  }
+}
+
+@container rows-container (max-width: 800px) {
+  .col-at-800 {
+    flex-direction: column;
+  }
+}
+
+@container rows-container (max-width: 1200px) {
+  .col-at-1200 {
+    flex-direction: column;
+  }
+}
