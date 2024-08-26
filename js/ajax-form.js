@@ -55,6 +55,19 @@
 
 $(function() {
 
+  function loadOnComplete(onCompleteUrl, onCompleteTarget) {
+    const targets = document.querySelectorAll(onCompleteTarget);
+
+    return fetch(onCompleteUrl)
+      .then(response => response.text())
+      .then(html => {
+        targets.forEach(target => {
+          target.innerHTML = html;
+        });
+      })
+      .catch(error => console.error('Ajax-form, error loading on-complete content:', error));
+  }
+
   $(document.body).on('submit', '[data-ajax-form]', function(event){
     event.preventDefault();
 
@@ -62,6 +75,14 @@ $(function() {
     let url = $this.attr('action');
     let data = $this.serializeArray();
     let $target = $this;
+    let hasPowerBar = $this.is('[data-power-bar]');
+    let hasOnComplete = $this.is('[data-on-complete-load]');
+    let onCompleteUrl = '';
+    let onCompleteTarget = '';
+    if(hasOnComplete){
+      onCompleteUrl = $this.data('on-complete-load');
+      onCompleteTarget = $this.data('on-complete-target');
+    }
 
     if( $this.is('[data-target]') ){
       $target = $($this.data('target'));
@@ -73,13 +94,18 @@ $(function() {
       $target = $this.parent();
     }
 
-    if( $this.is('[data-power-bar]') ){
-      $target.load(url,data,function(){
-        loadShoppingListPowerBar();
-      });
-    } else {
-      $target.load(url,data);
-    }
+    $target.load(url,data,function(){
+      if(hasOnComplete){ loadOnComplete(onCompleteUrl, onCompleteTarget); }
+      if(hasPowerBar){ loadShoppingListPowerBar(); }
+    });
+
+    // if( $this.is('[data-power-bar]') ){
+    //   $target.load(url,data,function(){
+    //     loadShoppingListPowerBar();
+    //   });
+    // } else {
+    //   $target.load(url,data);
+    // }
 
   });
 

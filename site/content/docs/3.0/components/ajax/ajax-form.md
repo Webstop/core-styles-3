@@ -112,5 +112,21 @@ The `data-ajax-form` & `action` attributes are required. The rest are optional.
         When present, completing the ajax call triggers a reload of the Shopping List Power Bar.
       </td>
     </tr>
+    <tr>
+      <td><code class="text-nowrap">data-on-complete-load</code></td>
+      <td>
+        When present, completing the ajax call triggers a second ajax call to the url specified in this attribute. 
+       The results are to be HTML and will be loaded into the elements defined in the 
+       <code class="text-nowrap">data-on-complete-target</code> attribute.
+      </td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">data-on-complete-target</code></td>
+      <td>
+        The DOM node to load the on complete content into. Uses standard query selectors, usually targets an id attribute 
+        (e.g. <code class="text-nowrap">#some-target</code>). Only used when the 
+        <code class="text-nowrap">data-on-complete-load</code> attribute is present.
+      </td>
+    </tr>
   </tbody>
 </table>
