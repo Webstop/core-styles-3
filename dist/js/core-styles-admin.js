@@ -109,19 +109,6 @@
 
   $(function() {
 
-    function loadOnComplete(onCompleteUrl, onCompleteTarget) {
-      const targets = document.querySelectorAll(onCompleteTarget);
-
-      return fetch(onCompleteUrl)
-        .then(response => response.text())
-        .then(html => {
-          targets.forEach(target => {
-            target.innerHTML = html;
-          });
-        })
-        .catch(error => console.error('Ajax-form, error loading on-complete content:', error));
-    }
-
     $(document.body).on('submit', '[data-ajax-form]', function(event){
       event.preventDefault();
 
@@ -152,13 +139,6 @@
         if(hasPowerBar){ loadShoppingListPowerBar(); }
       });
 
-      // if( $this.is('[data-power-bar]') ){
-      //   $target.load(url,data,function(){
-      //     loadShoppingListPowerBar();
-      //   });
-      // } else {
-      //   $target.load(url,data);
-      // }
 
     });
 
@@ -172,6 +152,14 @@
       let $this = $(this);
       let url = $this.data('load');
       let $target = $this;
+      let hasPowerBar = $this.is('[data-power-bar]');
+      let hasOnComplete = $this.is('[data-on-complete-load]');
+      let onCompleteUrl = '';
+      let onCompleteTarget = '';
+      if(hasOnComplete){
+        onCompleteUrl = $this.data('on-complete-load');
+        onCompleteTarget = $this.data('on-complete-target');
+      }
 
       if( $this.is('[data-target]') ){
         $target = $($this.data('target'));
@@ -192,20 +180,9 @@
       }
 
       $target.load(url,function(){
-        if( $this.is('[data-power-bar]') ){ loadShoppingListPowerBar(); }
-        if( $this.is('[data-load-on-callback]') && $this.is('[data-target-on-callback]') ){
-          loadOnCallback();
-        }
+        if(hasOnComplete){ loadOnComplete$1(onCompleteUrl, onCompleteTarget); }
+        if(hasPowerBar){ loadShoppingListPowerBar(); }
       });
-
-      function loadOnCallback() {
-        let callbackUrls = $this.data('load-on-callback').split(',');
-        let callbackTargets = $($this.data('target-on-callback'));
-        callbackUrls.forEach(function(callbackUrl, index){
-          let $callbackTarget = $(callbackTargets[index]);
-          $callbackTarget.load(callbackUrl);
-        });
-      }
 
     });
 
@@ -316,6 +293,19 @@
         }
       });
     });
+  }
+
+  function loadOnComplete$1(onCompleteUrl, onCompleteTarget) {
+    const targets = document.querySelectorAll(onCompleteTarget);
+
+    return fetch(onCompleteUrl)
+      .then(response => response.text())
+      .then(html => {
+        targets.forEach(target => {
+          target.innerHTML = html;
+        });
+      })
+      .catch(error => console.error('Error loading on-complete content:', error));
   }
 
 

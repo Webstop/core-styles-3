@@ -35,6 +35,29 @@ the AJAX content with the `data-target` attribute, it accepts standard jQuery se
 </div>
 {{< /example >}}
 
+### On Complete Example
+
+This examples show the use of the On Complete functionality to load additional content after the initial ajax request
+completes. We use the attribute `data-on-complete-load` to define the URL to load after the form completes and the
+`data-on-complete-target` attribute to identify the DOM node to load the on complete content. This is useful for things
+like a shopping list loading into a sidebar.
+
+
+{{< example >}}
+<button data-ajax-load data-target="#ajax-target-2" data-load="/ajax/alert_success" class="btn btn-primary  mb-2" data-on-complete-load="/ajax/alert_error" data-on-complete-target="#on-complete-target">
+Load Content
+</button>
+
+<div id="ajax-target-2">
+  <div class="alert alert-info">
+    This box could be replaced by AJAX content, if only someone would click the button above.
+  </div>
+</div>
+
+<div id="on-complete-target" class="my-3">On Complete Target</div>
+{{< /example >}}
+
+
 ### Replacement Example
 
 In the following example we replace the button that triggers the request with the content returned by the AJAX call.
@@ -81,6 +104,22 @@ The following attributes are required.
       <td><code class="text-nowrap">data-power-bar</code></td>
       <td>
         When present, completing the ajax call triggers a reload of the Shopping List Power Bar.
+      </td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">data-on-complete-load</code></td>
+      <td>
+        When present, completing the ajax call triggers a second ajax call to the url specified in this attribute. 
+       The results are to be HTML and will be loaded into the elements defined in the 
+       <code class="text-nowrap">data-on-complete-target</code> attribute.
+      </td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">data-on-complete-target</code></td>
+      <td>
+        The DOM node to load the on complete content into. Uses standard query selectors, usually targets an id attribute 
+        (e.g. <code class="text-nowrap">#some-target</code>). Only used when the 
+        <code class="text-nowrap">data-on-complete-load</code> attribute is present.
       </td>
     </tr>
   </tbody>

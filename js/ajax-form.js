@@ -55,19 +55,6 @@
 
 $(function() {
 
-  function loadOnComplete(onCompleteUrl, onCompleteTarget) {
-    const targets = document.querySelectorAll(onCompleteTarget);
-
-    return fetch(onCompleteUrl)
-      .then(response => response.text())
-      .then(html => {
-        targets.forEach(target => {
-          target.innerHTML = html;
-        });
-      })
-      .catch(error => console.error('Ajax-form, error loading on-complete content:', error));
-  }
-
   $(document.body).on('submit', '[data-ajax-form]', function(event){
     event.preventDefault();
 
@@ -99,13 +86,6 @@ $(function() {
       if(hasPowerBar){ loadShoppingListPowerBar(); }
     });
 
-    // if( $this.is('[data-power-bar]') ){
-    //   $target.load(url,data,function(){
-    //     loadShoppingListPowerBar();
-    //   });
-    // } else {
-    //   $target.load(url,data);
-    // }
 
   });
 

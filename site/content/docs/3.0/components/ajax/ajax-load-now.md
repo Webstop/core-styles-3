@@ -33,8 +33,8 @@ element the attribute resides in.
 
 ## Attributes
 
-| Attribute       | Description |
-|-----------------|-------------|
+| Attribute       | Description                                                                                                                                                                                                                                  |
+|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `data-load-now` | The presence of this attribute indicates clicking on this element should trigger an AJAX load. The value specifies the URL of the content you want AJAX'd. The AJAX request should return HTML content to display inside the target element. |
 
 

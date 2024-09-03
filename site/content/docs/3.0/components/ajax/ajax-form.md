@@ -34,6 +34,28 @@ specifies the URL to pull the content from, the content is expected to be in HTM
 
 {{< /example >}}
 
+### On Complete Example
+
+This examples show the use of the On Complete functionality to load additional content after the initial ajax request 
+completes. We use the attribute `data-on-complete-load` to define the URL to load after the form completes and the 
+`data-on-complete-target` attribute to identify the DOM node to load the on complete content. This is useful for things 
+like a shopping list loading into a sidebar.
+
+{{< example >}}
+<form data-ajax-form action="/ajax/alert_success" data-on-complete-load="/ajax/alert_success" data-on-complete-target="#on-complete-target-1">
+  <div class="form-group">
+    <label for="title-example" class="py-2">Title</label>
+    <input type="text" class="form-control p-2" name="title-example" id="title-example" placeholder="Title">
+  </div>
+  <button class="btn btn-primary  my-3" type="submit">
+    Save Title
+  </button>
+</form>
+
+<div id="on-complete-target-1">On Complete Target</div>
+
+{{< /example >}}
+
 ### Example with All Options
 
 In the following example we enable all of the optional attributes, including `data-target` and 
@@ -43,7 +65,7 @@ The `data-power-bar` attribute triggers a reload of the Shopping List Power Bar 
 is returned.
 
 {{< example >}}
-<form data-ajax-form action="/ajax/alert_error" data-target="#target-1" data-power-bar>
+<form data-ajax-form action="/ajax/alert_error" data-target="#target-1" data-power-bar  data-on-complete-load="/ajax/alert_success" data-on-complete-target="#on-complete-target-2">
   <div class="form-group">
     <label for="title-example" class="py-2">Title</label>
     <input type="text" class="form-control p-2" name="title-example" id="title-example" placeholder="Title">
@@ -52,9 +74,10 @@ is returned.
     Save Title
   </button>
 </form>
-<div id="target-1" class="mt-4">
+<div id="target-1" class="my-4">
   <div class="alert alert-success">Ajax Content goes here.</div>
 </div>
+<div id="on-complete-target-2">On Complete Target</div>
 {{< /example >}}
 
 ### Repeating Example

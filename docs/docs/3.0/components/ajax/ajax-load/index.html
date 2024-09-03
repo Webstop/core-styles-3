@@ -656,6 +656,34 @@ the AJAX content with the <code>data-target</code> attribute, it accepts standar
 </span></span><span class="line"><span class="cl">    This box could be replaced by AJAX content, if only someone would click the button above.
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+<h3 id="on-complete-example">On Complete Example</h3>
+<p>This examples show the use of the On Complete functionality to load additional content after the initial ajax request
+completes. We use the attribute <code>data-on-complete-load</code> to define the URL to load after the form completes and the
+<code>data-on-complete-target</code> attribute to identify the DOM node to load the on complete content. This is useful for things
+like a shopping list loading into a sidebar.</p>
+<div class="my-3 p-3 example">
+<button data-ajax-load data-target="#ajax-target-2" data-load="/ajax/alert_success" class="btn btn-primary  mb-2" data-on-complete-load="/ajax/alert_error" data-on-complete-target="#on-complete-target">
+Load Content
+</button>
+
+<div id="ajax-target-2">
+  <div class="alert alert-info">
+    This box could be replaced by AJAX content, if only someone would click the button above.
+  </div>
+</div>
+
+<div id="on-complete-target" class="my-3">On Complete Target</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">data-ajax-load</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#ajax-target-2&#34;</span> <span class="na">data-load</span><span class="o">=</span><span class="s">&#34;/ajax/alert_success&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary  mb-2&#34;</span> <span class="na">data-on-complete-load</span><span class="o">=</span><span class="s">&#34;/ajax/alert_error&#34;</span> <span class="na">data-on-complete-target</span><span class="o">=</span><span class="s">&#34;#on-complete-target&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">Load Content
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;ajax-target-2&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-info&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    This box could be replaced by AJAX content, if only someone would click the button above.
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;on-complete-target&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;my-3&#34;</span><span class="p">&gt;</span>On Complete Target<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 <h3 id="replacement-example">Replacement Example</h3>
 <p>In the following example we replace the button that triggers the request with the content returned by the AJAX call.</p>
 <div class="my-3 p-3 example">
@@ -703,6 +731,22 @@ the AJAX content with the <code>data-target</code> attribute, it accepts standar
         When present, completing the ajax call triggers a reload of the Shopping List Power Bar.
       </td>
     </tr>
+    <tr>
+      <td><code class="text-nowrap">data-on-complete-load</code></td>
+      <td>
+        When present, completing the ajax call triggers a second ajax call to the url specified in this attribute. 
+       The results are to be HTML and will be loaded into the elements defined in the 
+       <code class="text-nowrap">data-on-complete-target</code> attribute.
+      </td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">data-on-complete-target</code></td>
+      <td>
+        The DOM node to load the on complete content into. Uses standard query selectors, usually targets an id attribute 
+        (e.g. <code class="text-nowrap">#some-target</code>). Only used when the 
+        <code class="text-nowrap">data-on-complete-load</code> attribute is present.
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -716,6 +760,7 @@ the AJAX content with the <code>data-target</code> attribute, it accepts standar
     <li><a href="#examples">Examples</a>
       <ul>
         <li><a href="#basic-example">Basic Example</a></li>
+        <li><a href="#on-complete-example">On Complete Example</a></li>
         <li><a href="#replacement-example">Replacement Example</a></li>
       </ul>
     </li>
