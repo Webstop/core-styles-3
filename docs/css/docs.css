@@ -13358,7 +13358,7 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
 @media (min-width: 576px) {
   .public.public-with-sidecar {
     grid-template-columns: 90px auto;
-    grid-template-areas: "public-header  public-header" "public-sidecar public-page" "public-sidecar public-footer";
+    grid-template-areas: "public-header  public-header" "public-sidecar public-page";
   }
   .public.public-with-sidecar .public-sidecar {
     display: block;
@@ -13370,7 +13370,7 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
 @media (min-width: 1200px) {
   .public.public-with-sidenav {
     grid-template-columns: 320px auto;
-    grid-template-areas: "public-header  public-header" "public-sidenav public-page" "public-sidenav public-footer";
+    grid-template-areas: "public-header  public-header" "public-sidenav public-page";
   }
   .public.public-with-sidenav .public-sidenav {
     display: block;
@@ -13388,7 +13388,7 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
 @media (min-width: 1200px) {
   .public.public-with-sidebar {
     grid-template-columns: auto 320px;
-    grid-template-areas: "public-header public-header" "public-page   public-sidebar" "public-footer public-sidebar";
+    grid-template-areas: "public-header public-header" "public-page   public-sidebar";
   }
   .public.public-with-sidebar .public-sidebar {
     display: block;
@@ -13399,6 +13399,15 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
   .public.public-with-sidebar .public-sidebar-offcanvas-btn {
     display: none;
   }
+}
+.public.public-with-sidebar.public-hide-sidebar {
+  grid-template-columns: auto;
+  grid-template-areas: "public-header" "public-page";
+}
+.public.public-with-sidebar.public-hide-sidebar .public-sidebar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 @media (min-width: 1200px) {
   .public.public-with-sidecar.public-with-sidenav {
@@ -13417,7 +13426,7 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
     grid-auto-columns: 0;
     grid-auto-rows: 0;
     grid-template-columns: 90px auto 320px;
-    grid-template-areas: "public-header  public-header public-header" "public-sidecar public-page   public-sidebar" "public-sidecar public-footer public-sidebar";
+    grid-template-areas: "public-header  public-header public-header" "public-sidecar public-page   public-sidebar";
   }
   .public.public-with-sidecar.public-with-sidebar .public-sidecar {
     display: block;

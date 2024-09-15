@@ -135,12 +135,30 @@
       }
 
       $target.load(url,data,function(){
+        console.log(`hasOnComplete: ${hasOnComplete}`);
         if(hasOnComplete){ loadOnComplete(onCompleteUrl, onCompleteTarget); }
         if(hasPowerBar){ loadShoppingListPowerBar(); }
       });
 
 
     });
+
+    function loadOnComplete(onCompleteUrl, onCompleteTarget) {
+      const targets = document.querySelectorAll(onCompleteTarget);
+      console.log(`loadOnComplete`);
+      console.log(`onCompleteUrl: ${onCompleteUrl}`);
+      console.log(`onCompleteTarget: ${onCompleteTarget}`);
+
+      return fetch(onCompleteUrl)
+        .then(response => response.text())
+        .then(html => {
+          targets.forEach(target => {
+            console.log(`Apply on complete to target.`);
+            target.innerHTML = html;
+          });
+        })
+        .catch(error => console.error('Error loading on-complete content:', error));
+    }
 
   });
 
@@ -180,7 +198,7 @@
       }
 
       $target.load(url,function(){
-        if(hasOnComplete){ loadOnComplete$1(onCompleteUrl, onCompleteTarget); }
+        if(hasOnComplete){ loadOnComplete(onCompleteUrl, onCompleteTarget); }
         if(hasPowerBar){ loadShoppingListPowerBar(); }
       });
 
@@ -295,13 +313,17 @@
     });
   }
 
-  function loadOnComplete$1(onCompleteUrl, onCompleteTarget) {
+  function loadOnComplete(onCompleteUrl, onCompleteTarget) {
     const targets = document.querySelectorAll(onCompleteTarget);
+    console.log(`loadOnComplete`);
+    console.log(`onCompleteUrl: ${onCompleteUrl}`);
+    console.log(`onCompleteTarget: ${onCompleteTarget}`);
 
     return fetch(onCompleteUrl)
       .then(response => response.text())
       .then(html => {
         targets.forEach(target => {
+          console.log(`Apply on complete to target.`);
           target.innerHTML = html;
         });
       })

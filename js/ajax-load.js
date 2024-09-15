@@ -157,11 +157,15 @@ function updatePaging(source) {
 
 function loadOnComplete(onCompleteUrl, onCompleteTarget) {
   const targets = document.querySelectorAll(onCompleteTarget);
+  console.log(`loadOnComplete`);
+  console.log(`onCompleteUrl: ${onCompleteUrl}`);
+  console.log(`onCompleteTarget: ${onCompleteTarget}`);
 
   return fetch(onCompleteUrl)
     .then(response => response.text())
     .then(html => {
       targets.forEach(target => {
+        console.log(`Apply on complete to target.`);
         target.innerHTML = html;
       });
     })
