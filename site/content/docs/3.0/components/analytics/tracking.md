@@ -351,33 +351,12 @@ we need to install in the correct order for this to work.
 Using Aye.js requires a few things be setup on your site template. Specifically, some data attributes on the body tag of
 the web page. Aye uses these data attributes to craft the URL used to submit tracking events.
 
-| Attribute          | Description |
-|--------------------|-------------|
-| `data-retailer-id` | The record id from the retailer table of the current grocery website. |
-| `data-environment` | This is used to determine what API host to use. Supports `production` (`https://api.grocerywebsite.com`), `development` (`http://grocery.local:3000`), and `test` (`http://grocery.local:3000`). If you need a different environment then you set the `data-api-host` attribute. |
-| `data-api-host`    | If you need to use an environment other than production or local development & testing, you can specify the domain host to use manually with this attribute (e.g. `http://grocery.core1.rails1.webstophq.com`).   |
+| Attribute          | Description                                                                                                                                                                                                                                                                      |
+|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `data-retailer-id` | The record id from the retailer table of the current grocery website.                                                                                                                                                                                                            |
+| `data-api-host`    | Specify the API host to use with this attribute (e.g. `http://grocery.core1.rails1.webstophq.com`).                                                                                                                                                                              |
 
 ### Examples
-
-For **local development** you'd have the following data attributes:
-
-{{< highlight go >}}
-<body data-retailer-id="767" data-environment="development">
-{{< / highlight >}}
-
-For **local testing** you'd have the following data attributes:
-
-{{< highlight go >}}
-<body data-retailer-id="767" data-environment="test">
-{{< / highlight >}}
-
-For **production** you'd have the following data attributes:
-
-{{< highlight go >}}
-<body data-retailer-id="767" data-environment="production">
-{{< / highlight >}}
-
-For **other environments** you can specify the following:
 
 {{< highlight go >}}
 <body data-retailer-id="767" data-api-host="http://grocery.core1.rails1.webstophq.com">

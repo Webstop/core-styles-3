@@ -1053,23 +1053,12 @@ the web page. Aye uses these data attributes to craft the URL used to submit tra
 <td>The record id from the retailer table of the current grocery website.</td>
 </tr>
 <tr>
-<td><code>data-environment</code></td>
-<td>This is used to determine what API host to use. Supports <code>production</code> (<code>https://api.grocerywebsite.com</code>), <code>development</code> (<code>http://grocery.local:3000</code>), and <code>test</code> (<code>http://grocery.local:3000</code>). If you need a different environment then you set the <code>data-api-host</code> attribute.</td>
-</tr>
-<tr>
 <td><code>data-api-host</code></td>
-<td>If you need to use an environment other than production or local development &amp; testing, you can specify the domain host to use manually with this attribute (e.g. <code>http://grocery.core1.rails1.webstophq.com</code>).</td>
+<td>Specify the API host to use with this attribute (e.g. <code>http://grocery.core1.rails1.webstophq.com</code>).</td>
 </tr>
 </tbody>
 </table>
 <h3 id="examples-1">Examples</h3>
-<p>For <strong>local development</strong> you&rsquo;d have the following data attributes:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;767&#34;</span> <span class="na">data-environment</span><span class="o">=</span><span class="s">&#34;development&#34;</span><span class="p">&gt;</span></span></span></code></pre></div>
-<p>For <strong>local testing</strong> you&rsquo;d have the following data attributes:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;767&#34;</span> <span class="na">data-environment</span><span class="o">=</span><span class="s">&#34;test&#34;</span><span class="p">&gt;</span></span></span></code></pre></div>
-<p>For <strong>production</strong> you&rsquo;d have the following data attributes:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;767&#34;</span> <span class="na">data-environment</span><span class="o">=</span><span class="s">&#34;production&#34;</span><span class="p">&gt;</span></span></span></code></pre></div>
-<p>For <strong>other environments</strong> you can specify the following:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;767&#34;</span> <span class="na">data-api-host</span><span class="o">=</span><span class="s">&#34;http://grocery.core1.rails1.webstophq.com&#34;</span><span class="p">&gt;</span></span></span></code></pre></div>
 <p><em>The example above would be used for Webstop&rsquo;s Core 1 testing server.</em></p>
 
