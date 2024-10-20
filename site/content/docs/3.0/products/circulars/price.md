@@ -2,13 +2,13 @@
 layout: docs
 title: Price
 description: A unit for laying out prices and associated data.
-group: grocery
+group: circulars
 toc: true
 source: Webstop
 menu: 
-  Grocery:
-      tags: "Circulars"
-      parent: Grocery
+  products:
+    tags: "Circulars"
+    parent: Circulars
 ---
 
 ## Examples

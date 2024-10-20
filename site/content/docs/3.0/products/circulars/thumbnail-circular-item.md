@@ -2,13 +2,13 @@
 layout: docs
 title: Thumbnail (Classic) Circular Item
 description: The classic individual sale item inside the digital circular.
-group: grocery
+group: circulars
 toc: true
 source: Webstop
 menu: 
-  Grocery:
-      tags: "Circulars"
-      parent: Grocery
+  products:
+    tags: "Circulars"
+    parent: Circulars
 ---
 
 <div class="alert alert-warning" role="alert">

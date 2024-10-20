@@ -6,9 +6,9 @@ group: grocery
 toc: true
 source: Webstop
 menu: 
-  Products:
-      tags: "Circulars"
-      parent: Circulars
+  products:
+    tags: "Circulars"
+    parent: Circulars
 ---
 
 - Banners can be any height and should be 2k to 4k wide. 

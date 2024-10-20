@@ -6,7 +6,7 @@ group: products
 toc: true
 source: Webstop
 menu:
-  Products:
+  products:
     tags: "Recipes"
     parent: Recipes
 ---

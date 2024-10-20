@@ -2,13 +2,13 @@
 layout: docs
 title: Circular Navigation
 description: Navigation for digital circular content.
-group: grocery
+group: circulars
 toc: true
 source: Webstop
 menu: 
-  Grocery:
-      tags: "Circulars"
-      parent: Grocery
+  products:
+    tags: "Circulars"
+    parent: Circulars
 ---
 
 ## Examples

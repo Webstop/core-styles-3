@@ -2,16 +2,14 @@
 layout: docs
 title: Circular Items
 description: Content items designed to live inside the digital circular.
-group: grocery
+group: circulars
 toc: true
 source: Webstop
 menu: 
-  Grocery:
-      tags: "Circulars"
-      parent: Grocery
+  products:
+    tags: "Circulars"
+    parent: Circulars
 ---
-
-
 
 <div class="wsg-example">
   <div class="row">

@@ -6,12 +6,10 @@ group: circulars
 toc: true
 source: Webstop
 menu: 
-  Products:
+  products:
     tags: "Circulars"
     parent: Circulars
 ---
-
-
 
 <div class="wsg-example">
   <div class="row">

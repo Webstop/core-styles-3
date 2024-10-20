@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Standard Promotion Circular Item
-description: Individual image items inside the digital circular. 
-group: grocery
+description: Individual image items inside the digital circular.
+group: circulars
 toc: true
 source: Webstop
 menu: 
-  Grocery:
-      tags: "Circulars"
-      parent: Grocery
+  products:
+    tags: "Circulars"
+    parent: Circulars
 ---
 
 *The Standard Promotion replaces the legacy SIMG item.*

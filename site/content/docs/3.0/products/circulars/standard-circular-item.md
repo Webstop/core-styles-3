@@ -2,13 +2,13 @@
 layout: docs
 title: Standard Circular Item
 description: Individual sale items inside the digital circular.
-group: grocery
+group: circulars
 toc: true
 source: Webstop
 menu: 
-  Grocery:
-      tags: "Circulars"
-      parent: Grocery
+  products:
+    tags: "Circulars"
+    parent: Circulars
 ---
 
 ## Examples
