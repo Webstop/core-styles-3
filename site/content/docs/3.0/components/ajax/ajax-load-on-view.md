@@ -5,7 +5,7 @@ description: Ajax content automatically loads on page view.
 toc: true
 source: Webstop
 menu: 
-  Components:
+  components:
       tags: "Ajax"
       parent: Components
 ---

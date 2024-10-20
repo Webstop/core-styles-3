@@ -6,7 +6,7 @@ group: components
 toc: true
 source: Webstop
 menu: 
-    Components:
+    components:
       tags: "Locations, geolocation"
       parent: Components
 ---

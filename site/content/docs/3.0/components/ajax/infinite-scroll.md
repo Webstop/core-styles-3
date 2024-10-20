@@ -5,7 +5,7 @@ description: Load new pages of content as users scroll to the bottom of the page
 toc: true
 source: Webstop
 menu: 
-  Components:
+  components:
       tags: "Ajax"
       parent: Components
 ---

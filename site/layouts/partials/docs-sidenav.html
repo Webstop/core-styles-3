@@ -137,59 +137,7 @@
 
         {{ end }}
       {{ end }}
-
-      {{ $currentPage := . }}
-      {{ range .Site.Menus.tagging }}
-        {{ if .HasChildren }}
-          <li class="mb-1">
-            <button class="btn" data-bs-toggle="collapse" data-bs-target="#tagging-menu-collapse" aria-expanded="false">
-              <strong> {{ .Name }}</strong>
-            </button>
-
-            <div class="collapse {{if or ($currentPage.IsMenuCurrent "tagging" .) ($currentPage.HasMenuCurrent "tagging" .) }} show {{end}}" id="tagging-menu-collapse">
-              {{ range .Children }}
-              <ul class="list-unstyled fw-normal pb-1 small">
-
-                <li class="py-2 ps-4 {{if or ($currentPage.IsMenuCurrent "tagging" .) ($currentPage.HasMenuCurrent "tagging" .) }} left-nav-active {{end}}">
-                  <a href="{{ .URL }}" class="d-inline-flex rounded">{{ .Name }}</a>
-                </li>
-
-              </ul>
-              {{ end }}
-            </div>
-          </li>
-        {{ else }}
-
-        {{ end }}
-      {{ end }}
-
-      {{ $currentPage := . }}
-      {{ range .Site.Menus.grocery }}
-        {{ if .HasChildren }}
-          <li class="mb-1">
-            <button class="btn" data-bs-toggle="collapse" data-bs-target="#grocery-menu-collapse" aria-expanded="false">
-              <strong> {{ .Name }}</strong>
-            </button>
-
-            <div class="collapse {{if or ($currentPage.IsMenuCurrent "grocery" .) ($currentPage.HasMenuCurrent "grocery" .) }} show {{end}}" id="grocery-menu-collapse">
-              {{ range .Children }}
-              <ul class="list-unstyled fw-normal pb-1 small">
-
-                <li class="py-2 ps-4 {{if or ($currentPage.IsMenuCurrent "grocery" .) ($currentPage.HasMenuCurrent "grocery" .) }} left-nav-active {{end}}">
-                  <a href="{{ .URL }}" class="d-inline-flex rounded">{{ .Name }} X</a>
-                </li>
-
-              </ul>
-              {{ end }}
-            </div>
-          </li>
-        {{ else }}
-        {{ end }}
-      {{ end }}
-
-
-
-
+    
 
     {{ $currentPage := . }}
     <li class="mb-1">

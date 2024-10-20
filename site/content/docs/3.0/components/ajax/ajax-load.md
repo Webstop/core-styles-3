@@ -5,7 +5,7 @@ description: An easy way to interactively load HTML content into a section of a 
 toc: true
 source: Webstop
 menu: 
-  Components:
+  components:
       tags: "Ajax"
       parent: Components
 ---

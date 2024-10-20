@@ -6,7 +6,7 @@ group: components
 toc: true
 source: Webstop
 menu: 
-    Components:
+    components:
       tags: "pagination, paging, navigation, infinite scroll"
       parent: Components
 ---

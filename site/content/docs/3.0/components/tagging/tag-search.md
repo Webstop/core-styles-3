@@ -5,7 +5,7 @@ description: Search for and assign tags in a web form.
 toc: true
 source: Webstop
 menu: 
-    Components:
+    components:
       tags: "tagging"
       parent: Components
 ---

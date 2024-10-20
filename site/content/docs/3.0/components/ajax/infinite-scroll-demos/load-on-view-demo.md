@@ -5,7 +5,7 @@ description: Demonstration of the Load on View Component.
 toc: true
 source: Webstop
 menu: 
-  Components:
+  components:
       tags: "Ajax"
       parent: Components
 ---

@@ -5,7 +5,7 @@ description: A Basic Demonstration of the Infinite Scroll Component.
 toc: true
 source: Webstop
 menu: 
-  Components:
+  components:
       tags: "Ajax"
       parent: Components
 ---

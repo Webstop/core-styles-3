@@ -6,9 +6,9 @@ group: components
 toc: true
 source: Webstop
 menu: 
-    Components:
-      tags: "text editor, markdown"
-      parent: editor
+  components:
+    tags: "text editor, markdown"
+    parent: Components
 ---
 
 Our markdown editor uses the [Toast UI Editor](https://ui.toast.com/tui-editor) to provide 

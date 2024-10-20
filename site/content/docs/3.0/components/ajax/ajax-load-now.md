@@ -5,7 +5,7 @@ description: An easy way automatically load HTML content into a section of a pag
 toc: true
 source: Webstop
 menu: 
-  Components:
+  components:
       tags: "Ajax"
       parent: Components
 ---
