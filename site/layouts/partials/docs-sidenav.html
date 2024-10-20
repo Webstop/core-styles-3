@@ -187,35 +187,45 @@
         {{ end }}
       {{ end }}
 
+
+
+
+
     {{ $currentPage := . }}
-    {{ range .Site.Menus.products }}
     <li class="mb-1">
       <button class="btn" data-bs-toggle="collapse" data-bs-target="#products-menu-collapse" aria-expanded="false">
-        <strong>Outside: {{ .Name }}</strong>
+        <strong>Products</strong>
       </button>
-    </li>
-      {{ if .HasChildren }}
-        <li class="mb-1">
-          <button class="btn" data-bs-toggle="collapse" data-bs-target="#products-menu-collapse" aria-expanded="false">
-            <strong> {{ .Name }}</strong>
-          </button>
+      <ul class="list-unstyled fw-normal pb-1 small collapse {{ if $currentPage.Menus.products }} show {{ end }}" id="products-menu-collapse">
 
-          <div class="collapse {{if or ($currentPage.IsMenuCurrent "products" .) ($currentPage.HasMenuCurrent "products" .) }} show {{end}}" id="products-menu-collapse">
-            {{ range .Children }}
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li class="py-2 ps-4 {{if or ($currentPage.IsMenuCurrent "products" .) ($currentPage.HasMenuCurrent "products" .) }} left-nav-active {{end}}">
-                  <a href="{{ .URL }}" class="d-inline-flex rounded">{{ .Name }} {{ .Parent }} </a>
-                {{ if .Page.Params.Product }}
-                <p class="docs-heading-tagline">{{ .Page.Params.Product | markdownify }}</p>
+        {{ range .Site.Menus.products }}
+
+          {{ if .HasChildren }}
+            <li class="mb-1 ps-3">
+              <button class="btn" data-bs-toggle="collapse" data-bs-target="#{{ .Name | urlize }}-menu-collapse" aria-expanded="false">
+                <strong>{{ .Name }}</strong>
+              </button>
+              {{ $inSection := false }}
+
+              {{ range .Children }}
+                {{ if eq $currentPage.Page.RelPermalink .URL }}
+                  {{ $inSection = true }}
                 {{ end }}
-                </li>
+              {{ end }}
+
+              <ul class="list-unstyled fw-normal pb-1 small collapse {{ if $inSection }}show{{end}}" id="{{ .Name | urlize }}-menu-collapse">
+                {{ range .Children }}
+                  <li class="py-2 ps-4 {{if or ($currentPage.IsMenuCurrent "products" .) ($currentPage.HasMenuCurrent "products" .) }} left-nav-active {{end}}">
+                    <a href="{{ .URL }}" class="d-inline-flex rounded">{{ .Name }} </a>
+                  </li>
+                {{ end }}
               </ul>
-            {{ end }}
-          </div>
-        </li>
-      {{ else }}
-      {{ end }}
-    {{ end }}
+            </li>
+          {{ else }}
+          {{ end }}
+        {{ end }}
+      </ul>
+    </li>
 
       {{ $currentPage := . }}
       {{ range .Site.Menus.utilities }}
