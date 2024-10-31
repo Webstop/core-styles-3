@@ -6,7 +6,7 @@
 	var ahoy$1 = {exports: {}};
 
 	/*!
-	 * Ahoy.js v0.4.3
+	 * Ahoy.js v0.4.4
 	 * Simple, powerful JavaScript analytics
 	 * https://github.com/ankane/ahoy.js
 	 * MIT License
@@ -193,6 +193,10 @@
 
 		  // https://stackoverflow.com/a/2117523/1177228
 		  function generateId() {
+		    if (window.crypto && window.crypto.randomUUID) {
+		      return window.crypto.randomUUID();
+		    }
+
 		    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
 		      var r = Math.random() * 16 | 0;
 		      var v = c === 'x' ? r : (r & 0x3 | 0x8);
@@ -565,6 +569,7 @@
 
 	  webstop.aye.cargo = function(element){
 	    let properties = {};
+	    properties['store_number'] = webstop.storeNumber;
 	    for(let attribute of element.attributes) {
 	      if(attribute.name.indexOf('data-aye-property-')===0) {
 	        properties[attribute.name.slice(18).split("-").join("_").toLowerCase()] = attribute.value;
