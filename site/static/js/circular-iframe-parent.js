@@ -104,10 +104,10 @@
       }
 
       circularIframe.style.width = '100%';
-      circularIframe.style.height = '200px';
-
-      // circularIframe.width = '100%';
-      // circularIframe.height = '300px'; // Adjust height as needed
+      circularIframe.style.minHeightheight = '100vh';
+      circularIframe.style.border = '0';
+      circularIframe.style.padding = '0';
+      circularIframe.style.margin = '0';
       // circularIframe.allowFullScreen = true;
 
       // Add the iframe to the container
