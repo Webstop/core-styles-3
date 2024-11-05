@@ -33,8 +33,6 @@
     "js-minify-circular-iframe-parent": "terser dist/js/circular-iframe-parent.js --compress --output dist/js/circular-iframe-parent.min.js",
     "js-compile-circular-iframe-internal": "rollup js/circular-iframe-internal.js --file dist/js/circular-iframe-internal.js --config build/rollup.config.mjs --format iife --sourcemap",
     "js-minify-circular-iframe-internal": "terser dist/js/circular-iframe-internal.js --compress --output dist/js/circular-iframe-internal.min.js",
-    "js-compile-retailer-3296-circular-iframe": "rollup js/retailer-3296-circular-iframe.js --file dist/js/retailer-3296-circular-iframe.js --config build/rollup.config.mjs --format iife --sourcemap",
-    "js-minify-retailer-3296-circular-iframe": "terser dist/js/retailer-3296-circular-iframe.js --compress --output dist/js/retailer-3296-circular-iframe.min.js",
     "js-docs": "npm-run-all js-docs-compile js-docs-minify",
     "js-docs-compile": "npm-run-all --aggregate-output --parallel js-docs-compile-*",
     "js-docs-minify": "npm-run-all --aggregate-output --parallel js-docs-minify-*",

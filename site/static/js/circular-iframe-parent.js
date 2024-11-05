@@ -10,12 +10,20 @@
       webstop.hasCircularStoreLocator = true;
     }
 
+    // I. Variable Setting
+    // ----------------
+    // 1. If included from a retailer circular file set the variables from that.
+    // 2. Prefer attributes set on the #webstop-circular container
+    // 3. Fall back to attributes set on the document.body tag
+    // 4. Check for missing variables and post an error to the console if any are missing
 
-    // If values are provided as attributes on the #webstop-circular container prefer those values
+
+
+    // 2. If values are provided as attributes on the #webstop-circular container prefer those values
     if (circularContainer.hasAttribute('data-retailer-id')) {
       webstop.retailerID= circularContainer.getAttribute('data-retailer-id');
     }
-    if (circularContainerhasAttribute('data-api-host')) {
+    if (circularContainer.hasAttribute('data-api-host')) {
       webstop.apiHost= circularContainer.getAttribute('data-api-host');
     }
     if (circularContainer.hasAttribute('data-api-host')) {
@@ -34,7 +42,7 @@
       webstop.storeNumber= circularContainer.getAttribute('data-store-number');
     }
 
-    // if a value is missing, check to see if it exists on the body tag, but only as a last resort
+    // 3. if a value is missing, check to see if it exists on the body tag, but only as a last resort
     if ( (webstop.retailerID === '' || webstop.retailerID === null || webstop.retailerID === undefined) && document.body.hasAttribute('data-retailer-id')) {
       webstop.retailerID= document.body.getAttribute('data-retailer-id');
     }
@@ -54,7 +62,7 @@
       webstop.storeNumber= document.body.getAttribute('data-store-number');
     }
 
-    // Notify us in the web browser's console if a required value is missing
+    // 4. Notify us in the web browser's console if a required value is missing
     if (webstop.retailerID === '' || webstop.retailerID === null || webstop.retailerID === undefined) {
       error += 'Webstop circular unable find Retailer ID. ';
     }
@@ -95,16 +103,19 @@
         circularIframe.src = `${webstop.apiHost}/retailers/${webstop.retailerID}/stores/${webstop.storeID}/choose_store?filter=circulars&url=${webstop.webHost}/circulars/`;
       }
 
+      circularIframe.style.width = '100%';
+      circularIframe.style.height = '200px';
+
       // circularIframe.width = '100%';
       // circularIframe.height = '300px'; // Adjust height as needed
       // circularIframe.allowFullScreen = true;
 
       // Add the iframe to the container
       circularContainer.appendChild(circularIframe);
-    }
+    //}
 
     // Create the modal
-    if (error === '') {
+    //if (error === '') {
       // Create the iframe element
       const modalBackdropContainer = document.createElement('div');
       const modalContainer = document.createElement('div');
@@ -117,6 +128,19 @@
       circularContainer.appendChild(modalBackdropContainer);
       modalBackdropContainer.appendChild(modalContainer);
       modalContainer.appendChild(modalIframe);
+    //}
+
+    //if (error === '') {
+      // Listen for Post Messages
+      window.addEventListener('message', function(event) {
+        //console.log(`Post Message Received: ${event.data}`);
+        // Process Resize Messages
+        if (event.data && event.data.type === 'resize-webstop-circular-iframe') {
+          console.log(`Resize Iframe Post Message Received. Height: ${event.data.height} Reason: ${event.data.reason}`);
+          //const iframe = document.getElementById('myIframe');
+          circularIframe.style.height = event.data.height + 'px';
+        }
+      });
     }
 
 

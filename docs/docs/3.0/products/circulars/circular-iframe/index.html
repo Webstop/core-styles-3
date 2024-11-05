@@ -620,22 +620,59 @@
       
     </section>
     <p>Here we include the script to display some iframe content.</p>
-<p>The script does the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;webstop-circular&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;3296&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-api-host</span><span class="o">=</span><span class="s">&#34;https://rails.example.com&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-cdn-host</span><span class="o">=</span><span class="s">&#34;https://cdn.example.com&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">data-web-host</span><span class="o">=</span><span class="s">&#34;https://lasso.example.com&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://example.com/circulars/circular-iframe-parent.min.js&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;webstop-circular&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;3296&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-api-host</span><span class="o">=</span><span class="s">&#34;https://rails.example.com&#34;</span> 
+</span></span><span class="line"><span class="cl">  <span class="na">data-cdn-host</span><span class="o">=</span><span class="s">&#34;https://cdn.example.com&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">data-web-host</span><span class="o">=</span><span class="s">&#34;https://lasso.example.com&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://example.com/circulars/circular-iframe-parent.min.js&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;webstop-circular&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://example.com/circulars/retailer-3296-circular-iframe-parent.min.js&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p><a href="https://s3.grocerywebsite.com/customizations_v3/retailer_767/javascripts/">https://s3.grocerywebsite.com/customizations_v3/retailer_767/javascripts/</a></p>
+<h3 id="the-script-does-the-following">The script does the following:</h3>
 <ol>
 <li>Creates a Circular iframe containing the circular inside the <code>#webstop-circular</code> div.</li>
 <li>Creates a Modal with modal iframe within the body</li>
 <li>Listens for a postMessage indicating the modal should be triggered and what URL to load into the iframe.</li>
 <li>Listens for a postMessage indicating the height of the circular has changed, and updates the circular iframe height.</li>
 </ol>
-<div id="webstop-circular"></div>
+<div id="webstop-circular" 
+  data-retailer-id="3296" 
+  data-api-host="https://ace.core11.rails.webstophq.com" 
+  data-cdn-host="https://circulars-cdn.acehardware.com"
+  data-web-host="https://3296.core11.lasso5.webstophq.com"
+>
+</div>
 <script src="/js/circular-iframe-parent.js" crossorigin="anonymous"></script>
+<hr>
+<h3 id="notes">Notes</h3>
+<p>How will this deploy? Via Core-Customizations? Maybe the retailer file should be in core-customizations, but core-customizations doesn&rsquo;t have the JS goodies for compiling and minifying JS files.</p>
 
   </main>
   
     <aside class="admin-sidebar">
       <h4 class="border-bottom">On this page</h4>
       <div class="wsg-table-of-contents">
-        <nav id="TableOfContents"></nav>
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#the-script-does-the-following">The script does the following:</a></li>
+        <li><a href="#notes">Notes</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
       </div>
     </aside>
   
@@ -1002,5 +1039,5 @@
 
 
 
-  <script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script></body>
+  </body>
 </html>
