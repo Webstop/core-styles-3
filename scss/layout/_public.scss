@@ -34,6 +34,7 @@
 
   .public-sidenav-grid-btn      { display: none; }
   .public-sidebar-grid-btn      { display: none; }
+  .public-sidenav-offcanvas-btn { display: none; }
   .public-sidebar-offcanvas-btn { display: none; }
 
 
@@ -48,7 +49,7 @@
 
  // @include media-breakpoint-up(lg) { }
 
-  // Layout with Sidecar
+  // I. Layout with Sidecar
   &.public-with-sidecar {
     @include media-breakpoint-up(sm) {
       grid-template-columns: $public-sidecar-width auto;
@@ -59,43 +60,43 @@
     }
   }
 
-  // Layout with Sidenav
-  &.public-with-sidenav {
-    .public-sidenav-offcanvas-btn { display: block; }
-    @include media-breakpoint-up(xl) {
-      grid-template-columns: $public-sidenav-width auto;
-      grid-template-areas:
-        "public-header  public-header"
-        "public-sidenav public-page";
-      .public-sidenav { display: block; }
-      .public-sidenav-grid-btn { display: block; }
-      .public-sidenav-offcanvas-btn { display: none; }
-    }
-  }
+  // II. Layout with Sidenav
+  //&.public-with-sidenav {
+  //  .public-sidenav-offcanvas-btn { display: block; }
+  //  @include media-breakpoint-up(xl) {
+  //    grid-template-columns: $public-sidenav-width auto;
+  //    grid-template-areas:
+  //      "public-header  public-header"
+  //      "public-sidenav public-page";
+  //    .public-sidenav { display: block; }
+  //    .public-sidenav-grid-btn { display: block; }
+  //    .public-sidenav-offcanvas-btn { display: none; }
+  //  }
+  //}
 
-  // Layout with Sidebar
-  &.public-with-sidebar {
-    .public-sidebar-offcanvas-btn { display: block; }
-    @include media-breakpoint-up(xl) {
-      grid-template-columns: auto $public-sidebar-width;
-      grid-template-areas:
-        "public-header public-header"
-        "public-page   public-sidebar";
-      .public-sidebar { display: block; }
-      .public-sidebar-grid-btn      { display: block; }
-      .public-sidebar-offcanvas-btn { display: none; }
-    }
-    &.public-hide-sidebar {
-      grid-template-columns: auto;
-      grid-template-areas:
-          "public-header"
-          "public-page";
-      .public-sidebar { display: none; width: 0; height: 0; }
-    }
-  }
+  // III. Layout with Sidebar
+  //&.public-with-sidebar {
+  //  .public-sidebar-offcanvas-btn { display: block; }
+  //  @include media-breakpoint-up(xl) {
+  //    grid-template-columns: auto $public-sidebar-width;
+  //    grid-template-areas:
+  //      "public-header public-header"
+  //      "public-page   public-sidebar";
+  //    .public-sidebar { display: block; }
+  //    .public-sidebar-grid-btn      { display: block; }
+  //    .public-sidebar-offcanvas-btn { display: none; }
+  //  }
+  //  &.public-hide-sidebar {
+  //    grid-template-columns: auto;
+  //    grid-template-areas:
+  //        "public-header"
+  //        "public-page";
+  //    .public-sidebar { display: none; width: 0; height: 0; }
+  //  }
+  //}
 
 
-  // Layout with Sidecar & Sidenav
+  // IV. Layout with Sidecar & Sidenav
   &.public-with-sidecar.public-with-sidenav {
     @include media-breakpoint-up(xl) {
       grid-template-columns: $public-sidecar-width $public-sidenav-width auto;
@@ -107,7 +108,7 @@
     }
   }
 
-  // Layout with Sidecar & Sidebar
+  // V. Layout with Sidecar & Sidebar
   &.public-with-sidecar.public-with-sidebar {
     @include media-breakpoint-up(xl) {
       grid-auto-columns: 0;
@@ -122,10 +123,11 @@
   }
 
 
-  // Layout with Sidenav & Sidebar
+  // VI. Layout with Sidenav & Sidebar
   &.public-with-sidenav.public-with-sidebar {
     .public-sidenav-offcanvas-btn { display: block; }
     .public-sidebar-offcanvas-btn { display: block; }
+
     @include media-breakpoint-only(xl)  {
       grid-auto-columns: 0;
       grid-auto-rows: 0;
@@ -137,7 +139,6 @@
       .public-sidenav { display: none; width: 0; height: 0; }
       .public-sidebar-offcanvas-btn { display: none;  }
       .public-sidebar-grid-btn      { display: block; }
-
       &.public-hide-sidebar {
         grid-template-columns: auto;
         grid-template-areas:
@@ -157,22 +158,24 @@
       .public-sidenav { display: block; }
       .public-sidenav-offcanvas-btn { display: none;  }
       .public-sidenav-grid-btn      { display: block; }
-
-      &.public-hide-sidebar {
-        grid-template-columns: $public-sidenav-width auto;
-        grid-template-areas:
-          "public-header public-header"
-          "public-sidenav public-page";
-        .public-sidebar { display: none; width: 0; height: 0; }
-      }
-    }
-
-    &.public-hide-sidenav {
-      grid-template-columns: auto $public-sidebar-width;
-      grid-template-areas:
+      &.public-hide-sidenav {
+        &:not(.public-hide-sidebar) {
+          grid-template-columns: auto $public-sidebar-width;
+          grid-template-areas:
           "public-header public-header"
           "public-page   public-sidebar";
-      .public-sidenav { display: none; width: 0; height: 0; }
+        }
+        .public-sidenav { display: none; width: 0; height: 0; }
+      }
+      &.public-hide-sidebar {
+        &:not(.public-hide-sidenav) {
+          grid-template-columns: $public-sidenav-width auto;
+          grid-template-areas:
+          "public-header public-header"
+          "public-sidenav public-page";
+        }
+        .public-sidebar { display: none; width: 0; height: 0; }
+      }
     }
 
     &.public-hide-sidenav.public-hide-sidebar {
@@ -184,7 +187,7 @@
 
   }
 
-  // Layout with Sidecar, Sidenav, & Sidebar
+  // VII. Layout with Sidecar, Sidenav, & Sidebar
   &.public-with-sidecar.public-with-sidenav.public-with-sidebar {
 
     @include media-breakpoint-up(xl)  {

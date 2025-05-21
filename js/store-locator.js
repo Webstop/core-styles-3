@@ -46,7 +46,6 @@
           inputTarget.value = id;
           // Update the Select a Store button text
           trigger.textContent = 'Change Store'
-
         });
       })
     }

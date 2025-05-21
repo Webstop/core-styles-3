@@ -201,6 +201,14 @@
               <ul class="list-unstyled fw-normal pb-1 small">
 
                 <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/layouts/public-header/" class="d-inline-flex rounded">Public Header</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
                   <a href="/docs/3.0/layouts/public/" class="d-inline-flex rounded">Public Layout</a>
                 </li>
 
@@ -850,7 +858,58 @@ A paragraph with **bold** text inside.
 </tr>
 </tbody>
 </table>
-
+<h2 id="core-rails-support">Core-Rails Support</h2>
+<p>If you are developing in the Webstop Core-Rails app there is a library file which supports using this editor.
+The Toast editor will place base64 encoded images into the content of the textarea. The problem is these images
+exceed the size of a MySQL text field. The library file fixes this by looking for these base64 encoded images,
+uploading them to AWS S3, and then replacing the base64 image tags with tags that point to the image on S3.</p>
+<p>A little setup is required in the Rails model of the item you&rsquo;d like to enable this functionality in.</p>
+<h3 id="core-rails-model-example">Core-Rails Model Example</h3>
+<p>The following is taken from the <code>app/models/store.rb</code> file.</p>
+<h5 id="near-the-top-of-the-file">Near The Top of The File:</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="n">before_save</span> <span class="ss">:replace_base64_images_with_s3_hosted_images</span>
+</span></span></code></pre></div><p>This is pretty straightforward, you tell it to do the processing just before we save the data to the database.</p>
+<h5 id="near-the-bottom-of-the-file">Near The Bottom of The File:</h5>
+<div class="alert alert-danger" role="alert">
+  <strong>Follow these directions!</strong> Don't cut-n-paste this code without modifying it to your needs!
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">replace_base64_images_with_s3_hosted_images</span>
+</span></span><span class="line"><span class="cl">  <span class="n">resource_name</span> <span class="o">=</span> <span class="s1">&#39;stores&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">resource_id</span> <span class="o">=</span> <span class="s1">&#39;new&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">resource_id</span> <span class="o">=</span> <span class="nb">self</span><span class="o">.</span><span class="n">id</span> <span class="k">if</span> <span class="nb">self</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">present?</span>
+</span></span><span class="line"><span class="cl">  <span class="n">retailer_id</span> <span class="o">=</span> <span class="nb">self</span><span class="o">.</span><span class="n">retailer_id</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="no">MarkdownImageUploader</span><span class="o">.</span><span class="n">replace_base64_images_with_s3_hosted_images</span><span class="p">(</span><span class="nb">self</span><span class="o">.</span><span class="n">description</span><span class="p">,</span> <span class="n">resource_name</span><span class="p">,</span> <span class="n">resource_id</span><span class="p">,</span> <span class="n">retailer_id</span><span class="p">)</span> <span class="k">if</span> <span class="nb">self</span><span class="o">.</span><span class="n">description</span><span class="o">.</span><span class="n">present?</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">self</span><span class="o">.</span><span class="n">details</span> <span class="o">=</span> <span class="no">MarkdownImageUploader</span><span class="o">.</span><span class="n">replace_base64_images_with_s3_hosted_images</span><span class="p">(</span><span class="nb">self</span><span class="o">.</span><span class="n">details</span><span class="p">,</span> <span class="n">resource_name</span><span class="p">,</span> <span class="n">resource_id</span><span class="p">,</span> <span class="n">retailer_id</span><span class="p">)</span> <span class="k">if</span> <span class="nb">self</span><span class="o">.</span><span class="n">details</span><span class="o">.</span><span class="n">present?</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></div><blockquote>
+<h4 class="mt-0">Tech Notes</h4>  
+<p>The <code>resource_name</code>, <code>resource_id</code>, &amp; <code>retailer_id</code> fields are used to organize where the images are placed on S3.<br>
+i.e. <code>:CDN_HOST/:Rails.env/markdown_images/retailer_:retailer_id/:resource_name/:resource_id/:date/:unique_hash.jpeg</code><br>
+For an editor with <code>resource_name</code> = <code>stores</code>, <code>resource_id</code> = <code>4</code>, &amp; <code>retailer_id</code> = <code>3277</code> produces the following URL.<br>
+e.g. <code>https://s3.grocerywebsite.com/development/markdown_images/retailer_3277/stores/4/2024-12-09/657f3a8e-cd61-496c-a9db-134db8e403c1.jpeg</code></p>
+</blockquote>
+<p>This part takes a little manual effort. You need to put the name &amp; ID of your resource in here and make sure the retailer id is set correctly. You also need to list every field in your model that you want to apply this to.</p>
+<p>You need to do the following:</p>
+<ol>
+<li>Rename the <code>resource_name</code> variable to the lowercase, snakecase, &amp; plural version of your model or the resource you are uploading.</li>
+<li>The <code>resource_id</code> is often <code>self.id</code>, but not always, consider your use case and put the correct value here.</li>
+<li>Make sure the <code>retailer_id</code> is being set properly for your content. This is often <code>self.retailer_id</code> or <code>@retailer.id</code>. Consider your use case when setting this value. Occasionally <code>unknown</code> is used.</li>
+<li>The last two lines in this model indicate we want to apply this to the <code>description</code> and <code>details</code> fields. You need to replace these with the fields your model wants this applied to. The example shows two fields, you might have only one, or more than two.</li>
+<li>Test uploading some images and examine the files paths produced. Make sure items are uploaded where you expect them to be and in sync with how we normally place things.</li>
+</ol>
+<p><strong>Note on Resource ID:</strong> When creating a new resource we often don&rsquo;t know the value of the ID until after the record is created, but by then our image has already been uploaded to S3. For new records the value of <code>new</code> is placed in the <code>resouce_id</code> field.</p>
+<h3 id="core-rails-view-example">Core-Rails View Example</h3>
+<h4 id="form-example">Form Example</h4>
+<p>The following is an example of a <code>details</code> field with the <code>data-markdown-editor</code> attribute in use.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="err">&lt;</span>%= form.label :details, class: &#39;form-label text-capitalize&#39; %&gt;
+</span></span><span class="line"><span class="cl">  <span class="err">&lt;</span>%= form.text_area :details, rows: &#39;20&#39;, class: &#39;form-control-na mb-2&#39;, &#39;data-markdown-editor&#39; =&gt; &#39;&#39;, &#39;aria-describedby&#39; =&gt; &#39;details-help&#39; %&gt;
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">small</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;details-help&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-text&#34;</span><span class="p">&gt;</span><span class="err">&lt;</span>%= t(&#39;store.help.details&#39;) %&gt;<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h4 id="show-file-example">Show File Example</h4>
+<p>In your show file use the following to display the stored Markdown text as HTML.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="o">&lt;%=</span> <span class="n">markdown</span><span class="p">(</span><span class="vi">@store</span><span class="o">.</span><span class="n">details</span><span class="p">)</span> <span class="o">%&gt;</span>
+</span></span></code></pre></div>
   </main>
   
     <aside class="admin-sidebar">
@@ -872,6 +931,12 @@ A paragraph with **bold** text inside.
     <li><a href="#standard-toolbar-example">Standard Toolbar Example</a></li>
     <li><a href="#full-toolbar-example">Full Toolbar Example</a></li>
     <li><a href="#attributes">Attributes</a></li>
+    <li><a href="#core-rails-support">Core-Rails Support</a>
+      <ul>
+        <li><a href="#core-rails-model-example">Core-Rails Model Example</a></li>
+        <li><a href="#core-rails-view-example">Core-Rails View Example</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -1217,7 +1282,6 @@ A paragraph with **bold** text inside.
       crossorigin="anonymous"
     ></script>
     <script src="/js/docs.js" crossorigin="anonymous"></script>
-
 
 
 

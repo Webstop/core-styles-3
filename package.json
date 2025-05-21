@@ -1,7 +1,7 @@
 {
   "name": "core-styles-3",
-  "version": "3.0.0-beta-30",
-  "description": "Design System for Webstop's grocery websites.",
+  "version": "3.0.0",
+  "description": "Design System for Webstop's products.",
   "author": "Greg Hemphill",
   "license": "private",
   "private": true,
@@ -74,7 +74,7 @@
     "@rollup/plugin-typescript": "^11.1.6",
     "@toast-ui/editor": "^3.2.2",
     "ahoy.js": "^0.4.3",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.6",
     "bootstrap-5-docs": "github:hemphill/bootstrap-5-docs#main",
     "hugo-bin": "^0.85.3",
     "jquery": "^3.7.1",

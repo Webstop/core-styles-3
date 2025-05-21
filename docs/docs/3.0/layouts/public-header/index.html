@@ -2,7 +2,7 @@
 <html>
   <head layout-source="_default/baseof">
     <meta charset="utf-8" />
-    <title> Price at Core-Styles 3 </title>
+    <title> Public Header at Core-Styles 3 </title>
     <meta charset="utf-8" >
     <meta content="width=device-width, initial-scale=1" name="viewport" >
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
@@ -187,7 +187,7 @@
             </button>
 
             <div
-              class="collapse "
+              class="collapse  show "
               id="layout-menu-collapse">
               
               <ul class="list-unstyled fw-normal pb-1 small">
@@ -200,7 +200,7 @@
               
               <ul class="list-unstyled fw-normal pb-1 small">
 
-                <li class="py-2 ps-4 ">
+                <li class="py-2 ps-4  left-nav-active ">
                   <a href="/docs/3.0/layouts/public-header/" class="d-inline-flex rounded">Public Header</a>
                 </li>
 
@@ -424,7 +424,7 @@
       <button class="btn" data-bs-toggle="collapse" data-bs-target="#products-menu-collapse" aria-expanded="false">
         <strong>Products</strong>
       </button>
-      <ul class="list-unstyled fw-normal pb-1 small collapse  show " id="products-menu-collapse">
+      <ul class="list-unstyled fw-normal pb-1 small collapse " id="products-menu-collapse">
 
         
 
@@ -447,8 +447,6 @@
                 
               
                 
-                  
-                
               
                 
               
@@ -461,7 +459,7 @@
                 
               
 
-              <ul class="list-unstyled fw-normal pb-1 small collapse show" id="circulars-menu-collapse">
+              <ul class="list-unstyled fw-normal pb-1 small collapse " id="circulars-menu-collapse">
                 
                   <li class="py-2 ps-4 ">
                     <a href="/docs/3.0/products/circulars/banner-item/" class="d-inline-flex rounded">Banner Circular Item </a>
@@ -483,7 +481,7 @@
                     <a href="/docs/3.0/products/circulars/coupon-item/" class="d-inline-flex rounded">Digital Coupon Circular Item </a>
                   </li>
                 
-                  <li class="py-2 ps-4  left-nav-active ">
+                  <li class="py-2 ps-4 ">
                     <a href="/docs/3.0/products/circulars/price/" class="d-inline-flex rounded">Price </a>
                   </li>
                 
@@ -621,115 +619,86 @@
   <main class="admin-page" role="main">
     <section class="docs-heading inner-shadow">
       <h1 class="docs-heading-title shadow">
-        Price
+        Public Header
       </h1>
       
-        <p class="docs-heading-tagline">A unit for laying out prices and associated data.</p>
+        <p class="docs-heading-tagline">Headers for Public Layout pages.</p>
       
     </section>
-    <h2 id="examples">Examples</h2>
-<div class="my-3 p-3 example">
-    <p class="price price-big-dollars">
-      <span class="price-prefix">12 for</span>
-      <span class="price-dollar-sign">$</span>
-      <span class="price-dollars">4</span>
-      <span class="price-cents">99</span>
-      <span class="price-suffix">lb.</span>
-      <img  class="price-suffix-icon" src="/assets/images/Card_45x29.gif" alt="with Card">
-    </p>
-
-    <hr>
-    <p class="price price-big-cents">
-      <span class="price-prefix">12 for</span>
-      <span class="price-cents">99</span>
-      <span class="price-cent-sign">&cent;</span>
-      <span class="price-suffix">lb.</span>
-      <img  class="price-suffix-icon" src="/assets/images/Card_45x29.gif" alt="with Card">
-    </p>
-
-    <hr>   
-    <p class="price">
-      <span class="price-overlay">Buy One, Get One, FREE!</span>
-      <img src="/assets/images/Card_45x29.gif" class="price-suffix-icon" alt="with Card">
-    </p>
-
-
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price price-big-dollars&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-prefix&#34;</span><span class="p">&gt;</span>12 for<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-dollar-sign&#34;</span><span class="p">&gt;</span>$<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-dollars&#34;</span><span class="p">&gt;</span>4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-cents&#34;</span><span class="p">&gt;</span>99<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix&#34;</span><span class="p">&gt;</span>lb.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span>  <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix-icon&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/images/Card_45x29.gif&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;with Card&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price price-big-cents&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-prefix&#34;</span><span class="p">&gt;</span>12 for<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-cents&#34;</span><span class="p">&gt;</span>99<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-cent-sign&#34;</span><span class="p">&gt;</span><span class="ni">&amp;cent;</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix&#34;</span><span class="p">&gt;</span>lb.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span>  <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix-icon&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/images/Card_45x29.gif&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;with Card&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>   
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-overlay&#34;</span><span class="p">&gt;</span>Buy One, Get One, FREE!<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/images/Card_45x29.gif&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix-icon&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;with Card&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></span></span></code></pre></div>
-<h3 id="price-in-dollars-example">Price in Dollars Example</h3>
-<p>This example shows a price in dollars. Use the <code>price-big-dollars</code> sub-class to
-give a larger emphasis to the dollar portion of the price.</p>
-<div class="my-3 p-3 example">
-    <p class="price price-big-dollars">
-      <span class="price-prefix">12 for</span>
-      <span class="price-dollar-sign">$</span>
-      <span class="price-dollars">4</span>
-      <span class="price-cents">99</span>
-      <span class="price-suffix">lb.</span>
-      <img  class="price-suffix-icon" src="/assets/images/Card_45x29.gif" alt="with Card">
-    </p>
-
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price price-big-dollars&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-prefix&#34;</span><span class="p">&gt;</span>12 for<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-dollar-sign&#34;</span><span class="p">&gt;</span>$<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-dollars&#34;</span><span class="p">&gt;</span>4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-cents&#34;</span><span class="p">&gt;</span>99<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix&#34;</span><span class="p">&gt;</span>lb.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span>  <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix-icon&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/images/Card_45x29.gif&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;with Card&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></span></span></code></pre></div>
-<h3 id="price-in-cents-example">Price in Cents Example</h3>
-<p>This example shows a price in cents. Use the <code>price-big-cents</code> sub-class to
-give a larger emphasis to the cents portion of the price.</p>
-<div class="my-3 p-3 example">
-    <p class="price price-big-cents">
-      <span class="price-prefix">12 for</span>
-      <span class="price-cents">99</span>
-      <span class="price-cent-sign">&cent;</span>
-      <span class="price-suffix">lb.</span>
-      <img  class="price-suffix-icon" src="/assets/images/Card_45x29.gif" alt="with Card">
-    </p>
-
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price price-big-cents&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-prefix&#34;</span><span class="p">&gt;</span>12 for<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-cents&#34;</span><span class="p">&gt;</span>99<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-cent-sign&#34;</span><span class="p">&gt;</span><span class="ni">&amp;cent;</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix&#34;</span><span class="p">&gt;</span>lb.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span>  <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix-icon&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/images/Card_45x29.gif&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;with Card&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></span></span></code></pre></div>
-<h3 id="price-overlay-example">Price Overlay Example</h3>
-<p>In this example we want to overlay the price with text, but still give it special treatment.</p>
-<div class="my-3 p-3 example">
-    <p class="price">
-      <span class="price-overlay">Buy One, Get One, FREE!</span>
-      <img src="/assets/images/Card_45x29.gif" class="price-suffix-icon" alt="with Card">
-    </p>
-
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-overlay&#34;</span><span class="p">&gt;</span>Buy One, Get One, FREE!<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/images/Card_45x29.gif&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;price-suffix-icon&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;with Card&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></span></span></code></pre></div>
-
+    <p>This guide provides a few pieces of information that is useful to know when making a header for Public Layout usage.</p>
+<h2 id="header-height">Header Height</h2>
+<p>The following variables will be found but commented out in the <code>_variables_for_retailer_0000.scss</code> file generated by the
+Core-Customizations app.</p>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$public-header-height</td>
+<td>60px;</td>
+<td>Mobile</td>
+</tr>
+<tr>
+<td>$public-header-sm-height</td>
+<td>$public-header-height</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-header-md-height</td>
+<td>$public-header-sm-height</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-header-lg-height</td>
+<td>133px;</td>
+<td>Desktop</td>
+</tr>
+<tr>
+<td>$public-header-xl-height</td>
+<td>$public-header-lg-height</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-header-xxl-height</td>
+<td>$public-header-xl-height</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Most of the time the mobile app size will remain unchanged, but the desktop size of <code>133px</code> will likely change based on
+the height of the retailer&rsquo;s logo and other design choices.</p>
+<h2 id="sidenav-and-sidebar-toggle-buttons">Sidenav and Sidebar Toggle Buttons</h2>
+<p>The Public Layout has two areas (Sidenav and Sidebar) that can display and hide based on cookies, retailer preferences,
+or be activated when the appropriate toggle button is clicked.</p>
+<p>In the desktop layout the Sidenav and Sidebar are columns sitting next to the main content of the page that can be
+hidden or revealed. In mobile sizes they overlay the main content using
+<a href="https://getbootstrap.com/docs/5.3/components/offcanvas/">Bootstrap&rsquo;s Offcanvas</a> component. Because there are two
+approaches to displaying the Sidebar and Sidenav there are also two sets of buttons for each layout area. One button
+handles desktop column and another button handles mobile Offcanvas. We hide and display the appropriate button based on
+media queries.</p>
+<p>The follow examples show the buttons needed to toggle these areas.</p>
+<h3 id="sidenav-example">Sidenav Example</h3>
+<p>In this example you&rsquo;ll see the first button handles desktop views and the second button handles mobile views.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-plain d-none d-xxl-block&#34;</span> <span class="na">data-sidenav-toggle</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fa-solid fa-bars&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;public-sidenav-offcanvas-btn btn btn-plain d-xl-block d-xxl-none&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;offcanvas&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#public-sidenav-mobile&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fa-solid fa-bars&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="sidebar-example">Sidebar Example</h3>
+<p>In this example you&rsquo;ll see the first button handles desktop views and the second button handles mobile views.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-plain d-none d-xl-block&#34;</span> <span class="na">data-sidebar-toggle</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fa-regular fa-square-check&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;public-sidebar-offcanvas-btn btn btn-plain d-lg-block d-xl-none&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;offcanvas&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#public-sidebar-mobile&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fa-regular fa-square-check&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
   </main>
   
     <aside class="admin-sidebar">
@@ -737,11 +706,11 @@ give a larger emphasis to the cents portion of the price.</p>
       <div class="wsg-table-of-contents">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#examples">Examples</a>
+    <li><a href="#header-height">Header Height</a></li>
+    <li><a href="#sidenav-and-sidebar-toggle-buttons">Sidenav and Sidebar Toggle Buttons</a>
       <ul>
-        <li><a href="#price-in-dollars-example">Price in Dollars Example</a></li>
-        <li><a href="#price-in-cents-example">Price in Cents Example</a></li>
-        <li><a href="#price-overlay-example">Price Overlay Example</a></li>
+        <li><a href="#sidenav-example">Sidenav Example</a></li>
+        <li><a href="#sidebar-example">Sidebar Example</a></li>
       </ul>
     </li>
   </ul>
@@ -891,7 +860,7 @@ give a larger emphasis to the cents portion of the price.</p>
             
         
         
-            <li class="breadcrumb-item"><a href="/docs/3.0/products/">Products</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0/layouts/">Layouts</a></li>
         
     
         
@@ -936,7 +905,7 @@ give a larger emphasis to the cents portion of the price.</p>
             
         
         
-            <li class="breadcrumb-item"><a href="/docs/3.0/products/circulars/">Circulars</a></li>
+            <li class="breadcrumb-item"><a href="/docs/3.0/layouts/public-header/">Public header</a></li>
         
     
         
@@ -976,59 +945,6 @@ give a larger emphasis to the cents portion of the price.</p>
                 
             
         
-            
-        
-            
-        
-            
-        
-            
-        
-        
-            <li class="breadcrumb-item"><a href="/docs/3.0/products/circulars/price/">Price</a></li>
-        
-    
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
-            
-        
-            
-                
-                    
-                
             
         
             

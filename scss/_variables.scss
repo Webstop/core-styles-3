@@ -37,7 +37,7 @@ $admin-footer-border-size:   1px !default;
 $public-header-height:        60px !default;
 $public-header-sm-height:     $public-header-height !default;
 $public-header-md-height:     $public-header-sm-height !default;
-$public-header-lg-height:     $public-header-md-height !default;
+$public-header-lg-height:     133px !default;
 $public-header-xl-height:     $public-header-lg-height !default;
 $public-header-xxl-height:    $public-header-xl-height !default;
 $public-sidecar-width:        90px !default;
@@ -119,9 +119,4 @@ $store-min-column-width: 290px !default;
 $bootstrap-purple: #563d7c;
 $table-bg: #fff !default;
 
-// Webstop
-$webstop-blue: #0194d3;
-$webstop-sans-serif: Montserrat, $font-family-sans-serif;
-$webstop-serif: "Libre Baskerville", Baskerville, "Baskerville Old Face", Georgia, serif;
-$webstop-monospace: "JetBrains Mono", $font-family-monospace;
 
