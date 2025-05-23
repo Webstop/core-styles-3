@@ -28,7 +28,9 @@
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark wsg-header shadow">
   <div class="container-fluid">
     <a class="navbar-brand ms-2" href="/"><img
-        src="https://www.webstop.com/assets/Webstop-logos/webstop-twocolor-landscape-dark-bg-72dpi-e6425f6d6e9ec4cc90742a883b2997bb28191590bfd8762222ed4723865dcaef.png" style="max-width: 127px; /* 889/7 = 127 */"></a>
+        src="/assets/images/webstop-icon-white-72dpi.png" style="max-width: 45px; /* 889/7 = 127 */">
+      Core Styles
+    </a>
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -201,6 +203,14 @@
               <ul class="list-unstyled fw-normal pb-1 small">
 
                 <li class="py-2 ps-4 ">
+                  <a href="/docs/3.0/layouts/base-html/" class="d-inline-flex rounded">Base HTML</a>
+                </li>
+
+              </ul>
+              
+              <ul class="list-unstyled fw-normal pb-1 small">
+
+                <li class="py-2 ps-4 ">
                   <a href="/docs/3.0/layouts/public-header/" class="d-inline-flex rounded">Public Header</a>
                 </li>
 
@@ -286,12 +296,6 @@
                   
                     <li class="py-2 ps-4 ">
                       <a href="/docs/3.0/components/forms/form-toggles/" class="d-inline-flex rounded">Form Toggles</a>
-                    </li>
-                  
-                
-                  
-                    <li class="py-2 ps-4 ">
-                      <a href="/docs/3.0/components/navigation/html-test/" class="d-inline-flex rounded">html test</a>
                     </li>
                   
                 
@@ -512,34 +516,6 @@
 
           
             <li class="mb-1 ps-3">
-              <button class="btn" data-bs-toggle="collapse" data-bs-target="#recipes-menu-collapse" aria-expanded="false">
-                <strong>Recipes</strong>
-              </button>
-              
-
-              
-                
-              
-                
-              
-
-              <ul class="list-unstyled fw-normal pb-1 small collapse " id="recipes-menu-collapse">
-                
-                  <li class="py-2 ps-4 ">
-                    <a href="/docs/3.0/products/recipes/my-cook-book/" class="d-inline-flex rounded">My Cook Book </a>
-                  </li>
-                
-                  <li class="py-2 ps-4 ">
-                    <a href="/docs/3.0/products/recipes/recipe/" class="d-inline-flex rounded">Recipe </a>
-                  </li>
-                
-              </ul>
-            </li>
-          
-        
-
-          
-            <li class="mb-1 ps-3">
               <button class="btn" data-bs-toggle="collapse" data-bs-target="#store-locator-menu-collapse" aria-expanded="false">
                 <strong>Store Locator</strong>
               </button>
@@ -630,7 +606,64 @@
 we wanted access to all the things in core-styles from admin pages, and that the thing we found most valuable from
 Admin-Styles was the page layout features. Now the page layout features of Admin-Styles are included as part of Core-Styles.</p>
 </blockquote>
-<h2 id="default-example">Default Example</h2>
+<h2 id="stylesheets--javascripts">Stylesheets &amp; Javascripts</h2>
+<p>It&rsquo;s important to note that we use different CSS and JS files for admin layouts than we do for public facing layouts.
+The code on this page is for admin layouts only, see the <a href="/docs/3.0/layouts/public/">public layouts page</a> for information
+on public layouts.</p>
+<h3 id="the-following-belongs-in-the-head-tag-of-the-admin-layouts">The following belongs in the <code>&lt;head&gt;</code> tag of the admin layouts.</h3>
+<p>This first example is how we apply these to the a Ruby on Rails ERB file. The <code>CS3_VERSION</code> and <code>CS3_ICONS_KIT_KEY</code> constants
+defined in the <code>config/initializers/cs3.rb</code> file. The <code>CDN_HOST</code> constant is defined as and environment variable (<code>.env</code> file).</p>
+<h4 id="ruby-on-rails-head-example">Ruby on Rails <code>&lt;head&gt;</code> Example</h4>
+<p>If you are using the <a href="https://github.com/Webstop/styler">Styler Gem</a> this will be found in the
+<code>app/views/layouts/admin_cs3/_styles.html.erb</code> file.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;&lt;%= ENV[&#39;CDN_HOST&#39;] %&gt;/core-repos/core-styles-3/&lt;%= CS3_VERSION %&gt;/dist/css/webstop-admin.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://kit.fontawesome.com/&lt;%= CS3_ICONS_KIT_KEY %&gt;.js&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://fonts.googleapis.com&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://fonts.gstatic.com&#34;</span> <span class="na">crossorigin</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h4 id="raw-html-head-example">Raw HTML <code>&lt;head&gt;</code> Example</h4>
+<p>Note: <em>The values for the CS3 version, the Font Awesome kit number, and the CDN Host will likely differ in your application.</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://s3.grocerywebsite.com/core-repos/core-styles-3/v3.0.0/dist/css/webstop-admin.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://kit.fontawesome.com/8bda546f76.js&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://fonts.googleapis.com&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://fonts.gstatic.com&#34;</span> <span class="na">crossorigin</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="the-following-belongs-near-the-end-of-the-body-tag-of-admin-layouts">The following belongs near the end of the <code>&lt;body&gt;</code> tag of admin layouts.</h3>
+<p>This first example is how we apply these to the a Ruby on Rails ERB file. The <code>CS3_VERSION</code> constant is defined in the
+<code>config/initializers/cs3.rb</code> file. The <code>CDN_HOST</code> constant is defined as and environment variable (<code>.env</code> file).</p>
+<h4 id="ruby-on-rails-body-example">Ruby on Rails <code>&lt;body&gt;</code> Example</h4>
+<p>If you are using the <a href="https://github.com/Webstop/styler">Styler Gem</a> this will be found in the
+<code>app/views/layouts/admin_cs3/_scripts.html.erb</code> file.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="err">&lt;</span>%# 3rd party JS libs %&gt;
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://code.jquery.com/jquery-&lt;%= CS3_JQUERY_VERSION %&gt;.min.js&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@&lt;%= CS3_POPPER_VERSION %&gt;/dist/umd/popper.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@&lt;%= CS3_BOOTSTRAP_VERSION %&gt;/dist/js/bootstrap.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/jquery-ujs@&lt;%= CS3_JQUERY_UJS_VERSION %&gt;/src/rails.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="err">&lt;</span>%# Core Styles 3 JS %&gt;
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;&lt;%= ENV[&#39;CDN_HOST&#39;] %&gt;/core-repos/core-styles-3/&lt;%= CS3_VERSION %&gt;/dist/js/core-styles-admin&lt;%= &#39;.min&#39; if Rails.env.production? -%&gt;.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h4 id="raw-html-body-example">Raw HTML <code>&lt;body&gt;</code> Example</h4>
+<p>Note: <em>The values for the CS3 version and the CDN Host will likely differ in your application. Same with the version of
+the 3rd party libs.</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://code.jquery.com/jquery-3.7.1.min.js&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/jquery-ujs@1.2.3/src/rails.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://s3.grocerywebsite.com/core-repos/core-styles-3/v3.0.0/dist/js/core-styles-admin.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h2 id="default-example">Default Example</h2>
 <p>This example shows the default set of options used by Webstop’s products and is installed via the Styler gem.</p>
 <blockquote>
 <h4 class="mt-0">Site Modal</h4>
@@ -1128,6 +1161,12 @@ The Site Modal is also available in the <a href="/docs/3.0/layouts/public/">Publ
       <div class="wsg-table-of-contents">
         <nav id="TableOfContents">
   <ul>
+    <li><a href="#stylesheets--javascripts">Stylesheets &amp; Javascripts</a>
+      <ul>
+        <li><a href="#the-following-belongs-in-the-head-tag-of-the-admin-layouts">The following belongs in the <code>&lt;head&gt;</code> tag of the admin layouts.</a></li>
+        <li><a href="#the-following-belongs-near-the-end-of-the-body-tag-of-admin-layouts">The following belongs near the end of the <code>&lt;body&gt;</code> tag of admin layouts.</a></li>
+      </ul>
+    </li>
     <li><a href="#default-example">Default Example</a>
       <ul>
         <li><a href="#sidebar-example">Sidebar Example</a></li>

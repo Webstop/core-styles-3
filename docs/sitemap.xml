@@ -108,6 +108,8 @@
   </url><url>
     <loc>https://guides.webstop.com/docs/3.0/products/circulars/banner-item/</loc>
   </url><url>
+    <loc>https://guides.webstop.com/docs/3.0/layouts/base-html/</loc>
+  </url><url>
     <loc>https://guides.webstop.com/docs/3.0/components/ajax/infinite-scroll-demos/basic-infinite-scroll-demo/</loc>
   </url><url>
     <loc>https://guides.webstop.com/docs/3.0/utilities/box/</loc>
@@ -170,8 +172,6 @@
   </url><url>
     <loc>https://guides.webstop.com/guides/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/components/navigation/html-test/</loc>
-  </url><url>
     <loc>https://guides.webstop.com/docs/3.0/components/ajax/infinite-scroll/</loc>
   </url><url>
     <loc>https://guides.webstop.com/docs/3.0/components/ajax/infinite-scroll-demos/infinite-scroll-with-paging-demo/</loc>
@@ -196,8 +196,6 @@
   </url><url>
     <loc>https://guides.webstop.com/docs/3.0/utilities/min-width/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/products/recipes/my-cook-book/</loc>
-  </url><url>
     <loc>https://guides.webstop.com/docs/3.0/components/navigation/</loc>
   </url><url>
     <loc>https://guides.webstop.com/docs/3.0/products/circulars/newsprints/newsprint/</loc>
@@ -220,15 +218,9 @@
   </url><url>
     <loc>https://guides.webstop.com/docs/3.0/layouts/public/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/products/recipes/recipe/</loc>
-  </url><url>
     <loc>https://guides.webstop.com/docs/3.0/products/circulars/recipe-item/</loc>
   </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/products/recipes/</loc>
-  </url><url>
     <loc>https://guides.webstop.com/resources/</loc>
-  </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/products/shopping-lists/</loc>
   </url><url>
     <loc>https://guides.webstop.com/docs/3.0/products/circulars/standard-circular-item/</loc>
   </url><url>

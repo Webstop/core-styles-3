@@ -9,7 +9,96 @@ menu:
     parent: Layouts
 ---
 
+## Stylesheets & Javascripts
 
+It's important to note that we use different CSS and JS files for admin layouts than we do for public facing layouts.
+The code on this page is for admin layouts only, see the [public layouts page](/docs/3.0/layouts/public/) for information
+on public layouts.
+
+### The following belongs in the `<head>` tag of the admin layouts.
+
+This first example is how we apply these to the a Ruby on Rails ERB file. The `CS3_VERSION` and `CS3_ICONS_KIT_KEY` constants
+defined in the `config/initializers/cs3.rb` file. The `CDN_HOST` constant is defined as and environment variable (`.env` file).
+
+#### Ruby on Rails `<head>` Example
+
+If you are using the [Styler Gem](https://github.com/Webstop/styler) this will be found in the
+`app/views/layouts/admin_cs3/_styles.html.erb` file.
+
+The following also assumes we are using the [Core-Customizations Gem](https://github.com/Webstop/core-customizations) 
+for retailer specific CSS.
+
+```html
+<head>
+  <% if @retailer.nil? || @retailer.id.blank? %>
+    <link href="<%= ENV['CDN_HOST'] %>/core-repos/core-styles-3/<%= CS3_VERSION %>/dist/css/core-styles-defaults.css" rel="stylesheet">
+  <% else %>
+    <% customizations_folder = 'customizations_v3' %>
+    <% customizations_folder += "_#{ENV['CUSTOMIZATIONS_PUBLISH_LOCATION']}" if ENV['CUSTOMIZATIONS_PUBLISH_LOCATION'].present? && ENV['CUSTOMIZATIONS_PUBLISH_LOCATION'] != 'production' %>
+    <%= stylesheet_link_tag "#{ENV['CDN_HOST']}/#{customizations_folder}/retailer_#{@retailer.id}/stylesheets/retailer_#{@retailer.id}.css", media: 'all' %>
+  <% end %>
+  <script src="https://kit.fontawesome.com/<%= CS3_ICONS_KIT_KEY %>.js" crossorigin="anonymous"></script>  
+</head>
+```
+
+#### Raw HTML `<head>` Example
+
+Note: _The values for the Retailer ID, CS3 version, the Font Awesome kit number, and the CDN Host will likely differ in your application._
+
+```html
+<head>
+  <link rel="stylesheet" media="all" href="https://s3.grocerywebsite.com/customizations_v3/retailer_3278/stylesheets/retailer_3278.css">
+  <script src="https://kit.fontawesome.com/8bda546f76.js" crossorigin="anonymous"></script>
+</head>
+```
+
+### The following belongs near the end of the `<body>` tag of admin layouts.
+
+This first example is how we apply these to the a Ruby on Rails ERB file. The `CS3_VERSION` constant is defined in the
+`config/initializers/cs3.rb` file. The `CDN_HOST` constant is defined as and environment variable (`.env` file).
+
+#### Ruby on Rails `<body>` Example
+
+If you are using the [Styler Gem](https://github.com/Webstop/styler) this will be found in the
+`app/views/layouts/admin_cs3/_scripts.html.erb` file.
+
+```html
+<body>
+  
+  ...
+
+  <%# 3rd party JS libs %>
+  <script src="https://code.jquery.com/jquery-<%= CS3_JQUERY_VERSION %>.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@<%= CS3_POPPER_VERSION %>/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@<%= CS3_BOOTSTRAP_VERSION %>/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-ujs@<%= CS3_JQUERY_UJS_VERSION %>/src/rails.min.js"></script>
+  <script src="<%= ENV['CDN_HOST'] %>/core-repos/core-styles-3/<%= CS3_VERSION %>/dist/js/core-styles<%= '.min' if Rails.env.production? -%>.js"></script>
+  <%- if Rails.env.production? -%>
+    <%# Only load Aye analytics if the retailer has it turned on %>
+    <% if @retailer.present? && @retailer.has_aye_analytics.present? && @retailer.has_aye_analytics? %>
+      <script src="<%= ENV['CDN_HOST'] %>/core-repos/core-styles-3/<%= CS3_VERSION %>/dist/js/core-styles-aye.min.js"></script>
+    <% end %>
+  <%- end -%>
+</body>
+```
+
+#### Raw HTML `<body>` Example
+
+Note: _The values for the CS3 version and the CDN Host will likely differ in your application. Same with the version of
+the 3rd party libs._
+
+```html
+<body>
+  
+  ...
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-ujs@1.2.3/src/rails.min.js"></script>
+  <script src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v3.0.0/dist/js/core-styles.min.js"></script>
+</body>
+```
 
 ## Default Example
 

@@ -120,13 +120,21 @@ Follow these steps to deploy the Framework.
 - Do a `git add -A`.
 - then a `git commit -m "some message"`.
 - then `git push origin master`.
-  - go to github and make a pull request, or `git push origin master`.
+  - go to github and make a pull request, or `git push webstop master`.
 4. Tag the Release
 - Visit [core-styles-3 releases](https://github.com/Webstop/core-styles-3/releases) in a web browser.
 - Click the `Draft New Release` button.
 - Enter the same version number you used in step 1 with a `v` appended to the front (e.g. `1.0.2` is `v1.0.2`).
 - Write a Helpful Title, and optionally a description.
 - Click `Publish Release`.
+5. Publish on the Main-Core CDN
+- Using an S3 client like Transmit got to the bucket called `core_app_assets`, within there you'll want to visit the following path `core-repos/core-styles-3` inside there you should see a bunch of folders with names that match tagged releases like the one made in the previous step.
+- Create a folder that matches the name of the tagged release you made in the last step.
+- Copy the `dist` folder from this repo into the new tag folder. 
+- Create a folder named `src` in the same new tag folder, it should be on the same level as the `dist` folder.
+- Copy the `js` folder from the root of this repo into the `src` folder.
+6. Publish on the Ace-Core CDN
+- Repeat step 5, but on the Ace AWS account.
 
 At this point you've deployed the code and tagged it. It is ready and available
 to be installed as a Node module via a package manager like NPM or Yarn.

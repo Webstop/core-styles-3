@@ -13328,8 +13328,7 @@ i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
 }
 
 .wsg-title-bg-gradient {
-  background: rgb(0, 179, 255);
-  background: linear-gradient(90deg, rgb(0, 179, 255) 0%, rgb(19, 185, 255) 50%, rgb(0, 179, 255) 100%);
+  background: #0194d3;
 }
 
 .wsg-inner-shadow {

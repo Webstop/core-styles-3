@@ -8,8 +8,8 @@
 
 // Background Gradient
 .wsg-title-bg-gradient {
-  background: rgb(0,179,255);
-  background: linear-gradient(90deg, rgba(0,179,255,1) 0%, rgba(19,185,255,1) 50%, rgba(0,179,255,1) 100%);
+  background: $webstop-blue;
+  //background: linear-gradient(90deg, rgba(0,179,255,1) 0%, rgba(19,185,255,1) 50%, rgba(0,179,255,1) 100%);
 }
 
 .wsg-inner-shadow {
