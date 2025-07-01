@@ -7,3 +7,11 @@
 @import '../node_modules/bootstrap/scss/bootstrap';
 @import 'core-styles';
 @import 'webstop-admin-typography';
+
+// Button color fix
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-color: #fff;
+  --bs-btn-disabled-color: #fff;
+}
