@@ -5,8 +5,9 @@
 // - bootstrap
 
 // Core-Styles JS Files
-// These three need to go first, in this order, and with the same attributes.
+// These three need to go first, in this order.
 import './config';
+import './live';
 import './cookies';
 
 // The rest of the file are simply listed in alphabetical order.
@@ -16,10 +17,11 @@ import './ajax-modal';
 import './bootstrap-data-attributes';
 import './btn-disabled';
 import './checkbox-selector';
-import './circular-cookies';
 import './filter-search';
 import './form-toggles';
-import './live';
+// import './live'; // Imported above
+import './locate';
 import './markdown-editor';
 import './search';
+import './store-locator';
 import './tags';

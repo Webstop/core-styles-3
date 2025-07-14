@@ -17,14 +17,16 @@ import './ajax-modal';
 import './bootstrap-data-attributes';
 import './btn-disabled';
 import './checkbox-selector';
-import './circular-cookies';
 import './filter-search';
 import './form-toggles';
 // import './live'; // Imported above
 import './locate';
 import './markdown-editor';
-import './public-layout';
 import './search';
-import './shopping-list';
 import './store-locator';
 import './tags';
+
+// Public Only Files
+import './circular-cookies';
+import './public-layout';
+import './shopping-list';
