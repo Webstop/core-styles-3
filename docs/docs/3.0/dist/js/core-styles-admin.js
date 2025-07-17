@@ -25,6 +25,63 @@
 
   })( window.webstop = window.webstop || {},  window.ahoy = window.ahoy || {} );
 
+  // Using the following design pattern
+  // https://web.archive.org/web/20181005005954/https://appendto.com/2010/10/how-good-c-habits-can-encourage-bad-javascript-habits-part-1/
+
+
+  // Live
+  (function( webstop ) {
+
+    // Public Method live();
+    // Live allows you to perform an action when elements are added to the DOM tree.
+    // This was developed to help add event listeners to DOM elements after they were added via AJAX or fetch.
+    // It also works on DOM elements added via straight Javascript.
+    //
+    // NOTE: MutationObserver will execute the callback "perform" function immediately when live is instantiated.
+    //       This can cause some unexpected behavior if you aren't aware for it and design for it in your supplied
+    //       callback function (supplied to the perform parameter).
+    //
+    // Parameters:
+    //   @parent: the parent DOM node to watch, blank or null defaults to document.body
+    //   @perform: the function to execute in the callback
+    webstop.live = function(perform, parent= 'body',) {
+      // Private Properties
+      let parents; // found DOM elements, based on parent selector
+      const config = {
+        childList: true,
+        subtree: true
+      };
+
+      // Callback function to execute when mutation is observed
+
+      let callback = function(mutationsList, observer) {
+        let hasNodesAdded = false;
+        for(let mutation of mutationsList) {
+          if(mutation.type === 'childList') { // We're only interested in child nodes being added or removed
+            hasNodesAdded = true;
+          }
+        }
+        if(hasNodesAdded){
+          perform();
+        }
+      };
+
+      if (typeof parent === "string" && parent.trim().length > 0) ; else {
+        parent ='body';
+      }
+
+      parents = document.querySelectorAll(parent);
+
+      if (parents.length > 0) {
+        parents.forEach((container) => {
+          let observer = new MutationObserver(callback);
+          observer.observe(container, config);
+        });
+      }
+    };
+
+  })( window.webstop = window.webstop || {} );
+
   (function(cs3){
 
     function setCookie(name, value, expireDays) {
@@ -214,7 +271,7 @@
 
 
   // Vanilla JS Version
-  function load(target, url, infinite) {
+  function load$1(target, url, infinite) {
     // TODO: Add callback support, success and failure callbacks
     fetch(url, {
       method: 'GET',
@@ -239,7 +296,7 @@
         // Element enters the viewport
         if(!entries[0].target.classList.contains('is-loaded')) {
           // Element has not been loaded yet
-          load(target, url, infinite);
+          load$1(target, url, infinite);
           let skipHistory = entries[0].target.hasAttribute('data-skip-history');
           if(!skipHistory) { history.pushState(null, "", url); }
           entries[0].target.classList.add('is-loaded');
@@ -368,7 +425,7 @@
     if(targets.length !== 0) {
       targets.forEach((target) => {
         let url      = target.getAttribute('data-load-now');
-        load(target, url, false);
+        load$1(target, url, false);
       });
     }
 
@@ -533,24 +590,6 @@
 
   });
 
-  // The purpose of this script is to set iPads and mobile phones to use
-  // the online format for circulars. We do this because Newsprints don't
-  // properly on small screens.
-
-  (function(){
-
-    function setCircularFormat(){
-      // This should set the cookie for iPad (768) and smaller
-      if(document.body.clientWidth < 770 ){
-        console.log('Setting circular cookie...');
-        let name = window.webstop.retailerID + '_circular_format';
-        cs3.setCookie(name, 'online', 7); // Note: many browsers cap JS set cookies to 7 days max.
-      }
-    }
-
-    setCircularFormat();
-  })();
-
   // Filter Search
 
   // Waits for page to load.
@@ -633,57 +672,94 @@
   // https://web.archive.org/web/20181005005954/https://appendto.com/2010/10/how-good-c-habits-can-encourage-bad-javascript-habits-part-1/
 
 
-  // Live
+  // Geolocation
   (function( webstop ) {
 
-    // Public Method live();
-    // Live allows you to perform an action when elements are added to the DOM tree.
-    // This was developed to help add event listeners to DOM elements after they were added via AJAX or fetch.
-    // It also works on DOM elements added via straight Javascript.
-    //
-    // NOTE: MutationObserver will execute the callback "perform" function immediately when live is instantiated.
-    //       This can cause some unexpected behavior if you aren't aware for it and design for it in your supplied
-    //       callback function (supplied to the perform parameter).
-    //
-    // Parameters:
-    //   @parent: the parent DOM node to watch, blank or null defaults to document.body
-    //   @perform: the function to execute in the callback
-    webstop.live = function(perform, parent= 'body',) {
-      // Private Properties
-      let parents; // found DOM elements, based on parent selector
-      const config = {
-        childList: true,
-        subtree: true
-      };
+    // Private Properties
+    let message; // element (where to display error messages)
+    let trigger; // element
+    let target; // element
+    let hide_trigger = true;
+    let locate_on_load = false;
+    let action_url = '';
+    let has_action_url = false;
+    let filter = '';
+    let has_filter = false;
+    let main_action = '';
+    let has_main_action = false;
+    let redirect_url = '';
+    let has_redirect_url = false;
 
-      // Callback function to execute when mutation is observed
+    // Public Properties
+    // Public Properties would take the form webstop.locator.someProperty = '';
 
-      let callback = function(mutationsList, observer) {
-        let hasNodesAdded = false;
-        for(let mutation of mutationsList) {
-          if(mutation.type === 'childList') { // We're only interested in child nodes being added or removed
-            hasNodesAdded = true;
-          }
-        }
-        if(hasNodesAdded){
-          perform();
-        }
-      };
+    // Public Sub-Class
+    webstop.locator = {};
 
-      if (typeof parent === "string" && parent.trim().length > 0) ; else {
-        parent ='body';
+    // Private Method locate();
+    webstop.locator.locate = function(display_messages) {
+      display_messages = !!(display_messages && message);
+
+      function success(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        const default_action_url = `${window.webstop.webHost}/retailers/${window.webstop.retailerID}/stores?display=results-only&latitude=${latitude}&longitude=${longitude}`;
+        action_url = action_url || default_action_url;
+        if(action_url == ''){ action_url = default_action_url; }
+        if(filter != ''){ action_url += `&filter=${filter}`; }
+        if(main_action != ''){ action_url += `&main_action=${main_action}`; }
+        if(redirect_url != ''){ action_url += `&url=${redirect_url}`; }
+        load(target, action_url);
+        if(display_messages){ message.textContent = ''; }
+        if(hide_trigger){ trigger.classList.add('d-none'); }
       }
 
-      parents = document.querySelectorAll(parent);
+      function error(error) {
+        if(display_messages){ message.textContent = `Unable to retrieve your location.`; }
+        console.error(`Geolocation Error. Code: ${error.code}. Message: ${error.message}`);
+      }
 
-      if (parents.length > 0) {
-        parents.forEach((container) => {
-          let observer = new MutationObserver(callback);
-          observer.observe(container, config);
-        });
+      if(!navigator.geolocation) {
+        if(display_messages){ message.textContent = "Geolocation is not supported by your browser."; }
+      } else {
+        if(display_messages){ message.textContent = 'Locating…'; }
+        navigator.geolocation.getCurrentPosition(success, error);
       }
     };
 
+    // Public Method webstop.locator.watcher
+    webstop.locator.watcher = function() {
+      trigger = document.querySelector("[data-locate]");
+      if (trigger) {
+        target = document.querySelector(trigger.getAttribute('data-locate-target'));
+        message = document.querySelector(trigger.getAttribute('data-locate-message'));
+        hide_trigger = trigger.hasAttribute('data-locate-hide-me');
+        locate_on_load = trigger.hasAttribute('data-locate-on-load');
+        has_action_url = trigger.hasAttribute('data-locate-action-url');
+        if (has_action_url) {
+          action_url = trigger.getAttribute('data-locate-action-url');
+        }
+        has_filter = trigger.hasAttribute('data-locate-filter');
+        if (has_filter) {
+          filter = trigger.getAttribute('data-locate-filter');
+        }
+        has_main_action = trigger.hasAttribute('data-locate-main-action');
+        if (has_main_action) {
+          main_action = trigger.getAttribute('data-locate-main-action');
+        }
+        has_redirect_url = trigger.hasAttribute('data-locate-redirect-url');
+        if (has_redirect_url) {
+          redirect_url = trigger.getAttribute('data-locate-redirect-url');
+        }
+        trigger.addEventListener("click", function (event) {
+          webstop.locator.locate(true);
+        });
+        // the following runs locate on page load, but without hiding the Use My Location button.
+        if(locate_on_load){
+          webstop.locator.locate(false);
+        }
+      }
+    };
   })( window.webstop = window.webstop || {} );
 
   (() => {
@@ -917,6 +993,60 @@
 
     liveSearch();
   });
+
+  // IIFE (Immediately Invoked Function Expression)
+  (function(webstop){
+
+    // Public Sub-Class
+    webstop.stores = {};
+
+    // Public Method formPicker();
+    // Called from the ajax-modal method as a callback that occurs after the store locator content loads.
+    // It registers all the Choose Store buttons in the store locator and attaches the functionality which
+    // populates the form and the UI.
+    webstop.stores.formPicker = function(trigger) {
+      // Setup data from Trigger
+      let inputSelector   = trigger.getAttribute('data-store-picker-input');
+      let addressSelector = trigger.getAttribute('data-store-picker-address');
+      let inputTarget   = document.querySelector(inputSelector);
+      let addressTarget = document.querySelector(addressSelector);
+      // Register all Choose Store buttons
+      let buttons = document.querySelectorAll('[data-store-selection]');
+      if(buttons.length !== 0) {
+        buttons.forEach((button) => {
+          let id      = button.getAttribute('data-store-id');
+          let name  = button.getAttribute('data-store-name');
+          let address  = button.getAttribute('data-store-address');
+          let city  = button.getAttribute('data-store-city');
+          let state  = button.getAttribute('data-store-state');
+          let zip  = button.getAttribute('data-store-zip');
+          let hasAddress = false;
+          if(name || address || city || state || zip){
+            hasAddress = true;
+          }
+          let addressHTML = '';
+          if(hasAddress) {
+            if (name) {
+              addressHTML += `<strong>${name}</strong><br>`;
+            }
+            addressHTML += `${address}<br>${city}, ${state} ${zip}`;
+          }
+          button.addEventListener("click", function (event) {
+            // Display the address in the UI
+            if(hasAddress){
+              addressTarget.innerHTML = addressHTML;
+            }
+            // Set the value in the form
+            inputTarget.value = id;
+            // Update the Select a Store button text
+            trigger.textContent = 'Change Store';
+          });
+        });
+      }
+    };
+
+
+  })( window.webstop = window.webstop || {} );
 
   // Tag Search
 

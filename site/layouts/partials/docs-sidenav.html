@@ -137,7 +137,36 @@
 
         {{ end }}
       {{ end }}
-    
+
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.images }}
+    {{ if .HasChildren }}
+    <li class="mb-1">
+      <button class="btn" data-bs-toggle="collapse"
+              data-bs-target="#images-menu-collapse" aria-expanded="false" aria-controls="images-menu-collapse">
+        <strong> {{ .Name }}</strong>
+      </button>
+
+      <div
+        class="collapse {{if or ($currentPage.IsMenuCurrent "images" .) ($currentPage.HasMenuCurrent "images" .) }} show {{end}}"
+      id="images-menu-collapse">
+
+      {{ range .Children }}
+      <ul class="list-unstyled fw-normal pb-1 small">
+
+        <li
+          class="py-2 ps-4 {{if or ($currentPage.IsMenuCurrent "images" .) ($currentPage.HasMenuCurrent "images" .) }} left-nav-active {{end}}">
+        <a href="{{ .URL }}" class="d-inline-flex rounded">{{ .Name }}</a>
+    </li>
+
+    </ul>
+    {{ end }}
+    </div>
+    </li>
+    {{ else }}
+    {{ end }}
+    {{ end }}
+
 
     {{ $currentPage := . }}
     <li class="mb-1">
@@ -175,6 +204,36 @@
       </ul>
     </li>
 
+
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.extentions }}
+    {{ if .HasChildren }}
+      <li class="mb-1">
+        <button class="btn" data-bs-toggle="collapse"
+                data-bs-target="#extentions-menu-collapse" aria-expanded="false" aria-controls="extentions-menu-collapse">
+          <strong> {{ .Name }}</strong>
+        </button>
+
+        <div
+          class="collapse {{if or ($currentPage.IsMenuCurrent "extentions" .) ($currentPage.HasMenuCurrent "extentions" .) }} show {{end}}"
+        id="extentions-menu-collapse">
+
+        {{ range .Children }}
+        <ul class="list-unstyled fw-normal pb-1 small">
+
+          <li
+            class="py-2 ps-4 {{if or ($currentPage.IsMenuCurrent "extentions" .) ($currentPage.HasMenuCurrent "extentions" .) }} left-nav-active {{end}}">
+          <a href="{{ .URL }}" class="d-inline-flex rounded">{{ .Name }}</a>
+      </li>
+
+      </ul>
+      {{ end }}
+      </div>
+      </li>
+      {{ else }}
+      {{ end }}
+    {{ end }}
+
       {{ $currentPage := . }}
       {{ range .Site.Menus.utilities }}
         {{ if .HasChildren }}
@@ -199,6 +258,7 @@
 
         {{ end }}
       {{ end }}
+
 
       {{ $currentPage := . }}
       {{ range .Site.Menus.orphan }}

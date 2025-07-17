@@ -1,6 +1,6 @@
 {
   "name": "core-styles-3",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Design System for Webstop's products.",
   "author": "Greg Hemphill",
   "license": "private",
@@ -11,6 +11,10 @@
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:dist/css/",
     "css-docs": "npm-run-all --parallel css-docs-compile",
     "css-docs-compile": "sass --style expanded --source-map --embed-sources --no-error-css site/assets/scss/:site/static/css/",
+    "img": "npm-run-all img-move",
+    "img-move": "cp -R ./images ./dist",
+    "img-docs": "npm-run-all img-docs-move",
+    "img-docs-move": "cp -R ./images ./site/static/images/core-styles-images",
     "js": "npm-run-all js-compile js-minify",
     "js-compile": "npm-run-all --aggregate-output --parallel js-compile-*",
     "js-minify": "npm-run-all --aggregate-output --parallel js-minify-*",
@@ -50,10 +54,10 @@
     "watch-css": "nodemon -L --watch scss/ --ext scss --exec \"npm-run-all css-compile\"",
     "watch-css-docs": "nodemon -L --watch site/assets/scss/ --ext scss --exec \"npm run css-docs-compile\"",
     "watch-js": "nodemon -L --watch js/ --ext scss --exec \"npm-run-all js js-docs\"",
-    "clear": "rm -rf dist/",
+    "clear": "rm -rf dist/ && mkdir dist && mkdir dist/images",
     "dist": "npm-run-all clear dist-runner",
-    "dist-runner": "npm-run-all --parallel js css",
-    "docs": "npm-run-all --parallel js-docs css-docs",
+    "dist-runner": "npm-run-all --parallel js css img",
+    "docs": "npm-run-all --parallel js-docs css-docs img-docs",
     "pushable": "npm-run-all --parallel dist docs"
   },
   "repository": {

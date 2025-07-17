@@ -2,12 +2,13 @@
 layout: docs
 title: Card Decks
 description: A set of equal width and height cards that aren't attached to one another.
-group: components
+group: extentions
 toc: true
 source: Webstop
 menu:
-cards:
-parent: Cards
+  extentions:
+    tags: "card deck, card decks, card, cards, bootstrap, bootstrap extentions"
+    parent: Bootstrap Extentions
 ---
 
 
