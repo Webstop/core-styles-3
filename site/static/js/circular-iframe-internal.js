@@ -2,9 +2,14 @@
   'use strict';
 
   // Dynamic height for iframe circulars
+  // ===================================
+  //
   // - This script determines the height of the circular and pushes a message to the parent iframe.
   // - The parent iframe will adjust the height of the circular accordingly.
   // - The script will resend the message when the webpage is resized or when content is added to the page.
+  // - The script in circular-iframe-parent.js (on the parent website) will receive the message and adjust the height of the iframe.
+  //
+  // Placement: This script is served from within the circular inside the iframe.
 
   (function() {
     function calculateTrueHeight() {

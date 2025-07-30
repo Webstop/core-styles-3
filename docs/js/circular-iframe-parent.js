@@ -3,6 +3,16 @@
 
   (function(webstop){
 
+    // Embed an iframed Circular and manage dynamic height
+    // ===================================================
+    //
+    // - This script creates an iframe with Webstop's Digital Circular inside.
+    // - This script listens for a message event from the iframe.
+    // - The script in circular-iframe-internal.js (served inside the iframe) will send the message when the height of the iframe needs adjusting.
+    // - This script will receive the message and adjust the height of the iframe.
+    //
+    // Placement: This script is served from the parent website on the page containing the circular iframe.
+
     const circularContainer = document.getElementById('webstop-circular');
     let error = '';
 
@@ -22,9 +32,6 @@
     // 2. If values are provided as attributes on the #webstop-circular container prefer those values
     if (circularContainer.hasAttribute('data-retailer-id')) {
       webstop.retailerID= circularContainer.getAttribute('data-retailer-id');
-    }
-    if (circularContainer.hasAttribute('data-api-host')) {
-      webstop.apiHost= circularContainer.getAttribute('data-api-host');
     }
     if (circularContainer.hasAttribute('data-api-host')) {
       webstop.apiHost= circularContainer.getAttribute('data-api-host');
@@ -108,29 +115,11 @@
       circularIframe.style.border = '0';
       circularIframe.style.padding = '0';
       circularIframe.style.margin = '0';
-      // circularIframe.allowFullScreen = true;
 
       // Add the iframe to the container
       circularContainer.appendChild(circularIframe);
-    //}
 
-    // Create the modal
-    //if (error === '') {
-      // Create the iframe element
-      const modalBackdropContainer = document.createElement('div');
-      const modalContainer = document.createElement('div');
-      const modalIframe = document.createElement('iframe');
-      modalBackdropContainer.id = 'webstop-modal-backdrop-container';
-      modalContainer.id = 'webstop-modal-container';
-      modalIframe.id = 'webstop-modal-iframe';
 
-      // Add the iframe to the container
-      circularContainer.appendChild(modalBackdropContainer);
-      modalBackdropContainer.appendChild(modalContainer);
-      modalContainer.appendChild(modalIframe);
-    //}
-
-    //if (error === '') {
       // Listen for Post Messages
       window.addEventListener('message', function(event) {
         //console.log(`Post Message Received: ${event.data}`);
