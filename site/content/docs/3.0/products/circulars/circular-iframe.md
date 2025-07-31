@@ -11,6 +11,9 @@ menu:
     parent: Circulars
 ---
 
+{{ $package := getJSON "package.json" }}
+<p>Version: {{ $package.version }}</p>
+
 Here we include the script to display some iframe content.
 
 ```html

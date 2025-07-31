@@ -54,6 +54,7 @@
     "watch-css": "nodemon -L --watch scss/ --ext scss --exec \"npm-run-all css-compile\"",
     "watch-css-docs": "nodemon -L --watch site/assets/scss/ --ext scss --exec \"npm run css-docs-compile\"",
     "watch-js": "nodemon -L --watch js/ --ext scss --exec \"npm-run-all js js-docs\"",
+    "prepare-": "node scripts/prepare-hugo-data.js",
     "clear": "rm -rf dist/ && mkdir dist && mkdir dist/images",
     "dist": "npm-run-all clear dist-runner",
     "dist-runner": "npm-run-all --parallel js css img",

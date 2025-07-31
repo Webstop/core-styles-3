@@ -661,7 +661,9 @@
         <p class="docs-heading-tagline">Content items designed to live inside the digital circular.</p>
       
     </section>
-    <p>Here we include the script to display some iframe content.</p>
+    <p>{{ $package := getJSON &ldquo;package.json&rdquo; }}</p>
+<p>Version: {{ $package.version }}</p>
+<p>Here we include the script to display some iframe content.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;webstop-circular&#34;</span> 
 </span></span><span class="line"><span class="cl">  <span class="na">data-retailer-id</span><span class="o">=</span><span class="s">&#34;3296&#34;</span> 
 </span></span><span class="line"><span class="cl">  <span class="na">data-api-host</span><span class="o">=</span><span class="s">&#34;https://rails.example.com&#34;</span> 

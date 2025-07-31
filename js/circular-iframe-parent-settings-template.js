@@ -10,7 +10,7 @@
   webstop.apiHost    = '';
   webstop.webHost    = '';
   webstop.cdnHost    = '';
-  // webstop.hasCircularStoreLocator = false;
+  // webstop.hasCircularStoreLocator = false; // Defaults to false, uncomment
 
 })( window.webstop = window.webstop || {} );
 
