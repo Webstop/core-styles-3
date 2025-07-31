@@ -18,7 +18,7 @@ The Cartoon 01 set is a friendly set of cartoon images.
 
 <div class="card-deck"> 
   <div class="card min-width-320 max-width-375">
-    <img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v3.0.3/dist/images/errors/cartoon_01/store_not_found.png" class="w-100">
+    <img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/{{< version >}}/dist/images/errors/cartoon_01/store_not_found.png" class="w-100">
     <div class="card-body">
       <h5 class="card-title">Store Not Found</h5>
       <p class="card-text">This image is meant to be used in the store locator.</p>
@@ -31,7 +31,7 @@ The Cartoon 01 set is a friendly set of cartoon images.
     </div>
   </div>
   <div class="card min-width-320 max-width-375">
-    <img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v3.0.3/dist/images/errors/cartoon_01/404.png" class="w-100">
+    <img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/{{< version >}}/dist/images/errors/cartoon_01/404.png" class="w-100">
     <div class="card-body">
       <h5 class="card-title">404 File Not Found</h5>
       <p class="card-text">This image is meant to be used on 404 error pages.</p>
@@ -44,7 +44,7 @@ The Cartoon 01 set is a friendly set of cartoon images.
     </div>
   </div>
   <div class="card min-width-320 max-width-375">
-    <img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v3.0.3/dist/images/errors/cartoon_01/404_eggs.png" class="w-100">
+    <img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/{{< version >}}/dist/images/errors/cartoon_01/404_eggs.png" class="w-100">
     <div class="card-body">
       <h5 class="card-title">404 File Not Found</h5>
       <p class="card-text">This image is meant to be used on 404 error pages.</p>
@@ -57,7 +57,7 @@ The Cartoon 01 set is a friendly set of cartoon images.
     </div>
   </div>
   <div class="card min-width-320 max-width-375">
-    <img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v3.0.3/dist/images/errors/cartoon_01/500.png" class="w-100">
+    <img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/{{< version >}}/dist/images/errors/cartoon_01/500.png" class="w-100">
     <div class="card-body">
       <h5 class="card-title">500 Internal Server Error</h5>
       <p class="card-text">This image is meant to be used on 500 error pages.</p>
@@ -70,7 +70,7 @@ The Cartoon 01 set is a friendly set of cartoon images.
     </div>
   </div>
   <div class="card min-width-320 max-width-375">
-    <img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v3.0.3/dist/images/errors/cartoon_01/500_egg.png" class="w-100">
+    <img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/{{< version >}}/dist/images/errors/cartoon_01/500_egg.png" class="w-100">
     <div class="card-body">
       <h5 class="card-title">500 Internal Server Error</h5>
       <p class="card-text">This image is meant to be used on 500 error pages.</p>
@@ -83,7 +83,7 @@ The Cartoon 01 set is a friendly set of cartoon images.
     </div>
   </div>
   <div class="card min-width-320 max-width-375">
-    <img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v3.0.3/dist/images/errors/cartoon_01/500_eggs.png" class="w-100">
+    <img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/{{< version >}}/dist/images/errors/cartoon_01/500_eggs.png" class="w-100">
     <div class="card-body">
       <h5 class="card-title">500 Internal Server Error</h5>
       <p class="card-text">This image is meant to be used on 500 error pages.</p>
@@ -106,7 +106,7 @@ The Cartoon 01 set is a friendly set of cartoon images.
 This image is meant to be used in the store locator.
 
 {{< example >}}
-<img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v3.0.3/dist/images/errors/cartoon_01/store_not_found.png" class="w-100">
+<img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/{{< version >}}/dist/images/errors/cartoon_01/store_not_found.png" class="w-100">
 {{< /example >}}
 
 <div id="cartoon-01-404"></div>
@@ -116,7 +116,7 @@ This image is meant to be used in the store locator.
 This image is meant to be used on 404 error pages.
 
 {{< example >}}
-<img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v3.0.3/dist/images/errors/cartoon_01/404.png" class="w-100">
+<img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/{{< version >}}/dist/images/errors/cartoon_01/404.png" class="w-100">
 {{< /example >}}
 
 <div id="cartoon-01-404-eggs"></div>
@@ -126,7 +126,7 @@ This image is meant to be used on 404 error pages.
 This image is meant to be used on 404 error pages.
 
 {{< example >}}
-<img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v3.0.3/dist/images/errors/cartoon_01/404_eggs.png" class="w-100">
+<img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/{{< version >}}/dist/images/errors/cartoon_01/404_eggs.png" class="w-100">
 {{< /example >}}
 
 <div id="cartoon-01-500"></div>
@@ -136,7 +136,7 @@ This image is meant to be used on 404 error pages.
 This image is meant to be used on 500 error pages.
 
 {{< example >}}
-<img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v3.0.3/dist/images/errors/cartoon_01/500.png" class="w-100">
+<img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/{{< version >}}/dist/images/errors/cartoon_01/500.png" class="w-100">
 {{< /example >}}
 
 <div id="cartoon-01-500-egg"></div>
@@ -146,7 +146,7 @@ This image is meant to be used on 500 error pages.
 This image is meant to be used on 500 error pages.
 
 {{< example >}}
-<img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v3.0.3/dist/images/errors/cartoon_01/500_egg.png" class="w-100">
+<img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/{{< version >}}/dist/images/errors/cartoon_01/500_egg.png" class="w-100">
 {{< /example >}}
 
 <div id="cartoon-01-500-eggs"></div>
@@ -156,5 +156,5 @@ This image is meant to be used on 500 error pages.
 This image is meant to be used on 500 error pages.
 
 {{< example >}}
-<img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/v3.0.3/dist/images/errors/cartoon_01/500_eggs.png" class="w-100">
+<img src="https://s3.grocerywebsite.com/core-repos/core-styles-3/{{< version >}}/dist/images/errors/cartoon_01/500_eggs.png" class="w-100">
 {{< /example >}}

@@ -6,12 +6,17 @@
     // Embed an iframed Circular and manage dynamic height
     // ===================================================
     //
-    // - This script creates an iframe with Webstop's Digital Circular inside.
-    // - This script listens for a message event from the iframe.
-    // - The script in circular-iframe-internal.js (served inside the iframe) will send the message when the height of the iframe needs adjusting.
-    // - This script will receive the message and adjust the height of the iframe.
+    // The script does the following:
+    //
+    // - Creates a Circular iframe containing the circular inside the #webstop-circular div.
+    // - Creates a Modal with modal iframe within the body
+    // - Listens for a postMessage indicating the modal should be triggered and what URL to load into the iframe.
+    // - Listens for a postMessage indicating the height of the circular has changed, and updates the circular iframe height.
     //
     // Placement: This script is served from the parent website on the page containing the circular iframe.
+    //
+    // See https://guides.webstop.com/docs/3.0/products/circulars/circular-iframe/ for information about using this within
+    // core-customizations to serve on retailer websites.
 
     const circularContainer = document.getElementById('webstop-circular');
     let error = '';

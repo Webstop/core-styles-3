@@ -1,20 +1,23 @@
 {
   "name": "core-styles-3",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Design System for Webstop's products.",
   "author": "Greg Hemphill",
   "license": "private",
   "private": true,
   "scripts": {
     "docs-build": "hugo --cleanDestinationDir",
+
     "css": "npm-run-all --parallel css-compile",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:dist/css/",
     "css-docs": "npm-run-all --parallel css-docs-compile",
     "css-docs-compile": "sass --style expanded --source-map --embed-sources --no-error-css site/assets/scss/:site/static/css/",
+
     "img": "npm-run-all img-move",
     "img-move": "cp -R ./images ./dist",
     "img-docs": "npm-run-all img-docs-move",
     "img-docs-move": "cp -R ./images ./site/static/images/core-styles-images",
+
     "js": "npm-run-all js-compile js-minify",
     "js-compile": "npm-run-all --aggregate-output --parallel js-compile-*",
     "js-minify": "npm-run-all --aggregate-output --parallel js-minify-*",
@@ -37,6 +40,7 @@
     "js-minify-circular-iframe-parent": "terser dist/js/circular-iframe-parent.js --compress --output dist/js/circular-iframe-parent.min.js",
     "js-compile-circular-iframe-internal": "rollup js/circular-iframe-internal.js --file dist/js/circular-iframe-internal.js --config build/rollup.config.mjs --format iife --sourcemap",
     "js-minify-circular-iframe-internal": "terser dist/js/circular-iframe-internal.js --compress --output dist/js/circular-iframe-internal.min.js",
+
     "js-docs": "npm-run-all js-docs-compile js-docs-minify",
     "js-docs-compile": "npm-run-all --aggregate-output --parallel js-docs-compile-*",
     "js-docs-minify": "npm-run-all --aggregate-output --parallel js-docs-minify-*",
@@ -50,11 +54,13 @@
     "js-docs-circular-iframe-internal": "npm-run-all js-docs-compile-circular-iframe-internal js-docs-minify-circular-iframe-internal",
     "js-docs-compile-circular-iframe-internal": "rollup js/circular-iframe-internal.js --file site/static/js/circular-iframe-internal.js --config build/rollup.config.mjs --format iife --sourcemap",
     "js-docs-minify-circular-iframe-internal": "terser site/static/js/circular-iframe-internal.js --compress --output site/static/js/circular-iframe-internal.min.js",
+
     "watch": "npm-run-all --parallel watch-*",
     "watch-css": "nodemon -L --watch scss/ --ext scss --exec \"npm-run-all css-compile\"",
     "watch-css-docs": "nodemon -L --watch site/assets/scss/ --ext scss --exec \"npm run css-docs-compile\"",
     "watch-js": "nodemon -L --watch js/ --ext scss --exec \"npm-run-all js js-docs\"",
-    "prepare-": "node scripts/prepare-hugo-data.js",
+
+    "update-config": "node scripts/update-hugo-config.js",
     "clear": "rm -rf dist/ && mkdir dist && mkdir dist/images",
     "dist": "npm-run-all clear dist-runner",
     "dist-runner": "npm-run-all --parallel js css img",
@@ -84,6 +90,7 @@
     "hugo-bin": "^0.85.3",
     "jquery": "^3.7.1",
     "js-cookie": "^3.0.5",
+    "js-yaml": "^4.1.0",
     "nodemon": "^2.0.15",
     "npm-run-all": "^4.1.5",
     "rollup": "^4.13.0",

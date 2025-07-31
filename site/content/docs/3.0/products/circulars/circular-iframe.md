@@ -11,8 +11,11 @@ menu:
     parent: Circulars
 ---
 
-{{ $package := getJSON "package.json" }}
-<p>Version: {{ $package.version }}</p>
+<p>Version: {{< version >}}</p>
+
+https://circulars-cdn.acehardware.comcore-repos/core-styles-3/{{< version >}}/src/js/circular-iframe-parent.js
+
+https://circulars-cdn.acehardware.com/customizations_v3/retailer_3296/javascripts/circular_iframe_parent_for_retailer_3296.js
 
 Here we include the script to display some iframe content.
 
