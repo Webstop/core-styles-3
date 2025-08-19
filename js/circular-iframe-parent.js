@@ -1,6 +1,4 @@
 "use strict";
-var iframeHeight = 0;
-var resizeCount = 0;
 (function(webstop){
 
   // Embed an iframed Circular and manage dynamic height

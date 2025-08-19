@@ -4,6 +4,7 @@
 // <div id="webstop-circular" data-retailer-id="1" data-api-host="https://rails.example.com" data-web-host="https://lasso.example.com" data-cdn-host="https://cdn.example.com"></div>
 // Production Example:
 // <div id="webstop-circular"></div>
+'use strict';
 (function(webstop){
 
   webstop.retailerID = 0;
