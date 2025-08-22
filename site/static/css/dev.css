@@ -11914,9 +11914,8 @@ textarea.form-control-lg {
   margin-bottom: 1.5rem;
 }
 
-[class^=fa-], [class*=" fa-"], i.fak {
-  width: 1rem;
-  min-width: 1rem;
+i[class^=fa-], i[class*=" fa-"], i.fak {
+  min-width: 1em;
 }
 
 .fs-xxl-icon {

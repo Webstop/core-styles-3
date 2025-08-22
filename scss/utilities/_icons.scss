@@ -2,9 +2,8 @@
 
 // Set the width so we don't get weird text movements while the icons are loading.
 // Also helps icons align in a list.
-[class^="fa-"], [class*=" fa-"], i.fak {
-  width: 1rem;
-  min-width: 1rem;
+i[class^="fa-"], i[class*=" fa-"], i.fak {
+  min-width: 1em;
 }
 
 // Sizing for large icons, commonly used in index cards
