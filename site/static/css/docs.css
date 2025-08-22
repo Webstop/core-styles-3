@@ -11914,9 +11914,25 @@ textarea.form-control-lg {
   margin-bottom: 1.5rem;
 }
 
-i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
+[class^=fa-], [class*=" fa-"], i.fak {
   width: 1rem;
   min-width: 1rem;
+}
+
+.fs-xxl-icon {
+  font-size: 10rem;
+}
+
+.fs-xl-icon {
+  font-size: 8rem;
+}
+
+.fs-lg-icon {
+  font-size: 6rem;
+}
+
+.fs-md-icon {
+  font-size: 4rem;
 }
 
 .max-width-320 {
@@ -13738,7 +13754,6 @@ blockquote {
   font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
-  margin-top: 2rem;
 }
 
 .wsg-title,

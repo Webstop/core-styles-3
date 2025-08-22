@@ -1,7 +1,22 @@
 // Icons
 
 // Set the width so we don't get weird text movements while the icons are loading.
-i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
+// Also helps icons align in a list.
+[class^="fa-"], [class*=" fa-"], i.fak {
   width: 1rem;
   min-width: 1rem;
+}
+
+// Sizing for large icons, commonly used in index cards
+.fs-xxl-icon {
+  font-size: 10rem;
+}
+.fs-xl-icon {
+  font-size: 8rem;
+}
+.fs-lg-icon {
+  font-size: 6rem;
+}
+.fs-md-icon {
+  font-size: 4rem;
 }

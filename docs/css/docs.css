@@ -13738,7 +13738,6 @@ blockquote {
   font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
-  margin-top: 2rem;
 }
 
 .wsg-title,
