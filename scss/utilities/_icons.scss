@@ -3,20 +3,24 @@
 // Set the width so we don't get weird text movements while the icons are loading.
 // Also helps icons align in a list.
 i[class^="fa-"], i[class*=" fa-"], i.fak {
-  min-width: 1em;
+  min-width:  1em;
   min-height: 1em;
 }
 
 // Sizing for large icons, commonly used in index cards
 .fs-xxl-icon {
-  font-size: 10rem;
+  font-size:  10rem;
+  min-height: 10rem;
 }
 .fs-xl-icon {
-  font-size: 8rem;
+  font-size:  8rem;
+  min-height: 8rem;
 }
 .fs-lg-icon {
-  font-size: 6rem;
+  font-size:  6rem;
+  min-height: 6rem;
 }
 .fs-md-icon {
-  font-size: 4rem;
+  font-size:  4rem;
+  min-height: 4rem;
 }

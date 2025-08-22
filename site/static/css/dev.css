@@ -11921,18 +11921,22 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
 
 .fs-xxl-icon {
   font-size: 10rem;
+  min-height: 10rem;
 }
 
 .fs-xl-icon {
   font-size: 8rem;
+  min-height: 8rem;
 }
 
 .fs-lg-icon {
   font-size: 6rem;
+  min-height: 6rem;
 }
 
 .fs-md-icon {
   font-size: 4rem;
+  min-height: 4rem;
 }
 
 .max-width-320 {
