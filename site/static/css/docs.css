@@ -11916,6 +11916,7 @@ textarea.form-control-lg {
 
 i[class^=fa-], i[class*=" fa-"], i.fak {
   min-width: 1em;
+  min-height: 1em;
 }
 
 .fs-xxl-icon {

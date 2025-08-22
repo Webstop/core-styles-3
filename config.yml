@@ -62,7 +62,7 @@ params:
     description: Design System for Webstop's products.
     author: Greg Hemphill
     license: private
-    buildDate: '2025-08-22T17:37:13.239Z'
+    buildDate: '2025-08-22T17:42:37.983Z'
     nodeVersion: v18.4.0
     repository: https://github.com/webstop/core-styles-3
     homepage: https://guides.webstop.com/
