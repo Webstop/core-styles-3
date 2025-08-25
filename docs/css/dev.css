@@ -11914,9 +11914,29 @@ textarea.form-control-lg {
   margin-bottom: 1.5rem;
 }
 
-i.fa-solid, i.fa-regular, i.fa-duotone, i.fak {
-  width: 1rem;
-  min-width: 1rem;
+i[class^=fa-], i[class*=" fa-"], i.fak {
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.fs-xxl-icon {
+  font-size: 10rem;
+  min-height: 10rem;
+}
+
+.fs-xl-icon {
+  font-size: 8rem;
+  min-height: 8rem;
+}
+
+.fs-lg-icon {
+  font-size: 6rem;
+  min-height: 6rem;
+}
+
+.fs-md-icon {
+  font-size: 4rem;
+  min-height: 4rem;
 }
 
 .max-width-320 {
