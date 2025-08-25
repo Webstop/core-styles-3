@@ -12,8 +12,8 @@ menu:
 ---
 
 Some retailers want to use Webstop's Digital Circular within an iframe on a website managed by a third party or the 
-retailer's internally managed website. We have made it so all they have to do is drop in the appropriate javascript file 
-and this Javascript file does the rest. 
+retailer's internally managed website. We have made it so all they have to do is drop in the appropriate javascript file,
+an empty div with the an id of `webstop-circular` and the Javascript file does the rest. 
 
 
 
