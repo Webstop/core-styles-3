@@ -61,11 +61,13 @@
     "watch-js": "nodemon -L --watch js/ --ext scss --exec \"npm-run-all js js-docs\"",
 
     "update-config": "node scripts/update-hugo-config.js",
+    "create-version": "node scripts/create-version.js",
     "clear": "rm -rf dist/ && mkdir dist && mkdir dist/images",
     "dist": "npm-run-all clear dist-runner",
     "dist-runner": "npm-run-all --parallel js css img",
     "docs": "npm-run-all --parallel js-docs css-docs img-docs update-config",
-    "pushable": "npm-run-all --parallel dist docs"
+    "versionable": "npm-run-all --parallel dist docs",
+    "pushable": "npm-run-all versionable create-version"
   },
   "repository": {
     "type": "git",
