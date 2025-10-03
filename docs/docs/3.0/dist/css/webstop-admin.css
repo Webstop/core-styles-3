@@ -12477,6 +12477,18 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   }
 }
 
+.card table:last-child {
+  border-bottom-left-radius: var(--bs-card-border-radius, 0.375rem);
+  border-bottom-right-radius: var(--bs-card-border-radius, 0.375rem);
+  margin-bottom: 0;
+  overflow: hidden; /* Ensures child elements respect the border-radius */
+}
+
+.card table:last-child tbody tr:last-child th,
+.card table:last-child tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
 .is-select .check-unselect-text {
   display: none;
 }
@@ -13350,6 +13362,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   --bs-btn-hover-color: #fff;
   --bs-btn-active-color: #fff;
   --bs-btn-disabled-color: #fff;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  color: #fff !important;
 }
 
 /*# sourceMappingURL=webstop-admin.css.map */

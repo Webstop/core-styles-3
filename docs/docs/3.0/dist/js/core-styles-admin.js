@@ -177,6 +177,7 @@
 
       let $this = $(this);
       let url = $this.attr('action');
+      let method = $this.attr('method');
       let data = $this.serializeArray();
       let $target = $this;
       let hasPowerBar = $this.is('[data-power-bar]');
@@ -186,6 +187,10 @@
       if(hasOnComplete){
         onCompleteUrl = $this.data('on-complete-load');
         onCompleteTarget = $this.data('on-complete-target');
+      }
+      const validMethods = ['GET', 'POST', 'PUT', 'DELETE'];
+      if (!validMethods.includes(method.toUpperCase())) {
+        method = 'POST';
       }
 
       if( $this.is('[data-target]') ){
@@ -208,19 +213,53 @@
 
     function loadOnComplete(onCompleteUrl, onCompleteTarget) {
       const targets = document.querySelectorAll(onCompleteTarget);
-      console.log(`loadOnComplete`);
-      console.log(`onCompleteUrl: ${onCompleteUrl}`);
-      console.log(`onCompleteTarget: ${onCompleteTarget}`);
+      // console.log(`loadOnComplete`);
+      // console.log(`onCompleteUrl: ${onCompleteUrl}`);
+      // console.log(`onCompleteTarget: ${onCompleteTarget}`);
 
       return fetch(onCompleteUrl)
-        .then(response => response.text())
+        .then(response => {
+          if (!response.ok) {
+            // Create a more detailed error message based on status code
+            let errorMessage = `HTTP ${response.status}: ${response.statusText}`;
+
+            switch (response.status) {
+              case 404:
+                errorMessage += ' - The requested resource was not found';
+                break;
+              case 500:
+                errorMessage += ' - Internal server error occurred';
+                break;
+              case 403:
+                errorMessage += ' - Access forbidden';
+                break;
+              case 401:
+                errorMessage += ' - Authentication required';
+                break;
+              default:
+                errorMessage += ' - Request failed';
+            }
+
+            throw new Error(errorMessage);
+          }
+          return response.text();
+        })
         .then(html => {
           targets.forEach(target => {
             console.log(`Apply on complete to target.`);
             target.innerHTML = html;
           });
         })
-        .catch(error => console.error('Error loading on-complete content:', error));
+        .catch(error => {
+          console.error('Error loading on-complete content:', error.message);
+
+          // Log additional context for debugging
+          console.error('Request details:', {
+            url: onCompleteUrl,
+            method: method,
+            target: onCompleteTarget
+          });
+        });
     }
 
   });
@@ -441,6 +480,14 @@
       $('#site-modal-footer').removeClass('d-none');
     });
 
+    // Load on modal close. Main use case is reloading the shopping list sidebar when items are edited or added.
+    $(document.body).on('hide.bs.modal', '#site-modal', function () {
+      console.log('hide');
+      $('[data-load-on-modal-close]').each(function(){
+        $(this).load($(this).attr('data-load-on-modal-close').replace(/&amp;/g, '&'));
+      });
+    });
+
     $(document.body).on('show.bs.modal', '#site-modal', function (event) {
       let trigger = event.relatedTarget;
       let $trigger = $(event.relatedTarget);
@@ -477,10 +524,14 @@
 
   function initPopovers() {
     $('[data-toggle="popover"]').popover();
+    // Bootstrap v5 switched to adding the bs namespace to their data attributes.
+    $('[data-bs-toggle="popover"]').popover();
   }
 
   function initTooltips() {
     $('[data-toggle="tooltip"]').tooltip();
+    // Bootstrap v5 switched to adding the bs namespace to their data attributes.
+    $('[data-bs-toggle="tooltip"]').tooltip();
   }
 
   function initDataAttributes$1() {

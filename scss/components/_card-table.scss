@@ -8,7 +8,7 @@
   margin-bottom: 0;
   overflow: hidden; /* Ensures child elements respect the border-radius */
 }
-.card table:last-child tr:last-child th,
-.card table:last-child tr:last-child td {
+.card table:last-child tbody tr:last-child th,
+.card table:last-child tbody tr:last-child td {
   border-bottom: none !important;
 }
