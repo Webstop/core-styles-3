@@ -1,9 +1,3 @@
-//.public-header  { grid-area: public-header;  overflow: visible; }
-//.public-sidecar { grid-area: public-sidecar; overflow-x: auto; display: block; }
-//.public-sidenav { grid-area: public-sidenav; overflow-x: auto; display: block; }
-//.public-page    { grid-area: public-page;    overflow-x: auto; display: block; }
-//.public-sidebar { grid-area: public-sidebar; overflow-x: auto; display: block; }
-
 .public {
   grid-auto-columns: 0;
   grid-auto-rows: 0;
@@ -36,6 +30,10 @@
   .public-sidebar-grid-btn      { display: none; }
   .public-sidenav-offcanvas-btn { display: none; }
   .public-sidebar-offcanvas-btn { display: none; }
+
+  .public-page {
+    background-color: $theme-bg;
+  }
 
 
   //.public-header  { grid-area: public-header;  overflow: visible; }
@@ -214,24 +212,42 @@
   &.public-borders {
     .public-header  {
       border-bottom: $public-header-border-size solid $public-header-border-color;
-      background-color: $public-header-bg-color;
     }
     .public-sidecar {
       border-right: $public-sidecar-border-size solid $public-sidecar-border-color;
-      background-color: $public-sidecar-bg-color;
     }
     .public-sidenav {
       border-right: $public-sidenav-border-size solid $public-sidenav-border-color;
-      background-color: $public-sidenav-bg-color;
     }
     .public-sidebar {
       border-left: $public-sidebar-border-size solid $public-sidebar-border-color;
-      background-color: $public-sidebar-bg-color;
     }
     .public-footer {
       border-top: $public-footer-border-size solid $public-footer-border-color;
-      background-color: $public-footer-bg-color;
     }
+  }
+
+  // Background Colors
+  .public-header  {
+    background-color: $public-header-bg-color;
+  }
+  .public-sidecar {
+    background-color: $public-sidecar-bg-color;
+  }
+  .public-sidenav {
+    background-color: $public-sidenav-bg-color;
+  }
+  .public-page {
+    background-color: $public-page-bg-color;
+    .public-content {
+      background-color: $public-content-bg-color;
+    }
+  }
+  .public-sidebar {
+    background-color: $public-sidebar-bg-color;
+  }
+  .public-footer {
+    background-color: $public-footer-bg-color;
   }
 
   // Heights

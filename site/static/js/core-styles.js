@@ -117,59 +117,6 @@
   })( window.cs3 = window.cs3 || {} );
 
   // Ajax Form Component
-
-
-  // /**
-  //  * ------------------------------------------------------------------------
-  //  * Main Function
-  //  * ------------------------------------------------------------------------
-  //  */
-  //
-  // function ajaxForm(form){
-  //
-  //   let $form = $(form);
-  //   let url = $form.attr('action');
-  //   let data = $form.serializeArray();
-  //   let $target = $form;
-  //
-  //   if( $form.is('[data-target]') ){
-  //     $target = $($form.data('target'));
-  //   } else {
-  //     if($form.parent().is('.ajax-form-container')) {
-  //     }  else {
-  //       $form.wrap( "<div class='ajax-form-container'></div>" );
-  //     }
-  //     $target = $form.parent();
-  //   }
-  //
-  //   if( $form.is('[data-power-bar]') ){
-  //     $target.load(url,data,function(){
-  //       loadShoppingListPowerBar();
-  //     });
-  //   } else {
-  //     $target.load(url,data);
-  //   }
-  // }
-  //
-  // /**
-  //  * ------------------------------------------------------------------------
-  //  * Data API Implementation
-  //  * ------------------------------------------------------------------------
-  //  */
-  //
-  // $(function() {
-  //
-  //   $('[data-ajax-form]').on('submit', function(event){
-  //     event.preventDefault();
-  //
-  //     ajaxForm(this);
-  //
-  //   });
-  //
-  // });
-  //
-  // export default ajaxForm
-
   $(function() {
 
     $(document.body).on('submit', '[data-ajax-form]', function(event){
@@ -180,7 +127,7 @@
       let method = $this.attr('method');
       let data = $this.serializeArray();
       let $target = $this;
-      let hasPowerBar = $this.is('[data-power-bar]');
+      $this.is('[data-power-bar]');
       let hasOnComplete = $this.is('[data-on-complete-load]');
       let onCompleteUrl = '';
       let onCompleteTarget = '';
@@ -205,7 +152,6 @@
       $target.load(url,data,function(){
         console.log(`hasOnComplete: ${hasOnComplete}`);
         if(hasOnComplete){ loadOnComplete(onCompleteUrl, onCompleteTarget); }
-        if(hasPowerBar){ loadShoppingListPowerBar(); }
       });
 
 
@@ -272,7 +218,7 @@
       let $this = $(this);
       let url = $this.data('load');
       let $target = $this;
-      let hasPowerBar = $this.is('[data-power-bar]');
+      $this.is('[data-power-bar]');
       let hasOnComplete = $this.is('[data-on-complete-load]');
       let onCompleteUrl = '';
       let onCompleteTarget = '';
@@ -301,7 +247,6 @@
 
       $target.load(url,function(){
         if(hasOnComplete){ loadOnComplete(onCompleteUrl, onCompleteTarget); }
-        if(hasPowerBar){ loadShoppingListPowerBar(); }
       });
 
     });
@@ -1309,132 +1254,106 @@
     });
   })();
 
-  // TODO: For now this is global. It really should be loaded as an es6 module instead.
-  // TODO: this should be built to look for attr on the the body and only trigger on lasso pages with that attr.
-  function loadShoppingListPowerBar$1(){
-    console.log('loadShoppingListPowerBar triggered');
-    console.log('loadShoppingListPowerBar functionality is disabled.');
-    // let url = '/shopping_list/power_bar?url=' + window.location.href ;
-    // $('#site-aside-slider').load(url);
-  }
-
-  $(function() {
-
-    loadShoppingListPowerBar$1();
-
-    $(document.body).on('click', '.site-aside-slider-toggle', function(event){
-      event.preventDefault();
-      let $aside = $('#site-aside-slider');
-      if( $aside.hasClass('site-aside-slider-open') ){
-        $aside.removeClass('site-aside-slider-open');
-        cs3.setCookie('site_aside', 'close', 1);
-      } else {
-        $aside.addClass('site-aside-slider-open');
-        cs3.setCookie('site_aside', 'open', 1);
-      }
-    });
-
-    // Everything below here should probably go, as more generic methods are appropriate
-    // ajax-form and site-modal should be used instead. Keeping it for now as reference
-    // until we get the shopping list features.
-
-    let $modal = $('#shopping-list-modal');
-
-    $(document.body).on('show.bs.modal', '#shopping-list-modal', function(event) {
-      // jQuery Objects
-      let $form        = $modal.find('.shopping-list-form');
-      let $errors      = $form.find('.shopping-list-form-errors');
-      let $button      = $(event.relatedTarget); // Button or link that triggered the modal
-      let $title       = $modal.find('.modal-title');
-      let $nameGroup   = $modal.find('.modal-body .shopping-list-form-name-group');
-      let $name        = $modal.find('.modal-body .shopping-list-form-name');
-      let $submit      = $form.find('.shopping-list-form-submit');
-      let $description = $form.find('.shopping-list-form-description');
-
-      // strings
-      //let currentList = $('#shopping-list-power-bar-list').text()
-      let verb = $button.data('verb'); //  verbs: Create (new), Update (rename/edit), Delete (delete)
-      let url =  $button.data('url');
-      let response = {status: '', message: ''};
-
-      //console.log('current list: ' + currentList)
+  (function() {
 
 
-      $title.text(verb + ' Shopping List');
-      $submit.text(verb);
-      $errors.html('');
-      $form.attr('action', url);
+    // Toggle Shopping List View States (compact, expanded, in-store)
 
-      if(verb == 'Create'){
-        let today = new Date();
-        today = today.toLocaleDateString('en-US', {year: 'numeric', month: 'numeric', day: 'numeric' });
-        $nameGroup.removeClass('is-hidden');
-        $name.val('My ' + today + ' List');
-        $description.text('');
-        $description.addClass('is-hidden');
-      }else if(verb == 'Rename'){
-        $nameGroup.removeClass('is-hidden');
-        $name.val($('#shopping-list-power-bar-list').text());
-        $description.text('');
-        $description.addClass('is-hidden');
-      }else if(verb == 'Delete'){
-        $nameGroup.addClass('is-hidden');
-        $description.removeClass('is-hidden');
-        $description.text('Once deleted your most recent shopping list will become your current list. If you have no shopping lists a new one will be created. Are you sure you want to delete your current shopping list?');
+    function init() {
+      // Get ALL shopping list elements
+      const shoppingLists = document.querySelectorAll('.shopping-list-aside .shopping-list-items');
+
+      // Get ALL toggle buttons from all button sets
+      const viewToggleButtons = document.querySelectorAll('[data-shopping-list-view-toggle]');
+
+      console.log(`Found ${shoppingLists.length} shopping list elements`);
+      console.log(`Found ${viewToggleButtons.length} toggle buttons`);
+
+      const retailerID = webstop.retailerID || 3362;
+
+      const cookieName = 'shopping_list_view_for_retailer_' + retailerID;
+
+      if (shoppingLists.length === 0) {
+        console.warn('No shopping list elements found');
+        return false;
       }
 
+      if (viewToggleButtons.length === 0) {
+        console.warn('No toggle buttons found');
+        return false;
+      }
 
-      // Form response expects the following JSON:
-      // {
-      //   status: 'success' or 'failure',
-      //   message: 'text message here'
-      // }
-      $form.on('submit', function(e) {
-        e.preventDefault();
-        // Do ajax calling url
-        let request = $.ajax({
-          url: url,
-          method: 'POST',
-          //data: { id : menuId },
-          contentType: "application/json",
-          dataType: 'json'
+      function setViewState(viewState) {
+        console.log(`Setting view state to "${viewState}" for ${shoppingLists.length} shopping lists`);
+
+        // Update ALL shopping list elements
+        shoppingLists.forEach((shoppingList, index) => {
+          shoppingList.setAttribute('data-shopping-list-view', viewState);
+          console.log(`Updated shopping list ${index + 1}:`, shoppingList);
         });
 
-        request.done(function(jqXHR, data){
-          console.log('ajax response status: ' + data.status);
-          console.log('message: ' + data.message);
-          if(data.status == 'success'){
-            response = data;
-            $modal.modal('hide');
-            console.log('hide modal triggered');
-          } else if(data.status == 'failure') {
-            response = data;
+        // Update ALL button states across all button sets
+        viewToggleButtons.forEach(btn => {
+          const buttonViewState = btn.getAttribute('data-shopping-list-view-toggle');
+          if (buttonViewState === viewState) {
+            btn.classList.add('active');
           } else {
-            response = {status: 'failure', message: 'Unable to process request. Please try again.'};
+            btn.classList.remove('active');
           }
-
-          if(response.status == 'failure') {
-            $errors.html('<p class="shopping-list-form-errors-message alert alert-danger">' + response.message + '</p>');
-          }
-
         });
 
-        request.fail(function(response){
-          $errors.html('<p class="shopping-list-form-errors-message alert alert-danger">' + response.message + '</p>');
+        // Save the view state to cookie (expires in 365 days)
+        cs3.setCookie(cookieName, viewState, 365);
+        console.log(`View state "${viewState}" saved to cookie`);
+
+        console.log(`All shopping lists updated to: ${viewState}`);
+      }
+
+      function getCurrentViewState() {
+        // Return the state of the first shopping list (they should all be the same)
+        return shoppingLists.length > 0 ?
+          shoppingLists[0].getAttribute('data-shopping-list-view') : null;
+      }
+
+      // Add event listeners to ALL toggle buttons
+      viewToggleButtons.forEach((button, index) => {
+        console.log(`Adding listener to button ${index + 1}:`, button);
+
+        button.addEventListener('click', (event) => {
+          const viewState = event.currentTarget.getAttribute('data-shopping-list-view-toggle');
+          console.log(`Button ${index + 1} clicked, setting view to: ${viewState}`);
+          setViewState(viewState);
         });
-
-
       });
 
-    });
+      // Check for saved view state in cookie, fallback to 'compact' if not found
+      const savedViewState = cs3.getCookie(cookieName);
+      const initialViewState = savedViewState || 'compact';
 
-    $(document.body).on('hidden.bs.modal', '#shopping-list-modal', function(event) {
-      console.log('modal fully hidden');
-      loadShoppingListPowerBar$1();
-    });
+      console.log(`Saved view state from cookie: ${savedViewState}`);
+      console.log(`Setting initial view state to: ${initialViewState}`);
 
+      // Set initial state for all shopping lists
+      setViewState(initialViewState);
 
-  });
+      // Expose globally
+      window.ShoppingListViews = {
+        getCurrentView: getCurrentViewState,
+        setView: setViewState,
+        getShoppingLists: () => shoppingLists,
+        getButtons: () => viewToggleButtons
+      };
+
+      return true;
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
 
 })();
 //# sourceMappingURL=core-styles.js.map

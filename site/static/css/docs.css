@@ -12165,16 +12165,16 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   max-height: 100vh;
   width: 100vw;
   overflow-x: hidden;
-  grid-template-rows: 60px auto;
+  grid-template-rows: 132px auto;
 }
 @media (min-width: 576px) {
   .public {
-    grid-template-rows: 60px auto;
+    grid-template-rows: 132px auto;
   }
 }
 @media (min-width: 768px) {
   .public {
-    grid-template-rows: 60px auto;
+    grid-template-rows: 132px auto;
   }
 }
 @media (min-width: 992px) {
@@ -12227,6 +12227,9 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
 }
 .public .public-sidebar-offcanvas-btn {
   display: none;
+}
+.public .public-page {
+  background-color: rgb(246.07, 245.365, 240.43);
 }
 @media (min-width: 576px) {
   .public.public-with-sidecar {
@@ -12363,45 +12366,61 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   }
 }
 .public.public-borders .public-header {
-  border-bottom: 1px solid #ccc;
-  background-color: transparent;
+  border-bottom: 1px solid #d9d6c1;
 }
 .public.public-borders .public-sidecar {
   border-right: 0 solid #0194d3;
-  background-color: #0194d3;
 }
 .public.public-borders .public-sidenav {
-  border-right: 1px solid #ccc;
-  background-color: transparent;
+  border-right: 1px solid #d9d6c1;
 }
 .public.public-borders .public-sidebar {
-  border-left: 1px solid #ccc;
-  background-color: transparent;
+  border-left: 1px solid #d9d6c1;
 }
 .public.public-borders .public-footer {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #d9d6c1;
+}
+.public .public-header {
+  background-color: transparent;
+}
+.public .public-sidecar {
+  background-color: #0194d3;
+}
+.public .public-sidenav {
+  background-color: transparent;
+}
+.public .public-page {
+  background-color: rgb(246.07, 245.365, 240.43);
+}
+.public .public-page .public-content {
+  background-color: rgb(246.07, 245.365, 240.43);
+}
+.public .public-sidebar {
+  background-color: rgb(246.07, 245.365, 240.43);
+}
+.public .public-footer {
   background-color: transparent;
 }
 .public .public-sidecar, .public .public-sidenav, .public .public-page, .public .public-sidebar {
-  height: calc(100vh - 60px);
+  height: calc(100vh - 132px);
 }
 .public .public-header {
-  height: 60px;
+  height: 132px;
 }
 @media (min-width: 576px) {
   .public .public-sidecar, .public .public-sidenav, .public .public-page, .public .public-sidebar {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 132px);
   }
   .public .public-header {
-    height: 60px;
+    height: 132px;
   }
 }
 @media (min-width: 768px) {
   .public .public-sidecar, .public .public-sidenav, .public .public-page, .public .public-sidebar {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 132px);
   }
   .public .public-header {
-    height: 60px;
+    height: 132px;
   }
 }
 @media (min-width: 992px) {
@@ -13349,6 +13368,38 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
     padding-left: 10px;
     padding-right: 10px;
   }
+}
+
+.shopping-list-items {
+  /* Compact View */
+  /* In-Store View */
+  /* Expanded View */
+}
+.shopping-list-items .shopping-list-item-title {
+  font-weight: bold;
+}
+.shopping-list-items .shopping-list-item-tagline-circular .shopping-list-item-tagline-circular-price {
+  white-space: nowrap;
+}
+.shopping-list-items[data-shopping-list-view=compact] .shopping-list-item-shop-col,
+.shopping-list-items[data-shopping-list-view=compact] .shopping-list-item-description,
+.shopping-list-items[data-shopping-list-view=compact] .shopping-list-item-note {
+  display: none;
+}
+.shopping-list-items[data-shopping-list-view=compact] .shopping-list-item-text-col {
+  /* truncate text */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.shopping-list-items[data-shopping-list-view=in-store] .shopping-list-item.shopping-list-item-is-purchased .shopping-list-item-image-col,
+.shopping-list-items[data-shopping-list-view=in-store] .shopping-list-item.shopping-list-item-is-purchased .shopping-list-item-text-col {
+  /*background-color: #eee;*/
+  opacity: 0.65;
+  text-decoration: line-through;
+}
+.shopping-list-items[data-shopping-list-view=expanded] .shopping-list-item-shop-col {
+  display: none;
 }
 
 /* CSS Customizations done by Mickey*/

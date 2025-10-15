@@ -34,7 +34,7 @@ $admin-footer-border-size:   1px !default;
 
 // Public Layout
 // Public Layout Sizes
-$public-header-height:        60px !default;
+$public-header-height:        132px !default;
 $public-header-sm-height:     $public-header-height !default;
 $public-header-md-height:     $public-header-sm-height !default;
 $public-header-lg-height:     133px !default;
@@ -59,23 +59,38 @@ $public-footer-spacer-y:      $public-spacer-y !default;
 $public-footer-spacer-x:      $public-spacer-x !default;
 
 
-// Public Layout Colors
+// Public Layout Colors & Borders
+$public-border-color:         $theme-primary !default;
+$public-border-size:          1px !default;
+// Public Header
 $public-header-bg-color:      transparent !default;
-$public-header-border-color:  #ccc !default;
-$public-header-border-size:   1px !default;
+$public-header-border-color:  $public-border-color !default;
+$public-header-border-size:   $public-border-size !default;
+// Public Sidecar
 $public-sidecar-color:        $white !default;
 $public-sidecar-bg-color:     $primary !default;
 $public-sidecar-border-color: $primary !default;
 $public-sidecar-border-size:  0 !default;
+// Public Sidenav
 $public-sidenav-bg-color:     transparent !default;
-$public-sidenav-border-color: #ccc !default;
-$public-sidenav-border-size:  1px !default;
-$public-sidebar-bg-color:     transparent !default;
-$public-sidebar-border-color: #ccc !default;
-$public-sidebar-border-size:  1px !default;
+$public-sidenav-border-color: $public-border-color !default;
+$public-sidenav-border-size:  $public-border-size !default;
+// Public Page (container for content and footer)
+$public-page-bg-color:        $theme-bg !default;
+$public-page-border-color:    $public-border-color !default;
+$public-page-border-size:     $public-border-size !default;
+// Public Content
+$public-content-bg-color:     $theme-bg !default;
+$public-content-border-color: $public-border-color !default;
+$public-content-border-size:  $public-border-size !default;
+// Public Sidebar (a.k.a. Aside)
+$public-sidebar-bg-color:     $theme-bg !default;
+$public-sidebar-border-color: $public-border-color !default;
+$public-sidebar-border-size:  $public-border-size !default;
+// Public Footer
 $public-footer-bg-color:      transparent !default;
-$public-footer-border-color:  #ccc !default;
-$public-footer-border-size:   1px !default;
+$public-footer-border-color:  $public-border-color !default;
+$public-footer-border-size:   $public-border-size !default;
 
 // Utilities
 // ---------

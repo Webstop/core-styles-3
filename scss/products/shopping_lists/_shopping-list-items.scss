@@ -1,0 +1,48 @@
+// We use the plural shopping-list-items container for the styling because the states change based on data attributes on the container.
+.shopping-list-items {
+
+  .shopping-list-item-title {
+    font-weight: bold;
+  }
+
+  .shopping-list-item-tagline-circular {
+    .shopping-list-item-tagline-circular-price {
+      white-space: nowrap;
+    }
+  }
+
+  /* Compact View */
+  &[data-shopping-list-view="compact"] {
+    .shopping-list-item-shop-col,
+    .shopping-list-item-description,
+    .shopping-list-item-note {
+      display: none;
+    }
+
+    .shopping-list-item-text-col {
+      /* truncate text */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  /* In-Store View */
+  &[data-shopping-list-view="in-store"] {
+    .shopping-list-item.shopping-list-item-is-purchased {
+      .shopping-list-item-image-col,
+      .shopping-list-item-text-col {
+        /*background-color: #eee;*/
+        opacity: 0.65;
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  /* Expanded View */
+  &[data-shopping-list-view="expanded"] {
+    .shopping-list-item-shop-col {
+      display: none;
+    }
+  }
+}
