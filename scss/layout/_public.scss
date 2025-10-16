@@ -48,7 +48,7 @@
  // @include media-breakpoint-up(lg) { }
 
   // I. Layout with Sidecar
-  &.public-with-sidecar {
+  &.public-with-sidecar:not(.public-with-sidenav):not(.public-with-sidebar) {
     @include media-breakpoint-up(sm) {
       grid-template-columns: $public-sidecar-width auto;
       grid-template-areas:
@@ -59,7 +59,7 @@
   }
 
   // II. Layout with Sidenav
-  //&.public-with-sidenav {
+  //&.public-with-sidenav:not(.public-with-sidecar):not(.public-with-sidebar) {
   //  .public-sidenav-offcanvas-btn { display: block; }
   //  @include media-breakpoint-up(xl) {
   //    grid-template-columns: $public-sidenav-width auto;
@@ -73,25 +73,25 @@
   //}
 
   // III. Layout with Sidebar
-  //&.public-with-sidebar {
-  //  .public-sidebar-offcanvas-btn { display: block; }
-  //  @include media-breakpoint-up(xl) {
-  //    grid-template-columns: auto $public-sidebar-width;
-  //    grid-template-areas:
-  //      "public-header public-header"
-  //      "public-page   public-sidebar";
-  //    .public-sidebar { display: block; }
-  //    .public-sidebar-grid-btn      { display: block; }
-  //    .public-sidebar-offcanvas-btn { display: none; }
-  //  }
-  //  &.public-hide-sidebar {
-  //    grid-template-columns: auto;
-  //    grid-template-areas:
-  //        "public-header"
-  //        "public-page";
-  //    .public-sidebar { display: none; width: 0; height: 0; }
-  //  }
-  //}
+  &.public-with-sidebar:not(.public-with-sidecar):not(.public-with-sidenav) {
+    .public-sidebar-offcanvas-btn { display: block; }
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: auto $public-sidebar-width;
+      grid-template-areas:
+        "public-header public-header"
+        "public-page   public-sidebar";
+      .public-sidebar { display: block; }
+      .public-sidebar-grid-btn      { display: block; }
+      .public-sidebar-offcanvas-btn { display: none; }
+    }
+    &.public-hide-sidebar {
+      grid-template-columns: auto;
+      grid-template-areas:
+          "public-header"
+          "public-page";
+      .public-sidebar { display: none; width: 0; height: 0; }
+    }
+  }
 
 
   // IV. Layout with Sidecar & Sidenav
