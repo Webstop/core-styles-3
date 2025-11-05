@@ -1,6 +1,20 @@
 "use strict";
 // Ajax Load, Load on View, Infinite Scroll, & Paging
 
+// Track observed elements and pushed URLs to prevent duplicates
+const observedElements = [];
+const pushedUrls = [];
+
+// Function to clear URL tracking (useful for navigation or page changes)
+function clearUrlTracking() {
+  console.log('Clearing URL tracking. Previous URLs:', pushedUrls);
+  pushedUrls.length = 0;
+}
+
+// Clear URL tracking on page navigation to allow legitimate re-pushes
+window.addEventListener('popstate', clearUrlTracking);
+window.addEventListener('beforeunload', clearUrlTracking);
+
 $(function() {
 
   $(document.body).on('click', '[data-ajax-load]', function(event){
@@ -57,32 +71,63 @@ function load(target, url, infinite) {
     .then(function(response) { return response.text(); })
     .then(function(body) { target.innerHTML = body; })
     .then(function() { if(infinite){
-      pagingObserver.observe(target.querySelector('.paging-trigger'));
+      const pagingTrigger = target.querySelector('.paging-trigger');
+      if (pagingTrigger && !observedElements.includes(pagingTrigger)) {
+        console.log('Adding paging observer to trigger:', pagingTrigger);
+        pagingObserver.observe(pagingTrigger);
+        observedElements.push(pagingTrigger);
+      } else if (pagingTrigger) {
+        console.log('Duplicate paging observer prevented for trigger:', pagingTrigger);
+      }
       enableNextLoadOnView(target);
       initDataAttributes();
     } });
 }
 
 function loadOnView(target, url, infinite) {
+  // Prevent duplicate observers for the same element
+  if (observedElements.includes(target)) {
+    console.log('Duplicate observer prevented for element:', target, 'URL:', url);
+    return;
+  }
 
+  console.log('Creating new observer for element:', target, 'URL:', url);
   const observer = new IntersectionObserver((entries) => {
 
     if(entries[0].intersectionRatio !== 0) {
       // Element enters the viewport
       if(!entries[0].target.classList.contains('is-loaded')) {
+        console.log('Element entering viewport:', entries[0].target, 'URL:', url);
         // Element has not been loaded yet
         load(target, url, infinite);
         let skipHistory = entries[0].target.hasAttribute('data-skip-history');
-        if(!skipHistory) { history.pushState(null, "", url); }
+        if(!skipHistory) { 
+          // Prevent duplicate history pushes for the same URL
+          if (!pushedUrls.includes(url)) {
+            console.log('Pushing to history state:', url);
+            history.pushState(null, "", url);
+            pushedUrls.push(url);
+          } else {
+            console.log('Duplicate history push prevented for URL:', url);
+          }
+        } else {
+          console.log('Skipping history push (data-skip-history attribute)');
+        }
         entries[0].target.classList.add('is-loaded');
+      } else {
+        console.log('Element already loaded, skipping:', entries[0].target);
       }
 
     } else {
       // Element leaves the viewport
+      console.log('Element leaving viewport:', entries[0].target);
     }
 
   });
+  
   observer.observe(target);
+  observedElements.push(target);
+  console.log('Total observed elements:', observedElements.length);
 }
 
 
@@ -177,6 +222,7 @@ function loadOnComplete(onCompleteUrl, onCompleteTarget) {
   // Vanilla JS version of Data Attribute DSL
   let targets = document.querySelectorAll('[data-load-on-view]');
   let count   = 0;
+  console.log('Found', targets.length, 'elements with [data-load-on-view] attribute');
   if(targets.length !== 0) {
     targets.forEach((target) => {
       let url      = target.getAttribute('data-load-on-view');
@@ -188,12 +234,19 @@ function loadOnComplete(onCompleteUrl, onCompleteTarget) {
       // count == 0 || loaded ? display = display : display = 'none';
       if(count != 0 && !loaded && !show){display = 'none';}
       target.style.display = display;
+      console.log('Processing element', count + 1, 'of', targets.length, ':', target, 'URL:', url, 'Infinite:', infinite);
       loadOnView(target, url, infinite);
       count++;
     })
     // Register any triggers on the initial page, not just the one's loaded via ALAX
     let pagingTrigger = document.querySelector('.paging-trigger');
-    if(pagingTrigger) { pagingObserver.observe(pagingTrigger); }
+    if(pagingTrigger && !observedElements.includes(pagingTrigger)) { 
+      console.log('Adding initial paging observer to trigger:', pagingTrigger);
+      pagingObserver.observe(pagingTrigger);
+      observedElements.push(pagingTrigger);
+    } else if (pagingTrigger) {
+      console.log('Duplicate initial paging observer prevented for trigger:', pagingTrigger);
+    }
   }
 })();
 
