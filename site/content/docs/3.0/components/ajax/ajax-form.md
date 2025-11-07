@@ -15,6 +15,8 @@ menu:
 
 Here are a couple of use examples of the AJAX Form feature.
 
+{{< notices/ajax-warning >}}
+
 ### Basic Example
 
 This example contains the minimum attributes need. The form contains the `data-ajax-form` attribute 
@@ -56,6 +58,73 @@ like a shopping list loading into a sidebar.
 
 {{< /example >}}
 
+### On Complete Hide
+
+This example shows adding the Hide On Complete feature. The hide feature applies a CSS display none to the element, 
+leaving it's content in place but hidden from view.
+
+{{< example >}}
+<form data-ajax-form action="/ajax/alert_success" data-on-complete-hide="#example-hide-1">
+  <div class="form-group">
+    <label for="title-example" class="py-2">Title</label>
+    <input type="text" class="form-control p-2" name="title-example" id="title-example" placeholder="Title">
+  </div>
+  <button class="btn btn-primary  mt-3" type="submit">
+    Save Title
+  </button>
+</form>
+
+<div class="alert alert-secondary mt-3" id="example-hide-1">
+  I need to be hidden once you complete your Ajax call.
+</div>
+
+{{< /example >}}
+
+### On Complete Clear
+
+This example shows adding the Clear On Complete feature. The clear feature deletes all content from a specified element.
+
+{{< example >}}
+<form data-ajax-form action="/ajax/alert_success" data-on-complete-clear="#example-clear-1">
+  <div class="form-group">
+    <label for="title-example" class="py-2">Title</label>
+    <input type="text" class="form-control p-2" name="title-example" id="title-example" placeholder="Title">
+  </div>
+  <button class="btn btn-primary  mt-3" type="submit">
+    Save Title
+  </button>
+</form>
+
+<div class="alert alert-secondary mt-3" id="example-clear-1">
+  I need my content cleared once you complete your Ajax call.
+</div>
+
+{{< /example >}}
+
+### On Complete Show
+
+This example shows adding the Show On Complete feature.
+The show feature applies a CSS display block to the element,
+revealing previously hidden elements.
+
+{{< example >}}
+<form data-ajax-form action="/ajax/alert_success" data-on-complete-show="#example-show-1">
+  <div class="form-group">
+    <label for="title-example" class="py-2">Title</label>
+    <input type="text" class="form-control p-2" name="title-example" id="title-example" placeholder="Title">
+  </div>
+  <button class="btn btn-primary mt-3" type="submit">
+    Save Title
+  </button>
+</form>
+
+<div class="alert alert-secondary mt-3 d-none" id="example-show-1" style="display: none">
+  I need to be shown once you complete your Ajax call.
+</div>
+
+{{< /example >}}
+
+
 ### Example with All Options
 
 In the following example we enable all of the optional attributes, including `data-target` and 
@@ -65,7 +134,7 @@ The `data-power-bar` attribute triggers a reload of the Shopping List Power Bar 
 is returned.
 
 {{< example >}}
-<form data-ajax-form action="/ajax/alert_error" data-target="#target-1" data-power-bar  data-on-complete-load="/ajax/alert_success" data-on-complete-target="#on-complete-target-2">
+<form data-ajax-form action="/ajax/alert_error" data-target="#target-1" data-power-bar  data-on-complete-load="/ajax/alert_success" data-on-complete-target="#on-complete-target-2" data-on-complete-hide="#example-hide-2"  data-on-complete-clear="#example-clear-2"  data-on-complete-show="#example-show-2">
   <div class="form-group">
     <label for="title-example" class="py-2">Title</label>
     <input type="text" class="form-control p-2" name="title-example" id="title-example" placeholder="Title">
@@ -78,6 +147,19 @@ is returned.
   <div class="alert alert-success">Ajax Content goes here.</div>
 </div>
 <div id="on-complete-target-2">On Complete Target</div>
+
+<div class="alert alert-secondary mt-3" id="example-hide-2">
+  I need to be hidden once you complete your Ajax call.
+</div>
+
+<div class="alert alert-secondary mt-3" id="example-clear-2">
+  I need my content cleared once you complete your Ajax call.
+</div>
+
+<div class="alert alert-secondary mt-3 d-none" id="example-show-2">
+  I need to be shown once you complete your Ajax call.
+</div>
+
 {{< /example >}}
 
 ### Repeating Example
@@ -130,12 +212,6 @@ The `data-ajax-form` & `action` attributes are required. The rest are optional.
       </td>
     </tr>
     <tr>
-      <td><code class="text-nowrap">data-power-bar</code></td>
-      <td>
-        When present, completing the ajax call triggers a reload of the Shopping List Power Bar.
-      </td>
-    </tr>
-    <tr>
       <td><code class="text-nowrap">data-on-complete-load</code></td>
       <td>
         When present, completing the ajax call triggers a second ajax call to the url specified in this attribute. 
@@ -149,6 +225,18 @@ The `data-ajax-form` & `action` attributes are required. The rest are optional.
         The DOM node to load the on complete content into. Uses standard query selectors, usually targets an id attribute 
         (e.g. <code class="text-nowrap">#some-target</code>). Only used when the 
         <code class="text-nowrap">data-on-complete-load</code> attribute is present.
+      </td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">data-on-complete-hide</code></td>
+      <td>
+        When present, completing the ajax call causes the specified DOM element to be hidden from view.
+      </td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">data-on-complete-clear</code></td>
+      <td>
+        When present, completing the ajax call causes the specified DOM element to have it's content cleared.
       </td>
     </tr>
   </tbody>

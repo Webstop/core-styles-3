@@ -192,26 +192,69 @@ $public-header-lg-height:     120px; // Desktop
 // $public-header-xxl-height: $public-header-xl-height;
 ```
 
-### Colors & Basics
+### Public Layout Colors & Borders
+
+| Variable Name        | Default Value   | Note |
+|----------------------|-----------------|------|
+| $public-border-color | $theme-primary  |      |
+| $public-border-size  | 1px             |      |
+
+#### Public Header
+
+| Variable Name               | Default Value        | Note |
+|-----------------------------|----------------------|------|
+| $public-header-bg-color     | transparent          |      |
+| $public-header-border-color | $public-border-color |      |
+| $public-header-border-size  | $public-border-size  |      |
+
+#### Public Sidecar
 
 | Variable Name                | Default Value | Note |
 |------------------------------|---------------|------|
-| $public-header-bg-color      | transparent;  |      |
-| $public-header-border-color  | #ccc;         |      |
-| $public-header-border-size   | 1px;          |      |
-| $public-sidecar-color        | $white;       |      |
-| $public-sidecar-bg-color     | $primary;     |      |
-| $public-sidecar-border-color | $primary;     |      |
-| $public-sidecar-border-size  | 0;            |      |
-| $public-sidenav-bg-color     | transparent;  |      |
-| $public-sidenav-border-color | #ccc;         |      |
-| $public-sidenav-border-size  | 1px;          |      |
-| $public-sidebar-bg-color     | transparent;  |      |
-| $public-sidebar-border-color | #ccc;         |      |
-| $public-sidebar-border-size  | 1px;          |      |
-| $public-footer-bg-color:     | transparent;  |      |
-| $public-footer-border-color  | #ccc;         |      |
-| $public-footer-border-size   | 1px;          |      |
+| $public-sidecar-color        | $white        |      |
+| $public-sidecar-bg-color     | $primary      |      |
+| $public-sidecar-border-color | $primary      |      |
+| $public-sidecar-border-size  | 0             |      |
+
+#### Public Sidenav
+
+| Variable Name                | Default Value        | Note |
+|------------------------------|----------------------|------|
+| $public-sidenav-bg-color     | transparent          |      |
+| $public-sidenav-border-color | $public-border-color |      |
+| $public-sidenav-border-size  | $public-border-size  |      |
+
+#### Public Page (container for content and footer)
+
+| Variable Name             | Default Value        | Note |
+|---------------------------|----------------------|------|
+| $public-page-bg-color     | $theme-bg            |      |
+| $public-page-border-color | $public-border-color |      |
+| $public-page-border-size  | $public-border-size  |      |
+
+#### Public Content
+
+| Variable Name                | Default Value        | Note |
+|------------------------------|----------------------|------|
+| $public-content-bg-color     | $theme-bg            |      |
+| $public-content-border-color | $public-border-color |      |
+| $public-content-border-size  | $public-border-size  |      |
+
+#### Public Sidebar (a.k.a. Aside)
+
+| Variable Name                | Default Value        | Note |
+|------------------------------|----------------------|------|
+| $public-sidebar-bg-color     | $theme-bg            |      |
+| $public-sidebar-border-color | $public-border-color |      |
+| $public-sidebar-border-size  | $public-border-size  |      |
+
+#### Public Footer
+
+| Variable Name               | Default Value        | Note |
+|-----------------------------|----------------------|------|
+| $public-footer-bg-color     | transparent          |      |
+| $public-footer-border-color | $public-border-color |      |
+| $public-footer-border-size  | $public-border-size  |      |
 
 ### Sizing & Spacers
 
@@ -221,26 +264,39 @@ $public-header-lg-height:     120px; // Desktop
 
 Use caution when modifying the following. Great care was given to make these properties play nicely on all responsive sizes.
 
+#### Public Layout Sizes
+
+| Variable Name              | Default Value                | Note                    |
+|----------------------------|------------------------------|-------------------------|
+| $public-header-height      | 132px                        |                         |
+| $public-header-sm-height   | $public-header-height        |                         |
+| $public-header-md-height   | $public-header-sm-height     |                         |
+| $public-header-lg-height   | 133px                        |                         |
+| $public-header-xl-height   | $public-header-lg-height     |                         |
+| $public-header-xxl-height  | $public-header-xl-height     |                         |
+| $public-sidecar-width      | 90px                         | Caution! Tread Lightly! |
+| $public-sidenav-width      | 320px                        | Caution! Tread Lightly! |
+| $public-sidebar-width      | 320px                        | Caution! Tread Lightly! |
+
+#### Public Layout Spacers
 
 | Variable Name            | Default Value     | Note                              |
 |--------------------------|-------------------|-----------------------------------|
-| $public-sidecar-width    | 90px;             | Caution! Tread Lightly!           |
-| $public-sidenav-width    | 320px;            | Caution! Tread Lightly!           |
-| $public-sidebar-width    | 320px;            | Caution! Tread Lightly!           |
-| $public-spacer-y         | $spacer;          | $spacer is the Bootstrap default. |
-| $public-spacer-x         | $spacer;          | $spacer is the Bootstrap default. |
-| $public-header-spacer-y  | 0;                |                                   |
-| $public-header-spacer-x  | 0;                |                                   |
-| $public-sidecar-spacer-y | $public-spacer-y; |                                   |
-| $public-sidecar-spacer-x | 0;                |                                   |
-| $public-sidenav-spacer-y | 0;                |                                   |
-| $public-sidenav-spacer-x | 0;                |                                   |
-| $public-content-spacer-y | $public-spacer-y; |                                   |
-| $public-content-spacer-x | $public-spacer-x; |                                   |
-| $public-sidebar-spacer-y | 0;                |                                   |
-| $public-sidebar-spacer-x | 0;                |                                   |
-| $public-footer-spacer-y  | $public-spacer-y; |                                   |
-| $public-footer-spacer-x  | $public-spacer-x; |                                   |
+| $public-spacer-y         | $spacer           | $spacer is the Bootstrap default. |
+| $public-spacer-x         | $spacer           | $spacer is the Bootstrap default. |
+| $public-header-spacer-y  | 0                 |                                   |
+| $public-header-spacer-x  | 0                 |                                   |
+| $public-sidecar-spacer-y | $public-spacer-y  |                                   |
+| $public-sidecar-spacer-x | 0                 |                                   |
+| $public-sidenav-spacer-y | 0                 |                                   |
+| $public-sidenav-spacer-x | 0                 |                                   |
+| $public-content-spacer-y | $public-spacer-y  |                                   |
+| $public-content-spacer-x | $public-spacer-x  |                                   |
+| $public-sidebar-spacer-y | 0                 |                                   |
+| $public-sidebar-spacer-x | 0                 |                                   |
+| $public-footer-spacer-y  | $public-spacer-y  |                                   |
+| $public-footer-spacer-x  | $public-spacer-x  |                                   |
+
 
 
 
@@ -255,23 +311,15 @@ At the heart of the layout system is the `public_v3` layout template. To use it 
 near the top of your controller. This is typically done right after any actions are called, like the `before_action`.
 This one template handles all public page layouts.
 
-### The `@page` Map
+### The `@public` Map
 
-In the application controller we define a map called `@page`. The `@page` variable contains boolean settings which control the
+In the application controller we define a map called `@public`. The `@public` variable contains boolean settings which control the
 page layout. These settings are explained in the chart below.
 
-The `@page` hash is set at the top of a view file to control how that view will be presented in the public layout template.
+The `@public` hash is set at the top of a view file to control how that view will be presented in the public layout template.
 
-<!-- DEFAULTS
-      sidecar: false,
-      sidebar: false,
-      header: true,
-      footer: true,
-      flush: false,
-      tables: false,
-      data_tables: false
--->
-
+<h4>Retailer Feature Configuration</h4>
+<p>These define if the retailer uses the specified feature. Most of these are controlled through the Retailer Feature Settings form in the Rails app.</p>
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
@@ -282,45 +330,100 @@ The `@page` hash is set at the top of a view file to control how that view will 
   </thead>
   <tbody>
     <tr>
-      <td><code class="text-nowrap">sidecar</code></td>
-      <td><code class="text-nowrap">false</code></td>
-      <td>Controls display the sidecar left side navigation. <em>This feature isn't fully implemented yet.</em></td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">sidebar</code></td>
-      <td><code class="text-nowrap">false</code></td>
-      <td>
-        Controls display the sidebar right side navigation. Expects content to be placed into the <code>sidebar</code> 
-        yield. e.g. <code>content_for :sidebar, raw(render 'sidebar')</code>
-      </td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">header</code></td>
+      <td><code class="text-nowrap">with_header</code></td>
       <td><code class="text-nowrap">true</code></td>
-      <td>Page header, which sits right below the header navbar. <em>This feature is deprecated.</em></td>
+      <td>Defines if the retailer has enabled the page header feature.</td>
     </tr>
     <tr>
-      <td><code class="text-nowrap">footer</code></td>
+      <td><code class="text-nowrap">with_sidecar</code></td>
+      <td><code class="text-nowrap">false</code></td>
+      <td>Defines if the retailer has enabled the sidecar left side navigation feature. <em>This feature isn't fully implemented yet.</em></td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">with_sidenav</code></td>
       <td><code class="text-nowrap">true</code></td>
-      <td>
-        Controls display the footer. Expects content to be placed into the <code>footer</code> 
-        yield, and will typically contain breadcrumb navigation.
-      </td>
+      <td>Defines if the retailer has enabled the side navigation menu feature for desktop breakpoints. At mobile breakpoints the side navigation is always enabled.</td>
     </tr>
     <tr>
-      <td><code class="text-nowrap">flush</code></td>
-      <td><code class="text-nowrap">false</code></td>
-      <td>Removes padding from the main content area. Usually used for tables to allow them to fill the content area.</td>
+      <td><code class="text-nowrap">with_sidebar</code></td>
+      <td><code class="text-nowrap">true</code></td>
+      <td>Defines if the retailer has enabled the right sidebar feature for the Shopping List.</td>
     </tr>
     <tr>
-      <td><code class="text-nowrap">tables</code></td>
-      <td><code class="text-nowrap">false</code></td>
-      <td>Primes the system to expect the main content section to be filled with a scrollable table.</td>
+      <td><code class="text-nowrap">with_footer</code></td>
+      <td><code class="text-nowrap">true</code></td>
+      <td>Defines if the retailer has enabled the footer section.</td>
     </tr>
-
   </tbody>
 </table>
 
+<h4>Consumer Display Settings</h4>
+<p>These define if the consumer has hidden the feature</p>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Key Name</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="text-nowrap">show_header</code></td>
+      <td><code class="text-nowrap">true</code></td>
+      <td>Controls whether the consumer has chosen to display the page header section. <em>We don't currently provide a way for consumers to adjust this setting.</em></td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">show_sidecar</code></td>
+      <td><code class="text-nowrap">false</code></td>
+      <td>Controls whether the consumer has chosen to display the sidecar left side navigation. <em>This feature isn't fully implemented yet.</em></td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">show_sidenav</code></td>
+      <td><code class="text-nowrap">true</code></td>
+      <td>Controls whether the consumer has chosen to display the side navigation menu.</td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">show_sidebar</code></td>
+      <td><code class="text-nowrap">true</code></td>
+      <td>Controls whether the consumer has chosen to display the right sidebar feature for the Shopping List.</td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">show_footer</code></td>
+      <td><code class="text-nowrap">true</code></td>
+      <td>Controls whether the consumer has chosen to display the footer section. <em>We don't currently provide a way for consumers to adjust this setting.</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>Meta Tag Settings</h4>
+<p>These define meta tag settings for SEO purposes</p>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Key Name</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="text-nowrap">meta_title</code></td>
+      <td><code class="text-nowrap">''</code></td>
+      <td>Sets the HTML meta title tag for SEO purposes. Used in the document head section and appears in browser tabs and search results.</td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">meta_keywords</code></td>
+      <td><code class="text-nowrap">''</code></td>
+      <td>Sets the HTML meta keywords tag. <em>Keywords are no longer used by Google, but some other search engines might still use them.</em></td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">meta_description</code></td>
+      <td><code class="text-nowrap">''</code></td>
+      <td>Sets the HTML meta description tag for SEO purposes. This text appears in search engine results and should provide a concise summary of the page content.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Site Modal
 

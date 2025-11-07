@@ -34,7 +34,7 @@ $admin-footer-border-size:   1px !default;
 
 // Public Layout
 // Public Layout Sizes
-$public-header-height:        132px !default;
+$public-header-height:        60px !default;
 $public-header-sm-height:     $public-header-height !default;
 $public-header-md-height:     $public-header-sm-height !default;
 $public-header-lg-height:     133px !default;
@@ -43,6 +43,7 @@ $public-header-xxl-height:    $public-header-xl-height !default;
 $public-sidecar-width:        90px !default;
 $public-sidenav-width:        320px !default;
 $public-sidebar-width:        320px !default;
+// Public Layout Spacers
 $public-spacer-y:             $spacer !default;
 $public-spacer-x:             $spacer !default;
 $public-header-spacer-y:      0 !default;

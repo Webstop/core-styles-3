@@ -72,7 +72,7 @@
       </ul>
     </div>
     <div class="d-flex">
-      <span class="badge text-bg-light webstop-sans-serif opacity-75">v3.0.10</span>
+      <span class="badge text-bg-light webstop-sans-serif opacity-75">v3.0.12-beta-2</span>
     </div>
   </div>
 </nav>
@@ -732,7 +732,7 @@ the 3rd party libs.</em></p>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/jquery-ujs@1.2.3/src/rails.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://s3.grocerywebsite.com/core-repos/core-styles-3/v3.0.10/dist/js/core-styles.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://s3.grocerywebsite.com/core-repos/core-styles-3/v3.0.12-beta-2/dist/js/core-styles.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h2 id="default-example">Default Example</h2>
 <p>This example shows the default set of options used by Webstop&rsquo;s products and is installed via the Styler gem.</p>
@@ -843,7 +843,29 @@ can usually adjust just one variable to affect all larger sizes.</p>
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$public-header-lg-height</span><span class="o">:</span>     <span class="mi">120</span><span class="kt">px</span><span class="p">;</span> <span class="c1">// Desktop
 </span></span></span><span class="line"><span class="cl"><span class="c1">// $public-header-xl-height:  $public-header-lg-height;
 </span></span></span><span class="line"><span class="cl"><span class="c1">// $public-header-xxl-height: $public-header-xl-height;
-</span></span></span></code></pre></div><h3 id="colors--basics">Colors &amp; Basics</h3>
+</span></span></span></code></pre></div><h3 id="public-layout-colors--borders">Public Layout Colors &amp; Borders</h3>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$public-border-color</td>
+<td>$theme-primary</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-border-size</td>
+<td>1px</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="public-header">Public Header</h4>
 <table>
 <thead>
 <tr>
@@ -855,91 +877,22 @@ can usually adjust just one variable to affect all larger sizes.</p>
 <tbody>
 <tr>
 <td>$public-header-bg-color</td>
-<td>transparent;</td>
+<td>transparent</td>
 <td></td>
 </tr>
 <tr>
 <td>$public-header-border-color</td>
-<td>#ccc;</td>
+<td>$public-border-color</td>
 <td></td>
 </tr>
 <tr>
 <td>$public-header-border-size</td>
-<td>1px;</td>
-<td></td>
-</tr>
-<tr>
-<td>$public-sidecar-color</td>
-<td>$white;</td>
-<td></td>
-</tr>
-<tr>
-<td>$public-sidecar-bg-color</td>
-<td>$primary;</td>
-<td></td>
-</tr>
-<tr>
-<td>$public-sidecar-border-color</td>
-<td>$primary;</td>
-<td></td>
-</tr>
-<tr>
-<td>$public-sidecar-border-size</td>
-<td>0;</td>
-<td></td>
-</tr>
-<tr>
-<td>$public-sidenav-bg-color</td>
-<td>transparent;</td>
-<td></td>
-</tr>
-<tr>
-<td>$public-sidenav-border-color</td>
-<td>#ccc;</td>
-<td></td>
-</tr>
-<tr>
-<td>$public-sidenav-border-size</td>
-<td>1px;</td>
-<td></td>
-</tr>
-<tr>
-<td>$public-sidebar-bg-color</td>
-<td>transparent;</td>
-<td></td>
-</tr>
-<tr>
-<td>$public-sidebar-border-color</td>
-<td>#ccc;</td>
-<td></td>
-</tr>
-<tr>
-<td>$public-sidebar-border-size</td>
-<td>1px;</td>
-<td></td>
-</tr>
-<tr>
-<td>$public-footer-bg-color:</td>
-<td>transparent;</td>
-<td></td>
-</tr>
-<tr>
-<td>$public-footer-border-color</td>
-<td>#ccc;</td>
-<td></td>
-</tr>
-<tr>
-<td>$public-footer-border-size</td>
-<td>1px;</td>
+<td>$public-border-size</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="sizing--spacers">Sizing &amp; Spacers</h3>
-<div class="alert alert-danger">
-  Caution, changing the following variables can have adverse affects on the layout.
-</div>
-<p>Use caution when modifying the following. Great care was given to make these properties play nicely on all responsive sizes.</p>
+<h4 id="public-sidecar">Public Sidecar</h4>
 <table>
 <thead>
 <tr>
@@ -950,88 +903,302 @@ can usually adjust just one variable to affect all larger sizes.</p>
 </thead>
 <tbody>
 <tr>
+<td>$public-sidecar-color</td>
+<td>$white</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidecar-bg-color</td>
+<td>$primary</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidecar-border-color</td>
+<td>$primary</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidecar-border-size</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="public-sidenav">Public Sidenav</h4>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$public-sidenav-bg-color</td>
+<td>transparent</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidenav-border-color</td>
+<td>$public-border-color</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidenav-border-size</td>
+<td>$public-border-size</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="public-page-container-for-content-and-footer">Public Page (container for content and footer)</h4>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$public-page-bg-color</td>
+<td>$theme-bg</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-page-border-color</td>
+<td>$public-border-color</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-page-border-size</td>
+<td>$public-border-size</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="public-content">Public Content</h4>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$public-content-bg-color</td>
+<td>$theme-bg</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-content-border-color</td>
+<td>$public-border-color</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-content-border-size</td>
+<td>$public-border-size</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="public-sidebar-aka-aside">Public Sidebar (a.k.a. Aside)</h4>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$public-sidebar-bg-color</td>
+<td>$theme-bg</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidebar-border-color</td>
+<td>$public-border-color</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-sidebar-border-size</td>
+<td>$public-border-size</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="public-footer">Public Footer</h4>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$public-footer-bg-color</td>
+<td>transparent</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-footer-border-color</td>
+<td>$public-border-color</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-footer-border-size</td>
+<td>$public-border-size</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sizing--spacers">Sizing &amp; Spacers</h3>
+<div class="alert alert-danger">
+  Caution, changing the following variables can have adverse affects on the layout.
+</div>
+<p>Use caution when modifying the following. Great care was given to make these properties play nicely on all responsive sizes.</p>
+<h4 id="public-layout-sizes">Public Layout Sizes</h4>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$public-header-height</td>
+<td>132px</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-header-sm-height</td>
+<td>$public-header-height</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-header-md-height</td>
+<td>$public-header-sm-height</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-header-lg-height</td>
+<td>133px</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-header-xl-height</td>
+<td>$public-header-lg-height</td>
+<td></td>
+</tr>
+<tr>
+<td>$public-header-xxl-height</td>
+<td>$public-header-xl-height</td>
+<td></td>
+</tr>
+<tr>
 <td>$public-sidecar-width</td>
-<td>90px;</td>
+<td>90px</td>
 <td>Caution! Tread Lightly!</td>
 </tr>
 <tr>
 <td>$public-sidenav-width</td>
-<td>320px;</td>
+<td>320px</td>
 <td>Caution! Tread Lightly!</td>
 </tr>
 <tr>
 <td>$public-sidebar-width</td>
-<td>320px;</td>
+<td>320px</td>
 <td>Caution! Tread Lightly!</td>
 </tr>
+</tbody>
+</table>
+<h4 id="public-layout-spacers">Public Layout Spacers</h4>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Default Value</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>$public-spacer-y</td>
-<td>$spacer;</td>
+<td>$spacer</td>
 <td>$spacer is the Bootstrap default.</td>
 </tr>
 <tr>
 <td>$public-spacer-x</td>
-<td>$spacer;</td>
+<td>$spacer</td>
 <td>$spacer is the Bootstrap default.</td>
 </tr>
 <tr>
 <td>$public-header-spacer-y</td>
-<td>0;</td>
+<td>0</td>
 <td></td>
 </tr>
 <tr>
 <td>$public-header-spacer-x</td>
-<td>0;</td>
+<td>0</td>
 <td></td>
 </tr>
 <tr>
 <td>$public-sidecar-spacer-y</td>
-<td>$public-spacer-y;</td>
+<td>$public-spacer-y</td>
 <td></td>
 </tr>
 <tr>
 <td>$public-sidecar-spacer-x</td>
-<td>0;</td>
+<td>0</td>
 <td></td>
 </tr>
 <tr>
 <td>$public-sidenav-spacer-y</td>
-<td>0;</td>
+<td>0</td>
 <td></td>
 </tr>
 <tr>
 <td>$public-sidenav-spacer-x</td>
-<td>0;</td>
+<td>0</td>
 <td></td>
 </tr>
 <tr>
 <td>$public-content-spacer-y</td>
-<td>$public-spacer-y;</td>
+<td>$public-spacer-y</td>
 <td></td>
 </tr>
 <tr>
 <td>$public-content-spacer-x</td>
-<td>$public-spacer-x;</td>
+<td>$public-spacer-x</td>
 <td></td>
 </tr>
 <tr>
 <td>$public-sidebar-spacer-y</td>
-<td>0;</td>
+<td>0</td>
 <td></td>
 </tr>
 <tr>
 <td>$public-sidebar-spacer-x</td>
-<td>0;</td>
+<td>0</td>
 <td></td>
 </tr>
 <tr>
 <td>$public-footer-spacer-y</td>
-<td>$public-spacer-y;</td>
+<td>$public-spacer-y</td>
 <td></td>
 </tr>
 <tr>
 <td>$public-footer-spacer-x</td>
-<td>$public-spacer-x;</td>
+<td>$public-spacer-x</td>
 <td></td>
 </tr>
 </tbody>
@@ -1043,19 +1210,12 @@ system we have built out a unique system to control page layout, so we are going
 <p>At the heart of the layout system is the <code>public_v3</code> layout template. To use it place <code>layout 'public_v3'</code>
 near the top of your controller. This is typically done right after any actions are called, like the <code>before_action</code>.
 This one template handles all public page layouts.</p>
-<h3 id="the-page-map">The <code>@page</code> Map</h3>
-<p>In the application controller we define a map called <code>@page</code>. The <code>@page</code> variable contains boolean settings which control the
+<h3 id="the-public-map">The <code>@public</code> Map</h3>
+<p>In the application controller we define a map called <code>@public</code>. The <code>@public</code> variable contains boolean settings which control the
 page layout. These settings are explained in the chart below.</p>
-<p>The <code>@page</code> hash is set at the top of a view file to control how that view will be presented in the public layout template.</p>
-<!-- DEFAULTS
-      sidecar: false,
-      sidebar: false,
-      header: true,
-      footer: true,
-      flush: false,
-      tables: false,
-      data_tables: false
--->
+<p>The <code>@public</code> hash is set at the top of a view file to control how that view will be presented in the public layout template.</p>
+<h4>Retailer Feature Configuration</h4>
+<p>These define if the retailer uses the specified feature. Most of these are controlled through the Retailer Feature Settings form in the Rails app.</p>
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
@@ -1066,40 +1226,95 @@ page layout. These settings are explained in the chart below.</p>
   </thead>
   <tbody>
     <tr>
-      <td><code class="text-nowrap">sidecar</code></td>
-      <td><code class="text-nowrap">false</code></td>
-      <td>Controls display the sidecar left side navigation. <em>This feature isn't fully implemented yet.</em></td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">sidebar</code></td>
-      <td><code class="text-nowrap">false</code></td>
-      <td>
-        Controls display the sidebar right side navigation. Expects content to be placed into the <code>sidebar</code> 
-        yield. e.g. <code>content_for :sidebar, raw(render 'sidebar')</code>
-      </td>
-    </tr>
-    <tr>
-      <td><code class="text-nowrap">header</code></td>
+      <td><code class="text-nowrap">with_header</code></td>
       <td><code class="text-nowrap">true</code></td>
-      <td>Page header, which sits right below the header navbar. <em>This feature is deprecated.</em></td>
+      <td>Defines if the retailer has enabled the page header feature.</td>
     </tr>
     <tr>
-      <td><code class="text-nowrap">footer</code></td>
+      <td><code class="text-nowrap">with_sidecar</code></td>
+      <td><code class="text-nowrap">false</code></td>
+      <td>Defines if the retailer has enabled the sidecar left side navigation feature. <em>This feature isn't fully implemented yet.</em></td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">with_sidenav</code></td>
       <td><code class="text-nowrap">true</code></td>
-      <td>
-        Controls display the footer. Expects content to be placed into the <code>footer</code> 
-        yield, and will typically contain breadcrumb navigation.
-      </td>
+      <td>Defines if the retailer has enabled the side navigation menu feature for desktop breakpoints. At mobile breakpoints the side navigation is always enabled.</td>
     </tr>
     <tr>
-      <td><code class="text-nowrap">flush</code></td>
-      <td><code class="text-nowrap">false</code></td>
-      <td>Removes padding from the main content area. Usually used for tables to allow them to fill the content area.</td>
+      <td><code class="text-nowrap">with_sidebar</code></td>
+      <td><code class="text-nowrap">true</code></td>
+      <td>Defines if the retailer has enabled the right sidebar feature for the Shopping List.</td>
     </tr>
     <tr>
-      <td><code class="text-nowrap">tables</code></td>
+      <td><code class="text-nowrap">with_footer</code></td>
+      <td><code class="text-nowrap">true</code></td>
+      <td>Defines if the retailer has enabled the footer section.</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Consumer Display Settings</h4>
+<p>These define if the consumer has hidden the feature</p>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Key Name</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="text-nowrap">show_header</code></td>
+      <td><code class="text-nowrap">true</code></td>
+      <td>Controls whether the consumer has chosen to display the page header section. <em>We don't currently provide a way for consumers to adjust this setting.</em></td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">show_sidecar</code></td>
       <td><code class="text-nowrap">false</code></td>
-      <td>Primes the system to expect the main content section to be filled with a scrollable table.</td>
+      <td>Controls whether the consumer has chosen to display the sidecar left side navigation. <em>This feature isn't fully implemented yet.</em></td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">show_sidenav</code></td>
+      <td><code class="text-nowrap">true</code></td>
+      <td>Controls whether the consumer has chosen to display the side navigation menu.</td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">show_sidebar</code></td>
+      <td><code class="text-nowrap">true</code></td>
+      <td>Controls whether the consumer has chosen to display the right sidebar feature for the Shopping List.</td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">show_footer</code></td>
+      <td><code class="text-nowrap">true</code></td>
+      <td>Controls whether the consumer has chosen to display the footer section. <em>We don't currently provide a way for consumers to adjust this setting.</em></td>
+    </tr>
+  </tbody>
+</table>
+<h4>Meta Tag Settings</h4>
+<p>These define meta tag settings for SEO purposes</p>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Key Name</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="text-nowrap">meta_title</code></td>
+      <td><code class="text-nowrap">''</code></td>
+      <td>Sets the HTML meta title tag for SEO purposes. Used in the document head section and appears in browser tabs and search results.</td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">meta_keywords</code></td>
+      <td><code class="text-nowrap">''</code></td>
+      <td>Sets the HTML meta keywords tag. <em>Keywords are no longer used by Google, but some other search engines might still use them.</em></td>
+    </tr>
+    <tr>
+      <td><code class="text-nowrap">meta_description</code></td>
+      <td><code class="text-nowrap">''</code></td>
+      <td>Sets the HTML meta description tag for SEO purposes. This text appears in search engine results and should provide a concise summary of the page content.</td>
     </tr>
   </tbody>
 </table>
@@ -1478,14 +1693,14 @@ The Site Modal is also available in the <a href="/docs/3.0/layouts/admin/">Admin
     <li><a href="#sass-variables">Sass Variables</a>
       <ul>
         <li></li>
-        <li><a href="#colors--basics">Colors &amp; Basics</a></li>
+        <li><a href="#public-layout-colors--borders">Public Layout Colors &amp; Borders</a></li>
         <li><a href="#sizing--spacers">Sizing &amp; Spacers</a></li>
       </ul>
     </li>
     <li><a href="#ruby-on-rails-support">Ruby On Rails Support</a>
       <ul>
         <li><a href="#public-layout-template">Public Layout Template</a></li>
-        <li><a href="#the-page-map">The <code>@page</code> Map</a></li>
+        <li><a href="#the-public-map">The <code>@public</code> Map</a></li>
       </ul>
     </li>
     <li><a href="#site-modal">Site Modal</a></li>

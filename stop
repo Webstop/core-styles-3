@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+puts ''
+puts "Stopping running containers with 'core-styles-3' in the name..."
+puts ''
+
+# Get container IDs for running containers with "klakegg" in the name
+container_ids = `docker container ls -q --filter name=core-styles-3`.strip.split("\n")
+
+if container_ids.empty?
+  puts "No running containers found with 'core-styles-3' in the name."
+else
+  puts "Stopping #{container_ids.length} container#{'s' if container_ids.length > 1}..."
+  puts ''
+  container_ids.each do |container_id|
+    system("docker container stop #{container_id}")
+  end
+  puts ''
+  puts "Containers stopped successfully."
+  puts ''
+end

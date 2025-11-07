@@ -72,7 +72,7 @@
       </ul>
     </div>
     <div class="d-flex">
-      <span class="badge text-bg-light webstop-sans-serif opacity-75">v3.0.10</span>
+      <span class="badge text-bg-light webstop-sans-serif opacity-75">v3.0.12-beta-2</span>
     </div>
   </div>
 </nav>
@@ -679,6 +679,18 @@
 <p>When you set the <code>data-bs-target</code> of a modal trigger to <code>#site-modal</code>, then you are indicating you want to use the site wide
 modal, which enables remote content loading via AJAX. The <code>data-load</code> attribute specifies the URL to pull the body
 content from, it is expected to be in HTML format. You should also include the <code>data-title</code> to set the text for the title of the modal.</p>
+<div class="alert alert-warning sans-serif" role="alert">
+  <div class="row">
+    <div class="col-auto"><i class="fa-solid fa-diamond-exclamation" style="font-size: 4rem;"></i></div>
+    <div class="col">
+      <strong>AJAX WARNING!</strong><br>
+      Please note, Github pages doesn't allow AJAX (or fetch), so the examples on this
+      page don't work properly on the public documentation website. <em>They work fine when running the local
+      development server.</em>
+    </div>
+  </div>
+</div>
+
 <div class="my-3 p-3 example">
 <button data-bs-toggle="modal" data-bs-target="#site-modal" data-load="/ajax/alert_success" data-title="New Shopping List" data-footer="hide" class="btn btn-primary ">
   New Shopping List

@@ -47,7 +47,7 @@ $(function() {
     // console.log(`onCompleteUrl: ${onCompleteUrl}`);
     // console.log(`onCompleteTarget: ${onCompleteTarget}`);
 
-    return fetch(onCompleteUrl)
+    return fetch(onCompleteUrl, {credentials: 'include', headers: {'X-Requested-With': 'fetch'}})
       .then(response => {
         if (!response.ok) {
           // Create a more detailed error message based on status code

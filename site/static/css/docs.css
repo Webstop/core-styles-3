@@ -12165,16 +12165,16 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   max-height: 100vh;
   width: 100vw;
   overflow-x: hidden;
-  grid-template-rows: 132px auto;
+  grid-template-rows: 60px auto;
 }
 @media (min-width: 576px) {
   .public {
-    grid-template-rows: 132px auto;
+    grid-template-rows: 60px auto;
   }
 }
 @media (min-width: 768px) {
   .public {
-    grid-template-rows: 132px auto;
+    grid-template-rows: 60px auto;
   }
 }
 @media (min-width: 992px) {
@@ -12429,25 +12429,25 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   background-color: transparent;
 }
 .public .public-sidecar, .public .public-sidenav, .public .public-page, .public .public-sidebar {
-  height: calc(100vh - 132px);
+  height: calc(100vh - 60px);
 }
 .public .public-header {
-  height: 132px;
+  height: 60px;
 }
 @media (min-width: 576px) {
   .public .public-sidecar, .public .public-sidenav, .public .public-page, .public .public-sidebar {
-    height: calc(100vh - 132px);
+    height: calc(100vh - 60px);
   }
   .public .public-header {
-    height: 132px;
+    height: 60px;
   }
 }
 @media (min-width: 768px) {
   .public .public-sidecar, .public .public-sidenav, .public .public-page, .public .public-sidebar {
-    height: calc(100vh - 132px);
+    height: calc(100vh - 60px);
   }
   .public .public-header {
-    height: 132px;
+    height: 60px;
   }
 }
 @media (min-width: 992px) {

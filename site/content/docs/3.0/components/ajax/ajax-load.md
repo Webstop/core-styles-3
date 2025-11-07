@@ -16,6 +16,8 @@ menu:
 
 Here are a couple of common uses of the AJAX Load feature.
 
+{{< notices/ajax-warning >}}
+
 ### Basic Example
 
 To use the Ajax Load feature place a `data-ajax-load` attribute on an HTML element (e.g. link or button). The `data-load` 

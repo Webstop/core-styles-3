@@ -25,6 +25,8 @@ These pieces can be used independently of each other, but when combined together
 
 All of this is managed via a simple interface that uses HTML attributes to control and manage it. No need to write any additional JavaScript.
 
+{{< notices/ajax-warning >}}
+
 ##### Preamble: Loading Spinner
 
 In the following examples you'll see "`...loading spinner...`". This is placeholder text used to keep from distracting 

@@ -124,21 +124,41 @@
 
       let $this = $(this);
       let url = $this.attr('action');
-      let method = $this.attr('method');
+      let method = $this.attr('method') || 'POST';
       let data = $this.serializeArray();
       let $target = $this;
-      $this.is('[data-power-bar]');
-      let hasOnComplete = $this.is('[data-on-complete-load]');
-      let onCompleteUrl = '';
-      let onCompleteTarget = '';
-      if(hasOnComplete){
-        onCompleteUrl = $this.data('on-complete-load');
-        onCompleteTarget = $this.data('on-complete-target');
+      let $submitButtons = $this.find('[type="submit"], button[type="submit"], input[type="submit"]');
+      let loadingText = $this.data('loading-text') || 'Loading…';
+      let hasHideOnComplete = $this.is('[data-on-complete-hide]');
+      let hideOnCompleteTarget = '';
+      if(hasHideOnComplete){ hideOnCompleteTarget = $this.data('on-complete-hide'); }
+      let hasClearOnComplete = $this.is('[data-on-complete-clear]');
+      let clearOnCompleteTarget = '';
+      if(hasClearOnComplete){ clearOnCompleteTarget = $this.data('on-complete-clear'); }
+      let hasShowOnComplete = $this.is('[data-on-complete-show]');
+      let showOnCompleteTarget = '';
+      if(hasShowOnComplete){ showOnCompleteTarget = $this.data('on-complete-show'); }
+      let hasLoadOnComplete = $this.is('[data-on-complete-load]');
+      let loadOnCompleteURL = '';
+      let loadOnCompleteTarget = '';
+      if(hasLoadOnComplete){
+        loadOnCompleteURL = $this.data('on-complete-load');
+        loadOnCompleteTarget = $this.data('on-complete-target');
       }
       const validMethods = ['GET', 'POST', 'PUT', 'DELETE'];
       if (!validMethods.includes(method.toUpperCase())) {
         method = 'POST';
       }
+      $submitButtons.each(function() {
+        let $btn = $(this);
+        // submit inputs use val and submit buttons use text.
+        if ($btn.is('input')) {
+          $btn.val(loadingText);
+        } else {
+          $btn.text(loadingText);
+        }
+        $btn.prop('disabled', true);
+      });
 
       if( $this.is('[data-target]') ){
         $target = $($this.data('target'));
@@ -148,22 +168,55 @@
         }
         $target = $this.parent();
       }
+      $submitButtons.prop('disabled', true);
 
       $target.load(url,data,function(){
-        console.log(`hasOnComplete: ${hasOnComplete}`);
-        if(hasOnComplete){ loadOnComplete(onCompleteUrl, onCompleteTarget); }
+        if(hasClearOnComplete){ clearOnComplete(clearOnCompleteTarget); }
+        if(hasHideOnComplete){ hideOnComplete(hideOnCompleteTarget); }
+        if(hasShowOnComplete){ showOnComplete(showOnCompleteTarget); }
+        if(hasLoadOnComplete){ loadOnComplete(loadOnCompleteURL, loadOnCompleteTarget); }
       });
 
 
     });
 
-    function loadOnComplete(onCompleteUrl, onCompleteTarget) {
-      const targets = document.querySelectorAll(onCompleteTarget);
-      // console.log(`loadOnComplete`);
-      // console.log(`onCompleteUrl: ${onCompleteUrl}`);
-      // console.log(`onCompleteTarget: ${onCompleteTarget}`);
+    function hideOnComplete(hideOnCompleteTarget) {
+      const targets = document.querySelectorAll(hideOnCompleteTarget);
 
-      return fetch(onCompleteUrl)
+      targets.forEach(target => {
+        target.style.display = 'none';
+      });
+
+    }
+
+    function clearOnComplete(clearOnCompleteTarget) {
+      const targets = document.querySelectorAll(clearOnCompleteTarget);
+
+      targets.forEach(target => {
+        target.innerHTML = '';
+      });
+
+    }
+    function showOnComplete(showOnCompleteTarget) {
+      const targets = document.querySelectorAll(showOnCompleteTarget);
+
+      targets.forEach(target => {
+        // Remove d-none class if present
+        target.classList.remove('d-none');
+
+        // Set display to block with !important
+        target.style.setProperty('display', 'block', 'important');
+      });
+
+    }
+
+    function loadOnComplete(loadOnCompleteURL, loadOnCompleteTarget) {
+      const targets = document.querySelectorAll(loadOnCompleteTarget);
+      // console.log(`loadOnComplete`);
+      // console.log(`loadOnCompleteURL: ${loadOnCompleteURL}`);
+      // console.log(`loadOnCompleteTarget: ${loadOnCompleteTarget}`);
+
+      return fetch(loadOnCompleteURL, {credentials: 'include', headers: {'X-Requested-With': 'fetch'}})
         .then(response => {
           if (!response.ok) {
             // Create a more detailed error message based on status code
@@ -201,9 +254,9 @@
 
           // Log additional context for debugging
           console.error('Request details:', {
-            url: onCompleteUrl,
+            url: loadOnCompleteURL,
             method: method,
-            target: onCompleteTarget
+            target: loadOnCompleteTarget
           });
         });
     }
@@ -238,9 +291,9 @@
 
       if( $this.is('[data-disable-loading-indicator]') ) ; else {
         if( $this.is('input[type="submit"]') ) {
-          $this.val('Loading...');
+          $this.val('Loading…');
         } else {
-          $this.text('Loading...');
+          $this.text('Loading…');
         }
         if( $this.is('button') || $this.is('input[type="submit"]') ) { $this.prop('disabled', true); }
       }
@@ -259,6 +312,7 @@
     // TODO: Add callback support, success and failure callbacks
     fetch(url, {
       method: 'GET',
+      credentials: 'include',
       headers: {
         'X-Requested-With': 'fetch',
       },
@@ -366,7 +420,7 @@
     console.log(`onCompleteUrl: ${onCompleteUrl}`);
     console.log(`onCompleteTarget: ${onCompleteTarget}`);
 
-    return fetch(onCompleteUrl)
+    return fetch(onCompleteUrl, {credentials: 'include', headers: {'X-Requested-With': 'fetch'}})
       .then(response => response.text())
       .then(html => {
         targets.forEach(target => {
@@ -421,7 +475,7 @@
     // Resets modal once closed
     $(document.body).on('hidden.bs.modal', '#site-modal', function () {
       $('#site-modal-title').text('');
-      $('#site-modal-body').html('<div class="text-center"><div class="spinner-grow" style="width: 5rem; height: 5rem;" role="status"></div><H4>Loading...</H4></div>');
+      $('#site-modal-body').html('<div class="text-center"><div class="spinner-grow" style="width: 5rem; height: 5rem;" role="status"></div><H4>Loading…</H4></div>');
       $('#site-modal-footer').removeClass('d-none');
     });
 
@@ -496,8 +550,8 @@
   clickDisableButtons.forEach(btn=>{
     btn.addEventListener('click', function(event){
       event.target.disabled  = true;
-      event.target.innerHTML = 'Loading...';
-      event.target.value     = 'Loading...';
+      event.target.innerHTML = 'Loading…';
+      event.target.value     = 'Loading…';
     });
   });
 
@@ -506,8 +560,8 @@
   submitDisableButtons.forEach(btn=>{
     btn.addEventListener('submit', function(event){
       event.target.disabled  = true;
-      event.target.innerHTML = 'Loading...';
-      event.target.value     = 'Loading...';
+      event.target.innerHTML = 'Loading…';
+      event.target.value     = 'Loading…';
     });
   });
 
@@ -934,57 +988,124 @@
 
   })();
 
-  // Search Component
+  // Search Component - Modern Vanilla JavaScript Version
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
 
-    function liveSearch(){
-      let delay = null;
+    function liveSearch() {
 
-      $('[data-search="live"]').find('.search-from-search-text').on('keyup', function(event) {
-        clearTimeout(delay);
-        let $form = $(this).parents('[data-search="live"]');
-        let target = $form.data('target');
-        let hide = $form.data('hide');
-        let url = $form.attr('action');
-        let search = event.target.value;
+      document.querySelectorAll('[data-live-search]').forEach(form => {
+        const searchInput = form.querySelector('.live-search-search-text');
+        const clearButton = form.querySelector('.live-search-clear');
+        const target = form.dataset.target;
+        const hide = form.dataset.hide;
+        const url = form.action;
+        let delay = null;
+        let isFirstCall = true;
 
-        if(search.length <= 2){
-          exitSearch(target);
-        } else {
-          let data = $form.serializeArray();
-          delay = setTimeout(function(){ performSearch(data, target, hide, url); }, 500);
+        function handleSearch() {
+
+          if (isFirstCall) {
+            const targetElement = document.querySelector(target);
+            if (targetElement) {
+              targetElement.style.display = 'block';
+              targetElement.innerHTML = '<div class="mx-auto d-block" style="width: 5rem;" role="status"><div class="spinner-grow" style="width: 5rem; height: 5rem;" role="status"></div><br>Searching…</div>';
+            }
+            performSearch(target, hide, url, form);
+            isFirstCall = false;
+          } else {
+            if (delay) {
+              clearTimeout(delay);
+            }
+            delay = setTimeout(() => performSearch(target, hide, url, form), 300);
+          }
         }
-      });
 
-      $('[data-search="live"]').find('.search-form-clear').on('click', function(event) {
-        event.preventDefault();
-        let $form = $(this).parents('[data-search="live"]');
-        let target = $form.data('target');
-        let reveal = $form.data('hide');
-        let $clear = $form.find('.search-from-search-text');
-        exitSearch(target, reveal, $clear);
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          handleSearch(); // No parameters needed
+        });
+
+        searchInput?.addEventListener('keyup', async function(event) {
+          const search = event.target.value;
+
+          if (search.length <= 2) {
+            exitSearch(target, form.dataset.hide);
+            // Reset state when search is too short
+            if (delay) {
+              clearTimeout(delay);
+            }
+            delay = null;
+            isFirstCall = true;
+          } else {
+            handleSearch();
+          }
+        });
+
+        clearButton?.addEventListener('click', function(event) {
+          event.preventDefault();
+          const target = form.dataset.target;
+          const reveal = form.dataset.hide;
+          const searchInput = form.querySelector('.live-search-search-text');
+          exitSearch(target, reveal, searchInput);
+          // Reset state when clearing
+          if (delay) {
+            clearTimeout(delay);
+          }
+          delay = null;
+          isFirstCall = true;
+        });
       });
     }
 
-    function exitSearch(target, reveal = null, $clear = null){
-      if($clear != null){
-        $clear.val('');
+    function exitSearch(target, reveal = null, clearInput = null) {
+      clearInput?.value && (clearInput.value = '');
+
+      const targetElement = document.querySelector(target);
+      if (targetElement) {
+        targetElement.innerHTML = '';
+        targetElement.style.display = 'none';
       }
-      let $target = $(target);
-      $target.html('');
-      $target.hide();
-      if(reveal != null){
-        $(reveal).show();
+      if (reveal) {
+        const revealElements = document.querySelectorAll(reveal);
+        revealElements.forEach(revealElement => {
+          revealElement?.style && (revealElement.style.display = 'block');
+        });
       }
+
+      reveal && (document.querySelector(reveal).style.display = 'block');
     }
 
-    function performSearch(data, target, hide, url){
-      let $target = $(target);
-      $(hide).hide();
-      $target.show('fast', function(){
-        $target.load(url, data);
+    async function performSearch(target, hide, url, form) {
+      const targetElement = document.querySelector(target);
+      const hideElements = hide ? document.querySelectorAll(hide) : null;
+      const data = new FormData(form);
+      hideElements.forEach(hideElement => {
+        hideElement?.style && (hideElement.style.display = 'none');
       });
+
+
+      if (targetElement) {
+        targetElement.style.display = 'block';
+
+        try {
+          const response = await fetch(url, {
+            method: 'POST',
+            body: data,
+            credentials: 'include',
+            headers: {'X-Requested-With': 'fetch'}
+          });
+
+          if (!response.ok) throw new Error('Network response was not ok');
+
+          const html = await response.text();
+          targetElement.innerHTML = html;
+
+        } catch (error) {
+          console.error('Search request failed:', error);
+          targetElement.innerHTML = '<p>Search failed. Please try again.</p>';
+        }
+      }
     }
 
     liveSearch();
@@ -1213,7 +1334,7 @@
     function setCircularFormat(){
       // This should set the cookie for iPad (768) and smaller
       if(document.body.clientWidth < 770 ){
-        console.log('Setting circular cookie...');
+        console.log('Setting circular cookie…');
         let name = window.webstop.retailerID + '_circular_format';
         cs3.setCookie(name, 'online', 7); // Note: many browsers cap JS set cookies to 7 days max.
       }

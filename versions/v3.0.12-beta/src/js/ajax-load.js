@@ -50,6 +50,7 @@ function load(target, url, infinite) {
   // TODO: Add callback support, success and failure callbacks
   fetch(url, {
     method: 'GET',
+    credentials: 'include',
     headers: {
       'X-Requested-With': 'fetch',
     },
@@ -160,7 +161,7 @@ function loadOnComplete(onCompleteUrl, onCompleteTarget) {
   console.log(`onCompleteUrl: ${onCompleteUrl}`);
   console.log(`onCompleteTarget: ${onCompleteTarget}`);
 
-  return fetch(onCompleteUrl)
+  return fetch(onCompleteUrl, {credentials: 'include', headers: {'X-Requested-With': 'fetch'}})
     .then(response => response.text())
     .then(html => {
       targets.forEach(target => {

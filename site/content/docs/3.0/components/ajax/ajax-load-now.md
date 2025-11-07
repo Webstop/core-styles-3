@@ -16,6 +16,8 @@ This feature will automatically trigger an ajax call (actually fetch) to load ht
 
 Here are a couple of common uses of the AJAX Load feature.
 
+{{< notices/ajax-warning >}}
+
 ### Basic Example
 
 To use the Ajax Load feature place a `data-load-now` attribute on an HTML element (e.g. link or button). The `data-load-now` 

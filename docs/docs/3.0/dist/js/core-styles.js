@@ -117,59 +117,6 @@
   })( window.cs3 = window.cs3 || {} );
 
   // Ajax Form Component
-
-
-  // /**
-  //  * ------------------------------------------------------------------------
-  //  * Main Function
-  //  * ------------------------------------------------------------------------
-  //  */
-  //
-  // function ajaxForm(form){
-  //
-  //   let $form = $(form);
-  //   let url = $form.attr('action');
-  //   let data = $form.serializeArray();
-  //   let $target = $form;
-  //
-  //   if( $form.is('[data-target]') ){
-  //     $target = $($form.data('target'));
-  //   } else {
-  //     if($form.parent().is('.ajax-form-container')) {
-  //     }  else {
-  //       $form.wrap( "<div class='ajax-form-container'></div>" );
-  //     }
-  //     $target = $form.parent();
-  //   }
-  //
-  //   if( $form.is('[data-power-bar]') ){
-  //     $target.load(url,data,function(){
-  //       loadShoppingListPowerBar();
-  //     });
-  //   } else {
-  //     $target.load(url,data);
-  //   }
-  // }
-  //
-  // /**
-  //  * ------------------------------------------------------------------------
-  //  * Data API Implementation
-  //  * ------------------------------------------------------------------------
-  //  */
-  //
-  // $(function() {
-  //
-  //   $('[data-ajax-form]').on('submit', function(event){
-  //     event.preventDefault();
-  //
-  //     ajaxForm(this);
-  //
-  //   });
-  //
-  // });
-  //
-  // export default ajaxForm
-
   $(function() {
 
     $(document.body).on('submit', '[data-ajax-form]', function(event){
@@ -177,21 +124,41 @@
 
       let $this = $(this);
       let url = $this.attr('action');
-      let method = $this.attr('method');
+      let method = $this.attr('method') || 'POST';
       let data = $this.serializeArray();
       let $target = $this;
-      let hasPowerBar = $this.is('[data-power-bar]');
-      let hasOnComplete = $this.is('[data-on-complete-load]');
-      let onCompleteUrl = '';
-      let onCompleteTarget = '';
-      if(hasOnComplete){
-        onCompleteUrl = $this.data('on-complete-load');
-        onCompleteTarget = $this.data('on-complete-target');
+      let $submitButtons = $this.find('[type="submit"], button[type="submit"], input[type="submit"]');
+      let loadingText = $this.data('loading-text') || 'Loading…';
+      let hasHideOnComplete = $this.is('[data-on-complete-hide]');
+      let hideOnCompleteTarget = '';
+      if(hasHideOnComplete){ hideOnCompleteTarget = $this.data('on-complete-hide'); }
+      let hasClearOnComplete = $this.is('[data-on-complete-clear]');
+      let clearOnCompleteTarget = '';
+      if(hasClearOnComplete){ clearOnCompleteTarget = $this.data('on-complete-clear'); }
+      let hasShowOnComplete = $this.is('[data-on-complete-show]');
+      let showOnCompleteTarget = '';
+      if(hasShowOnComplete){ showOnCompleteTarget = $this.data('on-complete-show'); }
+      let hasLoadOnComplete = $this.is('[data-on-complete-load]');
+      let loadOnCompleteURL = '';
+      let loadOnCompleteTarget = '';
+      if(hasLoadOnComplete){
+        loadOnCompleteURL = $this.data('on-complete-load');
+        loadOnCompleteTarget = $this.data('on-complete-target');
       }
       const validMethods = ['GET', 'POST', 'PUT', 'DELETE'];
       if (!validMethods.includes(method.toUpperCase())) {
         method = 'POST';
       }
+      $submitButtons.each(function() {
+        let $btn = $(this);
+        // submit inputs use val and submit buttons use text.
+        if ($btn.is('input')) {
+          $btn.val(loadingText);
+        } else {
+          $btn.text(loadingText);
+        }
+        $btn.prop('disabled', true);
+      });
 
       if( $this.is('[data-target]') ){
         $target = $($this.data('target'));
@@ -201,23 +168,55 @@
         }
         $target = $this.parent();
       }
+      $submitButtons.prop('disabled', true);
 
       $target.load(url,data,function(){
-        console.log(`hasOnComplete: ${hasOnComplete}`);
-        if(hasOnComplete){ loadOnComplete(onCompleteUrl, onCompleteTarget); }
-        if(hasPowerBar){ loadShoppingListPowerBar(); }
+        if(hasClearOnComplete){ clearOnComplete(clearOnCompleteTarget); }
+        if(hasHideOnComplete){ hideOnComplete(hideOnCompleteTarget); }
+        if(hasShowOnComplete){ showOnComplete(showOnCompleteTarget); }
+        if(hasLoadOnComplete){ loadOnComplete(loadOnCompleteURL, loadOnCompleteTarget); }
       });
 
 
     });
 
-    function loadOnComplete(onCompleteUrl, onCompleteTarget) {
-      const targets = document.querySelectorAll(onCompleteTarget);
-      // console.log(`loadOnComplete`);
-      // console.log(`onCompleteUrl: ${onCompleteUrl}`);
-      // console.log(`onCompleteTarget: ${onCompleteTarget}`);
+    function hideOnComplete(hideOnCompleteTarget) {
+      const targets = document.querySelectorAll(hideOnCompleteTarget);
 
-      return fetch(onCompleteUrl)
+      targets.forEach(target => {
+        target.style.display = 'none';
+      });
+
+    }
+
+    function clearOnComplete(clearOnCompleteTarget) {
+      const targets = document.querySelectorAll(clearOnCompleteTarget);
+
+      targets.forEach(target => {
+        target.innerHTML = '';
+      });
+
+    }
+    function showOnComplete(showOnCompleteTarget) {
+      const targets = document.querySelectorAll(showOnCompleteTarget);
+
+      targets.forEach(target => {
+        // Remove d-none class if present
+        target.classList.remove('d-none');
+
+        // Set display to block with !important
+        target.style.setProperty('display', 'block', 'important');
+      });
+
+    }
+
+    function loadOnComplete(loadOnCompleteURL, loadOnCompleteTarget) {
+      const targets = document.querySelectorAll(loadOnCompleteTarget);
+      // console.log(`loadOnComplete`);
+      // console.log(`loadOnCompleteURL: ${loadOnCompleteURL}`);
+      // console.log(`loadOnCompleteTarget: ${loadOnCompleteTarget}`);
+
+      return fetch(loadOnCompleteURL, {credentials: 'include', headers: {'X-Requested-With': 'fetch'}})
         .then(response => {
           if (!response.ok) {
             // Create a more detailed error message based on status code
@@ -255,9 +254,9 @@
 
           // Log additional context for debugging
           console.error('Request details:', {
-            url: onCompleteUrl,
+            url: loadOnCompleteURL,
             method: method,
-            target: onCompleteTarget
+            target: loadOnCompleteTarget
           });
         });
     }
@@ -272,7 +271,7 @@
       let $this = $(this);
       let url = $this.data('load');
       let $target = $this;
-      let hasPowerBar = $this.is('[data-power-bar]');
+      $this.is('[data-power-bar]');
       let hasOnComplete = $this.is('[data-on-complete-load]');
       let onCompleteUrl = '';
       let onCompleteTarget = '';
@@ -292,16 +291,15 @@
 
       if( $this.is('[data-disable-loading-indicator]') ) ; else {
         if( $this.is('input[type="submit"]') ) {
-          $this.val('Loading...');
+          $this.val('Loading…');
         } else {
-          $this.text('Loading...');
+          $this.text('Loading…');
         }
         if( $this.is('button') || $this.is('input[type="submit"]') ) { $this.prop('disabled', true); }
       }
 
       $target.load(url,function(){
         if(hasOnComplete){ loadOnComplete(onCompleteUrl, onCompleteTarget); }
-        if(hasPowerBar){ loadShoppingListPowerBar(); }
       });
 
     });
@@ -314,6 +312,7 @@
     // TODO: Add callback support, success and failure callbacks
     fetch(url, {
       method: 'GET',
+      credentials: 'include',
       headers: {
         'X-Requested-With': 'fetch',
       },
@@ -421,7 +420,7 @@
     console.log(`onCompleteUrl: ${onCompleteUrl}`);
     console.log(`onCompleteTarget: ${onCompleteTarget}`);
 
-    return fetch(onCompleteUrl)
+    return fetch(onCompleteUrl, {credentials: 'include', headers: {'X-Requested-With': 'fetch'}})
       .then(response => response.text())
       .then(html => {
         targets.forEach(target => {
@@ -476,7 +475,7 @@
     // Resets modal once closed
     $(document.body).on('hidden.bs.modal', '#site-modal', function () {
       $('#site-modal-title').text('');
-      $('#site-modal-body').html('<div class="text-center"><div class="spinner-grow" style="width: 5rem; height: 5rem;" role="status"></div><H4>Loading...</H4></div>');
+      $('#site-modal-body').html('<div class="text-center"><div class="spinner-grow" style="width: 5rem; height: 5rem;" role="status"></div><H4>Loading…</H4></div>');
       $('#site-modal-footer').removeClass('d-none');
     });
 
@@ -551,8 +550,8 @@
   clickDisableButtons.forEach(btn=>{
     btn.addEventListener('click', function(event){
       event.target.disabled  = true;
-      event.target.innerHTML = 'Loading...';
-      event.target.value     = 'Loading...';
+      event.target.innerHTML = 'Loading…';
+      event.target.value     = 'Loading…';
     });
   });
 
@@ -561,8 +560,8 @@
   submitDisableButtons.forEach(btn=>{
     btn.addEventListener('submit', function(event){
       event.target.disabled  = true;
-      event.target.innerHTML = 'Loading...';
-      event.target.value     = 'Loading...';
+      event.target.innerHTML = 'Loading…';
+      event.target.value     = 'Loading…';
     });
   });
 
@@ -989,57 +988,124 @@
 
   })();
 
-  // Search Component
+  // Search Component - Modern Vanilla JavaScript Version
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
 
-    function liveSearch(){
-      let delay = null;
+    function liveSearch() {
 
-      $('[data-search="live"]').find('.search-from-search-text').on('keyup', function(event) {
-        clearTimeout(delay);
-        let $form = $(this).parents('[data-search="live"]');
-        let target = $form.data('target');
-        let hide = $form.data('hide');
-        let url = $form.attr('action');
-        let search = event.target.value;
+      document.querySelectorAll('[data-live-search]').forEach(form => {
+        const searchInput = form.querySelector('.live-search-search-text');
+        const clearButton = form.querySelector('.live-search-clear');
+        const target = form.dataset.target;
+        const hide = form.dataset.hide;
+        const url = form.action;
+        let delay = null;
+        let isFirstCall = true;
 
-        if(search.length <= 2){
-          exitSearch(target);
-        } else {
-          let data = $form.serializeArray();
-          delay = setTimeout(function(){ performSearch(data, target, hide, url); }, 500);
+        function handleSearch() {
+
+          if (isFirstCall) {
+            const targetElement = document.querySelector(target);
+            if (targetElement) {
+              targetElement.style.display = 'block';
+              targetElement.innerHTML = '<div class="mx-auto d-block" style="width: 5rem;" role="status"><div class="spinner-grow" style="width: 5rem; height: 5rem;" role="status"></div><br>Searching…</div>';
+            }
+            performSearch(target, hide, url, form);
+            isFirstCall = false;
+          } else {
+            if (delay) {
+              clearTimeout(delay);
+            }
+            delay = setTimeout(() => performSearch(target, hide, url, form), 300);
+          }
         }
-      });
 
-      $('[data-search="live"]').find('.search-form-clear').on('click', function(event) {
-        event.preventDefault();
-        let $form = $(this).parents('[data-search="live"]');
-        let target = $form.data('target');
-        let reveal = $form.data('hide');
-        let $clear = $form.find('.search-from-search-text');
-        exitSearch(target, reveal, $clear);
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          handleSearch(); // No parameters needed
+        });
+
+        searchInput?.addEventListener('keyup', async function(event) {
+          const search = event.target.value;
+
+          if (search.length <= 2) {
+            exitSearch(target, form.dataset.hide);
+            // Reset state when search is too short
+            if (delay) {
+              clearTimeout(delay);
+            }
+            delay = null;
+            isFirstCall = true;
+          } else {
+            handleSearch();
+          }
+        });
+
+        clearButton?.addEventListener('click', function(event) {
+          event.preventDefault();
+          const target = form.dataset.target;
+          const reveal = form.dataset.hide;
+          const searchInput = form.querySelector('.live-search-search-text');
+          exitSearch(target, reveal, searchInput);
+          // Reset state when clearing
+          if (delay) {
+            clearTimeout(delay);
+          }
+          delay = null;
+          isFirstCall = true;
+        });
       });
     }
 
-    function exitSearch(target, reveal = null, $clear = null){
-      if($clear != null){
-        $clear.val('');
+    function exitSearch(target, reveal = null, clearInput = null) {
+      clearInput?.value && (clearInput.value = '');
+
+      const targetElement = document.querySelector(target);
+      if (targetElement) {
+        targetElement.innerHTML = '';
+        targetElement.style.display = 'none';
       }
-      let $target = $(target);
-      $target.html('');
-      $target.hide();
-      if(reveal != null){
-        $(reveal).show();
+      if (reveal) {
+        const revealElements = document.querySelectorAll(reveal);
+        revealElements.forEach(revealElement => {
+          revealElement?.style && (revealElement.style.display = 'block');
+        });
       }
+
+      reveal && (document.querySelector(reveal).style.display = 'block');
     }
 
-    function performSearch(data, target, hide, url){
-      let $target = $(target);
-      $(hide).hide();
-      $target.show('fast', function(){
-        $target.load(url, data);
+    async function performSearch(target, hide, url, form) {
+      const targetElement = document.querySelector(target);
+      const hideElements = hide ? document.querySelectorAll(hide) : null;
+      const data = new FormData(form);
+      hideElements.forEach(hideElement => {
+        hideElement?.style && (hideElement.style.display = 'none');
       });
+
+
+      if (targetElement) {
+        targetElement.style.display = 'block';
+
+        try {
+          const response = await fetch(url, {
+            method: 'POST',
+            body: data,
+            credentials: 'include',
+            headers: {'X-Requested-With': 'fetch'}
+          });
+
+          if (!response.ok) throw new Error('Network response was not ok');
+
+          const html = await response.text();
+          targetElement.innerHTML = html;
+
+        } catch (error) {
+          console.error('Search request failed:', error);
+          targetElement.innerHTML = '<p>Search failed. Please try again.</p>';
+        }
+      }
     }
 
     liveSearch();
@@ -1268,7 +1334,7 @@
     function setCircularFormat(){
       // This should set the cookie for iPad (768) and smaller
       if(document.body.clientWidth < 770 ){
-        console.log('Setting circular cookie...');
+        console.log('Setting circular cookie…');
         let name = window.webstop.retailerID + '_circular_format';
         cs3.setCookie(name, 'online', 7); // Note: many browsers cap JS set cookies to 7 days max.
       }
@@ -1309,132 +1375,106 @@
     });
   })();
 
-  // TODO: For now this is global. It really should be loaded as an es6 module instead.
-  // TODO: this should be built to look for attr on the the body and only trigger on lasso pages with that attr.
-  function loadShoppingListPowerBar$1(){
-    console.log('loadShoppingListPowerBar triggered');
-    console.log('loadShoppingListPowerBar functionality is disabled.');
-    // let url = '/shopping_list/power_bar?url=' + window.location.href ;
-    // $('#site-aside-slider').load(url);
-  }
-
-  $(function() {
-
-    loadShoppingListPowerBar$1();
-
-    $(document.body).on('click', '.site-aside-slider-toggle', function(event){
-      event.preventDefault();
-      let $aside = $('#site-aside-slider');
-      if( $aside.hasClass('site-aside-slider-open') ){
-        $aside.removeClass('site-aside-slider-open');
-        cs3.setCookie('site_aside', 'close', 1);
-      } else {
-        $aside.addClass('site-aside-slider-open');
-        cs3.setCookie('site_aside', 'open', 1);
-      }
-    });
-
-    // Everything below here should probably go, as more generic methods are appropriate
-    // ajax-form and site-modal should be used instead. Keeping it for now as reference
-    // until we get the shopping list features.
-
-    let $modal = $('#shopping-list-modal');
-
-    $(document.body).on('show.bs.modal', '#shopping-list-modal', function(event) {
-      // jQuery Objects
-      let $form        = $modal.find('.shopping-list-form');
-      let $errors      = $form.find('.shopping-list-form-errors');
-      let $button      = $(event.relatedTarget); // Button or link that triggered the modal
-      let $title       = $modal.find('.modal-title');
-      let $nameGroup   = $modal.find('.modal-body .shopping-list-form-name-group');
-      let $name        = $modal.find('.modal-body .shopping-list-form-name');
-      let $submit      = $form.find('.shopping-list-form-submit');
-      let $description = $form.find('.shopping-list-form-description');
-
-      // strings
-      //let currentList = $('#shopping-list-power-bar-list').text()
-      let verb = $button.data('verb'); //  verbs: Create (new), Update (rename/edit), Delete (delete)
-      let url =  $button.data('url');
-      let response = {status: '', message: ''};
-
-      //console.log('current list: ' + currentList)
+  (function() {
 
 
-      $title.text(verb + ' Shopping List');
-      $submit.text(verb);
-      $errors.html('');
-      $form.attr('action', url);
+    // Toggle Shopping List View States (compact, expanded, in-store)
 
-      if(verb == 'Create'){
-        let today = new Date();
-        today = today.toLocaleDateString('en-US', {year: 'numeric', month: 'numeric', day: 'numeric' });
-        $nameGroup.removeClass('is-hidden');
-        $name.val('My ' + today + ' List');
-        $description.text('');
-        $description.addClass('is-hidden');
-      }else if(verb == 'Rename'){
-        $nameGroup.removeClass('is-hidden');
-        $name.val($('#shopping-list-power-bar-list').text());
-        $description.text('');
-        $description.addClass('is-hidden');
-      }else if(verb == 'Delete'){
-        $nameGroup.addClass('is-hidden');
-        $description.removeClass('is-hidden');
-        $description.text('Once deleted your most recent shopping list will become your current list. If you have no shopping lists a new one will be created. Are you sure you want to delete your current shopping list?');
+    function init() {
+      // Get ALL shopping list elements
+      const shoppingLists = document.querySelectorAll('.shopping-list-aside .shopping-list-items');
+
+      // Get ALL toggle buttons from all button sets
+      const viewToggleButtons = document.querySelectorAll('[data-shopping-list-view-toggle]');
+
+      console.log(`Found ${shoppingLists.length} shopping list elements`);
+      console.log(`Found ${viewToggleButtons.length} toggle buttons`);
+
+      const retailerID = webstop.retailerID || 3362;
+
+      const cookieName = 'shopping_list_view_for_retailer_' + retailerID;
+
+      if (shoppingLists.length === 0) {
+        console.warn('No shopping list elements found');
+        return false;
       }
 
+      if (viewToggleButtons.length === 0) {
+        console.warn('No toggle buttons found');
+        return false;
+      }
 
-      // Form response expects the following JSON:
-      // {
-      //   status: 'success' or 'failure',
-      //   message: 'text message here'
-      // }
-      $form.on('submit', function(e) {
-        e.preventDefault();
-        // Do ajax calling url
-        let request = $.ajax({
-          url: url,
-          method: 'POST',
-          //data: { id : menuId },
-          contentType: "application/json",
-          dataType: 'json'
+      function setViewState(viewState) {
+        console.log(`Setting view state to "${viewState}" for ${shoppingLists.length} shopping lists`);
+
+        // Update ALL shopping list elements
+        shoppingLists.forEach((shoppingList, index) => {
+          shoppingList.setAttribute('data-shopping-list-view', viewState);
+          console.log(`Updated shopping list ${index + 1}:`, shoppingList);
         });
 
-        request.done(function(jqXHR, data){
-          console.log('ajax response status: ' + data.status);
-          console.log('message: ' + data.message);
-          if(data.status == 'success'){
-            response = data;
-            $modal.modal('hide');
-            console.log('hide modal triggered');
-          } else if(data.status == 'failure') {
-            response = data;
+        // Update ALL button states across all button sets
+        viewToggleButtons.forEach(btn => {
+          const buttonViewState = btn.getAttribute('data-shopping-list-view-toggle');
+          if (buttonViewState === viewState) {
+            btn.classList.add('active');
           } else {
-            response = {status: 'failure', message: 'Unable to process request. Please try again.'};
+            btn.classList.remove('active');
           }
-
-          if(response.status == 'failure') {
-            $errors.html('<p class="shopping-list-form-errors-message alert alert-danger">' + response.message + '</p>');
-          }
-
         });
 
-        request.fail(function(response){
-          $errors.html('<p class="shopping-list-form-errors-message alert alert-danger">' + response.message + '</p>');
+        // Save the view state to cookie (expires in 365 days)
+        cs3.setCookie(cookieName, viewState, 365);
+        console.log(`View state "${viewState}" saved to cookie`);
+
+        console.log(`All shopping lists updated to: ${viewState}`);
+      }
+
+      function getCurrentViewState() {
+        // Return the state of the first shopping list (they should all be the same)
+        return shoppingLists.length > 0 ?
+          shoppingLists[0].getAttribute('data-shopping-list-view') : null;
+      }
+
+      // Add event listeners to ALL toggle buttons
+      viewToggleButtons.forEach((button, index) => {
+        console.log(`Adding listener to button ${index + 1}:`, button);
+
+        button.addEventListener('click', (event) => {
+          const viewState = event.currentTarget.getAttribute('data-shopping-list-view-toggle');
+          console.log(`Button ${index + 1} clicked, setting view to: ${viewState}`);
+          setViewState(viewState);
         });
-
-
       });
 
-    });
+      // Check for saved view state in cookie, fallback to 'compact' if not found
+      const savedViewState = cs3.getCookie(cookieName);
+      const initialViewState = savedViewState || 'compact';
 
-    $(document.body).on('hidden.bs.modal', '#shopping-list-modal', function(event) {
-      console.log('modal fully hidden');
-      loadShoppingListPowerBar$1();
-    });
+      console.log(`Saved view state from cookie: ${savedViewState}`);
+      console.log(`Setting initial view state to: ${initialViewState}`);
 
+      // Set initial state for all shopping lists
+      setViewState(initialViewState);
 
-  });
+      // Expose globally
+      window.ShoppingListViews = {
+        getCurrentView: getCurrentViewState,
+        setView: setViewState,
+        getShoppingLists: () => shoppingLists,
+        getButtons: () => viewToggleButtons
+      };
+
+      return true;
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
 
 })();
 //# sourceMappingURL=core-styles.js.map

@@ -1,57 +1,114 @@
 "use strict";
-// Search Component
+// Search Component - Modern Vanilla JavaScript Version
 
-$(function() {
+document.addEventListener('DOMContentLoaded', function() {
 
-  function liveSearch(){
-    let delay = null;
+  function liveSearch() {
 
-    $('[data-search="live"]').find('.search-from-search-text').on('keyup', function(event) {
-      clearTimeout(delay);
-      let $form = $(this).parents('[data-search="live"]');
-      let target = $form.data('target');
-      let hide = $form.data('hide');
-      let url = $form.attr('action');
-      let search = event.target.value;
+    document.querySelectorAll('[data-live-search]').forEach(form => {
+      const searchInput = form.querySelector('.live-search-search-text');
+      const clearButton = form.querySelector('.live-search-clear');
+      const target = form.dataset.target;
+      const hide = form.dataset.hide;
+      const url = form.action;
+      let delay = null;
+      let isFirstCall = true;
 
-      if(search.length <= 2){
-        exitSearch(target);
-      } else {
-        let data = $form.serializeArray();
-        delay = setTimeout(function(){ performSearch(data, target, hide, url) }, 500);
+      function handleSearch() {
+
+        if (isFirstCall) {
+          const targetElement = document.querySelector(target);
+          if (targetElement) {
+            targetElement.style.display = 'block';
+            targetElement.innerHTML = '<div class="mx-auto d-block" style="width: 5rem;" role="status"><div class="spinner-grow" style="width: 5rem; height: 5rem;" role="status"></div><br>Searching...</div>';
+          }
+          performSearch(target, hide, url, form);
+          isFirstCall = false;
+        } else {
+          if (delay) {
+            clearTimeout(delay);
+          }
+          delay = setTimeout(() => performSearch(target, hide, url, form), 300);
+        }
       }
-    });
 
-    $('[data-search="live"]').find('.search-form-clear').on('click', function(event) {
-      event.preventDefault();
-      let $form = $(this).parents('[data-search="live"]');
-      let target = $form.data('target');
-      let reveal = $form.data('hide');
-      let $clear = $form.find('.search-from-search-text');
-      exitSearch(target, reveal, $clear);
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        handleSearch(); // No parameters needed
+      });
+
+      searchInput?.addEventListener('keyup', async function(event) {
+        const search = event.target.value;
+
+        if (search.length <= 2) {
+          exitSearch(target);
+          // Reset state when search is too short
+          if (delay) {
+            clearTimeout(delay);
+          }
+          delay = null;
+          isFirstCall = true;
+        } else {
+          handleSearch();
+        }
+      });
+
+      clearButton?.addEventListener('click', function(event) {
+        event.preventDefault();
+        const target = form.dataset.target;
+        const reveal = form.dataset.hide;
+        const searchInput = form.querySelector('.live-search-search-text');
+        exitSearch(target, reveal, searchInput);
+        // Reset state when clearing
+        if (delay) {
+          clearTimeout(delay);
+        }
+        delay = null;
+        isFirstCall = true;
+      });
     });
   }
 
-  function exitSearch(target, reveal = null, $clear = null){
-    if($clear != null){
-      $clear.val('');
+  function exitSearch(target, reveal = null, clearInput = null) {
+    clearInput?.value && (clearInput.value = '');
+
+    const targetElement = document.querySelector(target);
+    if (targetElement) {
+      targetElement.innerHTML = '';
+      targetElement.style.display = 'none';
     }
-    let $target = $(target);
-    $target.html('');
-    $target.hide();
-    if(reveal != null){
-      $(reveal).show();
-    }
+
+    reveal && (document.querySelector(reveal).style.display = 'block');
   }
 
-  function performSearch(data, target, hide, url){
-    let $target = $(target);
-    $(hide).hide();
-    $target.show('fast', function(){
-      $target.load(url, data);
-    });
+  async function performSearch(target, hide, url, form) {
+    const targetElement = document.querySelector(target);
+    const hideElement = hide ? document.querySelector(hide) : null;
+    const data = new FormData(form);
+    hideElement?.style && (hideElement.style.display = 'none');
+
+    if (targetElement) {
+      targetElement.style.display = 'block';
+
+      try {
+        const response = await fetch(url, {
+          method: 'POST',
+          body: data,
+          credentials: 'include',
+          headers: {'X-Requested-With': 'fetch'}
+        });
+
+        if (!response.ok) throw new Error('Network response was not ok');
+
+        const html = await response.text();
+        targetElement.innerHTML = html;
+
+      } catch (error) {
+        console.error('Search request failed:', error);
+        targetElement.innerHTML = '<p>Search failed. Please try again.</p>';
+      }
+    }
   }
 
   liveSearch();
 });
-

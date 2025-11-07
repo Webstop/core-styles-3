@@ -22,6 +22,8 @@ When you set the `data-bs-target` of a modal trigger to `#site-modal`, then you 
 modal, which enables remote content loading via AJAX. The `data-load` attribute specifies the URL to pull the body 
 content from, it is expected to be in HTML format. You should also include the `data-title` to set the text for the title of the modal.
 
+{{< notices/ajax-warning >}}
+
 {{< example >}}
 <button data-bs-toggle="modal" data-bs-target="#site-modal" data-load="/ajax/alert_success" data-title="New Shopping List" data-footer="hide" class="btn btn-primary ">
   New Shopping List

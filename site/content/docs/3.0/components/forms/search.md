@@ -17,26 +17,24 @@ Live search watches a search field and makes AJAX requests as you type.
 
 ## Examples
 
-The base `search-form` class defines the search form. The `search-from-search-text` class identifies the 
+The base `live-search` class defines the search form. The `live-search-search-text` class identifies the 
 text field to watch; the field the consumer types search terms into.
+
+{{< notices/ajax-warning >}}
 
 ### Basic Search Example
 
 <div class="toolbar-detached">
 {{< example >}}
-<form class="search-form" action="/ajax/search_results/" method="post" data-search="live" data-target="#search-results" data-hide=".search-hidden">
-  <div class="input-group">
-    <input class="search-from-search-text form-control" type="text" name="search" placeholder="Search" aria-label="Enter text to search for.">
-    <a href="#" class="search-form-clear icon-cancel-circle-solid" aria-label="Clear Search"></a>
-    <div class="input-group-append">
-      <button class="search-from-submit btn btn-primary " type="submit" aria-label="Submit Search">
-        <i class="fas fa-search"></i>
-      </button>
-    </div>
+<form class="live-search" action="/ajax/search_results/" method="post" data-live-search data-target="#search-results" data-hide=".search-hidden">
+  <div class="input-group mb-3">
+    <input class="live-search-search-text form-control" type="text" name="search" placeholder="Search" aria-label="Enter text to search for.">
+    <button class="btn btn-primary" type="submit" aria-label="Search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
   </div>
 </form>
 
-<br>
 <section id="search-results"></section>
 <section class="search-hidden">
   <h4>Some Page Content</h4>
@@ -49,17 +47,49 @@ text field to watch; the field the consumer types search terms into.
 #### Important Attributes
 
 The following attributes are required for Live Search to function. **They are all placed on the root `form` element**, 
-the same form element the `search-form` is placed on.
+the same form element the `live-search` is placed on.
 
-| Attribute | Description |
-| --- | ----------- |
-| 'data-search'  | The attribute 'data-search' with a value of 'live' enables Live Search on the form. |
-| 'data-target' | The attribute 'data-target' identifies the HTML element to place the search results inside. |
-| 'data-hide' | The attribute 'data-hide' identifies the HTML elements to hide while the search results are being displayed, and reveal when the search is cancelled. |
-| 'action' | The 'action' attribute identifies the URL to use for the AJAX search request. **The results are to be in HTML format.** |
+| Attribute          | Description                                                                                                                                           |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `data-live-search` | The presence of the attribute `data-live-search` enables Live Search on the form. No value is required.                                               |
+| `data-target`      | The attribute `data-target` identifies the HTML element to place the search results inside.                                                           |
+| `data-hide`        | The attribute `data-hide` identifies the HTML elements to hide while the search results are being displayed, and reveal when the search is cancelled. |
+| `action`           | The `action` attribute identifies the URL to use for the AJAX search request. **The results are expected to be in HTML format.**                      |
 
 
 <br>
+
+### Two Hide Targets Example
+
+<div class="toolbar-detached">
+{{< example >}}
+<form class="live-search" action="/ajax/search_results/" method="post" data-live-search data-target="#search-results-two-hides" data-hide=".search-hidden-two-hides">
+  <div class="input-group mb-3">
+    <input class="live-search-search-text form-control" type="text" name="search" placeholder="Search" aria-label="Enter text to search for.">
+    <button class="btn btn-primary" type="submit" aria-label="Search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </div>
+</form>
+
+<section id="search-results-two-hides"></section>
+
+<p>Not hidden.</p>
+
+<section class="search-hidden-two-hides">
+  <h4>Some Page Content</h4>
+  <p>This section should get replaced by search results when a search is active, and reappear when the search is exited.</p>
+</section>
+
+<p>Also Not hidden.</p>
+
+<section class="search-hidden-two-hides">
+  <h4>Some More Page Content</h4>
+  <p>This section should get replaced by search results when a search is active, and reappear when the search is exited.</p>
+</section>
+
+{{< /example >}}
+</div>
 
 ### Search Form in a Toolbar Example
 
@@ -71,15 +101,12 @@ place the `toolbar-group` class on other elements will likely produce undesirabl
 <div class="toolbar-detached">
 {{< example >}}
 <nav class="toolbar">
-  <form class="search-form" action="/ajax/search_results" method="post" data-search="live" data-target="#search-results-toolbar" data-hide=".search-hidden-toolbar">
+  <form class="live-search" action="/ajax/search_results" method="post" data-live-search data-target="#search-results-toolbar" data-hide=".search-hidden-toolbar">
     <div class="toolbar-group input-group">
-      <input class="search-from-search-text form-control" type="text" name="search" placeholder="Search" aria-label="Enter text to search for.">
-      <a href="#" class="search-form-clear icon-cancel-circle-solid" aria-label="Clear Search"></a>
-      <div class="input-group-append">
-        <button class="search-from-submit btn btn-primary " type="submit" aria-label="Submit Search">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
+      <input class="live-search-search-text form-control" type="text" name="search" placeholder="Search" aria-label="Enter text to search for.">
+      <button class="btn btn-primary" type="submit" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
     </div>
   </form>
 </nav>
@@ -96,20 +123,17 @@ place the `toolbar-group` class on other elements will likely produce undesirabl
 ### Complex Search Form Example
 
 Search forms can have any number of fields and the AJAX request will submit them along with the 
-`search-from-search-text` field.
+`live-search-search-text` field.
 
 <div class="toolbar-detached">
 {{< example >}}
-<form class="search-form" action="/ajax/search_results" method="post" data-search="live" data-target="#search-results-complex" data-hide=".search-hidden-complex">
+<form class="live-search" action="/ajax/search_results" method="post" data-live-search data-target="#search-results-complex" data-hide=".search-hidden-complex">
   <div class="form-group">
-    <div class="input-group">
-      <input class="search-from-search-text form-control" type="text" name="search" placeholder="Search" aria-label="Enter text to search for.">
-      <a href="#" class="search-form-clear icon-cancel-circle-solid" aria-label="Clear Search"></a>
-      <div class="input-group-append">
-        <button class="search-from-submit btn btn-primary " type="submit" aria-label="Submit Search">
-         <i class="fas fa-search"></i>
-        </button>
-      </div>
+    <div class="input-group mb-3">
+      <input class="live-search-search-text form-control" type="text" name="search" placeholder="Search" aria-label="Enter text to search for.">
+      <button class="btn btn-primary" type="submit" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
     </div>
   </div>
 

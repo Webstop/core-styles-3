@@ -15,6 +15,8 @@ menu:
 In the most basic form of lazy loading content we have the Load on View feature. This feature allows you to load in
 HTML content via AJAX only when the HTML element enters the web browser's viewport.
 
+{{< notices/ajax-warning >}}
+
 ```html
 <div data-load-on-view="/ajax/ajax_page_1">
   ...loading spinner...
