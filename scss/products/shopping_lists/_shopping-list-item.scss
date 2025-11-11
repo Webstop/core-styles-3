@@ -1,0 +1,38 @@
+// We use the plural shopping-list-items container for the styling because the states change based on data attributes on the container.
+.shopping-list-item {
+
+  .shopping-list-item-image-container {
+    max-width: 50px;
+    max-height: 50px;
+    overflow: hidden;
+  }
+  .shopping-list-item-image {
+    max-height: 50px;
+  }
+
+  // Sub-Classes Edit and Delete rulesets
+  &.shopping-list-item-edit, &.shopping-list-item-delete {
+
+    .shopping-list-item{
+      margin-bottom: 1rem;
+    }
+    .shopping-list-item-image-container {
+      max-width: 200px;
+      max-height: 150px;
+      overflow: hidden;
+    }
+    .shopping-list-item-image {
+      max-width: 200px;
+      max-height: 150px;
+    }
+    .shopping-list-item-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    .shopping-list-item-tagline{
+      font-weight: bold;
+    }
+
+  }
+
+}

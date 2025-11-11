@@ -1,0 +1,21 @@
+// Extend Bootstrap Dropdowns
+
+/* Replace Bootstrap caret with FontAwesome icon & add animation */
+.dropdown-toggle::after {
+  font-family: "Font Awesome 7 Pro";
+  font-weight: 900;
+  content: "\f107"; /* Unicode for fa-angle-down */
+  border: none;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+/* Rotate icon when dropdown is open */
+.dropdown-toggle[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+
+.dropdown-toggle::after {
+  transition: transform 0.2s ease;
+}

@@ -11910,6 +11910,26 @@ textarea.form-control-lg {
   background: #212529 !important;
 }
 
+/* Replace Bootstrap caret with FontAwesome icon & add animation */
+.dropdown-toggle::after {
+  font-family: "Font Awesome 7 Pro";
+  font-weight: 900;
+  content: "\f107"; /* Unicode for fa-angle-down */
+  border: none;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+/* Rotate icon when dropdown is open */
+.dropdown-toggle[aria-expanded=true]::after {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+
+.dropdown-toggle::after {
+  transition: transform 0.2s ease;
+}
+
 .box-stackable {
   margin-bottom: 1.5rem;
 }
@@ -13397,6 +13417,10 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   }
 }
 
+.shopping-list-aside .shopping-list-view-selector active {
+  color: #fff;
+}
+
 .shopping-list-items {
   /* Compact View */
   /* In-Store View */
@@ -13427,6 +13451,34 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
 }
 .shopping-list-items[data-shopping-list-view=expanded] .shopping-list-item-shop-col {
   display: none;
+}
+
+.shopping-list-item .shopping-list-item-image-container {
+  max-width: 50px;
+  max-height: 50px;
+  overflow: hidden;
+}
+.shopping-list-item .shopping-list-item-image {
+  max-height: 50px;
+}
+.shopping-list-item.shopping-list-item-edit .shopping-list-item, .shopping-list-item.shopping-list-item-delete .shopping-list-item {
+  margin-bottom: 1rem;
+}
+.shopping-list-item.shopping-list-item-edit .shopping-list-item-image-container, .shopping-list-item.shopping-list-item-delete .shopping-list-item-image-container {
+  max-width: 200px;
+  max-height: 150px;
+  overflow: hidden;
+}
+.shopping-list-item.shopping-list-item-edit .shopping-list-item-image, .shopping-list-item.shopping-list-item-delete .shopping-list-item-image {
+  max-width: 200px;
+  max-height: 150px;
+}
+.shopping-list-item.shopping-list-item-edit .shopping-list-item-title, .shopping-list-item.shopping-list-item-delete .shopping-list-item-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.shopping-list-item.shopping-list-item-edit .shopping-list-item-tagline, .shopping-list-item.shopping-list-item-delete .shopping-list-item-tagline {
+  font-weight: bold;
 }
 
 /* CSS Customizations done by Mickey*/
