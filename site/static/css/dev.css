@@ -11930,6 +11930,132 @@ textarea.form-control-lg {
   transition: transform 0.2s ease;
 }
 
+.bg-blue {
+  background-color: #0d6efd;
+}
+
+.bg-indigo {
+  background-color: #6610f2;
+}
+
+.bg-purple {
+  background-color: #6f42c1;
+}
+
+.bg-pink {
+  background-color: #d63384;
+}
+
+.bg-red {
+  background-color: #dc3545;
+}
+
+.bg-orange {
+  background-color: #fd7e14;
+}
+
+.bg-yellow {
+  background-color: #ffc107;
+}
+
+.bg-green {
+  background-color: #198754;
+}
+
+.bg-teal {
+  background-color: #20c997;
+}
+
+.bg-cyan {
+  background-color: #0dcaf0;
+}
+
+.text-bg-blue {
+  color: #fff;
+  background-color: #0d6efd;
+}
+
+.text-bg-indigo {
+  color: #fff;
+  background-color: #6610f2;
+}
+
+.text-bg-purple {
+  color: #fff;
+  background-color: #6f42c1;
+}
+
+.text-bg-pink {
+  color: #fff;
+  background-color: #d63384;
+}
+
+.text-bg-red {
+  color: #fff;
+  background-color: #dc3545;
+}
+
+.text-bg-orange {
+  color: #000;
+  background-color: #fd7e14;
+}
+
+.text-bg-yellow {
+  color: #000;
+  background-color: #ffc107;
+}
+
+.text-bg-green {
+  color: #fff;
+  background-color: #198754;
+}
+
+.text-bg-teal {
+  color: #000;
+  background-color: #20c997;
+}
+
+.text-bg-cyan {
+  color: #000;
+  background-color: #0dcaf0;
+}
+
+.bg-circular {
+  background-color: #dc3545;
+}
+
+.bg-coupon {
+  background-color: #0d6efd;
+}
+
+.bg-recipe {
+  background-color: #198754;
+}
+
+.bg-shopping-list {
+  background-color: #6f42c1;
+}
+
+.text-bg-circular {
+  color: #fff;
+  background-color: #dc3545;
+}
+
+.text-bg-coupon {
+  color: #fff;
+  background-color: #0d6efd;
+}
+
+.text-bg-recipe {
+  color: #fff;
+  background-color: #198754;
+}
+
+.text-bg-shopping-list {
+  color: #fff;
+  background-color: #6f42c1;
+}
+
 .box-stackable {
   margin-bottom: 1.5rem;
 }
@@ -12072,6 +12198,70 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
     flex-direction: column;
   }
 }
+.text-faux {
+  color: #999;
+  padding: 0.3em;
+  font-size: 0.4em;
+  background-color: #ccc;
+  opacity: 0.5;
+}
+
+.text-blue {
+  color: #0d6efd;
+}
+
+.text-indigo {
+  color: #6610f2;
+}
+
+.text-purple {
+  color: #6f42c1;
+}
+
+.text-pink {
+  color: #d63384;
+}
+
+.text-red {
+  color: #dc3545;
+}
+
+.text-orange {
+  color: #fd7e14;
+}
+
+.text-yellow {
+  color: #ffc107;
+}
+
+.text-green {
+  color: #198754;
+}
+
+.text-teal {
+  color: #20c997;
+}
+
+.text-cyan {
+  color: #0dcaf0;
+}
+
+.text-circular {
+  color: #dc3545;
+}
+
+.text-coupon {
+  color: #0d6efd;
+}
+
+.text-recipe {
+  color: #198754;
+}
+
+.text-shopping-list {
+  color: #6f42c1;
+}
+
 .admin {
   grid-template-columns: auto;
   grid-template-rows: 60px auto 40px;
@@ -12843,36 +13033,6 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
     position: relative;
   }
 }
-/* circulars: collection of ads */
-.circulars .circular-preview-title {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.circulars .circular-preview-title-badge {
-  font-size: 1.2rem;
-}
-.circulars.circulars-banner-max-width-1140 .circular-item-banner {
-  max-width: 1140px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.circulars.circulars-content-width-1140 .circular-content {
-  max-width: 1140px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.circulars.circulars-content-width-1440 .circular-content {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.circulars.circulars-content-width-1600 .circular-content {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* circular: an individual ad */
 .circular .circular-header {
   margin-top: 2rem;
@@ -13415,6 +13575,36 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
     padding-left: 10px;
     padding-right: 10px;
   }
+}
+
+/* circulars: collection of ads */
+.circulars .circular-preview-title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.circulars .circular-preview-title-badge {
+  font-size: 1.2rem;
+}
+.circulars.circulars-banner-max-width-1140 .circular-item-banner {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.circulars.circulars-content-width-1140 .circular-content {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.circulars.circulars-content-width-1440 .circular-content {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.circulars.circulars-content-width-1600 .circular-content {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .shopping-list-aside .shopping-list-view-selector active {

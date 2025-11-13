@@ -1,0 +1,35 @@
+// Backgrounds
+
+// Bootstrap Colors
+.bg-blue   { background-color: $blue }
+.bg-indigo { background-color: $indigo }
+.bg-purple { background-color: $purple }
+.bg-pink   { background-color: $pink }
+.bg-red    { background-color: $red }
+.bg-orange { background-color: $orange }
+.bg-yellow { background-color: $yellow }
+.bg-green  { background-color: $green }
+.bg-teal   { background-color: $teal }
+.bg-cyan   { background-color: $cyan }
+.text-bg-blue   { color: $white; background-color: $blue }
+.text-bg-indigo { color: $white; background-color: $indigo }
+.text-bg-purple { color: $white; background-color: $purple }
+.text-bg-pink   { color: $white; background-color: $pink }
+.text-bg-red    { color: $white; background-color: $red }
+.text-bg-orange { color: $black; background-color: $orange }
+.text-bg-yellow { color: $black; background-color: $yellow }
+.text-bg-green  { color: $white; background-color: $green }
+.text-bg-teal   { color: $black; background-color: $teal }
+.text-bg-cyan   { color: $black; background-color: $cyan }
+
+// Product Backgrounds
+.bg-circular      { background-color: $circular; }
+.bg-coupon        { background-color: $coupon; }
+.bg-recipe        { background-color: $recipe; }
+.bg-shopping-list { background-color: $shopping-list; }
+
+// Product Backgrounds with Text
+.text-bg-circular      { color: $white; background-color: $circular; }
+.text-bg-coupon        { color: $white; background-color: $coupon; }
+.text-bg-recipe        { color: $white; background-color: $recipe; }
+.text-bg-shopping-list { color: $white;  background-color: $shopping-list; }

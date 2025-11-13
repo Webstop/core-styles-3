@@ -11,6 +11,7 @@
   'bootstrap_extentions/buttons',
   'bootstrap_extentions/dropdowns',
   // Utilities
+  'utilities/background',
   'utilities/box',
   'utilities/icons',
   'utilities/max-width',
@@ -18,6 +19,7 @@
   'utilities/page-break',
   'utilities/readable',
   'utilities/rows-to-cols',
+  'utilities/text',
   // Layout
   'layout/admin',
   'layout/public',
@@ -31,12 +33,8 @@
   'components/tags',
   'components/sidebar',
   'components/toolbar',
-  // Products
+  // Products - Each file in Products imports all other files for that product
   'products/circulars/circulars',
-  'products/circulars/circular',
-  'products/circulars/circular-item',
-  'products/circulars/circular-item-standard',
-  // TODO: include all circular files, currently only have enough for Sprouts Demo
   'products/shopping_lists/shopping-lists'
 ;
 

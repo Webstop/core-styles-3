@@ -113,8 +113,14 @@ $toolbar-bg:           $theme-primary !default;
 $toolbar-border-color: darken($toolbar-bg, 15%) !default;
 //$toolbar-min-height: 58px !default;
 
-// Grocery Apps
+// Products
 // ===========
+
+// Product Colors
+$circular:      $red !default;
+$coupon:        $blue !default;
+$recipe:        $green !default;
+$shopping-list: $purple !default;
 
 // Circulars
 $circular-max-column-width:    375px !default;

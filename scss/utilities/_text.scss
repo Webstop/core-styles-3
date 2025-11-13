@@ -1,12 +1,14 @@
 // Text
 
-.text-left {
-  text-align: left !important;
-}
 
-.text-right {
-  text-align: right !important;
-}
+// Utilities
+//.text-left {
+//  text-align: left !important;
+//}
+//
+//.text-right {
+//  text-align: right !important;
+//}
 
 .text-faux {
   color: #999;
@@ -15,3 +17,21 @@
   background-color: #ccc;
   opacity: 0.5;
 }
+
+// Bootstrap Colors
+.text-blue   { color: $blue }
+.text-indigo { color: $indigo }
+.text-purple { color: $purple }
+.text-pink   { color: $pink }
+.text-red    { color: $red }
+.text-orange { color: $orange }
+.text-yellow { color: $yellow }
+.text-green  { color: $green }
+.text-teal   { color: $teal }
+.text-cyan   { color: $cyan }
+
+// Product Text
+.text-circular      { color: $circular; }
+.text-coupon        { color: $coupon; }
+.text-recipe        { color: $recipe; }
+.text-shopping-list { color: $shopping-list; }
