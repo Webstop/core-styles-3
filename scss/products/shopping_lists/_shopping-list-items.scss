@@ -29,6 +29,9 @@
 
   /* In-Store View */
   &[data-shopping-list-view="in-store"] {
+    .shopping-list-item-image-container-placeholder {
+      display: none;
+    }
     .shopping-list-item.shopping-list-item-is-purchased {
       .shopping-list-item-image-col,
       .shopping-list-item-text-col {
