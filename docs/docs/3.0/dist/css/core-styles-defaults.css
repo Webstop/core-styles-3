@@ -13633,6 +13633,9 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.shopping-list-items[data-shopping-list-view=in-store] .shopping-list-item-image-container-placeholder {
+  display: none;
+}
 .shopping-list-items[data-shopping-list-view=in-store] .shopping-list-item.shopping-list-item-is-purchased .shopping-list-item-image-col,
 .shopping-list-items[data-shopping-list-view=in-store] .shopping-list-item.shopping-list-item-is-purchased .shopping-list-item-text-col {
   /*background-color: #eee;*/
@@ -13646,6 +13649,10 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
 .shopping-list-item .shopping-list-item-image-container {
   max-width: 50px;
   max-height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
 }
 .shopping-list-item .shopping-list-item-image {
@@ -13657,6 +13664,10 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
 .shopping-list-item.shopping-list-item-edit .shopping-list-item-image-container, .shopping-list-item.shopping-list-item-delete .shopping-list-item-image-container {
   max-width: 200px;
   max-height: 150px;
+  min-width: 200px;
+  min-height: 150px;
+  width: 200px;
+  height: 150px;
   overflow: hidden;
 }
 .shopping-list-item.shopping-list-item-edit .shopping-list-item-image, .shopping-list-item.shopping-list-item-delete .shopping-list-item-image {
