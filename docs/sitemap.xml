@@ -148,6 +148,10 @@
   </url><url>
     <loc>https://guides.webstop.com/docs/3.0/</loc>
   </url><url>
+    <loc>https://guides.webstop.com/docs/3.0/products/coupons/</loc>
+  </url><url>
+    <loc>https://guides.webstop.com/docs/3.0/products/store-locator/</loc>
+  </url><url>
     <loc>https://guides.webstop.com/docs/3.0/icons/crud-icons/</loc>
   </url><url>
     <loc>https://guides.webstop.com/docs/3.0/bootstrap-extentions/</loc>
@@ -202,6 +206,8 @@
   </url><url>
     <loc>https://guides.webstop.com/dev/layouts/</loc>
   </url><url>
+    <loc>https://guides.webstop.com/docs/3.0/products/coupons/legacy-coupon-item/</loc>
+  </url><url>
     <loc>https://guides.webstop.com/docs/3.0/components/forms/search/</loc>
   </url><url>
     <loc>https://guides.webstop.com/docs/3.0/components/ajax/infinite-scroll-demos/load-on-view-demo/</loc>
@@ -244,13 +250,13 @@
   </url><url>
     <loc>https://guides.webstop.com/docs/3.0/products/circulars/standard-circular-item/</loc>
   </url><url>
+    <loc>https://guides.webstop.com/docs/3.0/products/coupons/standard-coupon-item/</loc>
+  </url><url>
     <loc>https://guides.webstop.com/docs/3.0/products/circulars/standard-coupon-item/</loc>
   </url><url>
     <loc>https://guides.webstop.com/docs/3.0/products/circulars/standard-promotion-item/</loc>
   </url><url>
     <loc>https://guides.webstop.com/docs/3.0/design-patterns/page-layouts/</loc>
-  </url><url>
-    <loc>https://guides.webstop.com/docs/3.0/products/store-locator/</loc>
   </url><url>
     <loc>https://guides.webstop.com/docs/3.0/components/tagging/tag-search/</loc>
   </url><url>

@@ -1,0 +1,86 @@
+{{- /* Initialize or increment the counter */ -}}
+{{- if not (.Page.Scratch.Get "coupon-item-counter") -}}
+  {{- .Page.Scratch.Set "coupon-item-counter" 1 -}}
+{{- else -}}
+  {{- .Page.Scratch.Set "coupon-item-counter" (add (.Page.Scratch.Get "coupon-item-counter") 1) -}}
+{{- end -}}
+{{- $couponId := .Page.Scratch.Get "coupon-item-counter" -}}
+
+<div class="flip-card-container">
+  <div class="flip-card">
+    <div class="shadow coupon-item coupon-item-legacy card card-standard flip-card-front"  id="coupon-item-{{ $couponId }}">
+      <div class="coupon-item-body card-body flip-card-scrollable">
+
+        <div class="d-flex">
+          <div class="flex-shrink-0">
+            <img src="/assets/images/circular-items/dove_coupon.png" alt="Picture of Offer Products" class="coupon-item-image img-fluid">
+          </div>
+
+          <div class="flex-grow-1 ms-3">
+            <h3 class="coupon-item-title">Save $1.00</h3>
+            <p class="coupon-item-description">on any ONE (1) Dove Body Wash (22 oz. or larger) or Shower Foam (13.5 oz.) (excludes trial and travel sizes and Dove Men+Care)</p>
+            <p class="coupon-item-expiration-date text-muted text-right">Expires: 10/30/2020</p>
+          </div>
+        </div>
+
+
+        <p class="coupon-item-recipe">
+          <span class="coupon-item-recipe-label">Recipe:</span>
+          <a href="http://www.topsmarkets.com/Recipes/Detail/7417/Amaize_Sweet_Corn_Summer_Spreads/" class="coupon-item-recipe-title-link">
+            Clean and Refreshing Soap Soup!
+          </a>
+        </p>
+      </div>
+      <div class="card-footer">
+        <div class="row">
+          <div class="col">
+            <span class="fs-4 text-primary flip-card-trigger"><i class="fa-solid fa-circle-info"></i></span>
+          </div>
+          <div class="col-auto">
+            <div class="shopping-list-item">
+              <div role="region" id="shopping-list-item-{{ $couponId }}" class="coupon-item-shopping-list-wrapper" aria-live="polite">
+                <form action="http://www.topsmarkets.com/WeeklyAd/ShoppingList/Add/NoJS//?I=457079&amp;L=0_2&amp;Ad=180812&amp;D=2018-08-16&amp;Test=" method="post" onsubmit="listAdd('457079', '0_2', '180812', '2018-08-16', '', ''); return false;" class="coupon-item-shopping-list-form">
+                  <fieldset>
+                    <input type="hidden" name="URL" value="WeeklyAd/Index/" id="url-{{ $couponId }}">
+                    <button type="submit" class="btn btn-primary">
+                      <i class="fa-kit fa-add-circle me-1"></i> Add Coupon
+                    </button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shadow coupon-item coupon-item-legacy card card-standard flip-card-back"  id="coupon-item-{{ $couponId }}-back">
+      <div class="coupon-item-body card-body overflow-y-auto">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+      </div>
+      <div class="card-footer">
+        <div class="row">
+          <div class="col">
+            <span class="fs-4 text-danger flip-card-trigger"><i class="fa-kit fa-cancel-circle"></i></span>
+          </div>
+          <div class="col-auto">
+            <div class="shopping-list-item">
+              <div role="region" id="shopping-list-item-{{ $couponId }}-back" class="coupon-item-shopping-list-wrapper" aria-live="polite">
+                <form action="http://www.topsmarkets.com/WeeklyAd/ShoppingList/Add/NoJS//?I=457079&amp;L=0_2&amp;Ad=180812&amp;D=2018-08-16&amp;Test=" method="post" onsubmit="listAdd('457079', '0_2', '180812', '2018-08-16', '', ''); return false;" class="coupon-item-shopping-list-form">
+                  <fieldset>
+                    <input type="hidden" name="URL" value="WeeklyAd/Index/" id="url-{{ $couponId }}-back">
+                    <button type="submit" class="btn btn-primary">
+                      <i class="fa-kit fa-add-circle me-1"></i> Add Coupon
+                    </button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
