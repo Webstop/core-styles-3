@@ -16,6 +16,7 @@ import './ajax-load';
 import './ajax-modal';
 import './bootstrap-data-attributes';
 import './btn-disabled';
+import './card-flipper';
 import './checkbox-selector';
 import './filter-search';
 import './form-toggles';

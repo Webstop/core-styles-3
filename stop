@@ -3,7 +3,7 @@ puts ''
 puts "Stopping running containers with 'core-styles-3' in the name..."
 puts ''
 
-# Get container IDs for running containers with "klakegg" in the name
+# Get container IDs for running containers with "core-styles-3" in the name
 container_ids = `docker container ls -q --filter name=core-styles-3`.strip.split("\n")
 
 if container_ids.empty?

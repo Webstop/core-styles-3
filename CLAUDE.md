@@ -30,7 +30,7 @@ Once both are running, visit http://localhost:1313/ to see the documentation sit
 
 ### Manual Build Commands
 
-When auto-watch fails (known issue), use these manual commands:
+The `./watch` script has known issues (JS watcher misconfigured). Use these manual commands:
 
 **Documentation site CSS:**
 ```bash
@@ -111,22 +111,20 @@ Built with Hugo static site generator. Structure:
 - `site/static/` - Static assets (copied from compilation)
 - `site/assets/scss/` - Documentation site-specific styles
 
-**Important note:** Everything in `site/` is copied to the `docs/` folder in root during the build process, so the files in the `site/` folder are the actual documentation site that can be edited directly.
+Content organization (paths relative to `site/content/`):
+- `docs/3.0/getting-started/` - Introduction and setup
+- `docs/3.0/layouts/` - Page layout patterns
+- `docs/3.0/components/` - Reusable components
+- `docs/3.0/products/` - Product-specific features (circulars, store locator, shopping lists)
+- `docs/3.0/utilities/` - CSS utility classes
+- `docs/3.0/icons/` - Icon documentation
+- `guides/3.0/` - Development approach and process guides
 
-Content organization:
-- `/docs/3.0/getting-started/` - Introduction and setup
-- `/docs/3.0/layouts/` - Page layout patterns
-- `/docs/3.0/components/` - Reusable components
-- `/docs/3.0/products/` - Product-specific features (circulars, store locator, shopping lists)
-- `/docs/3.0/utilities/` - CSS utility classes
-- `/docs/3.0/icons/` - Icon documentation
-- `/guides/3.0/` - Development approach and process guides
-
-**Important note:** Everything in the `site/` folder is copied to the `docs/` in root folder during the build process, so the files in the root `docs/` folder are NOT part of development environment and should NOT be edited directly.
+**Important:** The `docs/` folder in the project root is generated output - do NOT edit it directly. Edit files in `site/` instead.
 
 ## Deployment Process
 
-1. Update version in `package.json` and `config.yml`
+1. Update version in `package.json` (the `npm run pushable` script syncs it to `config.yml` automatically)
 2. Run `npm run pushable` (builds dist/, docs/, and creates version file)
 3. Commit and push changes
 4. Create GitHub release tag (e.g., `v3.0.12`)
@@ -150,13 +148,13 @@ All component development happens within the documentation site itself. The exam
 
 Build patterns/components in the docs first, then they automatically become available to consuming applications through the npm package distribution.
 
-## Dependencies
+## Testing
 
-- Bootstrap 5.3.7
-- jQuery 3.7.1
-- Popper.js 2.11.8
-- Hugo (via hugo-bin)
-- Sass 1.50.1
-- Toast UI Editor 3.2.2
-- ahoy.js 0.4.3 (analytics)
-- js-cookie 3.0.5
+This project has no automated test suite. Verify changes manually using the documentation site at `localhost:1313`.
+
+## Key Dependencies
+
+- Bootstrap 5.3.7 - CSS framework (must be imported before `_core-styles.scss`)
+- jQuery 3.7.1 - Required for JS functionality
+- Hugo (via hugo-bin) - Static site generator for documentation
+- Rollup - JavaScript bundler (config: `build/rollup.config.mjs`)

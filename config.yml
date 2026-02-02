@@ -53,7 +53,7 @@ module:
     - source: site/static
       target: static
 params:
-  icons_kit_key: 8bda546f76
+  icons_kit_key: db5b382bd2
   repo: https://github.com/webstop/core-styles-3
   website: https://guides.webstop.com
   build:
@@ -62,7 +62,7 @@ params:
     description: Design System for Webstop's products.
     author: Greg Hemphill
     license: private
-    buildDate: '2025-12-18T20:53:35.374Z'
+    buildDate: '2026-01-30T16:00:20.921Z'
     nodeVersion: v18.4.0
     repository: https://github.com/webstop/core-styles-3
     homepage: https://guides.webstop.com/
