@@ -1,0 +1,59 @@
+.coupon-items {
+  padding-right: calc(#{$grid-gutter-width}/2);
+  .col-12 {
+    padding-right: 0;
+  }
+  @include media-breakpoint-up(sm) {
+    & {
+      padding-right: 0;
+      .col-12 {
+        padding-right: calc(#{$grid-gutter-width}/2);
+      }
+    }
+  }
+}
+
+.coupon-item {
+  max-width: $circular-max-column-width;
+  min-width: $circular-min-column-width;
+  position: relative;
+  &.card {
+    margin-right: 0;
+  }
+
+  @include media-breakpoint-up(sm) {
+    max-width: $circular-sm-max-column-width;
+    min-width: $circular-sm-min-column-width;
+    &.card {
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-right: calc(#{$grid-gutter-width}/2);
+      margin-bottom: calc(#{$grid-gutter-width}/2);
+      margin-left: calc(#{$grid-gutter-width}/2);
+      margin-top: calc(#{$grid-gutter-width}/2);
+    }
+  }
+
+  &.coupon-item-max {
+    width: $circular-max-column-width;
+  }
+
+  &.coupon-item-avg {
+    width: calc(#{$circular-min-column-width} + (#{$circular-max-column-width} - #{$circular-min-column-width})/2);
+  }
+
+  &.coupon-item-min {
+    width: $circular-min-column-width;
+  }
+
+  &.coupon-item-min {
+    width: $circular-min-column-width;
+  }
+
+  &.coupon-item-paper-coupon {
+    border-style: dashed;
+    border-color: $primary;
+    border-width: 2px;
+  }
+
+}

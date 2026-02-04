@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+/* coupon-item: an individual ad item */
+.coupon-item-standard {
+  border: 2px dashed $primary;
+  text-align: center;
+  &::after {
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    font-size: 2rem;
+    line-height: 0.35;
+    content: '✃';
+    color: $primary;
+  }
+
+  .coupon-item-body {
+    padding: 5px;
+  }
+
+  .coupon-item-description,
+  .coupon-item-details,
+  .coupon-item-expiration-date,
+  .coupon-item-sale-dates,
+  .coupon-item-more-info {
+    //font-size: 0.625rem; // 10/16=0.625
+    font-size: 1.0rem;
+  }
+
+  .coupon-item-image {
+    min-height: 0.01px; // fixes height on IE11
+  }
+
+  .coupon-item-recipe {
+    font-size: 0.75rem; // 12/16=0.75
+  }
+
+  .coupon-item-info-trigger {
+    margin-bottom: 0;
+  }
+
+  .coupon-item-title {
+    font-size: 1.125rem; // 18/16=1.125
+  }
+
+  .coupon-item-heading,
+  .coupon-item-title,
+  .price,
+  .coupon-item-description,
+  .coupon-item-details,
+  .coupon-item-expiration-date,
+  .coupon-item-sale-dates,
+  .coupon-item-more-info,
+  .coupon-item-recipe {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .coupon-item-recipe {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: left;
+  }
+
+  &.coupon-item-price-top {
+    .coupon-item-body {
+      position: relative;
+      padding-top: calc(#{$spacer} + 48px);
+    }
+    .price {
+      position: absolute;
+      top: calc(#{$spacer} / 2);
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &.coupon-item-price-bottom {
+    .coupon-item-body {
+      position: relative;
+      padding-bottom: calc(#{$spacer} + 48px);
+    }
+    .price {
+      position: absolute;
+      bottom: calc(#{$spacer} / 2);
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  // iPad & Desktop
+  @include media-breakpoint-up(sm) {
+    .coupon-item-body {
+      padding: 10px;
+    }
+
+    .coupon-item-title {
+      font-size: 1.75rem; // 28/16=1.75
+    }
+
+    .coupon-item-heading,
+    .coupon-item-description,
+    .coupon-item-details,
+    .coupon-item-expiration-date,
+    .coupon-item-sale-dates,
+    .coupon-item-more-info {
+      font-size: 0.75rem; // 12/16=0.75
+    }
+
+    .coupon-item-recipe {
+      font-size: 1rem;
+    }
+
+    .coupon-item-heading,
+    .coupon-item-title,
+    .price,
+    .coupon-item-description,
+    .coupon-item-details,
+    .coupon-item-expiration-date,
+    .coupon-item-sale-dates,
+    .coupon-item-more-info,
+    .coupon-item-recipe {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+
+    .coupon-item-recipe {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+  }
+
+}

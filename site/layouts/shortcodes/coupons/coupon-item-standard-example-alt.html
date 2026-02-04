@@ -1,0 +1,37 @@
+<div class="card-flipper-container">
+  <div class="card-flipper card-flipper-auto-height">
+    <div class="card-flipper-front">
+      <article class="shadow coupon-item coupon-item-standard card card-standard h-100">
+        <img src="/assets/images/coupon-items/pepsi_24pk_coupon.png" alt="Picture of Offer Products" class="coupon-item-image img-fluid">
+        <div class="coupon-item-body card-body">
+          <h3 class="coupon-item-title">Save $3</h3>
+          <p class="coupon-item-description">on Pepsi 24 Pack</p>
+          <p class="coupon-item-expiration-date text-muted">Expires: 2/7/2026</p>
+        </div>
+        <div class="coupon-item-footer card-footer d-flex justify-content-between align-items-center">
+          {{ partial "shopping-lists/shopping-list-add-coupon-form-mini-example" }}
+          <span class="card-flipper-trigger btn btn-sm btn-outline-secondary">
+            <i class="fa-solid fa-info-circle"></i> Details
+          </span>
+        </div>
+      </article>
+    </div>
+    <div class="card-flipper-back">
+      <div class="card h-100 shadow">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <strong>Coupon Details</strong>
+          <span class="card-flipper-trigger btn btn-sm btn-outline-secondary">
+            <i class="fa-solid fa-times"></i> Close
+          </span>
+        </div>
+        <div class="card-body card-flipper-scrollable-container">
+          <div class="card-flipper-scrollable" tabindex="0">
+            <p>Save $3 on Pepsi 24 Pack</p>
+            <p>24/12 fl. oz. cans, Plus Deposit Where Applicable.</p>
+            <p>Offer not valid with any other coupons. Coupon not subject to doubling. Limit one deal per customer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

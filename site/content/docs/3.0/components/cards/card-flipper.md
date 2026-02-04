@@ -10,39 +10,9 @@ menu:
       tags: "cards, flipper, flip, reveal, back, front"
       parent: Components
 ---
-
-#### Card Flipper!!!!
-
 Flipper is a component that allows you to flip a card over to reveal the back side.
 
 This component is useful for creating interactive cards that can be flipped over to reveal additional information or content.
-
-
-
-
-<div style="min-height: 200px;">
-<div class="card-flipper-container w-25">
-  <div class="card-flipper">
-  <div class="card-flipper-front">
-    <div class="border rounded p-3">
-      <h4>Front Card</h4>
-      <p>This si the front of the card, click the info icon to flip to the back side.</p>
-      <div class="card-flipper-trigger coupon-flip-icon">
-        <i class="fa-solid fa-info-circle"></i> Flip Me!
-      </div>
-    </div>
-  </div>
-  <div class="card-flipper-back">
-    <div class="card-flipper-scrollable-container border rounded p-3" style="max-height: 158px;">
-      <h4>Back Card</h4>
-      <div class="card-flipper-trigger coupon-cancel-flip">
-        <i class="fak fa-cancel-circle"></i>
-      </div>
-    </div>
-  </div>
-  </div>
-</div>
-</div>
 
 
 # Flip Cards in a Grid
@@ -166,81 +136,5 @@ This component is useful for creating interactive cards that can be flipped over
   </div>
 </div>
 
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.body.addEventListener('click', function(e) {
-    const trigger = e.target.closest('.card-flipper-trigger');
-    
-    if (trigger) {
-      e.stopPropagation();
-      const card = trigger.closest('.card-flipper');
-      
-      if (card) {
-        card.classList.toggle('card-flipper-is-flipped');
-      }
-    }
-  });
-});
-</script>
-
-<style>
-.card-flipper-container {
-  perspective: 500px;
-  -webkit-perspective: 500px;
-}
-
-.card-flipper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-}
-
-/* Fixed height variant for grid layouts */
-.card-flipper.card-flipper-fixed-height {
-  min-height: 280px;
-}
-
-.card-flipper.card-flipper-is-flipped {
-  transform: rotateY(180deg);
-}
-
-.card-flipper-front,
-.card-flipper-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translate3d(0,0,0);
-}
-
-.card-flipper-back {
-  transform: rotateY(180deg);
-}
-
-.card-flipper-scrollable-container {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.card-flipper-scrollable {
-  height: 100%;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  transform: translateZ(0);
-  padding-right: 5px;
-}
-
-/* Make card body flex for scrollable content */
-.card-flipper-back .card-body.card-flipper-scrollable-container {
-  overflow: hidden;
-}
-</style>
 
 

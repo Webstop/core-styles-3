@@ -1,0 +1,75 @@
+.card-flipper-container {
+  // Perspective makes the animations appear 3D, with the part closer being larger in perspective.
+  // It makes the cards appear to be in a 3D when flipping.
+  // Lower numbers make the effect more dramatic.
+  perspective: 500px;
+  -webkit-perspective: 500px;
+
+
+  .card-flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+
+
+    /* Fixed height variant for grid layouts */
+    &.card-flipper-fixed-height {
+      min-height: 280px;
+    }
+
+    &.card-flipper-is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-flipper-front,
+    .card-flipper-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .card-flipper-back {
+      transform: rotateY(180deg);
+    }
+
+    .card-flipper-scrollable-container {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-flipper-scrollable {
+      height: 100%;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      transform: translateZ(0);
+      padding-right: 5px;
+    }
+
+    /* Make card body flex for scrollable content */
+    .card-flipper-back .card-body.card-flipper-scrollable-container {
+      overflow: hidden;
+    }
+
+    /* Auto height variant - front determines height, back overlays */
+    &.card-flipper-auto-height {
+      .card-flipper-front {
+        position: relative;
+      }
+
+      .card-flipper-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+      }
+    }
+  }
+}

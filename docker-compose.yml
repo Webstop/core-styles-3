@@ -1,11 +1,13 @@
 services:
   build:
+    platform: linux/amd64
     image: klakegg/hugo:0.101.0-ext-alpine
     command: --cleanDestinationDir
     volumes:
       - .:/src
       - ./docs:/target
   server:
+    platform: linux/amd64
     image: klakegg/hugo:0.101.0-ext-alpine
     command: server --renderToDisk --disableFastRender
     volumes:
@@ -13,6 +15,7 @@ services:
     ports:
       - 1313:1313
   rebuild:
+    platform: linux/amd64
     image: klakegg/hugo:0.101.0-ext-alpine
     entrypoint: watch -n 5 hugo --cleanDestinationDir
     volumes:
