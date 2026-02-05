@@ -34,6 +34,13 @@
     }
   }
 
+  // Remove margins when inside card-flipper (grid handles spacing)
+  .card-flipper & {
+    margin: 0;
+    max-width: none;
+    min-width: 0;
+  }
+
   &.coupon-item-max {
     width: $circular-max-column-width;
   }

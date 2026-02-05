@@ -30,15 +30,38 @@ class is unnecessary.
 
 ### Grid of Coupons 
 
+Here we demonstrate a grid of coupons. You can see the heights of the coupons will match the tallest offer in the grid row.
+
 <div class="row row-cols-2 row-cols-md-3 g-4">
-  <div class="col card-flipper-container">
-    {{< coupons/coupon-item-standard-example-2 >}}
+  <div class="col">
+    {{< coupons/coupon-item-standard-dove-example >}}
   </div>
-  <div class="col card-flipper-container">
-    {{< coupons/coupon-item-standard-example-alt >}}
+  <div class="col">
+    {{< coupons/coupon-item-standard-pepsi-example >}}
   </div>
-  <div class="col card-flipper-container">
-    {{< coupons/coupon-item-standard-example-2 >}}
+  <div class="col">
+    {{< coupons/coupon-item-standard-dove-example >}}
+  </div>
+  <div class="col">
+    {{< coupons/coupon-item-standard-dove-example >}}
+  </div>
+  <div class="col">
+    {{< coupons/coupon-item-standard-dove-example >}}
+  </div>
+  <div class="col">
+    {{< coupons/coupon-item-standard-dove-example >}}
+  </div>
+  <div class="col">
+    {{< coupons/coupon-item-standard-pepsi-example >}}
+  </div>
+  <div class="col">
+    {{< coupons/coupon-item-standard-pepsi-example >}}
+  </div>
+  <div class="col">
+    {{< coupons/coupon-item-standard-pepsi-example >}}
+  </div>
+  <div class="col">
+    {{< coupons/coupon-item-standard-dove-example >}}
   </div>
 </div>
 
@@ -51,7 +74,7 @@ of a `row`.
 <div class="wsg-example">
   <div class="row">
     {{< circular/circular-item-standard-coupon-example >}}
-    {{< coupons/coupon-item-standard-example-2 >}}
+    {{< coupons/coupon-item-standard-dove-example >}}
     {{< coupons/coupon-item-standard-example >}}
     {{< coupons/coupon-item-standard-example >}}
     {{< coupons/coupon-item-standard-example >}}

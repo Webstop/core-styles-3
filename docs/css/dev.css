@@ -12736,6 +12736,7 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
 .card-flipper-container {
   perspective: 500px;
   -webkit-perspective: 500px;
+  height: 100%;
 }
 .card-flipper-container .card-flipper {
   position: relative;
@@ -12782,8 +12783,18 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
 .card-flipper-container .card-flipper .card-flipper-back .card-body.card-flipper-scrollable-container {
   overflow: hidden;
 }
+.card-flipper-container .card-flipper.card-flipper-auto-height {
+  display: flex;
+  flex-direction: column;
+}
 .card-flipper-container .card-flipper.card-flipper-auto-height .card-flipper-front {
   position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-flipper-container .card-flipper.card-flipper-auto-height .card-flipper-front > * {
+  flex: 1;
 }
 .card-flipper-container .card-flipper.card-flipper-auto-height .card-flipper-back {
   position: absolute;
@@ -13603,6 +13614,11 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
     margin-top: calc(1.5rem / 2);
   }
 }
+.card-flipper .coupon-item {
+  margin: 0;
+  max-width: none;
+  min-width: 0;
+}
 .coupon-item.coupon-item-max {
   width: 375px;
 }
@@ -13647,6 +13663,9 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
 }
 .coupon-item-standard .coupon-item-image {
   min-height: 0.01px;
+  max-width: 100%;
+  width: auto;
+  align-self: center;
 }
 .coupon-item-standard .coupon-item-recipe {
   font-size: 0.75rem;
