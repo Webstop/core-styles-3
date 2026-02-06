@@ -12733,6 +12733,76 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   }
 }
 
+.card-flipper-container {
+  perspective: 500px;
+  -webkit-perspective: 500px;
+  height: 100%;
+}
+.card-flipper-container .card-flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  /* Fixed height variant for grid layouts */
+  /* Make card body flex for scrollable content */
+  /* Auto height variant - front determines height, back overlays */
+}
+.card-flipper-container .card-flipper.card-flipper-fixed-height {
+  min-height: 280px;
+}
+.card-flipper-container .card-flipper.card-flipper-is-flipped {
+  transform: rotateY(180deg);
+}
+.card-flipper-container .card-flipper .card-flipper-front,
+.card-flipper-container .card-flipper .card-flipper-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+.card-flipper-container .card-flipper .card-flipper-back {
+  transform: rotateY(180deg);
+}
+.card-flipper-container .card-flipper .card-flipper-scrollable-container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.card-flipper-container .card-flipper .card-flipper-scrollable {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transform: translateZ(0);
+  padding-right: 5px;
+}
+.card-flipper-container .card-flipper .card-flipper-back .card-body.card-flipper-scrollable-container {
+  overflow: hidden;
+}
+.card-flipper-container .card-flipper.card-flipper-auto-height {
+  display: flex;
+  flex-direction: column;
+}
+.card-flipper-container .card-flipper.card-flipper-auto-height .card-flipper-front {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-flipper-container .card-flipper.card-flipper-auto-height .card-flipper-front > * {
+  flex: 1;
+}
+.card-flipper-container .card-flipper.card-flipper-auto-height .card-flipper-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
 .card table:last-child {
   border-bottom-left-radius: var(--bs-card-border-radius, 0.375rem);
   border-bottom-right-radius: var(--bs-card-border-radius, 0.375rem);
@@ -13066,9 +13136,6 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   min-width: 160px;
   position: relative;
 }
-.circular-item.card {
-  margin-right: 0;
-}
 @media (min-width: 576px) {
   .circular-item {
     max-width: 375px;
@@ -13077,10 +13144,6 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   .circular-item.card {
     padding-left: 0px;
     padding-right: 0px;
-    margin-right: calc(1.5rem / 2);
-    margin-bottom: calc(1.5rem / 2);
-    margin-left: calc(1.5rem / 2);
-    margin-top: calc(1.5rem / 2);
   }
 }
 .circular-item.circular-item-max {
@@ -13099,6 +13162,106 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   border-style: dashed;
   border-color: #0194d3;
   border-width: 2px;
+}
+
+/* circular-item: an individual ad item */
+.circular-item-standard {
+  text-align: center;
+}
+.circular-item-standard .circular-item-body {
+  padding: 5px;
+}
+.circular-item-standard .circular-item-heading,
+.circular-item-standard .circular-item-description,
+.circular-item-standard .circular-item-details,
+.circular-item-standard .circular-item-expiration-date,
+.circular-item-standard .circular-item-sale-dates,
+.circular-item-standard .circular-item-more-info {
+  font-size: 0.625rem;
+}
+.circular-item-standard .circular-item-image {
+  min-height: 0.01px;
+}
+.circular-item-standard .circular-item-recipe {
+  font-size: 0.75rem;
+}
+.circular-item-standard .circular-item-info-trigger {
+  margin-bottom: 0;
+}
+.circular-item-standard .circular-item-title {
+  font-size: 1.125rem;
+}
+.circular-item-standard .circular-item-heading,
+.circular-item-standard .circular-item-title,
+.circular-item-standard .price,
+.circular-item-standard .circular-item-description,
+.circular-item-standard .circular-item-details,
+.circular-item-standard .circular-item-expiration-date,
+.circular-item-standard .circular-item-sale-dates,
+.circular-item-standard .circular-item-more-info,
+.circular-item-standard .circular-item-recipe {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.circular-item-standard .circular-item-recipe {
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: left;
+}
+.circular-item-standard.circular-item-price-top .circular-item-body {
+  position: relative;
+  padding-top: calc(1rem + 48px);
+}
+.circular-item-standard.circular-item-price-top .price {
+  position: absolute;
+  top: calc(1rem / 2);
+  text-align: center;
+  width: 100%;
+}
+.circular-item-standard.circular-item-price-bottom .circular-item-body {
+  position: relative;
+  padding-bottom: calc(1rem + 48px);
+}
+.circular-item-standard.circular-item-price-bottom .price {
+  position: absolute;
+  bottom: calc(1rem / 2);
+  text-align: center;
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .circular-item-standard .circular-item-body {
+    padding: 10px;
+  }
+  .circular-item-standard .circular-item-title {
+    font-size: 1.75rem;
+  }
+  .circular-item-standard .circular-item-heading,
+  .circular-item-standard .circular-item-description,
+  .circular-item-standard .circular-item-details,
+  .circular-item-standard .circular-item-expiration-date,
+  .circular-item-standard .circular-item-sale-dates,
+  .circular-item-standard .circular-item-more-info {
+    font-size: 0.75rem;
+  }
+  .circular-item-standard .circular-item-recipe {
+    font-size: 1rem;
+  }
+  .circular-item-standard .circular-item-heading,
+  .circular-item-standard .circular-item-title,
+  .circular-item-standard .price,
+  .circular-item-standard .circular-item-description,
+  .circular-item-standard .circular-item-details,
+  .circular-item-standard .circular-item-expiration-date,
+  .circular-item-standard .circular-item-sale-dates,
+  .circular-item-standard .circular-item-more-info,
+  .circular-item-standard .circular-item-recipe {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  .circular-item-standard .circular-item-recipe {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .circular-item-banner {
@@ -13264,106 +13427,6 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   }
 }
 
-/* circular-item: an individual ad item */
-.circular-item-standard {
-  text-align: center;
-}
-.circular-item-standard .circular-item-body {
-  padding: 5px;
-}
-.circular-item-standard .circular-item-heading,
-.circular-item-standard .circular-item-description,
-.circular-item-standard .circular-item-details,
-.circular-item-standard .circular-item-expiration-date,
-.circular-item-standard .circular-item-sale-dates,
-.circular-item-standard .circular-item-more-info {
-  font-size: 0.625rem;
-}
-.circular-item-standard .circular-item-image {
-  min-height: 0.01px;
-}
-.circular-item-standard .circular-item-recipe {
-  font-size: 0.75rem;
-}
-.circular-item-standard .circular-item-info-trigger {
-  margin-bottom: 0;
-}
-.circular-item-standard .circular-item-title {
-  font-size: 1.125rem;
-}
-.circular-item-standard .circular-item-heading,
-.circular-item-standard .circular-item-title,
-.circular-item-standard .price,
-.circular-item-standard .circular-item-description,
-.circular-item-standard .circular-item-details,
-.circular-item-standard .circular-item-expiration-date,
-.circular-item-standard .circular-item-sale-dates,
-.circular-item-standard .circular-item-more-info,
-.circular-item-standard .circular-item-recipe {
-  margin-top: 2px;
-  margin-bottom: 2px;
-}
-.circular-item-standard .circular-item-recipe {
-  padding-left: 5px;
-  padding-right: 5px;
-  text-align: left;
-}
-.circular-item-standard.circular-item-price-top .circular-item-body {
-  position: relative;
-  padding-top: calc(1rem + 48px);
-}
-.circular-item-standard.circular-item-price-top .price {
-  position: absolute;
-  top: calc(1rem / 2);
-  text-align: center;
-  width: 100%;
-}
-.circular-item-standard.circular-item-price-bottom .circular-item-body {
-  position: relative;
-  padding-bottom: calc(1rem + 48px);
-}
-.circular-item-standard.circular-item-price-bottom .price {
-  position: absolute;
-  bottom: calc(1rem / 2);
-  text-align: center;
-  width: 100%;
-}
-@media (min-width: 576px) {
-  .circular-item-standard .circular-item-body {
-    padding: 10px;
-  }
-  .circular-item-standard .circular-item-title {
-    font-size: 1.75rem;
-  }
-  .circular-item-standard .circular-item-heading,
-  .circular-item-standard .circular-item-description,
-  .circular-item-standard .circular-item-details,
-  .circular-item-standard .circular-item-expiration-date,
-  .circular-item-standard .circular-item-sale-dates,
-  .circular-item-standard .circular-item-more-info {
-    font-size: 0.75rem;
-  }
-  .circular-item-standard .circular-item-recipe {
-    font-size: 1rem;
-  }
-  .circular-item-standard .circular-item-heading,
-  .circular-item-standard .circular-item-title,
-  .circular-item-standard .price,
-  .circular-item-standard .circular-item-description,
-  .circular-item-standard .circular-item-details,
-  .circular-item-standard .circular-item-expiration-date,
-  .circular-item-standard .circular-item-sale-dates,
-  .circular-item-standard .circular-item-more-info,
-  .circular-item-standard .circular-item-recipe {
-    margin-top: 4px;
-    margin-bottom: 4px;
-  }
-  .circular-item-standard .circular-item-recipe {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-
 .circular-item-standard-coupon {
   border: 2px dashed #0194d3;
 }
@@ -13477,106 +13540,6 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   }
 }
 
-/* circular-item: an individual ad item */
-.circular-item-standard {
-  text-align: center;
-}
-.circular-item-standard .circular-item-body {
-  padding: 5px;
-}
-.circular-item-standard .circular-item-heading,
-.circular-item-standard .circular-item-description,
-.circular-item-standard .circular-item-details,
-.circular-item-standard .circular-item-expiration-date,
-.circular-item-standard .circular-item-sale-dates,
-.circular-item-standard .circular-item-more-info {
-  font-size: 0.625rem;
-}
-.circular-item-standard .circular-item-image {
-  min-height: 0.01px;
-}
-.circular-item-standard .circular-item-recipe {
-  font-size: 0.75rem;
-}
-.circular-item-standard .circular-item-info-trigger {
-  margin-bottom: 0;
-}
-.circular-item-standard .circular-item-title {
-  font-size: 1.125rem;
-}
-.circular-item-standard .circular-item-heading,
-.circular-item-standard .circular-item-title,
-.circular-item-standard .price,
-.circular-item-standard .circular-item-description,
-.circular-item-standard .circular-item-details,
-.circular-item-standard .circular-item-expiration-date,
-.circular-item-standard .circular-item-sale-dates,
-.circular-item-standard .circular-item-more-info,
-.circular-item-standard .circular-item-recipe {
-  margin-top: 2px;
-  margin-bottom: 2px;
-}
-.circular-item-standard .circular-item-recipe {
-  padding-left: 5px;
-  padding-right: 5px;
-  text-align: left;
-}
-.circular-item-standard.circular-item-price-top .circular-item-body {
-  position: relative;
-  padding-top: calc(1rem + 48px);
-}
-.circular-item-standard.circular-item-price-top .price {
-  position: absolute;
-  top: calc(1rem / 2);
-  text-align: center;
-  width: 100%;
-}
-.circular-item-standard.circular-item-price-bottom .circular-item-body {
-  position: relative;
-  padding-bottom: calc(1rem + 48px);
-}
-.circular-item-standard.circular-item-price-bottom .price {
-  position: absolute;
-  bottom: calc(1rem / 2);
-  text-align: center;
-  width: 100%;
-}
-@media (min-width: 576px) {
-  .circular-item-standard .circular-item-body {
-    padding: 10px;
-  }
-  .circular-item-standard .circular-item-title {
-    font-size: 1.75rem;
-  }
-  .circular-item-standard .circular-item-heading,
-  .circular-item-standard .circular-item-description,
-  .circular-item-standard .circular-item-details,
-  .circular-item-standard .circular-item-expiration-date,
-  .circular-item-standard .circular-item-sale-dates,
-  .circular-item-standard .circular-item-more-info {
-    font-size: 0.75rem;
-  }
-  .circular-item-standard .circular-item-recipe {
-    font-size: 1rem;
-  }
-  .circular-item-standard .circular-item-heading,
-  .circular-item-standard .circular-item-title,
-  .circular-item-standard .price,
-  .circular-item-standard .circular-item-description,
-  .circular-item-standard .circular-item-details,
-  .circular-item-standard .circular-item-expiration-date,
-  .circular-item-standard .circular-item-sale-dates,
-  .circular-item-standard .circular-item-more-info,
-  .circular-item-standard .circular-item-recipe {
-    margin-top: 4px;
-    margin-bottom: 4px;
-  }
-  .circular-item-standard .circular-item-recipe {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-
 /* circulars: collection of ads */
 .circulars .circular-preview-title {
   text-align: center;
@@ -13605,6 +13568,178 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.coupon-items {
+  padding-right: calc(1.5rem / 2);
+}
+.coupon-items .col-12 {
+  padding-right: 0;
+}
+@media (min-width: 576px) {
+  .coupon-items {
+    padding-right: 0;
+  }
+  .coupon-items .col-12 {
+    padding-right: calc(1.5rem / 2);
+  }
+}
+
+.coupon-item {
+  max-width: 375px;
+  min-width: 160px;
+  position: relative;
+}
+.coupon-item.card {
+  margin-right: 0;
+}
+@media (min-width: 576px) {
+  .coupon-item {
+    max-width: 375px;
+    min-width: 265px;
+  }
+  .coupon-item.card {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: calc(1.5rem / 2);
+    margin-bottom: calc(1.5rem / 2);
+    margin-left: calc(1.5rem / 2);
+    margin-top: calc(1.5rem / 2);
+  }
+}
+.card-flipper .coupon-item {
+  margin: 0;
+  max-width: none;
+  min-width: 0;
+}
+.coupon-item.coupon-item-max {
+  width: 375px;
+}
+.coupon-item.coupon-item-avg {
+  width: calc(160px + (375px - 160px) / 2);
+}
+.coupon-item.coupon-item-min {
+  width: 160px;
+}
+.coupon-item.coupon-item-min {
+  width: 160px;
+}
+.coupon-item.coupon-item-paper-coupon {
+  border-style: dashed;
+  border-color: #0194d3;
+  border-width: 2px;
+}
+
+/* coupon-item: an individual ad item */
+.coupon-item-standard {
+  border: 2px dashed #0194d3;
+  text-align: center;
+}
+.coupon-item-standard::after {
+  position: absolute;
+  top: 2px;
+  right: 15px;
+  font-size: 2rem;
+  line-height: 0.35;
+  content: "✃";
+  color: #0194d3;
+}
+.coupon-item-standard .coupon-item-body {
+  padding: 5px;
+}
+.coupon-item-standard .coupon-item-description,
+.coupon-item-standard .coupon-item-details,
+.coupon-item-standard .coupon-item-expiration-date,
+.coupon-item-standard .coupon-item-sale-dates,
+.coupon-item-standard .coupon-item-more-info {
+  font-size: 1rem;
+}
+.coupon-item-standard .coupon-item-image {
+  min-height: 0.01px;
+  max-width: 100%;
+  width: auto;
+  align-self: center;
+}
+.coupon-item-standard .coupon-item-recipe {
+  font-size: 0.75rem;
+}
+.coupon-item-standard .coupon-item-info-trigger {
+  margin-bottom: 0;
+}
+.coupon-item-standard .coupon-item-title {
+  font-size: 1.125rem;
+}
+.coupon-item-standard .coupon-item-heading,
+.coupon-item-standard .coupon-item-title,
+.coupon-item-standard .price,
+.coupon-item-standard .coupon-item-description,
+.coupon-item-standard .coupon-item-details,
+.coupon-item-standard .coupon-item-expiration-date,
+.coupon-item-standard .coupon-item-sale-dates,
+.coupon-item-standard .coupon-item-more-info,
+.coupon-item-standard .coupon-item-recipe {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.coupon-item-standard .coupon-item-recipe {
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: left;
+}
+.coupon-item-standard.coupon-item-price-top .coupon-item-body {
+  position: relative;
+  padding-top: calc(1rem + 48px);
+}
+.coupon-item-standard.coupon-item-price-top .price {
+  position: absolute;
+  top: calc(1rem / 2);
+  text-align: center;
+  width: 100%;
+}
+.coupon-item-standard.coupon-item-price-bottom .coupon-item-body {
+  position: relative;
+  padding-bottom: calc(1rem + 48px);
+}
+.coupon-item-standard.coupon-item-price-bottom .price {
+  position: absolute;
+  bottom: calc(1rem / 2);
+  text-align: center;
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .coupon-item-standard .coupon-item-body {
+    padding: 10px;
+  }
+  .coupon-item-standard .coupon-item-title {
+    font-size: 1.75rem;
+  }
+  .coupon-item-standard .coupon-item-heading,
+  .coupon-item-standard .coupon-item-description,
+  .coupon-item-standard .coupon-item-details,
+  .coupon-item-standard .coupon-item-expiration-date,
+  .coupon-item-standard .coupon-item-sale-dates,
+  .coupon-item-standard .coupon-item-more-info {
+    font-size: 0.75rem;
+  }
+  .coupon-item-standard .coupon-item-recipe {
+    font-size: 1rem;
+  }
+  .coupon-item-standard .coupon-item-heading,
+  .coupon-item-standard .coupon-item-title,
+  .coupon-item-standard .price,
+  .coupon-item-standard .coupon-item-description,
+  .coupon-item-standard .coupon-item-details,
+  .coupon-item-standard .coupon-item-expiration-date,
+  .coupon-item-standard .coupon-item-sale-dates,
+  .coupon-item-standard .coupon-item-more-info,
+  .coupon-item-standard .coupon-item-recipe {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  .coupon-item-standard .coupon-item-recipe {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .shopping-list-aside .shopping-list-view-selector active {
