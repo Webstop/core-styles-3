@@ -13136,9 +13136,6 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   min-width: 160px;
   position: relative;
 }
-.circular-item.card {
-  margin-right: 0;
-}
 @media (min-width: 576px) {
   .circular-item {
     max-width: 375px;
@@ -13147,10 +13144,6 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   .circular-item.card {
     padding-left: 0px;
     padding-right: 0px;
-    margin-right: calc(1.5rem / 2);
-    margin-bottom: calc(1.5rem / 2);
-    margin-left: calc(1.5rem / 2);
-    margin-top: calc(1.5rem / 2);
   }
 }
 .circular-item.circular-item-max {

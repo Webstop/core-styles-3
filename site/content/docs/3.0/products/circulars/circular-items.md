@@ -50,7 +50,7 @@ menu:
           Standard Coupon Item
         </a>
       </h4>
-      {{< circular/circular-item-standard-coupon-example >}}
+      {{< coupons/coupon-item-standard-dove-example >}}
     </div>
     <div class="col">
       <h4 class="text-center">
@@ -89,20 +89,20 @@ menu:
 ## Example Grid of Mixed Circular Items
 
 <div class="wsg-example">
-  <div class="row">
-      {{< circular/circular-item-banner-example >}}
-      {{< circular/circular-item-standard-promotion-example >}}
-      {{< circular/circular-item-standard-example >}}
-      {{< circular/circular-item-standard-example >}}
-      {{< circular/circular-item-coupon-example >}}
-      {{< circular/circular-item-standard-example >}}
-      {{< circular/circular-item-standard-example >}}
-      {{< circular/circular-item-banner-example >}}
-      {{< circular/circular-item-standard-promotion-example >}}
-      {{< circular/circular-item-thumbnail-example >}}
-      {{< circular/circular-item-thumbnail-example >}}
-      {{< circular/circular-item-coupon-example >}}
-      {{< circular/circular-item-thumbnail-example >}}
-      {{< circular/circular-item-thumbnail-example >}}
+  <div class="row row-cols-2 row-cols-md-3 g-4">
+    <div class="col-12">{{< circular/circular-item-banner-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-promotion-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col">{{< circular/circular-item-coupon-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col-12">{{< circular/circular-item-banner-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-promotion-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-coupon-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
   </div>
 </div>

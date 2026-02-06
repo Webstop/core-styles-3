@@ -103,13 +103,13 @@ The following button examples are effective calls to action. They are forced to 
 #### Grid of Standard Promotion Circular Items
 
 <div class="wsg-example">
-  <div class="row">
-    {{< circular/circular-item-standard-promotion-example >}}
-    {{< circular/circular-item-standard-promotion-example >}}
-    {{< circular/circular-item-standard-promotion-example >}}
-    {{< circular/circular-item-standard-promotion-example >}}
-    {{< circular/circular-item-standard-promotion-example >}}
-    {{< circular/circular-item-standard-promotion-example >}}
+  <div class="row row-cols-2 row-cols-md-3 g-4">
+    <div class="col">{{< circular/circular-item-standard-promotion-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-promotion-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-promotion-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-promotion-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-promotion-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-promotion-example >}}</div>
   </div>
 </div>
 
@@ -118,17 +118,17 @@ The following button examples are effective calls to action. They are forced to 
 ### Mixed Items
 
 <div class="wsg-example">
-  <div class="row">
-    {{< circular/circular-item-standard-promotion-example >}}
-    {{< circular/circular-item-standard-example >}}
-    {{< circular/circular-item-standard-example >}}
-    {{< circular/circular-item-standard-example >}}
-    {{< circular/circular-item-standard-example >}}
-    {{< circular/circular-item-standard-promotion-example >}}
-    {{< circular/circular-item-thumbnail-example >}}
-    {{< circular/circular-item-thumbnail-example >}}
-    {{< circular/circular-item-thumbnail-example >}}
-    {{< circular/circular-item-thumbnail-example >}}
-    {{< circular/circular-item-standard-promotion-example >}}
+  <div class="row row-cols-2 row-cols-md-3 g-4">
+    <div class="col">{{< circular/circular-item-standard-promotion-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-promotion-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-promotion-example >}}</div>
   </div>
 </div>

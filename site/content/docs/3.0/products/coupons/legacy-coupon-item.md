@@ -34,13 +34,13 @@ This layout is achieved by giving the circular items a `col` class within the co
 of a `row`.
 
 <div class="wsg-example">
-  <div class="row">
-    {{< coupons/coupon-item-legacy-example >}}
-    {{< coupons/coupon-item-legacy-example >}} 
-    {{< coupons/coupon-item-legacy-example >}}       
-    {{< coupons/coupon-item-legacy-example >}}
-    {{< coupons/coupon-item-legacy-example >}} 
-    {{< coupons/coupon-item-legacy-example >}}  
+  <div class="row row-cols-2 row-cols-md-3 g-4">
+    <div class="col">{{< coupons/coupon-item-legacy-example >}}</div>
+    <div class="col">{{< coupons/coupon-item-legacy-example >}}</div>
+    <div class="col">{{< coupons/coupon-item-legacy-example >}}</div>
+    <div class="col">{{< coupons/coupon-item-legacy-example >}}</div>
+    <div class="col">{{< coupons/coupon-item-legacy-example >}}</div>
+    <div class="col">{{< coupons/coupon-item-legacy-example >}}</div>
   </div>
 </div>
 
@@ -49,21 +49,20 @@ of a `row`.
 ### Mixed Items Example
 
 <div class="wsg-example">
-  <div class="row">
-    {{< coupons/coupon-item-legacy-example >}}       
-    {{< coupons/coupon-item-legacy-example >}}
-    {{< coupons/coupon-item-legacy-example >}} 
-    {{< coupons/coupon-item-legacy-example >}}  
-    {{< circular/circular-item-standard-example >}}   
-    {{< circular/circular-item-standard-example >}}
-    {{< circular/circular-item-standard-example >}}   
-    {{< circular/circular-item-standard-example >}}
-    {{< circular/circular-item-standard-promotion-example >}}
-    {{< circular/circular-item-thumbnail-example >}}   
-    {{< circular/circular-item-thumbnail-example >}}
-    {{< circular/circular-item-thumbnail-example >}}   
-    {{< circular/circular-item-thumbnail-example >}}
-
+  <div class="row row-cols-2 row-cols-md-3 g-4">
+    <div class="col">{{< coupons/coupon-item-legacy-example >}}</div>
+    <div class="col">{{< coupons/coupon-item-legacy-example >}}</div>
+    <div class="col">{{< coupons/coupon-item-legacy-example >}}</div>
+    <div class="col">{{< coupons/coupon-item-legacy-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-promotion-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
   </div>
 </div>
 

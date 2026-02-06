@@ -33,13 +33,13 @@ The original digital circular ad item. With a `85px` x `83px` image.
 #### Grid of Thumbnail Circular Items
 
 <div class="wsg-example">
-  <div class="row">
-    {{< circular/circular-item-thumbnail-example >}}
-    {{< circular/circular-item-thumbnail-example >}}
-    {{< circular/circular-item-thumbnail-example >}}
-    {{< circular/circular-item-thumbnail-example >}}
-    {{< circular/circular-item-thumbnail-example >}}
-    {{< circular/circular-item-thumbnail-example >}}
+  <div class="row row-cols-2 row-cols-md-3 g-4">
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
   </div>
 </div>
 
@@ -48,15 +48,15 @@ The original digital circular ad item. With a `85px` x `83px` image.
 ### Mixed Items Example
 
 <div class="wsg-example">
-  <div class="row">
-    {{< circular/circular-item-standard-example >}}
-    {{< circular/circular-item-standard-example >}}
-    {{< circular/circular-item-standard-example >}}
-    {{< circular/circular-item-standard-example >}}
-    {{< circular/circular-item-standard-promotion-example >}}
-    {{< circular/circular-item-thumbnail-example >}}
-    {{< circular/circular-item-thumbnail-example >}}
-    {{< circular/circular-item-thumbnail-example >}}
-    {{< circular/circular-item-thumbnail-example >}}
+  <div class="row row-cols-2 row-cols-md-3 g-4">
+    <div class="col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col">{{< circular/circular-item-standard-promotion-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
   </div>
 </div>
