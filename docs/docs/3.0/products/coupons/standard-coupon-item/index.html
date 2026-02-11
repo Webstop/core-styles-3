@@ -829,8 +829,165 @@ nicely divide up the available space in a row to provide a nice group presentati
 <p>If a circular item is going to stand alone on a page or section of a page, the <code>col</code>
 class is unnecessary.</p>
 <h3 id="grid-of-coupons">Grid of Coupons</h3>
+<p>Here we demonstrate a grid of coupons.</p>
+<div class="row row-cols-2 row-cols-md-3 g-4 mb-4">
+  <div class="col">
+    <div class="card-flipper-container">
+      <div class="card-flipper card-flipper-auto-height">
+        <div class="card-flipper-front">
+          <article class="shadow coupon-item coupon-item-standard card card-standard h-100">
+            <img src="/assets/images/circular-items/dove_standard_coupon.jpg" alt="Picture of Offer Products" class="coupon-item-image img-fluid">
+            <div class="coupon-item-body card-body">
+              <h3 class="coupon-item-title">Save $1.00</h3>
+              <p class="coupon-item-description">on any ONE (1) Dove Body Wash (22 oz. or larger) or Shower Foam (13.5 oz.) (excludes trial and travel sizes and Dove Men+Care)</p>
+              <p class="coupon-item-expiration-date text-muted">Expires: 10/30/2020</p>
+            </div>
+            <div class="coupon-item-footer card-footer d-flex justify-content-between align-items-center">
+              <span class="card-flipper-trigger text-primary fs-4">
+                <i class="fa-solid fa-info-circle"></i>
+              </span>
+                  <div class="shopping-list-item">
+          <form action="/shopping_list/add/circular_item/:id/qty/" class="shopping-list-item-form">
+            <div class="text-sm-end">
+              <button type="submit" class="btn btn-primary btn-block btn-sm-inline-block">
+                <i class="fa-kit fa-add-circle me-1"></i> Add Coupon
+              </button>
+            </div>
+          </form>
+        </div>
+    
+            </div>
+          </article>
+        </div>
+        <div class="card-flipper-back">
+          <div class="card h-100 shadow">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <strong>Coupon Details</strong>
+              <span class="card-flipper-trigger text-danger fs-4">
+                <i class="fa-kit fa-cancel-circle"></i>
+              </span>
+            </div>
+            <div class="card-flipper-scrollable-container">
+              <div class="card-body card-flipper-scrollable" tabindex="0">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col">
+    <div class="card-flipper-container">
+      <div class="card-flipper card-flipper-auto-height">
+        <div class="card-flipper-front">
+          <article class="shadow coupon-item coupon-item-standard card card-standard h-100">
+            <img src="/assets/images/circular-items/dove_standard_coupon.jpg" alt="Picture of Offer Products" class="coupon-item-image img-fluid">
+            <div class="coupon-item-body card-body">
+              <h3 class="coupon-item-title">Save $1.00</h3>
+              <p class="coupon-item-description">on any ONE (1) Dove Body Wash (22 oz. or larger) or Shower Foam (13.5 oz.) (excludes trial and travel sizes and Dove Men+Care)</p>
+              <p class="coupon-item-expiration-date text-muted">Expires: 10/30/2020</p>
+            </div>
+            <div class="coupon-item-footer card-footer d-flex justify-content-between align-items-center">
+              <span class="card-flipper-trigger text-primary fs-4">
+                <i class="fa-solid fa-info-circle"></i>
+              </span>
+                  <div class="shopping-list-item">
+          <form action="/shopping_list/add/circular_item/:id/qty/" class="shopping-list-item-form">
+            <div class="text-sm-end">
+              <button type="submit" class="btn btn-primary btn-block btn-sm-inline-block">
+                <i class="fa-kit fa-add-circle me-1"></i> Add Coupon
+              </button>
+            </div>
+          </form>
+        </div>
+    
+            </div>
+          </article>
+        </div>
+        <div class="card-flipper-back">
+          <div class="card h-100 shadow">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <strong>Coupon Details</strong>
+              <span class="card-flipper-trigger text-danger fs-4">
+                <i class="fa-kit fa-cancel-circle"></i>
+              </span>
+            </div>
+            <div class="card-flipper-scrollable-container">
+              <div class="card-body card-flipper-scrollable" tabindex="0">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col">
+    <div class="card-flipper-container">
+      <div class="card-flipper card-flipper-auto-height">
+        <div class="card-flipper-front">
+          <article class="shadow coupon-item coupon-item-standard card card-standard h-100">
+            <img src="/assets/images/circular-items/dove_standard_coupon.jpg" alt="Picture of Offer Products" class="coupon-item-image img-fluid">
+            <div class="coupon-item-body card-body">
+              <h3 class="coupon-item-title">Save $1.00</h3>
+              <p class="coupon-item-description">on any ONE (1) Dove Body Wash (22 oz. or larger) or Shower Foam (13.5 oz.) (excludes trial and travel sizes and Dove Men+Care)</p>
+              <p class="coupon-item-expiration-date text-muted">Expires: 10/30/2020</p>
+            </div>
+            <div class="coupon-item-footer card-footer d-flex justify-content-between align-items-center">
+              <span class="card-flipper-trigger text-primary fs-4">
+                <i class="fa-solid fa-info-circle"></i>
+              </span>
+                  <div class="shopping-list-item">
+          <form action="/shopping_list/add/circular_item/:id/qty/" class="shopping-list-item-form">
+            <div class="text-sm-end">
+              <button type="submit" class="btn btn-primary btn-block btn-sm-inline-block">
+                <i class="fa-kit fa-add-circle me-1"></i> Add Coupon
+              </button>
+            </div>
+          </form>
+        </div>
+    
+            </div>
+          </article>
+        </div>
+        <div class="card-flipper-back">
+          <div class="card h-100 shadow">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <strong>Coupon Details</strong>
+              <span class="card-flipper-trigger text-danger fs-4">
+                <i class="fa-kit fa-cancel-circle"></i>
+              </span>
+            </div>
+            <div class="card-flipper-scrollable-container">
+              <div class="card-body card-flipper-scrollable" tabindex="0">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<h3 id="grid-mixed-height-of-coupons">Grid Mixed Height of Coupons</h3>
 <p>Here we demonstrate a grid of coupons. You can see the heights of the coupons will match the tallest offer in the grid row.</p>
-<div class="row row-cols-2 row-cols-md-3 g-4">
+<div class="row row-cols-2 row-cols-md-3 g-4 mb-4">
   <div class="col">
     <div class="card-flipper-container">
       <div class="card-flipper card-flipper-auto-height">
@@ -1338,7 +1495,7 @@ class is unnecessary.</p>
 <p>This layout is achieved by giving the circular items a <code>col</code> class within the context
 of a <code>row</code>.</p>
 <div class="wsg-example">
-  <div class="row row-cols-2 row-cols-md-3 g-4">
+  <div class="row row-cols-2 row-cols-md-3 g-4 mb-4">
     <div class="col"><div class="card-flipper-container">
   <div class="card-flipper card-flipper-auto-height">
     <div class="card-flipper-front">
@@ -1638,159 +1795,7 @@ of a <code>row</code>.</p>
 <hr>
 <h3 id="mixed-items-example">Mixed Items Example</h3>
 <div class="wsg-example">
-  <div class="row row-cols-2 row-cols-md-3 g-4">
-    <div class="col"><div class="card-flipper-container">
-  <div class="card-flipper card-flipper-auto-height">
-    <div class="card-flipper-front">
-      <article class="shadow coupon-item coupon-item-standard card card-standard h-100">
-        <img src="/assets/images/circular-items/dove_standard_coupon.jpg" alt="Picture of Offer Products" class="coupon-item-image img-fluid">
-        <div class="coupon-item-body card-body">
-          <h3 class="coupon-item-title">Save $1.00</h3>
-          <p class="coupon-item-description">on any ONE (1) Dove Body Wash (22 oz. or larger) or Shower Foam (13.5 oz.) (excludes trial and travel sizes and Dove Men+Care)</p>
-          <p class="coupon-item-expiration-date text-muted">Expires: 10/30/2020</p>
-        </div>
-        <div class="coupon-item-footer card-footer d-flex justify-content-between align-items-center">
-          <span class="card-flipper-trigger text-primary fs-4">
-            <i class="fa-solid fa-info-circle"></i>
-          </span>
-              <div class="shopping-list-item">
-      <form action="/shopping_list/add/circular_item/:id/qty/" class="shopping-list-item-form">
-        <div class="text-sm-end">
-          <button type="submit" class="btn btn-primary btn-block btn-sm-inline-block">
-            <i class="fa-kit fa-add-circle me-1"></i> Add Coupon
-          </button>
-        </div>
-      </form>
-    </div>
-
-        </div>
-      </article>
-    </div>
-    <div class="card-flipper-back">
-      <div class="card h-100 shadow">
-        <div class="card-header d-flex justify-content-between align-items-center">
-          <strong>Coupon Details</strong>
-          <span class="card-flipper-trigger text-danger fs-4">
-            <i class="fa-kit fa-cancel-circle"></i>
-          </span>
-        </div>
-        <div class="card-flipper-scrollable-container">
-          <div class="card-body card-flipper-scrollable" tabindex="0">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-    <div class="col"><div class="card-flipper-container">
-  <div class="card-flipper card-flipper-auto-height">
-    <div class="card-flipper-front">
-      <article class="shadow coupon-item coupon-item-standard card card-standard h-100">
-        <img src="/assets/images/circular-items/dove_standard_coupon.jpg" alt="Picture of Offer Products" class="coupon-item-image img-fluid">
-        <div class="coupon-item-body card-body">
-          <h3 class="coupon-item-title">Save $1.00</h3>
-          <p class="coupon-item-description">on any ONE (1) Dove Body Wash (22 oz. or larger) or Shower Foam (13.5 oz.) (excludes trial and travel sizes and Dove Men+Care)</p>
-          <p class="coupon-item-expiration-date text-muted">Expires: 10/30/2020</p>
-        </div>
-        <div class="coupon-item-footer card-footer d-flex justify-content-between align-items-center">
-          <span class="card-flipper-trigger text-primary fs-4">
-            <i class="fa-solid fa-info-circle"></i>
-          </span>
-              <div class="shopping-list-item">
-      <form action="/shopping_list/add/circular_item/:id/qty/" class="shopping-list-item-form">
-        <div class="text-sm-end">
-          <button type="submit" class="btn btn-primary btn-block btn-sm-inline-block">
-            <i class="fa-kit fa-add-circle me-1"></i> Add Coupon
-          </button>
-        </div>
-      </form>
-    </div>
-
-        </div>
-      </article>
-    </div>
-    <div class="card-flipper-back">
-      <div class="card h-100 shadow">
-        <div class="card-header d-flex justify-content-between align-items-center">
-          <strong>Coupon Details</strong>
-          <span class="card-flipper-trigger text-danger fs-4">
-            <i class="fa-kit fa-cancel-circle"></i>
-          </span>
-        </div>
-        <div class="card-flipper-scrollable-container">
-          <div class="card-body card-flipper-scrollable" tabindex="0">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-    <div class="col"><div class="card-flipper-container">
-  <div class="card-flipper card-flipper-auto-height">
-    <div class="card-flipper-front">
-      <article class="shadow coupon-item coupon-item-standard card card-standard h-100">
-        <img src="/assets/images/circular-items/dove_standard_coupon.jpg" alt="Picture of Offer Products" class="coupon-item-image img-fluid">
-        <div class="coupon-item-body card-body">
-          <h3 class="coupon-item-title">Save $1.00</h3>
-          <p class="coupon-item-description">on any ONE (1) Dove Body Wash (22 oz. or larger) or Shower Foam (13.5 oz.) (excludes trial and travel sizes and Dove Men+Care)</p>
-          <p class="coupon-item-expiration-date text-muted">Expires: 10/30/2020</p>
-        </div>
-        <div class="coupon-item-footer card-footer d-flex justify-content-between align-items-center">
-          <span class="card-flipper-trigger text-primary fs-4">
-            <i class="fa-solid fa-info-circle"></i>
-          </span>
-              <div class="shopping-list-item">
-      <form action="/shopping_list/add/circular_item/:id/qty/" class="shopping-list-item-form">
-        <div class="text-sm-end">
-          <button type="submit" class="btn btn-primary btn-block btn-sm-inline-block">
-            <i class="fa-kit fa-add-circle me-1"></i> Add Coupon
-          </button>
-        </div>
-      </form>
-    </div>
-
-        </div>
-      </article>
-    </div>
-    <div class="card-flipper-back">
-      <div class="card h-100 shadow">
-        <div class="card-header d-flex justify-content-between align-items-center">
-          <strong>Coupon Details</strong>
-          <span class="card-flipper-trigger text-danger fs-4">
-            <i class="fa-kit fa-cancel-circle"></i>
-          </span>
-        </div>
-        <div class="card-flipper-scrollable-container">
-          <div class="card-body card-flipper-scrollable" tabindex="0">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-  </div>
-</div>
-<h3 id="mixed-height-items-example">Mixed Height Items Example</h3>
-<div class="wsg-example">
-  <div class="row row-cols-2 row-cols-md-3 g-4">
+  <div class="row row-cols-2 row-cols-md-3 g-4 mb-4">
     <div class="col"><div class="card-flipper-container">
   <div class="card-flipper card-flipper-auto-height">
     <div class="card-flipper-front">
@@ -2458,9 +2463,9 @@ of a <code>row</code>.</p>
     <li><a href="#examples">Examples</a>
       <ul>
         <li><a href="#grid-of-coupons">Grid of Coupons</a></li>
+        <li><a href="#grid-mixed-height-of-coupons">Grid Mixed Height of Coupons</a></li>
         <li><a href="#grid-of-coupon-circular-items">Grid of Coupon Circular Items</a></li>
         <li><a href="#mixed-items-example">Mixed Items Example</a></li>
-        <li><a href="#mixed-height-items-example">Mixed Height Items Example</a></li>
       </ul>
     </li>
   </ul>

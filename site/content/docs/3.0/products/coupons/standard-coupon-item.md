@@ -30,9 +30,25 @@ class is unnecessary.
 
 ### Grid of Coupons 
 
+Here we demonstrate a grid of coupons. 
+
+<div class="row row-cols-2 row-cols-md-3 g-4 mb-4">
+  <div class="col">
+    {{< coupons/coupon-item-standard-dove-example >}}
+  </div>
+  <div class="col">
+    {{< coupons/coupon-item-standard-dove-example >}}
+  </div>
+  <div class="col">
+    {{< coupons/coupon-item-standard-dove-example >}}
+  </div>
+</div>
+
+### Grid Mixed Height of Coupons
+
 Here we demonstrate a grid of coupons. You can see the heights of the coupons will match the tallest offer in the grid row.
 
-<div class="row row-cols-2 row-cols-md-3 g-4">
+<div class="row row-cols-2 row-cols-md-3 g-4 mb-4">
   <div class="col">
     {{< coupons/coupon-item-standard-dove-example >}}
   </div>
@@ -72,7 +88,7 @@ This layout is achieved by giving the circular items a `col` class within the co
 of a `row`.
 
 <div class="wsg-example">
-  <div class="row row-cols-2 row-cols-md-3 g-4">
+  <div class="row row-cols-2 row-cols-md-3 g-4 mb-4">
     <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
     <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
     <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
@@ -86,18 +102,9 @@ of a `row`.
 
 ### Mixed Items Example
 
-<div class="wsg-example">
-  <div class="row row-cols-2 row-cols-md-3 g-4">
-    <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
-    <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
-    <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
-  </div>
-</div>
-
-### Mixed Height Items Example
 
 <div class="wsg-example">
-  <div class="row row-cols-2 row-cols-md-3 g-4">
+  <div class="row row-cols-2 row-cols-md-3 g-4 mb-4">
     <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
     <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
     <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
