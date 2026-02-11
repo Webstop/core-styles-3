@@ -91,6 +91,16 @@ of a `row`.
     <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
     <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
     <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
+  </div>
+</div>
+
+### Mixed Height Items Example
+
+<div class="wsg-example">
+  <div class="row row-cols-2 row-cols-md-3 g-4">
+    <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
+    <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
+    <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
     <div class="col">{{< circular/circular-item-coupon-example >}}</div>
     <div class="col">{{< circular/circular-item-standard-example >}}</div>
     <div class="col">{{< circular/circular-item-standard-example >}}</div>
