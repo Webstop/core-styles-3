@@ -18,7 +18,11 @@ The basic coupon item enhances the value of our digital circular content.
 Tower format digital coupon item with a variable size thumbnail image.
 
 {{< example >}}
-{{< coupons/coupon-item-standard-dove-example >}}
+<div class="row">
+  <div class="col card-standard-col">
+    {{< coupons/coupon-item-standard-dove-example >}}
+  </div>
+</div>
 {{< /example >}}
 
 The optional `col` class allows circular items align nicely in a flex box grid. 
@@ -32,14 +36,14 @@ class is unnecessary.
 
 Here we demonstrate a grid of coupons. 
 
-<div class="row row-cols-2 row-cols-md-3 g-4 mb-4">
-  <div class="col">
+<div class="row justify-content-center gy-4 mb-4">
+  <div class="col card-standard-col">
     {{< coupons/coupon-item-standard-dove-example >}}
   </div>
-  <div class="col">
+  <div class="col card-standard-col">
     {{< coupons/coupon-item-standard-dove-example >}}
   </div>
-  <div class="col">
+  <div class="col card-standard-col">
     {{< coupons/coupon-item-standard-dove-example >}}
   </div>
 </div>
@@ -48,35 +52,35 @@ Here we demonstrate a grid of coupons.
 
 Here we demonstrate a grid of coupons. You can see the heights of the coupons will match the tallest offer in the grid row.
 
-<div class="row row-cols-2 row-cols-md-3 g-4 mb-4">
-  <div class="col">
+<div class="row justify-content-center gy-4 mb-4">
+  <div class="col card-standard-col">
     {{< coupons/coupon-item-standard-dove-example >}}
   </div>
-  <div class="col">
+  <div class="col card-standard-col">
     {{< coupons/coupon-item-standard-pepsi-example >}}
   </div>
-  <div class="col">
+  <div class="col card-standard-col">
     {{< coupons/coupon-item-standard-dove-example >}}
   </div>
-  <div class="col">
+  <div class="col card-standard-col">
     {{< coupons/coupon-item-standard-dove-example >}}
   </div>
-  <div class="col">
+  <div class="col card-standard-col">
     {{< coupons/coupon-item-standard-dove-example >}}
   </div>
-  <div class="col">
+  <div class="col card-standard-col">
     {{< coupons/coupon-item-standard-dove-example >}}
   </div>
-  <div class="col">
+  <div class="col card-standard-col">
     {{< coupons/coupon-item-standard-pepsi-example >}}
   </div>
-  <div class="col">
+  <div class="col card-standard-col">
     {{< coupons/coupon-item-standard-pepsi-example >}}
   </div>
-  <div class="col">
+  <div class="col card-standard-col">
     {{< coupons/coupon-item-standard-pepsi-example >}}
   </div>
-  <div class="col">
+  <div class="col card-standard-col">
     {{< coupons/coupon-item-standard-dove-example >}}
   </div>
 </div>
@@ -88,13 +92,13 @@ This layout is achieved by giving the circular items a `col` class within the co
 of a `row`.
 
 <div class="wsg-example">
-  <div class="row row-cols-2 row-cols-md-3 g-4 mb-4">
-    <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
-    <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
-    <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
-    <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
-    <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
-    <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
+  <div class="row justify-content-center gy-4 mb-4">
+    <div class="col card-standard-col">{{< coupons/coupon-item-standard-dove-example >}}</div>
+    <div class="col card-standard-col">{{< coupons/coupon-item-standard-dove-example >}}</div>
+    <div class="col card-standard-col">{{< coupons/coupon-item-standard-dove-example >}}</div>
+    <div class="col card-standard-col">{{< coupons/coupon-item-standard-dove-example >}}</div>
+    <div class="col card-standard-col">{{< coupons/coupon-item-standard-dove-example >}}</div>
+    <div class="col card-standard-col">{{< coupons/coupon-item-standard-dove-example >}}</div>
   </div>
 </div>
 
@@ -104,19 +108,15 @@ of a `row`.
 
 
 <div class="wsg-example">
-  <div class="row row-cols-2 row-cols-md-3 g-4 mb-4">
-    <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
-    <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
-    <div class="col">{{< coupons/coupon-item-standard-dove-example >}}</div>
-    <div class="col">{{< circular/circular-item-coupon-example >}}</div>
-    <div class="col">{{< circular/circular-item-standard-example >}}</div>
-    <div class="col">{{< circular/circular-item-standard-example >}}</div>
-    <div class="col">{{< circular/circular-item-standard-example >}}</div>
-    <div class="col">{{< circular/circular-item-standard-example >}}</div>
-    <div class="col">{{< circular/circular-item-standard-promotion-example >}}</div>
-    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
-    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
-    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
-    <div class="col">{{< circular/circular-item-thumbnail-example >}}</div>
+  <div class="row justify-content-center g-4 mb-4">
+    <div class="col card-standard-col">{{< coupons/coupon-item-standard-dove-example >}}</div>
+    <div class="col card-standard-col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col card-standard-col">{{< coupons/coupon-item-standard-dove-example >}}</div>
+    <div class="col card-standard-col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col card-standard-col">{{< coupons/coupon-item-standard-dove-example >}}</div>
+    <div class="col card-standard-col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col card-standard-col">{{< circular/circular-item-standard-promotion-example >}}</div>
+    <div class="col card-standard-col">{{< circular/circular-item-standard-example >}}</div>
+    <div class="col card-standard-col">{{< coupons/coupon-item-standard-dove-example >}}</div>
   </div>
 </div>

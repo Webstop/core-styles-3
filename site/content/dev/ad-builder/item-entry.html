@@ -11,16 +11,6 @@ menu:
 ---
 
 <style>
-  .card-standard {
-    border-color: #aaa;
-    box-shadow: 5px 5px 10px #d9d6c1;
-    margin-bottom: 1.5rem;
-  }
-  .circular-item {
-    max-width: 350px;
-  }
-
-
   .ad-layout-table {
     width: 250px;
     background-color: #fff;

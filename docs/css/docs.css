@@ -12803,6 +12803,31 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   height: 100%;
 }
 
+.card-standard {
+  border-color: var(--bs-border-color-translucent);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  margin-bottom: 1.5rem;
+  max-width: 375px;
+  min-width: 160px;
+}
+@media (min-width: 576px) {
+  .card-standard {
+    max-width: 375px;
+    min-width: 265px;
+  }
+}
+
+.card-standard-col {
+  max-width: calc(375px + 1.5rem);
+  min-width: calc(160px + 1.5rem);
+}
+@media (min-width: 576px) {
+  .card-standard-col {
+    max-width: calc(375px + 1.5rem);
+    min-width: calc(265px + 1.5rem);
+  }
+}
+
 .card table:last-child {
   border-bottom-left-radius: var(--bs-card-border-radius, 0.375rem);
   border-bottom-right-radius: var(--bs-card-border-radius, 0.375rem);

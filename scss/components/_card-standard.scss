@@ -1,0 +1,38 @@
+// Card Standard
+// Common visual styling for standard card components
+// (circular items, coupon items, search results, etc.)
+
+.card-standard {
+  border-color: $card-standard-border-color;
+  box-shadow: $card-standard-box-shadow;
+  margin-bottom: $card-standard-margin-bottom;
+  max-width: $card-standard-max-width;
+  min-width: $card-standard-min-width;
+
+  @include media-breakpoint-up(sm) {
+    max-width: $card-standard-sm-max-width;
+    min-width: $card-standard-sm-min-width;
+  }
+}
+
+// Card Standard Col
+// Applied to the parent .col element to accommodate the card-standard
+// child's max/min widths plus Bootstrap's col padding (gutter).
+//
+// Bootstrap cols have padding of calc(var(--bs-gutter-x) * .5) on each side,
+// totaling $grid-gutter-width (1.5rem by default). This class adds that
+// gutter width to the card-standard's width constraints.
+//
+// Usage:
+//   <div class="col card-standard-col">
+//     <article class="card card-standard ...">
+
+.card-standard-col {
+  max-width: calc(#{$card-standard-max-width} + #{$grid-gutter-width});
+  min-width: calc(#{$card-standard-min-width} + #{$grid-gutter-width});
+
+  @include media-breakpoint-up(sm) {
+    max-width: calc(#{$card-standard-sm-max-width} + #{$grid-gutter-width});
+    min-width: calc(#{$card-standard-sm-min-width} + #{$grid-gutter-width});
+  }
+}

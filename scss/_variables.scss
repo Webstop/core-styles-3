@@ -104,6 +104,14 @@ $readable: 34.25rem + (1.25rem * 2) !default;
 // Card Deck
 $card-deck-margin: $card-group-margin !default;
 
+// Card Standard
+$card-standard-border-color:  $card-border-color !default;
+$card-standard-box-shadow:    $box-shadow !default;
+$card-standard-margin-bottom: $grid-gutter-width !default;
+$card-standard-max-width:     375px !default;
+$card-standard-min-width:     160px !default;
+$card-standard-sm-max-width:  375px !default;
+$card-standard-sm-min-width:  265px !default;
 
 // Toolbar
 $toolbar-spacer:       $spacer !default;
@@ -123,10 +131,10 @@ $recipe:        $green !default;
 $shopping-list: $purple !default;
 
 // Circulars
-$circular-max-column-width:    375px !default;
-$circular-min-column-width:    160px !default;
-$circular-sm-max-column-width: 375px !default;
-$circular-sm-min-column-width: 265px !default;
+$circular-max-column-width:    $card-standard-max-width !default;
+$circular-min-column-width:    $card-standard-min-width !default;
+$circular-sm-max-column-width: $card-standard-sm-max-width !default;
+$circular-sm-min-column-width: $card-standard-sm-min-width !default;
 
 // Shopping List
 $shopping-list-column-width: 250px !default;
