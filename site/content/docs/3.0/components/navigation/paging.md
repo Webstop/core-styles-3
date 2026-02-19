@@ -15,7 +15,7 @@ menu:
 
 {{< example >}}
 <div class="paging btn-group" role="group" aria-label="Basic outlined example">
-  <a href="#" class="paging-prev btn btn-outline-primary"><i class="fa-solid fa-angle-left"></i><span class="sr-only">Previous Page</span></a>
+  <a href="#" class="paging-prev btn btn-outline-primary"><i class="fa-solid fa-angle-left"></i><span class="visually-hidden">Previous Page</span></a>
   <div class="paging-dropdown btn-group" role="group">
     <button type="button" class="paging-current-page btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="d-none d-sm-inline">Page 2 of 3</span>
@@ -28,7 +28,7 @@ menu:
       <li><a class="paging-page dropdown-item" href="#">Page 3 of 3</a></li>
     </ul>
   </div>
-  <a href="#" class="paging-next btn btn-outline-primary"><i class="fa-solid fa-angle-right"></i><span class="sr-only">Next Page</span></a>
+  <a href="#" class="paging-next btn btn-outline-primary"><i class="fa-solid fa-angle-right"></i><span class="visually-hidden">Next Page</span></a>
 </div>
 {{< /example >}}
 
@@ -63,17 +63,17 @@ With a small dataset there isn't much difference between the two solutions.
 
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-left"></i><span class="sr-only">Previous Page</span></a></li>
+    <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-left"></i><span class="visually-hidden">Previous Page</span></a></li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item active"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item"><a class="page-link" href="#">4</a></li>
-    <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-right"></i><span class="sr-only">Next Page</span></a></li>
+    <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-right"></i><span class="visually-hidden">Next Page</span></a></li>
   </ul>
 </nav>
 
 <div class="paging btn-group" role="group" aria-label="Basic outlined example">
-  <a href="#" class="paging-prev btn btn-outline-primary"><i class="fa-solid fa-angle-left"></i><span class="sr-only">Previous Page</span></a>
+  <a href="#" class="paging-prev btn btn-outline-primary"><i class="fa-solid fa-angle-left"></i><span class="visually-hidden">Previous Page</span></a>
   <div class="paging-dropdown btn-group" role="group">
     <button type="button" class="paging-current-page btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="d-none d-sm-inline">Page 2 of 4</span>
@@ -86,7 +86,7 @@ With a small dataset there isn't much difference between the two solutions.
       <li><a class="paging-page dropdown-item" href="#">Page 4 of 4</a></li>
     </ul>
   </div>
-  <a href="#" class="paging-next btn btn-outline-primary"><i class="fa-solid fa-angle-right"></i><span class="sr-only">Next Page</span></a>
+  <a href="#" class="paging-next btn btn-outline-primary"><i class="fa-solid fa-angle-right"></i><span class="visually-hidden">Next Page</span></a>
 </div>
 
 ### Large Dataset Comparison
@@ -97,7 +97,7 @@ pages increases. The impact of this becomes even more dramatic on mobile devices
 
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-left"></i><span class="sr-only">Previous Page</span></a></li>
+    <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-left"></i><span class="visually-hidden">Previous Page</span></a></li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item active"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
@@ -123,12 +123,12 @@ pages increases. The impact of this becomes even more dramatic on mobile devices
     <li class="page-item"><a class="page-link" href="#">23</a></li>
     <li class="page-item"><a class="page-link" href="#">24</a></li>
     <li class="page-item"><a class="page-link" href="#">25</a></li>
-    <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-right"></i><span class="sr-only">Next Page</span></a></li>
+    <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-right"></i><span class="visually-hidden">Next Page</span></a></li>
   </ul>
 </nav>
 
 <div class="paging btn-group" role="group" aria-label="Basic outlined example">
-  <a href="#" class="paging-prev btn btn-outline-primary"><i class="fa-solid fa-angle-left"></i><span class="sr-only">Previous Page</span></a>
+  <a href="#" class="paging-prev btn btn-outline-primary"><i class="fa-solid fa-angle-left"></i><span class="visually-hidden">Previous Page</span></a>
   <div class="paging-dropdown btn-group" role="group">
     <button type="button" class="paging-current-page btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="d-none d-sm-inline">Page 2 of 25</span>
@@ -162,7 +162,7 @@ pages increases. The impact of this becomes even more dramatic on mobile devices
       <li><a class="paging-page dropdown-item" href="#">Page 25 of 25</a></li>
     </ul>
   </div>
-  <a href="#" class="paging-next btn btn-outline-primary"><i class="fa-solid fa-angle-right"></i><span class="sr-only">Next Page</span></a>
+  <a href="#" class="paging-next btn btn-outline-primary"><i class="fa-solid fa-angle-right"></i><span class="visually-hidden">Next Page</span></a>
 </div>
 
 ## Additional Benefits of Paging

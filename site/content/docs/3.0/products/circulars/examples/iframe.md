@@ -126,7 +126,7 @@ margin-right: auto;
 
   <div class="paging toolbar-group btn-group" role="group" aria-label="Circular Page Navigation">
     <a href="/circulars/Page/8/Base/1/241001E_ACE_CORP/" class="paging-previous-page btn btn-light" data-aye-click="previous page link" data-aye-app-id="1" data-aye-resource="ad" data-aye-resource-id="101869" data-aye-property-page-number="8">
-      <i class="icon-arrow-left"></i><span class="sr-only">Previous Page</span>
+      <i class="icon-arrow-left"></i><span class="visually-hidden">Previous Page</span>
     </a>
     <div class="paging-dropdown dropdown btn-group" role="group">
       <button class="paging-current-page btn btn-primary dropdown-toggle" type="button" id="circular-pages-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -202,7 +202,7 @@ margin-right: auto;
       </div>
     </div>
     <a href="/circulars/Page/2/Base/1/241001E_ACE_CORP/" class="paging-next-page btn btn-light" data-aye-click="next page link" data-aye-app-id="1" data-aye-resource="Ad" data-aye-resource-id="101869" data-aye-property-page-number="2">
-      <i class="icon-arrow-right"></i><span class="sr-only">Next Page</span>
+      <i class="icon-arrow-right"></i><span class="visually-hidden">Next Page</span>
     </a>
   </div>
 
@@ -254,7 +254,7 @@ margin-right: auto;
           <input type="hidden" name="date" value="" aria-label="Search Circulars Text">
           <div class="dropleft">
             <button class="btn btn-light" type="button" id="circular-departments-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="icon-search"></i><span class="sr-only">Search Circular</span>
+              <i class="icon-search"></i><span class="visually-hidden">Search Circular</span>
             </button>
             <div class="dropdown-menu" aria-labelledby="circular-departments-button">
               <div class="dropdown-item">

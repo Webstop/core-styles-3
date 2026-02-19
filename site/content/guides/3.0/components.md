@@ -390,7 +390,7 @@ more basic components:
             <button type="submit" class="shopping-list-item-btn btn btn-primary  btn-block btn-sm-inline-block">
               <i class="icon-plus-circle-solid"></i>
               <span class="d-inline d-sm-none">Add to</span>
-              <span class="d-none d-sm-inline"><span class="sr-only">Add to </span>Shopping</span>
+              <span class="d-none d-sm-inline"><span class="visually-hidden">Add to </span>Shopping</span>
               List
             </button>
           </div>
