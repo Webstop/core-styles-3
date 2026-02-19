@@ -14,16 +14,12 @@
 }
 
 .circular-item {
-  max-width: $card-standard-max-width;
-  min-width: $card-standard-min-width;
   position: relative;
   //&.card {
   //  margin-right: 0;
   //}
 
   @include media-breakpoint-up(sm) {
-    max-width: $card-standard-sm-max-width;
-    min-width: $card-standard-sm-min-width;
     &.card {
       padding-left: 0px;
       padding-right: 0px;
@@ -40,10 +36,6 @@
 
   &.circular-item-avg {
     width: calc(#{$circular-min-column-width} + (#{$circular-max-column-width} - #{$circular-min-column-width})/2);
-  }
-
-  &.circular-item-min {
-    width: $circular-min-column-width;
   }
 
   &.circular-item-min {

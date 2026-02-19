@@ -6,7 +6,7 @@
   text-align: center;
   &::after {
     position: absolute;
-    top: 2px;
+    top: -1px;
     right: 15px;
     font-size: 2rem;
     line-height: 0.35;
@@ -18,14 +18,14 @@
     padding: 5px;
   }
 
-  .coupon-item-description,
-  .coupon-item-details,
-  .coupon-item-expiration-date,
-  .coupon-item-sale-dates,
-  .coupon-item-more-info {
-    //font-size: 0.625rem; // 10/16=0.625
-    font-size: 1.0rem;
-  }
+  //.coupon-item-description,
+  //.coupon-item-details,
+  //.coupon-item-expiration-date,
+  //.coupon-item-sale-dates,
+  //.coupon-item-more-info {
+  //  //font-size: 0.625rem; // 10/16=0.625
+  //  font-size: 1.0rem;
+  //}
 
   .coupon-item-image {
     min-height: 0.01px; // fixes height on IE11
@@ -101,8 +101,11 @@
       font-size: 1.75rem; // 28/16=1.75
     }
 
+    .coupon-item-description {
+      font-size: 1.25rem;
+    }
+
     .coupon-item-heading,
-    .coupon-item-description,
     .coupon-item-details,
     .coupon-item-expiration-date,
     .coupon-item-sale-dates,

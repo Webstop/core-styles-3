@@ -14,16 +14,18 @@
 }
 
 .coupon-item {
-  max-width: $card-standard-max-width;
-  min-width: $card-standard-min-width;
   position: relative;
   &.card {
     margin-right: 0;
   }
 
+  .coupon-item-badges {
+    position: absolute;
+    top: -15px;
+    left: calc(#{$grid-gutter-width}/2);
+  }
+
   @include media-breakpoint-up(sm) {
-    max-width: $card-standard-sm-max-width;
-    min-width: $card-standard-sm-min-width;
     &.card {
       padding-left: 0px;
       padding-right: 0px;
@@ -47,10 +49,6 @@
 
   &.coupon-item-avg {
     width: calc(#{$circular-min-column-width} + (#{$circular-max-column-width} - #{$circular-min-column-width})/2);
-  }
-
-  &.coupon-item-min {
-    width: $circular-min-column-width;
   }
 
   &.coupon-item-min {

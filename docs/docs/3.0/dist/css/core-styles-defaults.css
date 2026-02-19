@@ -13157,15 +13157,9 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
 }
 
 .circular-item {
-  max-width: 375px;
-  min-width: 160px;
   position: relative;
 }
 @media (min-width: 576px) {
-  .circular-item {
-    max-width: 375px;
-    min-width: 265px;
-  }
   .circular-item.card {
     padding-left: 0px;
     padding-right: 0px;
@@ -13176,9 +13170,6 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
 }
 .circular-item.circular-item-avg {
   width: calc(160px + (375px - 160px) / 2);
-}
-.circular-item.circular-item-min {
-  width: 160px;
 }
 .circular-item.circular-item-min {
   width: 160px;
@@ -13611,18 +13602,17 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
 }
 
 .coupon-item {
-  max-width: 375px;
-  min-width: 160px;
   position: relative;
 }
 .coupon-item.card {
   margin-right: 0;
 }
+.coupon-item .coupon-item-badges {
+  position: absolute;
+  top: -15px;
+  left: calc(1.5rem / 2);
+}
 @media (min-width: 576px) {
-  .coupon-item {
-    max-width: 375px;
-    min-width: 265px;
-  }
   .coupon-item.card {
     padding-left: 0px;
     padding-right: 0px;
@@ -13646,9 +13636,6 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
 .coupon-item.coupon-item-min {
   width: 160px;
 }
-.coupon-item.coupon-item-min {
-  width: 160px;
-}
 .coupon-item.coupon-item-paper-coupon {
   border-style: dashed;
   border-color: #0d6efd;
@@ -13662,7 +13649,7 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
 }
 .coupon-item-standard::after {
   position: absolute;
-  top: 2px;
+  top: -1px;
   right: 15px;
   font-size: 2rem;
   line-height: 0.35;
@@ -13671,13 +13658,6 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
 }
 .coupon-item-standard .coupon-item-body {
   padding: 5px;
-}
-.coupon-item-standard .coupon-item-description,
-.coupon-item-standard .coupon-item-details,
-.coupon-item-standard .coupon-item-expiration-date,
-.coupon-item-standard .coupon-item-sale-dates,
-.coupon-item-standard .coupon-item-more-info {
-  font-size: 1rem;
 }
 .coupon-item-standard .coupon-item-image {
   min-height: 0.01px;
@@ -13738,8 +13718,10 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   .coupon-item-standard .coupon-item-title {
     font-size: 1.75rem;
   }
+  .coupon-item-standard .coupon-item-description {
+    font-size: 1.25rem;
+  }
   .coupon-item-standard .coupon-item-heading,
-  .coupon-item-standard .coupon-item-description,
   .coupon-item-standard .coupon-item-details,
   .coupon-item-standard .coupon-item-expiration-date,
   .coupon-item-standard .coupon-item-sale-dates,

@@ -36,15 +36,17 @@ class is unnecessary.
 
 Here we demonstrate a grid of coupons. 
 
-<div class="row justify-content-center gy-4 mb-4">
-  <div class="col card-standard-col">
-    {{< coupons/coupon-item-standard-dove-example >}}
-  </div>
-  <div class="col card-standard-col">
-    {{< coupons/coupon-item-standard-dove-example >}}
-  </div>
-  <div class="col card-standard-col">
-    {{< coupons/coupon-item-standard-dove-example >}}
+<div class="wsg-example example shadow-none">
+  <div class="row justify-content-center gy-4 mb-4">
+    <div class="col card-standard-col">
+      {{< coupons/coupon-item-standard-dove-example >}}
+    </div>
+    <div class="col card-standard-col">
+      {{< coupons/coupon-item-standard-dove-example >}}
+    </div>
+    <div class="col card-standard-col">
+      {{< coupons/coupon-item-standard-dove-example >}}
+    </div>
   </div>
 </div>
 
@@ -52,46 +54,47 @@ Here we demonstrate a grid of coupons.
 
 Here we demonstrate a grid of coupons. You can see the heights of the coupons will match the tallest offer in the grid row.
 
-<div class="row justify-content-center gy-4 mb-4">
-  <div class="col card-standard-col">
-    {{< coupons/coupon-item-standard-dove-example >}}
-  </div>
-  <div class="col card-standard-col">
-    {{< coupons/coupon-item-standard-pepsi-example >}}
-  </div>
-  <div class="col card-standard-col">
-    {{< coupons/coupon-item-standard-dove-example >}}
-  </div>
-  <div class="col card-standard-col">
-    {{< coupons/coupon-item-standard-dove-example >}}
-  </div>
-  <div class="col card-standard-col">
-    {{< coupons/coupon-item-standard-dove-example >}}
-  </div>
-  <div class="col card-standard-col">
-    {{< coupons/coupon-item-standard-dove-example >}}
-  </div>
-  <div class="col card-standard-col">
-    {{< coupons/coupon-item-standard-pepsi-example >}}
-  </div>
-  <div class="col card-standard-col">
-    {{< coupons/coupon-item-standard-pepsi-example >}}
-  </div>
-  <div class="col card-standard-col">
-    {{< coupons/coupon-item-standard-pepsi-example >}}
-  </div>
-  <div class="col card-standard-col">
-    {{< coupons/coupon-item-standard-dove-example >}}
+<div class="wsg-example example shadow-none">
+  <div class="row justify-content-center gy-4 mb-4">
+    <div class="col card-standard-col">
+      {{< coupons/coupon-item-standard-dove-example >}}
+    </div>
+    <div class="col card-standard-col">
+      {{< coupons/coupon-item-standard-pepsi-example >}}
+    </div>
+    <div class="col card-standard-col">
+      {{< coupons/coupon-item-standard-dove-example >}}
+    </div>
+    <div class="col card-standard-col">
+      {{< coupons/coupon-item-standard-dove-example >}}
+    </div>
+    <div class="col card-standard-col">
+      {{< coupons/coupon-item-standard-dove-example >}}
+    </div>
+    <div class="col card-standard-col">
+      {{< coupons/coupon-item-standard-dove-example >}}
+    </div>
+    <div class="col card-standard-col">
+      {{< coupons/coupon-item-standard-pepsi-example >}}
+    </div>
+    <div class="col card-standard-col">
+      {{< coupons/coupon-item-standard-pepsi-example >}}
+    </div>
+    <div class="col card-standard-col">
+      {{< coupons/coupon-item-standard-pepsi-example >}}
+    </div>
+    <div class="col card-standard-col">
+      {{< coupons/coupon-item-standard-dove-example >}}
+    </div>
   </div>
 </div>
-
 
 ### Grid of Coupon Circular Items
 
 This layout is achieved by giving the circular items a `col` class within the context 
 of a `row`.
 
-<div class="wsg-example">
+<div class="wsg-example example shadow-none">
   <div class="row justify-content-center gy-4 mb-4">
     <div class="col card-standard-col">{{< coupons/coupon-item-standard-dove-example >}}</div>
     <div class="col card-standard-col">{{< coupons/coupon-item-standard-dove-example >}}</div>
@@ -107,7 +110,7 @@ of a `row`.
 ### Mixed Items Example
 
 
-<div class="wsg-example">
+<div class="wsg-example example shadow-none">
   <div class="row justify-content-center g-4 mb-4">
     <div class="col card-standard-col">{{< coupons/coupon-item-standard-dove-example >}}</div>
     <div class="col card-standard-col">{{< circular/circular-item-standard-example >}}</div>
