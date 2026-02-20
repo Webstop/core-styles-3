@@ -63,7 +63,7 @@ Here we demonstrate a grid of coupons. You can see the heights of the coupons wi
       {{< coupons/coupon-item-standard-pepsi-example >}}
     </div>
     <div class="col card-standard-col">
-      {{< coupons/coupon-item-standard-dove-example >}}
+      {{< coupons/coupon-item-standard-bath-tissue-example >}}
     </div>
     <div class="col card-standard-col">
       {{< coupons/coupon-item-standard-dove-example >}}

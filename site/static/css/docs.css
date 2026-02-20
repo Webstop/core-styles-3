@@ -13661,6 +13661,7 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
 }
 .coupon-item-standard .coupon-item-image {
   min-height: 0.01px;
+  max-height: 12rem;
   max-width: 100%;
   width: auto;
   align-self: center;

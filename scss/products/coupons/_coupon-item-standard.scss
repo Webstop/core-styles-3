@@ -29,6 +29,7 @@
 
   .coupon-item-image {
     min-height: 0.01px; // fixes height on IE11
+    max-height: 12rem;
     max-width: 100%;
     width: auto;
     align-self: center; // prevent flexbox from stretching image wider than natural size
