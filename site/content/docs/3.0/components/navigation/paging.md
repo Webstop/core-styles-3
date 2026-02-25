@@ -45,6 +45,43 @@ menu:
 | `paging-menu-title`    | Optional   | Used when a section heading is desired withing the dropdown menu.                |
 | `paging-page`          | Required   | The individual page links in the dropdown menu.                                  |
 
+## Stepper Visibility
+
+By default, the paging component always shows the previous/next buttons (steppers). The stepper visibility classes hide the steppers on smaller screens and reveal them at a specified breakpoint and above. When steppers are hidden, the `paging-current-page` button automatically gets full border-radius so it looks correct on its own.
+
+Use `.paging-stepper-xl-show` to hide the steppers on smaller screens and show them starting at the `xl` breakpoint (≥1200px). Resize your browser window to see the steppers appear and disappear.
+
+{{< example >}}
+<div class="paging paging-stepper-xl-show btn-group" role="group" aria-label="Paging with xl stepper visibility">
+  <a href="#" class="paging-prev btn btn-outline-primary"><i class="fa-solid fa-angle-left"></i><span class="visually-hidden">Previous Page</span></a>
+  <div class="paging-dropdown btn-group" role="group">
+    <button type="button" class="paging-current-page btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="d-none d-xl-inline">Page 2 of 10</span>
+      <span class="d-inline d-xl-none">Pg. 2</span>
+    </button>
+    <ul class="paging-dropdown-menu dropdown-menu">
+      <li><a class="paging-page dropdown-item" href="#">Page 1 of 10</a></li>
+      <li><a class="paging-page dropdown-item active" href="#">Page 2 of 10</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 3 of 10</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 4 of 10</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 5 of 10</a></li>
+    </ul>
+  </div>
+  <a href="#" class="paging-next btn btn-outline-primary"><i class="fa-solid fa-angle-right"></i><span class="visually-hidden">Next Page</span></a>
+</div>
+{{< /example >}}
+
+### Stepper CSS Classes
+
+| Class                     | Description                                                                        |
+|---------------------------|------------------------------------------------------------------------------------|
+| `paging-stepper-none`     | Hides steppers at all breakpoints.                                                 |
+| `paging-stepper-sm-show`  | Hides steppers on `xs`, shows them at `sm` (≥576px) and above.                    |
+| `paging-stepper-md-show`  | Hides steppers on `xs`–`sm`, shows them at `md` (≥768px) and above.               |
+| `paging-stepper-lg-show`  | Hides steppers on `xs`–`md`, shows them at `lg` (≥992px) and above.               |
+| `paging-stepper-xl-show`  | Hides steppers on `xs`–`lg`, shows them at `xl` (≥1200px) and above.              |
+| `paging-stepper-xxl-show` | Hides steppers on `xs`–`xl`, shows them at `xxl` (≥1400px) and above.             |
+
 ## Paging vs. Pagination
 
 Bootstrap already provides a <a href="https://getbootstrap.com/docs/5.3/components/pagination/" target="_blank">Pagination</a> 

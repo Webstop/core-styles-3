@@ -72,7 +72,7 @@
       </ul>
     </div>
     <div class="d-flex">
-      <span class="badge text-bg-light webstop-sans-serif opacity-75">v3.0.17</span>
+      <span class="badge text-bg-light webstop-sans-serif opacity-75">v3.0.18</span>
     </div>
   </div>
 </nav>
@@ -806,6 +806,79 @@
 </tr>
 </tbody>
 </table>
+<h2 id="stepper-visibility">Stepper Visibility</h2>
+<p>By default, the paging component always shows the previous/next buttons (steppers). The stepper visibility classes hide the steppers on smaller screens and reveal them at a specified breakpoint and above. When steppers are hidden, the <code>paging-current-page</code> button automatically gets full border-radius so it looks correct on its own.</p>
+<p>Use <code>.paging-stepper-xl-show</code> to hide the steppers on smaller screens and show them starting at the <code>xl</code> breakpoint (≥1200px). Resize your browser window to see the steppers appear and disappear.</p>
+<div class="my-3 p-3 example">
+<div class="paging paging-stepper-xl-show btn-group" role="group" aria-label="Paging with xl stepper visibility">
+  <a href="#" class="paging-prev btn btn-outline-primary"><i class="fa-solid fa-angle-left"></i><span class="visually-hidden">Previous Page</span></a>
+  <div class="paging-dropdown btn-group" role="group">
+    <button type="button" class="paging-current-page btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="d-none d-xl-inline">Page 2 of 10</span>
+      <span class="d-inline d-xl-none">Pg. 2</span>
+    </button>
+    <ul class="paging-dropdown-menu dropdown-menu">
+      <li><a class="paging-page dropdown-item" href="#">Page 1 of 10</a></li>
+      <li><a class="paging-page dropdown-item active" href="#">Page 2 of 10</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 3 of 10</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 4 of 10</a></li>
+      <li><a class="paging-page dropdown-item" href="#">Page 5 of 10</a></li>
+    </ul>
+  </div>
+  <a href="#" class="paging-next btn btn-outline-primary"><i class="fa-solid fa-angle-right"></i><span class="visually-hidden">Next Page</span></a>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging paging-stepper-xl-show btn-group&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;group&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Paging with xl stepper visibility&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-prev btn btn-outline-primary&#34;</span><span class="p">&gt;&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fa-solid fa-angle-left&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Previous Page<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-dropdown btn-group&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;group&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-current-page btn btn-primary dropdown-toggle&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-none d-xl-inline&#34;</span><span class="p">&gt;</span>Page 2 of 10<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline d-xl-none&#34;</span><span class="p">&gt;</span>Pg. 2<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-dropdown-menu dropdown-menu&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-page dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Page 1 of 10<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-page dropdown-item active&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Page 2 of 10<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-page dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Page 3 of 10<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-page dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Page 4 of 10<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-page dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Page 5 of 10<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;paging-next btn btn-outline-primary&#34;</span><span class="p">&gt;&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fa-solid fa-angle-right&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Next Page<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+<h3 id="stepper-css-classes">Stepper CSS Classes</h3>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>paging-stepper-none</code></td>
+<td>Hides steppers at all breakpoints.</td>
+</tr>
+<tr>
+<td><code>paging-stepper-sm-show</code></td>
+<td>Hides steppers on <code>xs</code>, shows them at <code>sm</code> (≥576px) and above.</td>
+</tr>
+<tr>
+<td><code>paging-stepper-md-show</code></td>
+<td>Hides steppers on <code>xs</code>–<code>sm</code>, shows them at <code>md</code> (≥768px) and above.</td>
+</tr>
+<tr>
+<td><code>paging-stepper-lg-show</code></td>
+<td>Hides steppers on <code>xs</code>–<code>md</code>, shows them at <code>lg</code> (≥992px) and above.</td>
+</tr>
+<tr>
+<td><code>paging-stepper-xl-show</code></td>
+<td>Hides steppers on <code>xs</code>–<code>lg</code>, shows them at <code>xl</code> (≥1200px) and above.</td>
+</tr>
+<tr>
+<td><code>paging-stepper-xxl-show</code></td>
+<td>Hides steppers on <code>xs</code>–<code>xl</code>, shows them at <code>xxl</code> (≥1400px) and above.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="paging-vs-pagination">Paging vs. Pagination</h2>
 <p>Bootstrap already provides a <a href="https://getbootstrap.com/docs/5.3/components/pagination/" target="_blank">Pagination</a>
 feature, Paging is an alternative solution to navigating multiple pages of content. This alternative feature is called
@@ -952,6 +1025,11 @@ enters the viewport, the parent element with the <code>data-load-on-view</code> 
     <li><a href="#basic-paging-example">Basic Paging Example</a>
       <ul>
         <li><a href="#css-classes">CSS Classes</a></li>
+      </ul>
+    </li>
+    <li><a href="#stepper-visibility">Stepper Visibility</a>
+      <ul>
+        <li><a href="#stepper-css-classes">Stepper CSS Classes</a></li>
       </ul>
     </li>
     <li><a href="#paging-vs-pagination">Paging vs. Pagination</a>

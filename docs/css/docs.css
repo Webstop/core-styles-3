@@ -12852,6 +12852,59 @@ i[class^=fa-], i[class*=" fa-"], i.fak {
   max-width: 100%;
 }
 
+.paging.paging-stepper-none > .paging-prev,
+.paging.paging-stepper-none > .paging-next, .paging.paging-stepper-sm-show > .paging-prev,
+.paging.paging-stepper-sm-show > .paging-next, .paging.paging-stepper-md-show > .paging-prev,
+.paging.paging-stepper-md-show > .paging-next, .paging.paging-stepper-lg-show > .paging-prev,
+.paging.paging-stepper-lg-show > .paging-next, .paging.paging-stepper-xl-show > .paging-prev,
+.paging.paging-stepper-xl-show > .paging-next, .paging.paging-stepper-xxl-show > .paging-prev,
+.paging.paging-stepper-xxl-show > .paging-next {
+  display: none;
+}
+.paging.paging-stepper-none > .paging-dropdown > .paging-current-page, .paging.paging-stepper-sm-show > .paging-dropdown > .paging-current-page, .paging.paging-stepper-md-show > .paging-dropdown > .paging-current-page, .paging.paging-stepper-lg-show > .paging-dropdown > .paging-current-page, .paging.paging-stepper-xl-show > .paging-dropdown > .paging-current-page, .paging.paging-stepper-xxl-show > .paging-dropdown > .paging-current-page {
+  border-radius: var(--bs-btn-border-radius) !important;
+}
+@media (min-width: 576px) {
+  .paging.paging-stepper-sm-show > .paging-prev, .paging.paging-stepper-sm-show > .paging-next {
+    display: inline-block;
+  }
+  .paging.paging-stepper-sm-show > .paging-dropdown > .paging-current-page {
+    border-radius: 0 !important;
+  }
+}
+@media (min-width: 768px) {
+  .paging.paging-stepper-md-show > .paging-prev, .paging.paging-stepper-md-show > .paging-next {
+    display: inline-block;
+  }
+  .paging.paging-stepper-md-show > .paging-dropdown > .paging-current-page {
+    border-radius: 0 !important;
+  }
+}
+@media (min-width: 992px) {
+  .paging.paging-stepper-lg-show > .paging-prev, .paging.paging-stepper-lg-show > .paging-next {
+    display: inline-block;
+  }
+  .paging.paging-stepper-lg-show > .paging-dropdown > .paging-current-page {
+    border-radius: 0 !important;
+  }
+}
+@media (min-width: 1200px) {
+  .paging.paging-stepper-xl-show > .paging-prev, .paging.paging-stepper-xl-show > .paging-next {
+    display: inline-block;
+  }
+  .paging.paging-stepper-xl-show > .paging-dropdown > .paging-current-page {
+    border-radius: 0 !important;
+  }
+}
+@media (min-width: 1400px) {
+  .paging.paging-stepper-xxl-show > .paging-prev, .paging.paging-stepper-xxl-show > .paging-next {
+    display: inline-block;
+  }
+  .paging.paging-stepper-xxl-show > .paging-dropdown > .paging-current-page {
+    border-radius: 0 !important;
+  }
+}
+
 .price {
   /* Setting font size to zero prevents whitespace between the spans from affecting the display */
   font-size: 0;
