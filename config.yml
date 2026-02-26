@@ -57,15 +57,15 @@ params:
   repo: https://github.com/webstop/core-styles-3
   website: https://guides.webstop.com
   build:
-    version: 3.0.18
+    version: 3.0.19
     name: core-styles-3
     description: Design System for Webstop's products.
     author: Greg Hemphill
     license: private
-    buildDate: '2026-02-26T16:45:34.303Z'
+    buildDate: '2026-02-26T20:02:28.202Z'
     nodeVersion: v18.4.0
     repository: https://github.com/webstop/core-styles-3
     homepage: https://guides.webstop.com/
     versionMajor: 3
     versionMinor: 0
-    versionPatch: 18
+    versionPatch: 19

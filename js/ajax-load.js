@@ -1,5 +1,6 @@
 "use strict";
 // Ajax Load, Load on View, Infinite Scroll, & Paging
+import { initDataAttributes } from './bootstrap-data-attributes';
 
 $(function() {
 
@@ -113,7 +114,7 @@ const pagingObserver = new IntersectionObserver(entries => {
   // Element enters the viewport
   if(entries[0].intersectionRatio !== 0) {
     let parent = entries[0].target.closest('[data-page-number]');
-    updatePaging(parent);
+    if(parent) { updatePaging(parent); }
   }
 
 });
@@ -142,7 +143,7 @@ function updatePaging(source) {
       <span class="d-none d-sm-inline">Page ${pageNumber} of ${maxPageNumber}</span>
       <span class="d-inline d-sm-none">Pg. ${pageNumber}</span>
     `;
-    currentPage.innerHTML = html;
+    if(currentPage) { currentPage.innerHTML = html; }
     let url = source.getAttribute('data-load-on-view');
     if(!url){url = source.getAttribute('data-url')}
     pages.forEach((page) => {

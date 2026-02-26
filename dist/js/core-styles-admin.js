@@ -263,7 +263,28 @@
 
   });
 
-  // Ajax Load, Load on View, Infinite Scroll, & Paging
+  // Adds default data attribute support to components that are missing it from Bootstrap.
+
+  function initPopovers() {
+    $('[data-toggle="popover"]').popover();
+    // Bootstrap v5 switched to adding the bs namespace to their data attributes.
+    $('[data-bs-toggle="popover"]').popover();
+  }
+
+  function initTooltips() {
+    $('[data-toggle="tooltip"]').tooltip();
+    // Bootstrap v5 switched to adding the bs namespace to their data attributes.
+    $('[data-bs-toggle="tooltip"]').tooltip();
+  }
+
+  function initDataAttributes() {
+    initPopovers();
+    initTooltips();
+  }
+
+  $(function() {
+    initDataAttributes();
+  });
 
   $(function() {
 
@@ -372,7 +393,7 @@
     // Element enters the viewport
     if(entries[0].intersectionRatio !== 0) {
       let parent = entries[0].target.closest('[data-page-number]');
-      updatePaging(parent);
+      if(parent) { updatePaging(parent); }
     }
 
   });
@@ -401,7 +422,7 @@
       <span class="d-none d-sm-inline">Page ${pageNumber} of ${maxPageNumber}</span>
       <span class="d-inline d-sm-none">Pg. ${pageNumber}</span>
     `;
-      currentPage.innerHTML = html;
+      if(currentPage) { currentPage.innerHTML = html; }
       let url = source.getAttribute('data-load-on-view');
       if(!url){url = source.getAttribute('data-url');}
       pages.forEach((page) => {
@@ -517,29 +538,6 @@
       }
     });
 
-  });
-
-  // Adds default data attribute support to components that are missing it from Bootstrap.
-
-  function initPopovers() {
-    $('[data-toggle="popover"]').popover();
-    // Bootstrap v5 switched to adding the bs namespace to their data attributes.
-    $('[data-bs-toggle="popover"]').popover();
-  }
-
-  function initTooltips() {
-    $('[data-toggle="tooltip"]').tooltip();
-    // Bootstrap v5 switched to adding the bs namespace to their data attributes.
-    $('[data-bs-toggle="tooltip"]').tooltip();
-  }
-
-  function initDataAttributes$1() {
-    initPopovers();
-    initTooltips();
-  }
-
-  $(function() {
-    initDataAttributes$1();
   });
 
   // Disable buttons

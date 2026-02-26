@@ -21,3 +21,5 @@ function initDataAttributes() {
 $(function() {
   initDataAttributes();
 });
+
+export { initDataAttributes };
