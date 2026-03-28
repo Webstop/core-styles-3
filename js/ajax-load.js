@@ -2,6 +2,19 @@
 // Ajax Load, Load on View, Infinite Scroll, & Paging
 import { initDataAttributes } from './bootstrap-data-attributes';
 
+// Track observed elements and pushed URLs to prevent duplicates
+const observedElements = [];
+const pushedUrls = [];
+
+// Function to clear URL tracking (useful for navigation or page changes)
+function clearUrlTracking() {
+  pushedUrls.length = 0;
+}
+
+// Clear URL tracking on page navigation to allow legitimate re-pushes
+window.addEventListener('popstate', clearUrlTracking);
+window.addEventListener('beforeunload', clearUrlTracking);
+
 $(function() {
 
   $(document.body).on('click', '[data-ajax-load]', function(event){
@@ -59,13 +72,21 @@ function load(target, url, infinite) {
     .then(function(response) { return response.text(); })
     .then(function(body) { target.innerHTML = body; })
     .then(function() { if(infinite){
-      pagingObserver.observe(target.querySelector('.paging-trigger'));
+      const pagingTrigger = target.querySelector('.paging-trigger');
+      if (pagingTrigger && !observedElements.includes(pagingTrigger)) {
+        pagingObserver.observe(pagingTrigger);
+        observedElements.push(pagingTrigger);
+      }
       enableNextLoadOnView(target);
       initDataAttributes();
     } });
 }
 
 function loadOnView(target, url, infinite) {
+  // Prevent duplicate observers for the same element
+  if (observedElements.includes(target)) {
+    return;
+  }
 
   const observer = new IntersectionObserver((entries) => {
 
@@ -75,7 +96,13 @@ function loadOnView(target, url, infinite) {
         // Element has not been loaded yet
         load(target, url, infinite);
         let skipHistory = entries[0].target.hasAttribute('data-skip-history');
-        if(!skipHistory) { history.pushState(null, "", url); }
+        if(!skipHistory) { 
+          // Prevent duplicate history pushes for the same URL
+          if (!pushedUrls.includes(url)) {
+            history.pushState(null, "", url);
+            pushedUrls.push(url);
+          }
+        }
         entries[0].target.classList.add('is-loaded');
       }
 
@@ -84,7 +111,9 @@ function loadOnView(target, url, infinite) {
     }
 
   });
+  
   observer.observe(target);
+  observedElements.push(target);
 }
 
 
@@ -158,19 +187,15 @@ function updatePaging(source) {
 
 function loadOnComplete(onCompleteUrl, onCompleteTarget) {
   const targets = document.querySelectorAll(onCompleteTarget);
-  console.log(`loadOnComplete`);
-  console.log(`onCompleteUrl: ${onCompleteUrl}`);
-  console.log(`onCompleteTarget: ${onCompleteTarget}`);
 
   return fetch(onCompleteUrl, {credentials: 'include', headers: {'X-Requested-With': 'fetch'}})
     .then(response => response.text())
     .then(html => {
       targets.forEach(target => {
-        console.log(`Apply on complete to target.`);
         target.innerHTML = html;
       });
     })
-    .catch(error => console.error('Error loading on-complete content:', error));
+    .catch(error => {});
 }
 
 
@@ -195,7 +220,10 @@ function loadOnComplete(onCompleteUrl, onCompleteTarget) {
     })
     // Register any triggers on the initial page, not just the one's loaded via ALAX
     let pagingTrigger = document.querySelector('.paging-trigger');
-    if(pagingTrigger) { pagingObserver.observe(pagingTrigger); }
+    if(pagingTrigger && !observedElements.includes(pagingTrigger)) { 
+      pagingObserver.observe(pagingTrigger);
+      observedElements.push(pagingTrigger);
+    }
   }
 })();
 
