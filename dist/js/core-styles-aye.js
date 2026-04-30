@@ -6,13 +6,13 @@
 	var ahoy$1 = {exports: {}};
 
 	/*!
-	 * Ahoy.js v0.4.4
+	 * Ahoy.js v0.4.5
 	 * Simple, powerful JavaScript analytics
 	 * https://github.com/ankane/ahoy.js
 	 * MIT License
 	 */
 
-	(function (module, exports) {
+	(function (module, exports$1) {
 		(function (global, factory) {
 		  module.exports = factory() ;
 		})(commonjsGlobal, (function () {
@@ -124,7 +124,7 @@
 		  }
 
 		  function destroyCookie(name) {
-		    Cookies.set(name, "", -1);
+		    Cookies.set(name, "", -1, config.cookieDomain || config.domain);
 		  }
 
 		  function log(message) {

@@ -59,7 +59,8 @@ function load(target, url, infinite) {
     .then(function(response) { return response.text(); })
     .then(function(body) { target.innerHTML = body; })
     .then(function() { if(infinite){
-      pagingObserver.observe(target.querySelector('.paging-trigger'));
+      let pagingTrigger = target.querySelector('.paging-trigger');
+      if (pagingTrigger) { pagingObserver.observe(pagingTrigger); }
       enableNextLoadOnView(target);
       initDataAttributes();
     } });
