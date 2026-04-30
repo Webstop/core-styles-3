@@ -74,6 +74,7 @@
 
   // III. Layout with Sidebar
   &.public-with-sidebar:not(.public-with-sidecar):not(.public-with-sidenav) {
+    .public-sidenav-offcanvas-btn { display: block; }
     .public-sidebar-offcanvas-btn { display: block; }
     @include media-breakpoint-up(xl) {
       grid-template-columns: auto $public-sidebar-width;
@@ -90,6 +91,10 @@
           "public-header"
           "public-page";
       .public-sidebar { display: none; width: 0; height: 0; }
+    }
+
+    @include media-breakpoint-up(xxl) {
+      .public-sidenav-offcanvas-btn { display: none; }
     }
   }
 
